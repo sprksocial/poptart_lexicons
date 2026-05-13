@@ -1,0 +1,14 @@
+packages:
+  - name: bluesky_poptart
+    output: bluesky
+    roots:
+      - app.bsky.
+      - chat.bsky.
+  - name: ozone_poptart
+    output: ozone
+    roots:
+      - tools.ozone.
+externalPackages:
+  - name: poptart_lex
+    roots:
+      - com.atproto.
