@@ -1,0 +1,27 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_BookmarkCreateBookmarkInput _$BookmarkCreateBookmarkInputFromJson(Map json) =>
+    $checkedCreate('_BookmarkCreateBookmarkInput', json, ($checkedConvert) {
+      final val = _BookmarkCreateBookmarkInput(
+        uri: $checkedConvert(
+          'uri',
+          (v) => const AtUriConverter().fromJson(v as String),
+        ),
+        cid: $checkedConvert('cid', (v) => v as String),
+        $unknown: $checkedConvert(
+          r'$unknown',
+          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+        ),
+      );
+      return val;
+    });
+
+Map<String, dynamic> _$BookmarkCreateBookmarkInputToJson(
+  _BookmarkCreateBookmarkInput instance,
+) => <String, dynamic>{
+  'uri': const AtUriConverter().toJson(instance.uri),
+  'cid': instance.cid,
+  r'$unknown': ?instance.$unknown,
+};

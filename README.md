@@ -6,7 +6,8 @@ tooling.
 ## Layout
 
 - `lexicons/` contains JSON lexicon inputs.
-- `packages/` contains generated Dart packages.
+- `packages/bluesky_poptart` and `packages/ozone_poptart` contain generated
+  Dart packages.
 
 ## Lexicons
 
