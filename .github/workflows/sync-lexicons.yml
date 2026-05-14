@@ -1,0 +1,89 @@
+name: Sync Lexicons
+
+on:
+  schedule:
+    - cron: "17 10 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-lexicons
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout lexicons
+        uses: actions/checkout@v4.1.7
+        with:
+          path: poptart_lexicons
+
+      - name: Checkout generator
+        uses: actions/checkout@v4.1.7
+        with:
+          repository: sprksocial/poptart
+          path: poptart
+          token: ${{ secrets.LEXICON_SYNC_TOKEN || github.token }}
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Install generator dependencies
+        working-directory: poptart
+        run: dart pub get
+
+      - name: Install lexicon workspace dependencies
+        working-directory: poptart_lexicons
+        run: dart pub get
+
+      - name: Pull upstream lexicons
+        working-directory: poptart_lexicons
+        env:
+          LEXICON_SYNC_TOKEN: ${{ secrets.LEXICON_SYNC_TOKEN || github.token }}
+        run: bash scripts/sync_lexicons.sh
+
+      - name: Generate package sources
+        working-directory: poptart
+        run: |
+          dart run poptart_lex_gen generate \
+            --manifest ../poptart_lexicons/lexicons/manifest.yaml \
+            --lexicons ../poptart_lexicons/lexicons \
+            --packages ../poptart_lexicons/packages
+
+      - name: Build generated parts
+        working-directory: poptart_lexicons
+        run: |
+          for package in packages/*; do
+            if [ -f "$package/build.yaml" ]; then
+              (cd "$package" && dart run build_runner build)
+            fi
+          done
+
+      - name: Analyze
+        working-directory: poptart_lexicons
+        run: dart analyze
+
+      - name: Open or update pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          path: poptart_lexicons
+          branch: automation/sync-lexicons
+          delete-branch: true
+          title: "Update upstream lexicons"
+          commit-message: "Update upstream lexicons"
+          body: |
+            This automated PR syncs upstream lexicon JSON, regenerates the Dart
+            packages, and rebuilds generated parts.
+
+            Sources:
+            - bluesky-social/atproto: `app.bsky.*`, `chat.bsky.*`, `tools.ozone.*`
+            - margin-at/margin: `at.margin.*`
+            - sprksocial/server: `so.sprk.*`
+          labels: |
+            automated
+            lexicons
