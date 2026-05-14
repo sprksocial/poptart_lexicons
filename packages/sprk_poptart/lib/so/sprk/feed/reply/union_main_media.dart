@@ -1,0 +1,71 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:poptart_core/internals.dart' show isA;
+
+import '../../media/image/main.dart';
+
+
+part 'union_main_media.freezed.dart';
+
+// **************************************************************************
+// LexGenerator
+// **************************************************************************
+
+
+@freezed
+sealed class UFeedReplyMedia with _$UFeedReplyMedia {
+  const UFeedReplyMedia._();
+
+  const factory UFeedReplyMedia.mediaImage({
+  required MediaImage data,
+}) = UFeedReplyMediaMediaImage;
+
+
+  const factory UFeedReplyMedia.unknown({
+    required Map<String, dynamic> data,
+  }) = UFeedReplyMediaUnknown;
+
+  Map<String, dynamic> toJson() => const UFeedReplyMediaConverter().toJson(this);
+}
+
+extension UFeedReplyMediaExtension on UFeedReplyMedia {
+  bool get isMediaImage => isA<UFeedReplyMediaMediaImage>(this);
+bool get isNotMediaImage => !isMediaImage;
+MediaImage? get mediaImage => isMediaImage ? data as MediaImage : null;
+bool get isUnknown => isA<UFeedReplyMediaUnknown>(this);
+bool get isNotUnknown => !isUnknown;
+Map<String, dynamic>? get unknown => isUnknown ? data as Map<String, dynamic> : null;
+
+}
+
+final class UFeedReplyMediaConverter implements JsonConverter<UFeedReplyMedia, Map<String, dynamic>> {
+  const UFeedReplyMediaConverter();
+
+  @override
+  UFeedReplyMedia fromJson(Map<String, dynamic> json) {
+    try {
+      if (MediaImage.validate(json)) {
+  return UFeedReplyMedia.mediaImage(
+    data: const MediaImageConverter().fromJson(json),
+  );
+}
+
+
+      return UFeedReplyMedia.unknown(data: json);
+    } catch (_) {
+      return UFeedReplyMedia.unknown(data: json);
+    }
+  }
+
+  @override
+  Map<String, dynamic> toJson(UFeedReplyMedia object) => object.when(
+        mediaImage: (data) => const MediaImageConverter().toJson(data),
+
+        unknown: (data) => data,
+      );
+}

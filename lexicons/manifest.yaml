@@ -8,6 +8,14 @@ packages:
     output: ozone_poptart
     roots:
       - tools.ozone.
+  - name: sprk_poptart
+    output: sprk_poptart
+    roots:
+      - so.sprk.
+  - name: margin_poptart
+    output: margin_poptart
+    roots:
+      - at.margin.
 externalPackages:
   - name: poptart_lex
     roots:

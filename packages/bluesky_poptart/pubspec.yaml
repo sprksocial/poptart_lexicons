@@ -14,7 +14,7 @@ resolution: workspace
 dependencies:
   characters: ^1.4.1
   freezed_annotation: ^3.1.0
-  json_annotation: ^4.9.0
+  json_annotation: ^4.11.0
   poptart_core: ^0.1.0
   poptart_lex: ^0.1.0
   poptart_primitives: ^0.1.0

@@ -8,7 +8,9 @@ environment:
 
 workspace:
   - packages/bluesky_poptart
+  - packages/margin_poptart
   - packages/ozone_poptart
+  - packages/sprk_poptart
 
 dev_dependencies:
   melos: ^7.1.0

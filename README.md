@@ -6,13 +6,16 @@ tooling.
 ## Layout
 
 - `lexicons/` contains JSON lexicon inputs.
-- `packages/bluesky_poptart` and `packages/ozone_poptart` contain generated
-  Dart packages.
+- `packages/bluesky_poptart`, `packages/margin_poptart`,
+  `packages/ozone_poptart`, and `packages/sprk_poptart` contain generated Dart
+  packages.
 
 ## Lexicons
 
 - `lexicons/app/bsky` contains `app.bsky.*` lexicons.
+- `lexicons/at/margin` contains `at.margin.*` lexicons.
 - `lexicons/chat/bsky` contains `chat.bsky.*` lexicons.
+- `lexicons/so/sprk` contains `so.sprk.*` lexicons.
 - `lexicons/tools/ozone` contains `tools.ozone.*` lexicons.
 
 Generated Dart packages are selected by `lexicons/manifest.yaml`. Shared
