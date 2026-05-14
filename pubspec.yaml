@@ -1,0 +1,21 @@
+name: poptart_lexicons_workspace
+description: Workspace for generated Poptart lexicon packages.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+workspace:
+  - packages/bluesky_poptart
+  - packages/ozone_poptart
+
+dependency_overrides:
+  poptart_core:
+    path: ../poptart/packages/poptart_core
+  poptart_lex:
+    path: ../poptart/packages/poptart_lex
+  poptart_primitives:
+    path: ../poptart/packages/poptart_primitives
+  poptart_xrpc:
+    path: ../poptart/packages/poptart_xrpc

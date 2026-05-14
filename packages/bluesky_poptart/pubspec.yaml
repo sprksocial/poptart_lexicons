@@ -6,6 +6,8 @@ publish_to: none
 environment:
   sdk: ">=3.8.0 <4.0.0"
 
+resolution: workspace
+
 dependencies:
   characters: ^1.4.1
   freezed_annotation: ^3.1.0
@@ -25,13 +27,3 @@ dev_dependencies:
   json_serializable: ^6.9.5
   lints: ^6.0.0
   test: ^1.26.2
-
-dependency_overrides:
-  poptart_lex:
-    path: ../../../poptart/packages/poptart_lex
-  poptart_core:
-    path: ../../../poptart/packages/poptart_core
-  poptart_primitives:
-    path: ../../../poptart/packages/poptart_primitives
-  poptart_xrpc:
-    path: ../../../poptart/packages/poptart_xrpc
