@@ -1,4 +1,4 @@
 # Bluesky Lexicons
 
-Generated Dart package output for `com.atproto.*`, `app.bsky.*`, and
+Generated Dart package output for `app.bsky.*`, and
 `chat.bsky.*` lexicons.

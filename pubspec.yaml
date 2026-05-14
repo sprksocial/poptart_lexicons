@@ -10,6 +10,18 @@ workspace:
   - packages/bluesky_poptart
   - packages/ozone_poptart
 
+dev_dependencies:
+  melos: ^7.1.0
+
+melos:
+  scripts:
+    publish_all:
+      run: |
+        dart run melos publish
+        dart run melos publish --no-dry-run --git-tag-version --yes
+        git push origin --tags
+      description: Publish all packages, create git tags, and push them to origin.
+
 dependency_overrides:
   poptart_core:
     path: ../poptart/packages/poptart_core
