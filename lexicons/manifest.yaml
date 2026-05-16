@@ -16,6 +16,10 @@ packages:
     output: margin_poptart
     roots:
       - at.margin.
+  - name: plyr_poptart
+    output: plyr_poptart
+    roots:
+      - fm.plyr.
 externalPackages:
   - name: poptart_lex
     roots:

@@ -10,6 +10,7 @@ workspace:
   - packages/bluesky_poptart
   - packages/margin_poptart
   - packages/ozone_poptart
+  - packages/plyr_poptart
   - packages/sprk_poptart
 
 dev_dependencies:

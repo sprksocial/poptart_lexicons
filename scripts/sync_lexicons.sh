@@ -6,6 +6,7 @@ WORK_DIR="${RUNNER_TEMP:-${TMPDIR:-/tmp}}/poptart-lexicon-sync"
 
 ATPROTO_REPO="${ATPROTO_REPO:-https://github.com/bluesky-social/atproto.git}"
 MARGIN_REPO="${MARGIN_REPO:-https://github.com/margin-at/margin.git}"
+PLYR_REPO="${PLYR_REPO:-https://github.com/zzstoatzz/plyr.fm.git}"
 SERVER_REPO="${SERVER_REPO:-https://github.com/sprksocial/server.git}"
 
 clone_repo() {
@@ -40,10 +41,12 @@ mkdir -p "$WORK_DIR"
 
 clone_repo "$ATPROTO_REPO" "$WORK_DIR/atproto"
 clone_repo "$MARGIN_REPO" "$WORK_DIR/margin"
+clone_repo "$PLYR_REPO" "$WORK_DIR/plyr"
 clone_repo "$SERVER_REPO" "$WORK_DIR/server"
 
 replace_dir "$WORK_DIR/atproto/lexicons/app/bsky" "$ROOT_DIR/lexicons/app/bsky"
 replace_dir "$WORK_DIR/atproto/lexicons/chat/bsky" "$ROOT_DIR/lexicons/chat/bsky"
 replace_dir "$WORK_DIR/atproto/lexicons/tools/ozone" "$ROOT_DIR/lexicons/tools/ozone"
 replace_dir "$WORK_DIR/margin/lexicons/at/margin" "$ROOT_DIR/lexicons/at/margin"
+replace_dir "$WORK_DIR/plyr/lexicons" "$ROOT_DIR/lexicons/fm/plyr"
 replace_dir "$WORK_DIR/server/lexicons/so/sprk" "$ROOT_DIR/lexicons/so/sprk"
