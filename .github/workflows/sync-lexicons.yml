@@ -61,6 +61,10 @@ jobs:
             fi
           done
 
+      - name: Format generated Dart
+        working-directory: poptart_lexicons
+        run: dart format packages
+
       - name: Analyze
         working-directory: poptart_lexicons
         run: dart analyze
