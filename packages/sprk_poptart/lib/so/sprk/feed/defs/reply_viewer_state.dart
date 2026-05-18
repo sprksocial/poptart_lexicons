@@ -3,12 +3,9 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
-
-
 
 part 'reply_viewer_state.freezed.dart';
 part 'reply_viewer_state.g.dart';
@@ -17,45 +14,46 @@ part 'reply_viewer_state.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
 /// Metadata about the requesting account's relationship with the subject content. Only has meaningful content for authed requests.
 @freezed
 abstract class ReplyViewerState with _$ReplyViewerState {
-  static const knownProps = <String>['like', 'threadMuted', 'replyDisabled', 'embeddingDisabled', ];
+  static const knownProps = <String>[
+    'like',
+    'threadMuted',
+    'replyDisabled',
+    'embeddingDisabled',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ReplyViewerState({
     @Default('so.sprk.feed.defs#replyViewerState') String $type,
     @AtUriConverter() AtUri? like,
-bool? threadMuted,
-bool? replyDisabled,
-bool? embeddingDisabled,
+    bool? threadMuted,
+    bool? replyDisabled,
+    bool? embeddingDisabled,
 
     Map<String, dynamic>? $unknown,
   }) = _ReplyViewerState;
 
-  factory ReplyViewerState.fromJson(Map<String, Object?> json) => _$ReplyViewerStateFromJson(json);
+  factory ReplyViewerState.fromJson(Map<String, Object?> json) =>
+      _$ReplyViewerStateFromJson(json);
 
   static bool validate(final Map<String, dynamic> object) {
-  if (!object.containsKey('\$type')) return false;
-  return object['\$type'] == 'so.sprk.feed.defs#replyViewerState'
-;
-}
-
+    if (!object.containsKey('\$type')) return false;
+    return object['\$type'] == 'so.sprk.feed.defs#replyViewerState';
+  }
 }
 
 extension ReplyViewerStateExtension on ReplyViewerState {
-bool get hasLike => like != null;
-bool get hasNotLike => !hasLike;
-bool get isThreadMuted => threadMuted ?? false;
-bool get isNotThreadMuted => !isThreadMuted;
-bool get isReplyDisabled => replyDisabled ?? false;
-bool get isNotReplyDisabled => !isReplyDisabled;
-bool get isEmbeddingDisabled => embeddingDisabled ?? false;
-bool get isNotEmbeddingDisabled => !isEmbeddingDisabled;
-
+  bool get hasLike => like != null;
+  bool get hasNotLike => !hasLike;
+  bool get isThreadMuted => threadMuted ?? false;
+  bool get isNotThreadMuted => !isThreadMuted;
+  bool get isReplyDisabled => replyDisabled ?? false;
+  bool get isNotReplyDisabled => !isReplyDisabled;
+  bool get isEmbeddingDisabled => embeddingDisabled ?? false;
+  bool get isNotEmbeddingDisabled => !isEmbeddingDisabled;
 }
-
 
 final class ReplyViewerStateConverter
     extends JsonConverter<ReplyViewerState, Map<String, dynamic>> {
@@ -63,15 +61,12 @@ final class ReplyViewerStateConverter
 
   @override
   ReplyViewerState fromJson(Map<String, dynamic> json) {
-    return ReplyViewerState.fromJson(translate(
-      json,
-      ReplyViewerState.knownProps,
-    ));
+    return ReplyViewerState.fromJson(
+      translate(json, ReplyViewerState.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(ReplyViewerState object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(ReplyViewerState object) =>
+      untranslate(object.toJson());
 }
-

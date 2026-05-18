@@ -3,13 +3,11 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import '../defs/job_status.dart';
-
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -18,11 +16,9 @@ part 'output.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
 abstract class VideoGetJobStatusOutput with _$VideoGetJobStatusOutput {
-  static const knownProps = <String>['jobStatus', ];
+  static const knownProps = <String>['jobStatus'];
 
   @JsonSerializable(includeIfNull: false)
   const factory VideoGetJobStatusOutput({
@@ -31,10 +27,9 @@ abstract class VideoGetJobStatusOutput with _$VideoGetJobStatusOutput {
     Map<String, dynamic>? $unknown,
   }) = _VideoGetJobStatusOutput;
 
-  factory VideoGetJobStatusOutput.fromJson(Map<String, Object?> json) => _$VideoGetJobStatusOutputFromJson(json);
+  factory VideoGetJobStatusOutput.fromJson(Map<String, Object?> json) =>
+      _$VideoGetJobStatusOutputFromJson(json);
 }
-
-
 
 final class VideoGetJobStatusOutputConverter
     extends JsonConverter<VideoGetJobStatusOutput, Map<String, dynamic>> {
@@ -42,15 +37,12 @@ final class VideoGetJobStatusOutputConverter
 
   @override
   VideoGetJobStatusOutput fromJson(Map<String, dynamic> json) {
-    return VideoGetJobStatusOutput.fromJson(translate(
-      json,
-      VideoGetJobStatusOutput.knownProps,
-    ));
+    return VideoGetJobStatusOutput.fromJson(
+      translate(json, VideoGetJobStatusOutput.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(VideoGetJobStatusOutput object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(VideoGetJobStatusOutput object) =>
+      untranslate(object.toJson());
 }
-

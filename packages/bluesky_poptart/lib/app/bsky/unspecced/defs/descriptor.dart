@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import './age_assurance_event.dart';
 import './age_assurance_state.dart';
 import './skeleton_search_actor.dart';
@@ -22,11 +21,12 @@ import 'package:poptart_xrpc/poptart_xrpc.dart';
 // LexGenerator
 // **************************************************************************
 
-
 final skeletonSearchPostDescriptor = XRPCObjectDescriptor<SkeletonSearchPost>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'skeletonSearchPost',
-  fromJson: (json) => const SkeletonSearchPostConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) => const SkeletonSearchPostConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
   toJson: const SkeletonSearchPostConverter().toJson,
   matches: SkeletonSearchPost.validate,
 );
@@ -34,23 +34,29 @@ final skeletonSearchPostDescriptor = XRPCObjectDescriptor<SkeletonSearchPost>(
 final skeletonSearchActorDescriptor = XRPCObjectDescriptor<SkeletonSearchActor>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'skeletonSearchActor',
-  fromJson: (json) => const SkeletonSearchActorConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) => const SkeletonSearchActorConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
   toJson: const SkeletonSearchActorConverter().toJson,
   matches: SkeletonSearchActor.validate,
 );
 
-final skeletonSearchStarterPackDescriptor = XRPCObjectDescriptor<SkeletonSearchStarterPack>(
-  nsid: 'app.bsky.unspecced.defs',
-  defName: 'skeletonSearchStarterPack',
-  fromJson: (json) => const SkeletonSearchStarterPackConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const SkeletonSearchStarterPackConverter().toJson,
-  matches: SkeletonSearchStarterPack.validate,
-);
+final skeletonSearchStarterPackDescriptor =
+    XRPCObjectDescriptor<SkeletonSearchStarterPack>(
+      nsid: 'app.bsky.unspecced.defs',
+      defName: 'skeletonSearchStarterPack',
+      fromJson: (json) => const SkeletonSearchStarterPackConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const SkeletonSearchStarterPackConverter().toJson,
+      matches: SkeletonSearchStarterPack.validate,
+    );
 
 final trendingTopicDescriptor = XRPCObjectDescriptor<TrendingTopic>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'trendingTopic',
-  fromJson: (json) => const TrendingTopicConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const TrendingTopicConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const TrendingTopicConverter().toJson,
   matches: TrendingTopic.validate,
 );
@@ -58,7 +64,8 @@ final trendingTopicDescriptor = XRPCObjectDescriptor<TrendingTopic>(
 final skeletonTrendDescriptor = XRPCObjectDescriptor<SkeletonTrend>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'skeletonTrend',
-  fromJson: (json) => const SkeletonTrendConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const SkeletonTrendConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const SkeletonTrendConverter().toJson,
   matches: SkeletonTrend.validate,
 );
@@ -66,7 +73,8 @@ final skeletonTrendDescriptor = XRPCObjectDescriptor<SkeletonTrend>(
 final trendViewDescriptor = XRPCObjectDescriptor<TrendView>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'trendView',
-  fromJson: (json) => const TrendViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const TrendViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const TrendViewConverter().toJson,
   matches: TrendView.validate,
 );
@@ -74,23 +82,29 @@ final trendViewDescriptor = XRPCObjectDescriptor<TrendView>(
 final threadItemPostDescriptor = XRPCObjectDescriptor<ThreadItemPost>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'threadItemPost',
-  fromJson: (json) => const ThreadItemPostConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ThreadItemPostConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ThreadItemPostConverter().toJson,
   matches: ThreadItemPost.validate,
 );
 
-final threadItemNoUnauthenticatedDescriptor = XRPCObjectDescriptor<ThreadItemNoUnauthenticated>(
-  nsid: 'app.bsky.unspecced.defs',
-  defName: 'threadItemNoUnauthenticated',
-  fromJson: (json) => const ThreadItemNoUnauthenticatedConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const ThreadItemNoUnauthenticatedConverter().toJson,
-  matches: ThreadItemNoUnauthenticated.validate,
-);
+final threadItemNoUnauthenticatedDescriptor =
+    XRPCObjectDescriptor<ThreadItemNoUnauthenticated>(
+      nsid: 'app.bsky.unspecced.defs',
+      defName: 'threadItemNoUnauthenticated',
+      fromJson: (json) => const ThreadItemNoUnauthenticatedConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const ThreadItemNoUnauthenticatedConverter().toJson,
+      matches: ThreadItemNoUnauthenticated.validate,
+    );
 
 final threadItemNotFoundDescriptor = XRPCObjectDescriptor<ThreadItemNotFound>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'threadItemNotFound',
-  fromJson: (json) => const ThreadItemNotFoundConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) => const ThreadItemNotFoundConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
   toJson: const ThreadItemNotFoundConverter().toJson,
   matches: ThreadItemNotFound.validate,
 );
@@ -98,7 +112,8 @@ final threadItemNotFoundDescriptor = XRPCObjectDescriptor<ThreadItemNotFound>(
 final threadItemBlockedDescriptor = XRPCObjectDescriptor<ThreadItemBlocked>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'threadItemBlocked',
-  fromJson: (json) => const ThreadItemBlockedConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ThreadItemBlockedConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ThreadItemBlockedConverter().toJson,
   matches: ThreadItemBlocked.validate,
 );
@@ -106,7 +121,8 @@ final threadItemBlockedDescriptor = XRPCObjectDescriptor<ThreadItemBlocked>(
 final ageAssuranceStateDescriptor = XRPCObjectDescriptor<AgeAssuranceState>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'ageAssuranceState',
-  fromJson: (json) => const AgeAssuranceStateConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const AgeAssuranceStateConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const AgeAssuranceStateConverter().toJson,
   matches: AgeAssuranceState.validate,
 );
@@ -114,7 +130,8 @@ final ageAssuranceStateDescriptor = XRPCObjectDescriptor<AgeAssuranceState>(
 final ageAssuranceEventDescriptor = XRPCObjectDescriptor<AgeAssuranceEvent>(
   nsid: 'app.bsky.unspecced.defs',
   defName: 'ageAssuranceEvent',
-  fromJson: (json) => const AgeAssuranceEventConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const AgeAssuranceEventConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const AgeAssuranceEventConverter().toJson,
   matches: AgeAssuranceEvent.validate,
 );

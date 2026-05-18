@@ -26,7 +26,7 @@ _SoundAudioRecord _$SoundAudioRecordFromJson(Map json) =>
             const RepoStrongRefConverter().fromJson,
           ),
         ),
-        title: $checkedConvert('title', (v) => v as String),
+        title: $checkedConvert('title', (v) => v as String?),
         details: $checkedConvert(
           'details',
           (v) => _$JsonConverterFromJson<Map<String, dynamic>, AudioDetails>(
@@ -62,7 +62,7 @@ Map<String, dynamic> _$SoundAudioRecordToJson(_SoundAudioRecord instance) =>
         instance.origin,
         const RepoStrongRefConverter().toJson,
       ),
-      'title': instance.title,
+      'title': ?instance.title,
       'details': ?_$JsonConverterToJson<Map<String, dynamic>, AudioDetails>(
         instance.details,
         const AudioDetailsConverter().toJson,

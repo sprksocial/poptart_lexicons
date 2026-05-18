@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'main_sort.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class FeedSearchPostsSort with _$FeedSearchPostsSort {
   const FeedSearchPostsSort._();
@@ -24,15 +22,16 @@ abstract class FeedSearchPostsSort with _$FeedSearchPostsSort {
     required KnownFeedSearchPostsSort data,
   }) = FeedSearchPostsSortKnownValue;
 
-  const factory FeedSearchPostsSort.unknown({
-    required String data,
-  }) = FeedSearchPostsSortUnknown;
+  const factory FeedSearchPostsSort.unknown({required String data}) =
+      FeedSearchPostsSortUnknown;
 
   static FeedSearchPostsSort? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownFeedSearchPostsSort.valueOf(value);
 
-    return knownValue != null ? FeedSearchPostsSort.knownValue(data: knownValue) : FeedSearchPostsSort.unknown(data: value);
+    return knownValue != null
+        ? FeedSearchPostsSort.knownValue(data: knownValue)
+        : FeedSearchPostsSort.unknown(data: value);
   }
 
   String toJson() => const FeedSearchPostsSortConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class FeedSearchPostsSort with _$FeedSearchPostsSort {
 
 extension FeedSearchPostsSortExtension on FeedSearchPostsSort {
   bool get isKnownValue => isA<FeedSearchPostsSortKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownFeedSearchPostsSort? get knownValue => isKnownValue ? data as KnownFeedSearchPostsSort : null;
-bool get isUnknown => isA<FeedSearchPostsSortUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownFeedSearchPostsSort? get knownValue =>
+      isKnownValue ? data as KnownFeedSearchPostsSort : null;
+  bool get isUnknown => isA<FeedSearchPostsSortUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class FeedSearchPostsSortConverter extends JsonConverter<FeedSearchPostsSort, String> {
+final class FeedSearchPostsSortConverter
+    extends JsonConverter<FeedSearchPostsSort, String> {
   const FeedSearchPostsSortConverter();
 
   @override
@@ -66,18 +66,15 @@ final class FeedSearchPostsSortConverter extends JsonConverter<FeedSearchPostsSo
   }
 
   @override
-  String toJson(FeedSearchPostsSort object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(FeedSearchPostsSort object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownFeedSearchPostsSort implements Serializable{
+enum KnownFeedSearchPostsSort implements Serializable {
   @JsonValue('top')
-top('top'),
-@JsonValue('latest')
-latest('latest'),
-  ;
+  top('top'),
+  @JsonValue('latest')
+  latest('latest');
 
   @override
   final String value;

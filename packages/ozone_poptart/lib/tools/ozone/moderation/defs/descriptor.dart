@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import './account_event.dart';
 import './account_hosting.dart';
 import './account_stats.dart';
@@ -58,11 +57,11 @@ import 'package:poptart_xrpc/poptart_xrpc.dart';
 // LexGenerator
 // **************************************************************************
 
-
 final modEventViewDescriptor = XRPCObjectDescriptor<ModEventView>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventView',
-  fromJson: (json) => const ModEventViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventViewConverter().toJson,
   matches: ModEventView.validate,
 );
@@ -70,7 +69,9 @@ final modEventViewDescriptor = XRPCObjectDescriptor<ModEventView>(
 final modEventViewDetailDescriptor = XRPCObjectDescriptor<ModEventViewDetail>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventViewDetail',
-  fromJson: (json) => const ModEventViewDetailConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) => const ModEventViewDetailConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
   toJson: const ModEventViewDetailConverter().toJson,
   matches: ModEventViewDetail.validate,
 );
@@ -78,7 +79,8 @@ final modEventViewDetailDescriptor = XRPCObjectDescriptor<ModEventViewDetail>(
 final subjectStatusViewDescriptor = XRPCObjectDescriptor<SubjectStatusView>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'subjectStatusView',
-  fromJson: (json) => const SubjectStatusViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const SubjectStatusViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const SubjectStatusViewConverter().toJson,
   matches: SubjectStatusView.validate,
 );
@@ -86,7 +88,8 @@ final subjectStatusViewDescriptor = XRPCObjectDescriptor<SubjectStatusView>(
 final subjectViewDescriptor = XRPCObjectDescriptor<SubjectView>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'subjectView',
-  fromJson: (json) => const SubjectViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const SubjectViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const SubjectViewConverter().toJson,
   matches: SubjectView.validate,
 );
@@ -94,7 +97,8 @@ final subjectViewDescriptor = XRPCObjectDescriptor<SubjectView>(
 final accountStatsDescriptor = XRPCObjectDescriptor<AccountStats>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'accountStats',
-  fromJson: (json) => const AccountStatsConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const AccountStatsConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const AccountStatsConverter().toJson,
   matches: AccountStats.validate,
 );
@@ -102,7 +106,8 @@ final accountStatsDescriptor = XRPCObjectDescriptor<AccountStats>(
 final recordsStatsDescriptor = XRPCObjectDescriptor<RecordsStats>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'recordsStats',
-  fromJson: (json) => const RecordsStatsConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RecordsStatsConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RecordsStatsConverter().toJson,
   matches: RecordsStats.validate,
 );
@@ -110,7 +115,8 @@ final recordsStatsDescriptor = XRPCObjectDescriptor<RecordsStats>(
 final accountStrikeDescriptor = XRPCObjectDescriptor<AccountStrike>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'accountStrike',
-  fromJson: (json) => const AccountStrikeConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const AccountStrikeConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const AccountStrikeConverter().toJson,
   matches: AccountStrike.validate,
 );
@@ -118,31 +124,39 @@ final accountStrikeDescriptor = XRPCObjectDescriptor<AccountStrike>(
 final modEventTakedownDescriptor = XRPCObjectDescriptor<ModEventTakedown>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventTakedown',
-  fromJson: (json) => const ModEventTakedownConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventTakedownConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventTakedownConverter().toJson,
   matches: ModEventTakedown.validate,
 );
 
-final modEventReverseTakedownDescriptor = XRPCObjectDescriptor<ModEventReverseTakedown>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'modEventReverseTakedown',
-  fromJson: (json) => const ModEventReverseTakedownConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const ModEventReverseTakedownConverter().toJson,
-  matches: ModEventReverseTakedown.validate,
-);
+final modEventReverseTakedownDescriptor =
+    XRPCObjectDescriptor<ModEventReverseTakedown>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'modEventReverseTakedown',
+      fromJson: (json) => const ModEventReverseTakedownConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const ModEventReverseTakedownConverter().toJson,
+      matches: ModEventReverseTakedown.validate,
+    );
 
-final modEventResolveAppealDescriptor = XRPCObjectDescriptor<ModEventResolveAppeal>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'modEventResolveAppeal',
-  fromJson: (json) => const ModEventResolveAppealConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const ModEventResolveAppealConverter().toJson,
-  matches: ModEventResolveAppeal.validate,
-);
+final modEventResolveAppealDescriptor =
+    XRPCObjectDescriptor<ModEventResolveAppeal>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'modEventResolveAppeal',
+      fromJson: (json) => const ModEventResolveAppealConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const ModEventResolveAppealConverter().toJson,
+      matches: ModEventResolveAppeal.validate,
+    );
 
 final modEventCommentDescriptor = XRPCObjectDescriptor<ModEventComment>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventComment',
-  fromJson: (json) => const ModEventCommentConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventCommentConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventCommentConverter().toJson,
   matches: ModEventComment.validate,
 );
@@ -150,7 +164,8 @@ final modEventCommentDescriptor = XRPCObjectDescriptor<ModEventComment>(
 final modEventReportDescriptor = XRPCObjectDescriptor<ModEventReport>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventReport',
-  fromJson: (json) => const ModEventReportConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventReportConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventReportConverter().toJson,
   matches: ModEventReport.validate,
 );
@@ -158,55 +173,70 @@ final modEventReportDescriptor = XRPCObjectDescriptor<ModEventReport>(
 final modEventLabelDescriptor = XRPCObjectDescriptor<ModEventLabel>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventLabel',
-  fromJson: (json) => const ModEventLabelConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventLabelConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventLabelConverter().toJson,
   matches: ModEventLabel.validate,
 );
 
-final modEventPriorityScoreDescriptor = XRPCObjectDescriptor<ModEventPriorityScore>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'modEventPriorityScore',
-  fromJson: (json) => const ModEventPriorityScoreConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const ModEventPriorityScoreConverter().toJson,
-  matches: ModEventPriorityScore.validate,
-);
+final modEventPriorityScoreDescriptor =
+    XRPCObjectDescriptor<ModEventPriorityScore>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'modEventPriorityScore',
+      fromJson: (json) => const ModEventPriorityScoreConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const ModEventPriorityScoreConverter().toJson,
+      matches: ModEventPriorityScore.validate,
+    );
 
 final ageAssuranceEventDescriptor = XRPCObjectDescriptor<AgeAssuranceEvent>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'ageAssuranceEvent',
-  fromJson: (json) => const AgeAssuranceEventConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const AgeAssuranceEventConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const AgeAssuranceEventConverter().toJson,
   matches: AgeAssuranceEvent.validate,
 );
 
-final ageAssuranceOverrideEventDescriptor = XRPCObjectDescriptor<AgeAssuranceOverrideEvent>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'ageAssuranceOverrideEvent',
-  fromJson: (json) => const AgeAssuranceOverrideEventConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const AgeAssuranceOverrideEventConverter().toJson,
-  matches: AgeAssuranceOverrideEvent.validate,
-);
+final ageAssuranceOverrideEventDescriptor =
+    XRPCObjectDescriptor<AgeAssuranceOverrideEvent>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'ageAssuranceOverrideEvent',
+      fromJson: (json) => const AgeAssuranceOverrideEventConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const AgeAssuranceOverrideEventConverter().toJson,
+      matches: AgeAssuranceOverrideEvent.validate,
+    );
 
-final ageAssurancePurgeEventDescriptor = XRPCObjectDescriptor<AgeAssurancePurgeEvent>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'ageAssurancePurgeEvent',
-  fromJson: (json) => const AgeAssurancePurgeEventConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const AgeAssurancePurgeEventConverter().toJson,
-  matches: AgeAssurancePurgeEvent.validate,
-);
+final ageAssurancePurgeEventDescriptor =
+    XRPCObjectDescriptor<AgeAssurancePurgeEvent>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'ageAssurancePurgeEvent',
+      fromJson: (json) => const AgeAssurancePurgeEventConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const AgeAssurancePurgeEventConverter().toJson,
+      matches: AgeAssurancePurgeEvent.validate,
+    );
 
-final revokeAccountCredentialsEventDescriptor = XRPCObjectDescriptor<RevokeAccountCredentialsEvent>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'revokeAccountCredentialsEvent',
-  fromJson: (json) => const RevokeAccountCredentialsEventConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const RevokeAccountCredentialsEventConverter().toJson,
-  matches: RevokeAccountCredentialsEvent.validate,
-);
+final revokeAccountCredentialsEventDescriptor =
+    XRPCObjectDescriptor<RevokeAccountCredentialsEvent>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'revokeAccountCredentialsEvent',
+      fromJson: (json) => const RevokeAccountCredentialsEventConverter()
+          .fromJson(json.cast<String, dynamic>()),
+      toJson: const RevokeAccountCredentialsEventConverter().toJson,
+      matches: RevokeAccountCredentialsEvent.validate,
+    );
 
 final modEventAcknowledgeDescriptor = XRPCObjectDescriptor<ModEventAcknowledge>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventAcknowledge',
-  fromJson: (json) => const ModEventAcknowledgeConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) => const ModEventAcknowledgeConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
   toJson: const ModEventAcknowledgeConverter().toJson,
   matches: ModEventAcknowledge.validate,
 );
@@ -214,7 +244,8 @@ final modEventAcknowledgeDescriptor = XRPCObjectDescriptor<ModEventAcknowledge>(
 final modEventEscalateDescriptor = XRPCObjectDescriptor<ModEventEscalate>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventEscalate',
-  fromJson: (json) => const ModEventEscalateConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventEscalateConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventEscalateConverter().toJson,
   matches: ModEventEscalate.validate,
 );
@@ -222,7 +253,8 @@ final modEventEscalateDescriptor = XRPCObjectDescriptor<ModEventEscalate>(
 final modEventMuteDescriptor = XRPCObjectDescriptor<ModEventMute>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventMute',
-  fromJson: (json) => const ModEventMuteConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventMuteConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventMuteConverter().toJson,
   matches: ModEventMute.validate,
 );
@@ -230,31 +262,39 @@ final modEventMuteDescriptor = XRPCObjectDescriptor<ModEventMute>(
 final modEventUnmuteDescriptor = XRPCObjectDescriptor<ModEventUnmute>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventUnmute',
-  fromJson: (json) => const ModEventUnmuteConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventUnmuteConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventUnmuteConverter().toJson,
   matches: ModEventUnmute.validate,
 );
 
-final modEventMuteReporterDescriptor = XRPCObjectDescriptor<ModEventMuteReporter>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'modEventMuteReporter',
-  fromJson: (json) => const ModEventMuteReporterConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const ModEventMuteReporterConverter().toJson,
-  matches: ModEventMuteReporter.validate,
-);
+final modEventMuteReporterDescriptor =
+    XRPCObjectDescriptor<ModEventMuteReporter>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'modEventMuteReporter',
+      fromJson: (json) => const ModEventMuteReporterConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const ModEventMuteReporterConverter().toJson,
+      matches: ModEventMuteReporter.validate,
+    );
 
-final modEventUnmuteReporterDescriptor = XRPCObjectDescriptor<ModEventUnmuteReporter>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'modEventUnmuteReporter',
-  fromJson: (json) => const ModEventUnmuteReporterConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const ModEventUnmuteReporterConverter().toJson,
-  matches: ModEventUnmuteReporter.validate,
-);
+final modEventUnmuteReporterDescriptor =
+    XRPCObjectDescriptor<ModEventUnmuteReporter>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'modEventUnmuteReporter',
+      fromJson: (json) => const ModEventUnmuteReporterConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const ModEventUnmuteReporterConverter().toJson,
+      matches: ModEventUnmuteReporter.validate,
+    );
 
 final modEventEmailDescriptor = XRPCObjectDescriptor<ModEventEmail>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventEmail',
-  fromJson: (json) => const ModEventEmailConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventEmailConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventEmailConverter().toJson,
   matches: ModEventEmail.validate,
 );
@@ -262,7 +302,8 @@ final modEventEmailDescriptor = XRPCObjectDescriptor<ModEventEmail>(
 final modEventDivertDescriptor = XRPCObjectDescriptor<ModEventDivert>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventDivert',
-  fromJson: (json) => const ModEventDivertConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventDivertConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventDivertConverter().toJson,
   matches: ModEventDivert.validate,
 );
@@ -270,7 +311,8 @@ final modEventDivertDescriptor = XRPCObjectDescriptor<ModEventDivert>(
 final modEventTagDescriptor = XRPCObjectDescriptor<ModEventTag>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modEventTag',
-  fromJson: (json) => const ModEventTagConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModEventTagConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModEventTagConverter().toJson,
   matches: ModEventTag.validate,
 );
@@ -278,7 +320,8 @@ final modEventTagDescriptor = XRPCObjectDescriptor<ModEventTag>(
 final accountEventDescriptor = XRPCObjectDescriptor<AccountEvent>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'accountEvent',
-  fromJson: (json) => const AccountEventConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const AccountEventConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const AccountEventConverter().toJson,
   matches: AccountEvent.validate,
 );
@@ -286,7 +329,8 @@ final accountEventDescriptor = XRPCObjectDescriptor<AccountEvent>(
 final identityEventDescriptor = XRPCObjectDescriptor<IdentityEvent>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'identityEvent',
-  fromJson: (json) => const IdentityEventConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const IdentityEventConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const IdentityEventConverter().toJson,
   matches: IdentityEvent.validate,
 );
@@ -294,31 +338,38 @@ final identityEventDescriptor = XRPCObjectDescriptor<IdentityEvent>(
 final recordEventDescriptor = XRPCObjectDescriptor<RecordEvent>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'recordEvent',
-  fromJson: (json) => const RecordEventConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RecordEventConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RecordEventConverter().toJson,
   matches: RecordEvent.validate,
 );
 
-final scheduleTakedownEventDescriptor = XRPCObjectDescriptor<ScheduleTakedownEvent>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'scheduleTakedownEvent',
-  fromJson: (json) => const ScheduleTakedownEventConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const ScheduleTakedownEventConverter().toJson,
-  matches: ScheduleTakedownEvent.validate,
-);
+final scheduleTakedownEventDescriptor =
+    XRPCObjectDescriptor<ScheduleTakedownEvent>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'scheduleTakedownEvent',
+      fromJson: (json) => const ScheduleTakedownEventConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const ScheduleTakedownEventConverter().toJson,
+      matches: ScheduleTakedownEvent.validate,
+    );
 
-final cancelScheduledTakedownEventDescriptor = XRPCObjectDescriptor<CancelScheduledTakedownEvent>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'cancelScheduledTakedownEvent',
-  fromJson: (json) => const CancelScheduledTakedownEventConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const CancelScheduledTakedownEventConverter().toJson,
-  matches: CancelScheduledTakedownEvent.validate,
-);
+final cancelScheduledTakedownEventDescriptor =
+    XRPCObjectDescriptor<CancelScheduledTakedownEvent>(
+      nsid: 'tools.ozone.moderation.defs',
+      defName: 'cancelScheduledTakedownEvent',
+      fromJson: (json) => const CancelScheduledTakedownEventConverter()
+          .fromJson(json.cast<String, dynamic>()),
+      toJson: const CancelScheduledTakedownEventConverter().toJson,
+      matches: CancelScheduledTakedownEvent.validate,
+    );
 
 final repoViewDescriptor = XRPCObjectDescriptor<RepoView>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'repoView',
-  fromJson: (json) => const RepoViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RepoViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RepoViewConverter().toJson,
   matches: RepoView.validate,
 );
@@ -326,7 +377,8 @@ final repoViewDescriptor = XRPCObjectDescriptor<RepoView>(
 final repoViewDetailDescriptor = XRPCObjectDescriptor<RepoViewDetail>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'repoViewDetail',
-  fromJson: (json) => const RepoViewDetailConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RepoViewDetailConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RepoViewDetailConverter().toJson,
   matches: RepoViewDetail.validate,
 );
@@ -334,7 +386,8 @@ final repoViewDetailDescriptor = XRPCObjectDescriptor<RepoViewDetail>(
 final repoViewNotFoundDescriptor = XRPCObjectDescriptor<RepoViewNotFound>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'repoViewNotFound',
-  fromJson: (json) => const RepoViewNotFoundConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RepoViewNotFoundConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RepoViewNotFoundConverter().toJson,
   matches: RepoViewNotFound.validate,
 );
@@ -342,7 +395,8 @@ final repoViewNotFoundDescriptor = XRPCObjectDescriptor<RepoViewNotFound>(
 final recordViewDescriptor = XRPCObjectDescriptor<RecordView>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'recordView',
-  fromJson: (json) => const RecordViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RecordViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RecordViewConverter().toJson,
   matches: RecordView.validate,
 );
@@ -350,7 +404,8 @@ final recordViewDescriptor = XRPCObjectDescriptor<RecordView>(
 final recordViewDetailDescriptor = XRPCObjectDescriptor<RecordViewDetail>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'recordViewDetail',
-  fromJson: (json) => const RecordViewDetailConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RecordViewDetailConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RecordViewDetailConverter().toJson,
   matches: RecordViewDetail.validate,
 );
@@ -358,7 +413,9 @@ final recordViewDetailDescriptor = XRPCObjectDescriptor<RecordViewDetail>(
 final recordViewNotFoundDescriptor = XRPCObjectDescriptor<RecordViewNotFound>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'recordViewNotFound',
-  fromJson: (json) => const RecordViewNotFoundConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) => const RecordViewNotFoundConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
   toJson: const RecordViewNotFoundConverter().toJson,
   matches: RecordViewNotFound.validate,
 );
@@ -366,7 +423,8 @@ final recordViewNotFoundDescriptor = XRPCObjectDescriptor<RecordViewNotFound>(
 final moderationDescriptor = XRPCObjectDescriptor<Moderation>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'moderation',
-  fromJson: (json) => const ModerationConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModerationConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModerationConverter().toJson,
   matches: Moderation.validate,
 );
@@ -374,7 +432,8 @@ final moderationDescriptor = XRPCObjectDescriptor<Moderation>(
 final moderationDetailDescriptor = XRPCObjectDescriptor<ModerationDetail>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'moderationDetail',
-  fromJson: (json) => const ModerationDetailConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModerationDetailConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModerationDetailConverter().toJson,
   matches: ModerationDetail.validate,
 );
@@ -382,7 +441,8 @@ final moderationDetailDescriptor = XRPCObjectDescriptor<ModerationDetail>(
 final blobViewDescriptor = XRPCObjectDescriptor<BlobView>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'blobView',
-  fromJson: (json) => const BlobViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const BlobViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const BlobViewConverter().toJson,
   matches: BlobView.validate,
 );
@@ -390,7 +450,8 @@ final blobViewDescriptor = XRPCObjectDescriptor<BlobView>(
 final imageDetailsDescriptor = XRPCObjectDescriptor<ImageDetails>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'imageDetails',
-  fromJson: (json) => const ImageDetailsConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ImageDetailsConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ImageDetailsConverter().toJson,
   matches: ImageDetails.validate,
 );
@@ -398,7 +459,8 @@ final imageDetailsDescriptor = XRPCObjectDescriptor<ImageDetails>(
 final videoDetailsDescriptor = XRPCObjectDescriptor<VideoDetails>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'videoDetails',
-  fromJson: (json) => const VideoDetailsConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const VideoDetailsConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const VideoDetailsConverter().toJson,
   matches: VideoDetails.validate,
 );
@@ -406,7 +468,8 @@ final videoDetailsDescriptor = XRPCObjectDescriptor<VideoDetails>(
 final accountHostingDescriptor = XRPCObjectDescriptor<AccountHosting>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'accountHosting',
-  fromJson: (json) => const AccountHostingConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const AccountHostingConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const AccountHostingConverter().toJson,
   matches: AccountHosting.validate,
 );
@@ -414,7 +477,8 @@ final accountHostingDescriptor = XRPCObjectDescriptor<AccountHosting>(
 final recordHostingDescriptor = XRPCObjectDescriptor<RecordHosting>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'recordHosting',
-  fromJson: (json) => const RecordHostingConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const RecordHostingConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const RecordHostingConverter().toJson,
   matches: RecordHosting.validate,
 );
@@ -422,7 +486,8 @@ final recordHostingDescriptor = XRPCObjectDescriptor<RecordHosting>(
 final reporterStatsDescriptor = XRPCObjectDescriptor<ReporterStats>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'reporterStats',
-  fromJson: (json) => const ReporterStatsConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ReporterStatsConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ReporterStatsConverter().toJson,
   matches: ReporterStats.validate,
 );
@@ -430,7 +495,8 @@ final reporterStatsDescriptor = XRPCObjectDescriptor<ReporterStats>(
 final modToolDescriptor = XRPCObjectDescriptor<ModTool>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'modTool',
-  fromJson: (json) => const ModToolConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ModToolConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ModToolConverter().toJson,
   matches: ModTool.validate,
 );
@@ -438,7 +504,9 @@ final modToolDescriptor = XRPCObjectDescriptor<ModTool>(
 final scheduledActionViewDescriptor = XRPCObjectDescriptor<ScheduledActionView>(
   nsid: 'tools.ozone.moderation.defs',
   defName: 'scheduledActionView',
-  fromJson: (json) => const ScheduledActionViewConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) => const ScheduledActionViewConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
   toJson: const ScheduledActionViewConverter().toJson,
   matches: ScheduledActionView.validate,
 );

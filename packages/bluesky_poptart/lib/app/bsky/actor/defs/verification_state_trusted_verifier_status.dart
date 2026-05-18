@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,9 +14,9 @@ part 'verification_state_trusted_verifier_status.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
-abstract class VerificationStateTrustedVerifierStatus with _$VerificationStateTrustedVerifierStatus {
+abstract class VerificationStateTrustedVerifierStatus
+    with _$VerificationStateTrustedVerifierStatus {
   const VerificationStateTrustedVerifierStatus._();
 
   const factory VerificationStateTrustedVerifierStatus.knownValue({
@@ -30,33 +29,46 @@ abstract class VerificationStateTrustedVerifierStatus with _$VerificationStateTr
 
   static VerificationStateTrustedVerifierStatus? valueOf(final String? value) {
     if (value == null) return null;
-    final knownValue = KnownVerificationStateTrustedVerifierStatus.valueOf(value);
+    final knownValue = KnownVerificationStateTrustedVerifierStatus.valueOf(
+      value,
+    );
 
-    return knownValue != null ? VerificationStateTrustedVerifierStatus.knownValue(data: knownValue) : VerificationStateTrustedVerifierStatus.unknown(data: value);
+    return knownValue != null
+        ? VerificationStateTrustedVerifierStatus.knownValue(data: knownValue)
+        : VerificationStateTrustedVerifierStatus.unknown(data: value);
   }
 
-  String toJson() => const VerificationStateTrustedVerifierStatusConverter().toJson(this);
+  String toJson() =>
+      const VerificationStateTrustedVerifierStatusConverter().toJson(this);
 }
 
-extension VerificationStateTrustedVerifierStatusExtension on VerificationStateTrustedVerifierStatus {
-  bool get isKnownValue => isA<VerificationStateTrustedVerifierStatusKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownVerificationStateTrustedVerifierStatus? get knownValue => isKnownValue ? data as KnownVerificationStateTrustedVerifierStatus : null;
-bool get isUnknown => isA<VerificationStateTrustedVerifierStatusUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+extension VerificationStateTrustedVerifierStatusExtension
+    on VerificationStateTrustedVerifierStatus {
+  bool get isKnownValue =>
+      isA<VerificationStateTrustedVerifierStatusKnownValue>(this);
+  bool get isNotKnownValue => !isKnownValue;
+  KnownVerificationStateTrustedVerifierStatus? get knownValue =>
+      isKnownValue ? data as KnownVerificationStateTrustedVerifierStatus : null;
+  bool get isUnknown =>
+      isA<VerificationStateTrustedVerifierStatusUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class VerificationStateTrustedVerifierStatusConverter extends JsonConverter<VerificationStateTrustedVerifierStatus, String> {
+final class VerificationStateTrustedVerifierStatusConverter
+    extends JsonConverter<VerificationStateTrustedVerifierStatus, String> {
   const VerificationStateTrustedVerifierStatusConverter();
 
   @override
   VerificationStateTrustedVerifierStatus fromJson(String json) {
     try {
-      final knownValue = KnownVerificationStateTrustedVerifierStatus.valueOf(json);
+      final knownValue = KnownVerificationStateTrustedVerifierStatus.valueOf(
+        json,
+      );
       if (knownValue != null) {
-        return VerificationStateTrustedVerifierStatus.knownValue(data: knownValue);
+        return VerificationStateTrustedVerifierStatus.knownValue(
+          data: knownValue,
+        );
       }
 
       return VerificationStateTrustedVerifierStatus.unknown(data: json);
@@ -66,20 +78,17 @@ final class VerificationStateTrustedVerifierStatusConverter extends JsonConverte
   }
 
   @override
-  String toJson(VerificationStateTrustedVerifierStatus object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(VerificationStateTrustedVerifierStatus object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownVerificationStateTrustedVerifierStatus implements Serializable{
+enum KnownVerificationStateTrustedVerifierStatus implements Serializable {
   @JsonValue('valid')
-valid('valid'),
-@JsonValue('invalid')
-invalid('invalid'),
-@JsonValue('none')
-none('none'),
-  ;
+  valid('valid'),
+  @JsonValue('invalid')
+  invalid('invalid'),
+  @JsonValue('none')
+  none('none');
 
   @override
   final String value;
@@ -90,7 +99,9 @@ none('none'),
     return valueOf(value) != null;
   }
 
-  static KnownVerificationStateTrustedVerifierStatus? valueOf(final String? value) {
+  static KnownVerificationStateTrustedVerifierStatus? valueOf(
+    final String? value,
+  ) {
     if (value == null) return null;
 
     for (final v in values) {

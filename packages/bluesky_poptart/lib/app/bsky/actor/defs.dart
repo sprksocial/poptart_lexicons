@@ -32,6 +32,7 @@ export 'defs/profile_associated.dart';
 export 'defs/profile_associated_activity_subscription.dart';
 export 'defs/profile_associated_activity_subscription_allow_subscriptions.dart';
 export 'defs/profile_associated_chat.dart';
+export 'defs/profile_associated_chat_allow_group_invites.dart';
 export 'defs/profile_associated_chat_allow_incoming.dart';
 export 'defs/profile_associated_germ.dart';
 export 'defs/profile_associated_germ_show_button_to.dart';

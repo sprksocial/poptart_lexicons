@@ -8,4 +8,9 @@
 // **************************************************************************
 
 export 'defs/descriptor.dart';
+export 'defs/direct_convo_member.dart';
+export 'defs/group_convo_member.dart';
+export 'defs/member_role.dart';
+export 'defs/past_group_convo_member.dart';
 export 'defs/profile_view_basic.dart';
+export 'defs/union_profile_view_basic_kind.dart';

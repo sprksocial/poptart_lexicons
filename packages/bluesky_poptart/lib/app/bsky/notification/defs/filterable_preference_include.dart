@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'filterable_preference_include.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class FilterablePreferenceInclude with _$FilterablePreferenceInclude {
   const FilterablePreferenceInclude._();
@@ -24,15 +22,16 @@ abstract class FilterablePreferenceInclude with _$FilterablePreferenceInclude {
     required KnownFilterablePreferenceInclude data,
   }) = FilterablePreferenceIncludeKnownValue;
 
-  const factory FilterablePreferenceInclude.unknown({
-    required String data,
-  }) = FilterablePreferenceIncludeUnknown;
+  const factory FilterablePreferenceInclude.unknown({required String data}) =
+      FilterablePreferenceIncludeUnknown;
 
   static FilterablePreferenceInclude? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownFilterablePreferenceInclude.valueOf(value);
 
-    return knownValue != null ? FilterablePreferenceInclude.knownValue(data: knownValue) : FilterablePreferenceInclude.unknown(data: value);
+    return knownValue != null
+        ? FilterablePreferenceInclude.knownValue(data: knownValue)
+        : FilterablePreferenceInclude.unknown(data: value);
   }
 
   String toJson() => const FilterablePreferenceIncludeConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class FilterablePreferenceInclude with _$FilterablePreferenceInclude {
 
 extension FilterablePreferenceIncludeExtension on FilterablePreferenceInclude {
   bool get isKnownValue => isA<FilterablePreferenceIncludeKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownFilterablePreferenceInclude? get knownValue => isKnownValue ? data as KnownFilterablePreferenceInclude : null;
-bool get isUnknown => isA<FilterablePreferenceIncludeUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownFilterablePreferenceInclude? get knownValue =>
+      isKnownValue ? data as KnownFilterablePreferenceInclude : null;
+  bool get isUnknown => isA<FilterablePreferenceIncludeUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class FilterablePreferenceIncludeConverter extends JsonConverter<FilterablePreferenceInclude, String> {
+final class FilterablePreferenceIncludeConverter
+    extends JsonConverter<FilterablePreferenceInclude, String> {
   const FilterablePreferenceIncludeConverter();
 
   @override
@@ -66,18 +66,15 @@ final class FilterablePreferenceIncludeConverter extends JsonConverter<Filterabl
   }
 
   @override
-  String toJson(FilterablePreferenceInclude object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(FilterablePreferenceInclude object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownFilterablePreferenceInclude implements Serializable{
+enum KnownFilterablePreferenceInclude implements Serializable {
   @JsonValue('all')
-all('all'),
-@JsonValue('follows')
-follows('follows'),
-  ;
+  all('all'),
+  @JsonValue('follows')
+  follows('follows');
 
   @override
   final String value;
