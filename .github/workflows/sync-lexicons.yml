@@ -23,21 +23,11 @@ jobs:
         with:
           path: poptart_lexicons
 
-      - name: Validate sync token
-        env:
-          LEXICON_SYNC_TOKEN: ${{ secrets.LEXICON_SYNC_TOKEN }}
-        run: |
-          if [ -z "$LEXICON_SYNC_TOKEN" ]; then
-            echo "LEXICON_SYNC_TOKEN secret is required to checkout sprksocial/poptart and sprksocial/server." >&2
-            exit 1
-          fi
-
       - name: Checkout generator
         uses: actions/checkout@v4.1.7
         with:
           repository: sprksocial/poptart
           path: poptart
-          token: ${{ secrets.LEXICON_SYNC_TOKEN }}
 
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
@@ -52,8 +42,6 @@ jobs:
 
       - name: Pull upstream lexicons
         working-directory: poptart_lexicons
-        env:
-          LEXICON_SYNC_TOKEN: ${{ secrets.LEXICON_SYNC_TOKEN }}
         run: bash scripts/sync_lexicons.sh
 
       - name: Generate package sources

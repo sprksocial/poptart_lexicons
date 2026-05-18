@@ -12,20 +12,8 @@ SERVER_REPO="${SERVER_REPO:-https://github.com/sprksocial/server.git}"
 clone_repo() {
   local repo_url="$1"
   local destination="$2"
-  local auth_required="${3:-false}"
 
-  if [[ "$auth_required" == "true" ]]; then
-    if [[ -z "${LEXICON_SYNC_TOKEN:-}" ]]; then
-      echo "LEXICON_SYNC_TOKEN is required to clone $repo_url" >&2
-      exit 1
-    fi
-
-    git \
-      -c "http.https://github.com/.extraheader=AUTHORIZATION: bearer ${LEXICON_SYNC_TOKEN}" \
-      clone --depth 1 "$repo_url" "$destination"
-  else
-    git clone --depth 1 "$repo_url" "$destination"
-  fi
+  git clone --depth 1 "$repo_url" "$destination"
 }
 
 replace_dir() {
@@ -48,7 +36,7 @@ mkdir -p "$WORK_DIR"
 clone_repo "$ATPROTO_REPO" "$WORK_DIR/atproto"
 clone_repo "$MARGIN_REPO" "$WORK_DIR/margin"
 clone_repo "$PLYR_REPO" "$WORK_DIR/plyr"
-clone_repo "$SERVER_REPO" "$WORK_DIR/server" true
+clone_repo "$SERVER_REPO" "$WORK_DIR/server"
 
 replace_dir "$WORK_DIR/atproto/lexicons/app/bsky" "$ROOT_DIR/lexicons/app/bsky"
 replace_dir "$WORK_DIR/atproto/lexicons/chat/bsky" "$ROOT_DIR/lexicons/chat/bsky"
