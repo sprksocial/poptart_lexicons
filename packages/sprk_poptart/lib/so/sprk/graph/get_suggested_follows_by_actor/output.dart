@@ -3,13 +3,11 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import '../../actor/defs/profile_view.dart';
-
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -18,50 +16,53 @@ part 'output.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
-abstract class GraphGetSuggestedFollowsByActorOutput with _$GraphGetSuggestedFollowsByActorOutput {
-  static const knownProps = <String>['suggestions', 'isFallback', 'recId', ];
+abstract class GraphGetSuggestedFollowsByActorOutput
+    with _$GraphGetSuggestedFollowsByActorOutput {
+  static const knownProps = <String>['suggestions', 'isFallback', 'recId'];
 
   @JsonSerializable(includeIfNull: false)
   const factory GraphGetSuggestedFollowsByActorOutput({
     @ProfileViewConverter() required List<ProfileView> suggestions,
-/// If true, response has fallen-back to generic results, and is not scoped using relativeToDid
-@Default(false) bool isFallback,
-/// Snowflake for this recommendation, use when submitting recommendation events.
-int? recId,
+
+    /// If true, response has fallen-back to generic results, and is not scoped using relativeToDid
+    @Default(false) bool isFallback,
+
+    /// Snowflake for this recommendation, use when submitting recommendation events.
+    int? recId,
 
     Map<String, dynamic>? $unknown,
   }) = _GraphGetSuggestedFollowsByActorOutput;
 
-  factory GraphGetSuggestedFollowsByActorOutput.fromJson(Map<String, Object?> json) => _$GraphGetSuggestedFollowsByActorOutputFromJson(json);
+  factory GraphGetSuggestedFollowsByActorOutput.fromJson(
+    Map<String, Object?> json,
+  ) => _$GraphGetSuggestedFollowsByActorOutputFromJson(json);
 }
 
-extension GraphGetSuggestedFollowsByActorOutputExtension on GraphGetSuggestedFollowsByActorOutput {
-bool get isIsFallback => isFallback;
-bool get isNotIsFallback => !isIsFallback;
-bool get hasRecId => recId != null;
-bool get hasNotRecId => !hasRecId;
-
+extension GraphGetSuggestedFollowsByActorOutputExtension
+    on GraphGetSuggestedFollowsByActorOutput {
+  bool get isIsFallback => isFallback;
+  bool get isNotIsFallback => !isIsFallback;
+  bool get hasRecId => recId != null;
+  bool get hasNotRecId => !hasRecId;
 }
-
 
 final class GraphGetSuggestedFollowsByActorOutputConverter
-    extends JsonConverter<GraphGetSuggestedFollowsByActorOutput, Map<String, dynamic>> {
+    extends
+        JsonConverter<
+          GraphGetSuggestedFollowsByActorOutput,
+          Map<String, dynamic>
+        > {
   const GraphGetSuggestedFollowsByActorOutputConverter();
 
   @override
   GraphGetSuggestedFollowsByActorOutput fromJson(Map<String, dynamic> json) {
-    return GraphGetSuggestedFollowsByActorOutput.fromJson(translate(
-      json,
-      GraphGetSuggestedFollowsByActorOutput.knownProps,
-    ));
+    return GraphGetSuggestedFollowsByActorOutput.fromJson(
+      translate(json, GraphGetSuggestedFollowsByActorOutput.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(GraphGetSuggestedFollowsByActorOutput object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(GraphGetSuggestedFollowsByActorOutput object) =>
+      untranslate(object.toJson());
 }
-

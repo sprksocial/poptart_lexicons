@@ -9,4 +9,5 @@
 
 export 'declaration/descriptor.dart';
 export 'declaration/main.dart';
+export 'declaration/main_allow_group_invites.dart';
 export 'declaration/main_allow_incoming.dart';

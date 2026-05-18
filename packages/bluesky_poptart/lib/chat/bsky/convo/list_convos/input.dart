@@ -3,14 +3,14 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import './main_read_state.dart';
 import './main_status.dart';
-
+import './main_kind.dart';
+import './main_lock_status.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -19,35 +19,51 @@ part 'input.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
 abstract class ConvoListConvosInput with _$ConvoListConvosInput {
-  static const knownProps = <String>['limit', 'cursor', 'readState', 'status', ];
+  static const knownProps = <String>[
+    'limit',
+    'cursor',
+    'readState',
+    'status',
+    'kind',
+    'lockStatus',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ConvoListConvosInput({
     @Default(50) int limit,
-String? cursor,
-@ConvoListConvosReadStateConverter() ConvoListConvosReadState? readState,
-@ConvoListConvosStatusConverter() ConvoListConvosStatus? status,
+    String? cursor,
+    @ConvoListConvosReadStateConverter() ConvoListConvosReadState? readState,
+
+    /// Filter convos by their status. It is discouraged to call with "request" and preferred to call chat.bsky.convo.listConvoRequests, which also includes group join requests made by the user.
+    @ConvoListConvosStatusConverter() ConvoListConvosStatus? status,
+
+    /// Filter by conversation kind.
+    @ConvoListConvosKindConverter() ConvoListConvosKind? kind,
+
+    /// Filter by conversation lock status. Values follow chat.bsky.convo.defs#convoLockStatus.
+    @ConvoListConvosLockStatusConverter() ConvoListConvosLockStatus? lockStatus,
 
     Map<String, dynamic>? $unknown,
   }) = _ConvoListConvosInput;
 
-  factory ConvoListConvosInput.fromJson(Map<String, Object?> json) => _$ConvoListConvosInputFromJson(json);
+  factory ConvoListConvosInput.fromJson(Map<String, Object?> json) =>
+      _$ConvoListConvosInputFromJson(json);
 }
 
 extension ConvoListConvosInputExtension on ConvoListConvosInput {
-bool get hasCursor => cursor != null;
-bool get hasNotCursor => !hasCursor;
-bool get hasReadState => readState != null;
-bool get hasNotReadState => !hasReadState;
-bool get hasStatus => status != null;
-bool get hasNotStatus => !hasStatus;
-
+  bool get hasCursor => cursor != null;
+  bool get hasNotCursor => !hasCursor;
+  bool get hasReadState => readState != null;
+  bool get hasNotReadState => !hasReadState;
+  bool get hasStatus => status != null;
+  bool get hasNotStatus => !hasStatus;
+  bool get hasKind => kind != null;
+  bool get hasNotKind => !hasKind;
+  bool get hasLockStatus => lockStatus != null;
+  bool get hasNotLockStatus => !hasLockStatus;
 }
-
 
 final class ConvoListConvosInputConverter
     extends JsonConverter<ConvoListConvosInput, Map<String, dynamic>> {
@@ -55,15 +71,12 @@ final class ConvoListConvosInputConverter
 
   @override
   ConvoListConvosInput fromJson(Map<String, dynamic> json) {
-    return ConvoListConvosInput.fromJson(translate(
-      json,
-      ConvoListConvosInput.knownProps,
-    ));
+    return ConvoListConvosInput.fromJson(
+      translate(json, ConvoListConvosInput.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(ConvoListConvosInput object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(ConvoListConvosInput object) =>
+      untranslate(object.toJson());
 }
-

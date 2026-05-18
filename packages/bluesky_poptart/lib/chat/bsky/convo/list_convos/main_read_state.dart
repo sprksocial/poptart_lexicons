@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'main_read_state.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class ConvoListConvosReadState with _$ConvoListConvosReadState {
   const ConvoListConvosReadState._();
@@ -24,15 +22,16 @@ abstract class ConvoListConvosReadState with _$ConvoListConvosReadState {
     required KnownConvoListConvosReadState data,
   }) = ConvoListConvosReadStateKnownValue;
 
-  const factory ConvoListConvosReadState.unknown({
-    required String data,
-  }) = ConvoListConvosReadStateUnknown;
+  const factory ConvoListConvosReadState.unknown({required String data}) =
+      ConvoListConvosReadStateUnknown;
 
   static ConvoListConvosReadState? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownConvoListConvosReadState.valueOf(value);
 
-    return knownValue != null ? ConvoListConvosReadState.knownValue(data: knownValue) : ConvoListConvosReadState.unknown(data: value);
+    return knownValue != null
+        ? ConvoListConvosReadState.knownValue(data: knownValue)
+        : ConvoListConvosReadState.unknown(data: value);
   }
 
   String toJson() => const ConvoListConvosReadStateConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class ConvoListConvosReadState with _$ConvoListConvosReadState {
 
 extension ConvoListConvosReadStateExtension on ConvoListConvosReadState {
   bool get isKnownValue => isA<ConvoListConvosReadStateKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownConvoListConvosReadState? get knownValue => isKnownValue ? data as KnownConvoListConvosReadState : null;
-bool get isUnknown => isA<ConvoListConvosReadStateUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownConvoListConvosReadState? get knownValue =>
+      isKnownValue ? data as KnownConvoListConvosReadState : null;
+  bool get isUnknown => isA<ConvoListConvosReadStateUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class ConvoListConvosReadStateConverter extends JsonConverter<ConvoListConvosReadState, String> {
+final class ConvoListConvosReadStateConverter
+    extends JsonConverter<ConvoListConvosReadState, String> {
   const ConvoListConvosReadStateConverter();
 
   @override
@@ -66,16 +66,13 @@ final class ConvoListConvosReadStateConverter extends JsonConverter<ConvoListCon
   }
 
   @override
-  String toJson(ConvoListConvosReadState object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(ConvoListConvosReadState object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownConvoListConvosReadState implements Serializable{
+enum KnownConvoListConvosReadState implements Serializable {
   @JsonValue('unread')
-unread('unread'),
-  ;
+  unread('unread');
 
   @override
   final String value;

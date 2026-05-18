@@ -3,12 +3,9 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
-
-
 
 part 'skeleton_feed_post.freezed.dart';
 part 'skeleton_feed_post.g.dart';
@@ -17,38 +14,34 @@ part 'skeleton_feed_post.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
 abstract class SkeletonFeedPost with _$SkeletonFeedPost {
-  static const knownProps = <String>['post', 'feedContext', ];
+  static const knownProps = <String>['post', 'feedContext'];
 
   @JsonSerializable(includeIfNull: false)
   const factory SkeletonFeedPost({
     @Default('so.sprk.feed.defs#skeletonFeedPost') String $type,
     @AtUriConverter() required AtUri post,
-/// Context that will be passed through to client and may be passed to feed generator back alongside interactions.
-String? feedContext,
+
+    /// Context that will be passed through to client and may be passed to feed generator back alongside interactions.
+    String? feedContext,
 
     Map<String, dynamic>? $unknown,
   }) = _SkeletonFeedPost;
 
-  factory SkeletonFeedPost.fromJson(Map<String, Object?> json) => _$SkeletonFeedPostFromJson(json);
+  factory SkeletonFeedPost.fromJson(Map<String, Object?> json) =>
+      _$SkeletonFeedPostFromJson(json);
 
   static bool validate(final Map<String, dynamic> object) {
-  if (!object.containsKey('\$type')) return false;
-  return object['\$type'] == 'so.sprk.feed.defs#skeletonFeedPost'
-;
-}
-
+    if (!object.containsKey('\$type')) return false;
+    return object['\$type'] == 'so.sprk.feed.defs#skeletonFeedPost';
+  }
 }
 
 extension SkeletonFeedPostExtension on SkeletonFeedPost {
-bool get hasFeedContext => feedContext != null;
-bool get hasNotFeedContext => !hasFeedContext;
-
+  bool get hasFeedContext => feedContext != null;
+  bool get hasNotFeedContext => !hasFeedContext;
 }
-
 
 final class SkeletonFeedPostConverter
     extends JsonConverter<SkeletonFeedPost, Map<String, dynamic>> {
@@ -56,15 +49,12 @@ final class SkeletonFeedPostConverter
 
   @override
   SkeletonFeedPost fromJson(Map<String, dynamic> json) {
-    return SkeletonFeedPost.fromJson(translate(
-      json,
-      SkeletonFeedPost.knownProps,
-    ));
+    return SkeletonFeedPost.fromJson(
+      translate(json, SkeletonFeedPost.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(SkeletonFeedPost object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(SkeletonFeedPost object) =>
+      untranslate(object.toJson());
 }
-

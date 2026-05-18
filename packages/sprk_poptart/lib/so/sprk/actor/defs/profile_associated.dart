@@ -3,13 +3,11 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import './profile_associated_chat.dart';
-
 
 part 'profile_associated.freezed.dart';
 part 'profile_associated.g.dart';
@@ -18,42 +16,37 @@ part 'profile_associated.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
 abstract class ProfileAssociated with _$ProfileAssociated {
-  static const knownProps = <String>['feedgens', 'labeler', 'chat', ];
+  static const knownProps = <String>['feedgens', 'labeler', 'chat'];
 
   @JsonSerializable(includeIfNull: false)
   const factory ProfileAssociated({
     @Default('so.sprk.actor.defs#profileAssociated') String $type,
     int? feedgens,
-bool? labeler,
-@ProfileAssociatedChatConverter() ProfileAssociatedChat? chat,
+    bool? labeler,
+    @ProfileAssociatedChatConverter() ProfileAssociatedChat? chat,
 
     Map<String, dynamic>? $unknown,
   }) = _ProfileAssociated;
 
-  factory ProfileAssociated.fromJson(Map<String, Object?> json) => _$ProfileAssociatedFromJson(json);
+  factory ProfileAssociated.fromJson(Map<String, Object?> json) =>
+      _$ProfileAssociatedFromJson(json);
 
   static bool validate(final Map<String, dynamic> object) {
-  if (!object.containsKey('\$type')) return false;
-  return object['\$type'] == 'so.sprk.actor.defs#profileAssociated'
-;
-}
-
+    if (!object.containsKey('\$type')) return false;
+    return object['\$type'] == 'so.sprk.actor.defs#profileAssociated';
+  }
 }
 
 extension ProfileAssociatedExtension on ProfileAssociated {
-bool get hasFeedgens => feedgens != null;
-bool get hasNotFeedgens => !hasFeedgens;
-bool get isLabeler => labeler ?? false;
-bool get isNotLabeler => !isLabeler;
-bool get hasChat => chat != null;
-bool get hasNotChat => !hasChat;
-
+  bool get hasFeedgens => feedgens != null;
+  bool get hasNotFeedgens => !hasFeedgens;
+  bool get isLabeler => labeler ?? false;
+  bool get isNotLabeler => !isLabeler;
+  bool get hasChat => chat != null;
+  bool get hasNotChat => !hasChat;
 }
-
 
 final class ProfileAssociatedConverter
     extends JsonConverter<ProfileAssociated, Map<String, dynamic>> {
@@ -61,15 +54,12 @@ final class ProfileAssociatedConverter
 
   @override
   ProfileAssociated fromJson(Map<String, dynamic> json) {
-    return ProfileAssociated.fromJson(translate(
-      json,
-      ProfileAssociated.knownProps,
-    ));
+    return ProfileAssociated.fromJson(
+      translate(json, ProfileAssociated.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(ProfileAssociated object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(ProfileAssociated object) =>
+      untranslate(object.toJson());
 }
-

@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'generator_view_content_mode.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class GeneratorViewContentMode with _$GeneratorViewContentMode {
   const GeneratorViewContentMode._();
@@ -24,15 +22,16 @@ abstract class GeneratorViewContentMode with _$GeneratorViewContentMode {
     required KnownGeneratorViewContentMode data,
   }) = GeneratorViewContentModeKnownValue;
 
-  const factory GeneratorViewContentMode.unknown({
-    required String data,
-  }) = GeneratorViewContentModeUnknown;
+  const factory GeneratorViewContentMode.unknown({required String data}) =
+      GeneratorViewContentModeUnknown;
 
   static GeneratorViewContentMode? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownGeneratorViewContentMode.valueOf(value);
 
-    return knownValue != null ? GeneratorViewContentMode.knownValue(data: knownValue) : GeneratorViewContentMode.unknown(data: value);
+    return knownValue != null
+        ? GeneratorViewContentMode.knownValue(data: knownValue)
+        : GeneratorViewContentMode.unknown(data: value);
   }
 
   String toJson() => const GeneratorViewContentModeConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class GeneratorViewContentMode with _$GeneratorViewContentMode {
 
 extension GeneratorViewContentModeExtension on GeneratorViewContentMode {
   bool get isKnownValue => isA<GeneratorViewContentModeKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownGeneratorViewContentMode? get knownValue => isKnownValue ? data as KnownGeneratorViewContentMode : null;
-bool get isUnknown => isA<GeneratorViewContentModeUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownGeneratorViewContentMode? get knownValue =>
+      isKnownValue ? data as KnownGeneratorViewContentMode : null;
+  bool get isUnknown => isA<GeneratorViewContentModeUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class GeneratorViewContentModeConverter extends JsonConverter<GeneratorViewContentMode, String> {
+final class GeneratorViewContentModeConverter
+    extends JsonConverter<GeneratorViewContentMode, String> {
   const GeneratorViewContentModeConverter();
 
   @override
@@ -66,18 +66,17 @@ final class GeneratorViewContentModeConverter extends JsonConverter<GeneratorVie
   }
 
   @override
-  String toJson(GeneratorViewContentMode object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(GeneratorViewContentMode object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownGeneratorViewContentMode implements Serializable{
+enum KnownGeneratorViewContentMode implements Serializable {
   @JsonValue('app.bsky.feed.defs#contentModeUnspecified')
-appBskyFeedDefsContentModeUnspecified('app.bsky.feed.defs#contentModeUnspecified'),
-@JsonValue('app.bsky.feed.defs#contentModeVideo')
-appBskyFeedDefsContentModeVideo('app.bsky.feed.defs#contentModeVideo'),
-  ;
+  appBskyFeedDefsContentModeUnspecified(
+    'app.bsky.feed.defs#contentModeUnspecified',
+  ),
+  @JsonValue('app.bsky.feed.defs#contentModeVideo')
+  appBskyFeedDefsContentModeVideo('app.bsky.feed.defs#contentModeVideo');
 
   @override
   final String value;

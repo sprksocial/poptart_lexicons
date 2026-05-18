@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 mixin _$SoundAudioRecord {
 
  String get $type;@BlobConverter() Blob get sound;@RepoStrongRefConverter() RepoStrongRef? get origin;/// The audio's title.
- String get title;@AudioDetailsConverter() AudioDetails? get details;@USoundAudioLabelsConverter() USoundAudioLabels? get labels;/// Client-declared timestamp when this audio was originally created.
+ String? get title;@AudioDetailsConverter() AudioDetails? get details;@USoundAudioLabelsConverter() USoundAudioLabels? get labels;/// Client-declared timestamp when this audio was originally created.
  DateTime get createdAt; Map<String, dynamic>? get $unknown;
 /// Create a copy of SoundAudioRecord
 /// with the given fields replaced by the non-null parameter values.
@@ -50,7 +50,7 @@ abstract mixin class $SoundAudioRecordCopyWith<$Res>  {
   factory $SoundAudioRecordCopyWith(SoundAudioRecord value, $Res Function(SoundAudioRecord) _then) = _$SoundAudioRecordCopyWithImpl;
 @useResult
 $Res call({
- String $type,@BlobConverter() Blob sound,@RepoStrongRefConverter() RepoStrongRef? origin, String title,@AudioDetailsConverter() AudioDetails? details,@USoundAudioLabelsConverter() USoundAudioLabels? labels, DateTime createdAt, Map<String, dynamic>? $unknown
+ String $type,@BlobConverter() Blob sound,@RepoStrongRefConverter() RepoStrongRef? origin, String? title,@AudioDetailsConverter() AudioDetails? details,@USoundAudioLabelsConverter() USoundAudioLabels? labels, DateTime createdAt, Map<String, dynamic>? $unknown
 });
 
 
@@ -67,13 +67,13 @@ class _$SoundAudioRecordCopyWithImpl<$Res>
 
 /// Create a copy of SoundAudioRecord
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? sound = null,Object? origin = freezed,Object? title = null,Object? details = freezed,Object? labels = freezed,Object? createdAt = null,Object? $unknown = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? sound = null,Object? origin = freezed,Object? title = freezed,Object? details = freezed,Object? labels = freezed,Object? createdAt = null,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,sound: null == sound ? _self.sound : sound // ignore: cast_nullable_to_non_nullable
 as Blob,origin: freezed == origin ? _self.origin : origin // ignore: cast_nullable_to_non_nullable
-as RepoStrongRef?,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
+as RepoStrongRef?,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
 as AudioDetails?,labels: freezed == labels ? _self.labels : labels // ignore: cast_nullable_to_non_nullable
 as USoundAudioLabels?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
@@ -207,7 +207,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @BlobConverter()  Blob sound, @RepoStrongRefConverter()  RepoStrongRef? origin,  String title, @AudioDetailsConverter()  AudioDetails? details, @USoundAudioLabelsConverter()  USoundAudioLabels? labels,  DateTime createdAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @BlobConverter()  Blob sound, @RepoStrongRefConverter()  RepoStrongRef? origin,  String? title, @AudioDetailsConverter()  AudioDetails? details, @USoundAudioLabelsConverter()  USoundAudioLabels? labels,  DateTime createdAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _SoundAudioRecord() when $default != null:
 return $default(_that.$type,_that.sound,_that.origin,_that.title,_that.details,_that.labels,_that.createdAt,_that.$unknown);case _:
@@ -228,7 +228,7 @@ return $default(_that.$type,_that.sound,_that.origin,_that.title,_that.details,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @BlobConverter()  Blob sound, @RepoStrongRefConverter()  RepoStrongRef? origin,  String title, @AudioDetailsConverter()  AudioDetails? details, @USoundAudioLabelsConverter()  USoundAudioLabels? labels,  DateTime createdAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @BlobConverter()  Blob sound, @RepoStrongRefConverter()  RepoStrongRef? origin,  String? title, @AudioDetailsConverter()  AudioDetails? details, @USoundAudioLabelsConverter()  USoundAudioLabels? labels,  DateTime createdAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _SoundAudioRecord():
 return $default(_that.$type,_that.sound,_that.origin,_that.title,_that.details,_that.labels,_that.createdAt,_that.$unknown);case _:
@@ -248,7 +248,7 @@ return $default(_that.$type,_that.sound,_that.origin,_that.title,_that.details,_
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @BlobConverter()  Blob sound, @RepoStrongRefConverter()  RepoStrongRef? origin,  String title, @AudioDetailsConverter()  AudioDetails? details, @USoundAudioLabelsConverter()  USoundAudioLabels? labels,  DateTime createdAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @BlobConverter()  Blob sound, @RepoStrongRefConverter()  RepoStrongRef? origin,  String? title, @AudioDetailsConverter()  AudioDetails? details, @USoundAudioLabelsConverter()  USoundAudioLabels? labels,  DateTime createdAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _SoundAudioRecord() when $default != null:
 return $default(_that.$type,_that.sound,_that.origin,_that.title,_that.details,_that.labels,_that.createdAt,_that.$unknown);case _:
@@ -263,14 +263,14 @@ return $default(_that.$type,_that.sound,_that.origin,_that.title,_that.details,_
 
 @JsonSerializable(includeIfNull: false)
 class _SoundAudioRecord implements SoundAudioRecord {
-  const _SoundAudioRecord({this.$type = 'so.sprk.sound.audio', @BlobConverter() required this.sound, @RepoStrongRefConverter() this.origin, required this.title, @AudioDetailsConverter() this.details, @USoundAudioLabelsConverter() this.labels, required this.createdAt, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _SoundAudioRecord({this.$type = 'so.sprk.sound.audio', @BlobConverter() required this.sound, @RepoStrongRefConverter() this.origin, this.title, @AudioDetailsConverter() this.details, @USoundAudioLabelsConverter() this.labels, required this.createdAt, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _SoundAudioRecord.fromJson(Map<String, dynamic> json) => _$SoundAudioRecordFromJson(json);
 
 @override@JsonKey() final  String $type;
 @override@BlobConverter() final  Blob sound;
 @override@RepoStrongRefConverter() final  RepoStrongRef? origin;
 /// The audio's title.
-@override final  String title;
+@override final  String? title;
 @override@AudioDetailsConverter() final  AudioDetails? details;
 @override@USoundAudioLabelsConverter() final  USoundAudioLabels? labels;
 /// Client-declared timestamp when this audio was originally created.
@@ -318,7 +318,7 @@ abstract mixin class _$SoundAudioRecordCopyWith<$Res> implements $SoundAudioReco
   factory _$SoundAudioRecordCopyWith(_SoundAudioRecord value, $Res Function(_SoundAudioRecord) _then) = __$SoundAudioRecordCopyWithImpl;
 @override @useResult
 $Res call({
- String $type,@BlobConverter() Blob sound,@RepoStrongRefConverter() RepoStrongRef? origin, String title,@AudioDetailsConverter() AudioDetails? details,@USoundAudioLabelsConverter() USoundAudioLabels? labels, DateTime createdAt, Map<String, dynamic>? $unknown
+ String $type,@BlobConverter() Blob sound,@RepoStrongRefConverter() RepoStrongRef? origin, String? title,@AudioDetailsConverter() AudioDetails? details,@USoundAudioLabelsConverter() USoundAudioLabels? labels, DateTime createdAt, Map<String, dynamic>? $unknown
 });
 
 
@@ -335,13 +335,13 @@ class __$SoundAudioRecordCopyWithImpl<$Res>
 
 /// Create a copy of SoundAudioRecord
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? sound = null,Object? origin = freezed,Object? title = null,Object? details = freezed,Object? labels = freezed,Object? createdAt = null,Object? $unknown = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? sound = null,Object? origin = freezed,Object? title = freezed,Object? details = freezed,Object? labels = freezed,Object? createdAt = null,Object? $unknown = freezed,}) {
   return _then(_SoundAudioRecord(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,sound: null == sound ? _self.sound : sound // ignore: cast_nullable_to_non_nullable
 as Blob,origin: freezed == origin ? _self.origin : origin // ignore: cast_nullable_to_non_nullable
-as RepoStrongRef?,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
+as RepoStrongRef?,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
 as AudioDetails?,labels: freezed == labels ? _self.labels : labels // ignore: cast_nullable_to_non_nullable
 as USoundAudioLabels?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable

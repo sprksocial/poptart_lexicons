@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
@@ -11,7 +10,7 @@ import 'package:poptart_core/internals.dart';
 import './union_main_event.dart';
 import './union_main_subject.dart';
 import '../defs/mod_tool.dart';
-
+import './report_action.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -20,36 +19,49 @@ part 'input.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
 abstract class ModerationEmitEventInput with _$ModerationEmitEventInput {
-  static const knownProps = <String>['event', 'subject', 'subjectBlobCids', 'createdBy', 'modTool', 'externalId', ];
+  static const knownProps = <String>[
+    'event',
+    'subject',
+    'subjectBlobCids',
+    'createdBy',
+    'modTool',
+    'externalId',
+    'reportAction',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ModerationEmitEventInput({
-    @UModerationEmitEventEventConverter() required UModerationEmitEventEvent event,
-@UModerationEmitEventSubjectConverter() required UModerationEmitEventSubject subject,
-List<String>? subjectBlobCids,
-required String createdBy,
-@ModToolConverter() ModTool? modTool,
-/// An optional external ID for the event, used to deduplicate events from external systems. Fails when an event of same type with the same external ID exists for the same subject.
-String? externalId,
+    @UModerationEmitEventEventConverter()
+    required UModerationEmitEventEvent event,
+    @UModerationEmitEventSubjectConverter()
+    required UModerationEmitEventSubject subject,
+    List<String>? subjectBlobCids,
+    required String createdBy,
+    @ModToolConverter() ModTool? modTool,
+
+    /// An optional external ID for the event, used to deduplicate events from external systems. Fails when an event of same type with the same external ID exists for the same subject.
+    String? externalId,
+
+    /// Optional report-level targeting. If provided, this event will be linked to specific reports and reporters may be notified.
+    @ReportActionConverter() ReportAction? reportAction,
 
     Map<String, dynamic>? $unknown,
   }) = _ModerationEmitEventInput;
 
-  factory ModerationEmitEventInput.fromJson(Map<String, Object?> json) => _$ModerationEmitEventInputFromJson(json);
+  factory ModerationEmitEventInput.fromJson(Map<String, Object?> json) =>
+      _$ModerationEmitEventInputFromJson(json);
 }
 
 extension ModerationEmitEventInputExtension on ModerationEmitEventInput {
-bool get hasModTool => modTool != null;
-bool get hasNotModTool => !hasModTool;
-bool get hasExternalId => externalId != null;
-bool get hasNotExternalId => !hasExternalId;
-
+  bool get hasModTool => modTool != null;
+  bool get hasNotModTool => !hasModTool;
+  bool get hasExternalId => externalId != null;
+  bool get hasNotExternalId => !hasExternalId;
+  bool get hasReportAction => reportAction != null;
+  bool get hasNotReportAction => !hasReportAction;
 }
-
 
 final class ModerationEmitEventInputConverter
     extends JsonConverter<ModerationEmitEventInput, Map<String, dynamic>> {
@@ -57,15 +69,12 @@ final class ModerationEmitEventInputConverter
 
   @override
   ModerationEmitEventInput fromJson(Map<String, dynamic> json) {
-    return ModerationEmitEventInput.fromJson(translate(
-      json,
-      ModerationEmitEventInput.knownProps,
-    ));
+    return ModerationEmitEventInput.fromJson(
+      translate(json, ModerationEmitEventInput.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(ModerationEmitEventInput object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(ModerationEmitEventInput object) =>
+      untranslate(object.toJson());
 }
-

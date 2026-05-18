@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AudioView {
 
- String get $type;@AtUriConverter() AtUri get uri; String get cid;@ProfileViewBasicConverter() ProfileViewBasic get author; Map<String, dynamic> get record; int? get useCount; String get title; String get coverArt;@AudioDetailsConverter() AudioDetails? get details; DateTime get indexedAt; String? get audio;@LabelConverter() List<Label>? get labels; Map<String, dynamic>? get $unknown;
+ String get $type;@AtUriConverter() AtUri get uri; String get cid;@ProfileViewBasicConverter() ProfileViewBasic get author; Map<String, dynamic> get record; int? get useCount; String? get title; String get coverArt;@AudioDetailsConverter() AudioDetails? get details; DateTime get indexedAt; String? get audio;@LabelConverter() List<Label>? get labels; Map<String, dynamic>? get $unknown;
 /// Create a copy of AudioView
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $AudioViewCopyWith<$Res>  {
   factory $AudioViewCopyWith(AudioView value, $Res Function(AudioView) _then) = _$AudioViewCopyWithImpl;
 @useResult
 $Res call({
- String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record, int? useCount, String title, String coverArt,@AudioDetailsConverter() AudioDetails? details, DateTime indexedAt, String? audio,@LabelConverter() List<Label>? labels, Map<String, dynamic>? $unknown
+ String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record, int? useCount, String? title, String coverArt,@AudioDetailsConverter() AudioDetails? details, DateTime indexedAt, String? audio,@LabelConverter() List<Label>? labels, Map<String, dynamic>? $unknown
 });
 
 
@@ -65,7 +65,7 @@ class _$AudioViewCopyWithImpl<$Res>
 
 /// Create a copy of AudioView
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? useCount = freezed,Object? title = null,Object? coverArt = null,Object? details = freezed,Object? indexedAt = null,Object? audio = freezed,Object? labels = freezed,Object? $unknown = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? useCount = freezed,Object? title = freezed,Object? coverArt = null,Object? details = freezed,Object? indexedAt = null,Object? audio = freezed,Object? labels = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,uri: null == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
@@ -73,8 +73,8 @@ as AtUri,cid: null == cid ? _self.cid : cid // ignore: cast_nullable_to_non_null
 as String,author: null == author ? _self.author : author // ignore: cast_nullable_to_non_nullable
 as ProfileViewBasic,record: null == record ? _self.record : record // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>,useCount: freezed == useCount ? _self.useCount : useCount // ignore: cast_nullable_to_non_nullable
-as int?,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,coverArt: null == coverArt ? _self.coverArt : coverArt // ignore: cast_nullable_to_non_nullable
+as int?,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,coverArt: null == coverArt ? _self.coverArt : coverArt // ignore: cast_nullable_to_non_nullable
 as String,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
 as AudioDetails?,indexedAt: null == indexedAt ? _self.indexedAt : indexedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,audio: freezed == audio ? _self.audio : audio // ignore: cast_nullable_to_non_nullable
@@ -186,7 +186,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record,  int? useCount,  String title,  String coverArt, @AudioDetailsConverter()  AudioDetails? details,  DateTime indexedAt,  String? audio, @LabelConverter()  List<Label>? labels,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record,  int? useCount,  String? title,  String coverArt, @AudioDetailsConverter()  AudioDetails? details,  DateTime indexedAt,  String? audio, @LabelConverter()  List<Label>? labels,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _AudioView() when $default != null:
 return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.useCount,_that.title,_that.coverArt,_that.details,_that.indexedAt,_that.audio,_that.labels,_that.$unknown);case _:
@@ -207,7 +207,7 @@ return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record,  int? useCount,  String title,  String coverArt, @AudioDetailsConverter()  AudioDetails? details,  DateTime indexedAt,  String? audio, @LabelConverter()  List<Label>? labels,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record,  int? useCount,  String? title,  String coverArt, @AudioDetailsConverter()  AudioDetails? details,  DateTime indexedAt,  String? audio, @LabelConverter()  List<Label>? labels,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _AudioView():
 return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.useCount,_that.title,_that.coverArt,_that.details,_that.indexedAt,_that.audio,_that.labels,_that.$unknown);case _:
@@ -227,7 +227,7 @@ return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record,  int? useCount,  String title,  String coverArt, @AudioDetailsConverter()  AudioDetails? details,  DateTime indexedAt,  String? audio, @LabelConverter()  List<Label>? labels,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record,  int? useCount,  String? title,  String coverArt, @AudioDetailsConverter()  AudioDetails? details,  DateTime indexedAt,  String? audio, @LabelConverter()  List<Label>? labels,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _AudioView() when $default != null:
 return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.useCount,_that.title,_that.coverArt,_that.details,_that.indexedAt,_that.audio,_that.labels,_that.$unknown);case _:
@@ -242,7 +242,7 @@ return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.
 
 @JsonSerializable(includeIfNull: false)
 class _AudioView implements AudioView {
-  const _AudioView({this.$type = 'so.sprk.sound.defs#audioView', @AtUriConverter() required this.uri, required this.cid, @ProfileViewBasicConverter() required this.author, required final  Map<String, dynamic> record, this.useCount, required this.title, required this.coverArt, @AudioDetailsConverter() this.details, required this.indexedAt, this.audio, @LabelConverter() final  List<Label>? labels, final  Map<String, dynamic>? $unknown}): _record = record,_labels = labels,_$unknown = $unknown;
+  const _AudioView({this.$type = 'so.sprk.sound.defs#audioView', @AtUriConverter() required this.uri, required this.cid, @ProfileViewBasicConverter() required this.author, required final  Map<String, dynamic> record, this.useCount, this.title, required this.coverArt, @AudioDetailsConverter() this.details, required this.indexedAt, this.audio, @LabelConverter() final  List<Label>? labels, final  Map<String, dynamic>? $unknown}): _record = record,_labels = labels,_$unknown = $unknown;
   factory _AudioView.fromJson(Map<String, dynamic> json) => _$AudioViewFromJson(json);
 
 @override@JsonKey() final  String $type;
@@ -257,7 +257,7 @@ class _AudioView implements AudioView {
 }
 
 @override final  int? useCount;
-@override final  String title;
+@override final  String? title;
 @override final  String coverArt;
 @override@AudioDetailsConverter() final  AudioDetails? details;
 @override final  DateTime indexedAt;
@@ -314,7 +314,7 @@ abstract mixin class _$AudioViewCopyWith<$Res> implements $AudioViewCopyWith<$Re
   factory _$AudioViewCopyWith(_AudioView value, $Res Function(_AudioView) _then) = __$AudioViewCopyWithImpl;
 @override @useResult
 $Res call({
- String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record, int? useCount, String title, String coverArt,@AudioDetailsConverter() AudioDetails? details, DateTime indexedAt, String? audio,@LabelConverter() List<Label>? labels, Map<String, dynamic>? $unknown
+ String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record, int? useCount, String? title, String coverArt,@AudioDetailsConverter() AudioDetails? details, DateTime indexedAt, String? audio,@LabelConverter() List<Label>? labels, Map<String, dynamic>? $unknown
 });
 
 
@@ -331,7 +331,7 @@ class __$AudioViewCopyWithImpl<$Res>
 
 /// Create a copy of AudioView
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? useCount = freezed,Object? title = null,Object? coverArt = null,Object? details = freezed,Object? indexedAt = null,Object? audio = freezed,Object? labels = freezed,Object? $unknown = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? useCount = freezed,Object? title = freezed,Object? coverArt = null,Object? details = freezed,Object? indexedAt = null,Object? audio = freezed,Object? labels = freezed,Object? $unknown = freezed,}) {
   return _then(_AudioView(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,uri: null == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
@@ -339,8 +339,8 @@ as AtUri,cid: null == cid ? _self.cid : cid // ignore: cast_nullable_to_non_null
 as String,author: null == author ? _self.author : author // ignore: cast_nullable_to_non_nullable
 as ProfileViewBasic,record: null == record ? _self._record : record // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>,useCount: freezed == useCount ? _self.useCount : useCount // ignore: cast_nullable_to_non_nullable
-as int?,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
-as String,coverArt: null == coverArt ? _self.coverArt : coverArt // ignore: cast_nullable_to_non_nullable
+as int?,title: freezed == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
+as String?,coverArt: null == coverArt ? _self.coverArt : coverArt // ignore: cast_nullable_to_non_nullable
 as String,details: freezed == details ? _self.details : details // ignore: cast_nullable_to_non_nullable
 as AudioDetails?,indexedAt: null == indexedAt ? _self.indexedAt : indexedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,audio: freezed == audio ? _self.audio : audio // ignore: cast_nullable_to_non_nullable

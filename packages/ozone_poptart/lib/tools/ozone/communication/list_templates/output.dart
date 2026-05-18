@@ -3,13 +3,11 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import '../defs/template_view.dart';
-
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -18,11 +16,10 @@ part 'output.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
-abstract class CommunicationListTemplatesOutput with _$CommunicationListTemplatesOutput {
-  static const knownProps = <String>['communicationTemplates', ];
+abstract class CommunicationListTemplatesOutput
+    with _$CommunicationListTemplatesOutput {
+  static const knownProps = <String>['communicationTemplates'];
 
   @JsonSerializable(includeIfNull: false)
   const factory CommunicationListTemplatesOutput({
@@ -31,26 +28,24 @@ abstract class CommunicationListTemplatesOutput with _$CommunicationListTemplate
     Map<String, dynamic>? $unknown,
   }) = _CommunicationListTemplatesOutput;
 
-  factory CommunicationListTemplatesOutput.fromJson(Map<String, Object?> json) => _$CommunicationListTemplatesOutputFromJson(json);
+  factory CommunicationListTemplatesOutput.fromJson(
+    Map<String, Object?> json,
+  ) => _$CommunicationListTemplatesOutputFromJson(json);
 }
 
-
-
 final class CommunicationListTemplatesOutputConverter
-    extends JsonConverter<CommunicationListTemplatesOutput, Map<String, dynamic>> {
+    extends
+        JsonConverter<CommunicationListTemplatesOutput, Map<String, dynamic>> {
   const CommunicationListTemplatesOutputConverter();
 
   @override
   CommunicationListTemplatesOutput fromJson(Map<String, dynamic> json) {
-    return CommunicationListTemplatesOutput.fromJson(translate(
-      json,
-      CommunicationListTemplatesOutput.knownProps,
-    ));
+    return CommunicationListTemplatesOutput.fromJson(
+      translate(json, CommunicationListTemplatesOutput.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(CommunicationListTemplatesOutput object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(CommunicationListTemplatesOutput object) =>
+      untranslate(object.toJson());
 }
-

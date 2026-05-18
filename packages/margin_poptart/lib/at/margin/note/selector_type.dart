@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,24 +14,23 @@ part 'selector_type.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class SelectorType with _$SelectorType {
   const SelectorType._();
 
-  const factory SelectorType.knownValue({
-    required KnownSelectorType data,
-  }) = SelectorTypeKnownValue;
+  const factory SelectorType.knownValue({required KnownSelectorType data}) =
+      SelectorTypeKnownValue;
 
-  const factory SelectorType.unknown({
-    required String data,
-  }) = SelectorTypeUnknown;
+  const factory SelectorType.unknown({required String data}) =
+      SelectorTypeUnknown;
 
   static SelectorType? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownSelectorType.valueOf(value);
 
-    return knownValue != null ? SelectorType.knownValue(data: knownValue) : SelectorType.unknown(data: value);
+    return knownValue != null
+        ? SelectorType.knownValue(data: knownValue)
+        : SelectorType.unknown(data: value);
   }
 
   String toJson() => const SelectorTypeConverter().toJson(this);
@@ -40,12 +38,12 @@ abstract class SelectorType with _$SelectorType {
 
 extension SelectorTypeExtension on SelectorType {
   bool get isKnownValue => isA<SelectorTypeKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownSelectorType? get knownValue => isKnownValue ? data as KnownSelectorType : null;
-bool get isUnknown => isA<SelectorTypeUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownSelectorType? get knownValue =>
+      isKnownValue ? data as KnownSelectorType : null;
+  bool get isUnknown => isA<SelectorTypeUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
 final class SelectorTypeConverter extends JsonConverter<SelectorType, String> {
@@ -66,26 +64,23 @@ final class SelectorTypeConverter extends JsonConverter<SelectorType, String> {
   }
 
   @override
-  String toJson(SelectorType object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(SelectorType object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownSelectorType implements Serializable{
+enum KnownSelectorType implements Serializable {
   @JsonValue('TextQuoteSelector')
-textQuoteSelector('TextQuoteSelector'),
-@JsonValue('TextPositionSelector')
-textPositionSelector('TextPositionSelector'),
-@JsonValue('CssSelector')
-cssSelector('CssSelector'),
-@JsonValue('XPathSelector')
-xPathSelector('XPathSelector'),
-@JsonValue('FragmentSelector')
-fragmentSelector('FragmentSelector'),
-@JsonValue('RangeSelector')
-rangeSelector('RangeSelector'),
-  ;
+  textQuoteSelector('TextQuoteSelector'),
+  @JsonValue('TextPositionSelector')
+  textPositionSelector('TextPositionSelector'),
+  @JsonValue('CssSelector')
+  cssSelector('CssSelector'),
+  @JsonValue('XPathSelector')
+  xPathSelector('XPathSelector'),
+  @JsonValue('FragmentSelector')
+  fragmentSelector('FragmentSelector'),
+  @JsonValue('RangeSelector')
+  rangeSelector('RangeSelector');
 
   @override
   final String value;

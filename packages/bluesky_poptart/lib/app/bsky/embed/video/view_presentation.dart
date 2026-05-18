@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'view_presentation.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class EmbedVideoViewPresentation with _$EmbedVideoViewPresentation {
   const EmbedVideoViewPresentation._();
@@ -24,15 +22,16 @@ abstract class EmbedVideoViewPresentation with _$EmbedVideoViewPresentation {
     required KnownEmbedVideoViewPresentation data,
   }) = EmbedVideoViewPresentationKnownValue;
 
-  const factory EmbedVideoViewPresentation.unknown({
-    required String data,
-  }) = EmbedVideoViewPresentationUnknown;
+  const factory EmbedVideoViewPresentation.unknown({required String data}) =
+      EmbedVideoViewPresentationUnknown;
 
   static EmbedVideoViewPresentation? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownEmbedVideoViewPresentation.valueOf(value);
 
-    return knownValue != null ? EmbedVideoViewPresentation.knownValue(data: knownValue) : EmbedVideoViewPresentation.unknown(data: value);
+    return knownValue != null
+        ? EmbedVideoViewPresentation.knownValue(data: knownValue)
+        : EmbedVideoViewPresentation.unknown(data: value);
   }
 
   String toJson() => const EmbedVideoViewPresentationConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class EmbedVideoViewPresentation with _$EmbedVideoViewPresentation {
 
 extension EmbedVideoViewPresentationExtension on EmbedVideoViewPresentation {
   bool get isKnownValue => isA<EmbedVideoViewPresentationKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownEmbedVideoViewPresentation? get knownValue => isKnownValue ? data as KnownEmbedVideoViewPresentation : null;
-bool get isUnknown => isA<EmbedVideoViewPresentationUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownEmbedVideoViewPresentation? get knownValue =>
+      isKnownValue ? data as KnownEmbedVideoViewPresentation : null;
+  bool get isUnknown => isA<EmbedVideoViewPresentationUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class EmbedVideoViewPresentationConverter extends JsonConverter<EmbedVideoViewPresentation, String> {
+final class EmbedVideoViewPresentationConverter
+    extends JsonConverter<EmbedVideoViewPresentation, String> {
   const EmbedVideoViewPresentationConverter();
 
   @override
@@ -66,18 +66,15 @@ final class EmbedVideoViewPresentationConverter extends JsonConverter<EmbedVideo
   }
 
   @override
-  String toJson(EmbedVideoViewPresentation object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(EmbedVideoViewPresentation object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownEmbedVideoViewPresentation implements Serializable{
+enum KnownEmbedVideoViewPresentation implements Serializable {
   @JsonValue('default')
-defaultValue('default'),
-@JsonValue('gif')
-gif('gif'),
-  ;
+  defaultValue('default'),
+  @JsonValue('gif')
+  gif('gif');
 
   @override
   final String value;

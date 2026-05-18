@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'main_scope.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class SettingRemoveOptionsScope with _$SettingRemoveOptionsScope {
   const SettingRemoveOptionsScope._();
@@ -24,15 +22,16 @@ abstract class SettingRemoveOptionsScope with _$SettingRemoveOptionsScope {
     required KnownSettingRemoveOptionsScope data,
   }) = SettingRemoveOptionsScopeKnownValue;
 
-  const factory SettingRemoveOptionsScope.unknown({
-    required String data,
-  }) = SettingRemoveOptionsScopeUnknown;
+  const factory SettingRemoveOptionsScope.unknown({required String data}) =
+      SettingRemoveOptionsScopeUnknown;
 
   static SettingRemoveOptionsScope? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownSettingRemoveOptionsScope.valueOf(value);
 
-    return knownValue != null ? SettingRemoveOptionsScope.knownValue(data: knownValue) : SettingRemoveOptionsScope.unknown(data: value);
+    return knownValue != null
+        ? SettingRemoveOptionsScope.knownValue(data: knownValue)
+        : SettingRemoveOptionsScope.unknown(data: value);
   }
 
   String toJson() => const SettingRemoveOptionsScopeConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class SettingRemoveOptionsScope with _$SettingRemoveOptionsScope {
 
 extension SettingRemoveOptionsScopeExtension on SettingRemoveOptionsScope {
   bool get isKnownValue => isA<SettingRemoveOptionsScopeKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownSettingRemoveOptionsScope? get knownValue => isKnownValue ? data as KnownSettingRemoveOptionsScope : null;
-bool get isUnknown => isA<SettingRemoveOptionsScopeUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownSettingRemoveOptionsScope? get knownValue =>
+      isKnownValue ? data as KnownSettingRemoveOptionsScope : null;
+  bool get isUnknown => isA<SettingRemoveOptionsScopeUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class SettingRemoveOptionsScopeConverter extends JsonConverter<SettingRemoveOptionsScope, String> {
+final class SettingRemoveOptionsScopeConverter
+    extends JsonConverter<SettingRemoveOptionsScope, String> {
   const SettingRemoveOptionsScopeConverter();
 
   @override
@@ -66,18 +66,15 @@ final class SettingRemoveOptionsScopeConverter extends JsonConverter<SettingRemo
   }
 
   @override
-  String toJson(SettingRemoveOptionsScope object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(SettingRemoveOptionsScope object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownSettingRemoveOptionsScope implements Serializable{
+enum KnownSettingRemoveOptionsScope implements Serializable {
   @JsonValue('instance')
-instance('instance'),
-@JsonValue('personal')
-personal('personal'),
-  ;
+  instance('instance'),
+  @JsonValue('personal')
+  personal('personal');
 
   @override
   final String value;

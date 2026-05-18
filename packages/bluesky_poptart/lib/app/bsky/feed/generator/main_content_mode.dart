@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'main_content_mode.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class FeedGeneratorContentMode with _$FeedGeneratorContentMode {
   const FeedGeneratorContentMode._();
@@ -24,15 +22,16 @@ abstract class FeedGeneratorContentMode with _$FeedGeneratorContentMode {
     required KnownFeedGeneratorContentMode data,
   }) = FeedGeneratorContentModeKnownValue;
 
-  const factory FeedGeneratorContentMode.unknown({
-    required String data,
-  }) = FeedGeneratorContentModeUnknown;
+  const factory FeedGeneratorContentMode.unknown({required String data}) =
+      FeedGeneratorContentModeUnknown;
 
   static FeedGeneratorContentMode? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownFeedGeneratorContentMode.valueOf(value);
 
-    return knownValue != null ? FeedGeneratorContentMode.knownValue(data: knownValue) : FeedGeneratorContentMode.unknown(data: value);
+    return knownValue != null
+        ? FeedGeneratorContentMode.knownValue(data: knownValue)
+        : FeedGeneratorContentMode.unknown(data: value);
   }
 
   String toJson() => const FeedGeneratorContentModeConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class FeedGeneratorContentMode with _$FeedGeneratorContentMode {
 
 extension FeedGeneratorContentModeExtension on FeedGeneratorContentMode {
   bool get isKnownValue => isA<FeedGeneratorContentModeKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownFeedGeneratorContentMode? get knownValue => isKnownValue ? data as KnownFeedGeneratorContentMode : null;
-bool get isUnknown => isA<FeedGeneratorContentModeUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownFeedGeneratorContentMode? get knownValue =>
+      isKnownValue ? data as KnownFeedGeneratorContentMode : null;
+  bool get isUnknown => isA<FeedGeneratorContentModeUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class FeedGeneratorContentModeConverter extends JsonConverter<FeedGeneratorContentMode, String> {
+final class FeedGeneratorContentModeConverter
+    extends JsonConverter<FeedGeneratorContentMode, String> {
   const FeedGeneratorContentModeConverter();
 
   @override
@@ -66,18 +66,17 @@ final class FeedGeneratorContentModeConverter extends JsonConverter<FeedGenerato
   }
 
   @override
-  String toJson(FeedGeneratorContentMode object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(FeedGeneratorContentMode object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownFeedGeneratorContentMode implements Serializable{
+enum KnownFeedGeneratorContentMode implements Serializable {
   @JsonValue('app.bsky.feed.defs#contentModeUnspecified')
-appBskyFeedDefsContentModeUnspecified('app.bsky.feed.defs#contentModeUnspecified'),
-@JsonValue('app.bsky.feed.defs#contentModeVideo')
-appBskyFeedDefsContentModeVideo('app.bsky.feed.defs#contentModeVideo'),
-  ;
+  appBskyFeedDefsContentModeUnspecified(
+    'app.bsky.feed.defs#contentModeUnspecified',
+  ),
+  @JsonValue('app.bsky.feed.defs#contentModeVideo')
+  appBskyFeedDefsContentModeVideo('app.bsky.feed.defs#contentModeVideo');
 
   @override
   final String value;

@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import './main.dart';
 import './reply_ref.dart';
 import 'package:poptart_xrpc/poptart_xrpc.dart';
@@ -12,11 +11,11 @@ import 'package:poptart_xrpc/poptart_xrpc.dart';
 // LexGenerator
 // **************************************************************************
 
-
 final feedReplyRecordDescriptor = XRPCRecordDescriptor<FeedReplyRecord>(
   nsid: 'so.sprk.feed.reply',
   defName: 'main',
-  fromJson: (json) => const FeedReplyRecordConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const FeedReplyRecordConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const FeedReplyRecordConverter().toJson,
   matches: FeedReplyRecord.validate,
   key: 'tid',
@@ -25,7 +24,8 @@ final feedReplyRecordDescriptor = XRPCRecordDescriptor<FeedReplyRecord>(
 final replyRefDescriptor = XRPCObjectDescriptor<ReplyRef>(
   nsid: 'so.sprk.feed.reply',
   defName: 'replyRef',
-  fromJson: (json) => const ReplyRefConverter().fromJson(json.cast<String, dynamic>()),
+  fromJson: (json) =>
+      const ReplyRefConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ReplyRefConverter().toJson,
   matches: ReplyRef.validate,
 );

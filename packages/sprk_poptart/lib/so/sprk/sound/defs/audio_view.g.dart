@@ -31,7 +31,7 @@ _AudioView _$AudioViewFromJson(Map json) => $checkedCreate('_AudioView', json, (
       (v) => Map<String, dynamic>.from(v as Map),
     ),
     useCount: $checkedConvert('useCount', (v) => (v as num?)?.toInt()),
-    title: $checkedConvert('title', (v) => v as String),
+    title: $checkedConvert('title', (v) => v as String?),
     coverArt: $checkedConvert('coverArt', (v) => v as String),
     details: $checkedConvert(
       'details',
@@ -66,7 +66,7 @@ Map<String, dynamic> _$AudioViewToJson(_AudioView instance) =>
       'author': const ProfileViewBasicConverter().toJson(instance.author),
       'record': instance.record,
       'useCount': ?instance.useCount,
-      'title': instance.title,
+      'title': ?instance.title,
       'coverArt': instance.coverArt,
       'details': ?_$JsonConverterToJson<Map<String, dynamic>, AudioDetails>(
         instance.details,

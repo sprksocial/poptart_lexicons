@@ -3,7 +3,6 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:poptart_core/poptart_core.dart' show Serializable;
 import 'package:poptart_core/internals.dart' show isA;
 
@@ -15,7 +14,6 @@ part 'scheduled_action_view_status.freezed.dart';
 // LexGenerator
 // **************************************************************************
 
-
 @freezed
 abstract class ScheduledActionViewStatus with _$ScheduledActionViewStatus {
   const ScheduledActionViewStatus._();
@@ -24,15 +22,16 @@ abstract class ScheduledActionViewStatus with _$ScheduledActionViewStatus {
     required KnownScheduledActionViewStatus data,
   }) = ScheduledActionViewStatusKnownValue;
 
-  const factory ScheduledActionViewStatus.unknown({
-    required String data,
-  }) = ScheduledActionViewStatusUnknown;
+  const factory ScheduledActionViewStatus.unknown({required String data}) =
+      ScheduledActionViewStatusUnknown;
 
   static ScheduledActionViewStatus? valueOf(final String? value) {
     if (value == null) return null;
     final knownValue = KnownScheduledActionViewStatus.valueOf(value);
 
-    return knownValue != null ? ScheduledActionViewStatus.knownValue(data: knownValue) : ScheduledActionViewStatus.unknown(data: value);
+    return knownValue != null
+        ? ScheduledActionViewStatus.knownValue(data: knownValue)
+        : ScheduledActionViewStatus.unknown(data: value);
   }
 
   String toJson() => const ScheduledActionViewStatusConverter().toJson(this);
@@ -40,15 +39,16 @@ abstract class ScheduledActionViewStatus with _$ScheduledActionViewStatus {
 
 extension ScheduledActionViewStatusExtension on ScheduledActionViewStatus {
   bool get isKnownValue => isA<ScheduledActionViewStatusKnownValue>(this);
-bool get isNotKnownValue => !isKnownValue;
-KnownScheduledActionViewStatus? get knownValue => isKnownValue ? data as KnownScheduledActionViewStatus : null;
-bool get isUnknown => isA<ScheduledActionViewStatusUnknown>(this);
-bool get isNotUnknown => !isUnknown;
-String? get unknown => isUnknown ? data as String : null;
-
+  bool get isNotKnownValue => !isKnownValue;
+  KnownScheduledActionViewStatus? get knownValue =>
+      isKnownValue ? data as KnownScheduledActionViewStatus : null;
+  bool get isUnknown => isA<ScheduledActionViewStatusUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  String? get unknown => isUnknown ? data as String : null;
 }
 
-final class ScheduledActionViewStatusConverter extends JsonConverter<ScheduledActionViewStatus, String> {
+final class ScheduledActionViewStatusConverter
+    extends JsonConverter<ScheduledActionViewStatus, String> {
   const ScheduledActionViewStatusConverter();
 
   @override
@@ -66,22 +66,19 @@ final class ScheduledActionViewStatusConverter extends JsonConverter<ScheduledAc
   }
 
   @override
-  String toJson(ScheduledActionViewStatus object) => object.when(
-        knownValue: (data) => data.value,
-        unknown: (data) => data,
-      );
+  String toJson(ScheduledActionViewStatus object) =>
+      object.when(knownValue: (data) => data.value, unknown: (data) => data);
 }
 
-enum KnownScheduledActionViewStatus implements Serializable{
+enum KnownScheduledActionViewStatus implements Serializable {
   @JsonValue('pending')
-pending('pending'),
-@JsonValue('executed')
-executed('executed'),
-@JsonValue('cancelled')
-cancelled('cancelled'),
-@JsonValue('failed')
-failed('failed'),
-  ;
+  pending('pending'),
+  @JsonValue('executed')
+  executed('executed'),
+  @JsonValue('cancelled')
+  cancelled('cancelled'),
+  @JsonValue('failed')
+  failed('failed');
 
   @override
   final String value;

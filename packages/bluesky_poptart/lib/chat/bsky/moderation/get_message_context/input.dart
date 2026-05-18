@@ -3,12 +3,9 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
-
-
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -17,48 +14,59 @@ part 'input.g.dart';
 // LexGenerator
 // **************************************************************************
 
-
-
 @freezed
-abstract class ModerationGetMessageContextInput with _$ModerationGetMessageContextInput {
-  static const knownProps = <String>['convoId', 'messageId', 'before', 'after', ];
+abstract class ModerationGetMessageContextInput
+    with _$ModerationGetMessageContextInput {
+  static const knownProps = <String>[
+    'convoId',
+    'messageId',
+    'before',
+    'after',
+    'maxInterleavedSystemMessages',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ModerationGetMessageContextInput({
     /// Conversation that the message is from. NOTE: this field will eventually be required.
-String? convoId,
-required String messageId,
-@Default(5) int before,
-@Default(5) int after,
+    String? convoId,
+    required String messageId,
+
+    /// Number of user messages before the target to include. System messages between the earliest returned user message and the target are also included, capped per gap by `maxInterleavedSystemMessages`. If there are no user messages before the target, up to `maxInterleavedSystemMessages` system messages immediately preceding the target are returned instead.
+    @Default(5) int before,
+
+    /// Number of user messages after the target to include. System messages between the target and the latest returned user message are also included, capped per gap by `maxInterleavedSystemMessages`. If there are no user messages after the target, up to `maxInterleavedSystemMessages` system messages immediately following the target are returned instead.
+    @Default(5) int after,
+
+    /// Maximum number of system messages to include per gap between consecutive returned messages (and per side when there are no user messages on that side). Within a gap, the system messages closest to the earlier message are kept.
+    @Default(10) int maxInterleavedSystemMessages,
 
     Map<String, dynamic>? $unknown,
   }) = _ModerationGetMessageContextInput;
 
-  factory ModerationGetMessageContextInput.fromJson(Map<String, Object?> json) => _$ModerationGetMessageContextInputFromJson(json);
+  factory ModerationGetMessageContextInput.fromJson(
+    Map<String, Object?> json,
+  ) => _$ModerationGetMessageContextInputFromJson(json);
 }
 
-extension ModerationGetMessageContextInputExtension on ModerationGetMessageContextInput {
-bool get hasConvoId => convoId != null;
-bool get hasNotConvoId => !hasConvoId;
-
+extension ModerationGetMessageContextInputExtension
+    on ModerationGetMessageContextInput {
+  bool get hasConvoId => convoId != null;
+  bool get hasNotConvoId => !hasConvoId;
 }
-
 
 final class ModerationGetMessageContextInputConverter
-    extends JsonConverter<ModerationGetMessageContextInput, Map<String, dynamic>> {
+    extends
+        JsonConverter<ModerationGetMessageContextInput, Map<String, dynamic>> {
   const ModerationGetMessageContextInputConverter();
 
   @override
   ModerationGetMessageContextInput fromJson(Map<String, dynamic> json) {
-    return ModerationGetMessageContextInput.fromJson(translate(
-      json,
-      ModerationGetMessageContextInput.knownProps,
-    ));
+    return ModerationGetMessageContextInput.fromJson(
+      translate(json, ModerationGetMessageContextInput.knownProps),
+    );
   }
 
   @override
-  Map<String, dynamic> toJson(ModerationGetMessageContextInput object) => untranslate(
-        object.toJson(),
-      );
+  Map<String, dynamic> toJson(ModerationGetMessageContextInput object) =>
+      untranslate(object.toJson());
 }
-
