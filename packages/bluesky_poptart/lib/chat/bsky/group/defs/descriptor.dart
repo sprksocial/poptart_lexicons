@@ -5,6 +5,8 @@
 
 import './join_link_preview_view.dart';
 import './join_link_view.dart';
+import './join_link_viewer_state.dart';
+import './join_request_convo_view.dart';
 import './join_request_view.dart';
 import 'package:poptart_xrpc/poptart_xrpc.dart';
 
@@ -31,6 +33,16 @@ final joinLinkPreviewViewDescriptor = XRPCObjectDescriptor<JoinLinkPreviewView>(
   matches: JoinLinkPreviewView.validate,
 );
 
+final joinLinkViewerStateDescriptor = XRPCObjectDescriptor<JoinLinkViewerState>(
+  nsid: 'chat.bsky.group.defs',
+  defName: 'joinLinkViewerState',
+  fromJson: (json) => const JoinLinkViewerStateConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
+  toJson: const JoinLinkViewerStateConverter().toJson,
+  matches: JoinLinkViewerState.validate,
+);
+
 final joinRequestViewDescriptor = XRPCObjectDescriptor<JoinRequestView>(
   nsid: 'chat.bsky.group.defs',
   defName: 'joinRequestView',
@@ -39,3 +51,14 @@ final joinRequestViewDescriptor = XRPCObjectDescriptor<JoinRequestView>(
   toJson: const JoinRequestViewConverter().toJson,
   matches: JoinRequestView.validate,
 );
+
+final joinRequestConvoViewDescriptor =
+    XRPCObjectDescriptor<JoinRequestConvoView>(
+      nsid: 'chat.bsky.group.defs',
+      defName: 'joinRequestConvoView',
+      fromJson: (json) => const JoinRequestConvoViewConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const JoinRequestConvoViewConverter().toJson,
+      matches: JoinRequestConvoView.validate,
+    );

@@ -7,8 +7,11 @@
 // LexGenerator
 // **************************************************************************
 
+export 'external/color_r_g_b.dart';
 export 'external/descriptor.dart';
 export 'external/external.dart';
 export 'external/main.dart';
 export 'external/view.dart';
 export 'external/view_external.dart';
+export 'external/view_external_source.dart';
+export 'external/view_external_source_theme.dart';

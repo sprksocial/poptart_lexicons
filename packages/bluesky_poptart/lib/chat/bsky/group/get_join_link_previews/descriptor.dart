@@ -13,21 +13,21 @@ import 'package:poptart_xrpc/poptart_xrpc.dart';
 
 final methodDescriptor =
     XRPCMethodDescriptor<
-      GroupGetJoinLinkPreviewInput,
+      GroupGetJoinLinkPreviewsInput,
       EmptyData,
-      GroupGetJoinLinkPreviewOutput
+      GroupGetJoinLinkPreviewsOutput
     >(
-      nsid: NSID.parse('chat.bsky.group.getJoinLinkPreview'),
+      nsid: NSID.parse('chat.bsky.group.getJoinLinkPreviews'),
       kind: XRPCMethodKind.query,
       parametersFromJson: (json) =>
-          const GroupGetJoinLinkPreviewInputConverter().fromJson(
+          const GroupGetJoinLinkPreviewsInputConverter().fromJson(
             json.cast<String, dynamic>(),
           ),
-      parametersToJson: const GroupGetJoinLinkPreviewInputConverter().toJson,
-      outputFromJson: (json) => const GroupGetJoinLinkPreviewOutputConverter()
+      parametersToJson: const GroupGetJoinLinkPreviewsInputConverter().toJson,
+      outputFromJson: (json) => const GroupGetJoinLinkPreviewsOutputConverter()
           .fromJson(json.cast<String, dynamic>()),
-      outputToJson: const GroupGetJoinLinkPreviewOutputConverter().toJson,
-      errors: const ['InvalidCode'],
+      outputToJson: const GroupGetJoinLinkPreviewsOutputConverter().toJson,
+      errors: const [],
     );
 
-final chatBskyGroupGetJoinLinkPreview = methodDescriptor;
+final chatBskyGroupGetJoinLinkPreviews = methodDescriptor;

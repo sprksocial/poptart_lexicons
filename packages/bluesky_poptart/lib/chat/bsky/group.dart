@@ -19,10 +19,12 @@ import 'package:bluesky_poptart/chat/bsky/group/edit_join_link.dart'
     as _ChatBskyGroupEditJoinLink;
 import 'package:bluesky_poptart/chat/bsky/group/enable_join_link.dart'
     as _ChatBskyGroupEnableJoinLink;
-import 'package:bluesky_poptart/chat/bsky/group/get_join_link_preview.dart'
-    as _ChatBskyGroupGetJoinLinkPreview;
+import 'package:bluesky_poptart/chat/bsky/group/get_join_link_previews.dart'
+    as _ChatBskyGroupGetJoinLinkPreviews;
 import 'package:bluesky_poptart/chat/bsky/group/list_join_requests.dart'
     as _ChatBskyGroupListJoinRequests;
+import 'package:bluesky_poptart/chat/bsky/group/list_mutual_groups.dart'
+    as _ChatBskyGroupListMutualGroups;
 import 'package:bluesky_poptart/chat/bsky/group/reject_join_request.dart'
     as _ChatBskyGroupRejectJoinRequest;
 import 'package:bluesky_poptart/chat/bsky/group/remove_members.dart'
@@ -65,14 +67,18 @@ final chatBskyGroupEnableJoinLink =
     _ChatBskyGroupEnableJoinLink.chatBskyGroupEnableJoinLink;
 final chatBskyGroupEnableJoinLinkMethodDescriptor =
     _ChatBskyGroupEnableJoinLink.methodDescriptor;
-final chatBskyGroupGetJoinLinkPreview =
-    _ChatBskyGroupGetJoinLinkPreview.chatBskyGroupGetJoinLinkPreview;
-final chatBskyGroupGetJoinLinkPreviewMethodDescriptor =
-    _ChatBskyGroupGetJoinLinkPreview.methodDescriptor;
+final chatBskyGroupGetJoinLinkPreviews =
+    _ChatBskyGroupGetJoinLinkPreviews.chatBskyGroupGetJoinLinkPreviews;
+final chatBskyGroupGetJoinLinkPreviewsMethodDescriptor =
+    _ChatBskyGroupGetJoinLinkPreviews.methodDescriptor;
 final chatBskyGroupListJoinRequests =
     _ChatBskyGroupListJoinRequests.chatBskyGroupListJoinRequests;
 final chatBskyGroupListJoinRequestsMethodDescriptor =
     _ChatBskyGroupListJoinRequests.methodDescriptor;
+final chatBskyGroupListMutualGroups =
+    _ChatBskyGroupListMutualGroups.chatBskyGroupListMutualGroups;
+final chatBskyGroupListMutualGroupsMethodDescriptor =
+    _ChatBskyGroupListMutualGroups.methodDescriptor;
 final chatBskyGroupRejectJoinRequest =
     _ChatBskyGroupRejectJoinRequest.chatBskyGroupRejectJoinRequest;
 final chatBskyGroupRejectJoinRequestMethodDescriptor =
