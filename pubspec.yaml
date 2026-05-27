@@ -8,6 +8,7 @@ environment:
 
 workspace:
   - packages/bluesky_poptart
+  - packages/cosmik_poptart
   - packages/margin_poptart
   - packages/ozone_poptart
   - packages/plyr_poptart

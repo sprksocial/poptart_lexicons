@@ -5,6 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 WORK_DIR="${RUNNER_TEMP:-${TMPDIR:-/tmp}}/poptart-lexicon-sync"
 
 ATPROTO_REPO="${ATPROTO_REPO:-https://github.com/bluesky-social/atproto.git}"
+SEMBLE_REPO="${SEMBLE_REPO:-https://github.com/cosmik-network/semble.git}"
 MARGIN_REPO="${MARGIN_REPO:-https://github.com/margin-at/margin.git}"
 PLYR_REPO="${PLYR_REPO:-https://github.com/zzstoatzz/plyr.fm.git}"
 SERVER_REPO="${SERVER_REPO:-https://github.com/sprksocial/server.git}"
@@ -34,6 +35,7 @@ rm -rf "$WORK_DIR"
 mkdir -p "$WORK_DIR"
 
 clone_repo "$ATPROTO_REPO" "$WORK_DIR/atproto"
+clone_repo "$SEMBLE_REPO" "$WORK_DIR/semble"
 clone_repo "$MARGIN_REPO" "$WORK_DIR/margin"
 clone_repo "$PLYR_REPO" "$WORK_DIR/plyr"
 clone_repo "$SERVER_REPO" "$WORK_DIR/server"
@@ -41,6 +43,15 @@ clone_repo "$SERVER_REPO" "$WORK_DIR/server"
 replace_dir "$WORK_DIR/atproto/lexicons/app/bsky" "$ROOT_DIR/lexicons/app/bsky"
 replace_dir "$WORK_DIR/atproto/lexicons/chat/bsky" "$ROOT_DIR/lexicons/chat/bsky"
 replace_dir "$WORK_DIR/atproto/lexicons/tools/ozone" "$ROOT_DIR/lexicons/tools/ozone"
+replace_dir "$WORK_DIR/semble/src/modules/atproto/infrastructure/lexicons" "$WORK_DIR/semble-lexicons"
+find "$WORK_DIR/semble-lexicons" -type f -name "*.json" -print0 \
+  | while IFS= read -r -d '' lexicon_file; do
+      if [[ "$(jq -r '.id // empty' "$lexicon_file")" != network.cosmik.* ]]; then
+        rm "$lexicon_file"
+      fi
+    done
+find "$WORK_DIR/semble-lexicons" -type d -empty -delete
+replace_dir "$WORK_DIR/semble-lexicons" "$ROOT_DIR/lexicons/network/cosmik"
 replace_dir "$WORK_DIR/margin/lexicons/at/margin" "$ROOT_DIR/lexicons/at/margin"
 replace_dir "$WORK_DIR/plyr/lexicons" "$ROOT_DIR/lexicons/fm/plyr"
 replace_dir "$WORK_DIR/server/lexicons/so/sprk" "$ROOT_DIR/lexicons/so/sprk"

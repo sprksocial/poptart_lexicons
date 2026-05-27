@@ -16,6 +16,10 @@ packages:
     output: margin_poptart
     roots:
       - at.margin.
+  - name: cosmik_poptart
+    output: cosmik_poptart
+    roots:
+      - network.cosmik.
   - name: plyr_poptart
     output: plyr_poptart
     roots:
