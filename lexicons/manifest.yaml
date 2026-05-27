@@ -20,6 +20,10 @@ packages:
     output: cosmik_poptart
     roots:
       - network.cosmik.
+  - name: standard_poptart
+    output: standard_poptart
+    roots:
+      - site.standard.
   - name: plyr_poptart
     output: plyr_poptart
     roots:

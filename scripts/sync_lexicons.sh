@@ -9,6 +9,7 @@ SEMBLE_REPO="${SEMBLE_REPO:-https://github.com/cosmik-network/semble.git}"
 MARGIN_REPO="${MARGIN_REPO:-https://github.com/margin-at/margin.git}"
 PLYR_REPO="${PLYR_REPO:-https://github.com/zzstoatzz/plyr.fm.git}"
 SERVER_REPO="${SERVER_REPO:-https://github.com/sprksocial/server.git}"
+STANDARD_REPO="${STANDARD_REPO:-https://tangled.org/standard.site/lexicons}"
 
 clone_repo() {
   local repo_url="$1"
@@ -39,6 +40,7 @@ clone_repo "$SEMBLE_REPO" "$WORK_DIR/semble"
 clone_repo "$MARGIN_REPO" "$WORK_DIR/margin"
 clone_repo "$PLYR_REPO" "$WORK_DIR/plyr"
 clone_repo "$SERVER_REPO" "$WORK_DIR/server"
+clone_repo "$STANDARD_REPO" "$WORK_DIR/standard"
 
 replace_dir "$WORK_DIR/atproto/lexicons/app/bsky" "$ROOT_DIR/lexicons/app/bsky"
 replace_dir "$WORK_DIR/atproto/lexicons/chat/bsky" "$ROOT_DIR/lexicons/chat/bsky"
@@ -55,3 +57,5 @@ replace_dir "$WORK_DIR/semble-lexicons" "$ROOT_DIR/lexicons/network/cosmik"
 replace_dir "$WORK_DIR/margin/lexicons/at/margin" "$ROOT_DIR/lexicons/at/margin"
 replace_dir "$WORK_DIR/plyr/lexicons" "$ROOT_DIR/lexicons/fm/plyr"
 replace_dir "$WORK_DIR/server/lexicons/so/sprk" "$ROOT_DIR/lexicons/so/sprk"
+(cd "$WORK_DIR/standard" && bun install && bun run lexicon:emit)
+replace_dir "$WORK_DIR/standard/out/site/standard" "$ROOT_DIR/lexicons/site/standard"

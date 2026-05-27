@@ -13,6 +13,7 @@ workspace:
   - packages/ozone_poptart
   - packages/plyr_poptart
   - packages/sprk_poptart
+  - packages/standard_poptart
 
 dev_dependencies:
   melos: ^7.1.0
