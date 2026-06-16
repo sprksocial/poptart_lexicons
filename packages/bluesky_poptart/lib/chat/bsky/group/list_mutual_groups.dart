@@ -7,6 +7,6 @@
 // LexGenerator
 // **************************************************************************
 
-export 'get_join_link_preview/descriptor.dart';
-export 'get_join_link_preview/input.dart';
-export 'get_join_link_preview/output.dart';
+export 'list_mutual_groups/descriptor.dart';
+export 'list_mutual_groups/input.dart';
+export 'list_mutual_groups/output.dart';

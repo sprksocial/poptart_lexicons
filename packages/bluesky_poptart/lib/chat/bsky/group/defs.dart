@@ -10,6 +10,8 @@
 export 'defs/descriptor.dart';
 export 'defs/join_link_preview_view.dart';
 export 'defs/join_link_view.dart';
+export 'defs/join_link_viewer_state.dart';
+export 'defs/join_request_convo_view.dart';
 export 'defs/join_request_view.dart';
 export 'defs/join_rule.dart';
 export 'defs/link_enabled_status.dart';

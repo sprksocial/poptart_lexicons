@@ -15,33 +15,39 @@ part 'input.g.dart';
 // **************************************************************************
 
 @freezed
-abstract class GroupGetJoinLinkPreviewInput
-    with _$GroupGetJoinLinkPreviewInput {
-  static const knownProps = <String>['code'];
+abstract class GroupListMutualGroupsInput with _$GroupListMutualGroupsInput {
+  static const knownProps = <String>['subject', 'limit', 'cursor'];
 
   @JsonSerializable(includeIfNull: false)
-  const factory GroupGetJoinLinkPreviewInput({
-    required String code,
+  const factory GroupListMutualGroupsInput({
+    required String subject,
+    @Default(50) int limit,
+    String? cursor,
 
     Map<String, dynamic>? $unknown,
-  }) = _GroupGetJoinLinkPreviewInput;
+  }) = _GroupListMutualGroupsInput;
 
-  factory GroupGetJoinLinkPreviewInput.fromJson(Map<String, Object?> json) =>
-      _$GroupGetJoinLinkPreviewInputFromJson(json);
+  factory GroupListMutualGroupsInput.fromJson(Map<String, Object?> json) =>
+      _$GroupListMutualGroupsInputFromJson(json);
 }
 
-final class GroupGetJoinLinkPreviewInputConverter
-    extends JsonConverter<GroupGetJoinLinkPreviewInput, Map<String, dynamic>> {
-  const GroupGetJoinLinkPreviewInputConverter();
+extension GroupListMutualGroupsInputExtension on GroupListMutualGroupsInput {
+  bool get hasCursor => cursor != null;
+  bool get hasNotCursor => !hasCursor;
+}
+
+final class GroupListMutualGroupsInputConverter
+    extends JsonConverter<GroupListMutualGroupsInput, Map<String, dynamic>> {
+  const GroupListMutualGroupsInputConverter();
 
   @override
-  GroupGetJoinLinkPreviewInput fromJson(Map<String, dynamic> json) {
-    return GroupGetJoinLinkPreviewInput.fromJson(
-      translate(json, GroupGetJoinLinkPreviewInput.knownProps),
+  GroupListMutualGroupsInput fromJson(Map<String, dynamic> json) {
+    return GroupListMutualGroupsInput.fromJson(
+      translate(json, GroupListMutualGroupsInput.knownProps),
     );
   }
 
   @override
-  Map<String, dynamic> toJson(GroupGetJoinLinkPreviewInput object) =>
+  Map<String, dynamic> toJson(GroupListMutualGroupsInput object) =>
       untranslate(object.toJson());
 }

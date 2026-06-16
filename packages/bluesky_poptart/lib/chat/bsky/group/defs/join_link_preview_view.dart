@@ -8,7 +8,10 @@ import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import '../../actor/defs/profile_view_basic.dart';
+import './join_rule.dart';
+import './link_enabled_status.dart';
 import '../../convo/defs/convo_view.dart';
+import './join_link_viewer_state.dart';
 
 part 'join_link_preview_view.freezed.dart';
 part 'join_link_preview_view.g.dart';
@@ -20,23 +23,33 @@ part 'join_link_preview_view.g.dart';
 @freezed
 abstract class JoinLinkPreviewView with _$JoinLinkPreviewView {
   static const knownProps = <String>[
+    'code',
     'name',
     'owner',
     'memberCount',
+    'memberLimit',
     'requireApproval',
+    'joinRule',
+    'enabledStatus',
     'convo',
+    'viewer',
   ];
 
   @JsonSerializable(includeIfNull: false)
   const factory JoinLinkPreviewView({
     @Default('chat.bsky.group.defs#joinLinkPreviewView') String $type,
+    required String code,
     required String name,
     @ProfileViewBasicConverter() required ProfileViewBasic owner,
     required int memberCount,
+    required int memberLimit,
     required bool requireApproval,
+    @JoinRuleConverter() required JoinRule joinRule,
+    @LinkEnabledStatusConverter() required LinkEnabledStatus enabledStatus,
 
     /// Present only if the request is authenticated and the user is a member of the group.
     @ConvoViewConverter() ConvoView? convo,
+    @JoinLinkViewerStateConverter() JoinLinkViewerState? viewer,
 
     Map<String, dynamic>? $unknown,
   }) = _JoinLinkPreviewView;
@@ -55,6 +68,8 @@ extension JoinLinkPreviewViewExtension on JoinLinkPreviewView {
   bool get isNotRequireApproval => !isRequireApproval;
   bool get hasConvo => convo != null;
   bool get hasNotConvo => !hasConvo;
+  bool get hasViewer => viewer != null;
+  bool get hasNotViewer => !hasViewer;
 }
 
 final class JoinLinkPreviewViewConverter

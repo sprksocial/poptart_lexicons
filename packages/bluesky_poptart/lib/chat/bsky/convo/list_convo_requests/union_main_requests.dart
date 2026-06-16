@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/internals.dart' show isA;
 
 import '../defs/convo_view.dart';
-import '../../group/defs/join_request_view.dart';
+import '../../group/defs/join_request_convo_view.dart';
 
 part 'union_main_requests.freezed.dart';
 
@@ -23,9 +23,9 @@ sealed class UConvoListConvoRequestsRequests
   const factory UConvoListConvoRequestsRequests.convoView({
     required ConvoView data,
   }) = UConvoListConvoRequestsRequestsConvoView;
-  const factory UConvoListConvoRequestsRequests.joinRequestView({
-    required JoinRequestView data,
-  }) = UConvoListConvoRequestsRequestsJoinRequestView;
+  const factory UConvoListConvoRequestsRequests.joinRequestConvoView({
+    required JoinRequestConvoView data,
+  }) = UConvoListConvoRequestsRequestsJoinRequestConvoView;
 
   const factory UConvoListConvoRequestsRequests.unknown({
     required Map<String, dynamic> data,
@@ -40,11 +40,11 @@ extension UConvoListConvoRequestsRequestsExtension
   bool get isConvoView => isA<UConvoListConvoRequestsRequestsConvoView>(this);
   bool get isNotConvoView => !isConvoView;
   ConvoView? get convoView => isConvoView ? data as ConvoView : null;
-  bool get isJoinRequestView =>
-      isA<UConvoListConvoRequestsRequestsJoinRequestView>(this);
-  bool get isNotJoinRequestView => !isJoinRequestView;
-  JoinRequestView? get joinRequestView =>
-      isJoinRequestView ? data as JoinRequestView : null;
+  bool get isJoinRequestConvoView =>
+      isA<UConvoListConvoRequestsRequestsJoinRequestConvoView>(this);
+  bool get isNotJoinRequestConvoView => !isJoinRequestConvoView;
+  JoinRequestConvoView? get joinRequestConvoView =>
+      isJoinRequestConvoView ? data as JoinRequestConvoView : null;
   bool get isUnknown => isA<UConvoListConvoRequestsRequestsUnknown>(this);
   bool get isNotUnknown => !isUnknown;
   Map<String, dynamic>? get unknown =>
@@ -64,9 +64,9 @@ final class UConvoListConvoRequestsRequestsConverter
           data: const ConvoViewConverter().fromJson(json),
         );
       }
-      if (JoinRequestView.validate(json)) {
-        return UConvoListConvoRequestsRequests.joinRequestView(
-          data: const JoinRequestViewConverter().fromJson(json),
+      if (JoinRequestConvoView.validate(json)) {
+        return UConvoListConvoRequestsRequests.joinRequestConvoView(
+          data: const JoinRequestConvoViewConverter().fromJson(json),
         );
       }
 
@@ -80,8 +80,8 @@ final class UConvoListConvoRequestsRequestsConverter
   Map<String, dynamic> toJson(UConvoListConvoRequestsRequests object) =>
       object.when(
         convoView: (data) => const ConvoViewConverter().toJson(data),
-        joinRequestView: (data) =>
-            const JoinRequestViewConverter().toJson(data),
+        joinRequestConvoView: (data) =>
+            const JoinRequestConvoViewConverter().toJson(data),
 
         unknown: (data) => data,
       );

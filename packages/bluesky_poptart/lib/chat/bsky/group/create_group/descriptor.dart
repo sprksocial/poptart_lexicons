@@ -29,9 +29,10 @@ final methodDescriptor =
       errors: const [
         'AccountSuspended',
         'BlockedActor',
-        'UserForbidsGroups',
+        'NewAccountCannotCreateGroup',
         'NotFollowedBySender',
         'RecipientNotFound',
+        'UserForbidsGroups',
       ],
     );
 

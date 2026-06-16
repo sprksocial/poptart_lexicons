@@ -21,6 +21,10 @@ _GroupConvo _$GroupConvoFromJson(Map json) =>
           'createdAt',
           (v) => DateTime.parse(v as String),
         ),
+        joinRequestCount: $checkedConvert(
+          'joinRequestCount',
+          (v) => (v as num?)?.toInt(),
+        ),
         joinLink: $checkedConvert(
           'joinLink',
           (v) => _$JsonConverterFromJson<Map<String, dynamic>, JoinLinkView>(
@@ -28,6 +32,7 @@ _GroupConvo _$GroupConvoFromJson(Map json) =>
             const JoinLinkViewConverter().fromJson,
           ),
         ),
+        memberLimit: $checkedConvert('memberLimit', (v) => (v as num).toInt()),
         lockStatus: $checkedConvert(
           'lockStatus',
           (v) => const ConvoLockStatusConverter().fromJson(v as String),
@@ -47,10 +52,12 @@ Map<String, dynamic> _$GroupConvoToJson(
   'name': instance.name,
   'memberCount': instance.memberCount,
   'createdAt': instance.createdAt.toIso8601String(),
+  'joinRequestCount': ?instance.joinRequestCount,
   'joinLink': ?_$JsonConverterToJson<Map<String, dynamic>, JoinLinkView>(
     instance.joinLink,
     const JoinLinkViewConverter().toJson,
   ),
+  'memberLimit': instance.memberLimit,
   'lockStatus': const ConvoLockStatusConverter().toJson(instance.lockStatus),
   r'$unknown': ?instance.$unknown,
 };

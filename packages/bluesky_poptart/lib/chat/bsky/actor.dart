@@ -7,6 +7,8 @@ import 'package:bluesky_poptart/chat/bsky/actor/delete_account.dart'
     as _ChatBskyActorDeleteAccount;
 import 'package:bluesky_poptart/chat/bsky/actor/export_account_data.dart'
     as _ChatBskyActorExportAccountData;
+import 'package:bluesky_poptart/chat/bsky/actor/get_status.dart'
+    as _ChatBskyActorGetStatus;
 
 // **************************************************************************
 // LexGenerator
@@ -20,3 +22,6 @@ final chatBskyActorExportAccountData =
     _ChatBskyActorExportAccountData.chatBskyActorExportAccountData;
 final chatBskyActorExportAccountDataMethodDescriptor =
     _ChatBskyActorExportAccountData.methodDescriptor;
+final chatBskyActorGetStatus = _ChatBskyActorGetStatus.chatBskyActorGetStatus;
+final chatBskyActorGetStatusMethodDescriptor =
+    _ChatBskyActorGetStatus.methodDescriptor;
