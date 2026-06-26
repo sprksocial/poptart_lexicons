@@ -1,0 +1,53 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+// ignore_for_file: non_constant_identifier_names
+
+part of 'message_input.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_MessageInput _$MessageInputFromJson(Map json) =>
+    $checkedCreate('_MessageInput', json, ($checkedConvert) {
+      final val = _MessageInput(
+        $type: $checkedConvert(
+          r'$type',
+          (v) => v as String? ?? 'chat.sprk.convo.defs#messageInput',
+        ),
+        text: $checkedConvert('text', (v) => v as String),
+        embed: $checkedConvert(
+          'embed',
+          (v) => _$JsonConverterFromJson<String, AtUri>(
+            v,
+            const AtUriConverter().fromJson,
+          ),
+        ),
+        $unknown: $checkedConvert(
+          r'$unknown',
+          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+        ),
+      );
+      return val;
+    });
+
+Map<String, dynamic> _$MessageInputToJson(_MessageInput instance) =>
+    <String, dynamic>{
+      r'$type': instance.$type,
+      'text': instance.text,
+      'embed': ?_$JsonConverterToJson<String, AtUri>(
+        instance.embed,
+        const AtUriConverter().toJson,
+      ),
+      r'$unknown': ?instance.$unknown,
+    };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);

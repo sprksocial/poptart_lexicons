@@ -12,6 +12,7 @@ packages:
     output: sprk_poptart
     roots:
       - so.sprk.
+      - chat.sprk.
   - name: margin_poptart
     output: margin_poptart
     roots:

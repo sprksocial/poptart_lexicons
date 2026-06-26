@@ -16,6 +16,7 @@ tooling.
 - `lexicons/app/bsky` contains `app.bsky.*` lexicons.
 - `lexicons/at/margin` contains `at.margin.*` lexicons.
 - `lexicons/chat/bsky` contains `chat.bsky.*` lexicons.
+- `lexicons/chat/sprk` contains `chat.sprk.*` lexicons.
 - `lexicons/fm/plyr` contains `fm.plyr.*` lexicons.
 - `lexicons/network/cosmik` contains `network.cosmik.*` lexicons.
 - `lexicons/site/standard` contains `site.standard.*` lexicons.
