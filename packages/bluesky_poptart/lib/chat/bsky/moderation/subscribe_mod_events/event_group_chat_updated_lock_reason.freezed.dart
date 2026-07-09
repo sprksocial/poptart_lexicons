@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EventGroupChatUpdatedLockReasonKnownValue extends EventGroupChatUpdatedLockReason {
   const EventGroupChatUpdatedLockReasonKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEventGroupChatUpdatedLockReason data;
 
@@ -248,7 +248,7 @@ as KnownEventGroupChatUpdatedLockReason,
 
 class EventGroupChatUpdatedLockReasonUnknown extends EventGroupChatUpdatedLockReason {
   const EventGroupChatUpdatedLockReasonUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -79,7 +79,9 @@ enum KnownModerationQueryEventsSubjectType implements Serializable {
   @JsonValue('account')
   account('account'),
   @JsonValue('record')
-  record('record');
+  record('record'),
+  @JsonValue('conversation')
+  conversation('conversation');
 
   @override
   final String value;

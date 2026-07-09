@@ -77,7 +77,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $DraftWithIdCopyWith<$Res> get draft {
-  
+
   return $DraftWithIdCopyWith<$Res>(_self.draft, (value) {
     return _then(_self.copyWith(draft: value));
   });
@@ -296,7 +296,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $DraftWithIdCopyWith<$Res> get draft {
-  
+
   return $DraftWithIdCopyWith<$Res>(_self.draft, (value) {
     return _then(_self.copyWith(draft: value));
   });

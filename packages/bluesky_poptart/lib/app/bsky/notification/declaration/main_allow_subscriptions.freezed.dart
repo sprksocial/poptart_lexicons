@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class NotificationDeclarationAllowSubscriptionsKnownValue extends NotificationDeclarationAllowSubscriptions {
   const NotificationDeclarationAllowSubscriptionsKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownNotificationDeclarationAllowSubscriptions data;
 
@@ -248,7 +248,7 @@ as KnownNotificationDeclarationAllowSubscriptions,
 
 class NotificationDeclarationAllowSubscriptionsUnknown extends NotificationDeclarationAllowSubscriptions {
   const NotificationDeclarationAllowSubscriptionsUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ConvoViewStatusKnownValue extends ConvoViewStatus {
   const ConvoViewStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownConvoViewStatus data;
 
@@ -248,7 +248,7 @@ as KnownConvoViewStatus,
 
 class ConvoViewStatusUnknown extends ConvoViewStatus {
   const ConvoViewStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

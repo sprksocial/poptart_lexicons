@@ -83,7 +83,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LabelPreferenceVisibilityCopyWith<$Res> get visibility {
-  
+
   return $LabelPreferenceVisibilityCopyWith<$Res>(_self.visibility, (value) {
     return _then(_self.copyWith(visibility: value));
   });
@@ -311,7 +311,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LabelPreferenceVisibilityCopyWith<$Res> get visibility {
-  
+
   return $LabelPreferenceVisibilityCopyWith<$Res>(_self.visibility, (value) {
     return _then(_self.copyWith(visibility: value));
   });

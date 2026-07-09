@@ -55,12 +55,13 @@ extension UEmbedRecordViewRecordEmbedsPatterns on UEmbedRecordViewRecordEmbeds {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UEmbedRecordViewRecordEmbedsEmbedImagesView value)?  embedImagesView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedVideoView value)?  embedVideoView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedExternalView value)?  embedExternalView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordView value)?  embedRecordView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult Function( UEmbedRecordViewRecordEmbedsUnknown value)?  unknown,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UEmbedRecordViewRecordEmbedsEmbedImagesView value)?  embedImagesView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedVideoView value)?  embedVideoView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedGalleryView value)?  embedGalleryView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedExternalView value)?  embedExternalView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordView value)?  embedRecordView,TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult Function( UEmbedRecordViewRecordEmbedsUnknown value)?  unknown,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case UEmbedRecordViewRecordEmbedsEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that);case UEmbedRecordViewRecordEmbedsEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that);case UEmbedRecordViewRecordEmbedsEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that);case UEmbedRecordViewRecordEmbedsEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that);case UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that);case UEmbedRecordViewRecordEmbedsUnknown() when unknown != null:
@@ -82,12 +83,13 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UEmbedRecordViewRecordEmbedsEmbedImagesView value)  embedImagesView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedVideoView value)  embedVideoView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedExternalView value)  embedExternalView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordView value)  embedRecordView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView value)  embedRecordWithMediaView,required TResult Function( UEmbedRecordViewRecordEmbedsUnknown value)  unknown,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UEmbedRecordViewRecordEmbedsEmbedImagesView value)  embedImagesView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedVideoView value)  embedVideoView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedGalleryView value)  embedGalleryView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedExternalView value)  embedExternalView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordView value)  embedRecordView,required TResult Function( UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView value)  embedRecordWithMediaView,required TResult Function( UEmbedRecordViewRecordEmbedsUnknown value)  unknown,}){
 final _that = this;
 switch (_that) {
 case UEmbedRecordViewRecordEmbedsEmbedImagesView():
 return embedImagesView(_that);case UEmbedRecordViewRecordEmbedsEmbedVideoView():
-return embedVideoView(_that);case UEmbedRecordViewRecordEmbedsEmbedExternalView():
+return embedVideoView(_that);case UEmbedRecordViewRecordEmbedsEmbedGalleryView():
+return embedGalleryView(_that);case UEmbedRecordViewRecordEmbedsEmbedExternalView():
 return embedExternalView(_that);case UEmbedRecordViewRecordEmbedsEmbedRecordView():
 return embedRecordView(_that);case UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView():
 return embedRecordWithMediaView(_that);case UEmbedRecordViewRecordEmbedsUnknown():
@@ -105,12 +107,13 @@ return unknown(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UEmbedRecordViewRecordEmbedsEmbedImagesView value)?  embedImagesView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedVideoView value)?  embedVideoView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedExternalView value)?  embedExternalView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedRecordView value)?  embedRecordView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult? Function( UEmbedRecordViewRecordEmbedsUnknown value)?  unknown,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UEmbedRecordViewRecordEmbedsEmbedImagesView value)?  embedImagesView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedVideoView value)?  embedVideoView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedGalleryView value)?  embedGalleryView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedExternalView value)?  embedExternalView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedRecordView value)?  embedRecordView,TResult? Function( UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult? Function( UEmbedRecordViewRecordEmbedsUnknown value)?  unknown,}){
 final _that = this;
 switch (_that) {
 case UEmbedRecordViewRecordEmbedsEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that);case UEmbedRecordViewRecordEmbedsEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that);case UEmbedRecordViewRecordEmbedsEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that);case UEmbedRecordViewRecordEmbedsEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that);case UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that);case UEmbedRecordViewRecordEmbedsUnknown() when unknown != null:
@@ -131,11 +134,12 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( EmbedImagesView data)?  embedImagesView,TResult Function( EmbedVideoView data)?  embedVideoView,TResult Function( EmbedExternalView data)?  embedExternalView,TResult Function( EmbedRecordView data)?  embedRecordView,TResult Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( EmbedImagesView data)?  embedImagesView,TResult Function( EmbedVideoView data)?  embedVideoView,TResult Function( EmbedGalleryView data)?  embedGalleryView,TResult Function( EmbedExternalView data)?  embedExternalView,TResult Function( EmbedRecordView data)?  embedRecordView,TResult Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case UEmbedRecordViewRecordEmbedsEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that.data);case UEmbedRecordViewRecordEmbedsUnknown() when unknown != null:
@@ -157,11 +161,12 @@ return unknown(_that.data);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( EmbedImagesView data)  embedImagesView,required TResult Function( EmbedVideoView data)  embedVideoView,required TResult Function( EmbedExternalView data)  embedExternalView,required TResult Function( EmbedRecordView data)  embedRecordView,required TResult Function( EmbedRecordWithMediaView data)  embedRecordWithMediaView,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( EmbedImagesView data)  embedImagesView,required TResult Function( EmbedVideoView data)  embedVideoView,required TResult Function( EmbedGalleryView data)  embedGalleryView,required TResult Function( EmbedExternalView data)  embedExternalView,required TResult Function( EmbedRecordView data)  embedRecordView,required TResult Function( EmbedRecordWithMediaView data)  embedRecordWithMediaView,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
 switch (_that) {
 case UEmbedRecordViewRecordEmbedsEmbedImagesView():
 return embedImagesView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedVideoView():
-return embedVideoView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedExternalView():
+return embedVideoView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedGalleryView():
+return embedGalleryView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedExternalView():
 return embedExternalView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedRecordView():
 return embedRecordView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView():
 return embedRecordWithMediaView(_that.data);case UEmbedRecordViewRecordEmbedsUnknown():
@@ -179,11 +184,12 @@ return unknown(_that.data);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( EmbedImagesView data)?  embedImagesView,TResult? Function( EmbedVideoView data)?  embedVideoView,TResult? Function( EmbedExternalView data)?  embedExternalView,TResult? Function( EmbedRecordView data)?  embedRecordView,TResult? Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( EmbedImagesView data)?  embedImagesView,TResult? Function( EmbedVideoView data)?  embedVideoView,TResult? Function( EmbedGalleryView data)?  embedGalleryView,TResult? Function( EmbedExternalView data)?  embedExternalView,TResult? Function( EmbedRecordView data)?  embedRecordView,TResult? Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
 switch (_that) {
 case UEmbedRecordViewRecordEmbedsEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that.data);case UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that.data);case UEmbedRecordViewRecordEmbedsUnknown() when unknown != null:
@@ -200,7 +206,7 @@ return unknown(_that.data);case _:
 
 class UEmbedRecordViewRecordEmbedsEmbedImagesView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedImagesView({required this.data}): super._();
-  
+
 
 @override final  EmbedImagesView data;
 
@@ -263,7 +269,7 @@ as EmbedImagesView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedImagesViewCopyWith<$Res> get data {
-  
+
   return $EmbedImagesViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -275,7 +281,7 @@ $EmbedImagesViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedVideoView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedVideoView({required this.data}): super._();
-  
+
 
 @override final  EmbedVideoView data;
 
@@ -338,8 +344,83 @@ as EmbedVideoView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedVideoViewCopyWith<$Res> get data {
-  
+
   return $EmbedVideoViewCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class UEmbedRecordViewRecordEmbedsEmbedGalleryView extends UEmbedRecordViewRecordEmbeds {
+  const UEmbedRecordViewRecordEmbedsEmbedGalleryView({required this.data}): super._();
+
+
+@override final  EmbedGalleryView data;
+
+/// Create a copy of UEmbedRecordViewRecordEmbeds
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWith<UEmbedRecordViewRecordEmbedsEmbedGalleryView> get copyWith => _$UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWithImpl<UEmbedRecordViewRecordEmbedsEmbedGalleryView>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UEmbedRecordViewRecordEmbedsEmbedGalleryView&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'UEmbedRecordViewRecordEmbeds.embedGalleryView(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWith<$Res> implements $UEmbedRecordViewRecordEmbedsCopyWith<$Res> {
+  factory $UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWith(UEmbedRecordViewRecordEmbedsEmbedGalleryView value, $Res Function(UEmbedRecordViewRecordEmbedsEmbedGalleryView) _then) = _$UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWithImpl;
+@useResult
+$Res call({
+ EmbedGalleryView data
+});
+
+
+$EmbedGalleryViewCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWithImpl<$Res>
+    implements $UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWith<$Res> {
+  _$UEmbedRecordViewRecordEmbedsEmbedGalleryViewCopyWithImpl(this._self, this._then);
+
+  final UEmbedRecordViewRecordEmbedsEmbedGalleryView _self;
+  final $Res Function(UEmbedRecordViewRecordEmbedsEmbedGalleryView) _then;
+
+/// Create a copy of UEmbedRecordViewRecordEmbeds
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(UEmbedRecordViewRecordEmbedsEmbedGalleryView(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as EmbedGalleryView,
+  ));
+}
+
+/// Create a copy of UEmbedRecordViewRecordEmbeds
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$EmbedGalleryViewCopyWith<$Res> get data {
+
+  return $EmbedGalleryViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
 }
@@ -350,7 +431,7 @@ $EmbedVideoViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedExternalView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedExternalView({required this.data}): super._();
-  
+
 
 @override final  EmbedExternalView data;
 
@@ -413,7 +494,7 @@ as EmbedExternalView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalViewCopyWith<$Res> get data {
-  
+
   return $EmbedExternalViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -425,7 +506,7 @@ $EmbedExternalViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedRecordView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedRecordView({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordView data;
 
@@ -488,7 +569,7 @@ as EmbedRecordView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewCopyWith<$Res> get data {
-  
+
   return $EmbedRecordViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -500,7 +581,7 @@ $EmbedRecordViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordWithMediaView data;
 
@@ -563,7 +644,7 @@ as EmbedRecordWithMediaView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordWithMediaViewCopyWith<$Res> get data {
-  
+
   return $EmbedRecordWithMediaViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -575,7 +656,7 @@ $EmbedRecordWithMediaViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsUnknown extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

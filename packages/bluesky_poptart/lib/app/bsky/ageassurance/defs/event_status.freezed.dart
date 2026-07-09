@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EventStatusKnownValue extends EventStatus {
   const EventStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEventStatus data;
 
@@ -248,7 +248,7 @@ as KnownEventStatus,
 
 class EventStatusUnknown extends EventStatus {
   const EventStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

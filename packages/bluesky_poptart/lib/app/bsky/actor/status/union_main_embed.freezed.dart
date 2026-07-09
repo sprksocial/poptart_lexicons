@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UActorStatusEmbedEmbedExternal extends UActorStatusEmbed {
   const UActorStatusEmbedEmbedExternal({required this.data}): super._();
-  
+
 
 @override final  EmbedExternal data;
 
@@ -239,7 +239,7 @@ as EmbedExternal,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalCopyWith<$Res> get data {
-  
+
   return $EmbedExternalCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $EmbedExternalCopyWith<$Res> get data {
 
 class UActorStatusEmbedUnknown extends UActorStatusEmbed {
   const UActorStatusEmbedUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

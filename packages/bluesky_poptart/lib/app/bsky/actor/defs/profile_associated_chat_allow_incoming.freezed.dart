@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ProfileAssociatedChatAllowIncomingKnownValue extends ProfileAssociatedChatAllowIncoming {
   const ProfileAssociatedChatAllowIncomingKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownProfileAssociatedChatAllowIncoming data;
 
@@ -248,7 +248,7 @@ as KnownProfileAssociatedChatAllowIncoming,
 
 class ProfileAssociatedChatAllowIncomingUnknown extends ProfileAssociatedChatAllowIncoming {
   const ProfileAssociatedChatAllowIncomingUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

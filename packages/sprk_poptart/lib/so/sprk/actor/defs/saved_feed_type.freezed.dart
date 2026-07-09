@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SavedFeedTypeKnownValue extends SavedFeedType {
   const SavedFeedTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownSavedFeedType data;
 
@@ -248,7 +248,7 @@ as KnownSavedFeedType,
 
 class SavedFeedTypeUnknown extends SavedFeedType {
   const SavedFeedTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

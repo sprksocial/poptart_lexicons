@@ -83,7 +83,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get collection {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.collection, (value) {
     return _then(_self.copyWith(collection: value));
   });
@@ -92,7 +92,7 @@ $RepoStrongRefCopyWith<$Res> get collection {
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get removedLink {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.removedLink, (value) {
     return _then(_self.copyWith(removedLink: value));
   });
@@ -320,7 +320,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get collection {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.collection, (value) {
     return _then(_self.copyWith(collection: value));
   });
@@ -329,7 +329,7 @@ $RepoStrongRefCopyWith<$Res> get collection {
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get removedLink {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.removedLink, (value) {
     return _then(_self.copyWith(removedLink: value));
   });

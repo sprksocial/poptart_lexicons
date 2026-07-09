@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UBookmarkViewItemBlockedPost extends UBookmarkViewItem {
   const UBookmarkViewItemBlockedPost({required this.data}): super._();
-  
+
 
 @override final  BlockedPost data;
 
@@ -251,7 +251,7 @@ as BlockedPost,
 @override
 @pragma('vm:prefer-inline')
 $BlockedPostCopyWith<$Res> get data {
-  
+
   return $BlockedPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $BlockedPostCopyWith<$Res> get data {
 
 class UBookmarkViewItemNotFoundPost extends UBookmarkViewItem {
   const UBookmarkViewItemNotFoundPost({required this.data}): super._();
-  
+
 
 @override final  NotFoundPost data;
 
@@ -326,7 +326,7 @@ as NotFoundPost,
 @override
 @pragma('vm:prefer-inline')
 $NotFoundPostCopyWith<$Res> get data {
-  
+
   return $NotFoundPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $NotFoundPostCopyWith<$Res> get data {
 
 class UBookmarkViewItemPostView extends UBookmarkViewItem {
   const UBookmarkViewItemPostView({required this.data}): super._();
-  
+
 
 @override final  PostView data;
 
@@ -401,7 +401,7 @@ as PostView,
 @override
 @pragma('vm:prefer-inline')
 $PostViewCopyWith<$Res> get data {
-  
+
   return $PostViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $PostViewCopyWith<$Res> get data {
 
 class UBookmarkViewItemUnknown extends UBookmarkViewItem {
   const UBookmarkViewItemUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

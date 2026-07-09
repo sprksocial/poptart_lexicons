@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class USkeletonFeedPostReasonSkeletonReasonRepost extends USkeletonFeedPostReason {
   const USkeletonFeedPostReasonSkeletonReasonRepost({required this.data}): super._();
-  
+
 
 @override final  SkeletonReasonRepost data;
 
@@ -245,7 +245,7 @@ as SkeletonReasonRepost,
 @override
 @pragma('vm:prefer-inline')
 $SkeletonReasonRepostCopyWith<$Res> get data {
-  
+
   return $SkeletonReasonRepostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $SkeletonReasonRepostCopyWith<$Res> get data {
 
 class USkeletonFeedPostReasonSkeletonReasonPin extends USkeletonFeedPostReason {
   const USkeletonFeedPostReasonSkeletonReasonPin({required this.data}): super._();
-  
+
 
 @override final  SkeletonReasonPin data;
 
@@ -320,7 +320,7 @@ as SkeletonReasonPin,
 @override
 @pragma('vm:prefer-inline')
 $SkeletonReasonPinCopyWith<$Res> get data {
-  
+
   return $SkeletonReasonPinCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $SkeletonReasonPinCopyWith<$Res> get data {
 
 class USkeletonFeedPostReasonUnknown extends USkeletonFeedPostReason {
   const USkeletonFeedPostReasonUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

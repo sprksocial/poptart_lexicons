@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class AssignmentActivityPreviousStatusKnownValue extends AssignmentActivityPreviousStatus {
   const AssignmentActivityPreviousStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownAssignmentActivityPreviousStatus data;
 
@@ -248,7 +248,7 @@ as KnownAssignmentActivityPreviousStatus,
 
 class AssignmentActivityPreviousStatusUnknown extends AssignmentActivityPreviousStatus {
   const AssignmentActivityPreviousStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReactionViewSenderCopyWith<$Res> get sender {
-  
+
   return $ReactionViewSenderCopyWith<$Res>(_self.sender, (value) {
     return _then(_self.copyWith(sender: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReactionViewSenderCopyWith<$Res> get sender {
-  
+
   return $ReactionViewSenderCopyWith<$Res>(_self.sender, (value) {
     return _then(_self.copyWith(sender: value));
   });

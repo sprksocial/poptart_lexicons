@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ActivitySubscriptionCopyWith<$Res> get activitySubscription {
-  
+
   return $ActivitySubscriptionCopyWith<$Res>(_self.activitySubscription, (value) {
     return _then(_self.copyWith(activitySubscription: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ActivitySubscriptionCopyWith<$Res> get activitySubscription {
-  
+
   return $ActivitySubscriptionCopyWith<$Res>(_self.activitySubscription, (value) {
     return _then(_self.copyWith(activitySubscription: value));
   });

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FeedGeneratorContentModeKnownValue extends FeedGeneratorContentMode {
   const FeedGeneratorContentModeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownFeedGeneratorContentMode data;
 
@@ -248,7 +248,7 @@ as KnownFeedGeneratorContentMode,
 
 class FeedGeneratorContentModeUnknown extends FeedGeneratorContentMode {
   const FeedGeneratorContentModeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

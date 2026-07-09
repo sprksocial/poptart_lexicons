@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class NotificationReasonKnownValue extends NotificationReason {
   const NotificationReasonKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownNotificationReason data;
 
@@ -248,7 +248,7 @@ as KnownNotificationReason,
 
 class NotificationReasonUnknown extends NotificationReason {
   const NotificationReasonUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

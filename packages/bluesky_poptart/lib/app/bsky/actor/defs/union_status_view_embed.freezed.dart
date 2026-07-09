@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UStatusViewEmbedEmbedExternalView extends UStatusViewEmbed {
   const UStatusViewEmbedEmbedExternalView({required this.data}): super._();
-  
+
 
 @override final  EmbedExternalView data;
 
@@ -239,7 +239,7 @@ as EmbedExternalView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalViewCopyWith<$Res> get data {
-  
+
   return $EmbedExternalViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $EmbedExternalViewCopyWith<$Res> get data {
 
 class UStatusViewEmbedUnknown extends UStatusViewEmbed {
   const UStatusViewEmbedUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

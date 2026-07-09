@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $StatusCopyWith<$Res> get status {
-  
+
   return $StatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -90,7 +90,7 @@ $StatusCopyWith<$Res> get status {
 @override
 @pragma('vm:prefer-inline')
 $AccessCopyWith<$Res> get access {
-  
+
   return $AccessCopyWith<$Res>(_self.access, (value) {
     return _then(_self.copyWith(access: value));
   });
@@ -316,7 +316,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $StatusCopyWith<$Res> get status {
-  
+
   return $StatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -325,7 +325,7 @@ $StatusCopyWith<$Res> get status {
 @override
 @pragma('vm:prefer-inline')
 $AccessCopyWith<$Res> get access {
-  
+
   return $AccessCopyWith<$Res>(_self.access, (value) {
     return _then(_self.copyWith(access: value));
   });

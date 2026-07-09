@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UThreadViewPostRepliesThreadViewPost extends UThreadViewPostReplies {
   const UThreadViewPostRepliesThreadViewPost({required this.data}): super._();
-  
+
 
 @override final  ThreadViewPost data;
 
@@ -251,7 +251,7 @@ as ThreadViewPost,
 @override
 @pragma('vm:prefer-inline')
 $ThreadViewPostCopyWith<$Res> get data {
-  
+
   return $ThreadViewPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $ThreadViewPostCopyWith<$Res> get data {
 
 class UThreadViewPostRepliesNotFoundPost extends UThreadViewPostReplies {
   const UThreadViewPostRepliesNotFoundPost({required this.data}): super._();
-  
+
 
 @override final  NotFoundPost data;
 
@@ -326,7 +326,7 @@ as NotFoundPost,
 @override
 @pragma('vm:prefer-inline')
 $NotFoundPostCopyWith<$Res> get data {
-  
+
   return $NotFoundPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $NotFoundPostCopyWith<$Res> get data {
 
 class UThreadViewPostRepliesBlockedPost extends UThreadViewPostReplies {
   const UThreadViewPostRepliesBlockedPost({required this.data}): super._();
-  
+
 
 @override final  BlockedPost data;
 
@@ -401,7 +401,7 @@ as BlockedPost,
 @override
 @pragma('vm:prefer-inline')
 $BlockedPostCopyWith<$Res> get data {
-  
+
   return $BlockedPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $BlockedPostCopyWith<$Res> get data {
 
 class UThreadViewPostRepliesUnknown extends UThreadViewPostReplies {
   const UThreadViewPostRepliesUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

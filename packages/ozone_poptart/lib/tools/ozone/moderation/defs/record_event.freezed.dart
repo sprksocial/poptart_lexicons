@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RecordEventOpCopyWith<$Res> get op {
-  
+
   return $RecordEventOpCopyWith<$Res>(_self.op, (value) {
     return _then(_self.copyWith(op: value));
   });
@@ -308,7 +308,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RecordEventOpCopyWith<$Res> get op {
-  
+
   return $RecordEventOpCopyWith<$Res>(_self.op, (value) {
     return _then(_self.copyWith(op: value));
   });

@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $JoinRuleCopyWith<$Res> get joinRule {
-  
+
   return $JoinRuleCopyWith<$Res>(_self.joinRule, (value) {
     return _then(_self.copyWith(joinRule: value));
   });
@@ -302,7 +302,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $JoinRuleCopyWith<$Res> get joinRule {
-  
+
   return $JoinRuleCopyWith<$Res>(_self.joinRule, (value) {
     return _then(_self.copyWith(joinRule: value));
   });

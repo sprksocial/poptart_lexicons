@@ -106,7 +106,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ScheduledActionViewActionCopyWith<$Res> get action {
-  
+
   return $ScheduledActionViewActionCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
@@ -115,7 +115,7 @@ $ScheduledActionViewActionCopyWith<$Res> get action {
 @override
 @pragma('vm:prefer-inline')
 $ScheduledActionViewStatusCopyWith<$Res> get status {
-  
+
   return $ScheduledActionViewStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -386,7 +386,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ScheduledActionViewActionCopyWith<$Res> get action {
-  
+
   return $ScheduledActionViewActionCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
@@ -395,7 +395,7 @@ $ScheduledActionViewActionCopyWith<$Res> get action {
 @override
 @pragma('vm:prefer-inline')
 $ScheduledActionViewStatusCopyWith<$Res> get status {
-  
+
   return $ScheduledActionViewStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });

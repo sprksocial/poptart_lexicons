@@ -5,6 +5,12 @@
 
 import 'package:bluesky_poptart/chat/bsky/moderation/get_actor_metadata.dart'
     as _ChatBskyModerationGetActorMetadata;
+import 'package:bluesky_poptart/chat/bsky/moderation/get_convo.dart'
+    as _ChatBskyModerationGetConvo;
+import 'package:bluesky_poptart/chat/bsky/moderation/get_convo_members.dart'
+    as _ChatBskyModerationGetConvoMembers;
+import 'package:bluesky_poptart/chat/bsky/moderation/get_convos.dart'
+    as _ChatBskyModerationGetConvos;
 import 'package:bluesky_poptart/chat/bsky/moderation/get_message_context.dart'
     as _ChatBskyModerationGetMessageContext;
 import 'package:bluesky_poptart/chat/bsky/moderation/subscribe_mod_events.dart'
@@ -20,6 +26,18 @@ final chatBskyModerationGetActorMetadata =
     _ChatBskyModerationGetActorMetadata.chatBskyModerationGetActorMetadata;
 final chatBskyModerationGetActorMetadataMethodDescriptor =
     _ChatBskyModerationGetActorMetadata.methodDescriptor;
+final chatBskyModerationGetConvo =
+    _ChatBskyModerationGetConvo.chatBskyModerationGetConvo;
+final chatBskyModerationGetConvoMethodDescriptor =
+    _ChatBskyModerationGetConvo.methodDescriptor;
+final chatBskyModerationGetConvoMembers =
+    _ChatBskyModerationGetConvoMembers.chatBskyModerationGetConvoMembers;
+final chatBskyModerationGetConvoMembersMethodDescriptor =
+    _ChatBskyModerationGetConvoMembers.methodDescriptor;
+final chatBskyModerationGetConvos =
+    _ChatBskyModerationGetConvos.chatBskyModerationGetConvos;
+final chatBskyModerationGetConvosMethodDescriptor =
+    _ChatBskyModerationGetConvos.methodDescriptor;
 final chatBskyModerationGetMessageContext =
     _ChatBskyModerationGetMessageContext.chatBskyModerationGetMessageContext;
 final chatBskyModerationGetMessageContextMethodDescriptor =

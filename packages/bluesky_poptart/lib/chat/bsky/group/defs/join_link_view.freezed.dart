@@ -82,7 +82,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LinkEnabledStatusCopyWith<$Res> get enabledStatus {
-  
+
   return $LinkEnabledStatusCopyWith<$Res>(_self.enabledStatus, (value) {
     return _then(_self.copyWith(enabledStatus: value));
   });
@@ -91,7 +91,7 @@ $LinkEnabledStatusCopyWith<$Res> get enabledStatus {
 @override
 @pragma('vm:prefer-inline')
 $JoinRuleCopyWith<$Res> get joinRule {
-  
+
   return $JoinRuleCopyWith<$Res>(_self.joinRule, (value) {
     return _then(_self.copyWith(joinRule: value));
   });
@@ -320,7 +320,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LinkEnabledStatusCopyWith<$Res> get enabledStatus {
-  
+
   return $LinkEnabledStatusCopyWith<$Res>(_self.enabledStatus, (value) {
     return _then(_self.copyWith(enabledStatus: value));
   });
@@ -329,7 +329,7 @@ $LinkEnabledStatusCopyWith<$Res> get enabledStatus {
 @override
 @pragma('vm:prefer-inline')
 $JoinRuleCopyWith<$Res> get joinRule {
-  
+
   return $JoinRuleCopyWith<$Res>(_self.joinRule, (value) {
     return _then(_self.copyWith(joinRule: value));
   });

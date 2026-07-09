@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ConvoKindKnownValue extends ConvoKind {
   const ConvoKindKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownConvoKind data;
 
@@ -248,7 +248,7 @@ as KnownConvoKind,
 
 class ConvoKindUnknown extends ConvoKind {
   const ConvoKindUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

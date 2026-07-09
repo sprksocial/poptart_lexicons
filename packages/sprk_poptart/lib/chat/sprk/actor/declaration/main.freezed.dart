@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ActorDeclarationAllowIncomingCopyWith<$Res> get allowIncoming {
-  
+
   return $ActorDeclarationAllowIncomingCopyWith<$Res>(_self.allowIncoming, (value) {
     return _then(_self.copyWith(allowIncoming: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ActorDeclarationAllowIncomingCopyWith<$Res> get allowIncoming {
-  
+
   return $ActorDeclarationAllowIncomingCopyWith<$Res>(_self.allowIncoming, (value) {
     return _then(_self.copyWith(allowIncoming: value));
   });

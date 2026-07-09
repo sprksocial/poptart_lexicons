@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class GraphGetListsPurposesKnownValue extends GraphGetListsPurposes {
   const GraphGetListsPurposesKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownGraphGetListsPurposes data;
 
@@ -248,7 +248,7 @@ as KnownGraphGetListsPurposes,
 
 class GraphGetListsPurposesUnknown extends GraphGetListsPurposes {
   const GraphGetListsPurposesUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

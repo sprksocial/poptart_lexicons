@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UFeedPostLabelsSelfLabels extends UFeedPostLabels {
   const UFeedPostLabelsSelfLabels({required this.data}): super._();
-  
+
 
 @override final  SelfLabels data;
 
@@ -239,7 +239,7 @@ as SelfLabels,
 @override
 @pragma('vm:prefer-inline')
 $SelfLabelsCopyWith<$Res> get data {
-  
+
   return $SelfLabelsCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $SelfLabelsCopyWith<$Res> get data {
 
 class UFeedPostLabelsUnknown extends UFeedPostLabels {
   const UFeedPostLabelsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

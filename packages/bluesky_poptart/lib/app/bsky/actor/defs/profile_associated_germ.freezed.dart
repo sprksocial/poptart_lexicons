@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileAssociatedGermShowButtonToCopyWith<$Res> get showButtonTo {
-  
+
   return $ProfileAssociatedGermShowButtonToCopyWith<$Res>(_self.showButtonTo, (value) {
     return _then(_self.copyWith(showButtonTo: value));
   });
@@ -302,7 +302,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileAssociatedGermShowButtonToCopyWith<$Res> get showButtonTo {
-  
+
   return $ProfileAssociatedGermShowButtonToCopyWith<$Res>(_self.showButtonTo, (value) {
     return _then(_self.copyWith(showButtonTo: value));
   });

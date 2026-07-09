@@ -8,6 +8,7 @@ import 'dart:async';
 import 'package:poptart_lex/com/atproto/sync/subscribe_repos.dart';
 import 'package:poptart_core/poptart_core.dart';
 
+import 'package:sprk_poptart/chat/sprk/actor/declaration.dart';
 import 'package:sprk_poptart/so/sprk/actor/profile.dart';
 import 'package:sprk_poptart/so/sprk/feed/generator.dart';
 import 'package:sprk_poptart/so/sprk/feed/like.dart';
@@ -36,6 +37,9 @@ typedef RepoCommitOnUpdate<T> =
 typedef RepoCommitOnDelete = FutureOr<void> Function(RepoCommitDelete data);
 
 final class RepoCommitHandler {
+  final RepoCommitOnCreate<ActorDeclarationRecord>? _onCreateActorDeclaration;
+  final RepoCommitOnUpdate<ActorDeclarationRecord>? _onUpdateActorDeclaration;
+  final RepoCommitOnDelete? _onDeleteActorDeclaration;
   final RepoCommitOnCreate<ActorProfileRecord>? _onCreateActorProfile;
   final RepoCommitOnUpdate<ActorProfileRecord>? _onUpdateActorProfile;
   final RepoCommitOnDelete? _onDeleteActorProfile;
@@ -78,6 +82,9 @@ final class RepoCommitHandler {
   final RepoCommitOnDelete? _onDeleteUnknown;
 
   const RepoCommitHandler({
+    final RepoCommitOnCreate<ActorDeclarationRecord>? onCreateActorDeclaration,
+    final RepoCommitOnUpdate<ActorDeclarationRecord>? onUpdateActorDeclaration,
+    final RepoCommitOnDelete? onDeleteActorDeclaration,
     final RepoCommitOnCreate<ActorProfileRecord>? onCreateActorProfile,
     final RepoCommitOnUpdate<ActorProfileRecord>? onUpdateActorProfile,
     final RepoCommitOnDelete? onDeleteActorProfile,
@@ -118,7 +125,10 @@ final class RepoCommitHandler {
     final RepoCommitOnCreate<Map<String, dynamic>>? onCreateUnknown,
     final RepoCommitOnUpdate<Map<String, dynamic>>? onUpdateUnknown,
     final RepoCommitOnDelete? onDeleteUnknown,
-  }) : _onCreateActorProfile = onCreateActorProfile,
+  }) : _onCreateActorDeclaration = onCreateActorDeclaration,
+       _onUpdateActorDeclaration = onUpdateActorDeclaration,
+       _onDeleteActorDeclaration = onDeleteActorDeclaration,
+       _onCreateActorProfile = onCreateActorProfile,
        _onUpdateActorProfile = onUpdateActorProfile,
        _onDeleteActorProfile = onDeleteActorProfile,
        _onCreateFeedGenerator = onCreateFeedGenerator,
@@ -184,6 +194,18 @@ final class RepoCommitHandler {
     final uri = _getUri(data, op);
     final record = _getRecord(data, op);
 
+    if (uri.isActorDeclaration && ActorDeclarationRecord.validate(record)) {
+      await _onCreateActorDeclaration?.call(
+        RepoCommitCreate<ActorDeclarationRecord>(
+          record: const ActorDeclarationRecordConverter().fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+        ),
+      );
+      return;
+    }
     if (uri.isActorProfile && ActorProfileRecord.validate(record)) {
       await _onCreateActorProfile?.call(
         RepoCommitCreate<ActorProfileRecord>(
@@ -344,6 +366,19 @@ final class RepoCommitHandler {
     final uri = _getUri(data, op);
     final record = _getRecord(data, op);
 
+    if (uri.isActorDeclaration && ActorDeclarationRecord.validate(record)) {
+      await _onUpdateActorDeclaration?.call(
+        RepoCommitUpdate<ActorDeclarationRecord>(
+          record: const ActorDeclarationRecordConverter().fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
     if (uri.isActorProfile && ActorProfileRecord.validate(record)) {
       await _onUpdateActorProfile?.call(
         RepoCommitUpdate<ActorProfileRecord>(
@@ -516,6 +551,17 @@ final class RepoCommitHandler {
   Future<void> _onDelete(final Commit data, final RepoOp op) async {
     final uri = _getUri(data, op);
 
+    if (uri.isActorDeclaration) {
+      await _onDeleteActorDeclaration?.call(
+        RepoCommitDelete(
+          uri: uri,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
     if (uri.isActorProfile) {
       await _onDeleteActorProfile?.call(
         RepoCommitDelete(

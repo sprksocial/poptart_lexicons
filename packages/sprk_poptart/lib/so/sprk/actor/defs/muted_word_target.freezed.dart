@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class MutedWordTargetKnownValue extends MutedWordTarget {
   const MutedWordTargetKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownMutedWordTarget data;
 
@@ -248,7 +248,7 @@ as KnownMutedWordTarget,
 
 class MutedWordTargetUnknown extends MutedWordTarget {
   const MutedWordTargetUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

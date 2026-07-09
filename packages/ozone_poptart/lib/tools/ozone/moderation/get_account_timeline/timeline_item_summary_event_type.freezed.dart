@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class TimelineItemSummaryEventTypeKnownValue extends TimelineItemSummaryEventType {
   const TimelineItemSummaryEventTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownTimelineItemSummaryEventType data;
 
@@ -248,7 +248,7 @@ as KnownTimelineItemSummaryEventType,
 
 class TimelineItemSummaryEventTypeUnknown extends TimelineItemSummaryEventType {
   const TimelineItemSummaryEventTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

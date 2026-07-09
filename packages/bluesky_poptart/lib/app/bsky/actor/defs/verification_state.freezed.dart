@@ -82,7 +82,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $VerificationStateVerifiedStatusCopyWith<$Res> get verifiedStatus {
-  
+
   return $VerificationStateVerifiedStatusCopyWith<$Res>(_self.verifiedStatus, (value) {
     return _then(_self.copyWith(verifiedStatus: value));
   });
@@ -91,7 +91,7 @@ $VerificationStateVerifiedStatusCopyWith<$Res> get verifiedStatus {
 @override
 @pragma('vm:prefer-inline')
 $VerificationStateTrustedVerifierStatusCopyWith<$Res> get trustedVerifierStatus {
-  
+
   return $VerificationStateTrustedVerifierStatusCopyWith<$Res>(_self.trustedVerifierStatus, (value) {
     return _then(_self.copyWith(trustedVerifierStatus: value));
   });
@@ -324,7 +324,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $VerificationStateVerifiedStatusCopyWith<$Res> get verifiedStatus {
-  
+
   return $VerificationStateVerifiedStatusCopyWith<$Res>(_self.verifiedStatus, (value) {
     return _then(_self.copyWith(verifiedStatus: value));
   });
@@ -333,7 +333,7 @@ $VerificationStateVerifiedStatusCopyWith<$Res> get verifiedStatus {
 @override
 @pragma('vm:prefer-inline')
 $VerificationStateTrustedVerifierStatusCopyWith<$Res> get trustedVerifierStatus {
-  
+
   return $VerificationStateTrustedVerifierStatusCopyWith<$Res>(_self.trustedVerifierStatus, (value) {
     return _then(_self.copyWith(trustedVerifierStatus: value));
   });

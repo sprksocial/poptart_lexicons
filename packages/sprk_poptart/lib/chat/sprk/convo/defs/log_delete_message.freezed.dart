@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ULogDeleteMessageMessageCopyWith<$Res> get message {
-  
+
   return $ULogDeleteMessageMessageCopyWith<$Res>(_self.message, (value) {
     return _then(_self.copyWith(message: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ULogDeleteMessageMessageCopyWith<$Res> get message {
-  
+
   return $ULogDeleteMessageMessageCopyWith<$Res>(_self.message, (value) {
     return _then(_self.copyWith(message: value));
   });

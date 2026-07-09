@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UModerationGetReposReposRepoViewDetail extends UModerationGetReposRepos {
   const UModerationGetReposReposRepoViewDetail({required this.data}): super._();
-  
+
 
 @override final  RepoViewDetail data;
 
@@ -245,7 +245,7 @@ as RepoViewDetail,
 @override
 @pragma('vm:prefer-inline')
 $RepoViewDetailCopyWith<$Res> get data {
-  
+
   return $RepoViewDetailCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $RepoViewDetailCopyWith<$Res> get data {
 
 class UModerationGetReposReposRepoViewNotFound extends UModerationGetReposRepos {
   const UModerationGetReposReposRepoViewNotFound({required this.data}): super._();
-  
+
 
 @override final  RepoViewNotFound data;
 
@@ -320,7 +320,7 @@ as RepoViewNotFound,
 @override
 @pragma('vm:prefer-inline')
 $RepoViewNotFoundCopyWith<$Res> get data {
-  
+
   return $RepoViewNotFoundCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $RepoViewNotFoundCopyWith<$Res> get data {
 
 class UModerationGetReposReposUnknown extends UModerationGetReposRepos {
   const UModerationGetReposReposUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

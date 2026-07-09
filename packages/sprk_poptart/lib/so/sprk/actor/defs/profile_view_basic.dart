@@ -10,7 +10,6 @@ import 'package:poptart_core/internals.dart';
 import './profile_associated.dart';
 import './viewer_state.dart';
 import 'package:poptart_lex/com/atproto/label/defs.dart';
-import 'package:poptart_lex/com/atproto/repo/strong_ref.dart';
 
 part 'profile_view_basic.freezed.dart';
 part 'profile_view_basic.g.dart';
@@ -30,7 +29,6 @@ abstract class ProfileViewBasic with _$ProfileViewBasic {
     'viewer',
     'labels',
     'createdAt',
-    'stories',
   ];
 
   @JsonSerializable(includeIfNull: false)
@@ -44,7 +42,6 @@ abstract class ProfileViewBasic with _$ProfileViewBasic {
     @ViewerStateConverter() ViewerState? viewer,
     @LabelConverter() List<Label>? labels,
     DateTime? createdAt,
-    @RepoStrongRefConverter() List<RepoStrongRef>? stories,
 
     Map<String, dynamic>? $unknown,
   }) = _ProfileViewBasic;

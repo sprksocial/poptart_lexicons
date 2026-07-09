@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UCardContentUrlContent extends UCardContent {
   const UCardContentUrlContent({required this.data}): super._();
-  
+
 
 @override final  UrlContent data;
 
@@ -245,7 +245,7 @@ as UrlContent,
 @override
 @pragma('vm:prefer-inline')
 $UrlContentCopyWith<$Res> get data {
-  
+
   return $UrlContentCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $UrlContentCopyWith<$Res> get data {
 
 class UCardContentNoteContent extends UCardContent {
   const UCardContentNoteContent({required this.data}): super._();
-  
+
 
 @override final  NoteContent data;
 
@@ -320,7 +320,7 @@ as NoteContent,
 @override
 @pragma('vm:prefer-inline')
 $NoteContentCopyWith<$Res> get data {
-  
+
   return $NoteContentCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $NoteContentCopyWith<$Res> get data {
 
 class UCardContentUnknown extends UCardContent {
   const UCardContentUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

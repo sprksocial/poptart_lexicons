@@ -320,7 +320,7 @@ return unknown(_that.data);case _:
 
 class UModerationEmitEventEventModEventTakedown extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventTakedown({required this.data}): super._();
-  
+
 
 @override final  ModEventTakedown data;
 
@@ -383,7 +383,7 @@ as ModEventTakedown,
 @override
 @pragma('vm:prefer-inline')
 $ModEventTakedownCopyWith<$Res> get data {
-  
+
   return $ModEventTakedownCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -395,7 +395,7 @@ $ModEventTakedownCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventAcknowledge extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventAcknowledge({required this.data}): super._();
-  
+
 
 @override final  ModEventAcknowledge data;
 
@@ -458,7 +458,7 @@ as ModEventAcknowledge,
 @override
 @pragma('vm:prefer-inline')
 $ModEventAcknowledgeCopyWith<$Res> get data {
-  
+
   return $ModEventAcknowledgeCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -470,7 +470,7 @@ $ModEventAcknowledgeCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventEscalate extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventEscalate({required this.data}): super._();
-  
+
 
 @override final  ModEventEscalate data;
 
@@ -533,7 +533,7 @@ as ModEventEscalate,
 @override
 @pragma('vm:prefer-inline')
 $ModEventEscalateCopyWith<$Res> get data {
-  
+
   return $ModEventEscalateCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -545,7 +545,7 @@ $ModEventEscalateCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventComment extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventComment({required this.data}): super._();
-  
+
 
 @override final  ModEventComment data;
 
@@ -608,7 +608,7 @@ as ModEventComment,
 @override
 @pragma('vm:prefer-inline')
 $ModEventCommentCopyWith<$Res> get data {
-  
+
   return $ModEventCommentCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -620,7 +620,7 @@ $ModEventCommentCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventLabel extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventLabel({required this.data}): super._();
-  
+
 
 @override final  ModEventLabel data;
 
@@ -683,7 +683,7 @@ as ModEventLabel,
 @override
 @pragma('vm:prefer-inline')
 $ModEventLabelCopyWith<$Res> get data {
-  
+
   return $ModEventLabelCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -695,7 +695,7 @@ $ModEventLabelCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventReport extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventReport({required this.data}): super._();
-  
+
 
 @override final  ModEventReport data;
 
@@ -758,7 +758,7 @@ as ModEventReport,
 @override
 @pragma('vm:prefer-inline')
 $ModEventReportCopyWith<$Res> get data {
-  
+
   return $ModEventReportCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -770,7 +770,7 @@ $ModEventReportCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventMute extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventMute({required this.data}): super._();
-  
+
 
 @override final  ModEventMute data;
 
@@ -833,7 +833,7 @@ as ModEventMute,
 @override
 @pragma('vm:prefer-inline')
 $ModEventMuteCopyWith<$Res> get data {
-  
+
   return $ModEventMuteCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -845,7 +845,7 @@ $ModEventMuteCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventUnmute extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventUnmute({required this.data}): super._();
-  
+
 
 @override final  ModEventUnmute data;
 
@@ -908,7 +908,7 @@ as ModEventUnmute,
 @override
 @pragma('vm:prefer-inline')
 $ModEventUnmuteCopyWith<$Res> get data {
-  
+
   return $ModEventUnmuteCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -920,7 +920,7 @@ $ModEventUnmuteCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventMuteReporter extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventMuteReporter({required this.data}): super._();
-  
+
 
 @override final  ModEventMuteReporter data;
 
@@ -983,7 +983,7 @@ as ModEventMuteReporter,
 @override
 @pragma('vm:prefer-inline')
 $ModEventMuteReporterCopyWith<$Res> get data {
-  
+
   return $ModEventMuteReporterCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -995,7 +995,7 @@ $ModEventMuteReporterCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventUnmuteReporter extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventUnmuteReporter({required this.data}): super._();
-  
+
 
 @override final  ModEventUnmuteReporter data;
 
@@ -1058,7 +1058,7 @@ as ModEventUnmuteReporter,
 @override
 @pragma('vm:prefer-inline')
 $ModEventUnmuteReporterCopyWith<$Res> get data {
-  
+
   return $ModEventUnmuteReporterCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1070,7 +1070,7 @@ $ModEventUnmuteReporterCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventReverseTakedown extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventReverseTakedown({required this.data}): super._();
-  
+
 
 @override final  ModEventReverseTakedown data;
 
@@ -1133,7 +1133,7 @@ as ModEventReverseTakedown,
 @override
 @pragma('vm:prefer-inline')
 $ModEventReverseTakedownCopyWith<$Res> get data {
-  
+
   return $ModEventReverseTakedownCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1145,7 +1145,7 @@ $ModEventReverseTakedownCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventResolveAppeal extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventResolveAppeal({required this.data}): super._();
-  
+
 
 @override final  ModEventResolveAppeal data;
 
@@ -1208,7 +1208,7 @@ as ModEventResolveAppeal,
 @override
 @pragma('vm:prefer-inline')
 $ModEventResolveAppealCopyWith<$Res> get data {
-  
+
   return $ModEventResolveAppealCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1220,7 +1220,7 @@ $ModEventResolveAppealCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventEmail extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventEmail({required this.data}): super._();
-  
+
 
 @override final  ModEventEmail data;
 
@@ -1283,7 +1283,7 @@ as ModEventEmail,
 @override
 @pragma('vm:prefer-inline')
 $ModEventEmailCopyWith<$Res> get data {
-  
+
   return $ModEventEmailCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1295,7 +1295,7 @@ $ModEventEmailCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventDivert extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventDivert({required this.data}): super._();
-  
+
 
 @override final  ModEventDivert data;
 
@@ -1358,7 +1358,7 @@ as ModEventDivert,
 @override
 @pragma('vm:prefer-inline')
 $ModEventDivertCopyWith<$Res> get data {
-  
+
   return $ModEventDivertCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1370,7 +1370,7 @@ $ModEventDivertCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventTag extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventTag({required this.data}): super._();
-  
+
 
 @override final  ModEventTag data;
 
@@ -1433,7 +1433,7 @@ as ModEventTag,
 @override
 @pragma('vm:prefer-inline')
 $ModEventTagCopyWith<$Res> get data {
-  
+
   return $ModEventTagCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1445,7 +1445,7 @@ $ModEventTagCopyWith<$Res> get data {
 
 class UModerationEmitEventEventAccountEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventAccountEvent({required this.data}): super._();
-  
+
 
 @override final  AccountEvent data;
 
@@ -1508,7 +1508,7 @@ as AccountEvent,
 @override
 @pragma('vm:prefer-inline')
 $AccountEventCopyWith<$Res> get data {
-  
+
   return $AccountEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1520,7 +1520,7 @@ $AccountEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventIdentityEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventIdentityEvent({required this.data}): super._();
-  
+
 
 @override final  IdentityEvent data;
 
@@ -1583,7 +1583,7 @@ as IdentityEvent,
 @override
 @pragma('vm:prefer-inline')
 $IdentityEventCopyWith<$Res> get data {
-  
+
   return $IdentityEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1595,7 +1595,7 @@ $IdentityEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventRecordEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventRecordEvent({required this.data}): super._();
-  
+
 
 @override final  RecordEvent data;
 
@@ -1658,7 +1658,7 @@ as RecordEvent,
 @override
 @pragma('vm:prefer-inline')
 $RecordEventCopyWith<$Res> get data {
-  
+
   return $RecordEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1670,7 +1670,7 @@ $RecordEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventModEventPriorityScore extends UModerationEmitEventEvent {
   const UModerationEmitEventEventModEventPriorityScore({required this.data}): super._();
-  
+
 
 @override final  ModEventPriorityScore data;
 
@@ -1733,7 +1733,7 @@ as ModEventPriorityScore,
 @override
 @pragma('vm:prefer-inline')
 $ModEventPriorityScoreCopyWith<$Res> get data {
-  
+
   return $ModEventPriorityScoreCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1745,7 +1745,7 @@ $ModEventPriorityScoreCopyWith<$Res> get data {
 
 class UModerationEmitEventEventAgeAssuranceEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventAgeAssuranceEvent({required this.data}): super._();
-  
+
 
 @override final  AgeAssuranceEvent data;
 
@@ -1808,7 +1808,7 @@ as AgeAssuranceEvent,
 @override
 @pragma('vm:prefer-inline')
 $AgeAssuranceEventCopyWith<$Res> get data {
-  
+
   return $AgeAssuranceEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1820,7 +1820,7 @@ $AgeAssuranceEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventAgeAssuranceOverrideEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventAgeAssuranceOverrideEvent({required this.data}): super._();
-  
+
 
 @override final  AgeAssuranceOverrideEvent data;
 
@@ -1883,7 +1883,7 @@ as AgeAssuranceOverrideEvent,
 @override
 @pragma('vm:prefer-inline')
 $AgeAssuranceOverrideEventCopyWith<$Res> get data {
-  
+
   return $AgeAssuranceOverrideEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1895,7 +1895,7 @@ $AgeAssuranceOverrideEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventAgeAssurancePurgeEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventAgeAssurancePurgeEvent({required this.data}): super._();
-  
+
 
 @override final  AgeAssurancePurgeEvent data;
 
@@ -1958,7 +1958,7 @@ as AgeAssurancePurgeEvent,
 @override
 @pragma('vm:prefer-inline')
 $AgeAssurancePurgeEventCopyWith<$Res> get data {
-  
+
   return $AgeAssurancePurgeEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1970,7 +1970,7 @@ $AgeAssurancePurgeEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventRevokeAccountCredentialsEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventRevokeAccountCredentialsEvent({required this.data}): super._();
-  
+
 
 @override final  RevokeAccountCredentialsEvent data;
 
@@ -2033,7 +2033,7 @@ as RevokeAccountCredentialsEvent,
 @override
 @pragma('vm:prefer-inline')
 $RevokeAccountCredentialsEventCopyWith<$Res> get data {
-  
+
   return $RevokeAccountCredentialsEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -2045,7 +2045,7 @@ $RevokeAccountCredentialsEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventScheduleTakedownEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventScheduleTakedownEvent({required this.data}): super._();
-  
+
 
 @override final  ScheduleTakedownEvent data;
 
@@ -2108,7 +2108,7 @@ as ScheduleTakedownEvent,
 @override
 @pragma('vm:prefer-inline')
 $ScheduleTakedownEventCopyWith<$Res> get data {
-  
+
   return $ScheduleTakedownEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -2120,7 +2120,7 @@ $ScheduleTakedownEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventCancelScheduledTakedownEvent extends UModerationEmitEventEvent {
   const UModerationEmitEventEventCancelScheduledTakedownEvent({required this.data}): super._();
-  
+
 
 @override final  CancelScheduledTakedownEvent data;
 
@@ -2183,7 +2183,7 @@ as CancelScheduledTakedownEvent,
 @override
 @pragma('vm:prefer-inline')
 $CancelScheduledTakedownEventCopyWith<$Res> get data {
-  
+
   return $CancelScheduledTakedownEventCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -2195,7 +2195,7 @@ $CancelScheduledTakedownEventCopyWith<$Res> get data {
 
 class UModerationEmitEventEventUnknown extends UModerationEmitEventEvent {
   const UModerationEmitEventEventUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

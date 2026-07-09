@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UEmbedRecordViewRecordCopyWith<$Res> get record {
-  
+
   return $UEmbedRecordViewRecordCopyWith<$Res>(_self.record, (value) {
     return _then(_self.copyWith(record: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UEmbedRecordViewRecordCopyWith<$Res> get record {
-  
+
   return $UEmbedRecordViewRecordCopyWith<$Res>(_self.record, (value) {
     return _then(_self.copyWith(record: value));
   });

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class GroupRequestJoinStatusKnownValue extends GroupRequestJoinStatus {
   const GroupRequestJoinStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownGroupRequestJoinStatus data;
 
@@ -248,7 +248,7 @@ as KnownGroupRequestJoinStatus,
 
 class GroupRequestJoinStatusUnknown extends GroupRequestJoinStatus {
   const GroupRequestJoinStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -84,7 +84,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UModEventViewDetailEventCopyWith<$Res> get event {
-  
+
   return $UModEventViewDetailEventCopyWith<$Res>(_self.event, (value) {
     return _then(_self.copyWith(event: value));
   });
@@ -93,7 +93,7 @@ $UModEventViewDetailEventCopyWith<$Res> get event {
 @override
 @pragma('vm:prefer-inline')
 $UModEventViewDetailSubjectCopyWith<$Res> get subject {
-  
+
   return $UModEventViewDetailSubjectCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -344,7 +344,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UModEventViewDetailEventCopyWith<$Res> get event {
-  
+
   return $UModEventViewDetailEventCopyWith<$Res>(_self.event, (value) {
     return _then(_self.copyWith(event: value));
   });
@@ -353,7 +353,7 @@ $UModEventViewDetailEventCopyWith<$Res> get event {
 @override
 @pragma('vm:prefer-inline')
 $UModEventViewDetailSubjectCopyWith<$Res> get subject {
-  
+
   return $UModEventViewDetailSubjectCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });

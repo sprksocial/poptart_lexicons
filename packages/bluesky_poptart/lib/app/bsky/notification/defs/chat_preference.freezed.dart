@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ChatPreferenceIncludeCopyWith<$Res> get include {
-  
+
   return $ChatPreferenceIncludeCopyWith<$Res>(_self.include, (value) {
     return _then(_self.copyWith(include: value));
   });
@@ -302,7 +302,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ChatPreferenceIncludeCopyWith<$Res> get include {
-  
+
   return $ChatPreferenceIncludeCopyWith<$Res>(_self.include, (value) {
     return _then(_self.copyWith(include: value));
   });

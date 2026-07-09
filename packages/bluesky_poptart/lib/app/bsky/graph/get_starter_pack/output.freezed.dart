@@ -77,7 +77,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $StarterPackViewCopyWith<$Res> get starterPack {
-  
+
   return $StarterPackViewCopyWith<$Res>(_self.starterPack, (value) {
     return _then(_self.copyWith(starterPack: value));
   });
@@ -296,7 +296,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $StarterPackViewCopyWith<$Res> get starterPack {
-  
+
   return $StarterPackViewCopyWith<$Res>(_self.starterPack, (value) {
     return _then(_self.copyWith(starterPack: value));
   });

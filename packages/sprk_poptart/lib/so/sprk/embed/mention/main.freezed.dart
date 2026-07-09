@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PlacementCopyWith<$Res> get placement {
-  
+
   return $PlacementCopyWith<$Res>(_self.placement, (value) {
     return _then(_self.copyWith(placement: value));
   });
@@ -302,7 +302,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PlacementCopyWith<$Res> get placement {
-  
+
   return $PlacementCopyWith<$Res>(_self.placement, (value) {
     return _then(_self.copyWith(placement: value));
   });

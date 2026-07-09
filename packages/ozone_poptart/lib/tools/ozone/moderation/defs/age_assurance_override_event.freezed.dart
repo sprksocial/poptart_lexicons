@@ -82,7 +82,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $AgeAssuranceOverrideEventStatusCopyWith<$Res> get status {
-  
+
   return $AgeAssuranceOverrideEventStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -321,7 +321,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $AgeAssuranceOverrideEventStatusCopyWith<$Res> get status {
-  
+
   return $AgeAssuranceOverrideEventStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });

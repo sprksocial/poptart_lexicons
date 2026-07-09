@@ -83,7 +83,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UStoryPostMediaCopyWith<$Res> get media {
-  
+
   return $UStoryPostMediaCopyWith<$Res>(_self.media, (value) {
     return _then(_self.copyWith(media: value));
   });
@@ -345,7 +345,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UStoryPostMediaCopyWith<$Res> get media {
-  
+
   return $UStoryPostMediaCopyWith<$Res>(_self.media, (value) {
     return _then(_self.copyWith(media: value));
   });

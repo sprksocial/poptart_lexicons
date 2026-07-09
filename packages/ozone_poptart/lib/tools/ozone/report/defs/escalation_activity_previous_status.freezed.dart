@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EscalationActivityPreviousStatusKnownValue extends EscalationActivityPreviousStatus {
   const EscalationActivityPreviousStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEscalationActivityPreviousStatus data;
 
@@ -248,7 +248,7 @@ as KnownEscalationActivityPreviousStatus,
 
 class EscalationActivityPreviousStatusUnknown extends EscalationActivityPreviousStatus {
   const EscalationActivityPreviousStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

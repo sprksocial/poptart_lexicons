@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SkeletonTrendStatusKnownValue extends SkeletonTrendStatus {
   const SkeletonTrendStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownSkeletonTrendStatus data;
 
@@ -248,7 +248,7 @@ as KnownSkeletonTrendStatus,
 
 class SkeletonTrendStatusUnknown extends SkeletonTrendStatus {
   const SkeletonTrendStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

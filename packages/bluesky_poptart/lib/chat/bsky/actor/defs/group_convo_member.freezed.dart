@@ -93,7 +93,7 @@ $ProfileViewBasicCopyWith<$Res>? get addedBy {
 @override
 @pragma('vm:prefer-inline')
 $MemberRoleCopyWith<$Res> get role {
-  
+
   return $MemberRoleCopyWith<$Res>(_self.role, (value) {
     return _then(_self.copyWith(role: value));
   });
@@ -330,7 +330,7 @@ $ProfileViewBasicCopyWith<$Res>? get addedBy {
 @override
 @pragma('vm:prefer-inline')
 $MemberRoleCopyWith<$Res> get role {
-  
+
   return $MemberRoleCopyWith<$Res>(_self.role, (value) {
     return _then(_self.copyWith(role: value));
   });

@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SubjectRefCopyWith<$Res> get subject {
-  
+
   return $SubjectRefCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -304,7 +304,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SubjectRefCopyWith<$Res> get subject {
-  
+
   return $SubjectRefCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });

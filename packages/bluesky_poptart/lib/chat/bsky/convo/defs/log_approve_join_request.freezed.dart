@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get member {
-  
+
   return $ProfileViewBasicCopyWith<$Res>(_self.member, (value) {
     return _then(_self.copyWith(member: value));
   });
@@ -307,7 +307,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get member {
-  
+
   return $ProfileViewBasicCopyWith<$Res>(_self.member, (value) {
     return _then(_self.copyWith(member: value));
   });

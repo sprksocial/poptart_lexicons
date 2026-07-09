@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FeedSearchPostsSortKnownValue extends FeedSearchPostsSort {
   const FeedSearchPostsSortKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownFeedSearchPostsSort data;
 
@@ -248,7 +248,7 @@ as KnownFeedSearchPostsSort,
 
 class FeedSearchPostsSortUnknown extends FeedSearchPostsSort {
   const FeedSearchPostsSortUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

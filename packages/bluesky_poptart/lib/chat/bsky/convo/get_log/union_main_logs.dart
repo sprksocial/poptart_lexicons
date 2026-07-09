@@ -32,6 +32,9 @@ import '../defs/log_incoming_join_request.dart';
 import '../defs/log_approve_join_request.dart';
 import '../defs/log_reject_join_request.dart';
 import '../defs/log_outgoing_join_request.dart';
+import '../defs/log_withdraw_incoming_join_request.dart';
+import '../defs/log_withdraw_outgoing_join_request.dart';
+import '../defs/log_read_join_requests.dart';
 
 part 'union_main_logs.freezed.dart';
 
@@ -113,6 +116,15 @@ sealed class UConvoGetLogLogs with _$UConvoGetLogLogs {
   const factory UConvoGetLogLogs.logOutgoingJoinRequest({
     required LogOutgoingJoinRequest data,
   }) = UConvoGetLogLogsLogOutgoingJoinRequest;
+  const factory UConvoGetLogLogs.logWithdrawIncomingJoinRequest({
+    required LogWithdrawIncomingJoinRequest data,
+  }) = UConvoGetLogLogsLogWithdrawIncomingJoinRequest;
+  const factory UConvoGetLogLogs.logWithdrawOutgoingJoinRequest({
+    required LogWithdrawOutgoingJoinRequest data,
+  }) = UConvoGetLogLogsLogWithdrawOutgoingJoinRequest;
+  const factory UConvoGetLogLogs.logReadJoinRequests({
+    required LogReadJoinRequests data,
+  }) = UConvoGetLogLogsLogReadJoinRequests;
 
   const factory UConvoGetLogLogs.unknown({required Map<String, dynamic> data}) =
       UConvoGetLogLogsUnknown;
@@ -232,6 +244,27 @@ extension UConvoGetLogLogsExtension on UConvoGetLogLogs {
   bool get isNotLogOutgoingJoinRequest => !isLogOutgoingJoinRequest;
   LogOutgoingJoinRequest? get logOutgoingJoinRequest =>
       isLogOutgoingJoinRequest ? data as LogOutgoingJoinRequest : null;
+  bool get isLogWithdrawIncomingJoinRequest =>
+      isA<UConvoGetLogLogsLogWithdrawIncomingJoinRequest>(this);
+  bool get isNotLogWithdrawIncomingJoinRequest =>
+      !isLogWithdrawIncomingJoinRequest;
+  LogWithdrawIncomingJoinRequest? get logWithdrawIncomingJoinRequest =>
+      isLogWithdrawIncomingJoinRequest
+      ? data as LogWithdrawIncomingJoinRequest
+      : null;
+  bool get isLogWithdrawOutgoingJoinRequest =>
+      isA<UConvoGetLogLogsLogWithdrawOutgoingJoinRequest>(this);
+  bool get isNotLogWithdrawOutgoingJoinRequest =>
+      !isLogWithdrawOutgoingJoinRequest;
+  LogWithdrawOutgoingJoinRequest? get logWithdrawOutgoingJoinRequest =>
+      isLogWithdrawOutgoingJoinRequest
+      ? data as LogWithdrawOutgoingJoinRequest
+      : null;
+  bool get isLogReadJoinRequests =>
+      isA<UConvoGetLogLogsLogReadJoinRequests>(this);
+  bool get isNotLogReadJoinRequests => !isLogReadJoinRequests;
+  LogReadJoinRequests? get logReadJoinRequests =>
+      isLogReadJoinRequests ? data as LogReadJoinRequests : null;
   bool get isUnknown => isA<UConvoGetLogLogsUnknown>(this);
   bool get isNotUnknown => !isUnknown;
   Map<String, dynamic>? get unknown =>
@@ -375,6 +408,21 @@ final class UConvoGetLogLogsConverter
           data: const LogOutgoingJoinRequestConverter().fromJson(json),
         );
       }
+      if (LogWithdrawIncomingJoinRequest.validate(json)) {
+        return UConvoGetLogLogs.logWithdrawIncomingJoinRequest(
+          data: const LogWithdrawIncomingJoinRequestConverter().fromJson(json),
+        );
+      }
+      if (LogWithdrawOutgoingJoinRequest.validate(json)) {
+        return UConvoGetLogLogs.logWithdrawOutgoingJoinRequest(
+          data: const LogWithdrawOutgoingJoinRequestConverter().fromJson(json),
+        );
+      }
+      if (LogReadJoinRequests.validate(json)) {
+        return UConvoGetLogLogs.logReadJoinRequests(
+          data: const LogReadJoinRequestsConverter().fromJson(json),
+        );
+      }
 
       return UConvoGetLogLogs.unknown(data: json);
     } catch (_) {
@@ -419,6 +467,12 @@ final class UConvoGetLogLogsConverter
         const LogRejectJoinRequestConverter().toJson(data),
     logOutgoingJoinRequest: (data) =>
         const LogOutgoingJoinRequestConverter().toJson(data),
+    logWithdrawIncomingJoinRequest: (data) =>
+        const LogWithdrawIncomingJoinRequestConverter().toJson(data),
+    logWithdrawOutgoingJoinRequest: (data) =>
+        const LogWithdrawOutgoingJoinRequestConverter().toJson(data),
+    logReadJoinRequests: (data) =>
+        const LogReadJoinRequestsConverter().toJson(data),
 
     unknown: (data) => data,
   );

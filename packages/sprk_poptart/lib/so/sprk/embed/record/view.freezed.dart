@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PlacementCopyWith<$Res> get placement {
-  
+
   return $PlacementCopyWith<$Res>(_self.placement, (value) {
     return _then(_self.copyWith(placement: value));
   });
@@ -88,7 +88,7 @@ $PlacementCopyWith<$Res> get placement {
 @override
 @pragma('vm:prefer-inline')
 $UEmbedRecordViewPostCopyWith<$Res> get post {
-  
+
   return $UEmbedRecordViewPostCopyWith<$Res>(_self.post, (value) {
     return _then(_self.copyWith(post: value));
   });
@@ -311,7 +311,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PlacementCopyWith<$Res> get placement {
-  
+
   return $PlacementCopyWith<$Res>(_self.placement, (value) {
     return _then(_self.copyWith(placement: value));
   });
@@ -320,7 +320,7 @@ $PlacementCopyWith<$Res> get placement {
 @override
 @pragma('vm:prefer-inline')
 $UEmbedRecordViewPostCopyWith<$Res> get post {
-  
+
   return $UEmbedRecordViewPostCopyWith<$Res>(_self.post, (value) {
     return _then(_self.copyWith(post: value));
   });

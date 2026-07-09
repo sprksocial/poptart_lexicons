@@ -194,7 +194,7 @@ return unknown(_that.data);case _:
 
 class UReplyRefParentPostView extends UReplyRefParent {
   const UReplyRefParentPostView({required this.data}): super._();
-  
+
 
 @override final  PostView data;
 
@@ -257,7 +257,7 @@ as PostView,
 @override
 @pragma('vm:prefer-inline')
 $PostViewCopyWith<$Res> get data {
-  
+
   return $PostViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -269,7 +269,7 @@ $PostViewCopyWith<$Res> get data {
 
 class UReplyRefParentReplyView extends UReplyRefParent {
   const UReplyRefParentReplyView({required this.data}): super._();
-  
+
 
 @override final  ReplyView data;
 
@@ -332,7 +332,7 @@ as ReplyView,
 @override
 @pragma('vm:prefer-inline')
 $ReplyViewCopyWith<$Res> get data {
-  
+
   return $ReplyViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -344,7 +344,7 @@ $ReplyViewCopyWith<$Res> get data {
 
 class UReplyRefParentNotFoundPost extends UReplyRefParent {
   const UReplyRefParentNotFoundPost({required this.data}): super._();
-  
+
 
 @override final  NotFoundPost data;
 
@@ -407,7 +407,7 @@ as NotFoundPost,
 @override
 @pragma('vm:prefer-inline')
 $NotFoundPostCopyWith<$Res> get data {
-  
+
   return $NotFoundPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -419,7 +419,7 @@ $NotFoundPostCopyWith<$Res> get data {
 
 class UReplyRefParentBlockedPost extends UReplyRefParent {
   const UReplyRefParentBlockedPost({required this.data}): super._();
-  
+
 
 @override final  BlockedPost data;
 
@@ -482,7 +482,7 @@ as BlockedPost,
 @override
 @pragma('vm:prefer-inline')
 $BlockedPostCopyWith<$Res> get data {
-  
+
   return $BlockedPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -494,7 +494,7 @@ $BlockedPostCopyWith<$Res> get data {
 
 class UReplyRefParentUnknown extends UReplyRefParent {
   const UReplyRefParentUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -96,7 +96,7 @@ $MemberCopyWith<$Res>? get moderator {
 @override
 @pragma('vm:prefer-inline')
 $QueueViewCopyWith<$Res> get queue {
-  
+
   return $QueueViewCopyWith<$Res>(_self.queue, (value) {
     return _then(_self.copyWith(queue: value));
   });
@@ -340,7 +340,7 @@ $MemberCopyWith<$Res>? get moderator {
 @override
 @pragma('vm:prefer-inline')
 $QueueViewCopyWith<$Res> get queue {
-  
+
   return $QueueViewCopyWith<$Res>(_self.queue, (value) {
     return _then(_self.copyWith(queue: value));
   });

@@ -83,7 +83,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LabelerPoliciesCopyWith<$Res> get policies {
-  
+
   return $LabelerPoliciesCopyWith<$Res>(_self.policies, (value) {
     return _then(_self.copyWith(policies: value));
   });
@@ -350,7 +350,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LabelerPoliciesCopyWith<$Res> get policies {
-  
+
   return $LabelerPoliciesCopyWith<$Res>(_self.policies, (value) {
     return _then(_self.copyWith(policies: value));
   });

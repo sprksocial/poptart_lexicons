@@ -21,6 +21,8 @@ import 'package:bluesky_poptart/chat/bsky/convo/get_log.dart'
     as _ChatBskyConvoGetLog;
 import 'package:bluesky_poptart/chat/bsky/convo/get_messages.dart'
     as _ChatBskyConvoGetMessages;
+import 'package:bluesky_poptart/chat/bsky/convo/get_unread_counts.dart'
+    as _ChatBskyConvoGetUnreadCounts;
 import 'package:bluesky_poptart/chat/bsky/convo/leave_convo.dart'
     as _ChatBskyConvoLeaveConvo;
 import 'package:bluesky_poptart/chat/bsky/convo/list_convo_requests.dart'
@@ -84,6 +86,10 @@ final chatBskyConvoGetMessages =
     _ChatBskyConvoGetMessages.chatBskyConvoGetMessages;
 final chatBskyConvoGetMessagesMethodDescriptor =
     _ChatBskyConvoGetMessages.methodDescriptor;
+final chatBskyConvoGetUnreadCounts =
+    _ChatBskyConvoGetUnreadCounts.chatBskyConvoGetUnreadCounts;
+final chatBskyConvoGetUnreadCountsMethodDescriptor =
+    _ChatBskyConvoGetUnreadCounts.methodDescriptor;
 final chatBskyConvoLeaveConvo =
     _ChatBskyConvoLeaveConvo.chatBskyConvoLeaveConvo;
 final chatBskyConvoLeaveConvoMethodDescriptor =

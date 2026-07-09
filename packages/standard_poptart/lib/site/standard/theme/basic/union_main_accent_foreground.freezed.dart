@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UThemeBasicAccentForegroundRgb extends UThemeBasicAccentForeground {
   const UThemeBasicAccentForegroundRgb({required this.data}): super._();
-  
+
 
 @override final  Rgb data;
 
@@ -239,7 +239,7 @@ as Rgb,
 @override
 @pragma('vm:prefer-inline')
 $RgbCopyWith<$Res> get data {
-  
+
   return $RgbCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $RgbCopyWith<$Res> get data {
 
 class UThemeBasicAccentForegroundUnknown extends UThemeBasicAccentForeground {
   const UThemeBasicAccentForegroundUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

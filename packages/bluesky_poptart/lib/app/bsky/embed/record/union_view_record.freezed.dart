@@ -218,7 +218,7 @@ return unknown(_that.data);case _:
 
 class UEmbedRecordViewRecordEmbedRecordViewRecord extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordEmbedRecordViewRecord({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordViewRecord data;
 
@@ -281,7 +281,7 @@ as EmbedRecordViewRecord,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewRecordCopyWith<$Res> get data {
-  
+
   return $EmbedRecordViewRecordCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -293,7 +293,7 @@ $EmbedRecordViewRecordCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedRecordViewNotFound extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordEmbedRecordViewNotFound({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordViewNotFound data;
 
@@ -356,7 +356,7 @@ as EmbedRecordViewNotFound,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewNotFoundCopyWith<$Res> get data {
-  
+
   return $EmbedRecordViewNotFoundCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -368,7 +368,7 @@ $EmbedRecordViewNotFoundCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedRecordViewBlocked extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordEmbedRecordViewBlocked({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordViewBlocked data;
 
@@ -431,7 +431,7 @@ as EmbedRecordViewBlocked,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewBlockedCopyWith<$Res> get data {
-  
+
   return $EmbedRecordViewBlockedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -443,7 +443,7 @@ $EmbedRecordViewBlockedCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedRecordViewDetached extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordEmbedRecordViewDetached({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordViewDetached data;
 
@@ -506,7 +506,7 @@ as EmbedRecordViewDetached,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewDetachedCopyWith<$Res> get data {
-  
+
   return $EmbedRecordViewDetachedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -518,7 +518,7 @@ $EmbedRecordViewDetachedCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordGeneratorView extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordGeneratorView({required this.data}): super._();
-  
+
 
 @override final  GeneratorView data;
 
@@ -581,7 +581,7 @@ as GeneratorView,
 @override
 @pragma('vm:prefer-inline')
 $GeneratorViewCopyWith<$Res> get data {
-  
+
   return $GeneratorViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -593,7 +593,7 @@ $GeneratorViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordListView extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordListView({required this.data}): super._();
-  
+
 
 @override final  ListView data;
 
@@ -656,7 +656,7 @@ as ListView,
 @override
 @pragma('vm:prefer-inline')
 $ListViewCopyWith<$Res> get data {
-  
+
   return $ListViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -668,7 +668,7 @@ $ListViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordLabelerView extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordLabelerView({required this.data}): super._();
-  
+
 
 @override final  LabelerView data;
 
@@ -731,7 +731,7 @@ as LabelerView,
 @override
 @pragma('vm:prefer-inline')
 $LabelerViewCopyWith<$Res> get data {
-  
+
   return $LabelerViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -743,7 +743,7 @@ $LabelerViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordStarterPackViewBasic extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordStarterPackViewBasic({required this.data}): super._();
-  
+
 
 @override final  StarterPackViewBasic data;
 
@@ -806,7 +806,7 @@ as StarterPackViewBasic,
 @override
 @pragma('vm:prefer-inline')
 $StarterPackViewBasicCopyWith<$Res> get data {
-  
+
   return $StarterPackViewBasicCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -818,7 +818,7 @@ $StarterPackViewBasicCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordUnknown extends UEmbedRecordViewRecord {
   const UEmbedRecordViewRecordUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

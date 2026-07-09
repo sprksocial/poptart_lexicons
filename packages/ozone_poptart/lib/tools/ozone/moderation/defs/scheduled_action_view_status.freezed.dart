@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ScheduledActionViewStatusKnownValue extends ScheduledActionViewStatus {
   const ScheduledActionViewStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownScheduledActionViewStatus data;
 
@@ -248,7 +248,7 @@ as KnownScheduledActionViewStatus,
 
 class ScheduledActionViewStatusUnknown extends ScheduledActionViewStatus {
   const ScheduledActionViewStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

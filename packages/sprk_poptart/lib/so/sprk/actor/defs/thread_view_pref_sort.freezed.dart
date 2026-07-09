@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ThreadViewPrefSortKnownValue extends ThreadViewPrefSort {
   const ThreadViewPrefSortKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownThreadViewPrefSort data;
 
@@ -248,7 +248,7 @@ as KnownThreadViewPrefSort,
 
 class ThreadViewPrefSortUnknown extends ThreadViewPrefSort {
   const ThreadViewPrefSortUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

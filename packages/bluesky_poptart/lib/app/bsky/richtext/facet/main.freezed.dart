@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RichtextFacetByteSliceCopyWith<$Res> get index {
-  
+
   return $RichtextFacetByteSliceCopyWith<$Res>(_self.index, (value) {
     return _then(_self.copyWith(index: value));
   });
@@ -308,7 +308,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RichtextFacetByteSliceCopyWith<$Res> get index {
-  
+
   return $RichtextFacetByteSliceCopyWith<$Res>(_self.index, (value) {
     return _then(_self.copyWith(index: value));
   });

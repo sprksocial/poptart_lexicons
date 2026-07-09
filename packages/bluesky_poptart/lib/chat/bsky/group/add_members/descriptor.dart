@@ -30,13 +30,14 @@ final methodDescriptor =
       errors: const [
         'AccountSuspended',
         'BlockedActor',
-        'UserForbidsGroups',
+        'BlockedSubject',
         'ConvoLocked',
         'InsufficientRole',
         'InvalidConvo',
         'MemberLimitReached',
         'NotFollowedBySender',
         'RecipientNotFound',
+        'UserForbidsGroups',
       ],
     );
 

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class OptionScopeKnownValue extends OptionScope {
   const OptionScopeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownOptionScope data;
 
@@ -248,7 +248,7 @@ as KnownOptionScope,
 
 class OptionScopeUnknown extends OptionScope {
   const OptionScopeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

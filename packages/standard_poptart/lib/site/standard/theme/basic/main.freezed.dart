@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicBackgroundCopyWith<$Res> get background {
-  
+
   return $UThemeBasicBackgroundCopyWith<$Res>(_self.background, (value) {
     return _then(_self.copyWith(background: value));
   });
@@ -90,7 +90,7 @@ $UThemeBasicBackgroundCopyWith<$Res> get background {
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicForegroundCopyWith<$Res> get foreground {
-  
+
   return $UThemeBasicForegroundCopyWith<$Res>(_self.foreground, (value) {
     return _then(_self.copyWith(foreground: value));
   });
@@ -99,7 +99,7 @@ $UThemeBasicForegroundCopyWith<$Res> get foreground {
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicAccentCopyWith<$Res> get accent {
-  
+
   return $UThemeBasicAccentCopyWith<$Res>(_self.accent, (value) {
     return _then(_self.copyWith(accent: value));
   });
@@ -108,7 +108,7 @@ $UThemeBasicAccentCopyWith<$Res> get accent {
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicAccentForegroundCopyWith<$Res> get accentForeground {
-  
+
   return $UThemeBasicAccentForegroundCopyWith<$Res>(_self.accentForeground, (value) {
     return _then(_self.copyWith(accentForeground: value));
   });
@@ -335,7 +335,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicBackgroundCopyWith<$Res> get background {
-  
+
   return $UThemeBasicBackgroundCopyWith<$Res>(_self.background, (value) {
     return _then(_self.copyWith(background: value));
   });
@@ -344,7 +344,7 @@ $UThemeBasicBackgroundCopyWith<$Res> get background {
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicForegroundCopyWith<$Res> get foreground {
-  
+
   return $UThemeBasicForegroundCopyWith<$Res>(_self.foreground, (value) {
     return _then(_self.copyWith(foreground: value));
   });
@@ -353,7 +353,7 @@ $UThemeBasicForegroundCopyWith<$Res> get foreground {
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicAccentCopyWith<$Res> get accent {
-  
+
   return $UThemeBasicAccentCopyWith<$Res>(_self.accent, (value) {
     return _then(_self.copyWith(accent: value));
   });
@@ -362,7 +362,7 @@ $UThemeBasicAccentCopyWith<$Res> get accent {
 @override
 @pragma('vm:prefer-inline')
 $UThemeBasicAccentForegroundCopyWith<$Res> get accentForeground {
-  
+
   return $UThemeBasicAccentForegroundCopyWith<$Res>(_self.accentForeground, (value) {
     return _then(_self.copyWith(accentForeground: value));
   });

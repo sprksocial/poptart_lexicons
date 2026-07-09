@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UReplyViewMediaMediaImageView extends UReplyViewMedia {
   const UReplyViewMediaMediaImageView({required this.data}): super._();
-  
+
 
 @override final  MediaImageView data;
 
@@ -239,7 +239,7 @@ as MediaImageView,
 @override
 @pragma('vm:prefer-inline')
 $MediaImageViewCopyWith<$Res> get data {
-  
+
   return $MediaImageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $MediaImageViewCopyWith<$Res> get data {
 
 class UReplyViewMediaUnknown extends UReplyViewMedia {
   const UReplyViewMediaUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

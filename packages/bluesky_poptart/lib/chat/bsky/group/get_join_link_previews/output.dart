@@ -1,0 +1,51 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:poptart_core/poptart_core.dart';
+import 'package:poptart_core/internals.dart';
+
+import './union_main_join_link_previews.dart';
+
+part 'output.freezed.dart';
+part 'output.g.dart';
+
+// **************************************************************************
+// LexGenerator
+// **************************************************************************
+
+@freezed
+abstract class GroupGetJoinLinkPreviewsOutput
+    with _$GroupGetJoinLinkPreviewsOutput {
+  static const knownProps = <String>['joinLinkPreviews'];
+
+  @JsonSerializable(includeIfNull: false)
+  const factory GroupGetJoinLinkPreviewsOutput({
+    @UGroupGetJoinLinkPreviewsJoinLinkPreviewsConverter()
+    required List<UGroupGetJoinLinkPreviewsJoinLinkPreviews> joinLinkPreviews,
+
+    Map<String, dynamic>? $unknown,
+  }) = _GroupGetJoinLinkPreviewsOutput;
+
+  factory GroupGetJoinLinkPreviewsOutput.fromJson(Map<String, Object?> json) =>
+      _$GroupGetJoinLinkPreviewsOutputFromJson(json);
+}
+
+final class GroupGetJoinLinkPreviewsOutputConverter
+    extends
+        JsonConverter<GroupGetJoinLinkPreviewsOutput, Map<String, dynamic>> {
+  const GroupGetJoinLinkPreviewsOutputConverter();
+
+  @override
+  GroupGetJoinLinkPreviewsOutput fromJson(Map<String, dynamic> json) {
+    return GroupGetJoinLinkPreviewsOutput.fromJson(
+      translate(json, GroupGetJoinLinkPreviewsOutput.knownProps),
+    );
+  }
+
+  @override
+  Map<String, dynamic> toJson(GroupGetJoinLinkPreviewsOutput object) =>
+      untranslate(object.toJson());
+}

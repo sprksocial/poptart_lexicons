@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ListPurposeKnownValue extends ListPurpose {
   const ListPurposeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownListPurpose data;
 
@@ -248,7 +248,7 @@ as KnownListPurpose,
 
 class ListPurposeUnknown extends ListPurpose {
   const ListPurposeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

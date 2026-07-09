@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UReplyRefRootPostView extends UReplyRefRoot {
   const UReplyRefRootPostView({required this.data}): super._();
-  
+
 
 @override final  PostView data;
 
@@ -251,7 +251,7 @@ as PostView,
 @override
 @pragma('vm:prefer-inline')
 $PostViewCopyWith<$Res> get data {
-  
+
   return $PostViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $PostViewCopyWith<$Res> get data {
 
 class UReplyRefRootNotFoundPost extends UReplyRefRoot {
   const UReplyRefRootNotFoundPost({required this.data}): super._();
-  
+
 
 @override final  NotFoundPost data;
 
@@ -326,7 +326,7 @@ as NotFoundPost,
 @override
 @pragma('vm:prefer-inline')
 $NotFoundPostCopyWith<$Res> get data {
-  
+
   return $NotFoundPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $NotFoundPostCopyWith<$Res> get data {
 
 class UReplyRefRootBlockedPost extends UReplyRefRoot {
   const UReplyRefRootBlockedPost({required this.data}): super._();
-  
+
 
 @override final  BlockedPost data;
 
@@ -401,7 +401,7 @@ as BlockedPost,
 @override
 @pragma('vm:prefer-inline')
 $BlockedPostCopyWith<$Res> get data {
-  
+
   return $BlockedPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $BlockedPostCopyWith<$Res> get data {
 
 class UReplyRefRootUnknown extends UReplyRefRoot {
   const UReplyRefRootUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get record {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.record, (value) {
     return _then(_self.copyWith(record: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get record {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.record, (value) {
     return _then(_self.copyWith(record: value));
   });

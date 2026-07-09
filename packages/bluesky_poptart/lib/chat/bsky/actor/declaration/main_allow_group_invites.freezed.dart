@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ActorDeclarationAllowGroupInvitesKnownValue extends ActorDeclarationAllowGroupInvites {
   const ActorDeclarationAllowGroupInvitesKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownActorDeclarationAllowGroupInvites data;
 
@@ -248,7 +248,7 @@ as KnownActorDeclarationAllowGroupInvites,
 
 class ActorDeclarationAllowGroupInvitesUnknown extends ActorDeclarationAllowGroupInvites {
   const ActorDeclarationAllowGroupInvitesUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

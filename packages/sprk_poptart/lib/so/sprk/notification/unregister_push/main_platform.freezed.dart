@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class NotificationUnregisterPushPlatformKnownValue extends NotificationUnregisterPushPlatform {
   const NotificationUnregisterPushPlatformKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownNotificationUnregisterPushPlatform data;
 
@@ -248,7 +248,7 @@ as KnownNotificationUnregisterPushPlatform,
 
 class NotificationUnregisterPushPlatformUnknown extends NotificationUnregisterPushPlatform {
   const NotificationUnregisterPushPlatformUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

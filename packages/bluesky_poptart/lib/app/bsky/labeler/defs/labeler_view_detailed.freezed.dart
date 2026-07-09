@@ -88,7 +88,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get creator {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.creator, (value) {
     return _then(_self.copyWith(creator: value));
   });
@@ -97,7 +97,7 @@ $ProfileViewCopyWith<$Res> get creator {
 @override
 @pragma('vm:prefer-inline')
 $LabelerPoliciesCopyWith<$Res> get policies {
-  
+
   return $LabelerPoliciesCopyWith<$Res>(_self.policies, (value) {
     return _then(_self.copyWith(policies: value));
   });
@@ -382,7 +382,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get creator {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.creator, (value) {
     return _then(_self.copyWith(creator: value));
   });
@@ -391,7 +391,7 @@ $ProfileViewCopyWith<$Res> get creator {
 @override
 @pragma('vm:prefer-inline')
 $LabelerPoliciesCopyWith<$Res> get policies {
-  
+
   return $LabelerPoliciesCopyWith<$Res>(_self.policies, (value) {
     return _then(_self.copyWith(policies: value));
   });

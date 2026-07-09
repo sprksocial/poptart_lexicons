@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class RecordHostingStatusKnownValue extends RecordHostingStatus {
   const RecordHostingStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownRecordHostingStatus data;
 
@@ -248,7 +248,7 @@ as KnownRecordHostingStatus,
 
 class RecordHostingStatusUnknown extends RecordHostingStatus {
   const RecordHostingStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EmbedVideoViewPresentationKnownValue extends EmbedVideoViewPresentation {
   const EmbedVideoViewPresentationKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEmbedVideoViewPresentation data;
 
@@ -248,7 +248,7 @@ as KnownEmbedVideoViewPresentation,
 
 class EmbedVideoViewPresentationUnknown extends EmbedVideoViewPresentation {
   const EmbedVideoViewPresentationUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

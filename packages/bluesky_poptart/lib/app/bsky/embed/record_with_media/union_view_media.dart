@@ -8,6 +8,7 @@ import 'package:poptart_core/internals.dart' show isA;
 
 import '../images/view.dart';
 import '../video/view.dart';
+import '../gallery/view.dart';
 import '../external/view.dart';
 
 part 'union_view_media.freezed.dart';
@@ -27,6 +28,9 @@ sealed class UEmbedRecordWithMediaViewMedia
   const factory UEmbedRecordWithMediaViewMedia.embedVideoView({
     required EmbedVideoView data,
   }) = UEmbedRecordWithMediaViewMediaEmbedVideoView;
+  const factory UEmbedRecordWithMediaViewMedia.embedGalleryView({
+    required EmbedGalleryView data,
+  }) = UEmbedRecordWithMediaViewMediaEmbedGalleryView;
   const factory UEmbedRecordWithMediaViewMedia.embedExternalView({
     required EmbedExternalView data,
   }) = UEmbedRecordWithMediaViewMediaEmbedExternalView;
@@ -51,6 +55,11 @@ extension UEmbedRecordWithMediaViewMediaExtension
   bool get isNotEmbedVideoView => !isEmbedVideoView;
   EmbedVideoView? get embedVideoView =>
       isEmbedVideoView ? data as EmbedVideoView : null;
+  bool get isEmbedGalleryView =>
+      isA<UEmbedRecordWithMediaViewMediaEmbedGalleryView>(this);
+  bool get isNotEmbedGalleryView => !isEmbedGalleryView;
+  EmbedGalleryView? get embedGalleryView =>
+      isEmbedGalleryView ? data as EmbedGalleryView : null;
   bool get isEmbedExternalView =>
       isA<UEmbedRecordWithMediaViewMediaEmbedExternalView>(this);
   bool get isNotEmbedExternalView => !isEmbedExternalView;
@@ -80,6 +89,11 @@ final class UEmbedRecordWithMediaViewMediaConverter
           data: const EmbedVideoViewConverter().fromJson(json),
         );
       }
+      if (EmbedGalleryView.validate(json)) {
+        return UEmbedRecordWithMediaViewMedia.embedGalleryView(
+          data: const EmbedGalleryViewConverter().fromJson(json),
+        );
+      }
       if (EmbedExternalView.validate(json)) {
         return UEmbedRecordWithMediaViewMedia.embedExternalView(
           data: const EmbedExternalViewConverter().fromJson(json),
@@ -98,6 +112,8 @@ final class UEmbedRecordWithMediaViewMediaConverter
         embedImagesView: (data) =>
             const EmbedImagesViewConverter().toJson(data),
         embedVideoView: (data) => const EmbedVideoViewConverter().toJson(data),
+        embedGalleryView: (data) =>
+            const EmbedGalleryViewConverter().toJson(data),
         embedExternalView: (data) =>
             const EmbedExternalViewConverter().toJson(data),
 

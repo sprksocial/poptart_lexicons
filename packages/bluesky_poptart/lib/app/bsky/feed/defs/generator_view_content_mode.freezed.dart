@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class GeneratorViewContentModeKnownValue extends GeneratorViewContentMode {
   const GeneratorViewContentModeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownGeneratorViewContentMode data;
 
@@ -248,7 +248,7 @@ as KnownGeneratorViewContentMode,
 
 class GeneratorViewContentModeUnknown extends GeneratorViewContentMode {
   const GeneratorViewContentModeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ProfileAssociatedGermShowButtonToKnownValue extends ProfileAssociatedGermShowButtonTo {
   const ProfileAssociatedGermShowButtonToKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownProfileAssociatedGermShowButtonTo data;
 
@@ -248,7 +248,7 @@ as KnownProfileAssociatedGermShowButtonTo,
 
 class ProfileAssociatedGermShowButtonToUnknown extends ProfileAssociatedGermShowButtonTo {
   const ProfileAssociatedGermShowButtonToUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

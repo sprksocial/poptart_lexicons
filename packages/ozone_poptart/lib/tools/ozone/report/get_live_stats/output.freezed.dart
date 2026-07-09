@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LiveStatsCopyWith<$Res> get stats {
-  
+
   return $LiveStatsCopyWith<$Res>(_self.stats, (value) {
     return _then(_self.copyWith(stats: value));
   });
@@ -298,7 +298,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $LiveStatsCopyWith<$Res> get stats {
-  
+
   return $LiveStatsCopyWith<$Res>(_self.stats, (value) {
     return _then(_self.copyWith(stats: value));
   });

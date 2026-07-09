@@ -97,7 +97,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $QueueStatsCopyWith<$Res> get stats {
-  
+
   return $QueueStatsCopyWith<$Res>(_self.stats, (value) {
     return _then(_self.copyWith(stats: value));
   });
@@ -360,7 +360,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $QueueStatsCopyWith<$Res> get stats {
-  
+
   return $QueueStatsCopyWith<$Res>(_self.stats, (value) {
     return _then(_self.copyWith(stats: value));
   });

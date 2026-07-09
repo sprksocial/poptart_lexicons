@@ -212,7 +212,7 @@ return unknown(_that.data);case _:
 
 class UConfigRegionRulesConfigRegionRuleDefault extends UConfigRegionRules {
   const UConfigRegionRulesConfigRegionRuleDefault({required this.data}): super._();
-  
+
 
 @override final  ConfigRegionRuleDefault data;
 
@@ -275,7 +275,7 @@ as ConfigRegionRuleDefault,
 @override
 @pragma('vm:prefer-inline')
 $ConfigRegionRuleDefaultCopyWith<$Res> get data {
-  
+
   return $ConfigRegionRuleDefaultCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -287,7 +287,7 @@ $ConfigRegionRuleDefaultCopyWith<$Res> get data {
 
 class UConfigRegionRulesConfigRegionRuleIfDeclaredOverAge extends UConfigRegionRules {
   const UConfigRegionRulesConfigRegionRuleIfDeclaredOverAge({required this.data}): super._();
-  
+
 
 @override final  ConfigRegionRuleIfDeclaredOverAge data;
 
@@ -350,7 +350,7 @@ as ConfigRegionRuleIfDeclaredOverAge,
 @override
 @pragma('vm:prefer-inline')
 $ConfigRegionRuleIfDeclaredOverAgeCopyWith<$Res> get data {
-  
+
   return $ConfigRegionRuleIfDeclaredOverAgeCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -362,7 +362,7 @@ $ConfigRegionRuleIfDeclaredOverAgeCopyWith<$Res> get data {
 
 class UConfigRegionRulesConfigRegionRuleIfDeclaredUnderAge extends UConfigRegionRules {
   const UConfigRegionRulesConfigRegionRuleIfDeclaredUnderAge({required this.data}): super._();
-  
+
 
 @override final  ConfigRegionRuleIfDeclaredUnderAge data;
 
@@ -425,7 +425,7 @@ as ConfigRegionRuleIfDeclaredUnderAge,
 @override
 @pragma('vm:prefer-inline')
 $ConfigRegionRuleIfDeclaredUnderAgeCopyWith<$Res> get data {
-  
+
   return $ConfigRegionRuleIfDeclaredUnderAgeCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -437,7 +437,7 @@ $ConfigRegionRuleIfDeclaredUnderAgeCopyWith<$Res> get data {
 
 class UConfigRegionRulesConfigRegionRuleIfAssuredOverAge extends UConfigRegionRules {
   const UConfigRegionRulesConfigRegionRuleIfAssuredOverAge({required this.data}): super._();
-  
+
 
 @override final  ConfigRegionRuleIfAssuredOverAge data;
 
@@ -500,7 +500,7 @@ as ConfigRegionRuleIfAssuredOverAge,
 @override
 @pragma('vm:prefer-inline')
 $ConfigRegionRuleIfAssuredOverAgeCopyWith<$Res> get data {
-  
+
   return $ConfigRegionRuleIfAssuredOverAgeCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -512,7 +512,7 @@ $ConfigRegionRuleIfAssuredOverAgeCopyWith<$Res> get data {
 
 class UConfigRegionRulesConfigRegionRuleIfAssuredUnderAge extends UConfigRegionRules {
   const UConfigRegionRulesConfigRegionRuleIfAssuredUnderAge({required this.data}): super._();
-  
+
 
 @override final  ConfigRegionRuleIfAssuredUnderAge data;
 
@@ -575,7 +575,7 @@ as ConfigRegionRuleIfAssuredUnderAge,
 @override
 @pragma('vm:prefer-inline')
 $ConfigRegionRuleIfAssuredUnderAgeCopyWith<$Res> get data {
-  
+
   return $ConfigRegionRuleIfAssuredUnderAgeCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -587,7 +587,7 @@ $ConfigRegionRuleIfAssuredUnderAgeCopyWith<$Res> get data {
 
 class UConfigRegionRulesConfigRegionRuleIfAccountNewerThan extends UConfigRegionRules {
   const UConfigRegionRulesConfigRegionRuleIfAccountNewerThan({required this.data}): super._();
-  
+
 
 @override final  ConfigRegionRuleIfAccountNewerThan data;
 
@@ -650,7 +650,7 @@ as ConfigRegionRuleIfAccountNewerThan,
 @override
 @pragma('vm:prefer-inline')
 $ConfigRegionRuleIfAccountNewerThanCopyWith<$Res> get data {
-  
+
   return $ConfigRegionRuleIfAccountNewerThanCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -662,7 +662,7 @@ $ConfigRegionRuleIfAccountNewerThanCopyWith<$Res> get data {
 
 class UConfigRegionRulesConfigRegionRuleIfAccountOlderThan extends UConfigRegionRules {
   const UConfigRegionRulesConfigRegionRuleIfAccountOlderThan({required this.data}): super._();
-  
+
 
 @override final  ConfigRegionRuleIfAccountOlderThan data;
 
@@ -725,7 +725,7 @@ as ConfigRegionRuleIfAccountOlderThan,
 @override
 @pragma('vm:prefer-inline')
 $ConfigRegionRuleIfAccountOlderThanCopyWith<$Res> get data {
-  
+
   return $ConfigRegionRuleIfAccountOlderThanCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -737,7 +737,7 @@ $ConfigRegionRuleIfAccountOlderThanCopyWith<$Res> get data {
 
 class UConfigRegionRulesUnknown extends UConfigRegionRules {
   const UConfigRegionRulesUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -78,9 +78,7 @@ enum KnownSelectorType implements Serializable {
   @JsonValue('XPathSelector')
   xPathSelector('XPathSelector'),
   @JsonValue('FragmentSelector')
-  fragmentSelector('FragmentSelector'),
-  @JsonValue('RangeSelector')
-  rangeSelector('RangeSelector');
+  fragmentSelector('FragmentSelector');
 
   @override
   final String value;

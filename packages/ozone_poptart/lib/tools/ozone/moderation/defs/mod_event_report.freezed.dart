@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReasonTypeCopyWith<$Res> get reportType {
-  
+
   return $ReasonTypeCopyWith<$Res>(_self.reportType, (value) {
     return _then(_self.copyWith(reportType: value));
   });
@@ -307,7 +307,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReasonTypeCopyWith<$Res> get reportType {
-  
+
   return $ReasonTypeCopyWith<$Res>(_self.reportType, (value) {
     return _then(_self.copyWith(reportType: value));
   });

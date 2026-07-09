@@ -200,7 +200,7 @@ return unknown(_that.data);case _:
 
 class UEventDetailsAccountCreated extends UEventDetails {
   const UEventDetailsAccountCreated({required this.data}): super._();
-  
+
 
 @override final  AccountCreated data;
 
@@ -263,7 +263,7 @@ as AccountCreated,
 @override
 @pragma('vm:prefer-inline')
 $AccountCreatedCopyWith<$Res> get data {
-  
+
   return $AccountCreatedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -275,7 +275,7 @@ $AccountCreatedCopyWith<$Res> get data {
 
 class UEventDetailsEmailUpdated extends UEventDetails {
   const UEventDetailsEmailUpdated({required this.data}): super._();
-  
+
 
 @override final  EmailUpdated data;
 
@@ -338,7 +338,7 @@ as EmailUpdated,
 @override
 @pragma('vm:prefer-inline')
 $EmailUpdatedCopyWith<$Res> get data {
-  
+
   return $EmailUpdatedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -350,7 +350,7 @@ $EmailUpdatedCopyWith<$Res> get data {
 
 class UEventDetailsEmailConfirmed extends UEventDetails {
   const UEventDetailsEmailConfirmed({required this.data}): super._();
-  
+
 
 @override final  EmailConfirmed data;
 
@@ -413,7 +413,7 @@ as EmailConfirmed,
 @override
 @pragma('vm:prefer-inline')
 $EmailConfirmedCopyWith<$Res> get data {
-  
+
   return $EmailConfirmedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -425,7 +425,7 @@ $EmailConfirmedCopyWith<$Res> get data {
 
 class UEventDetailsPasswordUpdated extends UEventDetails {
   const UEventDetailsPasswordUpdated({required this.data}): super._();
-  
+
 
 @override final  PasswordUpdated data;
 
@@ -488,7 +488,7 @@ as PasswordUpdated,
 @override
 @pragma('vm:prefer-inline')
 $PasswordUpdatedCopyWith<$Res> get data {
-  
+
   return $PasswordUpdatedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -500,7 +500,7 @@ $PasswordUpdatedCopyWith<$Res> get data {
 
 class UEventDetailsHandleUpdated extends UEventDetails {
   const UEventDetailsHandleUpdated({required this.data}): super._();
-  
+
 
 @override final  HandleUpdated data;
 
@@ -563,7 +563,7 @@ as HandleUpdated,
 @override
 @pragma('vm:prefer-inline')
 $HandleUpdatedCopyWith<$Res> get data {
-  
+
   return $HandleUpdatedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -575,7 +575,7 @@ $HandleUpdatedCopyWith<$Res> get data {
 
 class UEventDetailsUnknown extends UEventDetails {
   const UEventDetailsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

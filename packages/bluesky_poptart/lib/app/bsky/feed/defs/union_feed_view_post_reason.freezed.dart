@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UFeedViewPostReasonReasonRepost extends UFeedViewPostReason {
   const UFeedViewPostReasonReasonRepost({required this.data}): super._();
-  
+
 
 @override final  ReasonRepost data;
 
@@ -245,7 +245,7 @@ as ReasonRepost,
 @override
 @pragma('vm:prefer-inline')
 $ReasonRepostCopyWith<$Res> get data {
-  
+
   return $ReasonRepostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $ReasonRepostCopyWith<$Res> get data {
 
 class UFeedViewPostReasonReasonPin extends UFeedViewPostReason {
   const UFeedViewPostReasonReasonPin({required this.data}): super._();
-  
+
 
 @override final  ReasonPin data;
 
@@ -320,7 +320,7 @@ as ReasonPin,
 @override
 @pragma('vm:prefer-inline')
 $ReasonPinCopyWith<$Res> get data {
-  
+
   return $ReasonPinCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $ReasonPinCopyWith<$Res> get data {
 
 class UFeedViewPostReasonUnknown extends UFeedViewPostReason {
   const UFeedViewPostReasonUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ModerationListScheduledActionsStatusesKnownValue extends ModerationListScheduledActionsStatuses {
   const ModerationListScheduledActionsStatusesKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownModerationListScheduledActionsStatuses data;
 
@@ -248,7 +248,7 @@ as KnownModerationListScheduledActionsStatuses,
 
 class ModerationListScheduledActionsStatusesUnknown extends ModerationListScheduledActionsStatuses {
   const ModerationListScheduledActionsStatusesUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

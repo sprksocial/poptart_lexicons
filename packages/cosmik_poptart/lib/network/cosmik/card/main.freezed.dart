@@ -90,7 +90,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $CardTypeCopyWith<$Res> get type {
-  
+
   return $CardTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });
@@ -99,7 +99,7 @@ $CardTypeCopyWith<$Res> get type {
 @override
 @pragma('vm:prefer-inline')
 $UCardContentCopyWith<$Res> get content {
-  
+
   return $UCardContentCopyWith<$Res>(_self.content, (value) {
     return _then(_self.copyWith(content: value));
   });
@@ -374,7 +374,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $CardTypeCopyWith<$Res> get type {
-  
+
   return $CardTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });
@@ -383,7 +383,7 @@ $CardTypeCopyWith<$Res> get type {
 @override
 @pragma('vm:prefer-inline')
 $UCardContentCopyWith<$Res> get content {
-  
+
   return $UCardContentCopyWith<$Res>(_self.content, (value) {
     return _then(_self.copyWith(content: value));
   });

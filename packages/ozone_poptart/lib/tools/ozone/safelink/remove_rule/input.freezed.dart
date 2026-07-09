@@ -83,7 +83,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PatternTypeCopyWith<$Res> get pattern {
-  
+
   return $PatternTypeCopyWith<$Res>(_self.pattern, (value) {
     return _then(_self.copyWith(pattern: value));
   });
@@ -311,7 +311,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PatternTypeCopyWith<$Res> get pattern {
-  
+
   return $PatternTypeCopyWith<$Res>(_self.pattern, (value) {
     return _then(_self.copyWith(pattern: value));
   });

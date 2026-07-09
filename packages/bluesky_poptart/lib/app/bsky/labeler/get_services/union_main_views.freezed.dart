@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ULabelerGetServicesViewsLabelerView extends ULabelerGetServicesViews {
   const ULabelerGetServicesViewsLabelerView({required this.data}): super._();
-  
+
 
 @override final  LabelerView data;
 
@@ -245,7 +245,7 @@ as LabelerView,
 @override
 @pragma('vm:prefer-inline')
 $LabelerViewCopyWith<$Res> get data {
-  
+
   return $LabelerViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $LabelerViewCopyWith<$Res> get data {
 
 class ULabelerGetServicesViewsLabelerViewDetailed extends ULabelerGetServicesViews {
   const ULabelerGetServicesViewsLabelerViewDetailed({required this.data}): super._();
-  
+
 
 @override final  LabelerViewDetailed data;
 
@@ -320,7 +320,7 @@ as LabelerViewDetailed,
 @override
 @pragma('vm:prefer-inline')
 $LabelerViewDetailedCopyWith<$Res> get data {
-  
+
   return $LabelerViewDetailedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $LabelerViewDetailedCopyWith<$Res> get data {
 
 class ULabelerGetServicesViewsUnknown extends ULabelerGetServicesViews {
   const ULabelerGetServicesViewsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

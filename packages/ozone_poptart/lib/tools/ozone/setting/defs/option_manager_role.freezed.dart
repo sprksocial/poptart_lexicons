@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class OptionManagerRoleKnownValue extends OptionManagerRole {
   const OptionManagerRoleKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownOptionManagerRole data;
 
@@ -248,7 +248,7 @@ as KnownOptionManagerRole,
 
 class OptionManagerRoleUnknown extends OptionManagerRole {
   const OptionManagerRoleUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

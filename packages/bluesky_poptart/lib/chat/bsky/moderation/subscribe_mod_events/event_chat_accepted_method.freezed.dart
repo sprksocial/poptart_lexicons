@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EventChatAcceptedMethodKnownValue extends EventChatAcceptedMethod {
   const EventChatAcceptedMethodKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEventChatAcceptedMethod data;
 
@@ -248,7 +248,7 @@ as KnownEventChatAcceptedMethod,
 
 class EventChatAcceptedMethodUnknown extends EventChatAcceptedMethod {
   const EventChatAcceptedMethodUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

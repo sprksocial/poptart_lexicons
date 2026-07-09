@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UProfileViewBasicKindDirectConvoMember extends UProfileViewBasicKind {
   const UProfileViewBasicKindDirectConvoMember({required this.data}): super._();
-  
+
 
 @override final  DirectConvoMember data;
 
@@ -251,7 +251,7 @@ as DirectConvoMember,
 @override
 @pragma('vm:prefer-inline')
 $DirectConvoMemberCopyWith<$Res> get data {
-  
+
   return $DirectConvoMemberCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $DirectConvoMemberCopyWith<$Res> get data {
 
 class UProfileViewBasicKindGroupConvoMember extends UProfileViewBasicKind {
   const UProfileViewBasicKindGroupConvoMember({required this.data}): super._();
-  
+
 
 @override final  GroupConvoMember data;
 
@@ -326,7 +326,7 @@ as GroupConvoMember,
 @override
 @pragma('vm:prefer-inline')
 $GroupConvoMemberCopyWith<$Res> get data {
-  
+
   return $GroupConvoMemberCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $GroupConvoMemberCopyWith<$Res> get data {
 
 class UProfileViewBasicKindPastGroupConvoMember extends UProfileViewBasicKind {
   const UProfileViewBasicKindPastGroupConvoMember({required this.data}): super._();
-  
+
 
 @override final  PastGroupConvoMember data;
 
@@ -401,7 +401,7 @@ as PastGroupConvoMember,
 @override
 @pragma('vm:prefer-inline')
 $PastGroupConvoMemberCopyWith<$Res> get data {
-  
+
   return $PastGroupConvoMemberCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $PastGroupConvoMemberCopyWith<$Res> get data {
 
 class UProfileViewBasicKindUnknown extends UProfileViewBasicKind {
   const UProfileViewBasicKindUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

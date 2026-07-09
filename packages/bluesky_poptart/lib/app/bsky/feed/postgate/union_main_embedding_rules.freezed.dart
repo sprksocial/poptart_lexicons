@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UFeedPostgateEmbeddingRulesDisableRule extends UFeedPostgateEmbeddingRules {
   const UFeedPostgateEmbeddingRulesDisableRule({required this.data}): super._();
-  
+
 
 @override final  DisableRule data;
 
@@ -239,7 +239,7 @@ as DisableRule,
 @override
 @pragma('vm:prefer-inline')
 $DisableRuleCopyWith<$Res> get data {
-  
+
   return $DisableRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $DisableRuleCopyWith<$Res> get data {
 
 class UFeedPostgateEmbeddingRulesUnknown extends UFeedPostgateEmbeddingRules {
   const UFeedPostgateEmbeddingRulesUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

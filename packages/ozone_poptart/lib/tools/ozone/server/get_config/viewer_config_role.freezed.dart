@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ViewerConfigRoleKnownValue extends ViewerConfigRole {
   const ViewerConfigRoleKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownViewerConfigRole data;
 
@@ -248,7 +248,7 @@ as KnownViewerConfigRole,
 
 class ViewerConfigRoleUnknown extends ViewerConfigRole {
   const ViewerConfigRoleUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

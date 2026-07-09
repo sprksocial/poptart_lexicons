@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UConvoViewLastMessageMessageView extends UConvoViewLastMessage {
   const UConvoViewLastMessageMessageView({required this.data}): super._();
-  
+
 
 @override final  MessageView data;
 
@@ -251,7 +251,7 @@ as MessageView,
 @override
 @pragma('vm:prefer-inline')
 $MessageViewCopyWith<$Res> get data {
-  
+
   return $MessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $MessageViewCopyWith<$Res> get data {
 
 class UConvoViewLastMessageDeletedMessageView extends UConvoViewLastMessage {
   const UConvoViewLastMessageDeletedMessageView({required this.data}): super._();
-  
+
 
 @override final  DeletedMessageView data;
 
@@ -326,7 +326,7 @@ as DeletedMessageView,
 @override
 @pragma('vm:prefer-inline')
 $DeletedMessageViewCopyWith<$Res> get data {
-  
+
   return $DeletedMessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $DeletedMessageViewCopyWith<$Res> get data {
 
 class UConvoViewLastMessageSystemMessageView extends UConvoViewLastMessage {
   const UConvoViewLastMessageSystemMessageView({required this.data}): super._();
-  
+
 
 @override final  SystemMessageView data;
 
@@ -401,7 +401,7 @@ as SystemMessageView,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageViewCopyWith<$Res> get data {
-  
+
   return $SystemMessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $SystemMessageViewCopyWith<$Res> get data {
 
 class UConvoViewLastMessageUnknown extends UConvoViewLastMessage {
   const UConvoViewLastMessageUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

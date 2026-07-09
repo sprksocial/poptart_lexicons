@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class CardTypeKnownValue extends CardType {
   const CardTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownCardType data;
 
@@ -248,7 +248,7 @@ as KnownCardType,
 
 class CardTypeUnknown extends CardType {
   const CardTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

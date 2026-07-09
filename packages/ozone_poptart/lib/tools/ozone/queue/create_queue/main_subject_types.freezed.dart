@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class QueueCreateQueueSubjectTypesKnownValue extends QueueCreateQueueSubjectTypes {
   const QueueCreateQueueSubjectTypesKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownQueueCreateQueueSubjectTypes data;
 
@@ -248,7 +248,7 @@ as KnownQueueCreateQueueSubjectTypes,
 
 class QueueCreateQueueSubjectTypesUnknown extends QueueCreateQueueSubjectTypes {
   const QueueCreateQueueSubjectTypesUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

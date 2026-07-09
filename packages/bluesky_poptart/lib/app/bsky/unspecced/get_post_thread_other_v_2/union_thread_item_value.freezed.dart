@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UThreadItemValueThreadItemPost extends UThreadItemValue {
   const UThreadItemValueThreadItemPost({required this.data}): super._();
-  
+
 
 @override final  ThreadItemPost data;
 
@@ -239,7 +239,7 @@ as ThreadItemPost,
 @override
 @pragma('vm:prefer-inline')
 $ThreadItemPostCopyWith<$Res> get data {
-  
+
   return $ThreadItemPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $ThreadItemPostCopyWith<$Res> get data {
 
 class UThreadItemValueUnknown extends UThreadItemValue {
   const UThreadItemValueUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ULogRemoveReactionMessageMessageView extends ULogRemoveReactionMessage {
   const ULogRemoveReactionMessageMessageView({required this.data}): super._();
-  
+
 
 @override final  MessageView data;
 
@@ -245,7 +245,7 @@ as MessageView,
 @override
 @pragma('vm:prefer-inline')
 $MessageViewCopyWith<$Res> get data {
-  
+
   return $MessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $MessageViewCopyWith<$Res> get data {
 
 class ULogRemoveReactionMessageDeletedMessageView extends ULogRemoveReactionMessage {
   const ULogRemoveReactionMessageDeletedMessageView({required this.data}): super._();
-  
+
 
 @override final  DeletedMessageView data;
 
@@ -320,7 +320,7 @@ as DeletedMessageView,
 @override
 @pragma('vm:prefer-inline')
 $DeletedMessageViewCopyWith<$Res> get data {
-  
+
   return $DeletedMessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $DeletedMessageViewCopyWith<$Res> get data {
 
 class ULogRemoveReactionMessageUnknown extends ULogRemoveReactionMessage {
   const ULogRemoveReactionMessageUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

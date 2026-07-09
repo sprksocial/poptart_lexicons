@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class JoinRuleKnownValue extends JoinRule {
   const JoinRuleKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownJoinRule data;
 
@@ -248,7 +248,7 @@ as KnownJoinRule,
 
 class JoinRuleUnknown extends JoinRule {
   const JoinRuleUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

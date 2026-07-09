@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class USubjectStatusViewHostingAccountHosting extends USubjectStatusViewHosting {
   const USubjectStatusViewHostingAccountHosting({required this.data}): super._();
-  
+
 
 @override final  AccountHosting data;
 
@@ -245,7 +245,7 @@ as AccountHosting,
 @override
 @pragma('vm:prefer-inline')
 $AccountHostingCopyWith<$Res> get data {
-  
+
   return $AccountHostingCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $AccountHostingCopyWith<$Res> get data {
 
 class USubjectStatusViewHostingRecordHosting extends USubjectStatusViewHosting {
   const USubjectStatusViewHostingRecordHosting({required this.data}): super._();
-  
+
 
 @override final  RecordHosting data;
 
@@ -320,7 +320,7 @@ as RecordHosting,
 @override
 @pragma('vm:prefer-inline')
 $RecordHostingCopyWith<$Res> get data {
-  
+
   return $RecordHostingCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $RecordHostingCopyWith<$Res> get data {
 
 class USubjectStatusViewHostingUnknown extends USubjectStatusViewHosting {
   const USubjectStatusViewHostingUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

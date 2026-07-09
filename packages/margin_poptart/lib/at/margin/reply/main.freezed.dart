@@ -86,7 +86,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReplyRefCopyWith<$Res> get parent {
-  
+
   return $ReplyRefCopyWith<$Res>(_self.parent, (value) {
     return _then(_self.copyWith(parent: value));
   });
@@ -95,7 +95,7 @@ $ReplyRefCopyWith<$Res> get parent {
 @override
 @pragma('vm:prefer-inline')
 $ReplyRefCopyWith<$Res> get root {
-  
+
   return $ReplyRefCopyWith<$Res>(_self.root, (value) {
     return _then(_self.copyWith(root: value));
   });
@@ -328,7 +328,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReplyRefCopyWith<$Res> get parent {
-  
+
   return $ReplyRefCopyWith<$Res>(_self.parent, (value) {
     return _then(_self.copyWith(parent: value));
   });
@@ -337,7 +337,7 @@ $ReplyRefCopyWith<$Res> get parent {
 @override
 @pragma('vm:prefer-inline')
 $ReplyRefCopyWith<$Res> get root {
-  
+
   return $ReplyRefCopyWith<$Res>(_self.root, (value) {
     return _then(_self.copyWith(root: value));
   });

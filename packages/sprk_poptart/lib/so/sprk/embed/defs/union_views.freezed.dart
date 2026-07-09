@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UViewsEmbedMentionView extends UViews {
   const UViewsEmbedMentionView({required this.data}): super._();
-  
+
 
 @override final  EmbedMentionView data;
 
@@ -245,7 +245,7 @@ as EmbedMentionView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedMentionViewCopyWith<$Res> get data {
-  
+
   return $EmbedMentionViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $EmbedMentionViewCopyWith<$Res> get data {
 
 class UViewsEmbedRecordView extends UViews {
   const UViewsEmbedRecordView({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordView data;
 
@@ -320,7 +320,7 @@ as EmbedRecordView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewCopyWith<$Res> get data {
-  
+
   return $EmbedRecordViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $EmbedRecordViewCopyWith<$Res> get data {
 
 class UViewsUnknown extends UViews {
   const UViewsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

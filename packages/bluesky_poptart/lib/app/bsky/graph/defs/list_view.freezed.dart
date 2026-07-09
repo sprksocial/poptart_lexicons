@@ -89,7 +89,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get creator {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.creator, (value) {
     return _then(_self.copyWith(creator: value));
   });
@@ -98,7 +98,7 @@ $ProfileViewCopyWith<$Res> get creator {
 @override
 @pragma('vm:prefer-inline')
 $ListPurposeCopyWith<$Res> get purpose {
-  
+
   return $ListPurposeCopyWith<$Res>(_self.purpose, (value) {
     return _then(_self.copyWith(purpose: value));
   });
@@ -369,7 +369,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get creator {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.creator, (value) {
     return _then(_self.copyWith(creator: value));
   });
@@ -378,7 +378,7 @@ $ProfileViewCopyWith<$Res> get creator {
 @override
 @pragma('vm:prefer-inline')
 $ListPurposeCopyWith<$Res> get purpose {
-  
+
   return $ListPurposeCopyWith<$Res>(_self.purpose, (value) {
     return _then(_self.copyWith(purpose: value));
   });

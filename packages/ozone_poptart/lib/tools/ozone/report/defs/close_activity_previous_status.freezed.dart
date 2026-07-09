@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class CloseActivityPreviousStatusKnownValue extends CloseActivityPreviousStatus {
   const CloseActivityPreviousStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownCloseActivityPreviousStatus data;
 
@@ -248,7 +248,7 @@ as KnownCloseActivityPreviousStatus,
 
 class CloseActivityPreviousStatusUnknown extends CloseActivityPreviousStatus {
   const CloseActivityPreviousStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

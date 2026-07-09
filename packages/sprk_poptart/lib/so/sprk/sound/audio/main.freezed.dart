@@ -85,7 +85,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $BlobCopyWith<$Res> get sound {
-  
+
   return $BlobCopyWith<$Res>(_self.sound, (value) {
     return _then(_self.copyWith(sound: value));
   });
@@ -354,7 +354,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $BlobCopyWith<$Res> get sound {
-  
+
   return $BlobCopyWith<$Res>(_self.sound, (value) {
     return _then(_self.copyWith(sound: value));
   });

@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UModerationScheduleActionActionTakedown extends UModerationScheduleActionAction {
   const UModerationScheduleActionActionTakedown({required this.data}): super._();
-  
+
 
 @override final  Takedown data;
 
@@ -239,7 +239,7 @@ as Takedown,
 @override
 @pragma('vm:prefer-inline')
 $TakedownCopyWith<$Res> get data {
-  
+
   return $TakedownCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $TakedownCopyWith<$Res> get data {
 
 class UModerationScheduleActionActionUnknown extends UModerationScheduleActionAction {
   const UModerationScheduleActionActionUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

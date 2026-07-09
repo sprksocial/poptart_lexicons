@@ -35,7 +35,7 @@ final methodDescriptor =
       outputFromJson: (json) => const ConvoSendMessageBatchOutputConverter()
           .fromJson(json.cast<String, dynamic>()),
       outputToJson: const ConvoSendMessageBatchOutputConverter().toJson,
-      errors: const ['ConvoLocked', 'InvalidConvo'],
+      errors: const ['ConvoLocked', 'InvalidConvo', 'ReplyTargetNotFound'],
     );
 
 final chatBskyConvoSendMessageBatch = methodDescriptor;

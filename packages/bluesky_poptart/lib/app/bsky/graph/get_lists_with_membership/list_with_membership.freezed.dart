@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ListViewCopyWith<$Res> get list {
-  
+
   return $ListViewCopyWith<$Res>(_self.list, (value) {
     return _then(_self.copyWith(list: value));
   });
@@ -314,7 +314,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ListViewCopyWith<$Res> get list {
-  
+
   return $ListViewCopyWith<$Res>(_self.list, (value) {
     return _then(_self.copyWith(list: value));
   });

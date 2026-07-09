@@ -83,7 +83,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageReferredUserCopyWith<$Res> get member {
-  
+
   return $SystemMessageReferredUserCopyWith<$Res>(_self.member, (value) {
     return _then(_self.copyWith(member: value));
   });
@@ -92,7 +92,7 @@ $SystemMessageReferredUserCopyWith<$Res> get member {
 @override
 @pragma('vm:prefer-inline')
 $MemberRoleCopyWith<$Res> get role {
-  
+
   return $MemberRoleCopyWith<$Res>(_self.role, (value) {
     return _then(_self.copyWith(role: value));
   });
@@ -332,7 +332,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageReferredUserCopyWith<$Res> get member {
-  
+
   return $SystemMessageReferredUserCopyWith<$Res>(_self.member, (value) {
     return _then(_self.copyWith(member: value));
   });
@@ -341,7 +341,7 @@ $SystemMessageReferredUserCopyWith<$Res> get member {
 @override
 @pragma('vm:prefer-inline')
 $MemberRoleCopyWith<$Res> get role {
-  
+
   return $MemberRoleCopyWith<$Res>(_self.role, (value) {
     return _then(_self.copyWith(role: value));
   });

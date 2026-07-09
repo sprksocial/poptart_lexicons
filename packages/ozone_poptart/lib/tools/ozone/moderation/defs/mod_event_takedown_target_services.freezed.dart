@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ModEventTakedownTargetServicesKnownValue extends ModEventTakedownTargetServices {
   const ModEventTakedownTargetServicesKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownModEventTakedownTargetServices data;
 
@@ -248,7 +248,7 @@ as KnownModEventTakedownTargetServices,
 
 class ModEventTakedownTargetServicesUnknown extends ModEventTakedownTargetServices {
   const ModEventTakedownTargetServicesUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

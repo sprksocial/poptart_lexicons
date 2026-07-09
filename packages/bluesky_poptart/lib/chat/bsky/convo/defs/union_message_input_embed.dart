@@ -7,6 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/internals.dart' show isA;
 
 import '../../../../app/bsky/embed/record/main.dart';
+import '../../embed/join_link/main.dart';
 
 part 'union_message_input_embed.freezed.dart';
 
@@ -20,6 +21,9 @@ sealed class UMessageInputEmbed with _$UMessageInputEmbed {
 
   const factory UMessageInputEmbed.embedRecord({required EmbedRecord data}) =
       UMessageInputEmbedEmbedRecord;
+  const factory UMessageInputEmbed.embedJoinLink({
+    required EmbedJoinLink data,
+  }) = UMessageInputEmbedEmbedJoinLink;
 
   const factory UMessageInputEmbed.unknown({
     required Map<String, dynamic> data,
@@ -33,6 +37,10 @@ extension UMessageInputEmbedExtension on UMessageInputEmbed {
   bool get isEmbedRecord => isA<UMessageInputEmbedEmbedRecord>(this);
   bool get isNotEmbedRecord => !isEmbedRecord;
   EmbedRecord? get embedRecord => isEmbedRecord ? data as EmbedRecord : null;
+  bool get isEmbedJoinLink => isA<UMessageInputEmbedEmbedJoinLink>(this);
+  bool get isNotEmbedJoinLink => !isEmbedJoinLink;
+  EmbedJoinLink? get embedJoinLink =>
+      isEmbedJoinLink ? data as EmbedJoinLink : null;
   bool get isUnknown => isA<UMessageInputEmbedUnknown>(this);
   bool get isNotUnknown => !isUnknown;
   Map<String, dynamic>? get unknown =>
@@ -51,6 +59,11 @@ final class UMessageInputEmbedConverter
           data: const EmbedRecordConverter().fromJson(json),
         );
       }
+      if (EmbedJoinLink.validate(json)) {
+        return UMessageInputEmbed.embedJoinLink(
+          data: const EmbedJoinLinkConverter().fromJson(json),
+        );
+      }
 
       return UMessageInputEmbed.unknown(data: json);
     } catch (_) {
@@ -61,6 +74,7 @@ final class UMessageInputEmbedConverter
   @override
   Map<String, dynamic> toJson(UMessageInputEmbed object) => object.when(
     embedRecord: (data) => const EmbedRecordConverter().toJson(data),
+    embedJoinLink: (data) => const EmbedJoinLinkConverter().toJson(data),
 
     unknown: (data) => data,
   );

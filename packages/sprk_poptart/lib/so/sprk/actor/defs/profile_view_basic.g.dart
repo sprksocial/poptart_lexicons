@@ -8,63 +8,52 @@ part of 'profile_view_basic.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ProfileViewBasic _$ProfileViewBasicFromJson(Map json) => $checkedCreate(
-  '_ProfileViewBasic',
-  json,
-  ($checkedConvert) {
-    final val = _ProfileViewBasic(
-      $type: $checkedConvert(
-        r'$type',
-        (v) => v as String? ?? 'so.sprk.actor.defs#profileViewBasic',
-      ),
-      did: $checkedConvert('did', (v) => v as String),
-      handle: $checkedConvert('handle', (v) => v as String),
-      displayName: $checkedConvert('displayName', (v) => v as String?),
-      avatar: $checkedConvert('avatar', (v) => v as String?),
-      associated: $checkedConvert(
-        'associated',
-        (v) => _$JsonConverterFromJson<Map<String, dynamic>, ProfileAssociated>(
-          v,
-          const ProfileAssociatedConverter().fromJson,
+_ProfileViewBasic _$ProfileViewBasicFromJson(Map json) =>
+    $checkedCreate('_ProfileViewBasic', json, ($checkedConvert) {
+      final val = _ProfileViewBasic(
+        $type: $checkedConvert(
+          r'$type',
+          (v) => v as String? ?? 'so.sprk.actor.defs#profileViewBasic',
         ),
-      ),
-      viewer: $checkedConvert(
-        'viewer',
-        (v) => _$JsonConverterFromJson<Map<String, dynamic>, ViewerState>(
-          v,
-          const ViewerStateConverter().fromJson,
-        ),
-      ),
-      labels: $checkedConvert(
-        'labels',
-        (v) => (v as List<dynamic>?)
-            ?.map(
-              (e) => const LabelConverter().fromJson(e as Map<String, dynamic>),
-            )
-            .toList(),
-      ),
-      createdAt: $checkedConvert(
-        'createdAt',
-        (v) => v == null ? null : DateTime.parse(v as String),
-      ),
-      stories: $checkedConvert(
-        'stories',
-        (v) => (v as List<dynamic>?)
-            ?.map(
-              (e) => const RepoStrongRefConverter().fromJson(
-                e as Map<String, dynamic>,
+        did: $checkedConvert('did', (v) => v as String),
+        handle: $checkedConvert('handle', (v) => v as String),
+        displayName: $checkedConvert('displayName', (v) => v as String?),
+        avatar: $checkedConvert('avatar', (v) => v as String?),
+        associated: $checkedConvert(
+          'associated',
+          (v) =>
+              _$JsonConverterFromJson<Map<String, dynamic>, ProfileAssociated>(
+                v,
+                const ProfileAssociatedConverter().fromJson,
               ),
-            )
-            .toList(),
-      ),
-      $unknown: $checkedConvert(
-        r'$unknown',
-        (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
-      ),
-    );
-    return val;
-  },
-);
+        ),
+        viewer: $checkedConvert(
+          'viewer',
+          (v) => _$JsonConverterFromJson<Map<String, dynamic>, ViewerState>(
+            v,
+            const ViewerStateConverter().fromJson,
+          ),
+        ),
+        labels: $checkedConvert(
+          'labels',
+          (v) => (v as List<dynamic>?)
+              ?.map(
+                (e) =>
+                    const LabelConverter().fromJson(e as Map<String, dynamic>),
+              )
+              .toList(),
+        ),
+        createdAt: $checkedConvert(
+          'createdAt',
+          (v) => v == null ? null : DateTime.parse(v as String),
+        ),
+        $unknown: $checkedConvert(
+          r'$unknown',
+          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+        ),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$ProfileViewBasicToJson(
   _ProfileViewBasic instance,
@@ -84,9 +73,6 @@ Map<String, dynamic> _$ProfileViewBasicToJson(
   ),
   'labels': ?instance.labels?.map(const LabelConverter().toJson).toList(),
   'createdAt': ?instance.createdAt?.toIso8601String(),
-  'stories': ?instance.stories
-      ?.map(const RepoStrongRefConverter().toJson)
-      .toList(),
   r'$unknown': ?instance.$unknown,
 };
 

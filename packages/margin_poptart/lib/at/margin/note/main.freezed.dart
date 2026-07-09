@@ -96,7 +96,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $NoteMotivationCopyWith<$Res> get motivation {
-  
+
   return $NoteMotivationCopyWith<$Res>(_self.motivation, (value) {
     return _then(_self.copyWith(motivation: value));
   });
@@ -117,7 +117,7 @@ $BodyCopyWith<$Res>? get body {
 @override
 @pragma('vm:prefer-inline')
 $TargetCopyWith<$Res> get target {
-  
+
   return $TargetCopyWith<$Res>(_self.target, (value) {
     return _then(_self.copyWith(target: value));
   });
@@ -406,7 +406,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $NoteMotivationCopyWith<$Res> get motivation {
-  
+
   return $NoteMotivationCopyWith<$Res>(_self.motivation, (value) {
     return _then(_self.copyWith(motivation: value));
   });
@@ -427,7 +427,7 @@ $BodyCopyWith<$Res>? get body {
 @override
 @pragma('vm:prefer-inline')
 $TargetCopyWith<$Res> get target {
-  
+
   return $TargetCopyWith<$Res>(_self.target, (value) {
     return _then(_self.copyWith(target: value));
   });

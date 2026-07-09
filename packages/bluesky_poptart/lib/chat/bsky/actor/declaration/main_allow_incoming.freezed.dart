@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ActorDeclarationAllowIncomingKnownValue extends ActorDeclarationAllowIncoming {
   const ActorDeclarationAllowIncomingKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownActorDeclarationAllowIncoming data;
 
@@ -248,7 +248,7 @@ as KnownActorDeclarationAllowIncoming,
 
 class ActorDeclarationAllowIncomingUnknown extends ActorDeclarationAllowIncoming {
   const ActorDeclarationAllowIncomingUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

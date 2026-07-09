@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ReasonTypeKnownValue extends ReasonType {
   const ReasonTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownReasonType data;
 
@@ -248,7 +248,7 @@ as KnownReasonType,
 
 class ReasonTypeUnknown extends ReasonType {
   const ReasonTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -10,6 +10,13 @@ import 'package:poptart_core/poptart_core.dart' show AtUri;
 // **************************************************************************
 
 extension AtUriExtension on AtUri {
+  /// Returns true if this uri is `chat.sprk.actor.declaration`, otherwise false.
+  bool get isActorDeclaration =>
+      collection.toString() == 'chat.sprk.actor.declaration';
+
+  /// Returns true if this uri is not `chat.sprk.actor.declaration`, otherwise false.
+  bool get isNotActorDeclaration => !isActorDeclaration;
+
   /// Returns true if this uri is `so.sprk.actor.profile`, otherwise false.
   bool get isActorProfile => collection.toString() == 'so.sprk.actor.profile';
 

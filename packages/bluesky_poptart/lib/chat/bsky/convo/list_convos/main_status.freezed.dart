@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ConvoListConvosStatusKnownValue extends ConvoListConvosStatus {
   const ConvoListConvosStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownConvoListConvosStatus data;
 
@@ -248,7 +248,7 @@ as KnownConvoListConvosStatus,
 
 class ConvoListConvosStatusUnknown extends ConvoListConvosStatus {
   const ConvoListConvosStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

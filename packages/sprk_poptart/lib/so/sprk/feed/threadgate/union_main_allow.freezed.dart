@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UFeedThreadgateAllowMentionRule extends UFeedThreadgateAllow {
   const UFeedThreadgateAllowMentionRule({required this.data}): super._();
-  
+
 
 @override final  MentionRule data;
 
@@ -251,7 +251,7 @@ as MentionRule,
 @override
 @pragma('vm:prefer-inline')
 $MentionRuleCopyWith<$Res> get data {
-  
+
   return $MentionRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $MentionRuleCopyWith<$Res> get data {
 
 class UFeedThreadgateAllowFollowerRule extends UFeedThreadgateAllow {
   const UFeedThreadgateAllowFollowerRule({required this.data}): super._();
-  
+
 
 @override final  FollowerRule data;
 
@@ -326,7 +326,7 @@ as FollowerRule,
 @override
 @pragma('vm:prefer-inline')
 $FollowerRuleCopyWith<$Res> get data {
-  
+
   return $FollowerRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $FollowerRuleCopyWith<$Res> get data {
 
 class UFeedThreadgateAllowFollowingRule extends UFeedThreadgateAllow {
   const UFeedThreadgateAllowFollowingRule({required this.data}): super._();
-  
+
 
 @override final  FollowingRule data;
 
@@ -401,7 +401,7 @@ as FollowingRule,
 @override
 @pragma('vm:prefer-inline')
 $FollowingRuleCopyWith<$Res> get data {
-  
+
   return $FollowingRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $FollowingRuleCopyWith<$Res> get data {
 
 class UFeedThreadgateAllowUnknown extends UFeedThreadgateAllow {
   const UFeedThreadgateAllowUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

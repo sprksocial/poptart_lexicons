@@ -86,7 +86,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ListPurposeCopyWith<$Res> get purpose {
-  
+
   return $ListPurposeCopyWith<$Res>(_self.purpose, (value) {
     return _then(_self.copyWith(purpose: value));
   });
@@ -343,7 +343,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ListPurposeCopyWith<$Res> get purpose {
-  
+
   return $ListPurposeCopyWith<$Res>(_self.purpose, (value) {
     return _then(_self.copyWith(purpose: value));
   });

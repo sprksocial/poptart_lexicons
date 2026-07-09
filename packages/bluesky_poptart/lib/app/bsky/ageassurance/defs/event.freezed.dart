@@ -99,7 +99,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EventStatusCopyWith<$Res> get status {
-  
+
   return $EventStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -108,7 +108,7 @@ $EventStatusCopyWith<$Res> get status {
 @override
 @pragma('vm:prefer-inline')
 $EventAccessCopyWith<$Res> get access {
-  
+
   return $EventAccessCopyWith<$Res>(_self.access, (value) {
     return _then(_self.copyWith(access: value));
   });
@@ -360,7 +360,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EventStatusCopyWith<$Res> get status {
-  
+
   return $EventStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -369,7 +369,7 @@ $EventStatusCopyWith<$Res> get status {
 @override
 @pragma('vm:prefer-inline')
 $EventAccessCopyWith<$Res> get access {
-  
+
   return $EventAccessCopyWith<$Res>(_self.access, (value) {
     return _then(_self.copyWith(access: value));
   });

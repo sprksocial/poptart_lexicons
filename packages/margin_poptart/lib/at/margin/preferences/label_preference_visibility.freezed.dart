@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class LabelPreferenceVisibilityKnownValue extends LabelPreferenceVisibility {
   const LabelPreferenceVisibilityKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownLabelPreferenceVisibility data;
 
@@ -248,7 +248,7 @@ as KnownLabelPreferenceVisibility,
 
 class LabelPreferenceVisibilityUnknown extends LabelPreferenceVisibility {
   const LabelPreferenceVisibilityUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

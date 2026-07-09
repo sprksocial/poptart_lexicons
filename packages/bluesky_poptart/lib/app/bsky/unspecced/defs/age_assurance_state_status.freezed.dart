@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class AgeAssuranceStateStatusKnownValue extends AgeAssuranceStateStatus {
   const AgeAssuranceStateStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownAgeAssuranceStateStatus data;
 
@@ -248,7 +248,7 @@ as KnownAgeAssuranceStateStatus,
 
 class AgeAssuranceStateStatusUnknown extends AgeAssuranceStateStatus {
   const AgeAssuranceStateStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

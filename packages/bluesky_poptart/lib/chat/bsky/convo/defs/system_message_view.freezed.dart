@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $USystemMessageViewDataCopyWith<$Res> get data {
-  
+
   return $USystemMessageViewDataCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -308,7 +308,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $USystemMessageViewDataCopyWith<$Res> get data {
-  
+
   return $USystemMessageViewDataCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class HostingGetAccountHistoryEventsKnownValue extends HostingGetAccountHistoryEvents {
   const HostingGetAccountHistoryEventsKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownHostingGetAccountHistoryEvents data;
 
@@ -248,7 +248,7 @@ as KnownHostingGetAccountHistoryEvents,
 
 class HostingGetAccountHistoryEventsUnknown extends HostingGetAccountHistoryEvents {
   const HostingGetAccountHistoryEventsUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

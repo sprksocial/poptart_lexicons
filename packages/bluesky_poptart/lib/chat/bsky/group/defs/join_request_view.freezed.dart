@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get requestedBy {
-  
+
   return $ProfileViewBasicCopyWith<$Res>(_self.requestedBy, (value) {
     return _then(_self.copyWith(requestedBy: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get requestedBy {
-  
+
   return $ProfileViewBasicCopyWith<$Res>(_self.requestedBy, (value) {
     return _then(_self.copyWith(requestedBy: value));
   });

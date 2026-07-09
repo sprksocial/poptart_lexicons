@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalExternalCopyWith<$Res> get external {
-  
+
   return $EmbedExternalExternalCopyWith<$Res>(_self.external, (value) {
     return _then(_self.copyWith(external: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalExternalCopyWith<$Res> get external {
-  
+
   return $EmbedExternalExternalCopyWith<$Res>(_self.external, (value) {
     return _then(_self.copyWith(external: value));
   });

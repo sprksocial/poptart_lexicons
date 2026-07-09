@@ -9,6 +9,7 @@ import 'package:poptart_core/internals.dart';
 
 import '../../actor/defs/profile_view_basic.dart';
 import './union_story_view_media.dart';
+import '../../sound/defs/audio_view.dart';
 import '../../embed/defs/union_views.dart';
 
 part 'story_view.freezed.dart';
@@ -26,6 +27,7 @@ abstract class StoryView with _$StoryView {
     'author',
     'record',
     'media',
+    'sound',
     'embeds',
     'indexedAt',
   ];
@@ -38,6 +40,7 @@ abstract class StoryView with _$StoryView {
     @ProfileViewBasicConverter() required ProfileViewBasic author,
     required Map<String, dynamic> record,
     @UStoryViewMediaConverter() UStoryViewMedia? media,
+    @AudioViewConverter() AudioView? sound,
     @UViewsConverter() List<UViews>? embeds,
     required DateTime indexedAt,
 
@@ -56,6 +59,8 @@ abstract class StoryView with _$StoryView {
 extension StoryViewExtension on StoryView {
   bool get hasMedia => media != null;
   bool get hasNotMedia => !hasMedia;
+  bool get hasSound => sound != null;
+  bool get hasNotSound => !hasSound;
 }
 
 final class StoryViewConverter

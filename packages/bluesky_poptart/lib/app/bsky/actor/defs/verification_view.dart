@@ -17,7 +17,14 @@ part 'verification_view.g.dart';
 /// An individual verification for an associated subject.
 @freezed
 abstract class VerificationView with _$VerificationView {
-  static const knownProps = <String>['issuer', 'uri', 'isValid', 'createdAt'];
+  static const knownProps = <String>[
+    'issuer',
+    'issuerDisplayName',
+    'issuerHandle',
+    'uri',
+    'isValid',
+    'createdAt',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory VerificationView({
@@ -25,6 +32,12 @@ abstract class VerificationView with _$VerificationView {
 
     /// The user who issued this verification.
     required String issuer,
+
+    /// The display name of the issuer.
+    String? issuerDisplayName,
+
+    /// The handle of the issuer.
+    String? issuerHandle,
 
     /// The AT-URI of the verification record.
     @AtUriConverter() required AtUri uri,
@@ -48,6 +61,10 @@ abstract class VerificationView with _$VerificationView {
 }
 
 extension VerificationViewExtension on VerificationView {
+  bool get hasIssuerDisplayName => issuerDisplayName != null;
+  bool get hasNotIssuerDisplayName => !hasIssuerDisplayName;
+  bool get hasIssuerHandle => issuerHandle != null;
+  bool get hasNotIssuerHandle => !hasIssuerHandle;
   bool get isIsValid => isValid;
   bool get isNotIsValid => !isIsValid;
 }

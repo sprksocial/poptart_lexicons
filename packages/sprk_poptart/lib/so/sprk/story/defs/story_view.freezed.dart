@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$StoryView {
 
- String get $type;@AtUriConverter() AtUri get uri; String get cid;@ProfileViewBasicConverter() ProfileViewBasic get author; Map<String, dynamic> get record;@UStoryViewMediaConverter() UStoryViewMedia? get media;@UViewsConverter() List<UViews>? get embeds; DateTime get indexedAt; Map<String, dynamic>? get $unknown;
+ String get $type;@AtUriConverter() AtUri get uri; String get cid;@ProfileViewBasicConverter() ProfileViewBasic get author; Map<String, dynamic> get record;@UStoryViewMediaConverter() UStoryViewMedia? get media;@AudioViewConverter() AudioView? get sound;@UViewsConverter() List<UViews>? get embeds; DateTime get indexedAt; Map<String, dynamic>? get $unknown;
 /// Create a copy of StoryView
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $StoryViewCopyWith<StoryView> get copyWith => _$StoryViewCopyWithImpl<StoryView>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StoryView&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.cid, cid) || other.cid == cid)&&(identical(other.author, author) || other.author == author)&&const DeepCollectionEquality().equals(other.record, record)&&(identical(other.media, media) || other.media == media)&&const DeepCollectionEquality().equals(other.embeds, embeds)&&(identical(other.indexedAt, indexedAt) || other.indexedAt == indexedAt)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StoryView&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.cid, cid) || other.cid == cid)&&(identical(other.author, author) || other.author == author)&&const DeepCollectionEquality().equals(other.record, record)&&(identical(other.media, media) || other.media == media)&&(identical(other.sound, sound) || other.sound == sound)&&const DeepCollectionEquality().equals(other.embeds, embeds)&&(identical(other.indexedAt, indexedAt) || other.indexedAt == indexedAt)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,uri,cid,author,const DeepCollectionEquality().hash(record),media,const DeepCollectionEquality().hash(embeds),indexedAt,const DeepCollectionEquality().hash($unknown));
+int get hashCode => Object.hash(runtimeType,$type,uri,cid,author,const DeepCollectionEquality().hash(record),media,sound,const DeepCollectionEquality().hash(embeds),indexedAt,const DeepCollectionEquality().hash($unknown));
 
 @override
 String toString() {
-  return 'StoryView(\$type: ${$type}, uri: $uri, cid: $cid, author: $author, record: $record, media: $media, embeds: $embeds, indexedAt: $indexedAt, \$unknown: ${$unknown})';
+  return 'StoryView(\$type: ${$type}, uri: $uri, cid: $cid, author: $author, record: $record, media: $media, sound: $sound, embeds: $embeds, indexedAt: $indexedAt, \$unknown: ${$unknown})';
 }
 
 
@@ -48,11 +48,11 @@ abstract mixin class $StoryViewCopyWith<$Res>  {
   factory $StoryViewCopyWith(StoryView value, $Res Function(StoryView) _then) = _$StoryViewCopyWithImpl;
 @useResult
 $Res call({
- String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record,@UStoryViewMediaConverter() UStoryViewMedia? media,@UViewsConverter() List<UViews>? embeds, DateTime indexedAt, Map<String, dynamic>? $unknown
+ String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record,@UStoryViewMediaConverter() UStoryViewMedia? media,@AudioViewConverter() AudioView? sound,@UViewsConverter() List<UViews>? embeds, DateTime indexedAt, Map<String, dynamic>? $unknown
 });
 
 
-$ProfileViewBasicCopyWith<$Res> get author;$UStoryViewMediaCopyWith<$Res>? get media;
+$ProfileViewBasicCopyWith<$Res> get author;$UStoryViewMediaCopyWith<$Res>? get media;$AudioViewCopyWith<$Res>? get sound;
 
 }
 /// @nodoc
@@ -65,7 +65,7 @@ class _$StoryViewCopyWithImpl<$Res>
 
 /// Create a copy of StoryView
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? media = freezed,Object? embeds = freezed,Object? indexedAt = null,Object? $unknown = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? media = freezed,Object? sound = freezed,Object? embeds = freezed,Object? indexedAt = null,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,uri: null == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
@@ -73,7 +73,8 @@ as AtUri,cid: null == cid ? _self.cid : cid // ignore: cast_nullable_to_non_null
 as String,author: null == author ? _self.author : author // ignore: cast_nullable_to_non_nullable
 as ProfileViewBasic,record: null == record ? _self.record : record // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>,media: freezed == media ? _self.media : media // ignore: cast_nullable_to_non_nullable
-as UStoryViewMedia?,embeds: freezed == embeds ? _self.embeds : embeds // ignore: cast_nullable_to_non_nullable
+as UStoryViewMedia?,sound: freezed == sound ? _self.sound : sound // ignore: cast_nullable_to_non_nullable
+as AudioView?,embeds: freezed == embeds ? _self.embeds : embeds // ignore: cast_nullable_to_non_nullable
 as List<UViews>?,indexedAt: null == indexedAt ? _self.indexedAt : indexedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
@@ -84,7 +85,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get author {
-  
+
   return $ProfileViewBasicCopyWith<$Res>(_self.author, (value) {
     return _then(_self.copyWith(author: value));
   });
@@ -99,6 +100,18 @@ $UStoryViewMediaCopyWith<$Res>? get media {
 
   return $UStoryViewMediaCopyWith<$Res>(_self.media!, (value) {
     return _then(_self.copyWith(media: value));
+  });
+}/// Create a copy of StoryView
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AudioViewCopyWith<$Res>? get sound {
+    if (_self.sound == null) {
+    return null;
+  }
+
+  return $AudioViewCopyWith<$Res>(_self.sound!, (value) {
+    return _then(_self.copyWith(sound: value));
   });
 }
 }
@@ -182,10 +195,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record, @UStoryViewMediaConverter()  UStoryViewMedia? media, @UViewsConverter()  List<UViews>? embeds,  DateTime indexedAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record, @UStoryViewMediaConverter()  UStoryViewMedia? media, @AudioViewConverter()  AudioView? sound, @UViewsConverter()  List<UViews>? embeds,  DateTime indexedAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _StoryView() when $default != null:
-return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.media,_that.embeds,_that.indexedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.media,_that.sound,_that.embeds,_that.indexedAt,_that.$unknown);case _:
   return orElse();
 
 }
@@ -203,10 +216,10 @@ return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record, @UStoryViewMediaConverter()  UStoryViewMedia? media, @UViewsConverter()  List<UViews>? embeds,  DateTime indexedAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record, @UStoryViewMediaConverter()  UStoryViewMedia? media, @AudioViewConverter()  AudioView? sound, @UViewsConverter()  List<UViews>? embeds,  DateTime indexedAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _StoryView():
-return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.media,_that.embeds,_that.indexedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.media,_that.sound,_that.embeds,_that.indexedAt,_that.$unknown);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -223,10 +236,10 @@ return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record, @UStoryViewMediaConverter()  UStoryViewMedia? media, @UViewsConverter()  List<UViews>? embeds,  DateTime indexedAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @AtUriConverter()  AtUri uri,  String cid, @ProfileViewBasicConverter()  ProfileViewBasic author,  Map<String, dynamic> record, @UStoryViewMediaConverter()  UStoryViewMedia? media, @AudioViewConverter()  AudioView? sound, @UViewsConverter()  List<UViews>? embeds,  DateTime indexedAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _StoryView() when $default != null:
-return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.media,_that.embeds,_that.indexedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.media,_that.sound,_that.embeds,_that.indexedAt,_that.$unknown);case _:
   return null;
 
 }
@@ -238,7 +251,7 @@ return $default(_that.$type,_that.uri,_that.cid,_that.author,_that.record,_that.
 
 @JsonSerializable(includeIfNull: false)
 class _StoryView implements StoryView {
-  const _StoryView({this.$type = 'so.sprk.story.defs#storyView', @AtUriConverter() required this.uri, required this.cid, @ProfileViewBasicConverter() required this.author, required final  Map<String, dynamic> record, @UStoryViewMediaConverter() this.media, @UViewsConverter() final  List<UViews>? embeds, required this.indexedAt, final  Map<String, dynamic>? $unknown}): _record = record,_embeds = embeds,_$unknown = $unknown;
+  const _StoryView({this.$type = 'so.sprk.story.defs#storyView', @AtUriConverter() required this.uri, required this.cid, @ProfileViewBasicConverter() required this.author, required final  Map<String, dynamic> record, @UStoryViewMediaConverter() this.media, @AudioViewConverter() this.sound, @UViewsConverter() final  List<UViews>? embeds, required this.indexedAt, final  Map<String, dynamic>? $unknown}): _record = record,_embeds = embeds,_$unknown = $unknown;
   factory _StoryView.fromJson(Map<String, dynamic> json) => _$StoryViewFromJson(json);
 
 @override@JsonKey() final  String $type;
@@ -253,6 +266,7 @@ class _StoryView implements StoryView {
 }
 
 @override@UStoryViewMediaConverter() final  UStoryViewMedia? media;
+@override@AudioViewConverter() final  AudioView? sound;
  final  List<UViews>? _embeds;
 @override@UViewsConverter() List<UViews>? get embeds {
   final value = _embeds;
@@ -286,16 +300,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StoryView&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.cid, cid) || other.cid == cid)&&(identical(other.author, author) || other.author == author)&&const DeepCollectionEquality().equals(other._record, _record)&&(identical(other.media, media) || other.media == media)&&const DeepCollectionEquality().equals(other._embeds, _embeds)&&(identical(other.indexedAt, indexedAt) || other.indexedAt == indexedAt)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StoryView&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.uri, uri) || other.uri == uri)&&(identical(other.cid, cid) || other.cid == cid)&&(identical(other.author, author) || other.author == author)&&const DeepCollectionEquality().equals(other._record, _record)&&(identical(other.media, media) || other.media == media)&&(identical(other.sound, sound) || other.sound == sound)&&const DeepCollectionEquality().equals(other._embeds, _embeds)&&(identical(other.indexedAt, indexedAt) || other.indexedAt == indexedAt)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,uri,cid,author,const DeepCollectionEquality().hash(_record),media,const DeepCollectionEquality().hash(_embeds),indexedAt,const DeepCollectionEquality().hash(_$unknown));
+int get hashCode => Object.hash(runtimeType,$type,uri,cid,author,const DeepCollectionEquality().hash(_record),media,sound,const DeepCollectionEquality().hash(_embeds),indexedAt,const DeepCollectionEquality().hash(_$unknown));
 
 @override
 String toString() {
-  return 'StoryView(\$type: ${$type}, uri: $uri, cid: $cid, author: $author, record: $record, media: $media, embeds: $embeds, indexedAt: $indexedAt, \$unknown: ${$unknown})';
+  return 'StoryView(\$type: ${$type}, uri: $uri, cid: $cid, author: $author, record: $record, media: $media, sound: $sound, embeds: $embeds, indexedAt: $indexedAt, \$unknown: ${$unknown})';
 }
 
 
@@ -306,11 +320,11 @@ abstract mixin class _$StoryViewCopyWith<$Res> implements $StoryViewCopyWith<$Re
   factory _$StoryViewCopyWith(_StoryView value, $Res Function(_StoryView) _then) = __$StoryViewCopyWithImpl;
 @override @useResult
 $Res call({
- String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record,@UStoryViewMediaConverter() UStoryViewMedia? media,@UViewsConverter() List<UViews>? embeds, DateTime indexedAt, Map<String, dynamic>? $unknown
+ String $type,@AtUriConverter() AtUri uri, String cid,@ProfileViewBasicConverter() ProfileViewBasic author, Map<String, dynamic> record,@UStoryViewMediaConverter() UStoryViewMedia? media,@AudioViewConverter() AudioView? sound,@UViewsConverter() List<UViews>? embeds, DateTime indexedAt, Map<String, dynamic>? $unknown
 });
 
 
-@override $ProfileViewBasicCopyWith<$Res> get author;@override $UStoryViewMediaCopyWith<$Res>? get media;
+@override $ProfileViewBasicCopyWith<$Res> get author;@override $UStoryViewMediaCopyWith<$Res>? get media;@override $AudioViewCopyWith<$Res>? get sound;
 
 }
 /// @nodoc
@@ -323,7 +337,7 @@ class __$StoryViewCopyWithImpl<$Res>
 
 /// Create a copy of StoryView
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? media = freezed,Object? embeds = freezed,Object? indexedAt = null,Object? $unknown = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? uri = null,Object? cid = null,Object? author = null,Object? record = null,Object? media = freezed,Object? sound = freezed,Object? embeds = freezed,Object? indexedAt = null,Object? $unknown = freezed,}) {
   return _then(_StoryView(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,uri: null == uri ? _self.uri : uri // ignore: cast_nullable_to_non_nullable
@@ -331,7 +345,8 @@ as AtUri,cid: null == cid ? _self.cid : cid // ignore: cast_nullable_to_non_null
 as String,author: null == author ? _self.author : author // ignore: cast_nullable_to_non_nullable
 as ProfileViewBasic,record: null == record ? _self._record : record // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>,media: freezed == media ? _self.media : media // ignore: cast_nullable_to_non_nullable
-as UStoryViewMedia?,embeds: freezed == embeds ? _self._embeds : embeds // ignore: cast_nullable_to_non_nullable
+as UStoryViewMedia?,sound: freezed == sound ? _self.sound : sound // ignore: cast_nullable_to_non_nullable
+as AudioView?,embeds: freezed == embeds ? _self._embeds : embeds // ignore: cast_nullable_to_non_nullable
 as List<UViews>?,indexedAt: null == indexedAt ? _self.indexedAt : indexedAt // ignore: cast_nullable_to_non_nullable
 as DateTime,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
@@ -343,7 +358,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get author {
-  
+
   return $ProfileViewBasicCopyWith<$Res>(_self.author, (value) {
     return _then(_self.copyWith(author: value));
   });
@@ -358,6 +373,18 @@ $UStoryViewMediaCopyWith<$Res>? get media {
 
   return $UStoryViewMediaCopyWith<$Res>(_self.media!, (value) {
     return _then(_self.copyWith(media: value));
+  });
+}/// Create a copy of StoryView
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AudioViewCopyWith<$Res>? get sound {
+    if (_self.sound == null) {
+    return null;
+  }
+
+  return $AudioViewCopyWith<$Res>(_self.sound!, (value) {
+    return _then(_self.copyWith(sound: value));
   });
 }
 }

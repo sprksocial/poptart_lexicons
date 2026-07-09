@@ -77,7 +77,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $OptionCopyWith<$Res> get option {
-  
+
   return $OptionCopyWith<$Res>(_self.option, (value) {
     return _then(_self.copyWith(option: value));
   });
@@ -296,7 +296,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $OptionCopyWith<$Res> get option {
-  
+
   return $OptionCopyWith<$Res>(_self.option, (value) {
     return _then(_self.copyWith(option: value));
   });

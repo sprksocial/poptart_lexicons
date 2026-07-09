@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ProfileAssociatedActivitySubscriptionAllowSubscriptionsKnownValue extends ProfileAssociatedActivitySubscriptionAllowSubscriptions {
   const ProfileAssociatedActivitySubscriptionAllowSubscriptionsKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownProfileAssociatedActivitySubscriptionAllowSubscriptions data;
 
@@ -248,7 +248,7 @@ as KnownProfileAssociatedActivitySubscriptionAllowSubscriptions,
 
 class ProfileAssociatedActivitySubscriptionAllowSubscriptionsUnknown extends ProfileAssociatedActivitySubscriptionAllowSubscriptions {
   const ProfileAssociatedActivitySubscriptionAllowSubscriptionsUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

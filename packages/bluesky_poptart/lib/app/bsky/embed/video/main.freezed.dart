@@ -85,7 +85,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $BlobCopyWith<$Res> get video {
-  
+
   return $BlobCopyWith<$Res>(_self.video, (value) {
     return _then(_self.copyWith(video: value));
   });
@@ -349,7 +349,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $BlobCopyWith<$Res> get video {
-  
+
   return $BlobCopyWith<$Res>(_self.video, (value) {
     return _then(_self.copyWith(video: value));
   });

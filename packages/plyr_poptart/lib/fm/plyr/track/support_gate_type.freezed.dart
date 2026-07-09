@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SupportGateTypeKnownValue extends SupportGateType {
   const SupportGateTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownSupportGateType data;
 
@@ -248,7 +248,7 @@ as KnownSupportGateType,
 
 class SupportGateTypeUnknown extends SupportGateType {
   const SupportGateTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

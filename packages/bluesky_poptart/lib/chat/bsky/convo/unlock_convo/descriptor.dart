@@ -26,7 +26,11 @@ final methodDescriptor =
       outputFromJson: (json) => const ConvoUnlockConvoOutputConverter()
           .fromJson(json.cast<String, dynamic>()),
       outputToJson: const ConvoUnlockConvoOutputConverter().toJson,
-      errors: const ['InvalidConvo', 'InsufficientRole'],
+      errors: const [
+        'InvalidConvo',
+        'InsufficientRole',
+        'ConvoLockedByModeration',
+      ],
     );
 
 final chatBskyConvoUnlockConvo = methodDescriptor;

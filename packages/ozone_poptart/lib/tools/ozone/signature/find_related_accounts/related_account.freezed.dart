@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $AccountViewCopyWith<$Res> get account {
-  
+
   return $AccountViewCopyWith<$Res>(_self.account, (value) {
     return _then(_self.copyWith(account: value));
   });
@@ -310,7 +310,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $AccountViewCopyWith<$Res> get account {
-  
+
   return $AccountViewCopyWith<$Res>(_self.account, (value) {
     return _then(_self.copyWith(account: value));
   });

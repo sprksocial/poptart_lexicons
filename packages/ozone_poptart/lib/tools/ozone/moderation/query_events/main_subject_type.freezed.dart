@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ModerationQueryEventsSubjectTypeKnownValue extends ModerationQueryEventsSubjectType {
   const ModerationQueryEventsSubjectTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownModerationQueryEventsSubjectType data;
 
@@ -248,7 +248,7 @@ as KnownModerationQueryEventsSubjectType,
 
 class ModerationQueryEventsSubjectTypeUnknown extends ModerationQueryEventsSubjectType {
   const ModerationQueryEventsSubjectTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

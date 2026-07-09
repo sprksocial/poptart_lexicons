@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileAssociatedChatAllowIncomingCopyWith<$Res> get allowIncoming {
-  
+
   return $ProfileAssociatedChatAllowIncomingCopyWith<$Res>(_self.allowIncoming, (value) {
     return _then(_self.copyWith(allowIncoming: value));
   });
@@ -314,7 +314,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileAssociatedChatAllowIncomingCopyWith<$Res> get allowIncoming {
-  
+
   return $ProfileAssociatedChatAllowIncomingCopyWith<$Res>(_self.allowIncoming, (value) {
     return _then(_self.copyWith(allowIncoming: value));
   });

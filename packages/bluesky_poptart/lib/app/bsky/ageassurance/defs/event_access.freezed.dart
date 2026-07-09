@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EventAccessKnownValue extends EventAccess {
   const EventAccessKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEventAccess data;
 
@@ -248,7 +248,7 @@ as KnownEventAccess,
 
 class EventAccessUnknown extends EventAccess {
   const EventAccessUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

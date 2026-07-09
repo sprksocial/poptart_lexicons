@@ -30,6 +30,7 @@ final methodDescriptor =
       errors: const [
         'AccountSuspended',
         'BlockedActor',
+        'BlockedSubject',
         'MessagesDisabled',
         'NotFollowedBySender',
         'RecipientNotFound',

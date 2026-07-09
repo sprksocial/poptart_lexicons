@@ -10,6 +10,7 @@
 export 'defs/access.dart';
 export 'defs/config.dart';
 export 'defs/config_region.dart';
+export 'defs/config_region_additional_verification_methods.dart';
 export 'defs/config_region_rule_default.dart';
 export 'defs/config_region_rule_if_account_newer_than.dart';
 export 'defs/config_region_rule_if_account_older_than.dart';

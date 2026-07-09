@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $StateCopyWith<$Res> get state {
-  
+
   return $StateCopyWith<$Res>(_self.state, (value) {
     return _then(_self.copyWith(state: value));
   });
@@ -87,7 +87,7 @@ $StateCopyWith<$Res> get state {
 @override
 @pragma('vm:prefer-inline')
 $StateMetadataCopyWith<$Res> get metadata {
-  
+
   return $StateMetadataCopyWith<$Res>(_self.metadata, (value) {
     return _then(_self.copyWith(metadata: value));
   });
@@ -308,7 +308,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $StateCopyWith<$Res> get state {
-  
+
   return $StateCopyWith<$Res>(_self.state, (value) {
     return _then(_self.copyWith(state: value));
   });
@@ -317,7 +317,7 @@ $StateCopyWith<$Res> get state {
 @override
 @pragma('vm:prefer-inline')
 $StateMetadataCopyWith<$Res> get metadata {
-  
+
   return $StateMetadataCopyWith<$Res>(_self.metadata, (value) {
     return _then(_self.copyWith(metadata: value));
   });

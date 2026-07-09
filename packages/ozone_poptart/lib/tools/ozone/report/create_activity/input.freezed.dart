@@ -85,7 +85,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UReportCreateActivityActivityCopyWith<$Res> get activity {
-  
+
   return $UReportCreateActivityActivityCopyWith<$Res>(_self.activity, (value) {
     return _then(_self.copyWith(activity: value));
   });
@@ -316,7 +316,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UReportCreateActivityActivityCopyWith<$Res> get activity {
-  
+
   return $UReportCreateActivityActivityCopyWith<$Res>(_self.activity, (value) {
     return _then(_self.copyWith(activity: value));
   });

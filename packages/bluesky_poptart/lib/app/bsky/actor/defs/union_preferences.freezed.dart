@@ -266,7 +266,7 @@ return unknown(_that.data);case _:
 
 class UPreferencesAdultContentPref extends UPreferences {
   const UPreferencesAdultContentPref({required this.data}): super._();
-  
+
 
 @override final  AdultContentPref data;
 
@@ -329,7 +329,7 @@ as AdultContentPref,
 @override
 @pragma('vm:prefer-inline')
 $AdultContentPrefCopyWith<$Res> get data {
-  
+
   return $AdultContentPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -341,7 +341,7 @@ $AdultContentPrefCopyWith<$Res> get data {
 
 class UPreferencesContentLabelPref extends UPreferences {
   const UPreferencesContentLabelPref({required this.data}): super._();
-  
+
 
 @override final  ContentLabelPref data;
 
@@ -404,7 +404,7 @@ as ContentLabelPref,
 @override
 @pragma('vm:prefer-inline')
 $ContentLabelPrefCopyWith<$Res> get data {
-  
+
   return $ContentLabelPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -416,7 +416,7 @@ $ContentLabelPrefCopyWith<$Res> get data {
 
 class UPreferencesSavedFeedsPref extends UPreferences {
   const UPreferencesSavedFeedsPref({required this.data}): super._();
-  
+
 
 @override final  SavedFeedsPref data;
 
@@ -479,7 +479,7 @@ as SavedFeedsPref,
 @override
 @pragma('vm:prefer-inline')
 $SavedFeedsPrefCopyWith<$Res> get data {
-  
+
   return $SavedFeedsPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -491,7 +491,7 @@ $SavedFeedsPrefCopyWith<$Res> get data {
 
 class UPreferencesSavedFeedsPrefV2 extends UPreferences {
   const UPreferencesSavedFeedsPrefV2({required this.data}): super._();
-  
+
 
 @override final  SavedFeedsPrefV2 data;
 
@@ -554,7 +554,7 @@ as SavedFeedsPrefV2,
 @override
 @pragma('vm:prefer-inline')
 $SavedFeedsPrefV2CopyWith<$Res> get data {
-  
+
   return $SavedFeedsPrefV2CopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -566,7 +566,7 @@ $SavedFeedsPrefV2CopyWith<$Res> get data {
 
 class UPreferencesPersonalDetailsPref extends UPreferences {
   const UPreferencesPersonalDetailsPref({required this.data}): super._();
-  
+
 
 @override final  PersonalDetailsPref data;
 
@@ -629,7 +629,7 @@ as PersonalDetailsPref,
 @override
 @pragma('vm:prefer-inline')
 $PersonalDetailsPrefCopyWith<$Res> get data {
-  
+
   return $PersonalDetailsPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -641,7 +641,7 @@ $PersonalDetailsPrefCopyWith<$Res> get data {
 
 class UPreferencesDeclaredAgePref extends UPreferences {
   const UPreferencesDeclaredAgePref({required this.data}): super._();
-  
+
 
 @override final  DeclaredAgePref data;
 
@@ -704,7 +704,7 @@ as DeclaredAgePref,
 @override
 @pragma('vm:prefer-inline')
 $DeclaredAgePrefCopyWith<$Res> get data {
-  
+
   return $DeclaredAgePrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -716,7 +716,7 @@ $DeclaredAgePrefCopyWith<$Res> get data {
 
 class UPreferencesFeedViewPref extends UPreferences {
   const UPreferencesFeedViewPref({required this.data}): super._();
-  
+
 
 @override final  FeedViewPref data;
 
@@ -779,7 +779,7 @@ as FeedViewPref,
 @override
 @pragma('vm:prefer-inline')
 $FeedViewPrefCopyWith<$Res> get data {
-  
+
   return $FeedViewPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -791,7 +791,7 @@ $FeedViewPrefCopyWith<$Res> get data {
 
 class UPreferencesThreadViewPref extends UPreferences {
   const UPreferencesThreadViewPref({required this.data}): super._();
-  
+
 
 @override final  ThreadViewPref data;
 
@@ -854,7 +854,7 @@ as ThreadViewPref,
 @override
 @pragma('vm:prefer-inline')
 $ThreadViewPrefCopyWith<$Res> get data {
-  
+
   return $ThreadViewPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -866,7 +866,7 @@ $ThreadViewPrefCopyWith<$Res> get data {
 
 class UPreferencesInterestsPref extends UPreferences {
   const UPreferencesInterestsPref({required this.data}): super._();
-  
+
 
 @override final  InterestsPref data;
 
@@ -929,7 +929,7 @@ as InterestsPref,
 @override
 @pragma('vm:prefer-inline')
 $InterestsPrefCopyWith<$Res> get data {
-  
+
   return $InterestsPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -941,7 +941,7 @@ $InterestsPrefCopyWith<$Res> get data {
 
 class UPreferencesMutedWordsPref extends UPreferences {
   const UPreferencesMutedWordsPref({required this.data}): super._();
-  
+
 
 @override final  MutedWordsPref data;
 
@@ -1004,7 +1004,7 @@ as MutedWordsPref,
 @override
 @pragma('vm:prefer-inline')
 $MutedWordsPrefCopyWith<$Res> get data {
-  
+
   return $MutedWordsPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1016,7 +1016,7 @@ $MutedWordsPrefCopyWith<$Res> get data {
 
 class UPreferencesHiddenPostsPref extends UPreferences {
   const UPreferencesHiddenPostsPref({required this.data}): super._();
-  
+
 
 @override final  HiddenPostsPref data;
 
@@ -1079,7 +1079,7 @@ as HiddenPostsPref,
 @override
 @pragma('vm:prefer-inline')
 $HiddenPostsPrefCopyWith<$Res> get data {
-  
+
   return $HiddenPostsPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1091,7 +1091,7 @@ $HiddenPostsPrefCopyWith<$Res> get data {
 
 class UPreferencesBskyAppStatePref extends UPreferences {
   const UPreferencesBskyAppStatePref({required this.data}): super._();
-  
+
 
 @override final  BskyAppStatePref data;
 
@@ -1154,7 +1154,7 @@ as BskyAppStatePref,
 @override
 @pragma('vm:prefer-inline')
 $BskyAppStatePrefCopyWith<$Res> get data {
-  
+
   return $BskyAppStatePrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1166,7 +1166,7 @@ $BskyAppStatePrefCopyWith<$Res> get data {
 
 class UPreferencesLabelersPref extends UPreferences {
   const UPreferencesLabelersPref({required this.data}): super._();
-  
+
 
 @override final  LabelersPref data;
 
@@ -1229,7 +1229,7 @@ as LabelersPref,
 @override
 @pragma('vm:prefer-inline')
 $LabelersPrefCopyWith<$Res> get data {
-  
+
   return $LabelersPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1241,7 +1241,7 @@ $LabelersPrefCopyWith<$Res> get data {
 
 class UPreferencesPostInteractionSettingsPref extends UPreferences {
   const UPreferencesPostInteractionSettingsPref({required this.data}): super._();
-  
+
 
 @override final  PostInteractionSettingsPref data;
 
@@ -1304,7 +1304,7 @@ as PostInteractionSettingsPref,
 @override
 @pragma('vm:prefer-inline')
 $PostInteractionSettingsPrefCopyWith<$Res> get data {
-  
+
   return $PostInteractionSettingsPrefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1316,7 +1316,7 @@ $PostInteractionSettingsPrefCopyWith<$Res> get data {
 
 class UPreferencesVerificationPrefs extends UPreferences {
   const UPreferencesVerificationPrefs({required this.data}): super._();
-  
+
 
 @override final  VerificationPrefs data;
 
@@ -1379,7 +1379,7 @@ as VerificationPrefs,
 @override
 @pragma('vm:prefer-inline')
 $VerificationPrefsCopyWith<$Res> get data {
-  
+
   return $VerificationPrefsCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1391,7 +1391,7 @@ $VerificationPrefsCopyWith<$Res> get data {
 
 class UPreferencesLiveEventPreferences extends UPreferences {
   const UPreferencesLiveEventPreferences({required this.data}): super._();
-  
+
 
 @override final  LiveEventPreferences data;
 
@@ -1454,7 +1454,7 @@ as LiveEventPreferences,
 @override
 @pragma('vm:prefer-inline')
 $LiveEventPreferencesCopyWith<$Res> get data {
-  
+
   return $LiveEventPreferencesCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1466,7 +1466,7 @@ $LiveEventPreferencesCopyWith<$Res> get data {
 
 class UPreferencesUnknown extends UPreferences {
   const UPreferencesUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

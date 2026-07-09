@@ -77,7 +77,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PreferencesCopyWith<$Res> get preferences {
-  
+
   return $PreferencesCopyWith<$Res>(_self.preferences, (value) {
     return _then(_self.copyWith(preferences: value));
   });
@@ -296,7 +296,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PreferencesCopyWith<$Res> get preferences {
-  
+
   return $PreferencesCopyWith<$Res>(_self.preferences, (value) {
     return _then(_self.copyWith(preferences: value));
   });

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FeedGetCrosspostThreadSortKnownValue extends FeedGetCrosspostThreadSort {
   const FeedGetCrosspostThreadSortKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownFeedGetCrosspostThreadSort data;
 
@@ -248,7 +248,7 @@ as KnownFeedGetCrosspostThreadSort,
 
 class FeedGetCrosspostThreadSortUnknown extends FeedGetCrosspostThreadSort {
   const FeedGetCrosspostThreadSortUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

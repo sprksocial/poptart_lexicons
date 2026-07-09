@@ -1,0 +1,71 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:poptart_core/internals.dart' show isA;
+
+import './image.dart';
+
+part 'union_main_items.freezed.dart';
+
+// **************************************************************************
+// LexGenerator
+// **************************************************************************
+
+@freezed
+sealed class UEmbedGalleryItems with _$UEmbedGalleryItems {
+  const UEmbedGalleryItems._();
+
+  const factory UEmbedGalleryItems.embedGalleryImage({
+    required EmbedGalleryImage data,
+  }) = UEmbedGalleryItemsEmbedGalleryImage;
+
+  const factory UEmbedGalleryItems.unknown({
+    required Map<String, dynamic> data,
+  }) = UEmbedGalleryItemsUnknown;
+
+  Map<String, dynamic> toJson() =>
+      const UEmbedGalleryItemsConverter().toJson(this);
+}
+
+extension UEmbedGalleryItemsExtension on UEmbedGalleryItems {
+  bool get isEmbedGalleryImage =>
+      isA<UEmbedGalleryItemsEmbedGalleryImage>(this);
+  bool get isNotEmbedGalleryImage => !isEmbedGalleryImage;
+  EmbedGalleryImage? get embedGalleryImage =>
+      isEmbedGalleryImage ? data as EmbedGalleryImage : null;
+  bool get isUnknown => isA<UEmbedGalleryItemsUnknown>(this);
+  bool get isNotUnknown => !isUnknown;
+  Map<String, dynamic>? get unknown =>
+      isUnknown ? data as Map<String, dynamic> : null;
+}
+
+final class UEmbedGalleryItemsConverter
+    implements JsonConverter<UEmbedGalleryItems, Map<String, dynamic>> {
+  const UEmbedGalleryItemsConverter();
+
+  @override
+  UEmbedGalleryItems fromJson(Map<String, dynamic> json) {
+    try {
+      if (EmbedGalleryImage.validate(json)) {
+        return UEmbedGalleryItems.embedGalleryImage(
+          data: const EmbedGalleryImageConverter().fromJson(json),
+        );
+      }
+
+      return UEmbedGalleryItems.unknown(data: json);
+    } catch (_) {
+      return UEmbedGalleryItems.unknown(data: json);
+    }
+  }
+
+  @override
+  Map<String, dynamic> toJson(UEmbedGalleryItems object) => object.when(
+    embedGalleryImage: (data) =>
+        const EmbedGalleryImageConverter().toJson(data),
+
+    unknown: (data) => data,
+  );
+}

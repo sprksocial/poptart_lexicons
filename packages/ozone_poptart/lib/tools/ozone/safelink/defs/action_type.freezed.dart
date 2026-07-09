@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ActionTypeKnownValue extends ActionType {
   const ActionTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownActionType data;
 
@@ -248,7 +248,7 @@ as KnownActionType,
 
 class ActionTypeUnknown extends ActionType {
   const ActionTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

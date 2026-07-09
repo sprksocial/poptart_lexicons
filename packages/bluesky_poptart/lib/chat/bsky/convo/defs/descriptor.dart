@@ -29,18 +29,24 @@ import './log_member_leave.dart';
 import './log_mute_convo.dart';
 import './log_outgoing_join_request.dart';
 import './log_read_convo.dart';
+import './log_read_join_requests.dart';
+import './log_read_message.dart';
 import './log_reject_join_request.dart';
 import './log_remove_member.dart';
 import './log_remove_reaction.dart';
 import './log_unlock_convo.dart';
 import './log_unmute_convo.dart';
+import './log_withdraw_incoming_join_request.dart';
+import './log_withdraw_outgoing_join_request.dart';
 import './message_and_reaction_view.dart';
+import './message_before_user_joined_group_view.dart';
 import './message_input.dart';
 import './message_ref.dart';
 import './message_view.dart';
 import './message_view_sender.dart';
 import './reaction_view.dart';
 import './reaction_view_sender.dart';
+import './reply_ref.dart';
 import './system_message_data_add_member.dart';
 import './system_message_data_create_join_link.dart';
 import './system_message_data_disable_join_link.dart';
@@ -86,6 +92,15 @@ final messageInputDescriptor = XRPCObjectDescriptor<MessageInput>(
       const MessageInputConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const MessageInputConverter().toJson,
   matches: MessageInput.validate,
+);
+
+final replyRefDescriptor = XRPCObjectDescriptor<ReplyRef>(
+  nsid: 'chat.bsky.convo.defs',
+  defName: 'replyRef',
+  fromJson: (json) =>
+      const ReplyRefConverter().fromJson(json.cast<String, dynamic>()),
+  toJson: const ReplyRefConverter().toJson,
+  matches: ReplyRef.validate,
 );
 
 final messageViewDescriptor = XRPCObjectDescriptor<MessageView>(
@@ -251,6 +266,16 @@ final deletedMessageViewDescriptor = XRPCObjectDescriptor<DeletedMessageView>(
   matches: DeletedMessageView.validate,
 );
 
+final messageBeforeUserJoinedGroupViewDescriptor =
+    XRPCObjectDescriptor<MessageBeforeUserJoinedGroupView>(
+      nsid: 'chat.bsky.convo.defs',
+      defName: 'messageBeforeUserJoinedGroupView',
+      fromJson: (json) => const MessageBeforeUserJoinedGroupViewConverter()
+          .fromJson(json.cast<String, dynamic>()),
+      toJson: const MessageBeforeUserJoinedGroupViewConverter().toJson,
+      matches: MessageBeforeUserJoinedGroupView.validate,
+    );
+
 final messageViewSenderDescriptor = XRPCObjectDescriptor<MessageViewSender>(
   nsid: 'chat.bsky.convo.defs',
   defName: 'messageViewSender',
@@ -378,6 +403,15 @@ final logDeleteMessageDescriptor = XRPCObjectDescriptor<LogDeleteMessage>(
       const LogDeleteMessageConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const LogDeleteMessageConverter().toJson,
   matches: LogDeleteMessage.validate,
+);
+
+final logReadMessageDescriptor = XRPCObjectDescriptor<LogReadMessage>(
+  nsid: 'chat.bsky.convo.defs',
+  defName: 'logReadMessage',
+  fromJson: (json) =>
+      const LogReadMessageConverter().fromJson(json.cast<String, dynamic>()),
+  toJson: const LogReadMessageConverter().toJson,
+  matches: LogReadMessage.validate,
 );
 
 final logAddReactionDescriptor = XRPCObjectDescriptor<LogAddReaction>(
@@ -561,3 +595,33 @@ final logOutgoingJoinRequestDescriptor =
       toJson: const LogOutgoingJoinRequestConverter().toJson,
       matches: LogOutgoingJoinRequest.validate,
     );
+
+final logWithdrawIncomingJoinRequestDescriptor =
+    XRPCObjectDescriptor<LogWithdrawIncomingJoinRequest>(
+      nsid: 'chat.bsky.convo.defs',
+      defName: 'logWithdrawIncomingJoinRequest',
+      fromJson: (json) => const LogWithdrawIncomingJoinRequestConverter()
+          .fromJson(json.cast<String, dynamic>()),
+      toJson: const LogWithdrawIncomingJoinRequestConverter().toJson,
+      matches: LogWithdrawIncomingJoinRequest.validate,
+    );
+
+final logWithdrawOutgoingJoinRequestDescriptor =
+    XRPCObjectDescriptor<LogWithdrawOutgoingJoinRequest>(
+      nsid: 'chat.bsky.convo.defs',
+      defName: 'logWithdrawOutgoingJoinRequest',
+      fromJson: (json) => const LogWithdrawOutgoingJoinRequestConverter()
+          .fromJson(json.cast<String, dynamic>()),
+      toJson: const LogWithdrawOutgoingJoinRequestConverter().toJson,
+      matches: LogWithdrawOutgoingJoinRequest.validate,
+    );
+
+final logReadJoinRequestsDescriptor = XRPCObjectDescriptor<LogReadJoinRequests>(
+  nsid: 'chat.bsky.convo.defs',
+  defName: 'logReadJoinRequests',
+  fromJson: (json) => const LogReadJoinRequestsConverter().fromJson(
+    json.cast<String, dynamic>(),
+  ),
+  toJson: const LogReadJoinRequestsConverter().toJson,
+  matches: LogReadJoinRequests.validate,
+);

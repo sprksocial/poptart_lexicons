@@ -13,6 +13,7 @@ import './event_group_chat_member_added.dart';
 import './event_group_chat_member_joined.dart';
 import './event_group_chat_member_left.dart';
 import './event_group_chat_updated.dart';
+import './event_rate_limit_exceeded.dart';
 import './input.dart';
 import 'package:poptart_xrpc/poptart_xrpc.dart';
 
@@ -124,6 +125,17 @@ final eventGroupChatUpdatedDescriptor =
       ),
       toJson: const EventGroupChatUpdatedConverter().toJson,
       matches: EventGroupChatUpdated.validate,
+    );
+
+final eventRateLimitExceededDescriptor =
+    XRPCObjectDescriptor<EventRateLimitExceeded>(
+      nsid: 'chat.bsky.moderation.subscribeModEvents',
+      defName: 'eventRateLimitExceeded',
+      fromJson: (json) => const EventRateLimitExceededConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const EventRateLimitExceededConverter().toJson,
+      matches: EventRateLimitExceeded.validate,
     );
 
 final methodDescriptor =

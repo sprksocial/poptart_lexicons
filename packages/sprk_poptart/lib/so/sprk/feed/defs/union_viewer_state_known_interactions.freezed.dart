@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UViewerStateKnownInteractionsKnownRepost extends UViewerStateKnownInteractions {
   const UViewerStateKnownInteractionsKnownRepost({required this.data}): super._();
-  
+
 
 @override final  KnownRepost data;
 
@@ -251,7 +251,7 @@ as KnownRepost,
 @override
 @pragma('vm:prefer-inline')
 $KnownRepostCopyWith<$Res> get data {
-  
+
   return $KnownRepostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $KnownRepostCopyWith<$Res> get data {
 
 class UViewerStateKnownInteractionsKnownLike extends UViewerStateKnownInteractions {
   const UViewerStateKnownInteractionsKnownLike({required this.data}): super._();
-  
+
 
 @override final  KnownLike data;
 
@@ -326,7 +326,7 @@ as KnownLike,
 @override
 @pragma('vm:prefer-inline')
 $KnownLikeCopyWith<$Res> get data {
-  
+
   return $KnownLikeCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $KnownLikeCopyWith<$Res> get data {
 
 class UViewerStateKnownInteractionsKnownReply extends UViewerStateKnownInteractions {
   const UViewerStateKnownInteractionsKnownReply({required this.data}): super._();
-  
+
 
 @override final  KnownReply data;
 
@@ -401,7 +401,7 @@ as KnownReply,
 @override
 @pragma('vm:prefer-inline')
 $KnownReplyCopyWith<$Res> get data {
-  
+
   return $KnownReplyCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $KnownReplyCopyWith<$Res> get data {
 
 class UViewerStateKnownInteractionsUnknown extends UViewerStateKnownInteractions {
   const UViewerStateKnownInteractionsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

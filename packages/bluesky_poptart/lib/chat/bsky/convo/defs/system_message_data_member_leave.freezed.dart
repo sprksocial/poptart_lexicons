@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageReferredUserCopyWith<$Res> get member {
-  
+
   return $SystemMessageReferredUserCopyWith<$Res>(_self.member, (value) {
     return _then(_self.copyWith(member: value));
   });
@@ -301,7 +301,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageReferredUserCopyWith<$Res> get member {
-  
+
   return $SystemMessageReferredUserCopyWith<$Res>(_self.member, (value) {
     return _then(_self.copyWith(member: value));
   });

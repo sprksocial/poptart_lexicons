@@ -230,7 +230,7 @@ return unknown(_that.data);case _:
 
 class UConvoGetLogLogsLogBeginConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogBeginConvo({required this.data}): super._();
-  
+
 
 @override final  LogBeginConvo data;
 
@@ -293,7 +293,7 @@ as LogBeginConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogBeginConvoCopyWith<$Res> get data {
-  
+
   return $LogBeginConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -305,7 +305,7 @@ $LogBeginConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogAcceptConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogAcceptConvo({required this.data}): super._();
-  
+
 
 @override final  LogAcceptConvo data;
 
@@ -368,7 +368,7 @@ as LogAcceptConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogAcceptConvoCopyWith<$Res> get data {
-  
+
   return $LogAcceptConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -380,7 +380,7 @@ $LogAcceptConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogLeaveConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogLeaveConvo({required this.data}): super._();
-  
+
 
 @override final  LogLeaveConvo data;
 
@@ -443,7 +443,7 @@ as LogLeaveConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogLeaveConvoCopyWith<$Res> get data {
-  
+
   return $LogLeaveConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -455,7 +455,7 @@ $LogLeaveConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogMuteConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogMuteConvo({required this.data}): super._();
-  
+
 
 @override final  LogMuteConvo data;
 
@@ -518,7 +518,7 @@ as LogMuteConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogMuteConvoCopyWith<$Res> get data {
-  
+
   return $LogMuteConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -530,7 +530,7 @@ $LogMuteConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogUnmuteConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogUnmuteConvo({required this.data}): super._();
-  
+
 
 @override final  LogUnmuteConvo data;
 
@@ -593,7 +593,7 @@ as LogUnmuteConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogUnmuteConvoCopyWith<$Res> get data {
-  
+
   return $LogUnmuteConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -605,7 +605,7 @@ $LogUnmuteConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogCreateMessage extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogCreateMessage({required this.data}): super._();
-  
+
 
 @override final  LogCreateMessage data;
 
@@ -668,7 +668,7 @@ as LogCreateMessage,
 @override
 @pragma('vm:prefer-inline')
 $LogCreateMessageCopyWith<$Res> get data {
-  
+
   return $LogCreateMessageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -680,7 +680,7 @@ $LogCreateMessageCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogDeleteMessage extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogDeleteMessage({required this.data}): super._();
-  
+
 
 @override final  LogDeleteMessage data;
 
@@ -743,7 +743,7 @@ as LogDeleteMessage,
 @override
 @pragma('vm:prefer-inline')
 $LogDeleteMessageCopyWith<$Res> get data {
-  
+
   return $LogDeleteMessageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -755,7 +755,7 @@ $LogDeleteMessageCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogReadMessage extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogReadMessage({required this.data}): super._();
-  
+
 
 @override final  LogReadMessage data;
 
@@ -818,7 +818,7 @@ as LogReadMessage,
 @override
 @pragma('vm:prefer-inline')
 $LogReadMessageCopyWith<$Res> get data {
-  
+
   return $LogReadMessageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -830,7 +830,7 @@ $LogReadMessageCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogAddReaction extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogAddReaction({required this.data}): super._();
-  
+
 
 @override final  LogAddReaction data;
 
@@ -893,7 +893,7 @@ as LogAddReaction,
 @override
 @pragma('vm:prefer-inline')
 $LogAddReactionCopyWith<$Res> get data {
-  
+
   return $LogAddReactionCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -905,7 +905,7 @@ $LogAddReactionCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogRemoveReaction extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogRemoveReaction({required this.data}): super._();
-  
+
 
 @override final  LogRemoveReaction data;
 
@@ -968,7 +968,7 @@ as LogRemoveReaction,
 @override
 @pragma('vm:prefer-inline')
 $LogRemoveReactionCopyWith<$Res> get data {
-  
+
   return $LogRemoveReactionCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -980,7 +980,7 @@ $LogRemoveReactionCopyWith<$Res> get data {
 
 class UConvoGetLogLogsUnknown extends UConvoGetLogLogs {
   const UConvoGetLogLogsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

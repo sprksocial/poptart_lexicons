@@ -22,7 +22,7 @@ final methodDescriptor =
       outputFromJson: (json) =>
           const MessageViewConverter().fromJson(json.cast<String, dynamic>()),
       outputToJson: const MessageViewConverter().toJson,
-      errors: const ['ConvoLocked', 'InvalidConvo'],
+      errors: const ['ConvoLocked', 'InvalidConvo', 'ReplyTargetNotFound'],
     );
 
 final chatBskyConvoSendMessage = methodDescriptor;

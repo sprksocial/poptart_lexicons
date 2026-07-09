@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SetViewCopyWith<$Res> get set {
-  
+
   return $SetViewCopyWith<$Res>(_self.set, (value) {
     return _then(_self.copyWith(set: value));
   });
@@ -308,7 +308,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SetViewCopyWith<$Res> get set {
-  
+
   return $SetViewCopyWith<$Res>(_self.set, (value) {
     return _then(_self.copyWith(set: value));
   });

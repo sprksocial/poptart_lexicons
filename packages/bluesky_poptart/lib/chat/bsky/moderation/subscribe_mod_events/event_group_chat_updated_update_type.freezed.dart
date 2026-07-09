@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EventGroupChatUpdatedUpdateTypeKnownValue extends EventGroupChatUpdatedUpdateType {
   const EventGroupChatUpdatedUpdateTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEventGroupChatUpdatedUpdateType data;
 
@@ -248,7 +248,7 @@ as KnownEventGroupChatUpdatedUpdateType,
 
 class EventGroupChatUpdatedUpdateTypeUnknown extends EventGroupChatUpdatedUpdateType {
   const EventGroupChatUpdatedUpdateTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

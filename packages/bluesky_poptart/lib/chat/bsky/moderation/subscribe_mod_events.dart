@@ -22,5 +22,6 @@ export 'subscribe_mod_events/event_group_chat_member_left_leave_method.dart';
 export 'subscribe_mod_events/event_group_chat_updated.dart';
 export 'subscribe_mod_events/event_group_chat_updated_lock_reason.dart';
 export 'subscribe_mod_events/event_group_chat_updated_update_type.dart';
+export 'subscribe_mod_events/event_rate_limit_exceeded.dart';
 export 'subscribe_mod_events/input.dart';
 export 'subscribe_mod_events/union_main_message.dart';

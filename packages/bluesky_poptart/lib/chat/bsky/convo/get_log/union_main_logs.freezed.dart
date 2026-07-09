@@ -55,7 +55,7 @@ extension UConvoGetLogLogsPatterns on UConvoGetLogLogs {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UConvoGetLogLogsLogBeginConvo value)?  logBeginConvo,TResult Function( UConvoGetLogLogsLogAcceptConvo value)?  logAcceptConvo,TResult Function( UConvoGetLogLogsLogLeaveConvo value)?  logLeaveConvo,TResult Function( UConvoGetLogLogsLogMuteConvo value)?  logMuteConvo,TResult Function( UConvoGetLogLogsLogUnmuteConvo value)?  logUnmuteConvo,TResult Function( UConvoGetLogLogsLogCreateMessage value)?  logCreateMessage,TResult Function( UConvoGetLogLogsLogDeleteMessage value)?  logDeleteMessage,TResult Function( UConvoGetLogLogsLogAddReaction value)?  logAddReaction,TResult Function( UConvoGetLogLogsLogRemoveReaction value)?  logRemoveReaction,TResult Function( UConvoGetLogLogsLogReadConvo value)?  logReadConvo,TResult Function( UConvoGetLogLogsLogAddMember value)?  logAddMember,TResult Function( UConvoGetLogLogsLogRemoveMember value)?  logRemoveMember,TResult Function( UConvoGetLogLogsLogMemberJoin value)?  logMemberJoin,TResult Function( UConvoGetLogLogsLogMemberLeave value)?  logMemberLeave,TResult Function( UConvoGetLogLogsLogLockConvo value)?  logLockConvo,TResult Function( UConvoGetLogLogsLogUnlockConvo value)?  logUnlockConvo,TResult Function( UConvoGetLogLogsLogLockConvoPermanently value)?  logLockConvoPermanently,TResult Function( UConvoGetLogLogsLogEditGroup value)?  logEditGroup,TResult Function( UConvoGetLogLogsLogCreateJoinLink value)?  logCreateJoinLink,TResult Function( UConvoGetLogLogsLogEditJoinLink value)?  logEditJoinLink,TResult Function( UConvoGetLogLogsLogEnableJoinLink value)?  logEnableJoinLink,TResult Function( UConvoGetLogLogsLogDisableJoinLink value)?  logDisableJoinLink,TResult Function( UConvoGetLogLogsLogIncomingJoinRequest value)?  logIncomingJoinRequest,TResult Function( UConvoGetLogLogsLogApproveJoinRequest value)?  logApproveJoinRequest,TResult Function( UConvoGetLogLogsLogRejectJoinRequest value)?  logRejectJoinRequest,TResult Function( UConvoGetLogLogsLogOutgoingJoinRequest value)?  logOutgoingJoinRequest,TResult Function( UConvoGetLogLogsUnknown value)?  unknown,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UConvoGetLogLogsLogBeginConvo value)?  logBeginConvo,TResult Function( UConvoGetLogLogsLogAcceptConvo value)?  logAcceptConvo,TResult Function( UConvoGetLogLogsLogLeaveConvo value)?  logLeaveConvo,TResult Function( UConvoGetLogLogsLogMuteConvo value)?  logMuteConvo,TResult Function( UConvoGetLogLogsLogUnmuteConvo value)?  logUnmuteConvo,TResult Function( UConvoGetLogLogsLogCreateMessage value)?  logCreateMessage,TResult Function( UConvoGetLogLogsLogDeleteMessage value)?  logDeleteMessage,TResult Function( UConvoGetLogLogsLogAddReaction value)?  logAddReaction,TResult Function( UConvoGetLogLogsLogRemoveReaction value)?  logRemoveReaction,TResult Function( UConvoGetLogLogsLogReadConvo value)?  logReadConvo,TResult Function( UConvoGetLogLogsLogAddMember value)?  logAddMember,TResult Function( UConvoGetLogLogsLogRemoveMember value)?  logRemoveMember,TResult Function( UConvoGetLogLogsLogMemberJoin value)?  logMemberJoin,TResult Function( UConvoGetLogLogsLogMemberLeave value)?  logMemberLeave,TResult Function( UConvoGetLogLogsLogLockConvo value)?  logLockConvo,TResult Function( UConvoGetLogLogsLogUnlockConvo value)?  logUnlockConvo,TResult Function( UConvoGetLogLogsLogLockConvoPermanently value)?  logLockConvoPermanently,TResult Function( UConvoGetLogLogsLogEditGroup value)?  logEditGroup,TResult Function( UConvoGetLogLogsLogCreateJoinLink value)?  logCreateJoinLink,TResult Function( UConvoGetLogLogsLogEditJoinLink value)?  logEditJoinLink,TResult Function( UConvoGetLogLogsLogEnableJoinLink value)?  logEnableJoinLink,TResult Function( UConvoGetLogLogsLogDisableJoinLink value)?  logDisableJoinLink,TResult Function( UConvoGetLogLogsLogIncomingJoinRequest value)?  logIncomingJoinRequest,TResult Function( UConvoGetLogLogsLogApproveJoinRequest value)?  logApproveJoinRequest,TResult Function( UConvoGetLogLogsLogRejectJoinRequest value)?  logRejectJoinRequest,TResult Function( UConvoGetLogLogsLogOutgoingJoinRequest value)?  logOutgoingJoinRequest,TResult Function( UConvoGetLogLogsLogWithdrawIncomingJoinRequest value)?  logWithdrawIncomingJoinRequest,TResult Function( UConvoGetLogLogsLogWithdrawOutgoingJoinRequest value)?  logWithdrawOutgoingJoinRequest,TResult Function( UConvoGetLogLogsLogReadJoinRequests value)?  logReadJoinRequests,TResult Function( UConvoGetLogLogsUnknown value)?  unknown,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case UConvoGetLogLogsLogBeginConvo() when logBeginConvo != null:
@@ -84,7 +84,10 @@ return logDisableJoinLink(_that);case UConvoGetLogLogsLogIncomingJoinRequest() w
 return logIncomingJoinRequest(_that);case UConvoGetLogLogsLogApproveJoinRequest() when logApproveJoinRequest != null:
 return logApproveJoinRequest(_that);case UConvoGetLogLogsLogRejectJoinRequest() when logRejectJoinRequest != null:
 return logRejectJoinRequest(_that);case UConvoGetLogLogsLogOutgoingJoinRequest() when logOutgoingJoinRequest != null:
-return logOutgoingJoinRequest(_that);case UConvoGetLogLogsUnknown() when unknown != null:
+return logOutgoingJoinRequest(_that);case UConvoGetLogLogsLogWithdrawIncomingJoinRequest() when logWithdrawIncomingJoinRequest != null:
+return logWithdrawIncomingJoinRequest(_that);case UConvoGetLogLogsLogWithdrawOutgoingJoinRequest() when logWithdrawOutgoingJoinRequest != null:
+return logWithdrawOutgoingJoinRequest(_that);case UConvoGetLogLogsLogReadJoinRequests() when logReadJoinRequests != null:
+return logReadJoinRequests(_that);case UConvoGetLogLogsUnknown() when unknown != null:
 return unknown(_that);case _:
   return orElse();
 
@@ -103,7 +106,7 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UConvoGetLogLogsLogBeginConvo value)  logBeginConvo,required TResult Function( UConvoGetLogLogsLogAcceptConvo value)  logAcceptConvo,required TResult Function( UConvoGetLogLogsLogLeaveConvo value)  logLeaveConvo,required TResult Function( UConvoGetLogLogsLogMuteConvo value)  logMuteConvo,required TResult Function( UConvoGetLogLogsLogUnmuteConvo value)  logUnmuteConvo,required TResult Function( UConvoGetLogLogsLogCreateMessage value)  logCreateMessage,required TResult Function( UConvoGetLogLogsLogDeleteMessage value)  logDeleteMessage,required TResult Function( UConvoGetLogLogsLogAddReaction value)  logAddReaction,required TResult Function( UConvoGetLogLogsLogRemoveReaction value)  logRemoveReaction,required TResult Function( UConvoGetLogLogsLogReadConvo value)  logReadConvo,required TResult Function( UConvoGetLogLogsLogAddMember value)  logAddMember,required TResult Function( UConvoGetLogLogsLogRemoveMember value)  logRemoveMember,required TResult Function( UConvoGetLogLogsLogMemberJoin value)  logMemberJoin,required TResult Function( UConvoGetLogLogsLogMemberLeave value)  logMemberLeave,required TResult Function( UConvoGetLogLogsLogLockConvo value)  logLockConvo,required TResult Function( UConvoGetLogLogsLogUnlockConvo value)  logUnlockConvo,required TResult Function( UConvoGetLogLogsLogLockConvoPermanently value)  logLockConvoPermanently,required TResult Function( UConvoGetLogLogsLogEditGroup value)  logEditGroup,required TResult Function( UConvoGetLogLogsLogCreateJoinLink value)  logCreateJoinLink,required TResult Function( UConvoGetLogLogsLogEditJoinLink value)  logEditJoinLink,required TResult Function( UConvoGetLogLogsLogEnableJoinLink value)  logEnableJoinLink,required TResult Function( UConvoGetLogLogsLogDisableJoinLink value)  logDisableJoinLink,required TResult Function( UConvoGetLogLogsLogIncomingJoinRequest value)  logIncomingJoinRequest,required TResult Function( UConvoGetLogLogsLogApproveJoinRequest value)  logApproveJoinRequest,required TResult Function( UConvoGetLogLogsLogRejectJoinRequest value)  logRejectJoinRequest,required TResult Function( UConvoGetLogLogsLogOutgoingJoinRequest value)  logOutgoingJoinRequest,required TResult Function( UConvoGetLogLogsUnknown value)  unknown,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UConvoGetLogLogsLogBeginConvo value)  logBeginConvo,required TResult Function( UConvoGetLogLogsLogAcceptConvo value)  logAcceptConvo,required TResult Function( UConvoGetLogLogsLogLeaveConvo value)  logLeaveConvo,required TResult Function( UConvoGetLogLogsLogMuteConvo value)  logMuteConvo,required TResult Function( UConvoGetLogLogsLogUnmuteConvo value)  logUnmuteConvo,required TResult Function( UConvoGetLogLogsLogCreateMessage value)  logCreateMessage,required TResult Function( UConvoGetLogLogsLogDeleteMessage value)  logDeleteMessage,required TResult Function( UConvoGetLogLogsLogAddReaction value)  logAddReaction,required TResult Function( UConvoGetLogLogsLogRemoveReaction value)  logRemoveReaction,required TResult Function( UConvoGetLogLogsLogReadConvo value)  logReadConvo,required TResult Function( UConvoGetLogLogsLogAddMember value)  logAddMember,required TResult Function( UConvoGetLogLogsLogRemoveMember value)  logRemoveMember,required TResult Function( UConvoGetLogLogsLogMemberJoin value)  logMemberJoin,required TResult Function( UConvoGetLogLogsLogMemberLeave value)  logMemberLeave,required TResult Function( UConvoGetLogLogsLogLockConvo value)  logLockConvo,required TResult Function( UConvoGetLogLogsLogUnlockConvo value)  logUnlockConvo,required TResult Function( UConvoGetLogLogsLogLockConvoPermanently value)  logLockConvoPermanently,required TResult Function( UConvoGetLogLogsLogEditGroup value)  logEditGroup,required TResult Function( UConvoGetLogLogsLogCreateJoinLink value)  logCreateJoinLink,required TResult Function( UConvoGetLogLogsLogEditJoinLink value)  logEditJoinLink,required TResult Function( UConvoGetLogLogsLogEnableJoinLink value)  logEnableJoinLink,required TResult Function( UConvoGetLogLogsLogDisableJoinLink value)  logDisableJoinLink,required TResult Function( UConvoGetLogLogsLogIncomingJoinRequest value)  logIncomingJoinRequest,required TResult Function( UConvoGetLogLogsLogApproveJoinRequest value)  logApproveJoinRequest,required TResult Function( UConvoGetLogLogsLogRejectJoinRequest value)  logRejectJoinRequest,required TResult Function( UConvoGetLogLogsLogOutgoingJoinRequest value)  logOutgoingJoinRequest,required TResult Function( UConvoGetLogLogsLogWithdrawIncomingJoinRequest value)  logWithdrawIncomingJoinRequest,required TResult Function( UConvoGetLogLogsLogWithdrawOutgoingJoinRequest value)  logWithdrawOutgoingJoinRequest,required TResult Function( UConvoGetLogLogsLogReadJoinRequests value)  logReadJoinRequests,required TResult Function( UConvoGetLogLogsUnknown value)  unknown,}){
 final _that = this;
 switch (_that) {
 case UConvoGetLogLogsLogBeginConvo():
@@ -132,7 +135,10 @@ return logDisableJoinLink(_that);case UConvoGetLogLogsLogIncomingJoinRequest():
 return logIncomingJoinRequest(_that);case UConvoGetLogLogsLogApproveJoinRequest():
 return logApproveJoinRequest(_that);case UConvoGetLogLogsLogRejectJoinRequest():
 return logRejectJoinRequest(_that);case UConvoGetLogLogsLogOutgoingJoinRequest():
-return logOutgoingJoinRequest(_that);case UConvoGetLogLogsUnknown():
+return logOutgoingJoinRequest(_that);case UConvoGetLogLogsLogWithdrawIncomingJoinRequest():
+return logWithdrawIncomingJoinRequest(_that);case UConvoGetLogLogsLogWithdrawOutgoingJoinRequest():
+return logWithdrawOutgoingJoinRequest(_that);case UConvoGetLogLogsLogReadJoinRequests():
+return logReadJoinRequests(_that);case UConvoGetLogLogsUnknown():
 return unknown(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
@@ -147,7 +153,7 @@ return unknown(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UConvoGetLogLogsLogBeginConvo value)?  logBeginConvo,TResult? Function( UConvoGetLogLogsLogAcceptConvo value)?  logAcceptConvo,TResult? Function( UConvoGetLogLogsLogLeaveConvo value)?  logLeaveConvo,TResult? Function( UConvoGetLogLogsLogMuteConvo value)?  logMuteConvo,TResult? Function( UConvoGetLogLogsLogUnmuteConvo value)?  logUnmuteConvo,TResult? Function( UConvoGetLogLogsLogCreateMessage value)?  logCreateMessage,TResult? Function( UConvoGetLogLogsLogDeleteMessage value)?  logDeleteMessage,TResult? Function( UConvoGetLogLogsLogAddReaction value)?  logAddReaction,TResult? Function( UConvoGetLogLogsLogRemoveReaction value)?  logRemoveReaction,TResult? Function( UConvoGetLogLogsLogReadConvo value)?  logReadConvo,TResult? Function( UConvoGetLogLogsLogAddMember value)?  logAddMember,TResult? Function( UConvoGetLogLogsLogRemoveMember value)?  logRemoveMember,TResult? Function( UConvoGetLogLogsLogMemberJoin value)?  logMemberJoin,TResult? Function( UConvoGetLogLogsLogMemberLeave value)?  logMemberLeave,TResult? Function( UConvoGetLogLogsLogLockConvo value)?  logLockConvo,TResult? Function( UConvoGetLogLogsLogUnlockConvo value)?  logUnlockConvo,TResult? Function( UConvoGetLogLogsLogLockConvoPermanently value)?  logLockConvoPermanently,TResult? Function( UConvoGetLogLogsLogEditGroup value)?  logEditGroup,TResult? Function( UConvoGetLogLogsLogCreateJoinLink value)?  logCreateJoinLink,TResult? Function( UConvoGetLogLogsLogEditJoinLink value)?  logEditJoinLink,TResult? Function( UConvoGetLogLogsLogEnableJoinLink value)?  logEnableJoinLink,TResult? Function( UConvoGetLogLogsLogDisableJoinLink value)?  logDisableJoinLink,TResult? Function( UConvoGetLogLogsLogIncomingJoinRequest value)?  logIncomingJoinRequest,TResult? Function( UConvoGetLogLogsLogApproveJoinRequest value)?  logApproveJoinRequest,TResult? Function( UConvoGetLogLogsLogRejectJoinRequest value)?  logRejectJoinRequest,TResult? Function( UConvoGetLogLogsLogOutgoingJoinRequest value)?  logOutgoingJoinRequest,TResult? Function( UConvoGetLogLogsUnknown value)?  unknown,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UConvoGetLogLogsLogBeginConvo value)?  logBeginConvo,TResult? Function( UConvoGetLogLogsLogAcceptConvo value)?  logAcceptConvo,TResult? Function( UConvoGetLogLogsLogLeaveConvo value)?  logLeaveConvo,TResult? Function( UConvoGetLogLogsLogMuteConvo value)?  logMuteConvo,TResult? Function( UConvoGetLogLogsLogUnmuteConvo value)?  logUnmuteConvo,TResult? Function( UConvoGetLogLogsLogCreateMessage value)?  logCreateMessage,TResult? Function( UConvoGetLogLogsLogDeleteMessage value)?  logDeleteMessage,TResult? Function( UConvoGetLogLogsLogAddReaction value)?  logAddReaction,TResult? Function( UConvoGetLogLogsLogRemoveReaction value)?  logRemoveReaction,TResult? Function( UConvoGetLogLogsLogReadConvo value)?  logReadConvo,TResult? Function( UConvoGetLogLogsLogAddMember value)?  logAddMember,TResult? Function( UConvoGetLogLogsLogRemoveMember value)?  logRemoveMember,TResult? Function( UConvoGetLogLogsLogMemberJoin value)?  logMemberJoin,TResult? Function( UConvoGetLogLogsLogMemberLeave value)?  logMemberLeave,TResult? Function( UConvoGetLogLogsLogLockConvo value)?  logLockConvo,TResult? Function( UConvoGetLogLogsLogUnlockConvo value)?  logUnlockConvo,TResult? Function( UConvoGetLogLogsLogLockConvoPermanently value)?  logLockConvoPermanently,TResult? Function( UConvoGetLogLogsLogEditGroup value)?  logEditGroup,TResult? Function( UConvoGetLogLogsLogCreateJoinLink value)?  logCreateJoinLink,TResult? Function( UConvoGetLogLogsLogEditJoinLink value)?  logEditJoinLink,TResult? Function( UConvoGetLogLogsLogEnableJoinLink value)?  logEnableJoinLink,TResult? Function( UConvoGetLogLogsLogDisableJoinLink value)?  logDisableJoinLink,TResult? Function( UConvoGetLogLogsLogIncomingJoinRequest value)?  logIncomingJoinRequest,TResult? Function( UConvoGetLogLogsLogApproveJoinRequest value)?  logApproveJoinRequest,TResult? Function( UConvoGetLogLogsLogRejectJoinRequest value)?  logRejectJoinRequest,TResult? Function( UConvoGetLogLogsLogOutgoingJoinRequest value)?  logOutgoingJoinRequest,TResult? Function( UConvoGetLogLogsLogWithdrawIncomingJoinRequest value)?  logWithdrawIncomingJoinRequest,TResult? Function( UConvoGetLogLogsLogWithdrawOutgoingJoinRequest value)?  logWithdrawOutgoingJoinRequest,TResult? Function( UConvoGetLogLogsLogReadJoinRequests value)?  logReadJoinRequests,TResult? Function( UConvoGetLogLogsUnknown value)?  unknown,}){
 final _that = this;
 switch (_that) {
 case UConvoGetLogLogsLogBeginConvo() when logBeginConvo != null:
@@ -176,7 +182,10 @@ return logDisableJoinLink(_that);case UConvoGetLogLogsLogIncomingJoinRequest() w
 return logIncomingJoinRequest(_that);case UConvoGetLogLogsLogApproveJoinRequest() when logApproveJoinRequest != null:
 return logApproveJoinRequest(_that);case UConvoGetLogLogsLogRejectJoinRequest() when logRejectJoinRequest != null:
 return logRejectJoinRequest(_that);case UConvoGetLogLogsLogOutgoingJoinRequest() when logOutgoingJoinRequest != null:
-return logOutgoingJoinRequest(_that);case UConvoGetLogLogsUnknown() when unknown != null:
+return logOutgoingJoinRequest(_that);case UConvoGetLogLogsLogWithdrawIncomingJoinRequest() when logWithdrawIncomingJoinRequest != null:
+return logWithdrawIncomingJoinRequest(_that);case UConvoGetLogLogsLogWithdrawOutgoingJoinRequest() when logWithdrawOutgoingJoinRequest != null:
+return logWithdrawOutgoingJoinRequest(_that);case UConvoGetLogLogsLogReadJoinRequests() when logReadJoinRequests != null:
+return logReadJoinRequests(_that);case UConvoGetLogLogsUnknown() when unknown != null:
 return unknown(_that);case _:
   return null;
 
@@ -194,7 +203,7 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( LogBeginConvo data)?  logBeginConvo,TResult Function( LogAcceptConvo data)?  logAcceptConvo,TResult Function( LogLeaveConvo data)?  logLeaveConvo,TResult Function( LogMuteConvo data)?  logMuteConvo,TResult Function( LogUnmuteConvo data)?  logUnmuteConvo,TResult Function( LogCreateMessage data)?  logCreateMessage,TResult Function( LogDeleteMessage data)?  logDeleteMessage,TResult Function( LogAddReaction data)?  logAddReaction,TResult Function( LogRemoveReaction data)?  logRemoveReaction,TResult Function( LogReadConvo data)?  logReadConvo,TResult Function( LogAddMember data)?  logAddMember,TResult Function( LogRemoveMember data)?  logRemoveMember,TResult Function( LogMemberJoin data)?  logMemberJoin,TResult Function( LogMemberLeave data)?  logMemberLeave,TResult Function( LogLockConvo data)?  logLockConvo,TResult Function( LogUnlockConvo data)?  logUnlockConvo,TResult Function( LogLockConvoPermanently data)?  logLockConvoPermanently,TResult Function( LogEditGroup data)?  logEditGroup,TResult Function( LogCreateJoinLink data)?  logCreateJoinLink,TResult Function( LogEditJoinLink data)?  logEditJoinLink,TResult Function( LogEnableJoinLink data)?  logEnableJoinLink,TResult Function( LogDisableJoinLink data)?  logDisableJoinLink,TResult Function( LogIncomingJoinRequest data)?  logIncomingJoinRequest,TResult Function( LogApproveJoinRequest data)?  logApproveJoinRequest,TResult Function( LogRejectJoinRequest data)?  logRejectJoinRequest,TResult Function( LogOutgoingJoinRequest data)?  logOutgoingJoinRequest,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( LogBeginConvo data)?  logBeginConvo,TResult Function( LogAcceptConvo data)?  logAcceptConvo,TResult Function( LogLeaveConvo data)?  logLeaveConvo,TResult Function( LogMuteConvo data)?  logMuteConvo,TResult Function( LogUnmuteConvo data)?  logUnmuteConvo,TResult Function( LogCreateMessage data)?  logCreateMessage,TResult Function( LogDeleteMessage data)?  logDeleteMessage,TResult Function( LogAddReaction data)?  logAddReaction,TResult Function( LogRemoveReaction data)?  logRemoveReaction,TResult Function( LogReadConvo data)?  logReadConvo,TResult Function( LogAddMember data)?  logAddMember,TResult Function( LogRemoveMember data)?  logRemoveMember,TResult Function( LogMemberJoin data)?  logMemberJoin,TResult Function( LogMemberLeave data)?  logMemberLeave,TResult Function( LogLockConvo data)?  logLockConvo,TResult Function( LogUnlockConvo data)?  logUnlockConvo,TResult Function( LogLockConvoPermanently data)?  logLockConvoPermanently,TResult Function( LogEditGroup data)?  logEditGroup,TResult Function( LogCreateJoinLink data)?  logCreateJoinLink,TResult Function( LogEditJoinLink data)?  logEditJoinLink,TResult Function( LogEnableJoinLink data)?  logEnableJoinLink,TResult Function( LogDisableJoinLink data)?  logDisableJoinLink,TResult Function( LogIncomingJoinRequest data)?  logIncomingJoinRequest,TResult Function( LogApproveJoinRequest data)?  logApproveJoinRequest,TResult Function( LogRejectJoinRequest data)?  logRejectJoinRequest,TResult Function( LogOutgoingJoinRequest data)?  logOutgoingJoinRequest,TResult Function( LogWithdrawIncomingJoinRequest data)?  logWithdrawIncomingJoinRequest,TResult Function( LogWithdrawOutgoingJoinRequest data)?  logWithdrawOutgoingJoinRequest,TResult Function( LogReadJoinRequests data)?  logReadJoinRequests,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case UConvoGetLogLogsLogBeginConvo() when logBeginConvo != null:
 return logBeginConvo(_that.data);case UConvoGetLogLogsLogAcceptConvo() when logAcceptConvo != null:
@@ -222,7 +231,10 @@ return logDisableJoinLink(_that.data);case UConvoGetLogLogsLogIncomingJoinReques
 return logIncomingJoinRequest(_that.data);case UConvoGetLogLogsLogApproveJoinRequest() when logApproveJoinRequest != null:
 return logApproveJoinRequest(_that.data);case UConvoGetLogLogsLogRejectJoinRequest() when logRejectJoinRequest != null:
 return logRejectJoinRequest(_that.data);case UConvoGetLogLogsLogOutgoingJoinRequest() when logOutgoingJoinRequest != null:
-return logOutgoingJoinRequest(_that.data);case UConvoGetLogLogsUnknown() when unknown != null:
+return logOutgoingJoinRequest(_that.data);case UConvoGetLogLogsLogWithdrawIncomingJoinRequest() when logWithdrawIncomingJoinRequest != null:
+return logWithdrawIncomingJoinRequest(_that.data);case UConvoGetLogLogsLogWithdrawOutgoingJoinRequest() when logWithdrawOutgoingJoinRequest != null:
+return logWithdrawOutgoingJoinRequest(_that.data);case UConvoGetLogLogsLogReadJoinRequests() when logReadJoinRequests != null:
+return logReadJoinRequests(_that.data);case UConvoGetLogLogsUnknown() when unknown != null:
 return unknown(_that.data);case _:
   return orElse();
 
@@ -241,7 +253,7 @@ return unknown(_that.data);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( LogBeginConvo data)  logBeginConvo,required TResult Function( LogAcceptConvo data)  logAcceptConvo,required TResult Function( LogLeaveConvo data)  logLeaveConvo,required TResult Function( LogMuteConvo data)  logMuteConvo,required TResult Function( LogUnmuteConvo data)  logUnmuteConvo,required TResult Function( LogCreateMessage data)  logCreateMessage,required TResult Function( LogDeleteMessage data)  logDeleteMessage,required TResult Function( LogAddReaction data)  logAddReaction,required TResult Function( LogRemoveReaction data)  logRemoveReaction,required TResult Function( LogReadConvo data)  logReadConvo,required TResult Function( LogAddMember data)  logAddMember,required TResult Function( LogRemoveMember data)  logRemoveMember,required TResult Function( LogMemberJoin data)  logMemberJoin,required TResult Function( LogMemberLeave data)  logMemberLeave,required TResult Function( LogLockConvo data)  logLockConvo,required TResult Function( LogUnlockConvo data)  logUnlockConvo,required TResult Function( LogLockConvoPermanently data)  logLockConvoPermanently,required TResult Function( LogEditGroup data)  logEditGroup,required TResult Function( LogCreateJoinLink data)  logCreateJoinLink,required TResult Function( LogEditJoinLink data)  logEditJoinLink,required TResult Function( LogEnableJoinLink data)  logEnableJoinLink,required TResult Function( LogDisableJoinLink data)  logDisableJoinLink,required TResult Function( LogIncomingJoinRequest data)  logIncomingJoinRequest,required TResult Function( LogApproveJoinRequest data)  logApproveJoinRequest,required TResult Function( LogRejectJoinRequest data)  logRejectJoinRequest,required TResult Function( LogOutgoingJoinRequest data)  logOutgoingJoinRequest,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( LogBeginConvo data)  logBeginConvo,required TResult Function( LogAcceptConvo data)  logAcceptConvo,required TResult Function( LogLeaveConvo data)  logLeaveConvo,required TResult Function( LogMuteConvo data)  logMuteConvo,required TResult Function( LogUnmuteConvo data)  logUnmuteConvo,required TResult Function( LogCreateMessage data)  logCreateMessage,required TResult Function( LogDeleteMessage data)  logDeleteMessage,required TResult Function( LogAddReaction data)  logAddReaction,required TResult Function( LogRemoveReaction data)  logRemoveReaction,required TResult Function( LogReadConvo data)  logReadConvo,required TResult Function( LogAddMember data)  logAddMember,required TResult Function( LogRemoveMember data)  logRemoveMember,required TResult Function( LogMemberJoin data)  logMemberJoin,required TResult Function( LogMemberLeave data)  logMemberLeave,required TResult Function( LogLockConvo data)  logLockConvo,required TResult Function( LogUnlockConvo data)  logUnlockConvo,required TResult Function( LogLockConvoPermanently data)  logLockConvoPermanently,required TResult Function( LogEditGroup data)  logEditGroup,required TResult Function( LogCreateJoinLink data)  logCreateJoinLink,required TResult Function( LogEditJoinLink data)  logEditJoinLink,required TResult Function( LogEnableJoinLink data)  logEnableJoinLink,required TResult Function( LogDisableJoinLink data)  logDisableJoinLink,required TResult Function( LogIncomingJoinRequest data)  logIncomingJoinRequest,required TResult Function( LogApproveJoinRequest data)  logApproveJoinRequest,required TResult Function( LogRejectJoinRequest data)  logRejectJoinRequest,required TResult Function( LogOutgoingJoinRequest data)  logOutgoingJoinRequest,required TResult Function( LogWithdrawIncomingJoinRequest data)  logWithdrawIncomingJoinRequest,required TResult Function( LogWithdrawOutgoingJoinRequest data)  logWithdrawOutgoingJoinRequest,required TResult Function( LogReadJoinRequests data)  logReadJoinRequests,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
 switch (_that) {
 case UConvoGetLogLogsLogBeginConvo():
 return logBeginConvo(_that.data);case UConvoGetLogLogsLogAcceptConvo():
@@ -269,7 +281,10 @@ return logDisableJoinLink(_that.data);case UConvoGetLogLogsLogIncomingJoinReques
 return logIncomingJoinRequest(_that.data);case UConvoGetLogLogsLogApproveJoinRequest():
 return logApproveJoinRequest(_that.data);case UConvoGetLogLogsLogRejectJoinRequest():
 return logRejectJoinRequest(_that.data);case UConvoGetLogLogsLogOutgoingJoinRequest():
-return logOutgoingJoinRequest(_that.data);case UConvoGetLogLogsUnknown():
+return logOutgoingJoinRequest(_that.data);case UConvoGetLogLogsLogWithdrawIncomingJoinRequest():
+return logWithdrawIncomingJoinRequest(_that.data);case UConvoGetLogLogsLogWithdrawOutgoingJoinRequest():
+return logWithdrawOutgoingJoinRequest(_that.data);case UConvoGetLogLogsLogReadJoinRequests():
+return logReadJoinRequests(_that.data);case UConvoGetLogLogsUnknown():
 return unknown(_that.data);}
 }
 /// A variant of `when` that fallback to returning `null`
@@ -284,7 +299,7 @@ return unknown(_that.data);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( LogBeginConvo data)?  logBeginConvo,TResult? Function( LogAcceptConvo data)?  logAcceptConvo,TResult? Function( LogLeaveConvo data)?  logLeaveConvo,TResult? Function( LogMuteConvo data)?  logMuteConvo,TResult? Function( LogUnmuteConvo data)?  logUnmuteConvo,TResult? Function( LogCreateMessage data)?  logCreateMessage,TResult? Function( LogDeleteMessage data)?  logDeleteMessage,TResult? Function( LogAddReaction data)?  logAddReaction,TResult? Function( LogRemoveReaction data)?  logRemoveReaction,TResult? Function( LogReadConvo data)?  logReadConvo,TResult? Function( LogAddMember data)?  logAddMember,TResult? Function( LogRemoveMember data)?  logRemoveMember,TResult? Function( LogMemberJoin data)?  logMemberJoin,TResult? Function( LogMemberLeave data)?  logMemberLeave,TResult? Function( LogLockConvo data)?  logLockConvo,TResult? Function( LogUnlockConvo data)?  logUnlockConvo,TResult? Function( LogLockConvoPermanently data)?  logLockConvoPermanently,TResult? Function( LogEditGroup data)?  logEditGroup,TResult? Function( LogCreateJoinLink data)?  logCreateJoinLink,TResult? Function( LogEditJoinLink data)?  logEditJoinLink,TResult? Function( LogEnableJoinLink data)?  logEnableJoinLink,TResult? Function( LogDisableJoinLink data)?  logDisableJoinLink,TResult? Function( LogIncomingJoinRequest data)?  logIncomingJoinRequest,TResult? Function( LogApproveJoinRequest data)?  logApproveJoinRequest,TResult? Function( LogRejectJoinRequest data)?  logRejectJoinRequest,TResult? Function( LogOutgoingJoinRequest data)?  logOutgoingJoinRequest,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( LogBeginConvo data)?  logBeginConvo,TResult? Function( LogAcceptConvo data)?  logAcceptConvo,TResult? Function( LogLeaveConvo data)?  logLeaveConvo,TResult? Function( LogMuteConvo data)?  logMuteConvo,TResult? Function( LogUnmuteConvo data)?  logUnmuteConvo,TResult? Function( LogCreateMessage data)?  logCreateMessage,TResult? Function( LogDeleteMessage data)?  logDeleteMessage,TResult? Function( LogAddReaction data)?  logAddReaction,TResult? Function( LogRemoveReaction data)?  logRemoveReaction,TResult? Function( LogReadConvo data)?  logReadConvo,TResult? Function( LogAddMember data)?  logAddMember,TResult? Function( LogRemoveMember data)?  logRemoveMember,TResult? Function( LogMemberJoin data)?  logMemberJoin,TResult? Function( LogMemberLeave data)?  logMemberLeave,TResult? Function( LogLockConvo data)?  logLockConvo,TResult? Function( LogUnlockConvo data)?  logUnlockConvo,TResult? Function( LogLockConvoPermanently data)?  logLockConvoPermanently,TResult? Function( LogEditGroup data)?  logEditGroup,TResult? Function( LogCreateJoinLink data)?  logCreateJoinLink,TResult? Function( LogEditJoinLink data)?  logEditJoinLink,TResult? Function( LogEnableJoinLink data)?  logEnableJoinLink,TResult? Function( LogDisableJoinLink data)?  logDisableJoinLink,TResult? Function( LogIncomingJoinRequest data)?  logIncomingJoinRequest,TResult? Function( LogApproveJoinRequest data)?  logApproveJoinRequest,TResult? Function( LogRejectJoinRequest data)?  logRejectJoinRequest,TResult? Function( LogOutgoingJoinRequest data)?  logOutgoingJoinRequest,TResult? Function( LogWithdrawIncomingJoinRequest data)?  logWithdrawIncomingJoinRequest,TResult? Function( LogWithdrawOutgoingJoinRequest data)?  logWithdrawOutgoingJoinRequest,TResult? Function( LogReadJoinRequests data)?  logReadJoinRequests,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
 switch (_that) {
 case UConvoGetLogLogsLogBeginConvo() when logBeginConvo != null:
 return logBeginConvo(_that.data);case UConvoGetLogLogsLogAcceptConvo() when logAcceptConvo != null:
@@ -312,7 +327,10 @@ return logDisableJoinLink(_that.data);case UConvoGetLogLogsLogIncomingJoinReques
 return logIncomingJoinRequest(_that.data);case UConvoGetLogLogsLogApproveJoinRequest() when logApproveJoinRequest != null:
 return logApproveJoinRequest(_that.data);case UConvoGetLogLogsLogRejectJoinRequest() when logRejectJoinRequest != null:
 return logRejectJoinRequest(_that.data);case UConvoGetLogLogsLogOutgoingJoinRequest() when logOutgoingJoinRequest != null:
-return logOutgoingJoinRequest(_that.data);case UConvoGetLogLogsUnknown() when unknown != null:
+return logOutgoingJoinRequest(_that.data);case UConvoGetLogLogsLogWithdrawIncomingJoinRequest() when logWithdrawIncomingJoinRequest != null:
+return logWithdrawIncomingJoinRequest(_that.data);case UConvoGetLogLogsLogWithdrawOutgoingJoinRequest() when logWithdrawOutgoingJoinRequest != null:
+return logWithdrawOutgoingJoinRequest(_that.data);case UConvoGetLogLogsLogReadJoinRequests() when logReadJoinRequests != null:
+return logReadJoinRequests(_that.data);case UConvoGetLogLogsUnknown() when unknown != null:
 return unknown(_that.data);case _:
   return null;
 
@@ -326,7 +344,7 @@ return unknown(_that.data);case _:
 
 class UConvoGetLogLogsLogBeginConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogBeginConvo({required this.data}): super._();
-  
+
 
 @override final  LogBeginConvo data;
 
@@ -389,7 +407,7 @@ as LogBeginConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogBeginConvoCopyWith<$Res> get data {
-  
+
   return $LogBeginConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -401,7 +419,7 @@ $LogBeginConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogAcceptConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogAcceptConvo({required this.data}): super._();
-  
+
 
 @override final  LogAcceptConvo data;
 
@@ -464,7 +482,7 @@ as LogAcceptConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogAcceptConvoCopyWith<$Res> get data {
-  
+
   return $LogAcceptConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -476,7 +494,7 @@ $LogAcceptConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogLeaveConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogLeaveConvo({required this.data}): super._();
-  
+
 
 @override final  LogLeaveConvo data;
 
@@ -539,7 +557,7 @@ as LogLeaveConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogLeaveConvoCopyWith<$Res> get data {
-  
+
   return $LogLeaveConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -551,7 +569,7 @@ $LogLeaveConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogMuteConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogMuteConvo({required this.data}): super._();
-  
+
 
 @override final  LogMuteConvo data;
 
@@ -614,7 +632,7 @@ as LogMuteConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogMuteConvoCopyWith<$Res> get data {
-  
+
   return $LogMuteConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -626,7 +644,7 @@ $LogMuteConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogUnmuteConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogUnmuteConvo({required this.data}): super._();
-  
+
 
 @override final  LogUnmuteConvo data;
 
@@ -689,7 +707,7 @@ as LogUnmuteConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogUnmuteConvoCopyWith<$Res> get data {
-  
+
   return $LogUnmuteConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -701,7 +719,7 @@ $LogUnmuteConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogCreateMessage extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogCreateMessage({required this.data}): super._();
-  
+
 
 @override final  LogCreateMessage data;
 
@@ -764,7 +782,7 @@ as LogCreateMessage,
 @override
 @pragma('vm:prefer-inline')
 $LogCreateMessageCopyWith<$Res> get data {
-  
+
   return $LogCreateMessageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -776,7 +794,7 @@ $LogCreateMessageCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogDeleteMessage extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogDeleteMessage({required this.data}): super._();
-  
+
 
 @override final  LogDeleteMessage data;
 
@@ -839,7 +857,7 @@ as LogDeleteMessage,
 @override
 @pragma('vm:prefer-inline')
 $LogDeleteMessageCopyWith<$Res> get data {
-  
+
   return $LogDeleteMessageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -851,7 +869,7 @@ $LogDeleteMessageCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogAddReaction extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogAddReaction({required this.data}): super._();
-  
+
 
 @override final  LogAddReaction data;
 
@@ -914,7 +932,7 @@ as LogAddReaction,
 @override
 @pragma('vm:prefer-inline')
 $LogAddReactionCopyWith<$Res> get data {
-  
+
   return $LogAddReactionCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -926,7 +944,7 @@ $LogAddReactionCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogRemoveReaction extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogRemoveReaction({required this.data}): super._();
-  
+
 
 @override final  LogRemoveReaction data;
 
@@ -989,7 +1007,7 @@ as LogRemoveReaction,
 @override
 @pragma('vm:prefer-inline')
 $LogRemoveReactionCopyWith<$Res> get data {
-  
+
   return $LogRemoveReactionCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1001,7 +1019,7 @@ $LogRemoveReactionCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogReadConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogReadConvo({required this.data}): super._();
-  
+
 
 @override final  LogReadConvo data;
 
@@ -1064,7 +1082,7 @@ as LogReadConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogReadConvoCopyWith<$Res> get data {
-  
+
   return $LogReadConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1076,7 +1094,7 @@ $LogReadConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogAddMember extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogAddMember({required this.data}): super._();
-  
+
 
 @override final  LogAddMember data;
 
@@ -1139,7 +1157,7 @@ as LogAddMember,
 @override
 @pragma('vm:prefer-inline')
 $LogAddMemberCopyWith<$Res> get data {
-  
+
   return $LogAddMemberCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1151,7 +1169,7 @@ $LogAddMemberCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogRemoveMember extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogRemoveMember({required this.data}): super._();
-  
+
 
 @override final  LogRemoveMember data;
 
@@ -1214,7 +1232,7 @@ as LogRemoveMember,
 @override
 @pragma('vm:prefer-inline')
 $LogRemoveMemberCopyWith<$Res> get data {
-  
+
   return $LogRemoveMemberCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1226,7 +1244,7 @@ $LogRemoveMemberCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogMemberJoin extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogMemberJoin({required this.data}): super._();
-  
+
 
 @override final  LogMemberJoin data;
 
@@ -1289,7 +1307,7 @@ as LogMemberJoin,
 @override
 @pragma('vm:prefer-inline')
 $LogMemberJoinCopyWith<$Res> get data {
-  
+
   return $LogMemberJoinCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1301,7 +1319,7 @@ $LogMemberJoinCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogMemberLeave extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogMemberLeave({required this.data}): super._();
-  
+
 
 @override final  LogMemberLeave data;
 
@@ -1364,7 +1382,7 @@ as LogMemberLeave,
 @override
 @pragma('vm:prefer-inline')
 $LogMemberLeaveCopyWith<$Res> get data {
-  
+
   return $LogMemberLeaveCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1376,7 +1394,7 @@ $LogMemberLeaveCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogLockConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogLockConvo({required this.data}): super._();
-  
+
 
 @override final  LogLockConvo data;
 
@@ -1439,7 +1457,7 @@ as LogLockConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogLockConvoCopyWith<$Res> get data {
-  
+
   return $LogLockConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1451,7 +1469,7 @@ $LogLockConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogUnlockConvo extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogUnlockConvo({required this.data}): super._();
-  
+
 
 @override final  LogUnlockConvo data;
 
@@ -1514,7 +1532,7 @@ as LogUnlockConvo,
 @override
 @pragma('vm:prefer-inline')
 $LogUnlockConvoCopyWith<$Res> get data {
-  
+
   return $LogUnlockConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1526,7 +1544,7 @@ $LogUnlockConvoCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogLockConvoPermanently extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogLockConvoPermanently({required this.data}): super._();
-  
+
 
 @override final  LogLockConvoPermanently data;
 
@@ -1589,7 +1607,7 @@ as LogLockConvoPermanently,
 @override
 @pragma('vm:prefer-inline')
 $LogLockConvoPermanentlyCopyWith<$Res> get data {
-  
+
   return $LogLockConvoPermanentlyCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1601,7 +1619,7 @@ $LogLockConvoPermanentlyCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogEditGroup extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogEditGroup({required this.data}): super._();
-  
+
 
 @override final  LogEditGroup data;
 
@@ -1664,7 +1682,7 @@ as LogEditGroup,
 @override
 @pragma('vm:prefer-inline')
 $LogEditGroupCopyWith<$Res> get data {
-  
+
   return $LogEditGroupCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1676,7 +1694,7 @@ $LogEditGroupCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogCreateJoinLink extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogCreateJoinLink({required this.data}): super._();
-  
+
 
 @override final  LogCreateJoinLink data;
 
@@ -1739,7 +1757,7 @@ as LogCreateJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $LogCreateJoinLinkCopyWith<$Res> get data {
-  
+
   return $LogCreateJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1751,7 +1769,7 @@ $LogCreateJoinLinkCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogEditJoinLink extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogEditJoinLink({required this.data}): super._();
-  
+
 
 @override final  LogEditJoinLink data;
 
@@ -1814,7 +1832,7 @@ as LogEditJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $LogEditJoinLinkCopyWith<$Res> get data {
-  
+
   return $LogEditJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1826,7 +1844,7 @@ $LogEditJoinLinkCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogEnableJoinLink extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogEnableJoinLink({required this.data}): super._();
-  
+
 
 @override final  LogEnableJoinLink data;
 
@@ -1889,7 +1907,7 @@ as LogEnableJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $LogEnableJoinLinkCopyWith<$Res> get data {
-  
+
   return $LogEnableJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1901,7 +1919,7 @@ $LogEnableJoinLinkCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogDisableJoinLink extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogDisableJoinLink({required this.data}): super._();
-  
+
 
 @override final  LogDisableJoinLink data;
 
@@ -1964,7 +1982,7 @@ as LogDisableJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $LogDisableJoinLinkCopyWith<$Res> get data {
-  
+
   return $LogDisableJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1976,7 +1994,7 @@ $LogDisableJoinLinkCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogIncomingJoinRequest extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogIncomingJoinRequest({required this.data}): super._();
-  
+
 
 @override final  LogIncomingJoinRequest data;
 
@@ -2039,7 +2057,7 @@ as LogIncomingJoinRequest,
 @override
 @pragma('vm:prefer-inline')
 $LogIncomingJoinRequestCopyWith<$Res> get data {
-  
+
   return $LogIncomingJoinRequestCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -2051,7 +2069,7 @@ $LogIncomingJoinRequestCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogApproveJoinRequest extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogApproveJoinRequest({required this.data}): super._();
-  
+
 
 @override final  LogApproveJoinRequest data;
 
@@ -2114,7 +2132,7 @@ as LogApproveJoinRequest,
 @override
 @pragma('vm:prefer-inline')
 $LogApproveJoinRequestCopyWith<$Res> get data {
-  
+
   return $LogApproveJoinRequestCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -2126,7 +2144,7 @@ $LogApproveJoinRequestCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogRejectJoinRequest extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogRejectJoinRequest({required this.data}): super._();
-  
+
 
 @override final  LogRejectJoinRequest data;
 
@@ -2189,7 +2207,7 @@ as LogRejectJoinRequest,
 @override
 @pragma('vm:prefer-inline')
 $LogRejectJoinRequestCopyWith<$Res> get data {
-  
+
   return $LogRejectJoinRequestCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -2201,7 +2219,7 @@ $LogRejectJoinRequestCopyWith<$Res> get data {
 
 class UConvoGetLogLogsLogOutgoingJoinRequest extends UConvoGetLogLogs {
   const UConvoGetLogLogsLogOutgoingJoinRequest({required this.data}): super._();
-  
+
 
 @override final  LogOutgoingJoinRequest data;
 
@@ -2264,8 +2282,233 @@ as LogOutgoingJoinRequest,
 @override
 @pragma('vm:prefer-inline')
 $LogOutgoingJoinRequestCopyWith<$Res> get data {
-  
+
   return $LogOutgoingJoinRequestCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class UConvoGetLogLogsLogWithdrawIncomingJoinRequest extends UConvoGetLogLogs {
+  const UConvoGetLogLogsLogWithdrawIncomingJoinRequest({required this.data}): super._();
+
+
+@override final  LogWithdrawIncomingJoinRequest data;
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWith<UConvoGetLogLogsLogWithdrawIncomingJoinRequest> get copyWith => _$UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWithImpl<UConvoGetLogLogsLogWithdrawIncomingJoinRequest>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UConvoGetLogLogsLogWithdrawIncomingJoinRequest&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'UConvoGetLogLogs.logWithdrawIncomingJoinRequest(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWith<$Res> implements $UConvoGetLogLogsCopyWith<$Res> {
+  factory $UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWith(UConvoGetLogLogsLogWithdrawIncomingJoinRequest value, $Res Function(UConvoGetLogLogsLogWithdrawIncomingJoinRequest) _then) = _$UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWithImpl;
+@useResult
+$Res call({
+ LogWithdrawIncomingJoinRequest data
+});
+
+
+$LogWithdrawIncomingJoinRequestCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWithImpl<$Res>
+    implements $UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWith<$Res> {
+  _$UConvoGetLogLogsLogWithdrawIncomingJoinRequestCopyWithImpl(this._self, this._then);
+
+  final UConvoGetLogLogsLogWithdrawIncomingJoinRequest _self;
+  final $Res Function(UConvoGetLogLogsLogWithdrawIncomingJoinRequest) _then;
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(UConvoGetLogLogsLogWithdrawIncomingJoinRequest(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as LogWithdrawIncomingJoinRequest,
+  ));
+}
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LogWithdrawIncomingJoinRequestCopyWith<$Res> get data {
+
+  return $LogWithdrawIncomingJoinRequestCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class UConvoGetLogLogsLogWithdrawOutgoingJoinRequest extends UConvoGetLogLogs {
+  const UConvoGetLogLogsLogWithdrawOutgoingJoinRequest({required this.data}): super._();
+
+
+@override final  LogWithdrawOutgoingJoinRequest data;
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWith<UConvoGetLogLogsLogWithdrawOutgoingJoinRequest> get copyWith => _$UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWithImpl<UConvoGetLogLogsLogWithdrawOutgoingJoinRequest>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UConvoGetLogLogsLogWithdrawOutgoingJoinRequest&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'UConvoGetLogLogs.logWithdrawOutgoingJoinRequest(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWith<$Res> implements $UConvoGetLogLogsCopyWith<$Res> {
+  factory $UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWith(UConvoGetLogLogsLogWithdrawOutgoingJoinRequest value, $Res Function(UConvoGetLogLogsLogWithdrawOutgoingJoinRequest) _then) = _$UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWithImpl;
+@useResult
+$Res call({
+ LogWithdrawOutgoingJoinRequest data
+});
+
+
+$LogWithdrawOutgoingJoinRequestCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWithImpl<$Res>
+    implements $UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWith<$Res> {
+  _$UConvoGetLogLogsLogWithdrawOutgoingJoinRequestCopyWithImpl(this._self, this._then);
+
+  final UConvoGetLogLogsLogWithdrawOutgoingJoinRequest _self;
+  final $Res Function(UConvoGetLogLogsLogWithdrawOutgoingJoinRequest) _then;
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(UConvoGetLogLogsLogWithdrawOutgoingJoinRequest(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as LogWithdrawOutgoingJoinRequest,
+  ));
+}
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LogWithdrawOutgoingJoinRequestCopyWith<$Res> get data {
+
+  return $LogWithdrawOutgoingJoinRequestCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class UConvoGetLogLogsLogReadJoinRequests extends UConvoGetLogLogs {
+  const UConvoGetLogLogsLogReadJoinRequests({required this.data}): super._();
+
+
+@override final  LogReadJoinRequests data;
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UConvoGetLogLogsLogReadJoinRequestsCopyWith<UConvoGetLogLogsLogReadJoinRequests> get copyWith => _$UConvoGetLogLogsLogReadJoinRequestsCopyWithImpl<UConvoGetLogLogsLogReadJoinRequests>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UConvoGetLogLogsLogReadJoinRequests&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'UConvoGetLogLogs.logReadJoinRequests(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UConvoGetLogLogsLogReadJoinRequestsCopyWith<$Res> implements $UConvoGetLogLogsCopyWith<$Res> {
+  factory $UConvoGetLogLogsLogReadJoinRequestsCopyWith(UConvoGetLogLogsLogReadJoinRequests value, $Res Function(UConvoGetLogLogsLogReadJoinRequests) _then) = _$UConvoGetLogLogsLogReadJoinRequestsCopyWithImpl;
+@useResult
+$Res call({
+ LogReadJoinRequests data
+});
+
+
+$LogReadJoinRequestsCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$UConvoGetLogLogsLogReadJoinRequestsCopyWithImpl<$Res>
+    implements $UConvoGetLogLogsLogReadJoinRequestsCopyWith<$Res> {
+  _$UConvoGetLogLogsLogReadJoinRequestsCopyWithImpl(this._self, this._then);
+
+  final UConvoGetLogLogsLogReadJoinRequests _self;
+  final $Res Function(UConvoGetLogLogsLogReadJoinRequests) _then;
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(UConvoGetLogLogsLogReadJoinRequests(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as LogReadJoinRequests,
+  ));
+}
+
+/// Create a copy of UConvoGetLogLogs
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$LogReadJoinRequestsCopyWith<$Res> get data {
+
+  return $LogReadJoinRequestsCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
 }
@@ -2276,7 +2519,7 @@ $LogOutgoingJoinRequestCopyWith<$Res> get data {
 
 class UConvoGetLogLogsUnknown extends UConvoGetLogLogs {
   const UConvoGetLogLogsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

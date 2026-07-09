@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UStoryViewMediaMediaImageView extends UStoryViewMedia {
   const UStoryViewMediaMediaImageView({required this.data}): super._();
-  
+
 
 @override final  MediaImageView data;
 
@@ -245,7 +245,7 @@ as MediaImageView,
 @override
 @pragma('vm:prefer-inline')
 $MediaImageViewCopyWith<$Res> get data {
-  
+
   return $MediaImageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $MediaImageViewCopyWith<$Res> get data {
 
 class UStoryViewMediaMediaVideoView extends UStoryViewMedia {
   const UStoryViewMediaMediaVideoView({required this.data}): super._();
-  
+
 
 @override final  MediaVideoView data;
 
@@ -320,7 +320,7 @@ as MediaVideoView,
 @override
 @pragma('vm:prefer-inline')
 $MediaVideoViewCopyWith<$Res> get data {
-  
+
   return $MediaVideoViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $MediaVideoViewCopyWith<$Res> get data {
 
 class UStoryViewMediaUnknown extends UStoryViewMedia {
   const UStoryViewMediaUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

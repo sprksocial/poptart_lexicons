@@ -91,7 +91,7 @@ $AudioDetailsCopyWith<$Res>? get details {
 @override
 @pragma('vm:prefer-inline')
 $BlobCopyWith<$Res> get blob {
-  
+
   return $BlobCopyWith<$Res>(_self.blob, (value) {
     return _then(_self.copyWith(blob: value));
   });
@@ -326,7 +326,7 @@ $AudioDetailsCopyWith<$Res>? get details {
 @override
 @pragma('vm:prefer-inline')
 $BlobCopyWith<$Res> get blob {
-  
+
   return $BlobCopyWith<$Res>(_self.blob, (value) {
     return _then(_self.copyWith(blob: value));
   });

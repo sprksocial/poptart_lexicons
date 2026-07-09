@@ -116,7 +116,7 @@ $EventGroupChatUpdatedLockReasonCopyWith<$Res>? get lockReason {
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatUpdatedUpdateTypeCopyWith<$Res> get updateType {
-  
+
   return $EventGroupChatUpdatedUpdateTypeCopyWith<$Res>(_self.updateType, (value) {
     return _then(_self.copyWith(updateType: value));
   });
@@ -389,7 +389,7 @@ $EventGroupChatUpdatedLockReasonCopyWith<$Res>? get lockReason {
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatUpdatedUpdateTypeCopyWith<$Res> get updateType {
-  
+
   return $EventGroupChatUpdatedUpdateTypeCopyWith<$Res>(_self.updateType, (value) {
     return _then(_self.copyWith(updateType: value));
   });

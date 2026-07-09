@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $MessageViewSenderCopyWith<$Res> get sender {
-  
+
   return $MessageViewSenderCopyWith<$Res>(_self.sender, (value) {
     return _then(_self.copyWith(sender: value));
   });
@@ -308,7 +308,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $MessageViewSenderCopyWith<$Res> get sender {
-  
+
   return $MessageViewSenderCopyWith<$Res>(_self.sender, (value) {
     return _then(_self.copyWith(sender: value));
   });

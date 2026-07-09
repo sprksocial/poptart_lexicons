@@ -83,10 +83,14 @@ enum KnownEventGroupChatUpdatedLockReason implements Serializable {
   owner_deactivated('owner_deactivated'),
   @JsonValue('owner_deleted')
   owner_deleted('owner_deleted'),
+  @JsonValue('owner_suspended')
+  owner_suspended('owner_suspended'),
   @JsonValue('owner_taken_down')
   owner_taken_down('owner_taken_down'),
   @JsonValue('label_applied')
-  label_applied('label_applied');
+  label_applied('label_applied'),
+  @JsonValue('convo_taken_down')
+  convo_taken_down('convo_taken_down');
 
   @override
   final String value;

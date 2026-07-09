@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class AccessKnownValue extends Access {
   const AccessKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownAccess data;
 
@@ -248,7 +248,7 @@ as KnownAccess,
 
 class AccessUnknown extends Access {
   const AccessUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

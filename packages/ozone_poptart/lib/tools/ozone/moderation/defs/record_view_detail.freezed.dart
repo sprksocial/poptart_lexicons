@@ -85,7 +85,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ModerationDetailCopyWith<$Res> get moderation {
-  
+
   return $ModerationDetailCopyWith<$Res>(_self.moderation, (value) {
     return _then(_self.copyWith(moderation: value));
   });
@@ -94,7 +94,7 @@ $ModerationDetailCopyWith<$Res> get moderation {
 @override
 @pragma('vm:prefer-inline')
 $RepoViewCopyWith<$Res> get repo {
-  
+
   return $RepoViewCopyWith<$Res>(_self.repo, (value) {
     return _then(_self.copyWith(repo: value));
   });
@@ -349,7 +349,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ModerationDetailCopyWith<$Res> get moderation {
-  
+
   return $ModerationDetailCopyWith<$Res>(_self.moderation, (value) {
     return _then(_self.copyWith(moderation: value));
   });
@@ -358,7 +358,7 @@ $ModerationDetailCopyWith<$Res> get moderation {
 @override
 @pragma('vm:prefer-inline')
 $RepoViewCopyWith<$Res> get repo {
-  
+
   return $RepoViewCopyWith<$Res>(_self.repo, (value) {
     return _then(_self.copyWith(repo: value));
   });

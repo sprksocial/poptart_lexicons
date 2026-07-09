@@ -9,6 +9,7 @@ import 'package:poptart_core/internals.dart';
 
 import './union_draft_post_labels.dart';
 import './draft_embed_image.dart';
+import './draft_embed_gallery.dart';
 import './draft_embed_video.dart';
 import './draft_embed_external.dart';
 import './draft_embed_record.dart';
@@ -27,6 +28,7 @@ abstract class DraftPost with _$DraftPost {
     'text',
     'labels',
     'embedImages',
+    'embedGallery',
     'embedVideos',
     'embedExternals',
     'embedRecords',
@@ -40,6 +42,7 @@ abstract class DraftPost with _$DraftPost {
     required String text,
     @UDraftPostLabelsConverter() UDraftPostLabels? labels,
     @DraftEmbedImageConverter() List<DraftEmbedImage>? embedImages,
+    @DraftEmbedGalleryConverter() DraftEmbedGallery? embedGallery,
     @DraftEmbedVideoConverter() List<DraftEmbedVideo>? embedVideos,
     @DraftEmbedExternalConverter() List<DraftEmbedExternal>? embedExternals,
     @DraftEmbedRecordConverter() List<DraftEmbedRecord>? embedRecords,
@@ -59,6 +62,8 @@ abstract class DraftPost with _$DraftPost {
 extension DraftPostExtension on DraftPost {
   bool get hasLabels => labels != null;
   bool get hasNotLabels => !hasLabels;
+  bool get hasEmbedGallery => embedGallery != null;
+  bool get hasNotEmbedGallery => !hasEmbedGallery;
 }
 
 final class DraftPostConverter

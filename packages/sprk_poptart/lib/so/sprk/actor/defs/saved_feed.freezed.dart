@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SavedFeedTypeCopyWith<$Res> get type {
-  
+
   return $SavedFeedTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });
@@ -308,7 +308,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SavedFeedTypeCopyWith<$Res> get type {
-  
+
   return $SavedFeedTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });

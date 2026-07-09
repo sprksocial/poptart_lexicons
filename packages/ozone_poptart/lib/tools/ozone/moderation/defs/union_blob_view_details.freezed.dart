@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UBlobViewDetailsImageDetails extends UBlobViewDetails {
   const UBlobViewDetailsImageDetails({required this.data}): super._();
-  
+
 
 @override final  ImageDetails data;
 
@@ -245,7 +245,7 @@ as ImageDetails,
 @override
 @pragma('vm:prefer-inline')
 $ImageDetailsCopyWith<$Res> get data {
-  
+
   return $ImageDetailsCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $ImageDetailsCopyWith<$Res> get data {
 
 class UBlobViewDetailsVideoDetails extends UBlobViewDetails {
   const UBlobViewDetailsVideoDetails({required this.data}): super._();
-  
+
 
 @override final  VideoDetails data;
 
@@ -320,7 +320,7 @@ as VideoDetails,
 @override
 @pragma('vm:prefer-inline')
 $VideoDetailsCopyWith<$Res> get data {
-  
+
   return $VideoDetailsCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $VideoDetailsCopyWith<$Res> get data {
 
 class UBlobViewDetailsUnknown extends UBlobViewDetails {
   const UBlobViewDetailsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

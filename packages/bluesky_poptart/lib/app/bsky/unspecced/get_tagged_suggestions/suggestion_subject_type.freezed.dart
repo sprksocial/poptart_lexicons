@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SuggestionSubjectTypeKnownValue extends SuggestionSubjectType {
   const SuggestionSubjectTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownSuggestionSubjectType data;
 
@@ -248,7 +248,7 @@ as KnownSuggestionSubjectType,
 
 class SuggestionSubjectTypeUnknown extends SuggestionSubjectType {
   const SuggestionSubjectTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

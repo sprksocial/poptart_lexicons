@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UEmbedsEmbedMention extends UEmbeds {
   const UEmbedsEmbedMention({required this.data}): super._();
-  
+
 
 @override final  EmbedMention data;
 
@@ -245,7 +245,7 @@ as EmbedMention,
 @override
 @pragma('vm:prefer-inline')
 $EmbedMentionCopyWith<$Res> get data {
-  
+
   return $EmbedMentionCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $EmbedMentionCopyWith<$Res> get data {
 
 class UEmbedsEmbedRecord extends UEmbeds {
   const UEmbedsEmbedRecord({required this.data}): super._();
-  
+
 
 @override final  EmbedRecord data;
 
@@ -320,7 +320,7 @@ as EmbedRecord,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordCopyWith<$Res> get data {
-  
+
   return $EmbedRecordCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $EmbedRecordCopyWith<$Res> get data {
 
 class UEmbedsUnknown extends UEmbeds {
   const UEmbedsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

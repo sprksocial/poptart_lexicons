@@ -99,7 +99,7 @@ $OptionManagerRoleCopyWith<$Res>? get managerRole {
 @override
 @pragma('vm:prefer-inline')
 $OptionScopeCopyWith<$Res> get scope {
-  
+
   return $OptionScopeCopyWith<$Res>(_self.scope, (value) {
     return _then(_self.copyWith(scope: value));
   });
@@ -356,7 +356,7 @@ $OptionManagerRoleCopyWith<$Res>? get managerRole {
 @override
 @pragma('vm:prefer-inline')
 $OptionScopeCopyWith<$Res> get scope {
-  
+
   return $OptionScopeCopyWith<$Res>(_self.scope, (value) {
     return _then(_self.copyWith(scope: value));
   });

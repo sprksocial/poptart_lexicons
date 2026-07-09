@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class EventGroupChatMemberLeftLeaveMethodKnownValue extends EventGroupChatMemberLeftLeaveMethod {
   const EventGroupChatMemberLeftLeaveMethodKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownEventGroupChatMemberLeftLeaveMethod data;
 
@@ -248,7 +248,7 @@ as KnownEventGroupChatMemberLeftLeaveMethod,
 
 class EventGroupChatMemberLeftLeaveMethodUnknown extends EventGroupChatMemberLeftLeaveMethod {
   const EventGroupChatMemberLeftLeaveMethodUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

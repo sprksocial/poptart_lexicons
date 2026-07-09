@@ -6,6 +6,7 @@
 import './draft.dart';
 import './draft_embed_caption.dart';
 import './draft_embed_external.dart';
+import './draft_embed_gallery.dart';
 import './draft_embed_image.dart';
 import './draft_embed_local_ref.dart';
 import './draft_embed_record.dart';
@@ -72,6 +73,15 @@ final draftEmbedCaptionDescriptor = XRPCObjectDescriptor<DraftEmbedCaption>(
       const DraftEmbedCaptionConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const DraftEmbedCaptionConverter().toJson,
   matches: DraftEmbedCaption.validate,
+);
+
+final draftEmbedGalleryDescriptor = XRPCObjectDescriptor<DraftEmbedGallery>(
+  nsid: 'app.bsky.draft.defs',
+  defName: 'draftEmbedGallery',
+  fromJson: (json) =>
+      const DraftEmbedGalleryConverter().fromJson(json.cast<String, dynamic>()),
+  toJson: const DraftEmbedGalleryConverter().toJson,
+  matches: DraftEmbedGallery.validate,
 );
 
 final draftEmbedImageDescriptor = XRPCObjectDescriptor<DraftEmbedImage>(

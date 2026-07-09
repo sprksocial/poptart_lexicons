@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageReferredUserCopyWith<$Res> get unlockedBy {
-  
+
   return $SystemMessageReferredUserCopyWith<$Res>(_self.unlockedBy, (value) {
     return _then(_self.copyWith(unlockedBy: value));
   });
@@ -301,7 +301,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageReferredUserCopyWith<$Res> get unlockedBy {
-  
+
   return $SystemMessageReferredUserCopyWith<$Res>(_self.unlockedBy, (value) {
     return _then(_self.copyWith(unlockedBy: value));
   });

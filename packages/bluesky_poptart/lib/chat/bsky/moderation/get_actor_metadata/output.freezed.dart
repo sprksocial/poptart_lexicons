@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $MetadataCopyWith<$Res> get day {
-  
+
   return $MetadataCopyWith<$Res>(_self.day, (value) {
     return _then(_self.copyWith(day: value));
   });
@@ -88,7 +88,7 @@ $MetadataCopyWith<$Res> get day {
 @override
 @pragma('vm:prefer-inline')
 $MetadataCopyWith<$Res> get month {
-  
+
   return $MetadataCopyWith<$Res>(_self.month, (value) {
     return _then(_self.copyWith(month: value));
   });
@@ -97,7 +97,7 @@ $MetadataCopyWith<$Res> get month {
 @override
 @pragma('vm:prefer-inline')
 $MetadataCopyWith<$Res> get all {
-  
+
   return $MetadataCopyWith<$Res>(_self.all, (value) {
     return _then(_self.copyWith(all: value));
   });
@@ -320,7 +320,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $MetadataCopyWith<$Res> get day {
-  
+
   return $MetadataCopyWith<$Res>(_self.day, (value) {
     return _then(_self.copyWith(day: value));
   });
@@ -329,7 +329,7 @@ $MetadataCopyWith<$Res> get day {
 @override
 @pragma('vm:prefer-inline')
 $MetadataCopyWith<$Res> get month {
-  
+
   return $MetadataCopyWith<$Res>(_self.month, (value) {
     return _then(_self.copyWith(month: value));
   });
@@ -338,7 +338,7 @@ $MetadataCopyWith<$Res> get month {
 @override
 @pragma('vm:prefer-inline')
 $MetadataCopyWith<$Res> get all {
-  
+
   return $MetadataCopyWith<$Res>(_self.all, (value) {
     return _then(_self.copyWith(all: value));
   });

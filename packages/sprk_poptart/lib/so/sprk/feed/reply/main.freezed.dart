@@ -86,7 +86,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReplyRefCopyWith<$Res> get reply {
-  
+
   return $ReplyRefCopyWith<$Res>(_self.reply, (value) {
     return _then(_self.copyWith(reply: value));
   });
@@ -361,7 +361,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReplyRefCopyWith<$Res> get reply {
-  
+
   return $ReplyRefCopyWith<$Res>(_self.reply, (value) {
     return _then(_self.copyWith(reply: value));
   });

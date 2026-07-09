@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class StatusKnownValue extends Status {
   const StatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownStatus data;
 
@@ -248,7 +248,7 @@ as KnownStatus,
 
 class StatusUnknown extends Status {
   const StatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

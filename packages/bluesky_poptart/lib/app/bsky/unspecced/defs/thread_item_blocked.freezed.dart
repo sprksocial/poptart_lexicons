@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $BlockedAuthorCopyWith<$Res> get author {
-  
+
   return $BlockedAuthorCopyWith<$Res>(_self.author, (value) {
     return _then(_self.copyWith(author: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $BlockedAuthorCopyWith<$Res> get author {
-  
+
   return $BlockedAuthorCopyWith<$Res>(_self.author, (value) {
     return _then(_self.copyWith(author: value));
   });

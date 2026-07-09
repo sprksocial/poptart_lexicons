@@ -201,7 +201,7 @@ return unknown(_that.data);case _:
 
 class UVerificationViewSubjectProfileUnknown extends UVerificationViewSubjectProfile {
   const UVerificationViewSubjectProfileUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

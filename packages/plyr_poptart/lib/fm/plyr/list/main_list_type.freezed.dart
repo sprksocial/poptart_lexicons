@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ListListTypeKnownValue extends ListListType {
   const ListListTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownListListType data;
 
@@ -248,7 +248,7 @@ as KnownListListType,
 
 class ListListTypeUnknown extends ListListType {
   const ListListTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

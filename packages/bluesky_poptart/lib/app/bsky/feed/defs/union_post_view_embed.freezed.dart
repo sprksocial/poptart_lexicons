@@ -55,12 +55,13 @@ extension UPostViewEmbedPatterns on UPostViewEmbed {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UPostViewEmbedEmbedImagesView value)?  embedImagesView,TResult Function( UPostViewEmbedEmbedVideoView value)?  embedVideoView,TResult Function( UPostViewEmbedEmbedExternalView value)?  embedExternalView,TResult Function( UPostViewEmbedEmbedRecordView value)?  embedRecordView,TResult Function( UPostViewEmbedEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult Function( UPostViewEmbedUnknown value)?  unknown,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UPostViewEmbedEmbedImagesView value)?  embedImagesView,TResult Function( UPostViewEmbedEmbedVideoView value)?  embedVideoView,TResult Function( UPostViewEmbedEmbedGalleryView value)?  embedGalleryView,TResult Function( UPostViewEmbedEmbedExternalView value)?  embedExternalView,TResult Function( UPostViewEmbedEmbedRecordView value)?  embedRecordView,TResult Function( UPostViewEmbedEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult Function( UPostViewEmbedUnknown value)?  unknown,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case UPostViewEmbedEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that);case UPostViewEmbedEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that);case UPostViewEmbedEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that);case UPostViewEmbedEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that);case UPostViewEmbedEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that);case UPostViewEmbedUnknown() when unknown != null:
@@ -82,12 +83,13 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UPostViewEmbedEmbedImagesView value)  embedImagesView,required TResult Function( UPostViewEmbedEmbedVideoView value)  embedVideoView,required TResult Function( UPostViewEmbedEmbedExternalView value)  embedExternalView,required TResult Function( UPostViewEmbedEmbedRecordView value)  embedRecordView,required TResult Function( UPostViewEmbedEmbedRecordWithMediaView value)  embedRecordWithMediaView,required TResult Function( UPostViewEmbedUnknown value)  unknown,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UPostViewEmbedEmbedImagesView value)  embedImagesView,required TResult Function( UPostViewEmbedEmbedVideoView value)  embedVideoView,required TResult Function( UPostViewEmbedEmbedGalleryView value)  embedGalleryView,required TResult Function( UPostViewEmbedEmbedExternalView value)  embedExternalView,required TResult Function( UPostViewEmbedEmbedRecordView value)  embedRecordView,required TResult Function( UPostViewEmbedEmbedRecordWithMediaView value)  embedRecordWithMediaView,required TResult Function( UPostViewEmbedUnknown value)  unknown,}){
 final _that = this;
 switch (_that) {
 case UPostViewEmbedEmbedImagesView():
 return embedImagesView(_that);case UPostViewEmbedEmbedVideoView():
-return embedVideoView(_that);case UPostViewEmbedEmbedExternalView():
+return embedVideoView(_that);case UPostViewEmbedEmbedGalleryView():
+return embedGalleryView(_that);case UPostViewEmbedEmbedExternalView():
 return embedExternalView(_that);case UPostViewEmbedEmbedRecordView():
 return embedRecordView(_that);case UPostViewEmbedEmbedRecordWithMediaView():
 return embedRecordWithMediaView(_that);case UPostViewEmbedUnknown():
@@ -105,12 +107,13 @@ return unknown(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UPostViewEmbedEmbedImagesView value)?  embedImagesView,TResult? Function( UPostViewEmbedEmbedVideoView value)?  embedVideoView,TResult? Function( UPostViewEmbedEmbedExternalView value)?  embedExternalView,TResult? Function( UPostViewEmbedEmbedRecordView value)?  embedRecordView,TResult? Function( UPostViewEmbedEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult? Function( UPostViewEmbedUnknown value)?  unknown,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UPostViewEmbedEmbedImagesView value)?  embedImagesView,TResult? Function( UPostViewEmbedEmbedVideoView value)?  embedVideoView,TResult? Function( UPostViewEmbedEmbedGalleryView value)?  embedGalleryView,TResult? Function( UPostViewEmbedEmbedExternalView value)?  embedExternalView,TResult? Function( UPostViewEmbedEmbedRecordView value)?  embedRecordView,TResult? Function( UPostViewEmbedEmbedRecordWithMediaView value)?  embedRecordWithMediaView,TResult? Function( UPostViewEmbedUnknown value)?  unknown,}){
 final _that = this;
 switch (_that) {
 case UPostViewEmbedEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that);case UPostViewEmbedEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that);case UPostViewEmbedEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that);case UPostViewEmbedEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that);case UPostViewEmbedEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that);case UPostViewEmbedUnknown() when unknown != null:
@@ -131,11 +134,12 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( EmbedImagesView data)?  embedImagesView,TResult Function( EmbedVideoView data)?  embedVideoView,TResult Function( EmbedExternalView data)?  embedExternalView,TResult Function( EmbedRecordView data)?  embedRecordView,TResult Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( EmbedImagesView data)?  embedImagesView,TResult Function( EmbedVideoView data)?  embedVideoView,TResult Function( EmbedGalleryView data)?  embedGalleryView,TResult Function( EmbedExternalView data)?  embedExternalView,TResult Function( EmbedRecordView data)?  embedRecordView,TResult Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case UPostViewEmbedEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that.data);case UPostViewEmbedEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that.data);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that.data);case UPostViewEmbedEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that.data);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that.data);case UPostViewEmbedEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that.data);case UPostViewEmbedEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that.data);case UPostViewEmbedUnknown() when unknown != null:
@@ -157,11 +161,12 @@ return unknown(_that.data);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( EmbedImagesView data)  embedImagesView,required TResult Function( EmbedVideoView data)  embedVideoView,required TResult Function( EmbedExternalView data)  embedExternalView,required TResult Function( EmbedRecordView data)  embedRecordView,required TResult Function( EmbedRecordWithMediaView data)  embedRecordWithMediaView,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( EmbedImagesView data)  embedImagesView,required TResult Function( EmbedVideoView data)  embedVideoView,required TResult Function( EmbedGalleryView data)  embedGalleryView,required TResult Function( EmbedExternalView data)  embedExternalView,required TResult Function( EmbedRecordView data)  embedRecordView,required TResult Function( EmbedRecordWithMediaView data)  embedRecordWithMediaView,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
 switch (_that) {
 case UPostViewEmbedEmbedImagesView():
 return embedImagesView(_that.data);case UPostViewEmbedEmbedVideoView():
-return embedVideoView(_that.data);case UPostViewEmbedEmbedExternalView():
+return embedVideoView(_that.data);case UPostViewEmbedEmbedGalleryView():
+return embedGalleryView(_that.data);case UPostViewEmbedEmbedExternalView():
 return embedExternalView(_that.data);case UPostViewEmbedEmbedRecordView():
 return embedRecordView(_that.data);case UPostViewEmbedEmbedRecordWithMediaView():
 return embedRecordWithMediaView(_that.data);case UPostViewEmbedUnknown():
@@ -179,11 +184,12 @@ return unknown(_that.data);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( EmbedImagesView data)?  embedImagesView,TResult? Function( EmbedVideoView data)?  embedVideoView,TResult? Function( EmbedExternalView data)?  embedExternalView,TResult? Function( EmbedRecordView data)?  embedRecordView,TResult? Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( EmbedImagesView data)?  embedImagesView,TResult? Function( EmbedVideoView data)?  embedVideoView,TResult? Function( EmbedGalleryView data)?  embedGalleryView,TResult? Function( EmbedExternalView data)?  embedExternalView,TResult? Function( EmbedRecordView data)?  embedRecordView,TResult? Function( EmbedRecordWithMediaView data)?  embedRecordWithMediaView,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
 switch (_that) {
 case UPostViewEmbedEmbedImagesView() when embedImagesView != null:
 return embedImagesView(_that.data);case UPostViewEmbedEmbedVideoView() when embedVideoView != null:
-return embedVideoView(_that.data);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
+return embedVideoView(_that.data);case UPostViewEmbedEmbedGalleryView() when embedGalleryView != null:
+return embedGalleryView(_that.data);case UPostViewEmbedEmbedExternalView() when embedExternalView != null:
 return embedExternalView(_that.data);case UPostViewEmbedEmbedRecordView() when embedRecordView != null:
 return embedRecordView(_that.data);case UPostViewEmbedEmbedRecordWithMediaView() when embedRecordWithMediaView != null:
 return embedRecordWithMediaView(_that.data);case UPostViewEmbedUnknown() when unknown != null:
@@ -200,7 +206,7 @@ return unknown(_that.data);case _:
 
 class UPostViewEmbedEmbedImagesView extends UPostViewEmbed {
   const UPostViewEmbedEmbedImagesView({required this.data}): super._();
-  
+
 
 @override final  EmbedImagesView data;
 
@@ -263,7 +269,7 @@ as EmbedImagesView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedImagesViewCopyWith<$Res> get data {
-  
+
   return $EmbedImagesViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -275,7 +281,7 @@ $EmbedImagesViewCopyWith<$Res> get data {
 
 class UPostViewEmbedEmbedVideoView extends UPostViewEmbed {
   const UPostViewEmbedEmbedVideoView({required this.data}): super._();
-  
+
 
 @override final  EmbedVideoView data;
 
@@ -338,8 +344,83 @@ as EmbedVideoView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedVideoViewCopyWith<$Res> get data {
-  
+
   return $EmbedVideoViewCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class UPostViewEmbedEmbedGalleryView extends UPostViewEmbed {
+  const UPostViewEmbedEmbedGalleryView({required this.data}): super._();
+
+
+@override final  EmbedGalleryView data;
+
+/// Create a copy of UPostViewEmbed
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UPostViewEmbedEmbedGalleryViewCopyWith<UPostViewEmbedEmbedGalleryView> get copyWith => _$UPostViewEmbedEmbedGalleryViewCopyWithImpl<UPostViewEmbedEmbedGalleryView>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UPostViewEmbedEmbedGalleryView&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'UPostViewEmbed.embedGalleryView(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UPostViewEmbedEmbedGalleryViewCopyWith<$Res> implements $UPostViewEmbedCopyWith<$Res> {
+  factory $UPostViewEmbedEmbedGalleryViewCopyWith(UPostViewEmbedEmbedGalleryView value, $Res Function(UPostViewEmbedEmbedGalleryView) _then) = _$UPostViewEmbedEmbedGalleryViewCopyWithImpl;
+@useResult
+$Res call({
+ EmbedGalleryView data
+});
+
+
+$EmbedGalleryViewCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$UPostViewEmbedEmbedGalleryViewCopyWithImpl<$Res>
+    implements $UPostViewEmbedEmbedGalleryViewCopyWith<$Res> {
+  _$UPostViewEmbedEmbedGalleryViewCopyWithImpl(this._self, this._then);
+
+  final UPostViewEmbedEmbedGalleryView _self;
+  final $Res Function(UPostViewEmbedEmbedGalleryView) _then;
+
+/// Create a copy of UPostViewEmbed
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(UPostViewEmbedEmbedGalleryView(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as EmbedGalleryView,
+  ));
+}
+
+/// Create a copy of UPostViewEmbed
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$EmbedGalleryViewCopyWith<$Res> get data {
+
+  return $EmbedGalleryViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
 }
@@ -350,7 +431,7 @@ $EmbedVideoViewCopyWith<$Res> get data {
 
 class UPostViewEmbedEmbedExternalView extends UPostViewEmbed {
   const UPostViewEmbedEmbedExternalView({required this.data}): super._();
-  
+
 
 @override final  EmbedExternalView data;
 
@@ -413,7 +494,7 @@ as EmbedExternalView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalViewCopyWith<$Res> get data {
-  
+
   return $EmbedExternalViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -425,7 +506,7 @@ $EmbedExternalViewCopyWith<$Res> get data {
 
 class UPostViewEmbedEmbedRecordView extends UPostViewEmbed {
   const UPostViewEmbedEmbedRecordView({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordView data;
 
@@ -488,7 +569,7 @@ as EmbedRecordView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewCopyWith<$Res> get data {
-  
+
   return $EmbedRecordViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -500,7 +581,7 @@ $EmbedRecordViewCopyWith<$Res> get data {
 
 class UPostViewEmbedEmbedRecordWithMediaView extends UPostViewEmbed {
   const UPostViewEmbedEmbedRecordWithMediaView({required this.data}): super._();
-  
+
 
 @override final  EmbedRecordWithMediaView data;
 
@@ -563,7 +644,7 @@ as EmbedRecordWithMediaView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordWithMediaViewCopyWith<$Res> get data {
-  
+
   return $EmbedRecordWithMediaViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -575,7 +656,7 @@ $EmbedRecordWithMediaViewCopyWith<$Res> get data {
 
 class UPostViewEmbedUnknown extends UPostViewEmbed {
   const UPostViewEmbedUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -89,7 +89,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $CollectionAccessTypeCopyWith<$Res> get accessType {
-  
+
   return $CollectionAccessTypeCopyWith<$Res>(_self.accessType, (value) {
     return _then(_self.copyWith(accessType: value));
   });
@@ -335,7 +335,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $CollectionAccessTypeCopyWith<$Res> get accessType {
-  
+
   return $CollectionAccessTypeCopyWith<$Res>(_self.accessType, (value) {
     return _then(_self.copyWith(accessType: value));
   });

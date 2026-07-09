@@ -91,7 +91,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get collection {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.collection, (value) {
     return _then(_self.copyWith(collection: value));
   });
@@ -100,7 +100,7 @@ $RepoStrongRefCopyWith<$Res> get collection {
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get card {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.card, (value) {
     return _then(_self.copyWith(card: value));
   });
@@ -364,7 +364,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get collection {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.collection, (value) {
     return _then(_self.copyWith(collection: value));
   });
@@ -373,7 +373,7 @@ $RepoStrongRefCopyWith<$Res> get collection {
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get card {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.card, (value) {
     return _then(_self.copyWith(card: value));
   });

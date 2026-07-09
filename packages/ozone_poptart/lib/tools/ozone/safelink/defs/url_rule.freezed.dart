@@ -90,7 +90,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PatternTypeCopyWith<$Res> get pattern {
-  
+
   return $PatternTypeCopyWith<$Res>(_self.pattern, (value) {
     return _then(_self.copyWith(pattern: value));
   });
@@ -99,7 +99,7 @@ $PatternTypeCopyWith<$Res> get pattern {
 @override
 @pragma('vm:prefer-inline')
 $ActionTypeCopyWith<$Res> get action {
-  
+
   return $ActionTypeCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
@@ -108,7 +108,7 @@ $ActionTypeCopyWith<$Res> get action {
 @override
 @pragma('vm:prefer-inline')
 $ReasonTypeCopyWith<$Res> get reason {
-  
+
   return $ReasonTypeCopyWith<$Res>(_self.reason, (value) {
     return _then(_self.copyWith(reason: value));
   });
@@ -348,7 +348,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $PatternTypeCopyWith<$Res> get pattern {
-  
+
   return $PatternTypeCopyWith<$Res>(_self.pattern, (value) {
     return _then(_self.copyWith(pattern: value));
   });
@@ -357,7 +357,7 @@ $PatternTypeCopyWith<$Res> get pattern {
 @override
 @pragma('vm:prefer-inline')
 $ActionTypeCopyWith<$Res> get action {
-  
+
   return $ActionTypeCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
@@ -366,7 +366,7 @@ $ActionTypeCopyWith<$Res> get action {
 @override
 @pragma('vm:prefer-inline')
 $ReasonTypeCopyWith<$Res> get reason {
-  
+
   return $ReasonTypeCopyWith<$Res>(_self.reason, (value) {
     return _then(_self.copyWith(reason: value));
   });

@@ -113,7 +113,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $USubjectStatusViewSubjectCopyWith<$Res> get subject {
-  
+
   return $USubjectStatusViewSubjectCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -134,7 +134,7 @@ $USubjectStatusViewHostingCopyWith<$Res>? get hosting {
 @override
 @pragma('vm:prefer-inline')
 $SubjectReviewStateCopyWith<$Res> get reviewState {
-  
+
   return $SubjectReviewStateCopyWith<$Res>(_self.reviewState, (value) {
     return _then(_self.copyWith(reviewState: value));
   });
@@ -490,7 +490,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $USubjectStatusViewSubjectCopyWith<$Res> get subject {
-  
+
   return $USubjectStatusViewSubjectCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -511,7 +511,7 @@ $USubjectStatusViewHostingCopyWith<$Res>? get hosting {
 @override
 @pragma('vm:prefer-inline')
 $SubjectReviewStateCopyWith<$Res> get reviewState {
-  
+
   return $SubjectReviewStateCopyWith<$Res>(_self.reviewState, (value) {
     return _then(_self.copyWith(reviewState: value));
   });

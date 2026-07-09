@@ -26,6 +26,13 @@ _Selector _$SelectorFromJson(Map json) =>
         end: $checkedConvert('end', (v) => (v as num?)?.toInt()),
         value: $checkedConvert('value', (v) => v as String?),
         conformsTo: $checkedConvert('conformsTo', (v) => v as String?),
+        refinedBy: $checkedConvert(
+          'refinedBy',
+          (v) => _$JsonConverterFromJson<Map<String, dynamic>, Selector>(
+            v,
+            const SelectorConverter().fromJson,
+          ),
+        ),
         $unknown: $checkedConvert(
           r'$unknown',
           (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
@@ -44,5 +51,19 @@ Map<String, dynamic> _$SelectorToJson(_Selector instance) => <String, dynamic>{
   'end': ?instance.end,
   'value': ?instance.value,
   'conformsTo': ?instance.conformsTo,
+  'refinedBy': ?_$JsonConverterToJson<Map<String, dynamic>, Selector>(
+    instance.refinedBy,
+    const SelectorConverter().toJson,
+  ),
   r'$unknown': ?instance.$unknown,
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);

@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UThreadItemValueCopyWith<$Res> get value {
-  
+
   return $UThreadItemValueCopyWith<$Res>(_self.value, (value) {
     return _then(_self.copyWith(value: value));
   });
@@ -307,7 +307,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UThreadItemValueCopyWith<$Res> get value {
-  
+
   return $UThreadItemValueCopyWith<$Res>(_self.value, (value) {
     return _then(_self.copyWith(value: value));
   });

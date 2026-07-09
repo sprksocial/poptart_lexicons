@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FilterablePreferenceIncludeKnownValue extends FilterablePreferenceInclude {
   const FilterablePreferenceIncludeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownFilterablePreferenceInclude data;
 
@@ -248,7 +248,7 @@ as KnownFilterablePreferenceInclude,
 
 class FilterablePreferenceIncludeUnknown extends FilterablePreferenceInclude {
   const FilterablePreferenceIncludeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

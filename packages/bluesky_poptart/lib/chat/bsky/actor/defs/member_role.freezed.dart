@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class MemberRoleKnownValue extends MemberRole {
   const MemberRoleKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownMemberRole data;
 
@@ -248,7 +248,7 @@ as KnownMemberRole,
 
 class MemberRoleUnknown extends MemberRole {
   const MemberRoleUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

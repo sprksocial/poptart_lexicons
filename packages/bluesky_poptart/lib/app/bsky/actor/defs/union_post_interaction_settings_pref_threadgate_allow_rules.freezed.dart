@@ -194,7 +194,7 @@ return unknown(_that.data);case _:
 
 class UPostInteractionSettingsPrefThreadgateAllowRulesMentionRule extends UPostInteractionSettingsPrefThreadgateAllowRules {
   const UPostInteractionSettingsPrefThreadgateAllowRulesMentionRule({required this.data}): super._();
-  
+
 
 @override final  MentionRule data;
 
@@ -257,7 +257,7 @@ as MentionRule,
 @override
 @pragma('vm:prefer-inline')
 $MentionRuleCopyWith<$Res> get data {
-  
+
   return $MentionRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -269,7 +269,7 @@ $MentionRuleCopyWith<$Res> get data {
 
 class UPostInteractionSettingsPrefThreadgateAllowRulesFollowerRule extends UPostInteractionSettingsPrefThreadgateAllowRules {
   const UPostInteractionSettingsPrefThreadgateAllowRulesFollowerRule({required this.data}): super._();
-  
+
 
 @override final  FollowerRule data;
 
@@ -332,7 +332,7 @@ as FollowerRule,
 @override
 @pragma('vm:prefer-inline')
 $FollowerRuleCopyWith<$Res> get data {
-  
+
   return $FollowerRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -344,7 +344,7 @@ $FollowerRuleCopyWith<$Res> get data {
 
 class UPostInteractionSettingsPrefThreadgateAllowRulesFollowingRule extends UPostInteractionSettingsPrefThreadgateAllowRules {
   const UPostInteractionSettingsPrefThreadgateAllowRulesFollowingRule({required this.data}): super._();
-  
+
 
 @override final  FollowingRule data;
 
@@ -407,7 +407,7 @@ as FollowingRule,
 @override
 @pragma('vm:prefer-inline')
 $FollowingRuleCopyWith<$Res> get data {
-  
+
   return $FollowingRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -419,7 +419,7 @@ $FollowingRuleCopyWith<$Res> get data {
 
 class UPostInteractionSettingsPrefThreadgateAllowRulesListRule extends UPostInteractionSettingsPrefThreadgateAllowRules {
   const UPostInteractionSettingsPrefThreadgateAllowRulesListRule({required this.data}): super._();
-  
+
 
 @override final  ListRule data;
 
@@ -482,7 +482,7 @@ as ListRule,
 @override
 @pragma('vm:prefer-inline')
 $ListRuleCopyWith<$Res> get data {
-  
+
   return $ListRuleCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -494,7 +494,7 @@ $ListRuleCopyWith<$Res> get data {
 
 class UPostInteractionSettingsPrefThreadgateAllowRulesUnknown extends UPostInteractionSettingsPrefThreadgateAllowRules {
   const UPostInteractionSettingsPrefThreadgateAllowRulesUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

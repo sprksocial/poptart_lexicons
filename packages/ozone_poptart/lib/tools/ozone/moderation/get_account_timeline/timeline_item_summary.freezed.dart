@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $TimelineItemSummaryEventSubjectTypeCopyWith<$Res> get eventSubjectType {
-  
+
   return $TimelineItemSummaryEventSubjectTypeCopyWith<$Res>(_self.eventSubjectType, (value) {
     return _then(_self.copyWith(eventSubjectType: value));
   });
@@ -89,7 +89,7 @@ $TimelineItemSummaryEventSubjectTypeCopyWith<$Res> get eventSubjectType {
 @override
 @pragma('vm:prefer-inline')
 $TimelineItemSummaryEventTypeCopyWith<$Res> get eventType {
-  
+
   return $TimelineItemSummaryEventTypeCopyWith<$Res>(_self.eventType, (value) {
     return _then(_self.copyWith(eventType: value));
   });
@@ -314,7 +314,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $TimelineItemSummaryEventSubjectTypeCopyWith<$Res> get eventSubjectType {
-  
+
   return $TimelineItemSummaryEventSubjectTypeCopyWith<$Res>(_self.eventSubjectType, (value) {
     return _then(_self.copyWith(eventSubjectType: value));
   });
@@ -323,7 +323,7 @@ $TimelineItemSummaryEventSubjectTypeCopyWith<$Res> get eventSubjectType {
 @override
 @pragma('vm:prefer-inline')
 $TimelineItemSummaryEventTypeCopyWith<$Res> get eventType {
-  
+
   return $TimelineItemSummaryEventTypeCopyWith<$Res>(_self.eventType, (value) {
     return _then(_self.copyWith(eventType: value));
   });

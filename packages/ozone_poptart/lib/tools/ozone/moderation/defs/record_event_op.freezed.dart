@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class RecordEventOpKnownValue extends RecordEventOp {
   const RecordEventOpKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownRecordEventOp data;
 
@@ -248,7 +248,7 @@ as KnownRecordEventOp,
 
 class RecordEventOpUnknown extends RecordEventOp {
   const RecordEventOpUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

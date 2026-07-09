@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ContentLabelPrefVisibilityKnownValue extends ContentLabelPrefVisibility {
   const ContentLabelPrefVisibilityKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownContentLabelPrefVisibility data;
 
@@ -248,7 +248,7 @@ as KnownContentLabelPrefVisibility,
 
 class ContentLabelPrefVisibilityUnknown extends ContentLabelPrefVisibility {
   const ContentLabelPrefVisibilityUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

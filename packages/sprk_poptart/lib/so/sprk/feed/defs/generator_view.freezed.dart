@@ -90,7 +90,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get creator {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.creator, (value) {
     return _then(_self.copyWith(creator: value));
   });
@@ -363,7 +363,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get creator {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.creator, (value) {
     return _then(_self.copyWith(creator: value));
   });

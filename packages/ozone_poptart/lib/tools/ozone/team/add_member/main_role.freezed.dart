@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class TeamAddMemberRoleKnownValue extends TeamAddMemberRole {
   const TeamAddMemberRoleKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownTeamAddMemberRole data;
 
@@ -248,7 +248,7 @@ as KnownTeamAddMemberRole,
 
 class TeamAddMemberRoleUnknown extends TeamAddMemberRole {
   const TeamAddMemberRoleUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

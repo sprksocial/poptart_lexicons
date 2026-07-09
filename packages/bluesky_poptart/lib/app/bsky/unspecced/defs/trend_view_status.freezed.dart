@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class TrendViewStatusKnownValue extends TrendViewStatus {
   const TrendViewStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownTrendViewStatus data;
 
@@ -248,7 +248,7 @@ as KnownTrendViewStatus,
 
 class TrendViewStatusUnknown extends TrendViewStatus {
   const TrendViewStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UFeedGetPostThreadThreadCopyWith<$Res> get thread {
-  
+
   return $UFeedGetPostThreadThreadCopyWith<$Res>(_self.thread, (value) {
     return _then(_self.copyWith(thread: value));
   });
@@ -311,7 +311,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UFeedGetPostThreadThreadCopyWith<$Res> get thread {
-  
+
   return $UFeedGetPostThreadThreadCopyWith<$Res>(_self.thread, (value) {
     return _then(_self.copyWith(thread: value));
   });

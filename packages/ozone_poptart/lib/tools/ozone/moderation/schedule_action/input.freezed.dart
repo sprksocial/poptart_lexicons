@@ -82,7 +82,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UModerationScheduleActionActionCopyWith<$Res> get action {
-  
+
   return $UModerationScheduleActionActionCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
@@ -91,7 +91,7 @@ $UModerationScheduleActionActionCopyWith<$Res> get action {
 @override
 @pragma('vm:prefer-inline')
 $SchedulingConfigCopyWith<$Res> get scheduling {
-  
+
   return $SchedulingConfigCopyWith<$Res>(_self.scheduling, (value) {
     return _then(_self.copyWith(scheduling: value));
   });
@@ -337,7 +337,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UModerationScheduleActionActionCopyWith<$Res> get action {
-  
+
   return $UModerationScheduleActionActionCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
@@ -346,7 +346,7 @@ $UModerationScheduleActionActionCopyWith<$Res> get action {
 @override
 @pragma('vm:prefer-inline')
 $SchedulingConfigCopyWith<$Res> get scheduling {
-  
+
   return $SchedulingConfigCopyWith<$Res>(_self.scheduling, (value) {
     return _then(_self.copyWith(scheduling: value));
   });

@@ -98,7 +98,7 @@ $CaptionRefCopyWith<$Res>? get caption {
 @override
 @pragma('vm:prefer-inline')
 $UFeedPostMediaCopyWith<$Res> get media {
-  
+
   return $UFeedPostMediaCopyWith<$Res>(_self.media, (value) {
     return _then(_self.copyWith(media: value));
   });
@@ -394,7 +394,7 @@ $CaptionRefCopyWith<$Res>? get caption {
 @override
 @pragma('vm:prefer-inline')
 $UFeedPostMediaCopyWith<$Res> get media {
-  
+
   return $UFeedPostMediaCopyWith<$Res>(_self.media, (value) {
     return _then(_self.copyWith(media: value));
   });

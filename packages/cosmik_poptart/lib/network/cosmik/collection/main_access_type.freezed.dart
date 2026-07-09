@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class CollectionAccessTypeKnownValue extends CollectionAccessType {
   const CollectionAccessTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownCollectionAccessType data;
 
@@ -248,7 +248,7 @@ as KnownCollectionAccessType,
 
 class CollectionAccessTypeUnknown extends CollectionAccessType {
   const CollectionAccessTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

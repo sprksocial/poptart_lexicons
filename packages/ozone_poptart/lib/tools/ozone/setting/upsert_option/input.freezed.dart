@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SettingUpsertOptionScopeCopyWith<$Res> get scope {
-  
+
   return $SettingUpsertOptionScopeCopyWith<$Res>(_self.scope, (value) {
     return _then(_self.copyWith(scope: value));
   });
@@ -326,7 +326,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SettingUpsertOptionScopeCopyWith<$Res> get scope {
-  
+
   return $SettingUpsertOptionScopeCopyWith<$Res>(_self.scope, (value) {
     return _then(_self.copyWith(scope: value));
   });

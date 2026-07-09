@@ -8,7 +8,9 @@
 // **************************************************************************
 
 export 'post/descriptor.dart';
+export 'post/entity.dart';
 export 'post/main.dart';
 export 'post/reply_ref.dart';
+export 'post/text_slice.dart';
 export 'post/union_main_embed.dart';
 export 'post/union_main_labels.dart';

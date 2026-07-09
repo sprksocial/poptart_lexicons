@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UnspeccedGetPostThreadV2SortKnownValue extends UnspeccedGetPostThreadV2Sort {
   const UnspeccedGetPostThreadV2SortKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownUnspeccedGetPostThreadV2Sort data;
 
@@ -248,7 +248,7 @@ as KnownUnspeccedGetPostThreadV2Sort,
 
 class UnspeccedGetPostThreadV2SortUnknown extends UnspeccedGetPostThreadV2Sort {
   const UnspeccedGetPostThreadV2SortUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

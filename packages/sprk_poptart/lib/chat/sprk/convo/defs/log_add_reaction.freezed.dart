@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ULogAddReactionMessageCopyWith<$Res> get message {
-  
+
   return $ULogAddReactionMessageCopyWith<$Res>(_self.message, (value) {
     return _then(_self.copyWith(message: value));
   });
@@ -90,7 +90,7 @@ $ULogAddReactionMessageCopyWith<$Res> get message {
 @override
 @pragma('vm:prefer-inline')
 $ReactionViewCopyWith<$Res> get reaction {
-  
+
   return $ReactionViewCopyWith<$Res>(_self.reaction, (value) {
     return _then(_self.copyWith(reaction: value));
   });
@@ -317,7 +317,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ULogAddReactionMessageCopyWith<$Res> get message {
-  
+
   return $ULogAddReactionMessageCopyWith<$Res>(_self.message, (value) {
     return _then(_self.copyWith(message: value));
   });
@@ -326,7 +326,7 @@ $ULogAddReactionMessageCopyWith<$Res> get message {
 @override
 @pragma('vm:prefer-inline')
 $ReactionViewCopyWith<$Res> get reaction {
-  
+
   return $ReactionViewCopyWith<$Res>(_self.reaction, (value) {
     return _then(_self.copyWith(reaction: value));
   });

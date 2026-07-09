@@ -8,6 +8,7 @@ import 'package:poptart_core/internals.dart' show isA;
 
 import '../images/main.dart';
 import '../video/main.dart';
+import '../gallery/main.dart';
 import '../external/main.dart';
 
 part 'union_main_media.freezed.dart';
@@ -26,6 +27,9 @@ sealed class UEmbedRecordWithMediaMedia with _$UEmbedRecordWithMediaMedia {
   const factory UEmbedRecordWithMediaMedia.embedVideo({
     required EmbedVideo data,
   }) = UEmbedRecordWithMediaMediaEmbedVideo;
+  const factory UEmbedRecordWithMediaMedia.embedGallery({
+    required EmbedGallery data,
+  }) = UEmbedRecordWithMediaMediaEmbedGallery;
   const factory UEmbedRecordWithMediaMedia.embedExternal({
     required EmbedExternal data,
   }) = UEmbedRecordWithMediaMediaEmbedExternal;
@@ -45,6 +49,10 @@ extension UEmbedRecordWithMediaMediaExtension on UEmbedRecordWithMediaMedia {
   bool get isEmbedVideo => isA<UEmbedRecordWithMediaMediaEmbedVideo>(this);
   bool get isNotEmbedVideo => !isEmbedVideo;
   EmbedVideo? get embedVideo => isEmbedVideo ? data as EmbedVideo : null;
+  bool get isEmbedGallery => isA<UEmbedRecordWithMediaMediaEmbedGallery>(this);
+  bool get isNotEmbedGallery => !isEmbedGallery;
+  EmbedGallery? get embedGallery =>
+      isEmbedGallery ? data as EmbedGallery : null;
   bool get isEmbedExternal =>
       isA<UEmbedRecordWithMediaMediaEmbedExternal>(this);
   bool get isNotEmbedExternal => !isEmbedExternal;
@@ -73,6 +81,11 @@ final class UEmbedRecordWithMediaMediaConverter
           data: const EmbedVideoConverter().fromJson(json),
         );
       }
+      if (EmbedGallery.validate(json)) {
+        return UEmbedRecordWithMediaMedia.embedGallery(
+          data: const EmbedGalleryConverter().fromJson(json),
+        );
+      }
       if (EmbedExternal.validate(json)) {
         return UEmbedRecordWithMediaMedia.embedExternal(
           data: const EmbedExternalConverter().fromJson(json),
@@ -89,6 +102,7 @@ final class UEmbedRecordWithMediaMediaConverter
   Map<String, dynamic> toJson(UEmbedRecordWithMediaMedia object) => object.when(
     embedImages: (data) => const EmbedImagesConverter().toJson(data),
     embedVideo: (data) => const EmbedVideoConverter().toJson(data),
+    embedGallery: (data) => const EmbedGalleryConverter().toJson(data),
     embedExternal: (data) => const EmbedExternalConverter().toJson(data),
 
     unknown: (data) => data,

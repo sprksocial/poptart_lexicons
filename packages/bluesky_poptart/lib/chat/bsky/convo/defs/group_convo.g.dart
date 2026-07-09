@@ -15,8 +15,6 @@ _GroupConvo _$GroupConvoFromJson(Map json) =>
           r'$type',
           (v) => v as String? ?? 'chat.bsky.convo.defs#groupConvo',
         ),
-        name: $checkedConvert('name', (v) => v as String),
-        memberCount: $checkedConvert('memberCount', (v) => (v as num).toInt()),
         createdAt: $checkedConvert(
           'createdAt',
           (v) => DateTime.parse(v as String),
@@ -28,9 +26,24 @@ _GroupConvo _$GroupConvoFromJson(Map json) =>
             const JoinLinkViewConverter().fromJson,
           ),
         ),
+        joinRequestCount: $checkedConvert(
+          'joinRequestCount',
+          (v) => (v as num?)?.toInt(),
+        ),
         lockStatus: $checkedConvert(
           'lockStatus',
           (v) => const ConvoLockStatusConverter().fromJson(v as String),
+        ),
+        lockStatusModerationOverride: $checkedConvert(
+          'lockStatusModerationOverride',
+          (v) => v as bool,
+        ),
+        memberCount: $checkedConvert('memberCount', (v) => (v as num).toInt()),
+        memberLimit: $checkedConvert('memberLimit', (v) => (v as num).toInt()),
+        name: $checkedConvert('name', (v) => v as String),
+        unreadJoinRequestCount: $checkedConvert(
+          'unreadJoinRequestCount',
+          (v) => (v as num?)?.toInt(),
         ),
         $unknown: $checkedConvert(
           r'$unknown',
@@ -44,14 +57,18 @@ Map<String, dynamic> _$GroupConvoToJson(
   _GroupConvo instance,
 ) => <String, dynamic>{
   r'$type': instance.$type,
-  'name': instance.name,
-  'memberCount': instance.memberCount,
   'createdAt': instance.createdAt.toIso8601String(),
   'joinLink': ?_$JsonConverterToJson<Map<String, dynamic>, JoinLinkView>(
     instance.joinLink,
     const JoinLinkViewConverter().toJson,
   ),
+  'joinRequestCount': ?instance.joinRequestCount,
   'lockStatus': const ConvoLockStatusConverter().toJson(instance.lockStatus),
+  'lockStatusModerationOverride': instance.lockStatusModerationOverride,
+  'memberCount': instance.memberCount,
+  'memberLimit': instance.memberLimit,
+  'name': instance.name,
+  'unreadJoinRequestCount': ?instance.unreadJoinRequestCount,
   r'$unknown': ?instance.$unknown,
 };
 

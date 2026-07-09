@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceIncludeCopyWith<$Res> get include {
-  
+
   return $FilterablePreferenceIncludeCopyWith<$Res>(_self.include, (value) {
     return _then(_self.copyWith(include: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceIncludeCopyWith<$Res> get include {
-  
+
   return $FilterablePreferenceIncludeCopyWith<$Res>(_self.include, (value) {
     return _then(_self.copyWith(include: value));
   });

@@ -15,6 +15,7 @@ import 'package:margin_poptart/at/margin/like.dart';
 import 'package:margin_poptart/at/margin/note.dart';
 import 'package:margin_poptart/at/margin/preferences.dart';
 import 'package:margin_poptart/at/margin/profile.dart';
+import 'package:margin_poptart/at/margin/reading_room.dart';
 import 'package:margin_poptart/at/margin/reply.dart';
 
 import 'at_uri_extension.dart';
@@ -53,6 +54,9 @@ final class RepoCommitHandler {
   final RepoCommitOnCreate<ProfileRecord>? _onCreateProfile;
   final RepoCommitOnUpdate<ProfileRecord>? _onUpdateProfile;
   final RepoCommitOnDelete? _onDeleteProfile;
+  final RepoCommitOnCreate<ReadingRoomRecord>? _onCreateReadingRoom;
+  final RepoCommitOnUpdate<ReadingRoomRecord>? _onUpdateReadingRoom;
+  final RepoCommitOnDelete? _onDeleteReadingRoom;
   final RepoCommitOnCreate<ReplyRecord>? _onCreateReply;
   final RepoCommitOnUpdate<ReplyRecord>? _onUpdateReply;
   final RepoCommitOnDelete? _onDeleteReply;
@@ -83,6 +87,9 @@ final class RepoCommitHandler {
     final RepoCommitOnCreate<ProfileRecord>? onCreateProfile,
     final RepoCommitOnUpdate<ProfileRecord>? onUpdateProfile,
     final RepoCommitOnDelete? onDeleteProfile,
+    final RepoCommitOnCreate<ReadingRoomRecord>? onCreateReadingRoom,
+    final RepoCommitOnUpdate<ReadingRoomRecord>? onUpdateReadingRoom,
+    final RepoCommitOnDelete? onDeleteReadingRoom,
     final RepoCommitOnCreate<ReplyRecord>? onCreateReply,
     final RepoCommitOnUpdate<ReplyRecord>? onUpdateReply,
     final RepoCommitOnDelete? onDeleteReply,
@@ -111,6 +118,9 @@ final class RepoCommitHandler {
        _onCreateProfile = onCreateProfile,
        _onUpdateProfile = onUpdateProfile,
        _onDeleteProfile = onDeleteProfile,
+       _onCreateReadingRoom = onCreateReadingRoom,
+       _onUpdateReadingRoom = onUpdateReadingRoom,
+       _onDeleteReadingRoom = onDeleteReadingRoom,
        _onCreateReply = onCreateReply,
        _onUpdateReply = onUpdateReply,
        _onDeleteReply = onDeleteReply,
@@ -220,6 +230,18 @@ final class RepoCommitHandler {
       await _onCreateProfile?.call(
         RepoCommitCreate<ProfileRecord>(
           record: const ProfileRecordConverter().fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+        ),
+      );
+      return;
+    }
+    if (uri.isReadingRoom && ReadingRoomRecord.validate(record)) {
+      await _onCreateReadingRoom?.call(
+        RepoCommitCreate<ReadingRoomRecord>(
+          record: const ReadingRoomRecordConverter().fromJson(record),
           uri: uri,
           cid: op.cid,
           author: data.repo,
@@ -347,6 +369,19 @@ final class RepoCommitHandler {
       );
       return;
     }
+    if (uri.isReadingRoom && ReadingRoomRecord.validate(record)) {
+      await _onUpdateReadingRoom?.call(
+        RepoCommitUpdate<ReadingRoomRecord>(
+          record: const ReadingRoomRecordConverter().fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
     if (uri.isReply && ReplyRecord.validate(record)) {
       await _onUpdateReply?.call(
         RepoCommitUpdate<ReplyRecord>(
@@ -444,6 +479,17 @@ final class RepoCommitHandler {
     }
     if (uri.isProfile) {
       await _onDeleteProfile?.call(
+        RepoCommitDelete(
+          uri: uri,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
+    if (uri.isReadingRoom) {
+      await _onDeleteReadingRoom?.call(
         RepoCommitDelete(
           uri: uri,
           author: data.repo,

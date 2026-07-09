@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileAssociatedActivitySubscriptionAllowSubscriptionsCopyWith<$Res> get allowSubscriptions {
-  
+
   return $ProfileAssociatedActivitySubscriptionAllowSubscriptionsCopyWith<$Res>(_self.allowSubscriptions, (value) {
     return _then(_self.copyWith(allowSubscriptions: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileAssociatedActivitySubscriptionAllowSubscriptionsCopyWith<$Res> get allowSubscriptions {
-  
+
   return $ProfileAssociatedActivitySubscriptionAllowSubscriptionsCopyWith<$Res>(_self.allowSubscriptions, (value) {
     return _then(_self.copyWith(allowSubscriptions: value));
   });

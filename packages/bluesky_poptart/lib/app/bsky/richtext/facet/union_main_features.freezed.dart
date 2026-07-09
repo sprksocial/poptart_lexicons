@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class URichtextFacetFeaturesRichtextFacetMention extends URichtextFacetFeatures {
   const URichtextFacetFeaturesRichtextFacetMention({required this.data}): super._();
-  
+
 
 @override final  RichtextFacetMention data;
 
@@ -251,7 +251,7 @@ as RichtextFacetMention,
 @override
 @pragma('vm:prefer-inline')
 $RichtextFacetMentionCopyWith<$Res> get data {
-  
+
   return $RichtextFacetMentionCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $RichtextFacetMentionCopyWith<$Res> get data {
 
 class URichtextFacetFeaturesRichtextFacetLink extends URichtextFacetFeatures {
   const URichtextFacetFeaturesRichtextFacetLink({required this.data}): super._();
-  
+
 
 @override final  RichtextFacetLink data;
 
@@ -326,7 +326,7 @@ as RichtextFacetLink,
 @override
 @pragma('vm:prefer-inline')
 $RichtextFacetLinkCopyWith<$Res> get data {
-  
+
   return $RichtextFacetLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $RichtextFacetLinkCopyWith<$Res> get data {
 
 class URichtextFacetFeaturesRichtextFacetTag extends URichtextFacetFeatures {
   const URichtextFacetFeaturesRichtextFacetTag({required this.data}): super._();
-  
+
 
 @override final  RichtextFacetTag data;
 
@@ -401,7 +401,7 @@ as RichtextFacetTag,
 @override
 @pragma('vm:prefer-inline')
 $RichtextFacetTagCopyWith<$Res> get data {
-  
+
   return $RichtextFacetTagCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $RichtextFacetTagCopyWith<$Res> get data {
 
 class URichtextFacetFeaturesUnknown extends URichtextFacetFeatures {
   const URichtextFacetFeaturesUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

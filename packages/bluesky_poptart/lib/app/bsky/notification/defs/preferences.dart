@@ -21,7 +21,6 @@ part 'preferences.g.dart';
 @freezed
 abstract class Preferences with _$Preferences {
   static const knownProps = <String>[
-    'chat',
     'follow',
     'like',
     'likeViaRepost',
@@ -39,7 +38,6 @@ abstract class Preferences with _$Preferences {
   @JsonSerializable(includeIfNull: false)
   const factory Preferences({
     @Default('app.bsky.notification.defs#preferences') String $type,
-    @ChatPreferenceConverter() required ChatPreference chat,
     @FilterablePreferenceConverter() required FilterablePreference follow,
     @FilterablePreferenceConverter() required FilterablePreference like,
     @FilterablePreferenceConverter()

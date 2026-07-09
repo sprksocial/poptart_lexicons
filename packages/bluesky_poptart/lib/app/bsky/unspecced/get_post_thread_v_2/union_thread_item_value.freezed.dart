@@ -194,7 +194,7 @@ return unknown(_that.data);case _:
 
 class UThreadItemValueThreadItemPost extends UThreadItemValue {
   const UThreadItemValueThreadItemPost({required this.data}): super._();
-  
+
 
 @override final  ThreadItemPost data;
 
@@ -257,7 +257,7 @@ as ThreadItemPost,
 @override
 @pragma('vm:prefer-inline')
 $ThreadItemPostCopyWith<$Res> get data {
-  
+
   return $ThreadItemPostCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -269,7 +269,7 @@ $ThreadItemPostCopyWith<$Res> get data {
 
 class UThreadItemValueThreadItemNoUnauthenticated extends UThreadItemValue {
   const UThreadItemValueThreadItemNoUnauthenticated({required this.data}): super._();
-  
+
 
 @override final  ThreadItemNoUnauthenticated data;
 
@@ -332,7 +332,7 @@ as ThreadItemNoUnauthenticated,
 @override
 @pragma('vm:prefer-inline')
 $ThreadItemNoUnauthenticatedCopyWith<$Res> get data {
-  
+
   return $ThreadItemNoUnauthenticatedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -344,7 +344,7 @@ $ThreadItemNoUnauthenticatedCopyWith<$Res> get data {
 
 class UThreadItemValueThreadItemNotFound extends UThreadItemValue {
   const UThreadItemValueThreadItemNotFound({required this.data}): super._();
-  
+
 
 @override final  ThreadItemNotFound data;
 
@@ -407,7 +407,7 @@ as ThreadItemNotFound,
 @override
 @pragma('vm:prefer-inline')
 $ThreadItemNotFoundCopyWith<$Res> get data {
-  
+
   return $ThreadItemNotFoundCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -419,7 +419,7 @@ $ThreadItemNotFoundCopyWith<$Res> get data {
 
 class UThreadItemValueThreadItemBlocked extends UThreadItemValue {
   const UThreadItemValueThreadItemBlocked({required this.data}): super._();
-  
+
 
 @override final  ThreadItemBlocked data;
 
@@ -482,7 +482,7 @@ as ThreadItemBlocked,
 @override
 @pragma('vm:prefer-inline')
 $ThreadItemBlockedCopyWith<$Res> get data {
-  
+
   return $ThreadItemBlockedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -494,7 +494,7 @@ $ThreadItemBlockedCopyWith<$Res> get data {
 
 class UThreadItemValueUnknown extends UThreadItemValue {
   const UThreadItemValueUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

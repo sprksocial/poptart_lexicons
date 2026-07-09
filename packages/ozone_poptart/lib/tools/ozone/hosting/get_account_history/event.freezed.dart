@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UEventDetailsCopyWith<$Res> get details {
-  
+
   return $UEventDetailsCopyWith<$Res>(_self.details, (value) {
     return _then(_self.copyWith(details: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UEventDetailsCopyWith<$Res> get details {
-  
+
   return $UEventDetailsCopyWith<$Res>(_self.details, (value) {
     return _then(_self.copyWith(details: value));
   });

@@ -23,7 +23,8 @@ mixin _$Selector {
  int? get start;/// TextPositionSelector: end character offset (exclusive)
  int? get end;/// CssSelector/XPathSelector/FragmentSelector: the selector expression or fragment value
  String? get value;/// FragmentSelector: URI of the specification the fragment conforms to
- String? get conformsTo; Map<String, dynamic>? get $unknown;
+ String? get conformsTo;/// W3C refinement: a further selector applied within the region this selector identifies (e.g. a FragmentSelector locating a page or CFI range inside a TextQuoteSelector match).
+@SelectorConverter() Selector? get refinedBy; Map<String, dynamic>? get $unknown;
 /// Create a copy of Selector
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -36,16 +37,16 @@ $SelectorCopyWith<Selector> get copyWith => _$SelectorCopyWithImpl<Selector>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Selector&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.type, type) || other.type == type)&&(identical(other.exact, exact) || other.exact == exact)&&(identical(other.prefix, prefix) || other.prefix == prefix)&&(identical(other.suffix, suffix) || other.suffix == suffix)&&(identical(other.start, start) || other.start == start)&&(identical(other.end, end) || other.end == end)&&(identical(other.value, value) || other.value == value)&&(identical(other.conformsTo, conformsTo) || other.conformsTo == conformsTo)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Selector&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.type, type) || other.type == type)&&(identical(other.exact, exact) || other.exact == exact)&&(identical(other.prefix, prefix) || other.prefix == prefix)&&(identical(other.suffix, suffix) || other.suffix == suffix)&&(identical(other.start, start) || other.start == start)&&(identical(other.end, end) || other.end == end)&&(identical(other.value, value) || other.value == value)&&(identical(other.conformsTo, conformsTo) || other.conformsTo == conformsTo)&&(identical(other.refinedBy, refinedBy) || other.refinedBy == refinedBy)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,type,exact,prefix,suffix,start,end,value,conformsTo,const DeepCollectionEquality().hash($unknown));
+int get hashCode => Object.hash(runtimeType,$type,type,exact,prefix,suffix,start,end,value,conformsTo,refinedBy,const DeepCollectionEquality().hash($unknown));
 
 @override
 String toString() {
-  return 'Selector(\$type: ${$type}, type: $type, exact: $exact, prefix: $prefix, suffix: $suffix, start: $start, end: $end, value: $value, conformsTo: $conformsTo, \$unknown: ${$unknown})';
+  return 'Selector(\$type: ${$type}, type: $type, exact: $exact, prefix: $prefix, suffix: $suffix, start: $start, end: $end, value: $value, conformsTo: $conformsTo, refinedBy: $refinedBy, \$unknown: ${$unknown})';
 }
 
 
@@ -56,11 +57,11 @@ abstract mixin class $SelectorCopyWith<$Res>  {
   factory $SelectorCopyWith(Selector value, $Res Function(Selector) _then) = _$SelectorCopyWithImpl;
 @useResult
 $Res call({
- String $type,@SelectorTypeConverter() SelectorType type, String? exact, String? prefix, String? suffix, int? start, int? end, String? value, String? conformsTo, Map<String, dynamic>? $unknown
+ String $type,@SelectorTypeConverter() SelectorType type, String? exact, String? prefix, String? suffix, int? start, int? end, String? value, String? conformsTo,@SelectorConverter() Selector? refinedBy, Map<String, dynamic>? $unknown
 });
 
 
-$SelectorTypeCopyWith<$Res> get type;
+$SelectorTypeCopyWith<$Res> get type;$SelectorCopyWith<$Res>? get refinedBy;
 
 }
 /// @nodoc
@@ -73,7 +74,7 @@ class _$SelectorCopyWithImpl<$Res>
 
 /// Create a copy of Selector
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? type = null,Object? exact = freezed,Object? prefix = freezed,Object? suffix = freezed,Object? start = freezed,Object? end = freezed,Object? value = freezed,Object? conformsTo = freezed,Object? $unknown = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? type = null,Object? exact = freezed,Object? prefix = freezed,Object? suffix = freezed,Object? start = freezed,Object? end = freezed,Object? value = freezed,Object? conformsTo = freezed,Object? refinedBy = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
@@ -84,7 +85,8 @@ as String?,start: freezed == start ? _self.start : start // ignore: cast_nullabl
 as int?,end: freezed == end ? _self.end : end // ignore: cast_nullable_to_non_nullable
 as int?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
 as String?,conformsTo: freezed == conformsTo ? _self.conformsTo : conformsTo // ignore: cast_nullable_to_non_nullable
-as String?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as String?,refinedBy: freezed == refinedBy ? _self.refinedBy : refinedBy // ignore: cast_nullable_to_non_nullable
+as Selector?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -93,9 +95,21 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SelectorTypeCopyWith<$Res> get type {
-  
+
   return $SelectorTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
+  });
+}/// Create a copy of Selector
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$SelectorCopyWith<$Res>? get refinedBy {
+    if (_self.refinedBy == null) {
+    return null;
+  }
+
+  return $SelectorCopyWith<$Res>(_self.refinedBy!, (value) {
+    return _then(_self.copyWith(refinedBy: value));
   });
 }
 }
@@ -179,10 +193,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @SelectorTypeConverter()  SelectorType type,  String? exact,  String? prefix,  String? suffix,  int? start,  int? end,  String? value,  String? conformsTo,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type, @SelectorTypeConverter()  SelectorType type,  String? exact,  String? prefix,  String? suffix,  int? start,  int? end,  String? value,  String? conformsTo, @SelectorConverter()  Selector? refinedBy,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Selector() when $default != null:
-return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_that.start,_that.end,_that.value,_that.conformsTo,_that.$unknown);case _:
+return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_that.start,_that.end,_that.value,_that.conformsTo,_that.refinedBy,_that.$unknown);case _:
   return orElse();
 
 }
@@ -200,10 +214,10 @@ return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @SelectorTypeConverter()  SelectorType type,  String? exact,  String? prefix,  String? suffix,  int? start,  int? end,  String? value,  String? conformsTo,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type, @SelectorTypeConverter()  SelectorType type,  String? exact,  String? prefix,  String? suffix,  int? start,  int? end,  String? value,  String? conformsTo, @SelectorConverter()  Selector? refinedBy,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _Selector():
-return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_that.start,_that.end,_that.value,_that.conformsTo,_that.$unknown);case _:
+return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_that.start,_that.end,_that.value,_that.conformsTo,_that.refinedBy,_that.$unknown);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -220,10 +234,10 @@ return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @SelectorTypeConverter()  SelectorType type,  String? exact,  String? prefix,  String? suffix,  int? start,  int? end,  String? value,  String? conformsTo,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type, @SelectorTypeConverter()  SelectorType type,  String? exact,  String? prefix,  String? suffix,  int? start,  int? end,  String? value,  String? conformsTo, @SelectorConverter()  Selector? refinedBy,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _Selector() when $default != null:
-return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_that.start,_that.end,_that.value,_that.conformsTo,_that.$unknown);case _:
+return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_that.start,_that.end,_that.value,_that.conformsTo,_that.refinedBy,_that.$unknown);case _:
   return null;
 
 }
@@ -235,7 +249,7 @@ return $default(_that.$type,_that.type,_that.exact,_that.prefix,_that.suffix,_th
 
 @JsonSerializable(includeIfNull: false)
 class _Selector implements Selector {
-  const _Selector({this.$type = 'at.margin.note#selector', @SelectorTypeConverter() required this.type, this.exact, this.prefix, this.suffix, this.start, this.end, this.value, this.conformsTo, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _Selector({this.$type = 'at.margin.note#selector', @SelectorTypeConverter() required this.type, this.exact, this.prefix, this.suffix, this.start, this.end, this.value, this.conformsTo, @SelectorConverter() this.refinedBy, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _Selector.fromJson(Map<String, dynamic> json) => _$SelectorFromJson(json);
 
 @override@JsonKey() final  String $type;
@@ -255,6 +269,8 @@ class _Selector implements Selector {
 @override final  String? value;
 /// FragmentSelector: URI of the specification the fragment conforms to
 @override final  String? conformsTo;
+/// W3C refinement: a further selector applied within the region this selector identifies (e.g. a FragmentSelector locating a page or CFI range inside a TextQuoteSelector match).
+@override@SelectorConverter() final  Selector? refinedBy;
  final  Map<String, dynamic>? _$unknown;
 @override Map<String, dynamic>? get $unknown {
   final value = _$unknown;
@@ -278,16 +294,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Selector&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.type, type) || other.type == type)&&(identical(other.exact, exact) || other.exact == exact)&&(identical(other.prefix, prefix) || other.prefix == prefix)&&(identical(other.suffix, suffix) || other.suffix == suffix)&&(identical(other.start, start) || other.start == start)&&(identical(other.end, end) || other.end == end)&&(identical(other.value, value) || other.value == value)&&(identical(other.conformsTo, conformsTo) || other.conformsTo == conformsTo)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Selector&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.type, type) || other.type == type)&&(identical(other.exact, exact) || other.exact == exact)&&(identical(other.prefix, prefix) || other.prefix == prefix)&&(identical(other.suffix, suffix) || other.suffix == suffix)&&(identical(other.start, start) || other.start == start)&&(identical(other.end, end) || other.end == end)&&(identical(other.value, value) || other.value == value)&&(identical(other.conformsTo, conformsTo) || other.conformsTo == conformsTo)&&(identical(other.refinedBy, refinedBy) || other.refinedBy == refinedBy)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,type,exact,prefix,suffix,start,end,value,conformsTo,const DeepCollectionEquality().hash(_$unknown));
+int get hashCode => Object.hash(runtimeType,$type,type,exact,prefix,suffix,start,end,value,conformsTo,refinedBy,const DeepCollectionEquality().hash(_$unknown));
 
 @override
 String toString() {
-  return 'Selector(\$type: ${$type}, type: $type, exact: $exact, prefix: $prefix, suffix: $suffix, start: $start, end: $end, value: $value, conformsTo: $conformsTo, \$unknown: ${$unknown})';
+  return 'Selector(\$type: ${$type}, type: $type, exact: $exact, prefix: $prefix, suffix: $suffix, start: $start, end: $end, value: $value, conformsTo: $conformsTo, refinedBy: $refinedBy, \$unknown: ${$unknown})';
 }
 
 
@@ -298,11 +314,11 @@ abstract mixin class _$SelectorCopyWith<$Res> implements $SelectorCopyWith<$Res>
   factory _$SelectorCopyWith(_Selector value, $Res Function(_Selector) _then) = __$SelectorCopyWithImpl;
 @override @useResult
 $Res call({
- String $type,@SelectorTypeConverter() SelectorType type, String? exact, String? prefix, String? suffix, int? start, int? end, String? value, String? conformsTo, Map<String, dynamic>? $unknown
+ String $type,@SelectorTypeConverter() SelectorType type, String? exact, String? prefix, String? suffix, int? start, int? end, String? value, String? conformsTo,@SelectorConverter() Selector? refinedBy, Map<String, dynamic>? $unknown
 });
 
 
-@override $SelectorTypeCopyWith<$Res> get type;
+@override $SelectorTypeCopyWith<$Res> get type;@override $SelectorCopyWith<$Res>? get refinedBy;
 
 }
 /// @nodoc
@@ -315,7 +331,7 @@ class __$SelectorCopyWithImpl<$Res>
 
 /// Create a copy of Selector
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? type = null,Object? exact = freezed,Object? prefix = freezed,Object? suffix = freezed,Object? start = freezed,Object? end = freezed,Object? value = freezed,Object? conformsTo = freezed,Object? $unknown = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? type = null,Object? exact = freezed,Object? prefix = freezed,Object? suffix = freezed,Object? start = freezed,Object? end = freezed,Object? value = freezed,Object? conformsTo = freezed,Object? refinedBy = freezed,Object? $unknown = freezed,}) {
   return _then(_Selector(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
@@ -326,7 +342,8 @@ as String?,start: freezed == start ? _self.start : start // ignore: cast_nullabl
 as int?,end: freezed == end ? _self.end : end // ignore: cast_nullable_to_non_nullable
 as int?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
 as String?,conformsTo: freezed == conformsTo ? _self.conformsTo : conformsTo // ignore: cast_nullable_to_non_nullable
-as String?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as String?,refinedBy: freezed == refinedBy ? _self.refinedBy : refinedBy // ignore: cast_nullable_to_non_nullable
+as Selector?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -336,9 +353,21 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SelectorTypeCopyWith<$Res> get type {
-  
+
   return $SelectorTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
+  });
+}/// Create a copy of Selector
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$SelectorCopyWith<$Res>? get refinedBy {
+    if (_self.refinedBy == null) {
+    return null;
+  }
+
+  return $SelectorCopyWith<$Res>(_self.refinedBy!, (value) {
+    return _then(_self.copyWith(refinedBy: value));
   });
 }
 }

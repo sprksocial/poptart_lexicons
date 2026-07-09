@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class NoteMotivationKnownValue extends NoteMotivation {
   const NoteMotivationKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownNoteMotivation data;
 
@@ -248,7 +248,7 @@ as KnownNoteMotivation,
 
 class NoteMotivationUnknown extends NoteMotivation {
   const NoteMotivationUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

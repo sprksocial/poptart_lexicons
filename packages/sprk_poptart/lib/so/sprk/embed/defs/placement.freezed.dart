@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $FrameCopyWith<$Res> get frame {
-  
+
   return $FrameCopyWith<$Res>(_self.frame, (value) {
     return _then(_self.copyWith(frame: value));
   });
@@ -320,7 +320,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $FrameCopyWith<$Res> get frame {
-  
+
   return $FrameCopyWith<$Res>(_self.frame, (value) {
     return _then(_self.copyWith(frame: value));
   });

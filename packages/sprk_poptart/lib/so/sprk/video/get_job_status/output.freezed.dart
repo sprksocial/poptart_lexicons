@@ -77,7 +77,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $JobStatusCopyWith<$Res> get jobStatus {
-  
+
   return $JobStatusCopyWith<$Res>(_self.jobStatus, (value) {
     return _then(_self.copyWith(jobStatus: value));
   });
@@ -296,7 +296,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $JobStatusCopyWith<$Res> get jobStatus {
-  
+
   return $JobStatusCopyWith<$Res>(_self.jobStatus, (value) {
     return _then(_self.copyWith(jobStatus: value));
   });

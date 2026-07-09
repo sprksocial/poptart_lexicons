@@ -37,6 +37,13 @@ _StoryView _$StoryViewFromJson(Map json) => $checkedCreate('_StoryView', json, (
         const UStoryViewMediaConverter().fromJson,
       ),
     ),
+    sound: $checkedConvert(
+      'sound',
+      (v) => _$JsonConverterFromJson<Map<String, dynamic>, AudioView>(
+        v,
+        const AudioViewConverter().fromJson,
+      ),
+    ),
     embeds: $checkedConvert(
       'embeds',
       (v) => (v as List<dynamic>?)
@@ -64,6 +71,10 @@ Map<String, dynamic> _$StoryViewToJson(_StoryView instance) =>
       'media': ?_$JsonConverterToJson<Map<String, dynamic>, UStoryViewMedia>(
         instance.media,
         const UStoryViewMediaConverter().toJson,
+      ),
+      'sound': ?_$JsonConverterToJson<Map<String, dynamic>, AudioView>(
+        instance.sound,
+        const AudioViewConverter().toJson,
       ),
       'embeds': ?instance.embeds?.map(const UViewsConverter().toJson).toList(),
       'indexedAt': instance.indexedAt.toIso8601String(),

@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UConvoViewLastReactionMessageAndReactionView extends UConvoViewLastReaction {
   const UConvoViewLastReactionMessageAndReactionView({required this.data}): super._();
-  
+
 
 @override final  MessageAndReactionView data;
 
@@ -239,7 +239,7 @@ as MessageAndReactionView,
 @override
 @pragma('vm:prefer-inline')
 $MessageAndReactionViewCopyWith<$Res> get data {
-  
+
   return $MessageAndReactionViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $MessageAndReactionViewCopyWith<$Res> get data {
 
 class UConvoViewLastReactionUnknown extends UConvoViewLastReaction {
   const UConvoViewLastReactionUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class QueueActivityPreviousStatusKnownValue extends QueueActivityPreviousStatus {
   const QueueActivityPreviousStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownQueueActivityPreviousStatus data;
 
@@ -248,7 +248,7 @@ as KnownQueueActivityPreviousStatus,
 
 class QueueActivityPreviousStatusUnknown extends QueueActivityPreviousStatus {
   const QueueActivityPreviousStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -37,6 +37,8 @@ import 'package:bluesky_poptart/app/bsky/feed/get_timeline.dart'
     as _AppBskyFeedGetTimeline;
 import 'package:bluesky_poptart/app/bsky/feed/search_posts.dart'
     as _AppBskyFeedSearchPosts;
+import 'package:bluesky_poptart/app/bsky/feed/search_posts_v_2.dart'
+    as _AppBskyFeedSearchPostsV2;
 import 'package:bluesky_poptart/app/bsky/feed/send_interactions.dart'
     as _AppBskyFeedSendInteractions;
 
@@ -104,6 +106,10 @@ final appBskyFeedGetTimelineMethodDescriptor =
 final appBskyFeedSearchPosts = _AppBskyFeedSearchPosts.appBskyFeedSearchPosts;
 final appBskyFeedSearchPostsMethodDescriptor =
     _AppBskyFeedSearchPosts.methodDescriptor;
+final appBskyFeedSearchPostsV2 =
+    _AppBskyFeedSearchPostsV2.appBskyFeedSearchPostsV2;
+final appBskyFeedSearchPostsV2MethodDescriptor =
+    _AppBskyFeedSearchPostsV2.methodDescriptor;
 final appBskyFeedSendInteractions =
     _AppBskyFeedSendInteractions.appBskyFeedSendInteractions;
 final appBskyFeedSendInteractionsMethodDescriptor =

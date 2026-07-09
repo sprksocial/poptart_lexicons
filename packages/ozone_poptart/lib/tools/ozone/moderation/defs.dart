@@ -20,6 +20,7 @@ export 'defs/age_assurance_override_event_status.dart';
 export 'defs/age_assurance_purge_event.dart';
 export 'defs/blob_view.dart';
 export 'defs/cancel_scheduled_takedown_event.dart';
+export 'defs/convo_view.dart';
 export 'defs/descriptor.dart';
 export 'defs/identity_event.dart';
 export 'defs/image_details.dart';

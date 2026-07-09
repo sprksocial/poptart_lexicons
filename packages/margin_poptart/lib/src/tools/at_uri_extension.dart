@@ -53,6 +53,12 @@ extension AtUriExtension on AtUri {
   /// Returns true if this uri is not `at.margin.profile`, otherwise false.
   bool get isNotProfile => !isProfile;
 
+  /// Returns true if this uri is `at.margin.readingRoom`, otherwise false.
+  bool get isReadingRoom => collection.toString() == 'at.margin.readingRoom';
+
+  /// Returns true if this uri is not `at.margin.readingRoom`, otherwise false.
+  bool get isNotReadingRoom => !isReadingRoom;
+
   /// Returns true if this uri is `at.margin.reply`, otherwise false.
   bool get isReply => collection.toString() == 'at.margin.reply';
 

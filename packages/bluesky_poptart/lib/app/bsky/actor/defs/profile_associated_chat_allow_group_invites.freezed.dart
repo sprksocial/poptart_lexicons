@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ProfileAssociatedChatAllowGroupInvitesKnownValue extends ProfileAssociatedChatAllowGroupInvites {
   const ProfileAssociatedChatAllowGroupInvitesKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownProfileAssociatedChatAllowGroupInvites data;
 
@@ -248,7 +248,7 @@ as KnownProfileAssociatedChatAllowGroupInvites,
 
 class ProfileAssociatedChatAllowGroupInvitesUnknown extends ProfileAssociatedChatAllowGroupInvites {
   const ProfileAssociatedChatAllowGroupInvitesUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

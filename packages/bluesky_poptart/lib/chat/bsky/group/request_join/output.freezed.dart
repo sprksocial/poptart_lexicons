@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $GroupRequestJoinStatusCopyWith<$Res> get status {
-  
+
   return $GroupRequestJoinStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -313,7 +313,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $GroupRequestJoinStatusCopyWith<$Res> get status {
-  
+
   return $GroupRequestJoinStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });

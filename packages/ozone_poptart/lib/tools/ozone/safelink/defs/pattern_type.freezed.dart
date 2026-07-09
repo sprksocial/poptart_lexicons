@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class PatternTypeKnownValue extends PatternType {
   const PatternTypeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownPatternType data;
 
@@ -248,7 +248,7 @@ as KnownPatternType,
 
 class PatternTypeUnknown extends PatternType {
   const PatternTypeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $GeneratorViewCopyWith<$Res> get view {
-  
+
   return $GeneratorViewCopyWith<$Res>(_self.view, (value) {
     return _then(_self.copyWith(view: value));
   });
@@ -306,7 +306,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $GeneratorViewCopyWith<$Res> get view {
-  
+
   return $GeneratorViewCopyWith<$Res>(_self.view, (value) {
     return _then(_self.copyWith(view: value));
   });

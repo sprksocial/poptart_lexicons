@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UGraphGetRelationshipsRelationshipsRelationship extends UGraphGetRelationshipsRelationships {
   const UGraphGetRelationshipsRelationshipsRelationship({required this.data}): super._();
-  
+
 
 @override final  Relationship data;
 
@@ -245,7 +245,7 @@ as Relationship,
 @override
 @pragma('vm:prefer-inline')
 $RelationshipCopyWith<$Res> get data {
-  
+
   return $RelationshipCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $RelationshipCopyWith<$Res> get data {
 
 class UGraphGetRelationshipsRelationshipsNotFoundActor extends UGraphGetRelationshipsRelationships {
   const UGraphGetRelationshipsRelationshipsNotFoundActor({required this.data}): super._();
-  
+
 
 @override final  NotFoundActor data;
 
@@ -320,7 +320,7 @@ as NotFoundActor,
 @override
 @pragma('vm:prefer-inline')
 $NotFoundActorCopyWith<$Res> get data {
-  
+
   return $NotFoundActorCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $NotFoundActorCopyWith<$Res> get data {
 
 class UGraphGetRelationshipsRelationshipsUnknown extends UGraphGetRelationshipsRelationships {
   const UGraphGetRelationshipsRelationshipsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -77,7 +77,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ConvoViewCopyWith<$Res> get convo {
-  
+
   return $ConvoViewCopyWith<$Res>(_self.convo, (value) {
     return _then(_self.copyWith(convo: value));
   });
@@ -296,7 +296,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ConvoViewCopyWith<$Res> get convo {
-  
+
   return $ConvoViewCopyWith<$Res>(_self.convo, (value) {
     return _then(_self.copyWith(convo: value));
   });

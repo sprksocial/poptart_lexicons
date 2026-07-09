@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $DraftEmbedLocalRefCopyWith<$Res> get localRef {
-  
+
   return $DraftEmbedLocalRefCopyWith<$Res>(_self.localRef, (value) {
     return _then(_self.copyWith(localRef: value));
   });
@@ -302,7 +302,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $DraftEmbedLocalRefCopyWith<$Res> get localRef {
-  
+
   return $DraftEmbedLocalRefCopyWith<$Res>(_self.localRef, (value) {
     return _then(_self.copyWith(localRef: value));
   });

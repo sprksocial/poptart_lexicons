@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SettingListOptionsScopeKnownValue extends SettingListOptionsScope {
   const SettingListOptionsScopeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownSettingListOptionsScope data;
 
@@ -248,7 +248,7 @@ as KnownSettingListOptionsScope,
 
 class SettingListOptionsScopeUnknown extends SettingListOptionsScope {
   const SettingListOptionsScopeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

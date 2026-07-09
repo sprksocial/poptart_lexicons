@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class InteractionEventKnownValue extends InteractionEvent {
   const InteractionEventKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownInteractionEvent data;
 
@@ -248,7 +248,7 @@ as KnownInteractionEvent,
 
 class InteractionEventUnknown extends InteractionEvent {
   const InteractionEventUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $NotificationDeclarationAllowSubscriptionsCopyWith<$Res> get allowSubscriptions {
-  
+
   return $NotificationDeclarationAllowSubscriptionsCopyWith<$Res>(_self.allowSubscriptions, (value) {
     return _then(_self.copyWith(allowSubscriptions: value));
   });
@@ -301,7 +301,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $NotificationDeclarationAllowSubscriptionsCopyWith<$Res> get allowSubscriptions {
-  
+
   return $NotificationDeclarationAllowSubscriptionsCopyWith<$Res>(_self.allowSubscriptions, (value) {
     return _then(_self.copyWith(allowSubscriptions: value));
   });

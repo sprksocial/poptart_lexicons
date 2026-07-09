@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $MessageInputCopyWith<$Res> get message {
-  
+
   return $MessageInputCopyWith<$Res>(_self.message, (value) {
     return _then(_self.copyWith(message: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $MessageInputCopyWith<$Res> get message {
-  
+
   return $MessageInputCopyWith<$Res>(_self.message, (value) {
     return _then(_self.copyWith(message: value));
   });

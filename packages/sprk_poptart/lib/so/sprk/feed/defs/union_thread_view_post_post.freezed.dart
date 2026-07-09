@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UThreadViewPostPostPostView extends UThreadViewPostPost {
   const UThreadViewPostPostPostView({required this.data}): super._();
-  
+
 
 @override final  PostView data;
 
@@ -245,7 +245,7 @@ as PostView,
 @override
 @pragma('vm:prefer-inline')
 $PostViewCopyWith<$Res> get data {
-  
+
   return $PostViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $PostViewCopyWith<$Res> get data {
 
 class UThreadViewPostPostReplyView extends UThreadViewPostPost {
   const UThreadViewPostPostReplyView({required this.data}): super._();
-  
+
 
 @override final  ReplyView data;
 
@@ -320,7 +320,7 @@ as ReplyView,
 @override
 @pragma('vm:prefer-inline')
 $ReplyViewCopyWith<$Res> get data {
-  
+
   return $ReplyViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $ReplyViewCopyWith<$Res> get data {
 
 class UThreadViewPostPostUnknown extends UThreadViewPostPost {
   const UThreadViewPostPostUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

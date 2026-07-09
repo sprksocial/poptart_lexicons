@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SupportGateTypeCopyWith<$Res> get type {
-  
+
   return $SupportGateTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });
@@ -301,7 +301,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SupportGateTypeCopyWith<$Res> get type {
-  
+
   return $SupportGateTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });

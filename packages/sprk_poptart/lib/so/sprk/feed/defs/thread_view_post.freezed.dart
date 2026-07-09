@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UThreadViewPostPostCopyWith<$Res> get post {
-  
+
   return $UThreadViewPostPostCopyWith<$Res>(_self.post, (value) {
     return _then(_self.copyWith(post: value));
   });
@@ -340,7 +340,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UThreadViewPostPostCopyWith<$Res> get post {
-  
+
   return $UThreadViewPostPostCopyWith<$Res>(_self.post, (value) {
     return _then(_self.copyWith(post: value));
   });

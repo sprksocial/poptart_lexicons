@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class VerificationStateVerifiedStatusKnownValue extends VerificationStateVerifiedStatus {
   const VerificationStateVerifiedStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownVerificationStateVerifiedStatus data;
 
@@ -248,7 +248,7 @@ as KnownVerificationStateVerifiedStatus,
 
 class VerificationStateVerifiedStatusUnknown extends VerificationStateVerifiedStatus {
   const VerificationStateVerifiedStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

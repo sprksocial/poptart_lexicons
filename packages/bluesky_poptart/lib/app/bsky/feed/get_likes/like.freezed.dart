@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get actor {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.actor, (value) {
     return _then(_self.copyWith(actor: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get actor {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.actor, (value) {
     return _then(_self.copyWith(actor: value));
   });

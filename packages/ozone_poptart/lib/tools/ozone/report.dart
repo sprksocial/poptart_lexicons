@@ -19,6 +19,8 @@ import 'package:ozone_poptart/tools/ozone/report/get_report.dart'
     as _ToolsOzoneReportGetReport;
 import 'package:ozone_poptart/tools/ozone/report/list_activities.dart'
     as _ToolsOzoneReportListActivities;
+import 'package:ozone_poptart/tools/ozone/report/query_activities.dart'
+    as _ToolsOzoneReportQueryActivities;
 import 'package:ozone_poptart/tools/ozone/report/query_reports.dart'
     as _ToolsOzoneReportQueryReports;
 import 'package:ozone_poptart/tools/ozone/report/reassign_queue.dart'
@@ -64,6 +66,10 @@ final toolsOzoneReportListActivities =
     _ToolsOzoneReportListActivities.toolsOzoneReportListActivities;
 final toolsOzoneReportListActivitiesMethodDescriptor =
     _ToolsOzoneReportListActivities.methodDescriptor;
+final toolsOzoneReportQueryActivities =
+    _ToolsOzoneReportQueryActivities.toolsOzoneReportQueryActivities;
+final toolsOzoneReportQueryActivitiesMethodDescriptor =
+    _ToolsOzoneReportQueryActivities.methodDescriptor;
 final toolsOzoneReportQueryReports =
     _ToolsOzoneReportQueryReports.toolsOzoneReportQueryReports;
 final toolsOzoneReportQueryReportsMethodDescriptor =

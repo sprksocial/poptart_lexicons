@@ -92,7 +92,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EventChatAcceptedMethodCopyWith<$Res> get method {
-  
+
   return $EventChatAcceptedMethodCopyWith<$Res>(_self.method, (value) {
     return _then(_self.copyWith(method: value));
   });
@@ -335,7 +335,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EventChatAcceptedMethodCopyWith<$Res> get method {
-  
+
   return $EventChatAcceptedMethodCopyWith<$Res>(_self.method, (value) {
     return _then(_self.copyWith(method: value));
   });

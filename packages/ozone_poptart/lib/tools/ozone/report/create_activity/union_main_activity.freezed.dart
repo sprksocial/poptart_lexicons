@@ -206,7 +206,7 @@ return unknown(_that.data);case _:
 
 class UReportCreateActivityActivityQueueActivity extends UReportCreateActivityActivity {
   const UReportCreateActivityActivityQueueActivity({required this.data}): super._();
-  
+
 
 @override final  QueueActivity data;
 
@@ -269,7 +269,7 @@ as QueueActivity,
 @override
 @pragma('vm:prefer-inline')
 $QueueActivityCopyWith<$Res> get data {
-  
+
   return $QueueActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -281,7 +281,7 @@ $QueueActivityCopyWith<$Res> get data {
 
 class UReportCreateActivityActivityAssignmentActivity extends UReportCreateActivityActivity {
   const UReportCreateActivityActivityAssignmentActivity({required this.data}): super._();
-  
+
 
 @override final  AssignmentActivity data;
 
@@ -344,7 +344,7 @@ as AssignmentActivity,
 @override
 @pragma('vm:prefer-inline')
 $AssignmentActivityCopyWith<$Res> get data {
-  
+
   return $AssignmentActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -356,7 +356,7 @@ $AssignmentActivityCopyWith<$Res> get data {
 
 class UReportCreateActivityActivityEscalationActivity extends UReportCreateActivityActivity {
   const UReportCreateActivityActivityEscalationActivity({required this.data}): super._();
-  
+
 
 @override final  EscalationActivity data;
 
@@ -419,7 +419,7 @@ as EscalationActivity,
 @override
 @pragma('vm:prefer-inline')
 $EscalationActivityCopyWith<$Res> get data {
-  
+
   return $EscalationActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -431,7 +431,7 @@ $EscalationActivityCopyWith<$Res> get data {
 
 class UReportCreateActivityActivityCloseActivity extends UReportCreateActivityActivity {
   const UReportCreateActivityActivityCloseActivity({required this.data}): super._();
-  
+
 
 @override final  CloseActivity data;
 
@@ -494,7 +494,7 @@ as CloseActivity,
 @override
 @pragma('vm:prefer-inline')
 $CloseActivityCopyWith<$Res> get data {
-  
+
   return $CloseActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -506,7 +506,7 @@ $CloseActivityCopyWith<$Res> get data {
 
 class UReportCreateActivityActivityReopenActivity extends UReportCreateActivityActivity {
   const UReportCreateActivityActivityReopenActivity({required this.data}): super._();
-  
+
 
 @override final  ReopenActivity data;
 
@@ -569,7 +569,7 @@ as ReopenActivity,
 @override
 @pragma('vm:prefer-inline')
 $ReopenActivityCopyWith<$Res> get data {
-  
+
   return $ReopenActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -581,7 +581,7 @@ $ReopenActivityCopyWith<$Res> get data {
 
 class UReportCreateActivityActivityNoteActivity extends UReportCreateActivityActivity {
   const UReportCreateActivityActivityNoteActivity({required this.data}): super._();
-  
+
 
 @override final  NoteActivity data;
 
@@ -644,7 +644,7 @@ as NoteActivity,
 @override
 @pragma('vm:prefer-inline')
 $NoteActivityCopyWith<$Res> get data {
-  
+
   return $NoteActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -656,7 +656,7 @@ $NoteActivityCopyWith<$Res> get data {
 
 class UReportCreateActivityActivityUnknown extends UReportCreateActivityActivity {
   const UReportCreateActivityActivityUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

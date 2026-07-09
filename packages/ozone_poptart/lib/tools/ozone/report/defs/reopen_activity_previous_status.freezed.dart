@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ReopenActivityPreviousStatusKnownValue extends ReopenActivityPreviousStatus {
   const ReopenActivityPreviousStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownReopenActivityPreviousStatus data;
 
@@ -248,7 +248,7 @@ as KnownReopenActivityPreviousStatus,
 
 class ReopenActivityPreviousStatusUnknown extends ReopenActivityPreviousStatus {
   const ReopenActivityPreviousStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

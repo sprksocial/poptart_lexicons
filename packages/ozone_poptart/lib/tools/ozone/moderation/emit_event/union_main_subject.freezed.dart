@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UModerationEmitEventSubjectRepoRef extends UModerationEmitEventSubject {
   const UModerationEmitEventSubjectRepoRef({required this.data}): super._();
-  
+
 
 @override final  RepoRef data;
 
@@ -245,7 +245,7 @@ as RepoRef,
 @override
 @pragma('vm:prefer-inline')
 $RepoRefCopyWith<$Res> get data {
-  
+
   return $RepoRefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $RepoRefCopyWith<$Res> get data {
 
 class UModerationEmitEventSubjectRepoStrongRef extends UModerationEmitEventSubject {
   const UModerationEmitEventSubjectRepoStrongRef({required this.data}): super._();
-  
+
 
 @override final  RepoStrongRef data;
 
@@ -320,7 +320,7 @@ as RepoStrongRef,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get data {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $RepoStrongRefCopyWith<$Res> get data {
 
 class UModerationEmitEventSubjectUnknown extends UModerationEmitEventSubject {
   const UModerationEmitEventSubjectUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

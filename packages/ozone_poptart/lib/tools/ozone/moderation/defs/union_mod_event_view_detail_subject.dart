@@ -10,6 +10,7 @@ import './repo_view.dart';
 import './repo_view_not_found.dart';
 import './record_view.dart';
 import './record_view_not_found.dart';
+import './convo_view.dart';
 
 part 'union_mod_event_view_detail_subject.freezed.dart';
 
@@ -32,6 +33,9 @@ sealed class UModEventViewDetailSubject with _$UModEventViewDetailSubject {
   const factory UModEventViewDetailSubject.recordViewNotFound({
     required RecordViewNotFound data,
   }) = UModEventViewDetailSubjectRecordViewNotFound;
+  const factory UModEventViewDetailSubject.convoView({
+    required ConvoView data,
+  }) = UModEventViewDetailSubjectConvoView;
 
   const factory UModEventViewDetailSubject.unknown({
     required Map<String, dynamic> data,
@@ -58,6 +62,9 @@ extension UModEventViewDetailSubjectExtension on UModEventViewDetailSubject {
   bool get isNotRecordViewNotFound => !isRecordViewNotFound;
   RecordViewNotFound? get recordViewNotFound =>
       isRecordViewNotFound ? data as RecordViewNotFound : null;
+  bool get isConvoView => isA<UModEventViewDetailSubjectConvoView>(this);
+  bool get isNotConvoView => !isConvoView;
+  ConvoView? get convoView => isConvoView ? data as ConvoView : null;
   bool get isUnknown => isA<UModEventViewDetailSubjectUnknown>(this);
   bool get isNotUnknown => !isUnknown;
   Map<String, dynamic>? get unknown =>
@@ -91,6 +98,11 @@ final class UModEventViewDetailSubjectConverter
           data: const RecordViewNotFoundConverter().fromJson(json),
         );
       }
+      if (ConvoView.validate(json)) {
+        return UModEventViewDetailSubject.convoView(
+          data: const ConvoViewConverter().fromJson(json),
+        );
+      }
 
       return UModEventViewDetailSubject.unknown(data: json);
     } catch (_) {
@@ -105,6 +117,7 @@ final class UModEventViewDetailSubjectConverter
     recordView: (data) => const RecordViewConverter().toJson(data),
     recordViewNotFound: (data) =>
         const RecordViewNotFoundConverter().toJson(data),
+    convoView: (data) => const ConvoViewConverter().toJson(data),
 
     unknown: (data) => data,
   );

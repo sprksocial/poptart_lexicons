@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class JobStatusStateKnownValue extends JobStatusState {
   const JobStatusStateKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownJobStatusState data;
 
@@ -248,7 +248,7 @@ as KnownJobStatusState,
 
 class JobStatusStateUnknown extends JobStatusState {
   const JobStatusStateUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class LinkEnabledStatusKnownValue extends LinkEnabledStatus {
   const LinkEnabledStatusKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownLinkEnabledStatus data;
 
@@ -248,7 +248,7 @@ as KnownLinkEnabledStatus,
 
 class LinkEnabledStatusUnknown extends LinkEnabledStatus {
   const LinkEnabledStatusUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

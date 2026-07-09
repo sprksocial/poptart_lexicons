@@ -8,6 +8,7 @@ import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import './selector_type.dart';
+import './selector.dart';
 
 part 'selector.freezed.dart';
 part 'selector.g.dart';
@@ -28,6 +29,7 @@ abstract class Selector with _$Selector {
     'end',
     'value',
     'conformsTo',
+    'refinedBy',
   ];
 
   @JsonSerializable(includeIfNull: false)
@@ -58,6 +60,9 @@ abstract class Selector with _$Selector {
     /// FragmentSelector: URI of the specification the fragment conforms to
     String? conformsTo,
 
+    /// W3C refinement: a further selector applied within the region this selector identifies (e.g. a FragmentSelector locating a page or CFI range inside a TextQuoteSelector match).
+    @SelectorConverter() Selector? refinedBy,
+
     Map<String, dynamic>? $unknown,
   }) = _Selector;
 
@@ -85,6 +90,8 @@ extension SelectorExtension on Selector {
   bool get hasNotValue => !hasValue;
   bool get hasConformsTo => conformsTo != null;
   bool get hasNotConformsTo => !hasConformsTo;
+  bool get hasRefinedBy => refinedBy != null;
+  bool get hasNotRefinedBy => !hasRefinedBy;
 }
 
 final class SelectorConverter

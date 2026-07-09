@@ -242,7 +242,7 @@ return unknown(_that.data);case _:
 
 class USystemMessageViewDataSystemMessageDataAddMember extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataAddMember({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataAddMember data;
 
@@ -305,7 +305,7 @@ as SystemMessageDataAddMember,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataAddMemberCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataAddMemberCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -317,7 +317,7 @@ $SystemMessageDataAddMemberCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataRemoveMember extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataRemoveMember({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataRemoveMember data;
 
@@ -380,7 +380,7 @@ as SystemMessageDataRemoveMember,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataRemoveMemberCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataRemoveMemberCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -392,7 +392,7 @@ $SystemMessageDataRemoveMemberCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataMemberJoin extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataMemberJoin({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataMemberJoin data;
 
@@ -455,7 +455,7 @@ as SystemMessageDataMemberJoin,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataMemberJoinCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataMemberJoinCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -467,7 +467,7 @@ $SystemMessageDataMemberJoinCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataMemberLeave extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataMemberLeave({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataMemberLeave data;
 
@@ -530,7 +530,7 @@ as SystemMessageDataMemberLeave,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataMemberLeaveCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataMemberLeaveCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -542,7 +542,7 @@ $SystemMessageDataMemberLeaveCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataLockConvo extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataLockConvo({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataLockConvo data;
 
@@ -605,7 +605,7 @@ as SystemMessageDataLockConvo,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataLockConvoCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataLockConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -617,7 +617,7 @@ $SystemMessageDataLockConvoCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataUnlockConvo extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataUnlockConvo({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataUnlockConvo data;
 
@@ -680,7 +680,7 @@ as SystemMessageDataUnlockConvo,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataUnlockConvoCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataUnlockConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -692,7 +692,7 @@ $SystemMessageDataUnlockConvoCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataLockConvoPermanently extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataLockConvoPermanently({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataLockConvoPermanently data;
 
@@ -755,7 +755,7 @@ as SystemMessageDataLockConvoPermanently,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataLockConvoPermanentlyCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataLockConvoPermanentlyCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -767,7 +767,7 @@ $SystemMessageDataLockConvoPermanentlyCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataEditGroup extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataEditGroup({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataEditGroup data;
 
@@ -830,7 +830,7 @@ as SystemMessageDataEditGroup,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataEditGroupCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataEditGroupCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -842,7 +842,7 @@ $SystemMessageDataEditGroupCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataCreateJoinLink extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataCreateJoinLink({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataCreateJoinLink data;
 
@@ -905,7 +905,7 @@ as SystemMessageDataCreateJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataCreateJoinLinkCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataCreateJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -917,7 +917,7 @@ $SystemMessageDataCreateJoinLinkCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataEditJoinLink extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataEditJoinLink({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataEditJoinLink data;
 
@@ -980,7 +980,7 @@ as SystemMessageDataEditJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataEditJoinLinkCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataEditJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -992,7 +992,7 @@ $SystemMessageDataEditJoinLinkCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataEnableJoinLink extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataEnableJoinLink({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataEnableJoinLink data;
 
@@ -1055,7 +1055,7 @@ as SystemMessageDataEnableJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataEnableJoinLinkCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataEnableJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1067,7 +1067,7 @@ $SystemMessageDataEnableJoinLinkCopyWith<$Res> get data {
 
 class USystemMessageViewDataSystemMessageDataDisableJoinLink extends USystemMessageViewData {
   const USystemMessageViewDataSystemMessageDataDisableJoinLink({required this.data}): super._();
-  
+
 
 @override final  SystemMessageDataDisableJoinLink data;
 
@@ -1130,7 +1130,7 @@ as SystemMessageDataDisableJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageDataDisableJoinLinkCopyWith<$Res> get data {
-  
+
   return $SystemMessageDataDisableJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1142,7 +1142,7 @@ $SystemMessageDataDisableJoinLinkCopyWith<$Res> get data {
 
 class USystemMessageViewDataUnknown extends USystemMessageViewData {
   const USystemMessageViewDataUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

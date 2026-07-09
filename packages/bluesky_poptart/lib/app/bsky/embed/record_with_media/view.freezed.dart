@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewCopyWith<$Res> get record {
-  
+
   return $EmbedRecordViewCopyWith<$Res>(_self.record, (value) {
     return _then(_self.copyWith(record: value));
   });
@@ -88,7 +88,7 @@ $EmbedRecordViewCopyWith<$Res> get record {
 @override
 @pragma('vm:prefer-inline')
 $UEmbedRecordWithMediaViewMediaCopyWith<$Res> get media {
-  
+
   return $UEmbedRecordWithMediaViewMediaCopyWith<$Res>(_self.media, (value) {
     return _then(_self.copyWith(media: value));
   });
@@ -311,7 +311,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewCopyWith<$Res> get record {
-  
+
   return $EmbedRecordViewCopyWith<$Res>(_self.record, (value) {
     return _then(_self.copyWith(record: value));
   });
@@ -320,7 +320,7 @@ $EmbedRecordViewCopyWith<$Res> get record {
 @override
 @pragma('vm:prefer-inline')
 $UEmbedRecordWithMediaViewMediaCopyWith<$Res> get media {
-  
+
   return $UEmbedRecordWithMediaViewMediaCopyWith<$Res>(_self.media, (value) {
     return _then(_self.copyWith(media: value));
   });

@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SubjectReviewStateKnownValue extends SubjectReviewState {
   const SubjectReviewStateKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownSubjectReviewState data;
 
@@ -248,7 +248,7 @@ as KnownSubjectReviewState,
 
 class SubjectReviewStateUnknown extends SubjectReviewState {
   const SubjectReviewStateUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

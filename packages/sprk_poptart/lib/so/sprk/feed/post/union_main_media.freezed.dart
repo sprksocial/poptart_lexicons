@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UFeedPostMediaMediaImages extends UFeedPostMedia {
   const UFeedPostMediaMediaImages({required this.data}): super._();
-  
+
 
 @override final  MediaImages data;
 
@@ -245,7 +245,7 @@ as MediaImages,
 @override
 @pragma('vm:prefer-inline')
 $MediaImagesCopyWith<$Res> get data {
-  
+
   return $MediaImagesCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $MediaImagesCopyWith<$Res> get data {
 
 class UFeedPostMediaMediaVideo extends UFeedPostMedia {
   const UFeedPostMediaMediaVideo({required this.data}): super._();
-  
+
 
 @override final  MediaVideo data;
 
@@ -320,7 +320,7 @@ as MediaVideo,
 @override
 @pragma('vm:prefer-inline')
 $MediaVideoCopyWith<$Res> get data {
-  
+
   return $MediaVideoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $MediaVideoCopyWith<$Res> get data {
 
 class UFeedPostMediaUnknown extends UFeedPostMedia {
   const UFeedPostMediaUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-  
+
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

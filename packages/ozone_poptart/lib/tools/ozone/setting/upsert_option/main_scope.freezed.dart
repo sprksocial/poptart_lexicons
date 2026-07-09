@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SettingUpsertOptionScopeKnownValue extends SettingUpsertOptionScope {
   const SettingUpsertOptionScopeKnownValue({required this.data}): super._();
-  
+
 
 @override final  KnownSettingUpsertOptionScope data;
 
@@ -248,7 +248,7 @@ as KnownSettingUpsertOptionScope,
 
 class SettingUpsertOptionScopeUnknown extends SettingUpsertOptionScope {
   const SettingUpsertOptionScopeUnknown({required this.data}): super._();
-  
+
 
 @override final  String data;
 

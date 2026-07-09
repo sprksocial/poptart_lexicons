@@ -91,7 +91,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ModerationDetailCopyWith<$Res> get moderation {
-  
+
   return $ModerationDetailCopyWith<$Res>(_self.moderation, (value) {
     return _then(_self.copyWith(moderation: value));
   });
@@ -380,7 +380,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ModerationDetailCopyWith<$Res> get moderation {
-  
+
   return $ModerationDetailCopyWith<$Res>(_self.moderation, (value) {
     return _then(_self.copyWith(moderation: value));
   });

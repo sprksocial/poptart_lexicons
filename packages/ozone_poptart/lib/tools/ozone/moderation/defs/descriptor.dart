@@ -12,6 +12,7 @@ import './age_assurance_override_event.dart';
 import './age_assurance_purge_event.dart';
 import './blob_view.dart';
 import './cancel_scheduled_takedown_event.dart';
+import './convo_view.dart';
 import './identity_event.dart';
 import './image_details.dart';
 import './mod_event_acknowledge.dart';
@@ -418,6 +419,15 @@ final recordViewNotFoundDescriptor = XRPCObjectDescriptor<RecordViewNotFound>(
   ),
   toJson: const RecordViewNotFoundConverter().toJson,
   matches: RecordViewNotFound.validate,
+);
+
+final convoViewDescriptor = XRPCObjectDescriptor<ConvoView>(
+  nsid: 'tools.ozone.moderation.defs',
+  defName: 'convoView',
+  fromJson: (json) =>
+      const ConvoViewConverter().fromJson(json.cast<String, dynamic>()),
+  toJson: const ConvoViewConverter().toJson,
+  matches: ConvoView.validate,
 );
 
 final moderationDescriptor = XRPCObjectDescriptor<Moderation>(

@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get subject {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -90,7 +90,7 @@ $RepoStrongRefCopyWith<$Res> get subject {
 @override
 @pragma('vm:prefer-inline')
 $UBookmarkViewItemCopyWith<$Res> get item {
-  
+
   return $UBookmarkViewItemCopyWith<$Res>(_self.item, (value) {
     return _then(_self.copyWith(item: value));
   });
@@ -316,7 +316,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get subject {
-  
+
   return $RepoStrongRefCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -325,7 +325,7 @@ $RepoStrongRefCopyWith<$Res> get subject {
 @override
 @pragma('vm:prefer-inline')
 $UBookmarkViewItemCopyWith<$Res> get item {
-  
+
   return $UBookmarkViewItemCopyWith<$Res>(_self.item, (value) {
     return _then(_self.copyWith(item: value));
   });

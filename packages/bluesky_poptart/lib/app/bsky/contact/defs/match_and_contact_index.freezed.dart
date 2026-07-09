@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get match {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.match, (value) {
     return _then(_self.copyWith(match: value));
   });
@@ -306,7 +306,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewCopyWith<$Res> get match {
-  
+
   return $ProfileViewCopyWith<$Res>(_self.match, (value) {
     return _then(_self.copyWith(match: value));
   });
