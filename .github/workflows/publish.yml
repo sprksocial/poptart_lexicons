@@ -32,4 +32,6 @@ jobs:
         run: dart analyze
 
       - name: Publish packages
-        run: dart run melos run publish_all
+        run: |
+          package="${GITHUB_REF_NAME%-v*}"
+          dart run melos publish --scope "$package" --no-dry-run --yes
