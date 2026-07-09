@@ -1,6 +1,6 @@
 name: ozone_poptart
 description: Generated Dart types and method descriptors for Ozone lexicons.
-version: 0.1.2
+version: 0.1.3
 homepage: https://poptart.xyz
 
 environment:
