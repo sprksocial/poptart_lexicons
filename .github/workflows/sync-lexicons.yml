@@ -32,6 +32,9 @@ jobs:
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Install generator dependencies
         working-directory: poptart
         run: dart pub get
