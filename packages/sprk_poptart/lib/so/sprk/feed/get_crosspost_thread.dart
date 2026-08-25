@@ -9,7 +9,7 @@
 
 export 'get_crosspost_thread/descriptor.dart';
 export 'get_crosspost_thread/input.dart';
-export 'get_crosspost_thread/main_sort.dart';
+export 'get_crosspost_thread/main_parameters_sort.dart';
 export 'get_crosspost_thread/output.dart';
 export 'get_crosspost_thread/thread_item.dart';
 export 'get_crosspost_thread/union_thread_item_value.dart';

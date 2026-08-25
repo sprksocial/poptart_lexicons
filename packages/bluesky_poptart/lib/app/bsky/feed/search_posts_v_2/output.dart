@@ -8,7 +8,7 @@ import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import '../defs/post_view.dart';
-import './main_detected_query_languages.dart';
+import './main_output_detected_query_languages.dart';
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -34,8 +34,8 @@ abstract class FeedSearchPostsV2Output with _$FeedSearchPostsV2Output {
     /// Estimated total number of matching hits. May be rounded or truncated.
     int? hitsTotal,
     @PostViewConverter() required List<PostView> posts,
-    @FeedSearchPostsV2DetectedQueryLanguagesConverter()
-    List<FeedSearchPostsV2DetectedQueryLanguages>? detectedQueryLanguages,
+    @FeedSearchPostsV2OutputDetectedQueryLanguagesConverter()
+    List<FeedSearchPostsV2OutputDetectedQueryLanguages>? detectedQueryLanguages,
 
     Map<String, dynamic>? $unknown,
   }) = _FeedSearchPostsV2Output;

@@ -9,6 +9,7 @@ import 'package:poptart_core/internals.dart';
 
 import '../../actor/defs/profile_view.dart';
 import './notification_reason.dart';
+import '../../graph/defs/starter_pack_view_basic.dart';
 import 'package:poptart_lex/com/atproto/label/defs.dart';
 
 part 'notification.freezed.dart';
@@ -27,6 +28,7 @@ abstract class Notification with _$Notification {
     'reason',
     'reasonSubject',
     'record',
+    'starterPack',
     'isRead',
     'indexedAt',
     'labels',
@@ -44,6 +46,9 @@ abstract class Notification with _$Notification {
     @NotificationReasonConverter() required NotificationReason reason,
     @AtUriConverter() AtUri? reasonSubject,
     required Map<String, dynamic> record,
+
+    /// The starter pack associated with this notification. Present when the notification is for a follow originating from a starter pack.
+    @StarterPackViewBasicConverter() StarterPackViewBasic? starterPack,
     required bool isRead,
     required DateTime indexedAt,
     @LabelConverter() List<Label>? labels,
@@ -64,6 +69,8 @@ abstract class Notification with _$Notification {
 extension NotificationExtension on Notification {
   bool get hasReasonSubject => reasonSubject != null;
   bool get hasNotReasonSubject => !hasReasonSubject;
+  bool get hasStarterPack => starterPack != null;
+  bool get hasNotStarterPack => !hasStarterPack;
   bool get isIsRead => isRead;
   bool get isNotIsRead => !isIsRead;
 }

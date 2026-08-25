@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_action.dart';
+import './union_main_input_action.dart';
 import './scheduling_config.dart';
 import '../defs/mod_tool.dart';
 
@@ -31,8 +31,8 @@ abstract class ModerationScheduleActionInput
 
   @JsonSerializable(includeIfNull: false)
   const factory ModerationScheduleActionInput({
-    @UModerationScheduleActionActionConverter()
-    required UModerationScheduleActionAction action,
+    @UModerationScheduleActionInputActionConverter()
+    required UModerationScheduleActionInputAction action,
     required List<String> subjects,
     required String createdBy,
     @SchedulingConfigConverter() required SchedulingConfig scheduling,

@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_platform.dart';
+import './main_input_platform.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -30,8 +30,8 @@ abstract class NotificationUnregisterPushInput
   const factory NotificationUnregisterPushInput({
     required String serviceDid,
     required String token,
-    @NotificationUnregisterPushPlatformConverter()
-    required NotificationUnregisterPushPlatform platform,
+    @NotificationUnregisterPushInputPlatformConverter()
+    required NotificationUnregisterPushInputPlatform platform,
     required String appId,
 
     Map<String, dynamic>? $unknown,

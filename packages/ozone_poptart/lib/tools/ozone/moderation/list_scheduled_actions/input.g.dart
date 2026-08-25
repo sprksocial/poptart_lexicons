@@ -30,8 +30,9 @@ _$ModerationListScheduledActionsInputFromJson(Map json) => $checkedCreate(
         'statuses',
         (v) => (v as List<dynamic>)
             .map(
-              (e) => const ModerationListScheduledActionsStatusesConverter()
-                  .fromJson(e as String),
+              (e) =>
+                  const ModerationListScheduledActionsInputStatusesConverter()
+                      .fromJson(e as String),
             )
             .toList(),
       ),
@@ -53,7 +54,7 @@ Map<String, dynamic> _$ModerationListScheduledActionsInputToJson(
   'endsBefore': ?instance.endsBefore?.toIso8601String(),
   'subjects': ?instance.subjects,
   'statuses': instance.statuses
-      .map(const ModerationListScheduledActionsStatusesConverter().toJson)
+      .map(const ModerationListScheduledActionsInputStatusesConverter().toJson)
       .toList(),
   'limit': instance.limit,
   'cursor': ?instance.cursor,

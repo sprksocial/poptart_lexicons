@@ -18,7 +18,7 @@ _ModerationGetMessageContextOutput _$ModerationGetMessageContextOutputFromJson(
       'messages',
       (v) => (v as List<dynamic>)
           .map(
-            (e) => const UModerationGetMessageContextMessagesConverter()
+            (e) => const UModerationGetMessageContextOutputMessagesConverter()
                 .fromJson(e as Map<String, dynamic>),
           )
           .toList(),
@@ -35,7 +35,7 @@ Map<String, dynamic> _$ModerationGetMessageContextOutputToJson(
   _ModerationGetMessageContextOutput instance,
 ) => <String, dynamic>{
   'messages': instance.messages
-      .map(const UModerationGetMessageContextMessagesConverter().toJson)
+      .map(const UModerationGetMessageContextOutputMessagesConverter().toJson)
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

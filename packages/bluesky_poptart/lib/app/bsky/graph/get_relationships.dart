@@ -10,4 +10,4 @@
 export 'get_relationships/descriptor.dart';
 export 'get_relationships/input.dart';
 export 'get_relationships/output.dart';
-export 'get_relationships/union_main_relationships.dart';
+export 'get_relationships/union_main_output_relationships.dart';

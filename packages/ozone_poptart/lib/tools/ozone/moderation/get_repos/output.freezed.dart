@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ModerationGetReposOutput {
 
-@UModerationGetReposReposConverter() List<UModerationGetReposRepos> get repos; Map<String, dynamic>? get $unknown;
+@UModerationGetReposOutputReposConverter() List<UModerationGetReposOutputRepos> get repos; Map<String, dynamic>? get $unknown;
 /// Create a copy of ModerationGetReposOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ModerationGetReposOutputCopyWith<$Res>  {
   factory $ModerationGetReposOutputCopyWith(ModerationGetReposOutput value, $Res Function(ModerationGetReposOutput) _then) = _$ModerationGetReposOutputCopyWithImpl;
 @useResult
 $Res call({
-@UModerationGetReposReposConverter() List<UModerationGetReposRepos> repos, Map<String, dynamic>? $unknown
+@UModerationGetReposOutputReposConverter() List<UModerationGetReposOutputRepos> repos, Map<String, dynamic>? $unknown
 });
 
 
@@ -68,7 +68,7 @@ class _$ModerationGetReposOutputCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? repos = null,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 repos: null == repos ? _self.repos : repos // ignore: cast_nullable_to_non_nullable
-as List<UModerationGetReposRepos>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UModerationGetReposOutputRepos>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -154,7 +154,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UModerationGetReposReposConverter()  List<UModerationGetReposRepos> repos,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UModerationGetReposOutputReposConverter()  List<UModerationGetReposOutputRepos> repos,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ModerationGetReposOutput() when $default != null:
 return $default(_that.repos,_that.$unknown);case _:
@@ -175,7 +175,7 @@ return $default(_that.repos,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UModerationGetReposReposConverter()  List<UModerationGetReposRepos> repos,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UModerationGetReposOutputReposConverter()  List<UModerationGetReposOutputRepos> repos,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ModerationGetReposOutput():
 return $default(_that.repos,_that.$unknown);case _:
@@ -195,7 +195,7 @@ return $default(_that.repos,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UModerationGetReposReposConverter()  List<UModerationGetReposRepos> repos,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UModerationGetReposOutputReposConverter()  List<UModerationGetReposOutputRepos> repos,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ModerationGetReposOutput() when $default != null:
 return $default(_that.repos,_that.$unknown);case _:
@@ -210,11 +210,11 @@ return $default(_that.repos,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _ModerationGetReposOutput implements ModerationGetReposOutput {
-  const _ModerationGetReposOutput({@UModerationGetReposReposConverter() required final  List<UModerationGetReposRepos> repos, final  Map<String, dynamic>? $unknown}): _repos = repos,_$unknown = $unknown;
+  const _ModerationGetReposOutput({@UModerationGetReposOutputReposConverter() required final  List<UModerationGetReposOutputRepos> repos, final  Map<String, dynamic>? $unknown}): _repos = repos,_$unknown = $unknown;
   factory _ModerationGetReposOutput.fromJson(Map<String, dynamic> json) => _$ModerationGetReposOutputFromJson(json);
 
- final  List<UModerationGetReposRepos> _repos;
-@override@UModerationGetReposReposConverter() List<UModerationGetReposRepos> get repos {
+ final  List<UModerationGetReposOutputRepos> _repos;
+@override@UModerationGetReposOutputReposConverter() List<UModerationGetReposOutputRepos> get repos {
   if (_repos is EqualUnmodifiableListView) return _repos;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_repos);
@@ -263,7 +263,7 @@ abstract mixin class _$ModerationGetReposOutputCopyWith<$Res> implements $Modera
   factory _$ModerationGetReposOutputCopyWith(_ModerationGetReposOutput value, $Res Function(_ModerationGetReposOutput) _then) = __$ModerationGetReposOutputCopyWithImpl;
 @override @useResult
 $Res call({
-@UModerationGetReposReposConverter() List<UModerationGetReposRepos> repos, Map<String, dynamic>? $unknown
+@UModerationGetReposOutputReposConverter() List<UModerationGetReposOutputRepos> repos, Map<String, dynamic>? $unknown
 });
 
 
@@ -283,7 +283,7 @@ class __$ModerationGetReposOutputCopyWithImpl<$Res>
 @override @pragma('vm:prefer-inline') $Res call({Object? repos = null,Object? $unknown = freezed,}) {
   return _then(_ModerationGetReposOutput(
 repos: null == repos ? _self._repos : repos // ignore: cast_nullable_to_non_nullable
-as List<UModerationGetReposRepos>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UModerationGetReposOutputRepos>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

@@ -13,7 +13,9 @@ _GroupRequestJoinOutput _$GroupRequestJoinOutputFromJson(Map json) =>
       final val = _GroupRequestJoinOutput(
         status: $checkedConvert(
           'status',
-          (v) => const GroupRequestJoinStatusConverter().fromJson(v as String),
+          (v) => const GroupRequestJoinOutputStatusConverter().fromJson(
+            v as String,
+          ),
         ),
         convo: $checkedConvert(
           'convo',
@@ -33,7 +35,9 @@ _GroupRequestJoinOutput _$GroupRequestJoinOutputFromJson(Map json) =>
 Map<String, dynamic> _$GroupRequestJoinOutputToJson(
   _GroupRequestJoinOutput instance,
 ) => <String, dynamic>{
-  'status': const GroupRequestJoinStatusConverter().toJson(instance.status),
+  'status': const GroupRequestJoinOutputStatusConverter().toJson(
+    instance.status,
+  ),
   'convo': ?_$JsonConverterToJson<Map<String, dynamic>, ConvoView>(
     instance.convo,
     const ConvoViewConverter().toJson,

@@ -9,5 +9,5 @@
 
 export 'get_lists/descriptor.dart';
 export 'get_lists/input.dart';
-export 'get_lists/main_purposes.dart';
+export 'get_lists/main_parameters_purposes.dart';
 export 'get_lists/output.dart';

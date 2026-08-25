@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_platform.dart';
+import './main_input_platform.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -31,8 +31,8 @@ abstract class NotificationRegisterPushInput
   const factory NotificationRegisterPushInput({
     required String serviceDid,
     required String token,
-    @NotificationRegisterPushPlatformConverter()
-    required NotificationRegisterPushPlatform platform,
+    @NotificationRegisterPushInputPlatformConverter()
+    required NotificationRegisterPushInputPlatform platform,
     required String appId,
 
     /// Set to true when the actor is age restricted

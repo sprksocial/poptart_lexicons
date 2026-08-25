@@ -14,9 +14,9 @@ _FeedSearchPostsInput _$FeedSearchPostsInputFromJson(Map json) =>
         q: $checkedConvert('q', (v) => v as String),
         sort: $checkedConvert(
           'sort',
-          (v) => _$JsonConverterFromJson<String, FeedSearchPostsSort>(
+          (v) => _$JsonConverterFromJson<String, FeedSearchPostsParametersSort>(
             v,
-            const FeedSearchPostsSortConverter().fromJson,
+            const FeedSearchPostsParametersSortConverter().fromJson,
           ),
         ),
         limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 25),
@@ -33,9 +33,9 @@ Map<String, dynamic> _$FeedSearchPostsInputToJson(
   _FeedSearchPostsInput instance,
 ) => <String, dynamic>{
   'q': instance.q,
-  'sort': ?_$JsonConverterToJson<String, FeedSearchPostsSort>(
+  'sort': ?_$JsonConverterToJson<String, FeedSearchPostsParametersSort>(
     instance.sort,
-    const FeedSearchPostsSortConverter().toJson,
+    const FeedSearchPostsParametersSortConverter().toJson,
   ),
   'limit': instance.limit,
   'cursor': ?instance.cursor,

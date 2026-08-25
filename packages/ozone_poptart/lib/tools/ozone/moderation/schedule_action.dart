@@ -13,4 +13,4 @@ export 'schedule_action/input.dart';
 export 'schedule_action/scheduled_action_results.dart';
 export 'schedule_action/scheduling_config.dart';
 export 'schedule_action/takedown.dart';
-export 'schedule_action/union_main_action.dart';
+export 'schedule_action/union_main_input_action.dart';

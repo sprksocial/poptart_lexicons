@@ -9,4 +9,5 @@
 
 export 'defs/descriptor.dart';
 export 'defs/job_status.dart';
+export 'defs/job_status_failure_code.dart';
 export 'defs/job_status_state.dart';

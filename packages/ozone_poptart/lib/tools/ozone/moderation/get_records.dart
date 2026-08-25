@@ -10,4 +10,4 @@
 export 'get_records/descriptor.dart';
 export 'get_records/input.dart';
 export 'get_records/output.dart';
-export 'get_records/union_main_records.dart';
+export 'get_records/union_main_output_records.dart';

@@ -17,7 +17,7 @@ mixin _$ModerationListScheduledActionsInput {
 
 /// Filter actions scheduled to execute after this time
  DateTime? get startsAfter;/// Filter actions scheduled to execute before this time
- DateTime? get endsBefore; List<String>? get subjects;@ModerationListScheduledActionsStatusesConverter() List<ModerationListScheduledActionsStatuses> get statuses;/// Maximum number of results to return
+ DateTime? get endsBefore; List<String>? get subjects;@ModerationListScheduledActionsInputStatusesConverter() List<ModerationListScheduledActionsInputStatuses> get statuses;/// Maximum number of results to return
  int get limit;/// Cursor for pagination
  String? get cursor; Map<String, dynamic>? get $unknown;
 /// Create a copy of ModerationListScheduledActionsInput
@@ -52,7 +52,7 @@ abstract mixin class $ModerationListScheduledActionsInputCopyWith<$Res>  {
   factory $ModerationListScheduledActionsInputCopyWith(ModerationListScheduledActionsInput value, $Res Function(ModerationListScheduledActionsInput) _then) = _$ModerationListScheduledActionsInputCopyWithImpl;
 @useResult
 $Res call({
- DateTime? startsAfter, DateTime? endsBefore, List<String>? subjects,@ModerationListScheduledActionsStatusesConverter() List<ModerationListScheduledActionsStatuses> statuses, int limit, String? cursor, Map<String, dynamic>? $unknown
+ DateTime? startsAfter, DateTime? endsBefore, List<String>? subjects,@ModerationListScheduledActionsInputStatusesConverter() List<ModerationListScheduledActionsInputStatuses> statuses, int limit, String? cursor, Map<String, dynamic>? $unknown
 });
 
 
@@ -75,7 +75,7 @@ startsAfter: freezed == startsAfter ? _self.startsAfter : startsAfter // ignore:
 as DateTime?,endsBefore: freezed == endsBefore ? _self.endsBefore : endsBefore // ignore: cast_nullable_to_non_nullable
 as DateTime?,subjects: freezed == subjects ? _self.subjects : subjects // ignore: cast_nullable_to_non_nullable
 as List<String>?,statuses: null == statuses ? _self.statuses : statuses // ignore: cast_nullable_to_non_nullable
-as List<ModerationListScheduledActionsStatuses>,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as List<ModerationListScheduledActionsInputStatuses>,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
@@ -163,7 +163,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DateTime? startsAfter,  DateTime? endsBefore,  List<String>? subjects, @ModerationListScheduledActionsStatusesConverter()  List<ModerationListScheduledActionsStatuses> statuses,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DateTime? startsAfter,  DateTime? endsBefore,  List<String>? subjects, @ModerationListScheduledActionsInputStatusesConverter()  List<ModerationListScheduledActionsInputStatuses> statuses,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ModerationListScheduledActionsInput() when $default != null:
 return $default(_that.startsAfter,_that.endsBefore,_that.subjects,_that.statuses,_that.limit,_that.cursor,_that.$unknown);case _:
@@ -184,7 +184,7 @@ return $default(_that.startsAfter,_that.endsBefore,_that.subjects,_that.statuses
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DateTime? startsAfter,  DateTime? endsBefore,  List<String>? subjects, @ModerationListScheduledActionsStatusesConverter()  List<ModerationListScheduledActionsStatuses> statuses,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DateTime? startsAfter,  DateTime? endsBefore,  List<String>? subjects, @ModerationListScheduledActionsInputStatusesConverter()  List<ModerationListScheduledActionsInputStatuses> statuses,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ModerationListScheduledActionsInput():
 return $default(_that.startsAfter,_that.endsBefore,_that.subjects,_that.statuses,_that.limit,_that.cursor,_that.$unknown);case _:
@@ -204,7 +204,7 @@ return $default(_that.startsAfter,_that.endsBefore,_that.subjects,_that.statuses
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DateTime? startsAfter,  DateTime? endsBefore,  List<String>? subjects, @ModerationListScheduledActionsStatusesConverter()  List<ModerationListScheduledActionsStatuses> statuses,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DateTime? startsAfter,  DateTime? endsBefore,  List<String>? subjects, @ModerationListScheduledActionsInputStatusesConverter()  List<ModerationListScheduledActionsInputStatuses> statuses,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ModerationListScheduledActionsInput() when $default != null:
 return $default(_that.startsAfter,_that.endsBefore,_that.subjects,_that.statuses,_that.limit,_that.cursor,_that.$unknown);case _:
@@ -219,7 +219,7 @@ return $default(_that.startsAfter,_that.endsBefore,_that.subjects,_that.statuses
 
 @JsonSerializable(includeIfNull: false)
 class _ModerationListScheduledActionsInput implements ModerationListScheduledActionsInput {
-  const _ModerationListScheduledActionsInput({this.startsAfter, this.endsBefore, final  List<String>? subjects, @ModerationListScheduledActionsStatusesConverter() required final  List<ModerationListScheduledActionsStatuses> statuses, this.limit = 50, this.cursor, final  Map<String, dynamic>? $unknown}): _subjects = subjects,_statuses = statuses,_$unknown = $unknown;
+  const _ModerationListScheduledActionsInput({this.startsAfter, this.endsBefore, final  List<String>? subjects, @ModerationListScheduledActionsInputStatusesConverter() required final  List<ModerationListScheduledActionsInputStatuses> statuses, this.limit = 50, this.cursor, final  Map<String, dynamic>? $unknown}): _subjects = subjects,_statuses = statuses,_$unknown = $unknown;
   factory _ModerationListScheduledActionsInput.fromJson(Map<String, dynamic> json) => _$ModerationListScheduledActionsInputFromJson(json);
 
 /// Filter actions scheduled to execute after this time
@@ -235,8 +235,8 @@ class _ModerationListScheduledActionsInput implements ModerationListScheduledAct
   return EqualUnmodifiableListView(value);
 }
 
- final  List<ModerationListScheduledActionsStatuses> _statuses;
-@override@ModerationListScheduledActionsStatusesConverter() List<ModerationListScheduledActionsStatuses> get statuses {
+ final  List<ModerationListScheduledActionsInputStatuses> _statuses;
+@override@ModerationListScheduledActionsInputStatusesConverter() List<ModerationListScheduledActionsInputStatuses> get statuses {
   if (_statuses is EqualUnmodifiableListView) return _statuses;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_statuses);
@@ -289,7 +289,7 @@ abstract mixin class _$ModerationListScheduledActionsInputCopyWith<$Res> impleme
   factory _$ModerationListScheduledActionsInputCopyWith(_ModerationListScheduledActionsInput value, $Res Function(_ModerationListScheduledActionsInput) _then) = __$ModerationListScheduledActionsInputCopyWithImpl;
 @override @useResult
 $Res call({
- DateTime? startsAfter, DateTime? endsBefore, List<String>? subjects,@ModerationListScheduledActionsStatusesConverter() List<ModerationListScheduledActionsStatuses> statuses, int limit, String? cursor, Map<String, dynamic>? $unknown
+ DateTime? startsAfter, DateTime? endsBefore, List<String>? subjects,@ModerationListScheduledActionsInputStatusesConverter() List<ModerationListScheduledActionsInputStatuses> statuses, int limit, String? cursor, Map<String, dynamic>? $unknown
 });
 
 
@@ -312,7 +312,7 @@ startsAfter: freezed == startsAfter ? _self.startsAfter : startsAfter // ignore:
 as DateTime?,endsBefore: freezed == endsBefore ? _self.endsBefore : endsBefore // ignore: cast_nullable_to_non_nullable
 as DateTime?,subjects: freezed == subjects ? _self._subjects : subjects // ignore: cast_nullable_to_non_nullable
 as List<String>?,statuses: null == statuses ? _self._statuses : statuses // ignore: cast_nullable_to_non_nullable
-as List<ModerationListScheduledActionsStatuses>,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
+as List<ModerationListScheduledActionsInputStatuses>,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,

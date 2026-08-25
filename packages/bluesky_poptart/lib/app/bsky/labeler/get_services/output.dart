@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_views.dart';
+import './union_main_output_views.dart';
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -22,8 +22,8 @@ abstract class LabelerGetServicesOutput with _$LabelerGetServicesOutput {
 
   @JsonSerializable(includeIfNull: false)
   const factory LabelerGetServicesOutput({
-    @ULabelerGetServicesViewsConverter()
-    required List<ULabelerGetServicesViews> views,
+    @ULabelerGetServicesOutputViewsConverter()
+    required List<ULabelerGetServicesOutputViews> views,
 
     Map<String, dynamic>? $unknown,
   }) = _LabelerGetServicesOutput;

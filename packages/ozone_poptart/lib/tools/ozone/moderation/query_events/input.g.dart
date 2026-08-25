@@ -36,10 +36,15 @@ _ModerationQueryEventsInput _$ModerationQueryEventsInputFromJson(
     ),
     subjectType: $checkedConvert(
       'subjectType',
-      (v) => _$JsonConverterFromJson<String, ModerationQueryEventsSubjectType>(
-        v,
-        const ModerationQueryEventsSubjectTypeConverter().fromJson,
-      ),
+      (v) =>
+          _$JsonConverterFromJson<
+            String,
+            ModerationQueryEventsParametersSubjectType
+          >(
+            v,
+            const ModerationQueryEventsParametersSubjectTypeConverter()
+                .fromJson,
+          ),
     ),
     includeAllUserRecords: $checkedConvert(
       'includeAllUserRecords',
@@ -82,10 +87,11 @@ _ModerationQueryEventsInput _$ModerationQueryEventsInputFromJson(
       (v) =>
           _$JsonConverterFromJson<
             String,
-            ModerationQueryEventsAgeAssuranceState
+            ModerationQueryEventsParametersAgeAssuranceState
           >(
             v,
-            const ModerationQueryEventsAgeAssuranceStateConverter().fromJson,
+            const ModerationQueryEventsParametersAgeAssuranceStateConverter()
+                .fromJson,
           ),
     ),
     withStrike: $checkedConvert('withStrike', (v) => v as bool?),
@@ -109,9 +115,12 @@ Map<String, dynamic> _$ModerationQueryEventsInputToJson(
   'subject': ?instance.subject,
   'collections': ?instance.collections,
   'subjectType':
-      ?_$JsonConverterToJson<String, ModerationQueryEventsSubjectType>(
+      ?_$JsonConverterToJson<
+        String,
+        ModerationQueryEventsParametersSubjectType
+      >(
         instance.subjectType,
-        const ModerationQueryEventsSubjectTypeConverter().toJson,
+        const ModerationQueryEventsParametersSubjectTypeConverter().toJson,
       ),
   'includeAllUserRecords': instance.includeAllUserRecords,
   'limit': instance.limit,
@@ -126,9 +135,13 @@ Map<String, dynamic> _$ModerationQueryEventsInputToJson(
   'modTool': ?instance.modTool,
   'batchId': ?instance.batchId,
   'ageAssuranceState':
-      ?_$JsonConverterToJson<String, ModerationQueryEventsAgeAssuranceState>(
+      ?_$JsonConverterToJson<
+        String,
+        ModerationQueryEventsParametersAgeAssuranceState
+      >(
         instance.ageAssuranceState,
-        const ModerationQueryEventsAgeAssuranceStateConverter().toJson,
+        const ModerationQueryEventsParametersAgeAssuranceStateConverter()
+            .toJson,
       ),
   'withStrike': ?instance.withStrike,
   'cursor': ?instance.cursor,

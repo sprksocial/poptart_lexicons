@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 mixin _$GraphGetListsInput {
 
 /// The account (actor) to enumerate lists from.
- String get actor; int get limit; String? get cursor;@GraphGetListsPurposesConverter() List<GraphGetListsPurposes>? get purposes; Map<String, dynamic>? get $unknown;
+ String get actor; int get limit; String? get cursor;@GraphGetListsParametersPurposesConverter() List<GraphGetListsParametersPurposes>? get purposes; Map<String, dynamic>? get $unknown;
 /// Create a copy of GraphGetListsInput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -49,7 +49,7 @@ abstract mixin class $GraphGetListsInputCopyWith<$Res>  {
   factory $GraphGetListsInputCopyWith(GraphGetListsInput value, $Res Function(GraphGetListsInput) _then) = _$GraphGetListsInputCopyWithImpl;
 @useResult
 $Res call({
- String actor, int limit, String? cursor,@GraphGetListsPurposesConverter() List<GraphGetListsPurposes>? purposes, Map<String, dynamic>? $unknown
+ String actor, int limit, String? cursor,@GraphGetListsParametersPurposesConverter() List<GraphGetListsParametersPurposes>? purposes, Map<String, dynamic>? $unknown
 });
 
 
@@ -72,7 +72,7 @@ actor: null == actor ? _self.actor : actor // ignore: cast_nullable_to_non_nulla
 as String,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,purposes: freezed == purposes ? _self.purposes : purposes // ignore: cast_nullable_to_non_nullable
-as List<GraphGetListsPurposes>?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<GraphGetListsParametersPurposes>?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -158,7 +158,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsPurposesConverter()  List<GraphGetListsPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsParametersPurposesConverter()  List<GraphGetListsParametersPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GraphGetListsInput() when $default != null:
 return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unknown);case _:
@@ -179,7 +179,7 @@ return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unkno
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsPurposesConverter()  List<GraphGetListsPurposes>? purposes,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsParametersPurposesConverter()  List<GraphGetListsParametersPurposes>? purposes,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _GraphGetListsInput():
 return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unknown);case _:
@@ -199,7 +199,7 @@ return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unkno
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String actor,  int limit,  String? cursor, @GraphGetListsPurposesConverter()  List<GraphGetListsPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String actor,  int limit,  String? cursor, @GraphGetListsParametersPurposesConverter()  List<GraphGetListsParametersPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _GraphGetListsInput() when $default != null:
 return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unknown);case _:
@@ -214,15 +214,15 @@ return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unkno
 
 @JsonSerializable(includeIfNull: false)
 class _GraphGetListsInput implements GraphGetListsInput {
-  const _GraphGetListsInput({required this.actor, this.limit = 50, this.cursor, @GraphGetListsPurposesConverter() final  List<GraphGetListsPurposes>? purposes, final  Map<String, dynamic>? $unknown}): _purposes = purposes,_$unknown = $unknown;
+  const _GraphGetListsInput({required this.actor, this.limit = 50, this.cursor, @GraphGetListsParametersPurposesConverter() final  List<GraphGetListsParametersPurposes>? purposes, final  Map<String, dynamic>? $unknown}): _purposes = purposes,_$unknown = $unknown;
   factory _GraphGetListsInput.fromJson(Map<String, dynamic> json) => _$GraphGetListsInputFromJson(json);
 
 /// The account (actor) to enumerate lists from.
 @override final  String actor;
 @override@JsonKey() final  int limit;
 @override final  String? cursor;
- final  List<GraphGetListsPurposes>? _purposes;
-@override@GraphGetListsPurposesConverter() List<GraphGetListsPurposes>? get purposes {
+ final  List<GraphGetListsParametersPurposes>? _purposes;
+@override@GraphGetListsParametersPurposesConverter() List<GraphGetListsParametersPurposes>? get purposes {
   final value = _purposes;
   if (value == null) return null;
   if (_purposes is EqualUnmodifiableListView) return _purposes;
@@ -273,7 +273,7 @@ abstract mixin class _$GraphGetListsInputCopyWith<$Res> implements $GraphGetList
   factory _$GraphGetListsInputCopyWith(_GraphGetListsInput value, $Res Function(_GraphGetListsInput) _then) = __$GraphGetListsInputCopyWithImpl;
 @override @useResult
 $Res call({
- String actor, int limit, String? cursor,@GraphGetListsPurposesConverter() List<GraphGetListsPurposes>? purposes, Map<String, dynamic>? $unknown
+ String actor, int limit, String? cursor,@GraphGetListsParametersPurposesConverter() List<GraphGetListsParametersPurposes>? purposes, Map<String, dynamic>? $unknown
 });
 
 
@@ -296,7 +296,7 @@ actor: null == actor ? _self.actor : actor // ignore: cast_nullable_to_non_nulla
 as String,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,purposes: freezed == purposes ? _self._purposes : purposes // ignore: cast_nullable_to_non_nullable
-as List<GraphGetListsPurposes>?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<GraphGetListsParametersPurposes>?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

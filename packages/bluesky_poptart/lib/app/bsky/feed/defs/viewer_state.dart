@@ -7,6 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
+import './known_likers.dart';
+
 part 'viewer_state.freezed.dart';
 part 'viewer_state.g.dart';
 
@@ -25,6 +27,7 @@ abstract class ViewerState with _$ViewerState {
     'replyDisabled',
     'embeddingDisabled',
     'pinned',
+    'knownLikers',
   ];
 
   @JsonSerializable(includeIfNull: false)
@@ -37,6 +40,9 @@ abstract class ViewerState with _$ViewerState {
     bool? replyDisabled,
     bool? embeddingDisabled,
     bool? pinned,
+
+    /// This property is present only in selected cases, as an optimization.
+    @KnownLikersConverter() KnownLikers? knownLikers,
 
     Map<String, dynamic>? $unknown,
   }) = _ViewerState;
@@ -65,6 +71,8 @@ extension ViewerStateExtension on ViewerState {
   bool get isNotEmbeddingDisabled => !isEmbeddingDisabled;
   bool get isPinned => pinned ?? false;
   bool get isNotPinned => !isPinned;
+  bool get hasKnownLikers => knownLikers != null;
+  bool get hasNotKnownLikers => !hasKnownLikers;
 }
 
 final class ViewerStateConverter

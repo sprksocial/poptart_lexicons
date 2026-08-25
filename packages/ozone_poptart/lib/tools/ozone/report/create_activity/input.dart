@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_activity.dart';
+import './union_main_input_activity.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -20,6 +20,7 @@ part 'input.g.dart';
 abstract class ReportCreateActivityInput with _$ReportCreateActivityInput {
   static const knownProps = <String>[
     'reportId',
+    'eventId',
     'activity',
     'internalNote',
     'publicNote',
@@ -28,10 +29,13 @@ abstract class ReportCreateActivityInput with _$ReportCreateActivityInput {
 
   @JsonSerializable(includeIfNull: false)
   const factory ReportCreateActivityInput({
-    /// ID of the report to record activity on
-    required int reportId,
-    @UReportCreateActivityActivityConverter()
-    required UReportCreateActivityActivity activity,
+    /// ID of the report to record activity on. Exactly one of reportId or eventId must be provided.
+    int? reportId,
+
+    /// ID of the report moderation event. Resolves to the report created from that event. Exactly one of reportId or eventId must be provided.
+    int? eventId,
+    @UReportCreateActivityInputActivityConverter()
+    required UReportCreateActivityInputActivity activity,
 
     /// Optional moderator-only note. Not visible to reporters.
     String? internalNote,
@@ -50,6 +54,10 @@ abstract class ReportCreateActivityInput with _$ReportCreateActivityInput {
 }
 
 extension ReportCreateActivityInputExtension on ReportCreateActivityInput {
+  bool get hasReportId => reportId != null;
+  bool get hasNotReportId => !hasReportId;
+  bool get hasEventId => eventId != null;
+  bool get hasNotEventId => !hasEventId;
   bool get hasInternalNote => internalNote != null;
   bool get hasNotInternalNote => !hasInternalNote;
   bool get hasPublicNote => publicNote != null;

@@ -17,9 +17,8 @@ _HostingGetAccountHistoryInput _$HostingGetAccountHistoryInputFromJson(
       'events',
       (v) => (v as List<dynamic>?)
           ?.map(
-            (e) => const HostingGetAccountHistoryEventsConverter().fromJson(
-              e as String,
-            ),
+            (e) => const HostingGetAccountHistoryParametersEventsConverter()
+                .fromJson(e as String),
           )
           .toList(),
     ),
@@ -38,7 +37,7 @@ Map<String, dynamic> _$HostingGetAccountHistoryInputToJson(
 ) => <String, dynamic>{
   'did': instance.did,
   'events': ?instance.events
-      ?.map(const HostingGetAccountHistoryEventsConverter().toJson)
+      ?.map(const HostingGetAccountHistoryParametersEventsConverter().toJson)
       .toList(),
   'cursor': ?instance.cursor,
   'limit': instance.limit,

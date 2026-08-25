@@ -24,10 +24,14 @@ _UnspeccedGetPostThreadV2Input _$UnspeccedGetPostThreadV2InputFromJson(
     ),
     sort: $checkedConvert(
       'sort',
-      (v) => _$JsonConverterFromJson<String, UnspeccedGetPostThreadV2Sort>(
-        v,
-        const UnspeccedGetPostThreadV2SortConverter().fromJson,
-      ),
+      (v) =>
+          _$JsonConverterFromJson<
+            String,
+            UnspeccedGetPostThreadV2ParametersSort
+          >(
+            v,
+            const UnspeccedGetPostThreadV2ParametersSortConverter().fromJson,
+          ),
     ),
     $unknown: $checkedConvert(
       r'$unknown',
@@ -44,10 +48,11 @@ Map<String, dynamic> _$UnspeccedGetPostThreadV2InputToJson(
   'above': instance.above,
   'below': instance.below,
   'branchingFactor': instance.branchingFactor,
-  'sort': ?_$JsonConverterToJson<String, UnspeccedGetPostThreadV2Sort>(
-    instance.sort,
-    const UnspeccedGetPostThreadV2SortConverter().toJson,
-  ),
+  'sort':
+      ?_$JsonConverterToJson<String, UnspeccedGetPostThreadV2ParametersSort>(
+        instance.sort,
+        const UnspeccedGetPostThreadV2ParametersSortConverter().toJson,
+      ),
   r'$unknown': ?instance.$unknown,
 };
 

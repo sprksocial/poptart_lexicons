@@ -9,5 +9,5 @@
 
 export 'update_all_read/descriptor.dart';
 export 'update_all_read/input.dart';
-export 'update_all_read/main_status.dart';
+export 'update_all_read/main_input_status.dart';
 export 'update_all_read/output.dart';

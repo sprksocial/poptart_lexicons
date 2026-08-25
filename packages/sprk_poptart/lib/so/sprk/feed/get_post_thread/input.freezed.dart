@@ -19,7 +19,7 @@ mixin _$FeedGetPostThreadInput {
 @AtUriConverter() AtUri get anchor; int get limit; String? get cursor;/// How many levels of reply depth should be included in response.
  int get depth;/// How many levels of parent (and grandparent, etc) post to include.
  int get parentHeight;/// Sorting for the thread replies.
-@FeedGetPostThreadSortConverter() FeedGetPostThreadSort? get sort; Map<String, dynamic>? get $unknown;
+@FeedGetPostThreadParametersSortConverter() FeedGetPostThreadParametersSort? get sort; Map<String, dynamic>? get $unknown;
 /// Create a copy of FeedGetPostThreadInput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -52,11 +52,11 @@ abstract mixin class $FeedGetPostThreadInputCopyWith<$Res>  {
   factory $FeedGetPostThreadInputCopyWith(FeedGetPostThreadInput value, $Res Function(FeedGetPostThreadInput) _then) = _$FeedGetPostThreadInputCopyWithImpl;
 @useResult
 $Res call({
-@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetPostThreadSortConverter() FeedGetPostThreadSort? sort, Map<String, dynamic>? $unknown
+@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetPostThreadParametersSortConverter() FeedGetPostThreadParametersSort? sort, Map<String, dynamic>? $unknown
 });
 
 
-$FeedGetPostThreadSortCopyWith<$Res>? get sort;
+$FeedGetPostThreadParametersSortCopyWith<$Res>? get sort;
 
 }
 /// @nodoc
@@ -77,7 +77,7 @@ as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullabl
 as String?,depth: null == depth ? _self.depth : depth // ignore: cast_nullable_to_non_nullable
 as int,parentHeight: null == parentHeight ? _self.parentHeight : parentHeight // ignore: cast_nullable_to_non_nullable
 as int,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as FeedGetPostThreadSort?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as FeedGetPostThreadParametersSort?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -85,12 +85,12 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedGetPostThreadSortCopyWith<$Res>? get sort {
+$FeedGetPostThreadParametersSortCopyWith<$Res>? get sort {
     if (_self.sort == null) {
     return null;
   }
 
-  return $FeedGetPostThreadSortCopyWith<$Res>(_self.sort!, (value) {
+  return $FeedGetPostThreadParametersSortCopyWith<$Res>(_self.sort!, (value) {
     return _then(_self.copyWith(sort: value));
   });
 }
@@ -175,7 +175,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetPostThreadSortConverter()  FeedGetPostThreadSort? sort,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetPostThreadParametersSortConverter()  FeedGetPostThreadParametersSort? sort,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FeedGetPostThreadInput() when $default != null:
 return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHeight,_that.sort,_that.$unknown);case _:
@@ -196,7 +196,7 @@ return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHe
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetPostThreadSortConverter()  FeedGetPostThreadSort? sort,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetPostThreadParametersSortConverter()  FeedGetPostThreadParametersSort? sort,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _FeedGetPostThreadInput():
 return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHeight,_that.sort,_that.$unknown);case _:
@@ -216,7 +216,7 @@ return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHe
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetPostThreadSortConverter()  FeedGetPostThreadSort? sort,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetPostThreadParametersSortConverter()  FeedGetPostThreadParametersSort? sort,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _FeedGetPostThreadInput() when $default != null:
 return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHeight,_that.sort,_that.$unknown);case _:
@@ -231,7 +231,7 @@ return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHe
 
 @JsonSerializable(includeIfNull: false)
 class _FeedGetPostThreadInput implements FeedGetPostThreadInput {
-  const _FeedGetPostThreadInput({@AtUriConverter() required this.anchor, this.limit = 50, this.cursor, this.depth = 6, this.parentHeight = 80, @FeedGetPostThreadSortConverter() this.sort, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _FeedGetPostThreadInput({@AtUriConverter() required this.anchor, this.limit = 50, this.cursor, this.depth = 6, this.parentHeight = 80, @FeedGetPostThreadParametersSortConverter() this.sort, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _FeedGetPostThreadInput.fromJson(Map<String, dynamic> json) => _$FeedGetPostThreadInputFromJson(json);
 
 /// Reference (AT-URI) to anchor post record.
@@ -243,7 +243,7 @@ class _FeedGetPostThreadInput implements FeedGetPostThreadInput {
 /// How many levels of parent (and grandparent, etc) post to include.
 @override@JsonKey() final  int parentHeight;
 /// Sorting for the thread replies.
-@override@FeedGetPostThreadSortConverter() final  FeedGetPostThreadSort? sort;
+@override@FeedGetPostThreadParametersSortConverter() final  FeedGetPostThreadParametersSort? sort;
  final  Map<String, dynamic>? _$unknown;
 @override Map<String, dynamic>? get $unknown {
   final value = _$unknown;
@@ -287,11 +287,11 @@ abstract mixin class _$FeedGetPostThreadInputCopyWith<$Res> implements $FeedGetP
   factory _$FeedGetPostThreadInputCopyWith(_FeedGetPostThreadInput value, $Res Function(_FeedGetPostThreadInput) _then) = __$FeedGetPostThreadInputCopyWithImpl;
 @override @useResult
 $Res call({
-@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetPostThreadSortConverter() FeedGetPostThreadSort? sort, Map<String, dynamic>? $unknown
+@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetPostThreadParametersSortConverter() FeedGetPostThreadParametersSort? sort, Map<String, dynamic>? $unknown
 });
 
 
-@override $FeedGetPostThreadSortCopyWith<$Res>? get sort;
+@override $FeedGetPostThreadParametersSortCopyWith<$Res>? get sort;
 
 }
 /// @nodoc
@@ -312,7 +312,7 @@ as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullabl
 as String?,depth: null == depth ? _self.depth : depth // ignore: cast_nullable_to_non_nullable
 as int,parentHeight: null == parentHeight ? _self.parentHeight : parentHeight // ignore: cast_nullable_to_non_nullable
 as int,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as FeedGetPostThreadSort?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as FeedGetPostThreadParametersSort?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -321,12 +321,12 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedGetPostThreadSortCopyWith<$Res>? get sort {
+$FeedGetPostThreadParametersSortCopyWith<$Res>? get sort {
     if (_self.sort == null) {
     return null;
   }
 
-  return $FeedGetPostThreadSortCopyWith<$Res>(_self.sort!, (value) {
+  return $FeedGetPostThreadParametersSortCopyWith<$Res>(_self.sort!, (value) {
     return _then(_self.copyWith(sort: value));
   });
 }

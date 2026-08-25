@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ModerationScheduleActionInput {
 
-@UModerationScheduleActionActionConverter() UModerationScheduleActionAction get action; List<String> get subjects; String get createdBy;@SchedulingConfigConverter() SchedulingConfig get scheduling;/// This will be propagated to the moderation event when it is applied
+@UModerationScheduleActionInputActionConverter() UModerationScheduleActionInputAction get action; List<String> get subjects; String get createdBy;@SchedulingConfigConverter() SchedulingConfig get scheduling;/// This will be propagated to the moderation event when it is applied
 @ModToolConverter() ModTool? get modTool; Map<String, dynamic>? get $unknown;
 /// Create a copy of ModerationScheduleActionInput
 /// with the given fields replaced by the non-null parameter values.
@@ -49,11 +49,11 @@ abstract mixin class $ModerationScheduleActionInputCopyWith<$Res>  {
   factory $ModerationScheduleActionInputCopyWith(ModerationScheduleActionInput value, $Res Function(ModerationScheduleActionInput) _then) = _$ModerationScheduleActionInputCopyWithImpl;
 @useResult
 $Res call({
-@UModerationScheduleActionActionConverter() UModerationScheduleActionAction action, List<String> subjects, String createdBy,@SchedulingConfigConverter() SchedulingConfig scheduling,@ModToolConverter() ModTool? modTool, Map<String, dynamic>? $unknown
+@UModerationScheduleActionInputActionConverter() UModerationScheduleActionInputAction action, List<String> subjects, String createdBy,@SchedulingConfigConverter() SchedulingConfig scheduling,@ModToolConverter() ModTool? modTool, Map<String, dynamic>? $unknown
 });
 
 
-$UModerationScheduleActionActionCopyWith<$Res> get action;$SchedulingConfigCopyWith<$Res> get scheduling;$ModToolCopyWith<$Res>? get modTool;
+$UModerationScheduleActionInputActionCopyWith<$Res> get action;$SchedulingConfigCopyWith<$Res> get scheduling;$ModToolCopyWith<$Res>? get modTool;
 
 }
 /// @nodoc
@@ -69,7 +69,7 @@ class _$ModerationScheduleActionInputCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? action = null,Object? subjects = null,Object? createdBy = null,Object? scheduling = null,Object? modTool = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 action: null == action ? _self.action : action // ignore: cast_nullable_to_non_nullable
-as UModerationScheduleActionAction,subjects: null == subjects ? _self.subjects : subjects // ignore: cast_nullable_to_non_nullable
+as UModerationScheduleActionInputAction,subjects: null == subjects ? _self.subjects : subjects // ignore: cast_nullable_to_non_nullable
 as List<String>,createdBy: null == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
 as String,scheduling: null == scheduling ? _self.scheduling : scheduling // ignore: cast_nullable_to_non_nullable
 as SchedulingConfig,modTool: freezed == modTool ? _self.modTool : modTool // ignore: cast_nullable_to_non_nullable
@@ -81,9 +81,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$UModerationScheduleActionActionCopyWith<$Res> get action {
+$UModerationScheduleActionInputActionCopyWith<$Res> get action {
 
-  return $UModerationScheduleActionActionCopyWith<$Res>(_self.action, (value) {
+  return $UModerationScheduleActionInputActionCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
 }/// Create a copy of ModerationScheduleActionInput
@@ -189,7 +189,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UModerationScheduleActionActionConverter()  UModerationScheduleActionAction action,  List<String> subjects,  String createdBy, @SchedulingConfigConverter()  SchedulingConfig scheduling, @ModToolConverter()  ModTool? modTool,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UModerationScheduleActionInputActionConverter()  UModerationScheduleActionInputAction action,  List<String> subjects,  String createdBy, @SchedulingConfigConverter()  SchedulingConfig scheduling, @ModToolConverter()  ModTool? modTool,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ModerationScheduleActionInput() when $default != null:
 return $default(_that.action,_that.subjects,_that.createdBy,_that.scheduling,_that.modTool,_that.$unknown);case _:
@@ -210,7 +210,7 @@ return $default(_that.action,_that.subjects,_that.createdBy,_that.scheduling,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UModerationScheduleActionActionConverter()  UModerationScheduleActionAction action,  List<String> subjects,  String createdBy, @SchedulingConfigConverter()  SchedulingConfig scheduling, @ModToolConverter()  ModTool? modTool,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UModerationScheduleActionInputActionConverter()  UModerationScheduleActionInputAction action,  List<String> subjects,  String createdBy, @SchedulingConfigConverter()  SchedulingConfig scheduling, @ModToolConverter()  ModTool? modTool,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ModerationScheduleActionInput():
 return $default(_that.action,_that.subjects,_that.createdBy,_that.scheduling,_that.modTool,_that.$unknown);case _:
@@ -230,7 +230,7 @@ return $default(_that.action,_that.subjects,_that.createdBy,_that.scheduling,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UModerationScheduleActionActionConverter()  UModerationScheduleActionAction action,  List<String> subjects,  String createdBy, @SchedulingConfigConverter()  SchedulingConfig scheduling, @ModToolConverter()  ModTool? modTool,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UModerationScheduleActionInputActionConverter()  UModerationScheduleActionInputAction action,  List<String> subjects,  String createdBy, @SchedulingConfigConverter()  SchedulingConfig scheduling, @ModToolConverter()  ModTool? modTool,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ModerationScheduleActionInput() when $default != null:
 return $default(_that.action,_that.subjects,_that.createdBy,_that.scheduling,_that.modTool,_that.$unknown);case _:
@@ -245,10 +245,10 @@ return $default(_that.action,_that.subjects,_that.createdBy,_that.scheduling,_th
 
 @JsonSerializable(includeIfNull: false)
 class _ModerationScheduleActionInput implements ModerationScheduleActionInput {
-  const _ModerationScheduleActionInput({@UModerationScheduleActionActionConverter() required this.action, required final  List<String> subjects, required this.createdBy, @SchedulingConfigConverter() required this.scheduling, @ModToolConverter() this.modTool, final  Map<String, dynamic>? $unknown}): _subjects = subjects,_$unknown = $unknown;
+  const _ModerationScheduleActionInput({@UModerationScheduleActionInputActionConverter() required this.action, required final  List<String> subjects, required this.createdBy, @SchedulingConfigConverter() required this.scheduling, @ModToolConverter() this.modTool, final  Map<String, dynamic>? $unknown}): _subjects = subjects,_$unknown = $unknown;
   factory _ModerationScheduleActionInput.fromJson(Map<String, dynamic> json) => _$ModerationScheduleActionInputFromJson(json);
 
-@override@UModerationScheduleActionActionConverter() final  UModerationScheduleActionAction action;
+@override@UModerationScheduleActionInputActionConverter() final  UModerationScheduleActionInputAction action;
  final  List<String> _subjects;
 @override List<String> get subjects {
   if (_subjects is EqualUnmodifiableListView) return _subjects;
@@ -303,11 +303,11 @@ abstract mixin class _$ModerationScheduleActionInputCopyWith<$Res> implements $M
   factory _$ModerationScheduleActionInputCopyWith(_ModerationScheduleActionInput value, $Res Function(_ModerationScheduleActionInput) _then) = __$ModerationScheduleActionInputCopyWithImpl;
 @override @useResult
 $Res call({
-@UModerationScheduleActionActionConverter() UModerationScheduleActionAction action, List<String> subjects, String createdBy,@SchedulingConfigConverter() SchedulingConfig scheduling,@ModToolConverter() ModTool? modTool, Map<String, dynamic>? $unknown
+@UModerationScheduleActionInputActionConverter() UModerationScheduleActionInputAction action, List<String> subjects, String createdBy,@SchedulingConfigConverter() SchedulingConfig scheduling,@ModToolConverter() ModTool? modTool, Map<String, dynamic>? $unknown
 });
 
 
-@override $UModerationScheduleActionActionCopyWith<$Res> get action;@override $SchedulingConfigCopyWith<$Res> get scheduling;@override $ModToolCopyWith<$Res>? get modTool;
+@override $UModerationScheduleActionInputActionCopyWith<$Res> get action;@override $SchedulingConfigCopyWith<$Res> get scheduling;@override $ModToolCopyWith<$Res>? get modTool;
 
 }
 /// @nodoc
@@ -323,7 +323,7 @@ class __$ModerationScheduleActionInputCopyWithImpl<$Res>
 @override @pragma('vm:prefer-inline') $Res call({Object? action = null,Object? subjects = null,Object? createdBy = null,Object? scheduling = null,Object? modTool = freezed,Object? $unknown = freezed,}) {
   return _then(_ModerationScheduleActionInput(
 action: null == action ? _self.action : action // ignore: cast_nullable_to_non_nullable
-as UModerationScheduleActionAction,subjects: null == subjects ? _self._subjects : subjects // ignore: cast_nullable_to_non_nullable
+as UModerationScheduleActionInputAction,subjects: null == subjects ? _self._subjects : subjects // ignore: cast_nullable_to_non_nullable
 as List<String>,createdBy: null == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
 as String,scheduling: null == scheduling ? _self.scheduling : scheduling // ignore: cast_nullable_to_non_nullable
 as SchedulingConfig,modTool: freezed == modTool ? _self.modTool : modTool // ignore: cast_nullable_to_non_nullable
@@ -336,9 +336,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$UModerationScheduleActionActionCopyWith<$Res> get action {
+$UModerationScheduleActionInputActionCopyWith<$Res> get action {
 
-  return $UModerationScheduleActionActionCopyWith<$Res>(_self.action, (value) {
+  return $UModerationScheduleActionInputActionCopyWith<$Res>(_self.action, (value) {
     return _then(_self.copyWith(action: value));
   });
 }/// Create a copy of ModerationScheduleActionInput

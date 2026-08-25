@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_thread.dart';
+import './union_main_output_thread.dart';
 import '../defs/threadgate_view.dart';
 
 part 'output.freezed.dart';
@@ -23,8 +23,8 @@ abstract class FeedGetPostThreadOutput with _$FeedGetPostThreadOutput {
 
   @JsonSerializable(includeIfNull: false)
   const factory FeedGetPostThreadOutput({
-    @UFeedGetPostThreadThreadConverter()
-    required UFeedGetPostThreadThread thread,
+    @UFeedGetPostThreadOutputThreadConverter()
+    required UFeedGetPostThreadOutputThread thread,
     @ThreadgateViewConverter() ThreadgateView? threadgate,
 
     Map<String, dynamic>? $unknown,

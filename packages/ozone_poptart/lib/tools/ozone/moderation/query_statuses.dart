@@ -9,7 +9,7 @@
 
 export 'query_statuses/descriptor.dart';
 export 'query_statuses/input.dart';
-export 'query_statuses/main_age_assurance_state.dart';
-export 'query_statuses/main_review_state.dart';
-export 'query_statuses/main_subject_type.dart';
+export 'query_statuses/main_parameters_age_assurance_state.dart';
+export 'query_statuses/main_parameters_review_state.dart';
+export 'query_statuses/main_parameters_subject_type.dart';
 export 'query_statuses/output.dart';

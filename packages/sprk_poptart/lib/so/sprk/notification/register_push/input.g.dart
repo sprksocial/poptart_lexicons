@@ -16,7 +16,7 @@ _NotificationRegisterPushInput _$NotificationRegisterPushInputFromJson(
     token: $checkedConvert('token', (v) => v as String),
     platform: $checkedConvert(
       'platform',
-      (v) => const NotificationRegisterPushPlatformConverter().fromJson(
+      (v) => const NotificationRegisterPushInputPlatformConverter().fromJson(
         v as String,
       ),
     ),
@@ -34,7 +34,7 @@ Map<String, dynamic> _$NotificationRegisterPushInputToJson(
 ) => <String, dynamic>{
   'serviceDid': instance.serviceDid,
   'token': instance.token,
-  'platform': const NotificationRegisterPushPlatformConverter().toJson(
+  'platform': const NotificationRegisterPushInputPlatformConverter().toJson(
     instance.platform,
   ),
   'appId': instance.appId,

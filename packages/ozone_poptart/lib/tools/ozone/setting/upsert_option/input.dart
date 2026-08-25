@@ -7,8 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_scope.dart';
-import './main_manager_role.dart';
+import './main_input_scope.dart';
+import './main_input_manager_role.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -30,12 +30,12 @@ abstract class SettingUpsertOptionInput with _$SettingUpsertOptionInput {
   @JsonSerializable(includeIfNull: false)
   const factory SettingUpsertOptionInput({
     required String key,
-    @SettingUpsertOptionScopeConverter()
-    required SettingUpsertOptionScope scope,
+    @SettingUpsertOptionInputScopeConverter()
+    required SettingUpsertOptionInputScope scope,
     required Map<String, dynamic> value,
     String? description,
-    @SettingUpsertOptionManagerRoleConverter()
-    SettingUpsertOptionManagerRole? managerRole,
+    @SettingUpsertOptionInputManagerRoleConverter()
+    SettingUpsertOptionInputManagerRole? managerRole,
 
     Map<String, dynamic>? $unknown,
   }) = _SettingUpsertOptionInput;

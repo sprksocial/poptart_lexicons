@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 mixin _$GraphGetListsWithMembershipInput {
 
 /// The account (actor) to check for membership.
- String get actor; int get limit; String? get cursor;@GraphGetListsWithMembershipPurposesConverter() List<GraphGetListsWithMembershipPurposes>? get purposes; Map<String, dynamic>? get $unknown;
+ String get actor; int get limit; String? get cursor;@GraphGetListsWithMembershipParametersPurposesConverter() List<GraphGetListsWithMembershipParametersPurposes>? get purposes; Map<String, dynamic>? get $unknown;
 /// Create a copy of GraphGetListsWithMembershipInput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -49,7 +49,7 @@ abstract mixin class $GraphGetListsWithMembershipInputCopyWith<$Res>  {
   factory $GraphGetListsWithMembershipInputCopyWith(GraphGetListsWithMembershipInput value, $Res Function(GraphGetListsWithMembershipInput) _then) = _$GraphGetListsWithMembershipInputCopyWithImpl;
 @useResult
 $Res call({
- String actor, int limit, String? cursor,@GraphGetListsWithMembershipPurposesConverter() List<GraphGetListsWithMembershipPurposes>? purposes, Map<String, dynamic>? $unknown
+ String actor, int limit, String? cursor,@GraphGetListsWithMembershipParametersPurposesConverter() List<GraphGetListsWithMembershipParametersPurposes>? purposes, Map<String, dynamic>? $unknown
 });
 
 
@@ -72,7 +72,7 @@ actor: null == actor ? _self.actor : actor // ignore: cast_nullable_to_non_nulla
 as String,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,purposes: freezed == purposes ? _self.purposes : purposes // ignore: cast_nullable_to_non_nullable
-as List<GraphGetListsWithMembershipPurposes>?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<GraphGetListsWithMembershipParametersPurposes>?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -158,7 +158,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsWithMembershipPurposesConverter()  List<GraphGetListsWithMembershipPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsWithMembershipParametersPurposesConverter()  List<GraphGetListsWithMembershipParametersPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GraphGetListsWithMembershipInput() when $default != null:
 return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unknown);case _:
@@ -179,7 +179,7 @@ return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unkno
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsWithMembershipPurposesConverter()  List<GraphGetListsWithMembershipPurposes>? purposes,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String actor,  int limit,  String? cursor, @GraphGetListsWithMembershipParametersPurposesConverter()  List<GraphGetListsWithMembershipParametersPurposes>? purposes,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _GraphGetListsWithMembershipInput():
 return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unknown);case _:
@@ -199,7 +199,7 @@ return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unkno
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String actor,  int limit,  String? cursor, @GraphGetListsWithMembershipPurposesConverter()  List<GraphGetListsWithMembershipPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String actor,  int limit,  String? cursor, @GraphGetListsWithMembershipParametersPurposesConverter()  List<GraphGetListsWithMembershipParametersPurposes>? purposes,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _GraphGetListsWithMembershipInput() when $default != null:
 return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unknown);case _:
@@ -214,15 +214,15 @@ return $default(_that.actor,_that.limit,_that.cursor,_that.purposes,_that.$unkno
 
 @JsonSerializable(includeIfNull: false)
 class _GraphGetListsWithMembershipInput implements GraphGetListsWithMembershipInput {
-  const _GraphGetListsWithMembershipInput({required this.actor, this.limit = 50, this.cursor, @GraphGetListsWithMembershipPurposesConverter() final  List<GraphGetListsWithMembershipPurposes>? purposes, final  Map<String, dynamic>? $unknown}): _purposes = purposes,_$unknown = $unknown;
+  const _GraphGetListsWithMembershipInput({required this.actor, this.limit = 50, this.cursor, @GraphGetListsWithMembershipParametersPurposesConverter() final  List<GraphGetListsWithMembershipParametersPurposes>? purposes, final  Map<String, dynamic>? $unknown}): _purposes = purposes,_$unknown = $unknown;
   factory _GraphGetListsWithMembershipInput.fromJson(Map<String, dynamic> json) => _$GraphGetListsWithMembershipInputFromJson(json);
 
 /// The account (actor) to check for membership.
 @override final  String actor;
 @override@JsonKey() final  int limit;
 @override final  String? cursor;
- final  List<GraphGetListsWithMembershipPurposes>? _purposes;
-@override@GraphGetListsWithMembershipPurposesConverter() List<GraphGetListsWithMembershipPurposes>? get purposes {
+ final  List<GraphGetListsWithMembershipParametersPurposes>? _purposes;
+@override@GraphGetListsWithMembershipParametersPurposesConverter() List<GraphGetListsWithMembershipParametersPurposes>? get purposes {
   final value = _purposes;
   if (value == null) return null;
   if (_purposes is EqualUnmodifiableListView) return _purposes;
@@ -273,7 +273,7 @@ abstract mixin class _$GraphGetListsWithMembershipInputCopyWith<$Res> implements
   factory _$GraphGetListsWithMembershipInputCopyWith(_GraphGetListsWithMembershipInput value, $Res Function(_GraphGetListsWithMembershipInput) _then) = __$GraphGetListsWithMembershipInputCopyWithImpl;
 @override @useResult
 $Res call({
- String actor, int limit, String? cursor,@GraphGetListsWithMembershipPurposesConverter() List<GraphGetListsWithMembershipPurposes>? purposes, Map<String, dynamic>? $unknown
+ String actor, int limit, String? cursor,@GraphGetListsWithMembershipParametersPurposesConverter() List<GraphGetListsWithMembershipParametersPurposes>? purposes, Map<String, dynamic>? $unknown
 });
 
 
@@ -296,7 +296,7 @@ actor: null == actor ? _self.actor : actor // ignore: cast_nullable_to_non_nulla
 as String,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,purposes: freezed == purposes ? _self._purposes : purposes // ignore: cast_nullable_to_non_nullable
-as List<GraphGetListsWithMembershipPurposes>?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<GraphGetListsWithMembershipParametersPurposes>?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

@@ -13,9 +13,9 @@ _ConvoUpdateAllReadInput _$ConvoUpdateAllReadInputFromJson(Map json) =>
       final val = _ConvoUpdateAllReadInput(
         status: $checkedConvert(
           'status',
-          (v) => _$JsonConverterFromJson<String, ConvoUpdateAllReadStatus>(
+          (v) => _$JsonConverterFromJson<String, ConvoUpdateAllReadInputStatus>(
             v,
-            const ConvoUpdateAllReadStatusConverter().fromJson,
+            const ConvoUpdateAllReadInputStatusConverter().fromJson,
           ),
         ),
         $unknown: $checkedConvert(
@@ -29,9 +29,9 @@ _ConvoUpdateAllReadInput _$ConvoUpdateAllReadInputFromJson(Map json) =>
 Map<String, dynamic> _$ConvoUpdateAllReadInputToJson(
   _ConvoUpdateAllReadInput instance,
 ) => <String, dynamic>{
-  'status': ?_$JsonConverterToJson<String, ConvoUpdateAllReadStatus>(
+  'status': ?_$JsonConverterToJson<String, ConvoUpdateAllReadInputStatus>(
     instance.status,
-    const ConvoUpdateAllReadStatusConverter().toJson,
+    const ConvoUpdateAllReadInputStatusConverter().toJson,
   ),
   r'$unknown': ?instance.$unknown,
 };

@@ -7,6 +7,7 @@
 // LexGenerator
 // **************************************************************************
 
+export 'defs/adult_content_pref.dart';
 export 'defs/content_label_pref.dart';
 export 'defs/content_label_pref_visibility.dart';
 export 'defs/descriptor.dart';

@@ -9,6 +9,6 @@
 
 export 'list_convos/descriptor.dart';
 export 'list_convos/input.dart';
-export 'list_convos/main_read_state.dart';
-export 'list_convos/main_status.dart';
+export 'list_convos/main_parameters_read_state.dart';
+export 'list_convos/main_parameters_status.dart';
 export 'list_convos/output.dart';

@@ -16,9 +16,8 @@ _ConvoGetMessagesOutput _$ConvoGetMessagesOutputFromJson(Map json) =>
           'messages',
           (v) => (v as List<dynamic>)
               .map(
-                (e) => const UConvoGetMessagesMessagesConverter().fromJson(
-                  e as Map<String, dynamic>,
-                ),
+                (e) => const UConvoGetMessagesOutputMessagesConverter()
+                    .fromJson(e as Map<String, dynamic>),
               )
               .toList(),
         ),
@@ -35,7 +34,7 @@ Map<String, dynamic> _$ConvoGetMessagesOutputToJson(
 ) => <String, dynamic>{
   'cursor': ?instance.cursor,
   'messages': instance.messages
-      .map(const UConvoGetMessagesMessagesConverter().toJson)
+      .map(const UConvoGetMessagesOutputMessagesConverter().toJson)
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

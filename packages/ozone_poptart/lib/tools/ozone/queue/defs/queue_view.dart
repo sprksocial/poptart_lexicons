@@ -26,6 +26,7 @@ abstract class QueueView with _$QueueView {
     'collection',
     'reportTypes',
     'description',
+    'recommendedPolicies',
     'createdBy',
     'createdAt',
     'updatedAt',
@@ -43,15 +44,15 @@ abstract class QueueView with _$QueueView {
 
     /// Display name of the queue
     required String name,
-    @QueueViewSubjectTypesConverter()
-    required List<QueueViewSubjectTypes> subjectTypes,
+    @QueueViewSubjectTypesConverter() List<QueueViewSubjectTypes>? subjectTypes,
 
     /// Collection name for record subjects (e.g., 'app.bsky.feed.post')
     String? collection,
-    required List<String> reportTypes,
+    List<String>? reportTypes,
 
     /// Optional description of the queue
     String? description,
+    List<String>? recommendedPolicies,
 
     /// DID of moderator who created this queue
     required String createdBy,

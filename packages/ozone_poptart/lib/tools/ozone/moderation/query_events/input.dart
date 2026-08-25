@@ -7,8 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_subject_type.dart';
-import './main_age_assurance_state.dart';
+import './main_parameters_subject_type.dart';
+import './main_parameters_age_assurance_state.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -62,8 +62,8 @@ abstract class ModerationQueryEventsInput with _$ModerationQueryEventsInput {
     List<String>? collections,
 
     /// If specified, only events where the subject is of the given type (account, record, or conversation) will be returned. When this is set to 'account' the 'collections' parameter will be ignored. When includeAllUserRecords or subject is set, this will be ignored.
-    @ModerationQueryEventsSubjectTypeConverter()
-    ModerationQueryEventsSubjectType? subjectType,
+    @ModerationQueryEventsParametersSubjectTypeConverter()
+    ModerationQueryEventsParametersSubjectType? subjectType,
 
     /// If true, events on all record types (posts, lists, profile etc.) or records from given 'collections' param, owned by the did are returned.
     @Default(false) bool includeAllUserRecords,
@@ -88,8 +88,8 @@ abstract class ModerationQueryEventsInput with _$ModerationQueryEventsInput {
     String? batchId,
 
     /// If specified, only events where the age assurance state matches the given value are returned
-    @ModerationQueryEventsAgeAssuranceStateConverter()
-    ModerationQueryEventsAgeAssuranceState? ageAssuranceState,
+    @ModerationQueryEventsParametersAgeAssuranceStateConverter()
+    ModerationQueryEventsParametersAgeAssuranceState? ageAssuranceState,
 
     /// If specified, only events where strikeCount value is set are returned.
     bool? withStrike,

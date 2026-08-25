@@ -10,5 +10,5 @@
 export 'emit_event/descriptor.dart';
 export 'emit_event/input.dart';
 export 'emit_event/report_action.dart';
-export 'emit_event/union_main_event.dart';
-export 'emit_event/union_main_subject.dart';
+export 'emit_event/union_main_input_event.dart';
+export 'emit_event/union_main_input_subject.dart';

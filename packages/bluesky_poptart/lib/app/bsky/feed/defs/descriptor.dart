@@ -9,6 +9,7 @@ import './feed_view_post.dart';
 import './generator_view.dart';
 import './generator_viewer_state.dart';
 import './interaction.dart';
+import './known_likers.dart';
 import './not_found_post.dart';
 import './post_view.dart';
 import './reason_pin.dart';
@@ -43,6 +44,15 @@ final viewerStateDescriptor = XRPCObjectDescriptor<ViewerState>(
       const ViewerStateConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const ViewerStateConverter().toJson,
   matches: ViewerState.validate,
+);
+
+final knownLikersDescriptor = XRPCObjectDescriptor<KnownLikers>(
+  nsid: 'app.bsky.feed.defs',
+  defName: 'knownLikers',
+  fromJson: (json) =>
+      const KnownLikersConverter().fromJson(json.cast<String, dynamic>()),
+  toJson: const KnownLikersConverter().toJson,
+  matches: KnownLikers.validate,
 );
 
 final threadContextDescriptor = XRPCObjectDescriptor<ThreadContext>(

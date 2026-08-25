@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_status.dart';
+import './main_input_status.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -22,7 +22,8 @@ abstract class ConvoUpdateAllReadInput with _$ConvoUpdateAllReadInput {
 
   @JsonSerializable(includeIfNull: false)
   const factory ConvoUpdateAllReadInput({
-    @ConvoUpdateAllReadStatusConverter() ConvoUpdateAllReadStatus? status,
+    @ConvoUpdateAllReadInputStatusConverter()
+    ConvoUpdateAllReadInputStatus? status,
 
     Map<String, dynamic>? $unknown,
   }) = _ConvoUpdateAllReadInput;

@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_statuses.dart';
+import './main_input_statuses.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -36,8 +36,8 @@ abstract class ModerationListScheduledActionsInput
     /// Filter actions scheduled to execute before this time
     DateTime? endsBefore,
     List<String>? subjects,
-    @ModerationListScheduledActionsStatusesConverter()
-    required List<ModerationListScheduledActionsStatuses> statuses,
+    @ModerationListScheduledActionsInputStatusesConverter()
+    required List<ModerationListScheduledActionsInputStatuses> statuses,
 
     /// Maximum number of results to return
     @Default(50) int limit,

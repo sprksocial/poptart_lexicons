@@ -8,68 +8,73 @@ part of 'input.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ConvoListConvosInput _$ConvoListConvosInputFromJson(Map json) =>
-    $checkedCreate('_ConvoListConvosInput', json, ($checkedConvert) {
-      final val = _ConvoListConvosInput(
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
-        cursor: $checkedConvert('cursor', (v) => v as String?),
-        readState: $checkedConvert(
-          'readState',
-          (v) => _$JsonConverterFromJson<String, ConvoListConvosReadState>(
+_ConvoListConvosInput _$ConvoListConvosInputFromJson(
+  Map json,
+) => $checkedCreate('_ConvoListConvosInput', json, ($checkedConvert) {
+  final val = _ConvoListConvosInput(
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
+    cursor: $checkedConvert('cursor', (v) => v as String?),
+    readState: $checkedConvert(
+      'readState',
+      (v) =>
+          _$JsonConverterFromJson<String, ConvoListConvosParametersReadState>(
             v,
-            const ConvoListConvosReadStateConverter().fromJson,
+            const ConvoListConvosParametersReadStateConverter().fromJson,
           ),
-        ),
-        status: $checkedConvert(
-          'status',
-          (v) => _$JsonConverterFromJson<String, ConvoListConvosStatus>(
+    ),
+    status: $checkedConvert(
+      'status',
+      (v) => _$JsonConverterFromJson<String, ConvoListConvosParametersStatus>(
+        v,
+        const ConvoListConvosParametersStatusConverter().fromJson,
+      ),
+    ),
+    kind: $checkedConvert(
+      'kind',
+      (v) => _$JsonConverterFromJson<String, ConvoListConvosParametersKind>(
+        v,
+        const ConvoListConvosParametersKindConverter().fromJson,
+      ),
+    ),
+    lockStatus: $checkedConvert(
+      'lockStatus',
+      (v) =>
+          _$JsonConverterFromJson<String, ConvoListConvosParametersLockStatus>(
             v,
-            const ConvoListConvosStatusConverter().fromJson,
+            const ConvoListConvosParametersLockStatusConverter().fromJson,
           ),
-        ),
-        kind: $checkedConvert(
-          'kind',
-          (v) => _$JsonConverterFromJson<String, ConvoListConvosKind>(
-            v,
-            const ConvoListConvosKindConverter().fromJson,
-          ),
-        ),
-        lockStatus: $checkedConvert(
-          'lockStatus',
-          (v) => _$JsonConverterFromJson<String, ConvoListConvosLockStatus>(
-            v,
-            const ConvoListConvosLockStatusConverter().fromJson,
-          ),
-        ),
-        $unknown: $checkedConvert(
-          r'$unknown',
-          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
-        ),
-      );
-      return val;
-    });
+    ),
+    $unknown: $checkedConvert(
+      r'$unknown',
+      (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+    ),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$ConvoListConvosInputToJson(
   _ConvoListConvosInput instance,
 ) => <String, dynamic>{
   'limit': instance.limit,
   'cursor': ?instance.cursor,
-  'readState': ?_$JsonConverterToJson<String, ConvoListConvosReadState>(
-    instance.readState,
-    const ConvoListConvosReadStateConverter().toJson,
-  ),
-  'status': ?_$JsonConverterToJson<String, ConvoListConvosStatus>(
+  'readState':
+      ?_$JsonConverterToJson<String, ConvoListConvosParametersReadState>(
+        instance.readState,
+        const ConvoListConvosParametersReadStateConverter().toJson,
+      ),
+  'status': ?_$JsonConverterToJson<String, ConvoListConvosParametersStatus>(
     instance.status,
-    const ConvoListConvosStatusConverter().toJson,
+    const ConvoListConvosParametersStatusConverter().toJson,
   ),
-  'kind': ?_$JsonConverterToJson<String, ConvoListConvosKind>(
+  'kind': ?_$JsonConverterToJson<String, ConvoListConvosParametersKind>(
     instance.kind,
-    const ConvoListConvosKindConverter().toJson,
+    const ConvoListConvosParametersKindConverter().toJson,
   ),
-  'lockStatus': ?_$JsonConverterToJson<String, ConvoListConvosLockStatus>(
-    instance.lockStatus,
-    const ConvoListConvosLockStatusConverter().toJson,
-  ),
+  'lockStatus':
+      ?_$JsonConverterToJson<String, ConvoListConvosParametersLockStatus>(
+        instance.lockStatus,
+        const ConvoListConvosParametersLockStatusConverter().toJson,
+      ),
   r'$unknown': ?instance.$unknown,
 };
 

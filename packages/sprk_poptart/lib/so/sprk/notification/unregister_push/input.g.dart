@@ -17,9 +17,8 @@ _NotificationUnregisterPushInput _$NotificationUnregisterPushInputFromJson(
         token: $checkedConvert('token', (v) => v as String),
         platform: $checkedConvert(
           'platform',
-          (v) => const NotificationUnregisterPushPlatformConverter().fromJson(
-            v as String,
-          ),
+          (v) => const NotificationUnregisterPushInputPlatformConverter()
+              .fromJson(v as String),
         ),
         appId: $checkedConvert('appId', (v) => v as String),
         $unknown: $checkedConvert(
@@ -35,7 +34,7 @@ Map<String, dynamic> _$NotificationUnregisterPushInputToJson(
 ) => <String, dynamic>{
   'serviceDid': instance.serviceDid,
   'token': instance.token,
-  'platform': const NotificationUnregisterPushPlatformConverter().toJson(
+  'platform': const NotificationUnregisterPushInputPlatformConverter().toJson(
     instance.platform,
   ),
   'appId': instance.appId,

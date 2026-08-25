@@ -10,6 +10,14 @@ import 'package:poptart_core/poptart_core.dart' show AtUri;
 // **************************************************************************
 
 extension AtUriExtension on AtUri {
+  /// Returns true if this uri is `app.bsky.actor.contentVisibilityDeclaration`, otherwise false.
+  bool get isActorContentVisibilityDeclaration =>
+      collection.toString() == 'app.bsky.actor.contentVisibilityDeclaration';
+
+  /// Returns true if this uri is not `app.bsky.actor.contentVisibilityDeclaration`, otherwise false.
+  bool get isNotActorContentVisibilityDeclaration =>
+      !isActorContentVisibilityDeclaration;
+
   /// Returns true if this uri is `app.bsky.actor.profile`, otherwise false.
   bool get isActorProfile => collection.toString() == 'app.bsky.actor.profile';
 

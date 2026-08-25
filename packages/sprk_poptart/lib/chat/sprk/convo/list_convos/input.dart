@@ -7,8 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_read_state.dart';
-import './main_status.dart';
+import './main_parameters_read_state.dart';
+import './main_parameters_status.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -25,8 +25,10 @@ abstract class ConvoListConvosInput with _$ConvoListConvosInput {
   const factory ConvoListConvosInput({
     @Default(50) int limit,
     String? cursor,
-    @ConvoListConvosReadStateConverter() ConvoListConvosReadState? readState,
-    @ConvoListConvosStatusConverter() ConvoListConvosStatus? status,
+    @ConvoListConvosParametersReadStateConverter()
+    ConvoListConvosParametersReadState? readState,
+    @ConvoListConvosParametersStatusConverter()
+    ConvoListConvosParametersStatus? status,
 
     Map<String, dynamic>? $unknown,
   }) = _ConvoListConvosInput;

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ModerationGetMessageContextOutput {
 
-@UModerationGetMessageContextMessagesConverter() List<UModerationGetMessageContextMessages> get messages; Map<String, dynamic>? get $unknown;
+@UModerationGetMessageContextOutputMessagesConverter() List<UModerationGetMessageContextOutputMessages> get messages; Map<String, dynamic>? get $unknown;
 /// Create a copy of ModerationGetMessageContextOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ModerationGetMessageContextOutputCopyWith<$Res>  {
   factory $ModerationGetMessageContextOutputCopyWith(ModerationGetMessageContextOutput value, $Res Function(ModerationGetMessageContextOutput) _then) = _$ModerationGetMessageContextOutputCopyWithImpl;
 @useResult
 $Res call({
-@UModerationGetMessageContextMessagesConverter() List<UModerationGetMessageContextMessages> messages, Map<String, dynamic>? $unknown
+@UModerationGetMessageContextOutputMessagesConverter() List<UModerationGetMessageContextOutputMessages> messages, Map<String, dynamic>? $unknown
 });
 
 
@@ -68,7 +68,7 @@ class _$ModerationGetMessageContextOutputCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? messages = null,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 messages: null == messages ? _self.messages : messages // ignore: cast_nullable_to_non_nullable
-as List<UModerationGetMessageContextMessages>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UModerationGetMessageContextOutputMessages>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -154,7 +154,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UModerationGetMessageContextMessagesConverter()  List<UModerationGetMessageContextMessages> messages,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UModerationGetMessageContextOutputMessagesConverter()  List<UModerationGetMessageContextOutputMessages> messages,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ModerationGetMessageContextOutput() when $default != null:
 return $default(_that.messages,_that.$unknown);case _:
@@ -175,7 +175,7 @@ return $default(_that.messages,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UModerationGetMessageContextMessagesConverter()  List<UModerationGetMessageContextMessages> messages,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UModerationGetMessageContextOutputMessagesConverter()  List<UModerationGetMessageContextOutputMessages> messages,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ModerationGetMessageContextOutput():
 return $default(_that.messages,_that.$unknown);case _:
@@ -195,7 +195,7 @@ return $default(_that.messages,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UModerationGetMessageContextMessagesConverter()  List<UModerationGetMessageContextMessages> messages,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UModerationGetMessageContextOutputMessagesConverter()  List<UModerationGetMessageContextOutputMessages> messages,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ModerationGetMessageContextOutput() when $default != null:
 return $default(_that.messages,_that.$unknown);case _:
@@ -210,11 +210,11 @@ return $default(_that.messages,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _ModerationGetMessageContextOutput implements ModerationGetMessageContextOutput {
-  const _ModerationGetMessageContextOutput({@UModerationGetMessageContextMessagesConverter() required final  List<UModerationGetMessageContextMessages> messages, final  Map<String, dynamic>? $unknown}): _messages = messages,_$unknown = $unknown;
+  const _ModerationGetMessageContextOutput({@UModerationGetMessageContextOutputMessagesConverter() required final  List<UModerationGetMessageContextOutputMessages> messages, final  Map<String, dynamic>? $unknown}): _messages = messages,_$unknown = $unknown;
   factory _ModerationGetMessageContextOutput.fromJson(Map<String, dynamic> json) => _$ModerationGetMessageContextOutputFromJson(json);
 
- final  List<UModerationGetMessageContextMessages> _messages;
-@override@UModerationGetMessageContextMessagesConverter() List<UModerationGetMessageContextMessages> get messages {
+ final  List<UModerationGetMessageContextOutputMessages> _messages;
+@override@UModerationGetMessageContextOutputMessagesConverter() List<UModerationGetMessageContextOutputMessages> get messages {
   if (_messages is EqualUnmodifiableListView) return _messages;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_messages);
@@ -263,7 +263,7 @@ abstract mixin class _$ModerationGetMessageContextOutputCopyWith<$Res> implement
   factory _$ModerationGetMessageContextOutputCopyWith(_ModerationGetMessageContextOutput value, $Res Function(_ModerationGetMessageContextOutput) _then) = __$ModerationGetMessageContextOutputCopyWithImpl;
 @override @useResult
 $Res call({
-@UModerationGetMessageContextMessagesConverter() List<UModerationGetMessageContextMessages> messages, Map<String, dynamic>? $unknown
+@UModerationGetMessageContextOutputMessagesConverter() List<UModerationGetMessageContextOutputMessages> messages, Map<String, dynamic>? $unknown
 });
 
 
@@ -283,7 +283,7 @@ class __$ModerationGetMessageContextOutputCopyWithImpl<$Res>
 @override @pragma('vm:prefer-inline') $Res call({Object? messages = null,Object? $unknown = freezed,}) {
   return _then(_ModerationGetMessageContextOutput(
 messages: null == messages ? _self._messages : messages // ignore: cast_nullable_to_non_nullable
-as List<UModerationGetMessageContextMessages>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UModerationGetMessageContextOutputMessages>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

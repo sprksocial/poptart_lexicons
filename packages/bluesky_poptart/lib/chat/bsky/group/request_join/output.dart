@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_status.dart';
+import './main_output_status.dart';
 import '../../convo/defs/convo_view.dart';
 
 part 'output.freezed.dart';
@@ -23,7 +23,8 @@ abstract class GroupRequestJoinOutput with _$GroupRequestJoinOutput {
 
   @JsonSerializable(includeIfNull: false)
   const factory GroupRequestJoinOutput({
-    @GroupRequestJoinStatusConverter() required GroupRequestJoinStatus status,
+    @GroupRequestJoinOutputStatusConverter()
+    required GroupRequestJoinOutputStatus status,
 
     /// The group convo joined. This is only present in the case of status=joined
     @ConvoViewConverter() ConvoView? convo,

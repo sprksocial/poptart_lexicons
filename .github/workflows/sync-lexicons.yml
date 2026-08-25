@@ -23,21 +23,11 @@ jobs:
         with:
           path: poptart_lexicons
 
-      - name: Checkout generator
-        uses: actions/checkout@v4.1.7
-        with:
-          repository: sprksocial/poptart
-          path: poptart
-
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
-
-      - name: Install generator dependencies
-        working-directory: poptart
-        run: dart pub get
 
       - name: Install lexicon workspace dependencies
         working-directory: poptart_lexicons
@@ -55,12 +45,12 @@ jobs:
             "$RUNNER_TEMP/generator-lexicons"
 
       - name: Generate package sources
-        working-directory: poptart
+        working-directory: poptart_lexicons
         run: |
           dart run poptart_lex_gen generate \
-            --manifest ../poptart_lexicons/lexicons/manifest.yaml \
+            --manifest lexicons/manifest.yaml \
             --lexicons "$RUNNER_TEMP/generator-lexicons" \
-            --packages ../poptart_lexicons/packages
+            --packages packages
 
       - name: Build generated parts
         working-directory: poptart_lexicons

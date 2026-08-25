@@ -9,5 +9,5 @@
 
 export 'query_events/descriptor.dart';
 export 'query_events/input.dart';
-export 'query_events/main_sort_direction.dart';
+export 'query_events/main_input_sort_direction.dart';
 export 'query_events/output.dart';

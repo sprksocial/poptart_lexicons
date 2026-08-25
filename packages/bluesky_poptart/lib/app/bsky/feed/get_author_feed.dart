@@ -9,5 +9,5 @@
 
 export 'get_author_feed/descriptor.dart';
 export 'get_author_feed/input.dart';
-export 'get_author_feed/main_filter.dart';
+export 'get_author_feed/main_parameters_filter.dart';
 export 'get_author_feed/output.dart';

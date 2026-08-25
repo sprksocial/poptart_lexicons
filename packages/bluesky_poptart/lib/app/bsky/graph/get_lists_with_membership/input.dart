@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_purposes.dart';
+import './main_parameters_purposes.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -27,8 +27,8 @@ abstract class GraphGetListsWithMembershipInput
     required String actor,
     @Default(50) int limit,
     String? cursor,
-    @GraphGetListsWithMembershipPurposesConverter()
-    List<GraphGetListsWithMembershipPurposes>? purposes,
+    @GraphGetListsWithMembershipParametersPurposesConverter()
+    List<GraphGetListsWithMembershipParametersPurposes>? purposes,
 
     Map<String, dynamic>? $unknown,
   }) = _GraphGetListsWithMembershipInput;

@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 mixin _$QueueListQueuesInput {
 
 /// Filter by enabled status. If not specified, returns all queues.
- bool? get enabled;/// Filter queues that handle this subject type ('account' or 'record').
+ bool? get enabled;/// Filter queues that handle this subject type ('account', 'record', 'message', or 'conversation').
  String? get subjectType;/// Filter queues by collection name (e.g. 'app.bsky.feed.post').
  String? get collection; List<String>? get reportTypes; int get limit; String? get cursor; Map<String, dynamic>? get $unknown;
 /// Create a copy of QueueListQueuesInput
@@ -223,7 +223,7 @@ class _QueueListQueuesInput implements QueueListQueuesInput {
 
 /// Filter by enabled status. If not specified, returns all queues.
 @override final  bool? enabled;
-/// Filter queues that handle this subject type ('account' or 'record').
+/// Filter queues that handle this subject type ('account', 'record', 'message', or 'conversation').
 @override final  String? subjectType;
 /// Filter queues by collection name (e.g. 'app.bsky.feed.post').
 @override final  String? collection;

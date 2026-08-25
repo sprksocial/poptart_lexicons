@@ -8,37 +8,38 @@ part of 'input.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_SafelinkQueryRulesInput _$SafelinkQueryRulesInputFromJson(Map json) =>
-    $checkedCreate('_SafelinkQueryRulesInput', json, ($checkedConvert) {
-      final val = _SafelinkQueryRulesInput(
-        cursor: $checkedConvert('cursor', (v) => v as String?),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
-        urls: $checkedConvert(
-          'urls',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        patternType: $checkedConvert('patternType', (v) => v as String?),
-        actions: $checkedConvert(
-          'actions',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        reason: $checkedConvert('reason', (v) => v as String?),
-        createdBy: $checkedConvert('createdBy', (v) => v as String?),
-        sortDirection: $checkedConvert(
-          'sortDirection',
-          (v) =>
-              _$JsonConverterFromJson<String, SafelinkQueryRulesSortDirection>(
-                v,
-                const SafelinkQueryRulesSortDirectionConverter().fromJson,
-              ),
-        ),
-        $unknown: $checkedConvert(
-          r'$unknown',
-          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
-        ),
-      );
-      return val;
-    });
+_SafelinkQueryRulesInput _$SafelinkQueryRulesInputFromJson(
+  Map json,
+) => $checkedCreate('_SafelinkQueryRulesInput', json, ($checkedConvert) {
+  final val = _SafelinkQueryRulesInput(
+    cursor: $checkedConvert('cursor', (v) => v as String?),
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
+    urls: $checkedConvert(
+      'urls',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    patternType: $checkedConvert('patternType', (v) => v as String?),
+    actions: $checkedConvert(
+      'actions',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    reason: $checkedConvert('reason', (v) => v as String?),
+    createdBy: $checkedConvert('createdBy', (v) => v as String?),
+    sortDirection: $checkedConvert(
+      'sortDirection',
+      (v) =>
+          _$JsonConverterFromJson<String, SafelinkQueryRulesInputSortDirection>(
+            v,
+            const SafelinkQueryRulesInputSortDirectionConverter().fromJson,
+          ),
+    ),
+    $unknown: $checkedConvert(
+      r'$unknown',
+      (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+    ),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$SafelinkQueryRulesInputToJson(
   _SafelinkQueryRulesInput instance,
@@ -51,9 +52,9 @@ Map<String, dynamic> _$SafelinkQueryRulesInputToJson(
   'reason': ?instance.reason,
   'createdBy': ?instance.createdBy,
   'sortDirection':
-      ?_$JsonConverterToJson<String, SafelinkQueryRulesSortDirection>(
+      ?_$JsonConverterToJson<String, SafelinkQueryRulesInputSortDirection>(
         instance.sortDirection,
-        const SafelinkQueryRulesSortDirectionConverter().toJson,
+        const SafelinkQueryRulesInputSortDirectionConverter().toJson,
       ),
   r'$unknown': ?instance.$unknown,
 };

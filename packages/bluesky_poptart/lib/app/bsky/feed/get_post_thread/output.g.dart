@@ -13,7 +13,7 @@ _FeedGetPostThreadOutput _$FeedGetPostThreadOutputFromJson(Map json) =>
       final val = _FeedGetPostThreadOutput(
         thread: $checkedConvert(
           'thread',
-          (v) => const UFeedGetPostThreadThreadConverter().fromJson(
+          (v) => const UFeedGetPostThreadOutputThreadConverter().fromJson(
             v as Map<String, dynamic>,
           ),
         ),
@@ -35,7 +35,9 @@ _FeedGetPostThreadOutput _$FeedGetPostThreadOutputFromJson(Map json) =>
 Map<String, dynamic> _$FeedGetPostThreadOutputToJson(
   _FeedGetPostThreadOutput instance,
 ) => <String, dynamic>{
-  'thread': const UFeedGetPostThreadThreadConverter().toJson(instance.thread),
+  'thread': const UFeedGetPostThreadOutputThreadConverter().toJson(
+    instance.thread,
+  ),
   'threadgate': ?_$JsonConverterToJson<Map<String, dynamic>, ThreadgateView>(
     instance.threadgate,
     const ThreadgateViewConverter().toJson,

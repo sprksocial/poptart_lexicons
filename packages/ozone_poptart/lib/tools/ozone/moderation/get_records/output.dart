@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_records.dart';
+import './union_main_output_records.dart';
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -22,8 +22,8 @@ abstract class ModerationGetRecordsOutput with _$ModerationGetRecordsOutput {
 
   @JsonSerializable(includeIfNull: false)
   const factory ModerationGetRecordsOutput({
-    @UModerationGetRecordsRecordsConverter()
-    required List<UModerationGetRecordsRecords> records,
+    @UModerationGetRecordsOutputRecordsConverter()
+    required List<UModerationGetRecordsOutputRecords> records,
 
     Map<String, dynamic>? $unknown,
   }) = _ModerationGetRecordsOutput;

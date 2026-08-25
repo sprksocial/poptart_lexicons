@@ -9,6 +9,6 @@
 
 export 'query_events/descriptor.dart';
 export 'query_events/input.dart';
-export 'query_events/main_age_assurance_state.dart';
-export 'query_events/main_subject_type.dart';
+export 'query_events/main_parameters_age_assurance_state.dart';
+export 'query_events/main_parameters_subject_type.dart';
 export 'query_events/output.dart';

@@ -14,7 +14,7 @@ _TeamAddMemberInput _$TeamAddMemberInputFromJson(Map json) =>
         did: $checkedConvert('did', (v) => v as String),
         role: $checkedConvert(
           'role',
-          (v) => const TeamAddMemberRoleConverter().fromJson(v as String),
+          (v) => const TeamAddMemberInputRoleConverter().fromJson(v as String),
         ),
         $unknown: $checkedConvert(
           r'$unknown',
@@ -27,6 +27,6 @@ _TeamAddMemberInput _$TeamAddMemberInputFromJson(Map json) =>
 Map<String, dynamic> _$TeamAddMemberInputToJson(_TeamAddMemberInput instance) =>
     <String, dynamic>{
       'did': instance.did,
-      'role': const TeamAddMemberRoleConverter().toJson(instance.role),
+      'role': const TeamAddMemberInputRoleConverter().toJson(instance.role),
       r'$unknown': ?instance.$unknown,
     };

@@ -9,4 +9,4 @@
 
 export 'remove_options/descriptor.dart';
 export 'remove_options/input.dart';
-export 'remove_options/main_scope.dart';
+export 'remove_options/main_input_scope.dart';

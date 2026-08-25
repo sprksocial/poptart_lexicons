@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_relationships.dart';
+import './union_main_output_relationships.dart';
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -23,8 +23,8 @@ abstract class GraphGetRelationshipsOutput with _$GraphGetRelationshipsOutput {
   @JsonSerializable(includeIfNull: false)
   const factory GraphGetRelationshipsOutput({
     String? actor,
-    @UGraphGetRelationshipsRelationshipsConverter()
-    required List<UGraphGetRelationshipsRelationships> relationships,
+    @UGraphGetRelationshipsOutputRelationshipsConverter()
+    required List<UGraphGetRelationshipsOutputRelationships> relationships,
 
     Map<String, dynamic>? $unknown,
   }) = _GraphGetRelationshipsOutput;

@@ -8,27 +8,28 @@ part of 'input.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FeedGetAuthorFeedInput _$FeedGetAuthorFeedInputFromJson(Map json) =>
-    $checkedCreate('_FeedGetAuthorFeedInput', json, ($checkedConvert) {
-      final val = _FeedGetAuthorFeedInput(
-        actor: $checkedConvert('actor', (v) => v as String),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
-        cursor: $checkedConvert('cursor', (v) => v as String?),
-        filter: $checkedConvert(
-          'filter',
-          (v) => _$JsonConverterFromJson<String, FeedGetAuthorFeedFilter>(
-            v,
-            const FeedGetAuthorFeedFilterConverter().fromJson,
-          ),
-        ),
-        includePins: $checkedConvert('includePins', (v) => v as bool? ?? false),
-        $unknown: $checkedConvert(
-          r'$unknown',
-          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
-        ),
-      );
-      return val;
-    });
+_FeedGetAuthorFeedInput _$FeedGetAuthorFeedInputFromJson(
+  Map json,
+) => $checkedCreate('_FeedGetAuthorFeedInput', json, ($checkedConvert) {
+  final val = _FeedGetAuthorFeedInput(
+    actor: $checkedConvert('actor', (v) => v as String),
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
+    cursor: $checkedConvert('cursor', (v) => v as String?),
+    filter: $checkedConvert(
+      'filter',
+      (v) => _$JsonConverterFromJson<String, FeedGetAuthorFeedParametersFilter>(
+        v,
+        const FeedGetAuthorFeedParametersFilterConverter().fromJson,
+      ),
+    ),
+    includePins: $checkedConvert('includePins', (v) => v as bool? ?? false),
+    $unknown: $checkedConvert(
+      r'$unknown',
+      (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+    ),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$FeedGetAuthorFeedInputToJson(
   _FeedGetAuthorFeedInput instance,
@@ -36,9 +37,9 @@ Map<String, dynamic> _$FeedGetAuthorFeedInputToJson(
   'actor': instance.actor,
   'limit': instance.limit,
   'cursor': ?instance.cursor,
-  'filter': ?_$JsonConverterToJson<String, FeedGetAuthorFeedFilter>(
+  'filter': ?_$JsonConverterToJson<String, FeedGetAuthorFeedParametersFilter>(
     instance.filter,
-    const FeedGetAuthorFeedFilterConverter().toJson,
+    const FeedGetAuthorFeedParametersFilterConverter().toJson,
   ),
   'includePins': instance.includePins,
   r'$unknown': ?instance.$unknown,

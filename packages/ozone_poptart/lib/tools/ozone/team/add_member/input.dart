@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_role.dart';
+import './main_input_role.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -23,7 +23,7 @@ abstract class TeamAddMemberInput with _$TeamAddMemberInput {
   @JsonSerializable(includeIfNull: false)
   const factory TeamAddMemberInput({
     required String did,
-    @TeamAddMemberRoleConverter() required TeamAddMemberRole role,
+    @TeamAddMemberInputRoleConverter() required TeamAddMemberInputRole role,
 
     Map<String, dynamic>? $unknown,
   }) = _TeamAddMemberInput;

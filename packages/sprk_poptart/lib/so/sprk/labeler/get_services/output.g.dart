@@ -15,7 +15,7 @@ _LabelerGetServicesOutput _$LabelerGetServicesOutputFromJson(Map json) =>
           'views',
           (v) => (v as List<dynamic>)
               .map(
-                (e) => const ULabelerGetServicesViewsConverter().fromJson(
+                (e) => const ULabelerGetServicesOutputViewsConverter().fromJson(
                   e as Map<String, dynamic>,
                 ),
               )
@@ -33,7 +33,7 @@ Map<String, dynamic> _$LabelerGetServicesOutputToJson(
   _LabelerGetServicesOutput instance,
 ) => <String, dynamic>{
   'views': instance.views
-      .map(const ULabelerGetServicesViewsConverter().toJson)
+      .map(const ULabelerGetServicesOutputViewsConverter().toJson)
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

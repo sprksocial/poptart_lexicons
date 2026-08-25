@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GroupRequestJoinOutput {
 
-@GroupRequestJoinStatusConverter() GroupRequestJoinStatus get status;/// The group convo joined. This is only present in the case of status=joined
+@GroupRequestJoinOutputStatusConverter() GroupRequestJoinOutputStatus get status;/// The group convo joined. This is only present in the case of status=joined
 @ConvoViewConverter() ConvoView? get convo; Map<String, dynamic>? get $unknown;
 /// Create a copy of GroupRequestJoinOutput
 /// with the given fields replaced by the non-null parameter values.
@@ -49,11 +49,11 @@ abstract mixin class $GroupRequestJoinOutputCopyWith<$Res>  {
   factory $GroupRequestJoinOutputCopyWith(GroupRequestJoinOutput value, $Res Function(GroupRequestJoinOutput) _then) = _$GroupRequestJoinOutputCopyWithImpl;
 @useResult
 $Res call({
-@GroupRequestJoinStatusConverter() GroupRequestJoinStatus status,@ConvoViewConverter() ConvoView? convo, Map<String, dynamic>? $unknown
+@GroupRequestJoinOutputStatusConverter() GroupRequestJoinOutputStatus status,@ConvoViewConverter() ConvoView? convo, Map<String, dynamic>? $unknown
 });
 
 
-$GroupRequestJoinStatusCopyWith<$Res> get status;$ConvoViewCopyWith<$Res>? get convo;
+$GroupRequestJoinOutputStatusCopyWith<$Res> get status;$ConvoViewCopyWith<$Res>? get convo;
 
 }
 /// @nodoc
@@ -69,7 +69,7 @@ class _$GroupRequestJoinOutputCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? status = null,Object? convo = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 status: null == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as GroupRequestJoinStatus,convo: freezed == convo ? _self.convo : convo // ignore: cast_nullable_to_non_nullable
+as GroupRequestJoinOutputStatus,convo: freezed == convo ? _self.convo : convo // ignore: cast_nullable_to_non_nullable
 as ConvoView?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -78,9 +78,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GroupRequestJoinStatusCopyWith<$Res> get status {
+$GroupRequestJoinOutputStatusCopyWith<$Res> get status {
 
-  return $GroupRequestJoinStatusCopyWith<$Res>(_self.status, (value) {
+  return $GroupRequestJoinOutputStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
 }/// Create a copy of GroupRequestJoinOutput
@@ -177,7 +177,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@GroupRequestJoinStatusConverter()  GroupRequestJoinStatus status, @ConvoViewConverter()  ConvoView? convo,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@GroupRequestJoinOutputStatusConverter()  GroupRequestJoinOutputStatus status, @ConvoViewConverter()  ConvoView? convo,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GroupRequestJoinOutput() when $default != null:
 return $default(_that.status,_that.convo,_that.$unknown);case _:
@@ -198,7 +198,7 @@ return $default(_that.status,_that.convo,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@GroupRequestJoinStatusConverter()  GroupRequestJoinStatus status, @ConvoViewConverter()  ConvoView? convo,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@GroupRequestJoinOutputStatusConverter()  GroupRequestJoinOutputStatus status, @ConvoViewConverter()  ConvoView? convo,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _GroupRequestJoinOutput():
 return $default(_that.status,_that.convo,_that.$unknown);case _:
@@ -218,7 +218,7 @@ return $default(_that.status,_that.convo,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@GroupRequestJoinStatusConverter()  GroupRequestJoinStatus status, @ConvoViewConverter()  ConvoView? convo,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@GroupRequestJoinOutputStatusConverter()  GroupRequestJoinOutputStatus status, @ConvoViewConverter()  ConvoView? convo,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _GroupRequestJoinOutput() when $default != null:
 return $default(_that.status,_that.convo,_that.$unknown);case _:
@@ -233,10 +233,10 @@ return $default(_that.status,_that.convo,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _GroupRequestJoinOutput implements GroupRequestJoinOutput {
-  const _GroupRequestJoinOutput({@GroupRequestJoinStatusConverter() required this.status, @ConvoViewConverter() this.convo, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _GroupRequestJoinOutput({@GroupRequestJoinOutputStatusConverter() required this.status, @ConvoViewConverter() this.convo, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _GroupRequestJoinOutput.fromJson(Map<String, dynamic> json) => _$GroupRequestJoinOutputFromJson(json);
 
-@override@GroupRequestJoinStatusConverter() final  GroupRequestJoinStatus status;
+@override@GroupRequestJoinOutputStatusConverter() final  GroupRequestJoinOutputStatus status;
 /// The group convo joined. This is only present in the case of status=joined
 @override@ConvoViewConverter() final  ConvoView? convo;
  final  Map<String, dynamic>? _$unknown;
@@ -282,11 +282,11 @@ abstract mixin class _$GroupRequestJoinOutputCopyWith<$Res> implements $GroupReq
   factory _$GroupRequestJoinOutputCopyWith(_GroupRequestJoinOutput value, $Res Function(_GroupRequestJoinOutput) _then) = __$GroupRequestJoinOutputCopyWithImpl;
 @override @useResult
 $Res call({
-@GroupRequestJoinStatusConverter() GroupRequestJoinStatus status,@ConvoViewConverter() ConvoView? convo, Map<String, dynamic>? $unknown
+@GroupRequestJoinOutputStatusConverter() GroupRequestJoinOutputStatus status,@ConvoViewConverter() ConvoView? convo, Map<String, dynamic>? $unknown
 });
 
 
-@override $GroupRequestJoinStatusCopyWith<$Res> get status;@override $ConvoViewCopyWith<$Res>? get convo;
+@override $GroupRequestJoinOutputStatusCopyWith<$Res> get status;@override $ConvoViewCopyWith<$Res>? get convo;
 
 }
 /// @nodoc
@@ -302,7 +302,7 @@ class __$GroupRequestJoinOutputCopyWithImpl<$Res>
 @override @pragma('vm:prefer-inline') $Res call({Object? status = null,Object? convo = freezed,Object? $unknown = freezed,}) {
   return _then(_GroupRequestJoinOutput(
 status: null == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as GroupRequestJoinStatus,convo: freezed == convo ? _self.convo : convo // ignore: cast_nullable_to_non_nullable
+as GroupRequestJoinOutputStatus,convo: freezed == convo ? _self.convo : convo // ignore: cast_nullable_to_non_nullable
 as ConvoView?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -312,9 +312,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$GroupRequestJoinStatusCopyWith<$Res> get status {
+$GroupRequestJoinOutputStatusCopyWith<$Res> get status {
 
-  return $GroupRequestJoinStatusCopyWith<$Res>(_self.status, (value) {
+  return $GroupRequestJoinOutputStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
 }/// Create a copy of GroupRequestJoinOutput

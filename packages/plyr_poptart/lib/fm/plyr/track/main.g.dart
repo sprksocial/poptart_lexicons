@@ -39,6 +39,13 @@ _TrackRecord _$TrackRecordFromJson(
       ),
     ),
     description: $checkedConvert('description', (v) => v as String?),
+    labels: $checkedConvert(
+      'labels',
+      (v) => _$JsonConverterFromJson<Map<String, dynamic>, UTrackLabels>(
+        v,
+        const UTrackLabelsConverter().fromJson,
+      ),
+    ),
     audioBlob: $checkedConvert(
       'audioBlob',
       (v) => _$JsonConverterFromJson<Map<String, dynamic>, Blob>(
@@ -73,6 +80,10 @@ Map<String, dynamic> _$TrackRecordToJson(_TrackRecord instance) =>
         const SupportGateConverter().toJson,
       ),
       'description': ?instance.description,
+      'labels': ?_$JsonConverterToJson<Map<String, dynamic>, UTrackLabels>(
+        instance.labels,
+        const UTrackLabelsConverter().toJson,
+      ),
       'audioBlob': ?_$JsonConverterToJson<Map<String, dynamic>, Blob>(
         instance.audioBlob,
         const BlobConverter().toJson,

@@ -19,7 +19,7 @@ mixin _$FeedGetCrosspostThreadInput {
 @AtUriConverter() AtUri get anchor; int get limit; String? get cursor;/// How many levels of descendant depth should be included in response.
  int get depth;/// How many levels of parent (and grandparent, etc) items to include.
  int get parentHeight;/// Sorting for thread replies.
-@FeedGetCrosspostThreadSortConverter() FeedGetCrosspostThreadSort? get sort; Map<String, dynamic>? get $unknown;
+@FeedGetCrosspostThreadParametersSortConverter() FeedGetCrosspostThreadParametersSort? get sort; Map<String, dynamic>? get $unknown;
 /// Create a copy of FeedGetCrosspostThreadInput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -52,11 +52,11 @@ abstract mixin class $FeedGetCrosspostThreadInputCopyWith<$Res>  {
   factory $FeedGetCrosspostThreadInputCopyWith(FeedGetCrosspostThreadInput value, $Res Function(FeedGetCrosspostThreadInput) _then) = _$FeedGetCrosspostThreadInputCopyWithImpl;
 @useResult
 $Res call({
-@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetCrosspostThreadSortConverter() FeedGetCrosspostThreadSort? sort, Map<String, dynamic>? $unknown
+@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetCrosspostThreadParametersSortConverter() FeedGetCrosspostThreadParametersSort? sort, Map<String, dynamic>? $unknown
 });
 
 
-$FeedGetCrosspostThreadSortCopyWith<$Res>? get sort;
+$FeedGetCrosspostThreadParametersSortCopyWith<$Res>? get sort;
 
 }
 /// @nodoc
@@ -77,7 +77,7 @@ as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullabl
 as String?,depth: null == depth ? _self.depth : depth // ignore: cast_nullable_to_non_nullable
 as int,parentHeight: null == parentHeight ? _self.parentHeight : parentHeight // ignore: cast_nullable_to_non_nullable
 as int,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as FeedGetCrosspostThreadSort?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as FeedGetCrosspostThreadParametersSort?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -85,12 +85,12 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedGetCrosspostThreadSortCopyWith<$Res>? get sort {
+$FeedGetCrosspostThreadParametersSortCopyWith<$Res>? get sort {
     if (_self.sort == null) {
     return null;
   }
 
-  return $FeedGetCrosspostThreadSortCopyWith<$Res>(_self.sort!, (value) {
+  return $FeedGetCrosspostThreadParametersSortCopyWith<$Res>(_self.sort!, (value) {
     return _then(_self.copyWith(sort: value));
   });
 }
@@ -175,7 +175,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetCrosspostThreadSortConverter()  FeedGetCrosspostThreadSort? sort,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetCrosspostThreadParametersSortConverter()  FeedGetCrosspostThreadParametersSort? sort,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FeedGetCrosspostThreadInput() when $default != null:
 return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHeight,_that.sort,_that.$unknown);case _:
@@ -196,7 +196,7 @@ return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHe
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetCrosspostThreadSortConverter()  FeedGetCrosspostThreadSort? sort,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetCrosspostThreadParametersSortConverter()  FeedGetCrosspostThreadParametersSort? sort,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _FeedGetCrosspostThreadInput():
 return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHeight,_that.sort,_that.$unknown);case _:
@@ -216,7 +216,7 @@ return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHe
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetCrosspostThreadSortConverter()  FeedGetCrosspostThreadSort? sort,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@AtUriConverter()  AtUri anchor,  int limit,  String? cursor,  int depth,  int parentHeight, @FeedGetCrosspostThreadParametersSortConverter()  FeedGetCrosspostThreadParametersSort? sort,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _FeedGetCrosspostThreadInput() when $default != null:
 return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHeight,_that.sort,_that.$unknown);case _:
@@ -231,7 +231,7 @@ return $default(_that.anchor,_that.limit,_that.cursor,_that.depth,_that.parentHe
 
 @JsonSerializable(includeIfNull: false)
 class _FeedGetCrosspostThreadInput implements FeedGetCrosspostThreadInput {
-  const _FeedGetCrosspostThreadInput({@AtUriConverter() required this.anchor, this.limit = 50, this.cursor, this.depth = 6, this.parentHeight = 80, @FeedGetCrosspostThreadSortConverter() this.sort, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _FeedGetCrosspostThreadInput({@AtUriConverter() required this.anchor, this.limit = 50, this.cursor, this.depth = 6, this.parentHeight = 80, @FeedGetCrosspostThreadParametersSortConverter() this.sort, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _FeedGetCrosspostThreadInput.fromJson(Map<String, dynamic> json) => _$FeedGetCrosspostThreadInputFromJson(json);
 
 /// Reference (AT-URI) to anchor post or reply record.
@@ -243,7 +243,7 @@ class _FeedGetCrosspostThreadInput implements FeedGetCrosspostThreadInput {
 /// How many levels of parent (and grandparent, etc) items to include.
 @override@JsonKey() final  int parentHeight;
 /// Sorting for thread replies.
-@override@FeedGetCrosspostThreadSortConverter() final  FeedGetCrosspostThreadSort? sort;
+@override@FeedGetCrosspostThreadParametersSortConverter() final  FeedGetCrosspostThreadParametersSort? sort;
  final  Map<String, dynamic>? _$unknown;
 @override Map<String, dynamic>? get $unknown {
   final value = _$unknown;
@@ -287,11 +287,11 @@ abstract mixin class _$FeedGetCrosspostThreadInputCopyWith<$Res> implements $Fee
   factory _$FeedGetCrosspostThreadInputCopyWith(_FeedGetCrosspostThreadInput value, $Res Function(_FeedGetCrosspostThreadInput) _then) = __$FeedGetCrosspostThreadInputCopyWithImpl;
 @override @useResult
 $Res call({
-@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetCrosspostThreadSortConverter() FeedGetCrosspostThreadSort? sort, Map<String, dynamic>? $unknown
+@AtUriConverter() AtUri anchor, int limit, String? cursor, int depth, int parentHeight,@FeedGetCrosspostThreadParametersSortConverter() FeedGetCrosspostThreadParametersSort? sort, Map<String, dynamic>? $unknown
 });
 
 
-@override $FeedGetCrosspostThreadSortCopyWith<$Res>? get sort;
+@override $FeedGetCrosspostThreadParametersSortCopyWith<$Res>? get sort;
 
 }
 /// @nodoc
@@ -312,7 +312,7 @@ as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullabl
 as String?,depth: null == depth ? _self.depth : depth // ignore: cast_nullable_to_non_nullable
 as int,parentHeight: null == parentHeight ? _self.parentHeight : parentHeight // ignore: cast_nullable_to_non_nullable
 as int,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as FeedGetCrosspostThreadSort?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as FeedGetCrosspostThreadParametersSort?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -321,12 +321,12 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedGetCrosspostThreadSortCopyWith<$Res>? get sort {
+$FeedGetCrosspostThreadParametersSortCopyWith<$Res>? get sort {
     if (_self.sort == null) {
     return null;
   }
 
-  return $FeedGetCrosspostThreadSortCopyWith<$Res>(_self.sort!, (value) {
+  return $FeedGetCrosspostThreadParametersSortCopyWith<$Res>(_self.sort!, (value) {
     return _then(_self.copyWith(sort: value));
   });
 }

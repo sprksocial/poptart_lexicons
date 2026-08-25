@@ -26,7 +26,7 @@ final methodDescriptor =
       outputFromJson: (json) => const QueueCreateQueueOutputConverter()
           .fromJson(json.cast<String, dynamic>()),
       outputToJson: const QueueCreateQueueOutputConverter().toJson,
-      errors: const ['ConflictingQueue'],
+      errors: const ['InvalidRecommendedPolicies', 'ConflictingQueue'],
     );
 
 final toolsOzoneQueueCreateQueue = methodDescriptor;

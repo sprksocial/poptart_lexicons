@@ -12,3 +12,4 @@ export 'track/featured_artist.dart';
 export 'track/main.dart';
 export 'track/support_gate.dart';
 export 'track/support_gate_type.dart';
+export 'track/union_main_labels.dart';

@@ -8,34 +8,36 @@ part of 'input.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FeedGetCrosspostThreadInput _$FeedGetCrosspostThreadInputFromJson(Map json) =>
-    $checkedCreate('_FeedGetCrosspostThreadInput', json, ($checkedConvert) {
-      final val = _FeedGetCrosspostThreadInput(
-        anchor: $checkedConvert(
-          'anchor',
-          (v) => const AtUriConverter().fromJson(v as String),
-        ),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
-        cursor: $checkedConvert('cursor', (v) => v as String?),
-        depth: $checkedConvert('depth', (v) => (v as num?)?.toInt() ?? 6),
-        parentHeight: $checkedConvert(
-          'parentHeight',
-          (v) => (v as num?)?.toInt() ?? 80,
-        ),
-        sort: $checkedConvert(
-          'sort',
-          (v) => _$JsonConverterFromJson<String, FeedGetCrosspostThreadSort>(
+_FeedGetCrosspostThreadInput _$FeedGetCrosspostThreadInputFromJson(
+  Map json,
+) => $checkedCreate('_FeedGetCrosspostThreadInput', json, ($checkedConvert) {
+  final val = _FeedGetCrosspostThreadInput(
+    anchor: $checkedConvert(
+      'anchor',
+      (v) => const AtUriConverter().fromJson(v as String),
+    ),
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 50),
+    cursor: $checkedConvert('cursor', (v) => v as String?),
+    depth: $checkedConvert('depth', (v) => (v as num?)?.toInt() ?? 6),
+    parentHeight: $checkedConvert(
+      'parentHeight',
+      (v) => (v as num?)?.toInt() ?? 80,
+    ),
+    sort: $checkedConvert(
+      'sort',
+      (v) =>
+          _$JsonConverterFromJson<String, FeedGetCrosspostThreadParametersSort>(
             v,
-            const FeedGetCrosspostThreadSortConverter().fromJson,
+            const FeedGetCrosspostThreadParametersSortConverter().fromJson,
           ),
-        ),
-        $unknown: $checkedConvert(
-          r'$unknown',
-          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
-        ),
-      );
-      return val;
-    });
+    ),
+    $unknown: $checkedConvert(
+      r'$unknown',
+      (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+    ),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$FeedGetCrosspostThreadInputToJson(
   _FeedGetCrosspostThreadInput instance,
@@ -45,9 +47,9 @@ Map<String, dynamic> _$FeedGetCrosspostThreadInputToJson(
   'cursor': ?instance.cursor,
   'depth': instance.depth,
   'parentHeight': instance.parentHeight,
-  'sort': ?_$JsonConverterToJson<String, FeedGetCrosspostThreadSort>(
+  'sort': ?_$JsonConverterToJson<String, FeedGetCrosspostThreadParametersSort>(
     instance.sort,
-    const FeedGetCrosspostThreadSortConverter().toJson,
+    const FeedGetCrosspostThreadParametersSortConverter().toJson,
   ),
   r'$unknown': ?instance.$unknown,
 };

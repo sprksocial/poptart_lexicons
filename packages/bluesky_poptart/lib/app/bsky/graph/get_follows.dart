@@ -9,4 +9,5 @@
 
 export 'get_follows/descriptor.dart';
 export 'get_follows/input.dart';
+export 'get_follows/main_parameters_sort.dart';
 export 'get_follows/output.dart';

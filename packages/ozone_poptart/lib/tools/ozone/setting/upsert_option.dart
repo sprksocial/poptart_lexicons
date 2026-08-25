@@ -9,6 +9,6 @@
 
 export 'upsert_option/descriptor.dart';
 export 'upsert_option/input.dart';
-export 'upsert_option/main_manager_role.dart';
-export 'upsert_option/main_scope.dart';
+export 'upsert_option/main_input_manager_role.dart';
+export 'upsert_option/main_input_scope.dart';
 export 'upsert_option/output.dart';

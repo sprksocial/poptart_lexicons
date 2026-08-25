@@ -9,5 +9,5 @@
 
 export 'search_posts_skeleton/descriptor.dart';
 export 'search_posts_skeleton/input.dart';
-export 'search_posts_skeleton/main_sort.dart';
+export 'search_posts_skeleton/main_parameters_sort.dart';
 export 'search_posts_skeleton/output.dart';

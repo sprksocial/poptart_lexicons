@@ -8,6 +8,7 @@ import 'dart:async';
 import 'package:poptart_lex/com/atproto/sync/subscribe_repos.dart';
 import 'package:poptart_core/poptart_core.dart';
 
+import 'package:bluesky_poptart/app/bsky/actor/content_visibility_declaration.dart';
 import 'package:bluesky_poptart/app/bsky/actor/profile.dart';
 import 'package:bluesky_poptart/app/bsky/actor/status.dart';
 import 'package:bluesky_poptart/app/bsky/feed/generator.dart';
@@ -42,6 +43,11 @@ typedef RepoCommitOnUpdate<T> =
 typedef RepoCommitOnDelete = FutureOr<void> Function(RepoCommitDelete data);
 
 final class RepoCommitHandler {
+  final RepoCommitOnCreate<ActorContentVisibilityDeclarationRecord>?
+  _onCreateActorContentVisibilityDeclaration;
+  final RepoCommitOnUpdate<ActorContentVisibilityDeclarationRecord>?
+  _onUpdateActorContentVisibilityDeclaration;
+  final RepoCommitOnDelete? _onDeleteActorContentVisibilityDeclaration;
   final RepoCommitOnCreate<ActorProfileRecord>? _onCreateActorProfile;
   final RepoCommitOnUpdate<ActorProfileRecord>? _onUpdateActorProfile;
   final RepoCommitOnDelete? _onDeleteActorProfile;
@@ -104,6 +110,11 @@ final class RepoCommitHandler {
   final RepoCommitOnDelete? _onDeleteUnknown;
 
   const RepoCommitHandler({
+    final RepoCommitOnCreate<ActorContentVisibilityDeclarationRecord>?
+    onCreateActorContentVisibilityDeclaration,
+    final RepoCommitOnUpdate<ActorContentVisibilityDeclarationRecord>?
+    onUpdateActorContentVisibilityDeclaration,
+    final RepoCommitOnDelete? onDeleteActorContentVisibilityDeclaration,
     final RepoCommitOnCreate<ActorProfileRecord>? onCreateActorProfile,
     final RepoCommitOnUpdate<ActorProfileRecord>? onUpdateActorProfile,
     final RepoCommitOnDelete? onDeleteActorProfile,
@@ -166,7 +177,13 @@ final class RepoCommitHandler {
     final RepoCommitOnCreate<Map<String, dynamic>>? onCreateUnknown,
     final RepoCommitOnUpdate<Map<String, dynamic>>? onUpdateUnknown,
     final RepoCommitOnDelete? onDeleteUnknown,
-  }) : _onCreateActorProfile = onCreateActorProfile,
+  }) : _onCreateActorContentVisibilityDeclaration =
+           onCreateActorContentVisibilityDeclaration,
+       _onUpdateActorContentVisibilityDeclaration =
+           onUpdateActorContentVisibilityDeclaration,
+       _onDeleteActorContentVisibilityDeclaration =
+           onDeleteActorContentVisibilityDeclaration,
+       _onCreateActorProfile = onCreateActorProfile,
        _onUpdateActorProfile = onUpdateActorProfile,
        _onDeleteActorProfile = onDeleteActorProfile,
        _onCreateActorStatus = onCreateActorStatus,
@@ -250,6 +267,20 @@ final class RepoCommitHandler {
     final uri = _getUri(data, op);
     final record = _getRecord(data, op);
 
+    if (uri.isActorContentVisibilityDeclaration &&
+        ActorContentVisibilityDeclarationRecord.validate(record)) {
+      await _onCreateActorContentVisibilityDeclaration?.call(
+        RepoCommitCreate<ActorContentVisibilityDeclarationRecord>(
+          record: const ActorContentVisibilityDeclarationRecordConverter()
+              .fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+        ),
+      );
+      return;
+    }
     if (uri.isActorProfile && ActorProfileRecord.validate(record)) {
       await _onCreateActorProfile?.call(
         RepoCommitCreate<ActorProfileRecord>(
@@ -485,6 +516,21 @@ final class RepoCommitHandler {
     final uri = _getUri(data, op);
     final record = _getRecord(data, op);
 
+    if (uri.isActorContentVisibilityDeclaration &&
+        ActorContentVisibilityDeclarationRecord.validate(record)) {
+      await _onUpdateActorContentVisibilityDeclaration?.call(
+        RepoCommitUpdate<ActorContentVisibilityDeclarationRecord>(
+          record: const ActorContentVisibilityDeclarationRecordConverter()
+              .fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
     if (uri.isActorProfile && ActorProfileRecord.validate(record)) {
       await _onUpdateActorProfile?.call(
         RepoCommitUpdate<ActorProfileRecord>(
@@ -738,6 +784,17 @@ final class RepoCommitHandler {
   Future<void> _onDelete(final Commit data, final RepoOp op) async {
     final uri = _getUri(data, op);
 
+    if (uri.isActorContentVisibilityDeclaration) {
+      await _onDeleteActorContentVisibilityDeclaration?.call(
+        RepoCommitDelete(
+          uri: uri,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
     if (uri.isActorProfile) {
       await _onDeleteActorProfile?.call(
         RepoCommitDelete(

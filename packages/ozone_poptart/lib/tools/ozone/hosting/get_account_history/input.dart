@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_events.dart';
+import './main_parameters_events.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -24,8 +24,8 @@ abstract class HostingGetAccountHistoryInput
   @JsonSerializable(includeIfNull: false)
   const factory HostingGetAccountHistoryInput({
     required String did,
-    @HostingGetAccountHistoryEventsConverter()
-    List<HostingGetAccountHistoryEvents>? events,
+    @HostingGetAccountHistoryParametersEventsConverter()
+    List<HostingGetAccountHistoryParametersEvents>? events,
     String? cursor,
     @Default(50) int limit,
 

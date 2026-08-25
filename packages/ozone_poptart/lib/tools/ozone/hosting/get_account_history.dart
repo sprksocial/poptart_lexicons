@@ -14,7 +14,7 @@ export 'get_account_history/email_updated.dart';
 export 'get_account_history/event.dart';
 export 'get_account_history/handle_updated.dart';
 export 'get_account_history/input.dart';
-export 'get_account_history/main_events.dart';
+export 'get_account_history/main_parameters_events.dart';
 export 'get_account_history/output.dart';
 export 'get_account_history/password_updated.dart';
 export 'get_account_history/union_event_details.dart';

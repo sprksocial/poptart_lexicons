@@ -16,7 +16,7 @@ _ConvoGetLogOutput _$ConvoGetLogOutputFromJson(Map json) =>
           'logs',
           (v) => (v as List<dynamic>)
               .map(
-                (e) => const UConvoGetLogLogsConverter().fromJson(
+                (e) => const UConvoGetLogOutputLogsConverter().fromJson(
                   e as Map<String, dynamic>,
                 ),
               )
@@ -30,10 +30,11 @@ _ConvoGetLogOutput _$ConvoGetLogOutputFromJson(Map json) =>
       return val;
     });
 
-Map<String, dynamic> _$ConvoGetLogOutputToJson(
-  _ConvoGetLogOutput instance,
-) => <String, dynamic>{
-  'cursor': ?instance.cursor,
-  'logs': instance.logs.map(const UConvoGetLogLogsConverter().toJson).toList(),
-  r'$unknown': ?instance.$unknown,
-};
+Map<String, dynamic> _$ConvoGetLogOutputToJson(_ConvoGetLogOutput instance) =>
+    <String, dynamic>{
+      'cursor': ?instance.cursor,
+      'logs': instance.logs
+          .map(const UConvoGetLogOutputLogsConverter().toJson)
+          .toList(),
+      r'$unknown': ?instance.$unknown,
+    };

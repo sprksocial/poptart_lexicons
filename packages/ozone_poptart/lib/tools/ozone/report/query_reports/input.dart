@@ -7,8 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_status.dart';
-import './main_subject_type.dart';
+import './main_parameters_status.dart';
+import './main_parameters_subject_type.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -44,8 +44,8 @@ abstract class ReportQueryReportsInput with _$ReportQueryReportsInput {
     List<String>? reportTypes,
 
     /// Filter by report status.
-    @ReportQueryReportsStatusConverter()
-    required ReportQueryReportsStatus status,
+    @ReportQueryReportsParametersStatusConverter()
+    required ReportQueryReportsParametersStatus status,
 
     /// Filter by subject DID or AT-URI.
     String? subject,
@@ -53,9 +53,9 @@ abstract class ReportQueryReportsInput with _$ReportQueryReportsInput {
     /// Filter to reports where the subject is this DID or any record owned by this DID. Unlike `subject` (which scopes to a specific account or record), this returns all reports tied to the DID across both account-level and record-level subjects.
     String? did,
 
-    /// If specified, reports of the given type (account or record) will be returned.
-    @ReportQueryReportsSubjectTypeConverter()
-    ReportQueryReportsSubjectType? subjectType,
+    /// If specified, reports of the given subject type will be returned.
+    @ReportQueryReportsParametersSubjectTypeConverter()
+    ReportQueryReportsParametersSubjectType? subjectType,
     List<String>? collections,
 
     /// Retrieve reports created after a given timestamp

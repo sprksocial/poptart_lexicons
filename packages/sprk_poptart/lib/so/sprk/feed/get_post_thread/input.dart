@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_sort.dart';
+import './main_parameters_sort.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -41,7 +41,8 @@ abstract class FeedGetPostThreadInput with _$FeedGetPostThreadInput {
     @Default(80) int parentHeight,
 
     /// Sorting for the thread replies.
-    @FeedGetPostThreadSortConverter() FeedGetPostThreadSort? sort,
+    @FeedGetPostThreadParametersSortConverter()
+    FeedGetPostThreadParametersSort? sort,
 
     Map<String, dynamic>? $unknown,
   }) = _FeedGetPostThreadInput;

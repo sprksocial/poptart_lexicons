@@ -16,6 +16,7 @@ export 'defs/generator_view_content_mode.dart';
 export 'defs/generator_viewer_state.dart';
 export 'defs/interaction.dart';
 export 'defs/interaction_event.dart';
+export 'defs/known_likers.dart';
 export 'defs/not_found_post.dart';
 export 'defs/post_view.dart';
 export 'defs/reason_pin.dart';

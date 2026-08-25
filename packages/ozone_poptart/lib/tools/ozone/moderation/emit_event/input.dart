@@ -7,8 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_event.dart';
-import './union_main_subject.dart';
+import './union_main_input_event.dart';
+import './union_main_input_subject.dart';
 import '../defs/mod_tool.dart';
 import './report_action.dart';
 
@@ -33,10 +33,10 @@ abstract class ModerationEmitEventInput with _$ModerationEmitEventInput {
 
   @JsonSerializable(includeIfNull: false)
   const factory ModerationEmitEventInput({
-    @UModerationEmitEventEventConverter()
-    required UModerationEmitEventEvent event,
-    @UModerationEmitEventSubjectConverter()
-    required UModerationEmitEventSubject subject,
+    @UModerationEmitEventInputEventConverter()
+    required UModerationEmitEventInputEvent event,
+    @UModerationEmitEventInputSubjectConverter()
+    required UModerationEmitEventInputSubject subject,
     List<String>? subjectBlobCids,
     required String createdBy,
     @ModToolConverter() ModTool? modTool,

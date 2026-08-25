@@ -44,6 +44,7 @@ abstract class ReportView with _$ReportView {
     'assignment',
     'queue',
     'isMuted',
+    'isAutomated',
   ];
 
   @JsonSerializable(includeIfNull: false)
@@ -103,6 +104,9 @@ abstract class ReportView with _$ReportView {
     /// Whether this report is muted. A report is muted if the reporter was muted or the subject was muted at the time the report was created.
     bool? isMuted,
 
+    /// Whether this report was emitted by automated tooling.
+    @Default(false) bool isAutomated,
+
     Map<String, dynamic>? $unknown,
   }) = _ReportView;
 
@@ -134,6 +138,8 @@ extension ReportViewExtension on ReportView {
   bool get hasNotQueue => !hasQueue;
   bool get isIsMuted => isMuted ?? false;
   bool get isNotIsMuted => !isIsMuted;
+  bool get isIsAutomated => isAutomated;
+  bool get isNotIsAutomated => !isIsAutomated;
 }
 
 final class ReportViewConverter

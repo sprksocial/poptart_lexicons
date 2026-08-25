@@ -9,5 +9,5 @@
 
 export 'list_scheduled_actions/descriptor.dart';
 export 'list_scheduled_actions/input.dart';
-export 'list_scheduled_actions/main_statuses.dart';
+export 'list_scheduled_actions/main_input_statuses.dart';
 export 'list_scheduled_actions/output.dart';

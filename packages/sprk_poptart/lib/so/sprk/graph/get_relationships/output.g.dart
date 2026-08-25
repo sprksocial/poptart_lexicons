@@ -16,8 +16,9 @@ _GraphGetRelationshipsOutput _$GraphGetRelationshipsOutputFromJson(Map json) =>
           'relationships',
           (v) => (v as List<dynamic>)
               .map(
-                (e) => const UGraphGetRelationshipsRelationshipsConverter()
-                    .fromJson(e as Map<String, dynamic>),
+                (e) =>
+                    const UGraphGetRelationshipsOutputRelationshipsConverter()
+                        .fromJson(e as Map<String, dynamic>),
               )
               .toList(),
         ),
@@ -34,7 +35,7 @@ Map<String, dynamic> _$GraphGetRelationshipsOutputToJson(
 ) => <String, dynamic>{
   'actor': ?instance.actor,
   'relationships': instance.relationships
-      .map(const UGraphGetRelationshipsRelationshipsConverter().toJson)
+      .map(const UGraphGetRelationshipsOutputRelationshipsConverter().toJson)
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

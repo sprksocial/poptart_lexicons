@@ -43,6 +43,8 @@ import 'package:bluesky_poptart/app/bsky/graph/mute_thread.dart'
     as _AppBskyGraphMuteThread;
 import 'package:bluesky_poptart/app/bsky/graph/search_starter_packs.dart'
     as _AppBskyGraphSearchStarterPacks;
+import 'package:bluesky_poptart/app/bsky/graph/search_starter_packs_v_2.dart'
+    as _AppBskyGraphSearchStarterPacksV2;
 import 'package:bluesky_poptart/app/bsky/graph/unmute_actor.dart'
     as _AppBskyGraphUnmuteActor;
 import 'package:bluesky_poptart/app/bsky/graph/unmute_actor_list.dart'
@@ -129,6 +131,10 @@ final appBskyGraphSearchStarterPacks =
     _AppBskyGraphSearchStarterPacks.appBskyGraphSearchStarterPacks;
 final appBskyGraphSearchStarterPacksMethodDescriptor =
     _AppBskyGraphSearchStarterPacks.methodDescriptor;
+final appBskyGraphSearchStarterPacksV2 =
+    _AppBskyGraphSearchStarterPacksV2.appBskyGraphSearchStarterPacksV2;
+final appBskyGraphSearchStarterPacksV2MethodDescriptor =
+    _AppBskyGraphSearchStarterPacksV2.methodDescriptor;
 final appBskyGraphUnmuteActor =
     _AppBskyGraphUnmuteActor.appBskyGraphUnmuteActor;
 final appBskyGraphUnmuteActorMethodDescriptor =

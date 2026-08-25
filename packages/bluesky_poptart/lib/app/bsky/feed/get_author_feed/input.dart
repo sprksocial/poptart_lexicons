@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_filter.dart';
+import './main_parameters_filter.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -33,7 +33,8 @@ abstract class FeedGetAuthorFeedInput with _$FeedGetAuthorFeedInput {
     String? cursor,
 
     /// Combinations of post/repost types to include in response.
-    @FeedGetAuthorFeedFilterConverter() FeedGetAuthorFeedFilter? filter,
+    @FeedGetAuthorFeedParametersFilterConverter()
+    FeedGetAuthorFeedParametersFilter? filter,
     @Default(false) bool includePins,
 
     Map<String, dynamic>? $unknown,

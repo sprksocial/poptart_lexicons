@@ -10,4 +10,4 @@
 export 'get_messages/descriptor.dart';
 export 'get_messages/input.dart';
 export 'get_messages/output.dart';
-export 'get_messages/union_main_messages.dart';
+export 'get_messages/union_main_output_messages.dart';

@@ -15,7 +15,7 @@ _ModerationGetReposOutput _$ModerationGetReposOutputFromJson(Map json) =>
           'repos',
           (v) => (v as List<dynamic>)
               .map(
-                (e) => const UModerationGetReposReposConverter().fromJson(
+                (e) => const UModerationGetReposOutputReposConverter().fromJson(
                   e as Map<String, dynamic>,
                 ),
               )
@@ -33,7 +33,7 @@ Map<String, dynamic> _$ModerationGetReposOutputToJson(
   _ModerationGetReposOutput instance,
 ) => <String, dynamic>{
   'repos': instance.repos
-      .map(const UModerationGetReposReposConverter().toJson)
+      .map(const UModerationGetReposOutputReposConverter().toJson)
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

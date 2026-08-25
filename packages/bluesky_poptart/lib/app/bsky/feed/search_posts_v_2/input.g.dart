@@ -8,116 +8,120 @@ part of 'input.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_FeedSearchPostsV2Input _$FeedSearchPostsV2InputFromJson(Map json) =>
-    $checkedCreate('_FeedSearchPostsV2Input', json, ($checkedConvert) {
-      final val = _FeedSearchPostsV2Input(
-        cursor: $checkedConvert('cursor', (v) => v as String?),
-        limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 25),
-        query: $checkedConvert('query', (v) => v as String?),
-        sort: $checkedConvert(
-          'sort',
-          (v) => _$JsonConverterFromJson<String, FeedSearchPostsV2Sort>(
+_FeedSearchPostsV2Input _$FeedSearchPostsV2InputFromJson(
+  Map json,
+) => $checkedCreate('_FeedSearchPostsV2Input', json, ($checkedConvert) {
+  final val = _FeedSearchPostsV2Input(
+    cursor: $checkedConvert('cursor', (v) => v as String?),
+    limit: $checkedConvert('limit', (v) => (v as num?)?.toInt() ?? 25),
+    query: $checkedConvert('query', (v) => v as String?),
+    sort: $checkedConvert(
+      'sort',
+      (v) => _$JsonConverterFromJson<String, FeedSearchPostsV2ParametersSort>(
+        v,
+        const FeedSearchPostsV2ParametersSortConverter().fromJson,
+      ),
+    ),
+    authors: $checkedConvert(
+      'authors',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    mentions: $checkedConvert(
+      'mentions',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    domains: $checkedConvert(
+      'domains',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    urls: $checkedConvert(
+      'urls',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    embeddedAtUris: $checkedConvert(
+      'embeddedAtUris',
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => const AtUriConverter().fromJson(e as String))
+          .toList(),
+    ),
+    hashtags: $checkedConvert(
+      'hashtags',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    excludeAuthors: $checkedConvert(
+      'excludeAuthors',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    excludeMentions: $checkedConvert(
+      'excludeMentions',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    excludeDomains: $checkedConvert(
+      'excludeDomains',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    excludeUrls: $checkedConvert(
+      'excludeUrls',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    excludeEmbeddedAtUris: $checkedConvert(
+      'excludeEmbeddedAtUris',
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => const AtUriConverter().fromJson(e as String))
+          .toList(),
+    ),
+    excludeHashtags: $checkedConvert(
+      'excludeHashtags',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    since: $checkedConvert('since', (v) => v as String?),
+    until: $checkedConvert('until', (v) => v as String?),
+    allTime: $checkedConvert('allTime', (v) => v as bool?),
+    languages: $checkedConvert(
+      'languages',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    excludeLanguages: $checkedConvert(
+      'excludeLanguages',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    hasMedia: $checkedConvert('hasMedia', (v) => v as bool?),
+    hasVideo: $checkedConvert('hasVideo', (v) => v as bool?),
+    replyParentUri: $checkedConvert(
+      'replyParentUri',
+      (v) => _$JsonConverterFromJson<String, AtUri>(
+        v,
+        const AtUriConverter().fromJson,
+      ),
+    ),
+    threadRootUri: $checkedConvert(
+      'threadRootUri',
+      (v) => _$JsonConverterFromJson<String, AtUri>(
+        v,
+        const AtUriConverter().fromJson,
+      ),
+    ),
+    excludeReplies: $checkedConvert('excludeReplies', (v) => v as bool?),
+    repliesOnly: $checkedConvert('repliesOnly', (v) => v as bool?),
+    following: $checkedConvert('following', (v) => v as bool?),
+    queryLanguage: $checkedConvert(
+      'queryLanguage',
+      (v) =>
+          _$JsonConverterFromJson<
+            String,
+            FeedSearchPostsV2ParametersQueryLanguage
+          >(
             v,
-            const FeedSearchPostsV2SortConverter().fromJson,
+            const FeedSearchPostsV2ParametersQueryLanguageConverter().fromJson,
           ),
-        ),
-        authors: $checkedConvert(
-          'authors',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        mentions: $checkedConvert(
-          'mentions',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        domains: $checkedConvert(
-          'domains',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        urls: $checkedConvert(
-          'urls',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        embeddedAtUris: $checkedConvert(
-          'embeddedAtUris',
-          (v) => (v as List<dynamic>?)
-              ?.map((e) => const AtUriConverter().fromJson(e as String))
-              .toList(),
-        ),
-        hashtags: $checkedConvert(
-          'hashtags',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        excludeAuthors: $checkedConvert(
-          'excludeAuthors',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        excludeMentions: $checkedConvert(
-          'excludeMentions',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        excludeDomains: $checkedConvert(
-          'excludeDomains',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        excludeUrls: $checkedConvert(
-          'excludeUrls',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        excludeEmbeddedAtUris: $checkedConvert(
-          'excludeEmbeddedAtUris',
-          (v) => (v as List<dynamic>?)
-              ?.map((e) => const AtUriConverter().fromJson(e as String))
-              .toList(),
-        ),
-        excludeHashtags: $checkedConvert(
-          'excludeHashtags',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        since: $checkedConvert('since', (v) => v as String?),
-        until: $checkedConvert('until', (v) => v as String?),
-        allTime: $checkedConvert('allTime', (v) => v as bool?),
-        languages: $checkedConvert(
-          'languages',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        excludeLanguages: $checkedConvert(
-          'excludeLanguages',
-          (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
-        ),
-        hasMedia: $checkedConvert('hasMedia', (v) => v as bool?),
-        hasVideo: $checkedConvert('hasVideo', (v) => v as bool?),
-        replyParentUri: $checkedConvert(
-          'replyParentUri',
-          (v) => _$JsonConverterFromJson<String, AtUri>(
-            v,
-            const AtUriConverter().fromJson,
-          ),
-        ),
-        threadRootUri: $checkedConvert(
-          'threadRootUri',
-          (v) => _$JsonConverterFromJson<String, AtUri>(
-            v,
-            const AtUriConverter().fromJson,
-          ),
-        ),
-        excludeReplies: $checkedConvert('excludeReplies', (v) => v as bool?),
-        repliesOnly: $checkedConvert('repliesOnly', (v) => v as bool?),
-        following: $checkedConvert('following', (v) => v as bool?),
-        queryLanguage: $checkedConvert(
-          'queryLanguage',
-          (v) =>
-              _$JsonConverterFromJson<String, FeedSearchPostsV2QueryLanguage>(
-                v,
-                const FeedSearchPostsV2QueryLanguageConverter().fromJson,
-              ),
-        ),
-        $unknown: $checkedConvert(
-          r'$unknown',
-          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
-        ),
-      );
-      return val;
-    });
+    ),
+    $unknown: $checkedConvert(
+      r'$unknown',
+      (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+    ),
+  );
+  return val;
+});
 
 Map<String, dynamic> _$FeedSearchPostsV2InputToJson(
   _FeedSearchPostsV2Input instance,
@@ -125,9 +129,9 @@ Map<String, dynamic> _$FeedSearchPostsV2InputToJson(
   'cursor': ?instance.cursor,
   'limit': instance.limit,
   'query': ?instance.query,
-  'sort': ?_$JsonConverterToJson<String, FeedSearchPostsV2Sort>(
+  'sort': ?_$JsonConverterToJson<String, FeedSearchPostsV2ParametersSort>(
     instance.sort,
-    const FeedSearchPostsV2SortConverter().toJson,
+    const FeedSearchPostsV2ParametersSortConverter().toJson,
   ),
   'authors': ?instance.authors,
   'mentions': ?instance.mentions,
@@ -164,9 +168,9 @@ Map<String, dynamic> _$FeedSearchPostsV2InputToJson(
   'repliesOnly': ?instance.repliesOnly,
   'following': ?instance.following,
   'queryLanguage':
-      ?_$JsonConverterToJson<String, FeedSearchPostsV2QueryLanguage>(
+      ?_$JsonConverterToJson<String, FeedSearchPostsV2ParametersQueryLanguage>(
         instance.queryLanguage,
-        const FeedSearchPostsV2QueryLanguageConverter().toJson,
+        const FeedSearchPostsV2ParametersQueryLanguageConverter().toJson,
       ),
   r'$unknown': ?instance.$unknown,
 };

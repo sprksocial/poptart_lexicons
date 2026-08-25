@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$SettingListOptionsInput {
 
- int get limit; String? get cursor;@SettingListOptionsScopeConverter() SettingListOptionsScope? get scope;/// Filter keys by prefix
+ int get limit; String? get cursor;@SettingListOptionsParametersScopeConverter() SettingListOptionsParametersScope? get scope;/// Filter keys by prefix
  String? get prefix; List<String>? get keys; Map<String, dynamic>? get $unknown;
 /// Create a copy of SettingListOptionsInput
 /// with the given fields replaced by the non-null parameter values.
@@ -49,11 +49,11 @@ abstract mixin class $SettingListOptionsInputCopyWith<$Res>  {
   factory $SettingListOptionsInputCopyWith(SettingListOptionsInput value, $Res Function(SettingListOptionsInput) _then) = _$SettingListOptionsInputCopyWithImpl;
 @useResult
 $Res call({
- int limit, String? cursor,@SettingListOptionsScopeConverter() SettingListOptionsScope? scope, String? prefix, List<String>? keys, Map<String, dynamic>? $unknown
+ int limit, String? cursor,@SettingListOptionsParametersScopeConverter() SettingListOptionsParametersScope? scope, String? prefix, List<String>? keys, Map<String, dynamic>? $unknown
 });
 
 
-$SettingListOptionsScopeCopyWith<$Res>? get scope;
+$SettingListOptionsParametersScopeCopyWith<$Res>? get scope;
 
 }
 /// @nodoc
@@ -71,7 +71,7 @@ class _$SettingListOptionsInputCopyWithImpl<$Res>
 limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,scope: freezed == scope ? _self.scope : scope // ignore: cast_nullable_to_non_nullable
-as SettingListOptionsScope?,prefix: freezed == prefix ? _self.prefix : prefix // ignore: cast_nullable_to_non_nullable
+as SettingListOptionsParametersScope?,prefix: freezed == prefix ? _self.prefix : prefix // ignore: cast_nullable_to_non_nullable
 as String?,keys: freezed == keys ? _self.keys : keys // ignore: cast_nullable_to_non_nullable
 as List<String>?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
@@ -81,12 +81,12 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SettingListOptionsScopeCopyWith<$Res>? get scope {
+$SettingListOptionsParametersScopeCopyWith<$Res>? get scope {
     if (_self.scope == null) {
     return null;
   }
 
-  return $SettingListOptionsScopeCopyWith<$Res>(_self.scope!, (value) {
+  return $SettingListOptionsParametersScopeCopyWith<$Res>(_self.scope!, (value) {
     return _then(_self.copyWith(scope: value));
   });
 }
@@ -171,7 +171,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int limit,  String? cursor, @SettingListOptionsScopeConverter()  SettingListOptionsScope? scope,  String? prefix,  List<String>? keys,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int limit,  String? cursor, @SettingListOptionsParametersScopeConverter()  SettingListOptionsParametersScope? scope,  String? prefix,  List<String>? keys,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _SettingListOptionsInput() when $default != null:
 return $default(_that.limit,_that.cursor,_that.scope,_that.prefix,_that.keys,_that.$unknown);case _:
@@ -192,7 +192,7 @@ return $default(_that.limit,_that.cursor,_that.scope,_that.prefix,_that.keys,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int limit,  String? cursor, @SettingListOptionsScopeConverter()  SettingListOptionsScope? scope,  String? prefix,  List<String>? keys,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int limit,  String? cursor, @SettingListOptionsParametersScopeConverter()  SettingListOptionsParametersScope? scope,  String? prefix,  List<String>? keys,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _SettingListOptionsInput():
 return $default(_that.limit,_that.cursor,_that.scope,_that.prefix,_that.keys,_that.$unknown);case _:
@@ -212,7 +212,7 @@ return $default(_that.limit,_that.cursor,_that.scope,_that.prefix,_that.keys,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int limit,  String? cursor, @SettingListOptionsScopeConverter()  SettingListOptionsScope? scope,  String? prefix,  List<String>? keys,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int limit,  String? cursor, @SettingListOptionsParametersScopeConverter()  SettingListOptionsParametersScope? scope,  String? prefix,  List<String>? keys,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _SettingListOptionsInput() when $default != null:
 return $default(_that.limit,_that.cursor,_that.scope,_that.prefix,_that.keys,_that.$unknown);case _:
@@ -227,12 +227,12 @@ return $default(_that.limit,_that.cursor,_that.scope,_that.prefix,_that.keys,_th
 
 @JsonSerializable(includeIfNull: false)
 class _SettingListOptionsInput implements SettingListOptionsInput {
-  const _SettingListOptionsInput({this.limit = 50, this.cursor, @SettingListOptionsScopeConverter() this.scope, this.prefix, final  List<String>? keys, final  Map<String, dynamic>? $unknown}): _keys = keys,_$unknown = $unknown;
+  const _SettingListOptionsInput({this.limit = 50, this.cursor, @SettingListOptionsParametersScopeConverter() this.scope, this.prefix, final  List<String>? keys, final  Map<String, dynamic>? $unknown}): _keys = keys,_$unknown = $unknown;
   factory _SettingListOptionsInput.fromJson(Map<String, dynamic> json) => _$SettingListOptionsInputFromJson(json);
 
 @override@JsonKey() final  int limit;
 @override final  String? cursor;
-@override@SettingListOptionsScopeConverter() final  SettingListOptionsScope? scope;
+@override@SettingListOptionsParametersScopeConverter() final  SettingListOptionsParametersScope? scope;
 /// Filter keys by prefix
 @override final  String? prefix;
  final  List<String>? _keys;
@@ -287,11 +287,11 @@ abstract mixin class _$SettingListOptionsInputCopyWith<$Res> implements $Setting
   factory _$SettingListOptionsInputCopyWith(_SettingListOptionsInput value, $Res Function(_SettingListOptionsInput) _then) = __$SettingListOptionsInputCopyWithImpl;
 @override @useResult
 $Res call({
- int limit, String? cursor,@SettingListOptionsScopeConverter() SettingListOptionsScope? scope, String? prefix, List<String>? keys, Map<String, dynamic>? $unknown
+ int limit, String? cursor,@SettingListOptionsParametersScopeConverter() SettingListOptionsParametersScope? scope, String? prefix, List<String>? keys, Map<String, dynamic>? $unknown
 });
 
 
-@override $SettingListOptionsScopeCopyWith<$Res>? get scope;
+@override $SettingListOptionsParametersScopeCopyWith<$Res>? get scope;
 
 }
 /// @nodoc
@@ -309,7 +309,7 @@ class __$SettingListOptionsInputCopyWithImpl<$Res>
 limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,scope: freezed == scope ? _self.scope : scope // ignore: cast_nullable_to_non_nullable
-as SettingListOptionsScope?,prefix: freezed == prefix ? _self.prefix : prefix // ignore: cast_nullable_to_non_nullable
+as SettingListOptionsParametersScope?,prefix: freezed == prefix ? _self.prefix : prefix // ignore: cast_nullable_to_non_nullable
 as String?,keys: freezed == keys ? _self._keys : keys // ignore: cast_nullable_to_non_nullable
 as List<String>?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
@@ -320,12 +320,12 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$SettingListOptionsScopeCopyWith<$Res>? get scope {
+$SettingListOptionsParametersScopeCopyWith<$Res>? get scope {
     if (_self.scope == null) {
     return null;
   }
 
-  return $SettingListOptionsScopeCopyWith<$Res>(_self.scope!, (value) {
+  return $SettingListOptionsParametersScopeCopyWith<$Res>(_self.scope!, (value) {
     return _then(_self.copyWith(scope: value));
   });
 }

@@ -10,4 +10,4 @@
 export 'get_log/descriptor.dart';
 export 'get_log/input.dart';
 export 'get_log/output.dart';
-export 'get_log/union_main_logs.dart';
+export 'get_log/union_main_output_logs.dart';

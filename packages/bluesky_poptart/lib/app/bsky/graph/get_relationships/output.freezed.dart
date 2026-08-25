@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GraphGetRelationshipsOutput {
 
- String? get actor;@UGraphGetRelationshipsRelationshipsConverter() List<UGraphGetRelationshipsRelationships> get relationships; Map<String, dynamic>? get $unknown;
+ String? get actor;@UGraphGetRelationshipsOutputRelationshipsConverter() List<UGraphGetRelationshipsOutputRelationships> get relationships; Map<String, dynamic>? get $unknown;
 /// Create a copy of GraphGetRelationshipsOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $GraphGetRelationshipsOutputCopyWith<$Res>  {
   factory $GraphGetRelationshipsOutputCopyWith(GraphGetRelationshipsOutput value, $Res Function(GraphGetRelationshipsOutput) _then) = _$GraphGetRelationshipsOutputCopyWithImpl;
 @useResult
 $Res call({
- String? actor,@UGraphGetRelationshipsRelationshipsConverter() List<UGraphGetRelationshipsRelationships> relationships, Map<String, dynamic>? $unknown
+ String? actor,@UGraphGetRelationshipsOutputRelationshipsConverter() List<UGraphGetRelationshipsOutputRelationships> relationships, Map<String, dynamic>? $unknown
 });
 
 
@@ -69,7 +69,7 @@ class _$GraphGetRelationshipsOutputCopyWithImpl<$Res>
   return _then(_self.copyWith(
 actor: freezed == actor ? _self.actor : actor // ignore: cast_nullable_to_non_nullable
 as String?,relationships: null == relationships ? _self.relationships : relationships // ignore: cast_nullable_to_non_nullable
-as List<UGraphGetRelationshipsRelationships>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UGraphGetRelationshipsOutputRelationships>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -155,7 +155,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? actor, @UGraphGetRelationshipsRelationshipsConverter()  List<UGraphGetRelationshipsRelationships> relationships,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? actor, @UGraphGetRelationshipsOutputRelationshipsConverter()  List<UGraphGetRelationshipsOutputRelationships> relationships,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _GraphGetRelationshipsOutput() when $default != null:
 return $default(_that.actor,_that.relationships,_that.$unknown);case _:
@@ -176,7 +176,7 @@ return $default(_that.actor,_that.relationships,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? actor, @UGraphGetRelationshipsRelationshipsConverter()  List<UGraphGetRelationshipsRelationships> relationships,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? actor, @UGraphGetRelationshipsOutputRelationshipsConverter()  List<UGraphGetRelationshipsOutputRelationships> relationships,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _GraphGetRelationshipsOutput():
 return $default(_that.actor,_that.relationships,_that.$unknown);case _:
@@ -196,7 +196,7 @@ return $default(_that.actor,_that.relationships,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? actor, @UGraphGetRelationshipsRelationshipsConverter()  List<UGraphGetRelationshipsRelationships> relationships,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? actor, @UGraphGetRelationshipsOutputRelationshipsConverter()  List<UGraphGetRelationshipsOutputRelationships> relationships,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _GraphGetRelationshipsOutput() when $default != null:
 return $default(_that.actor,_that.relationships,_that.$unknown);case _:
@@ -211,12 +211,12 @@ return $default(_that.actor,_that.relationships,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _GraphGetRelationshipsOutput implements GraphGetRelationshipsOutput {
-  const _GraphGetRelationshipsOutput({this.actor, @UGraphGetRelationshipsRelationshipsConverter() required final  List<UGraphGetRelationshipsRelationships> relationships, final  Map<String, dynamic>? $unknown}): _relationships = relationships,_$unknown = $unknown;
+  const _GraphGetRelationshipsOutput({this.actor, @UGraphGetRelationshipsOutputRelationshipsConverter() required final  List<UGraphGetRelationshipsOutputRelationships> relationships, final  Map<String, dynamic>? $unknown}): _relationships = relationships,_$unknown = $unknown;
   factory _GraphGetRelationshipsOutput.fromJson(Map<String, dynamic> json) => _$GraphGetRelationshipsOutputFromJson(json);
 
 @override final  String? actor;
- final  List<UGraphGetRelationshipsRelationships> _relationships;
-@override@UGraphGetRelationshipsRelationshipsConverter() List<UGraphGetRelationshipsRelationships> get relationships {
+ final  List<UGraphGetRelationshipsOutputRelationships> _relationships;
+@override@UGraphGetRelationshipsOutputRelationshipsConverter() List<UGraphGetRelationshipsOutputRelationships> get relationships {
   if (_relationships is EqualUnmodifiableListView) return _relationships;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_relationships);
@@ -265,7 +265,7 @@ abstract mixin class _$GraphGetRelationshipsOutputCopyWith<$Res> implements $Gra
   factory _$GraphGetRelationshipsOutputCopyWith(_GraphGetRelationshipsOutput value, $Res Function(_GraphGetRelationshipsOutput) _then) = __$GraphGetRelationshipsOutputCopyWithImpl;
 @override @useResult
 $Res call({
- String? actor,@UGraphGetRelationshipsRelationshipsConverter() List<UGraphGetRelationshipsRelationships> relationships, Map<String, dynamic>? $unknown
+ String? actor,@UGraphGetRelationshipsOutputRelationshipsConverter() List<UGraphGetRelationshipsOutputRelationships> relationships, Map<String, dynamic>? $unknown
 });
 
 
@@ -286,7 +286,7 @@ class __$GraphGetRelationshipsOutputCopyWithImpl<$Res>
   return _then(_GraphGetRelationshipsOutput(
 actor: freezed == actor ? _self.actor : actor // ignore: cast_nullable_to_non_nullable
 as String?,relationships: null == relationships ? _self._relationships : relationships // ignore: cast_nullable_to_non_nullable
-as List<UGraphGetRelationshipsRelationships>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UGraphGetRelationshipsOutputRelationships>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

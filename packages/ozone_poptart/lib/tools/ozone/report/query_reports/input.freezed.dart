@@ -17,10 +17,10 @@ mixin _$ReportQueryReportsInput {
 
 /// Filter by queue ID. Use -1 for unassigned reports.
  int? get queueId; List<String>? get reportTypes;/// Filter by report status.
-@ReportQueryReportsStatusConverter() ReportQueryReportsStatus get status;/// Filter by subject DID or AT-URI.
+@ReportQueryReportsParametersStatusConverter() ReportQueryReportsParametersStatus get status;/// Filter by subject DID or AT-URI.
  String? get subject;/// Filter to reports where the subject is this DID or any record owned by this DID. Unlike `subject` (which scopes to a specific account or record), this returns all reports tied to the DID across both account-level and record-level subjects.
- String? get did;/// If specified, reports of the given type (account or record) will be returned.
-@ReportQueryReportsSubjectTypeConverter() ReportQueryReportsSubjectType? get subjectType; List<String>? get collections;/// Retrieve reports created after a given timestamp
+ String? get did;/// If specified, reports of the given subject type will be returned.
+@ReportQueryReportsParametersSubjectTypeConverter() ReportQueryReportsParametersSubjectType? get subjectType; List<String>? get collections;/// Retrieve reports created after a given timestamp
  DateTime? get reportedAfter;/// Retrieve reports created before a given timestamp
  DateTime? get reportedBefore;/// Filter by muted status. true returns only muted reports, false returns only unmuted reports. Defaults to false.
  bool get isMuted;/// Filter by the DID of the moderator permanently assigned to the report.
@@ -57,11 +57,11 @@ abstract mixin class $ReportQueryReportsInputCopyWith<$Res>  {
   factory $ReportQueryReportsInputCopyWith(ReportQueryReportsInput value, $Res Function(ReportQueryReportsInput) _then) = _$ReportQueryReportsInputCopyWithImpl;
 @useResult
 $Res call({
- int? queueId, List<String>? reportTypes,@ReportQueryReportsStatusConverter() ReportQueryReportsStatus status, String? subject, String? did,@ReportQueryReportsSubjectTypeConverter() ReportQueryReportsSubjectType? subjectType, List<String>? collections, DateTime? reportedAfter, DateTime? reportedBefore, bool isMuted, String? assignedTo, String sortField, String sortDirection, int limit, String? cursor, Map<String, dynamic>? $unknown
+ int? queueId, List<String>? reportTypes,@ReportQueryReportsParametersStatusConverter() ReportQueryReportsParametersStatus status, String? subject, String? did,@ReportQueryReportsParametersSubjectTypeConverter() ReportQueryReportsParametersSubjectType? subjectType, List<String>? collections, DateTime? reportedAfter, DateTime? reportedBefore, bool isMuted, String? assignedTo, String sortField, String sortDirection, int limit, String? cursor, Map<String, dynamic>? $unknown
 });
 
 
-$ReportQueryReportsStatusCopyWith<$Res> get status;$ReportQueryReportsSubjectTypeCopyWith<$Res>? get subjectType;
+$ReportQueryReportsParametersStatusCopyWith<$Res> get status;$ReportQueryReportsParametersSubjectTypeCopyWith<$Res>? get subjectType;
 
 }
 /// @nodoc
@@ -79,10 +79,10 @@ class _$ReportQueryReportsInputCopyWithImpl<$Res>
 queueId: freezed == queueId ? _self.queueId : queueId // ignore: cast_nullable_to_non_nullable
 as int?,reportTypes: freezed == reportTypes ? _self.reportTypes : reportTypes // ignore: cast_nullable_to_non_nullable
 as List<String>?,status: null == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as ReportQueryReportsStatus,subject: freezed == subject ? _self.subject : subject // ignore: cast_nullable_to_non_nullable
+as ReportQueryReportsParametersStatus,subject: freezed == subject ? _self.subject : subject // ignore: cast_nullable_to_non_nullable
 as String?,did: freezed == did ? _self.did : did // ignore: cast_nullable_to_non_nullable
 as String?,subjectType: freezed == subjectType ? _self.subjectType : subjectType // ignore: cast_nullable_to_non_nullable
-as ReportQueryReportsSubjectType?,collections: freezed == collections ? _self.collections : collections // ignore: cast_nullable_to_non_nullable
+as ReportQueryReportsParametersSubjectType?,collections: freezed == collections ? _self.collections : collections // ignore: cast_nullable_to_non_nullable
 as List<String>?,reportedAfter: freezed == reportedAfter ? _self.reportedAfter : reportedAfter // ignore: cast_nullable_to_non_nullable
 as DateTime?,reportedBefore: freezed == reportedBefore ? _self.reportedBefore : reportedBefore // ignore: cast_nullable_to_non_nullable
 as DateTime?,isMuted: null == isMuted ? _self.isMuted : isMuted // ignore: cast_nullable_to_non_nullable
@@ -99,21 +99,21 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$ReportQueryReportsStatusCopyWith<$Res> get status {
+$ReportQueryReportsParametersStatusCopyWith<$Res> get status {
 
-  return $ReportQueryReportsStatusCopyWith<$Res>(_self.status, (value) {
+  return $ReportQueryReportsParametersStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
 }/// Create a copy of ReportQueryReportsInput
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$ReportQueryReportsSubjectTypeCopyWith<$Res>? get subjectType {
+$ReportQueryReportsParametersSubjectTypeCopyWith<$Res>? get subjectType {
     if (_self.subjectType == null) {
     return null;
   }
 
-  return $ReportQueryReportsSubjectTypeCopyWith<$Res>(_self.subjectType!, (value) {
+  return $ReportQueryReportsParametersSubjectTypeCopyWith<$Res>(_self.subjectType!, (value) {
     return _then(_self.copyWith(subjectType: value));
   });
 }
@@ -198,7 +198,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? queueId,  List<String>? reportTypes, @ReportQueryReportsStatusConverter()  ReportQueryReportsStatus status,  String? subject,  String? did, @ReportQueryReportsSubjectTypeConverter()  ReportQueryReportsSubjectType? subjectType,  List<String>? collections,  DateTime? reportedAfter,  DateTime? reportedBefore,  bool isMuted,  String? assignedTo,  String sortField,  String sortDirection,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int? queueId,  List<String>? reportTypes, @ReportQueryReportsParametersStatusConverter()  ReportQueryReportsParametersStatus status,  String? subject,  String? did, @ReportQueryReportsParametersSubjectTypeConverter()  ReportQueryReportsParametersSubjectType? subjectType,  List<String>? collections,  DateTime? reportedAfter,  DateTime? reportedBefore,  bool isMuted,  String? assignedTo,  String sortField,  String sortDirection,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ReportQueryReportsInput() when $default != null:
 return $default(_that.queueId,_that.reportTypes,_that.status,_that.subject,_that.did,_that.subjectType,_that.collections,_that.reportedAfter,_that.reportedBefore,_that.isMuted,_that.assignedTo,_that.sortField,_that.sortDirection,_that.limit,_that.cursor,_that.$unknown);case _:
@@ -219,7 +219,7 @@ return $default(_that.queueId,_that.reportTypes,_that.status,_that.subject,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? queueId,  List<String>? reportTypes, @ReportQueryReportsStatusConverter()  ReportQueryReportsStatus status,  String? subject,  String? did, @ReportQueryReportsSubjectTypeConverter()  ReportQueryReportsSubjectType? subjectType,  List<String>? collections,  DateTime? reportedAfter,  DateTime? reportedBefore,  bool isMuted,  String? assignedTo,  String sortField,  String sortDirection,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int? queueId,  List<String>? reportTypes, @ReportQueryReportsParametersStatusConverter()  ReportQueryReportsParametersStatus status,  String? subject,  String? did, @ReportQueryReportsParametersSubjectTypeConverter()  ReportQueryReportsParametersSubjectType? subjectType,  List<String>? collections,  DateTime? reportedAfter,  DateTime? reportedBefore,  bool isMuted,  String? assignedTo,  String sortField,  String sortDirection,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ReportQueryReportsInput():
 return $default(_that.queueId,_that.reportTypes,_that.status,_that.subject,_that.did,_that.subjectType,_that.collections,_that.reportedAfter,_that.reportedBefore,_that.isMuted,_that.assignedTo,_that.sortField,_that.sortDirection,_that.limit,_that.cursor,_that.$unknown);case _:
@@ -239,7 +239,7 @@ return $default(_that.queueId,_that.reportTypes,_that.status,_that.subject,_that
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? queueId,  List<String>? reportTypes, @ReportQueryReportsStatusConverter()  ReportQueryReportsStatus status,  String? subject,  String? did, @ReportQueryReportsSubjectTypeConverter()  ReportQueryReportsSubjectType? subjectType,  List<String>? collections,  DateTime? reportedAfter,  DateTime? reportedBefore,  bool isMuted,  String? assignedTo,  String sortField,  String sortDirection,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int? queueId,  List<String>? reportTypes, @ReportQueryReportsParametersStatusConverter()  ReportQueryReportsParametersStatus status,  String? subject,  String? did, @ReportQueryReportsParametersSubjectTypeConverter()  ReportQueryReportsParametersSubjectType? subjectType,  List<String>? collections,  DateTime? reportedAfter,  DateTime? reportedBefore,  bool isMuted,  String? assignedTo,  String sortField,  String sortDirection,  int limit,  String? cursor,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ReportQueryReportsInput() when $default != null:
 return $default(_that.queueId,_that.reportTypes,_that.status,_that.subject,_that.did,_that.subjectType,_that.collections,_that.reportedAfter,_that.reportedBefore,_that.isMuted,_that.assignedTo,_that.sortField,_that.sortDirection,_that.limit,_that.cursor,_that.$unknown);case _:
@@ -254,7 +254,7 @@ return $default(_that.queueId,_that.reportTypes,_that.status,_that.subject,_that
 
 @JsonSerializable(includeIfNull: false)
 class _ReportQueryReportsInput implements ReportQueryReportsInput {
-  const _ReportQueryReportsInput({this.queueId, final  List<String>? reportTypes, @ReportQueryReportsStatusConverter() required this.status, this.subject, this.did, @ReportQueryReportsSubjectTypeConverter() this.subjectType, final  List<String>? collections, this.reportedAfter, this.reportedBefore, this.isMuted = false, this.assignedTo, this.sortField = 'createdAt', this.sortDirection = 'desc', this.limit = 50, this.cursor, final  Map<String, dynamic>? $unknown}): _reportTypes = reportTypes,_collections = collections,_$unknown = $unknown;
+  const _ReportQueryReportsInput({this.queueId, final  List<String>? reportTypes, @ReportQueryReportsParametersStatusConverter() required this.status, this.subject, this.did, @ReportQueryReportsParametersSubjectTypeConverter() this.subjectType, final  List<String>? collections, this.reportedAfter, this.reportedBefore, this.isMuted = false, this.assignedTo, this.sortField = 'createdAt', this.sortDirection = 'desc', this.limit = 50, this.cursor, final  Map<String, dynamic>? $unknown}): _reportTypes = reportTypes,_collections = collections,_$unknown = $unknown;
   factory _ReportQueryReportsInput.fromJson(Map<String, dynamic> json) => _$ReportQueryReportsInputFromJson(json);
 
 /// Filter by queue ID. Use -1 for unassigned reports.
@@ -269,13 +269,13 @@ class _ReportQueryReportsInput implements ReportQueryReportsInput {
 }
 
 /// Filter by report status.
-@override@ReportQueryReportsStatusConverter() final  ReportQueryReportsStatus status;
+@override@ReportQueryReportsParametersStatusConverter() final  ReportQueryReportsParametersStatus status;
 /// Filter by subject DID or AT-URI.
 @override final  String? subject;
 /// Filter to reports where the subject is this DID or any record owned by this DID. Unlike `subject` (which scopes to a specific account or record), this returns all reports tied to the DID across both account-level and record-level subjects.
 @override final  String? did;
-/// If specified, reports of the given type (account or record) will be returned.
-@override@ReportQueryReportsSubjectTypeConverter() final  ReportQueryReportsSubjectType? subjectType;
+/// If specified, reports of the given subject type will be returned.
+@override@ReportQueryReportsParametersSubjectTypeConverter() final  ReportQueryReportsParametersSubjectType? subjectType;
  final  List<String>? _collections;
 @override List<String>? get collections {
   final value = _collections;
@@ -340,11 +340,11 @@ abstract mixin class _$ReportQueryReportsInputCopyWith<$Res> implements $ReportQ
   factory _$ReportQueryReportsInputCopyWith(_ReportQueryReportsInput value, $Res Function(_ReportQueryReportsInput) _then) = __$ReportQueryReportsInputCopyWithImpl;
 @override @useResult
 $Res call({
- int? queueId, List<String>? reportTypes,@ReportQueryReportsStatusConverter() ReportQueryReportsStatus status, String? subject, String? did,@ReportQueryReportsSubjectTypeConverter() ReportQueryReportsSubjectType? subjectType, List<String>? collections, DateTime? reportedAfter, DateTime? reportedBefore, bool isMuted, String? assignedTo, String sortField, String sortDirection, int limit, String? cursor, Map<String, dynamic>? $unknown
+ int? queueId, List<String>? reportTypes,@ReportQueryReportsParametersStatusConverter() ReportQueryReportsParametersStatus status, String? subject, String? did,@ReportQueryReportsParametersSubjectTypeConverter() ReportQueryReportsParametersSubjectType? subjectType, List<String>? collections, DateTime? reportedAfter, DateTime? reportedBefore, bool isMuted, String? assignedTo, String sortField, String sortDirection, int limit, String? cursor, Map<String, dynamic>? $unknown
 });
 
 
-@override $ReportQueryReportsStatusCopyWith<$Res> get status;@override $ReportQueryReportsSubjectTypeCopyWith<$Res>? get subjectType;
+@override $ReportQueryReportsParametersStatusCopyWith<$Res> get status;@override $ReportQueryReportsParametersSubjectTypeCopyWith<$Res>? get subjectType;
 
 }
 /// @nodoc
@@ -362,10 +362,10 @@ class __$ReportQueryReportsInputCopyWithImpl<$Res>
 queueId: freezed == queueId ? _self.queueId : queueId // ignore: cast_nullable_to_non_nullable
 as int?,reportTypes: freezed == reportTypes ? _self._reportTypes : reportTypes // ignore: cast_nullable_to_non_nullable
 as List<String>?,status: null == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
-as ReportQueryReportsStatus,subject: freezed == subject ? _self.subject : subject // ignore: cast_nullable_to_non_nullable
+as ReportQueryReportsParametersStatus,subject: freezed == subject ? _self.subject : subject // ignore: cast_nullable_to_non_nullable
 as String?,did: freezed == did ? _self.did : did // ignore: cast_nullable_to_non_nullable
 as String?,subjectType: freezed == subjectType ? _self.subjectType : subjectType // ignore: cast_nullable_to_non_nullable
-as ReportQueryReportsSubjectType?,collections: freezed == collections ? _self._collections : collections // ignore: cast_nullable_to_non_nullable
+as ReportQueryReportsParametersSubjectType?,collections: freezed == collections ? _self._collections : collections // ignore: cast_nullable_to_non_nullable
 as List<String>?,reportedAfter: freezed == reportedAfter ? _self.reportedAfter : reportedAfter // ignore: cast_nullable_to_non_nullable
 as DateTime?,reportedBefore: freezed == reportedBefore ? _self.reportedBefore : reportedBefore // ignore: cast_nullable_to_non_nullable
 as DateTime?,isMuted: null == isMuted ? _self.isMuted : isMuted // ignore: cast_nullable_to_non_nullable
@@ -383,21 +383,21 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$ReportQueryReportsStatusCopyWith<$Res> get status {
+$ReportQueryReportsParametersStatusCopyWith<$Res> get status {
 
-  return $ReportQueryReportsStatusCopyWith<$Res>(_self.status, (value) {
+  return $ReportQueryReportsParametersStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
 }/// Create a copy of ReportQueryReportsInput
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$ReportQueryReportsSubjectTypeCopyWith<$Res>? get subjectType {
+$ReportQueryReportsParametersSubjectTypeCopyWith<$Res>? get subjectType {
     if (_self.subjectType == null) {
     return null;
   }
 
-  return $ReportQueryReportsSubjectTypeCopyWith<$Res>(_self.subjectType!, (value) {
+  return $ReportQueryReportsParametersSubjectTypeCopyWith<$Res>(_self.subjectType!, (value) {
     return _then(_self.copyWith(subjectType: value));
   });
 }

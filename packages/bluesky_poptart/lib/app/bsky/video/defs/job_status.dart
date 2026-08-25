@@ -9,6 +9,7 @@ import 'package:poptart_core/internals.dart';
 
 import './job_status_state.dart';
 import 'package:poptart_core/poptart_core.dart';
+import './job_status_failure_code.dart';
 
 part 'job_status.freezed.dart';
 part 'job_status.g.dart';
@@ -26,6 +27,7 @@ abstract class JobStatus with _$JobStatus {
     'progress',
     'blob',
     'error',
+    'failureCode',
     'message',
   ];
 
@@ -42,6 +44,9 @@ abstract class JobStatus with _$JobStatus {
     int? progress,
     @BlobConverter() Blob? blob,
     String? error,
+
+    /// A machine-readable code for why the video processing job failed.
+    @JobStatusFailureCodeConverter() JobStatusFailureCode? failureCode,
     String? message,
 
     Map<String, dynamic>? $unknown,
@@ -63,6 +68,8 @@ extension JobStatusExtension on JobStatus {
   bool get hasNotBlob => !hasBlob;
   bool get hasError => error != null;
   bool get hasNotError => !hasError;
+  bool get hasFailureCode => failureCode != null;
+  bool get hasNotFailureCode => !hasFailureCode;
   bool get hasMessage => message != null;
   bool get hasNotMessage => !hasMessage;
 }

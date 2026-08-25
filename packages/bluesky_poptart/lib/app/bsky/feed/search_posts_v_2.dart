@@ -9,7 +9,7 @@
 
 export 'search_posts_v_2/descriptor.dart';
 export 'search_posts_v_2/input.dart';
-export 'search_posts_v_2/main_detected_query_languages.dart';
-export 'search_posts_v_2/main_query_language.dart';
-export 'search_posts_v_2/main_sort.dart';
+export 'search_posts_v_2/main_output_detected_query_languages.dart';
+export 'search_posts_v_2/main_parameters_query_language.dart';
+export 'search_posts_v_2/main_parameters_sort.dart';
 export 'search_posts_v_2/output.dart';

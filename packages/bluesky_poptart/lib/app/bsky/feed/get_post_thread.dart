@@ -10,4 +10,4 @@
 export 'get_post_thread/descriptor.dart';
 export 'get_post_thread/input.dart';
 export 'get_post_thread/output.dart';
-export 'get_post_thread/union_main_thread.dart';
+export 'get_post_thread/union_main_output_thread.dart';

@@ -7,9 +7,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_review_state.dart';
-import './main_subject_type.dart';
-import './main_age_assurance_state.dart';
+import './main_parameters_review_state.dart';
+import './main_parameters_subject_type.dart';
+import './main_parameters_age_assurance_state.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -112,8 +112,8 @@ abstract class ModerationQueryStatusesInput
     bool? onlyMuted,
 
     /// Specify when fetching subjects in a certain state
-    @ModerationQueryStatusesReviewStateConverter()
-    ModerationQueryStatusesReviewState? reviewState,
+    @ModerationQueryStatusesParametersReviewStateConverter()
+    ModerationQueryStatusesParametersReviewState? reviewState,
     List<String>? ignoreSubjects,
 
     /// Get all subject statuses that were reviewed by a specific moderator
@@ -135,8 +135,8 @@ abstract class ModerationQueryStatusesInput
     List<String>? collections,
 
     /// If specified, subjects of the given type (account, record, or conversation) will be returned. When this is set to 'account' the 'collections' parameter will be ignored. When includeAllUserRecords or subject is set, this will be ignored.
-    @ModerationQueryStatusesSubjectTypeConverter()
-    ModerationQueryStatusesSubjectType? subjectType,
+    @ModerationQueryStatusesParametersSubjectTypeConverter()
+    ModerationQueryStatusesParametersSubjectType? subjectType,
 
     /// If specified, only subjects that belong to an account that has at least this many suspensions will be returned.
     int? minAccountSuspendCount,
@@ -154,8 +154,8 @@ abstract class ModerationQueryStatusesInput
     int? minStrikeCount,
 
     /// If specified, only subjects with the given age assurance state will be returned.
-    @ModerationQueryStatusesAgeAssuranceStateConverter()
-    ModerationQueryStatusesAgeAssuranceState? ageAssuranceState,
+    @ModerationQueryStatusesParametersAgeAssuranceStateConverter()
+    ModerationQueryStatusesParametersAgeAssuranceState? ageAssuranceState,
 
     Map<String, dynamic>? $unknown,
   }) = _ModerationQueryStatusesInput;

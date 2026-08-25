@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_sort.dart';
+import './main_parameters_sort.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -26,7 +26,8 @@ abstract class FeedSearchPostsInput with _$FeedSearchPostsInput {
     required String q,
 
     /// Specifies the ranking order of results.
-    @FeedSearchPostsSortConverter() FeedSearchPostsSort? sort,
+    @FeedSearchPostsParametersSortConverter()
+    FeedSearchPostsParametersSort? sort,
     @Default(25) int limit,
 
     /// Optional pagination mechanism; may not necessarily allow scrolling through entire result set.

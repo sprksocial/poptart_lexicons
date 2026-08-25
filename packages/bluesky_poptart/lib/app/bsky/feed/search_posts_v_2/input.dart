@@ -7,8 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_sort.dart';
-import './main_query_language.dart';
+import './main_parameters_sort.dart';
+import './main_parameters_query_language.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -63,7 +63,8 @@ abstract class FeedSearchPostsV2Input with _$FeedSearchPostsV2Input {
     String? query,
 
     /// Ranking order for results. 'recent' sorts by recency; 'top' uses search ranking.
-    @FeedSearchPostsV2SortConverter() FeedSearchPostsV2Sort? sort,
+    @FeedSearchPostsV2ParametersSortConverter()
+    FeedSearchPostsV2ParametersSort? sort,
     List<String>? authors,
     List<String>? mentions,
     List<String>? domains,
@@ -110,8 +111,8 @@ abstract class FeedSearchPostsV2Input with _$FeedSearchPostsV2Input {
     bool? following,
 
     /// Language analyzer hint for the query text. If unset, the server auto-detects when possible.
-    @FeedSearchPostsV2QueryLanguageConverter()
-    FeedSearchPostsV2QueryLanguage? queryLanguage,
+    @FeedSearchPostsV2ParametersQueryLanguageConverter()
+    FeedSearchPostsV2ParametersQueryLanguage? queryLanguage,
 
     Map<String, dynamic>? $unknown,
   }) = _FeedSearchPostsV2Input;

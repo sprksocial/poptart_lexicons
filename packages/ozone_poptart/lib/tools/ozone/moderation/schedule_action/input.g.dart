@@ -14,7 +14,7 @@ _ModerationScheduleActionInput _$ModerationScheduleActionInputFromJson(
   final val = _ModerationScheduleActionInput(
     action: $checkedConvert(
       'action',
-      (v) => const UModerationScheduleActionActionConverter().fromJson(
+      (v) => const UModerationScheduleActionInputActionConverter().fromJson(
         v as Map<String, dynamic>,
       ),
     ),
@@ -46,7 +46,7 @@ _ModerationScheduleActionInput _$ModerationScheduleActionInputFromJson(
 Map<String, dynamic> _$ModerationScheduleActionInputToJson(
   _ModerationScheduleActionInput instance,
 ) => <String, dynamic>{
-  'action': const UModerationScheduleActionActionConverter().toJson(
+  'action': const UModerationScheduleActionInputActionConverter().toJson(
     instance.action,
   ),
   'subjects': instance.subjects,

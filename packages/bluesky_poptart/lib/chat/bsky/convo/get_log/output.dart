@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_logs.dart';
+import './union_main_output_logs.dart';
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -23,7 +23,8 @@ abstract class ConvoGetLogOutput with _$ConvoGetLogOutput {
   @JsonSerializable(includeIfNull: false)
   const factory ConvoGetLogOutput({
     String? cursor,
-    @UConvoGetLogLogsConverter() required List<UConvoGetLogLogs> logs,
+    @UConvoGetLogOutputLogsConverter()
+    required List<UConvoGetLogOutputLogs> logs,
 
     Map<String, dynamic>? $unknown,
   }) = _ConvoGetLogOutput;

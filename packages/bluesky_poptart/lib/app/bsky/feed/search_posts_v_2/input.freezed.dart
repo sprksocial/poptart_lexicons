@@ -19,7 +19,7 @@ mixin _$FeedSearchPostsV2Input {
  String? get cursor;/// Maximum number of results to return.
  int get limit;/// Search query string. A query or at least one filter is required.
  String? get query;/// Ranking order for results. 'recent' sorts by recency; 'top' uses search ranking.
-@FeedSearchPostsV2SortConverter() FeedSearchPostsV2Sort? get sort; List<String>? get authors; List<String>? get mentions; List<String>? get domains; List<String>? get urls;@AtUriConverter() List<AtUri>? get embeddedAtUris; List<String>? get hashtags; List<String>? get excludeAuthors; List<String>? get excludeMentions; List<String>? get excludeDomains; List<String>? get excludeUrls;@AtUriConverter() List<AtUri>? get excludeEmbeddedAtUris; List<String>? get excludeHashtags;/// Include posts indexed at or after this timestamp. Can be a datetime, or just an ISO date (YYYY-MM-DD).
+@FeedSearchPostsV2ParametersSortConverter() FeedSearchPostsV2ParametersSort? get sort; List<String>? get authors; List<String>? get mentions; List<String>? get domains; List<String>? get urls;@AtUriConverter() List<AtUri>? get embeddedAtUris; List<String>? get hashtags; List<String>? get excludeAuthors; List<String>? get excludeMentions; List<String>? get excludeDomains; List<String>? get excludeUrls;@AtUriConverter() List<AtUri>? get excludeEmbeddedAtUris; List<String>? get excludeHashtags;/// Include posts indexed at or after this timestamp. Can be a datetime, or just an ISO date (YYYY-MM-DD).
  String? get since;/// Include posts indexed before this timestamp. Defaults to the current time. Can be a datetime, or just an ISO date (YYYY-MM-DD).
  String? get until;/// Search the full index instead of the recent-post window.
  bool? get allTime; List<String>? get languages; List<String>? get excludeLanguages;/// Include only posts with media.
@@ -30,7 +30,7 @@ mixin _$FeedSearchPostsV2Input {
  bool? get excludeReplies;/// Include only replies. Mutually exclusive with excludeReplies.
  bool? get repliesOnly;/// Include only posts from accounts followed by the viewer.
  bool? get following;/// Language analyzer hint for the query text. If unset, the server auto-detects when possible.
-@FeedSearchPostsV2QueryLanguageConverter() FeedSearchPostsV2QueryLanguage? get queryLanguage; Map<String, dynamic>? get $unknown;
+@FeedSearchPostsV2ParametersQueryLanguageConverter() FeedSearchPostsV2ParametersQueryLanguage? get queryLanguage; Map<String, dynamic>? get $unknown;
 /// Create a copy of FeedSearchPostsV2Input
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -63,11 +63,11 @@ abstract mixin class $FeedSearchPostsV2InputCopyWith<$Res>  {
   factory $FeedSearchPostsV2InputCopyWith(FeedSearchPostsV2Input value, $Res Function(FeedSearchPostsV2Input) _then) = _$FeedSearchPostsV2InputCopyWithImpl;
 @useResult
 $Res call({
- String? cursor, int limit, String? query,@FeedSearchPostsV2SortConverter() FeedSearchPostsV2Sort? sort, List<String>? authors, List<String>? mentions, List<String>? domains, List<String>? urls,@AtUriConverter() List<AtUri>? embeddedAtUris, List<String>? hashtags, List<String>? excludeAuthors, List<String>? excludeMentions, List<String>? excludeDomains, List<String>? excludeUrls,@AtUriConverter() List<AtUri>? excludeEmbeddedAtUris, List<String>? excludeHashtags, String? since, String? until, bool? allTime, List<String>? languages, List<String>? excludeLanguages, bool? hasMedia, bool? hasVideo,@AtUriConverter() AtUri? replyParentUri,@AtUriConverter() AtUri? threadRootUri, bool? excludeReplies, bool? repliesOnly, bool? following,@FeedSearchPostsV2QueryLanguageConverter() FeedSearchPostsV2QueryLanguage? queryLanguage, Map<String, dynamic>? $unknown
+ String? cursor, int limit, String? query,@FeedSearchPostsV2ParametersSortConverter() FeedSearchPostsV2ParametersSort? sort, List<String>? authors, List<String>? mentions, List<String>? domains, List<String>? urls,@AtUriConverter() List<AtUri>? embeddedAtUris, List<String>? hashtags, List<String>? excludeAuthors, List<String>? excludeMentions, List<String>? excludeDomains, List<String>? excludeUrls,@AtUriConverter() List<AtUri>? excludeEmbeddedAtUris, List<String>? excludeHashtags, String? since, String? until, bool? allTime, List<String>? languages, List<String>? excludeLanguages, bool? hasMedia, bool? hasVideo,@AtUriConverter() AtUri? replyParentUri,@AtUriConverter() AtUri? threadRootUri, bool? excludeReplies, bool? repliesOnly, bool? following,@FeedSearchPostsV2ParametersQueryLanguageConverter() FeedSearchPostsV2ParametersQueryLanguage? queryLanguage, Map<String, dynamic>? $unknown
 });
 
 
-$FeedSearchPostsV2SortCopyWith<$Res>? get sort;$FeedSearchPostsV2QueryLanguageCopyWith<$Res>? get queryLanguage;
+$FeedSearchPostsV2ParametersSortCopyWith<$Res>? get sort;$FeedSearchPostsV2ParametersQueryLanguageCopyWith<$Res>? get queryLanguage;
 
 }
 /// @nodoc
@@ -86,7 +86,7 @@ cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_no
 as String?,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,query: freezed == query ? _self.query : query // ignore: cast_nullable_to_non_nullable
 as String?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as FeedSearchPostsV2Sort?,authors: freezed == authors ? _self.authors : authors // ignore: cast_nullable_to_non_nullable
+as FeedSearchPostsV2ParametersSort?,authors: freezed == authors ? _self.authors : authors // ignore: cast_nullable_to_non_nullable
 as List<String>?,mentions: freezed == mentions ? _self.mentions : mentions // ignore: cast_nullable_to_non_nullable
 as List<String>?,domains: freezed == domains ? _self.domains : domains // ignore: cast_nullable_to_non_nullable
 as List<String>?,urls: freezed == urls ? _self.urls : urls // ignore: cast_nullable_to_non_nullable
@@ -111,7 +111,7 @@ as AtUri?,excludeReplies: freezed == excludeReplies ? _self.excludeReplies : exc
 as bool?,repliesOnly: freezed == repliesOnly ? _self.repliesOnly : repliesOnly // ignore: cast_nullable_to_non_nullable
 as bool?,following: freezed == following ? _self.following : following // ignore: cast_nullable_to_non_nullable
 as bool?,queryLanguage: freezed == queryLanguage ? _self.queryLanguage : queryLanguage // ignore: cast_nullable_to_non_nullable
-as FeedSearchPostsV2QueryLanguage?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as FeedSearchPostsV2ParametersQueryLanguage?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -119,24 +119,24 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedSearchPostsV2SortCopyWith<$Res>? get sort {
+$FeedSearchPostsV2ParametersSortCopyWith<$Res>? get sort {
     if (_self.sort == null) {
     return null;
   }
 
-  return $FeedSearchPostsV2SortCopyWith<$Res>(_self.sort!, (value) {
+  return $FeedSearchPostsV2ParametersSortCopyWith<$Res>(_self.sort!, (value) {
     return _then(_self.copyWith(sort: value));
   });
 }/// Create a copy of FeedSearchPostsV2Input
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedSearchPostsV2QueryLanguageCopyWith<$Res>? get queryLanguage {
+$FeedSearchPostsV2ParametersQueryLanguageCopyWith<$Res>? get queryLanguage {
     if (_self.queryLanguage == null) {
     return null;
   }
 
-  return $FeedSearchPostsV2QueryLanguageCopyWith<$Res>(_self.queryLanguage!, (value) {
+  return $FeedSearchPostsV2ParametersQueryLanguageCopyWith<$Res>(_self.queryLanguage!, (value) {
     return _then(_self.copyWith(queryLanguage: value));
   });
 }
@@ -221,7 +221,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor,  int limit,  String? query, @FeedSearchPostsV2SortConverter()  FeedSearchPostsV2Sort? sort,  List<String>? authors,  List<String>? mentions,  List<String>? domains,  List<String>? urls, @AtUriConverter()  List<AtUri>? embeddedAtUris,  List<String>? hashtags,  List<String>? excludeAuthors,  List<String>? excludeMentions,  List<String>? excludeDomains,  List<String>? excludeUrls, @AtUriConverter()  List<AtUri>? excludeEmbeddedAtUris,  List<String>? excludeHashtags,  String? since,  String? until,  bool? allTime,  List<String>? languages,  List<String>? excludeLanguages,  bool? hasMedia,  bool? hasVideo, @AtUriConverter()  AtUri? replyParentUri, @AtUriConverter()  AtUri? threadRootUri,  bool? excludeReplies,  bool? repliesOnly,  bool? following, @FeedSearchPostsV2QueryLanguageConverter()  FeedSearchPostsV2QueryLanguage? queryLanguage,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor,  int limit,  String? query, @FeedSearchPostsV2ParametersSortConverter()  FeedSearchPostsV2ParametersSort? sort,  List<String>? authors,  List<String>? mentions,  List<String>? domains,  List<String>? urls, @AtUriConverter()  List<AtUri>? embeddedAtUris,  List<String>? hashtags,  List<String>? excludeAuthors,  List<String>? excludeMentions,  List<String>? excludeDomains,  List<String>? excludeUrls, @AtUriConverter()  List<AtUri>? excludeEmbeddedAtUris,  List<String>? excludeHashtags,  String? since,  String? until,  bool? allTime,  List<String>? languages,  List<String>? excludeLanguages,  bool? hasMedia,  bool? hasVideo, @AtUriConverter()  AtUri? replyParentUri, @AtUriConverter()  AtUri? threadRootUri,  bool? excludeReplies,  bool? repliesOnly,  bool? following, @FeedSearchPostsV2ParametersQueryLanguageConverter()  FeedSearchPostsV2ParametersQueryLanguage? queryLanguage,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FeedSearchPostsV2Input() when $default != null:
 return $default(_that.cursor,_that.limit,_that.query,_that.sort,_that.authors,_that.mentions,_that.domains,_that.urls,_that.embeddedAtUris,_that.hashtags,_that.excludeAuthors,_that.excludeMentions,_that.excludeDomains,_that.excludeUrls,_that.excludeEmbeddedAtUris,_that.excludeHashtags,_that.since,_that.until,_that.allTime,_that.languages,_that.excludeLanguages,_that.hasMedia,_that.hasVideo,_that.replyParentUri,_that.threadRootUri,_that.excludeReplies,_that.repliesOnly,_that.following,_that.queryLanguage,_that.$unknown);case _:
@@ -242,7 +242,7 @@ return $default(_that.cursor,_that.limit,_that.query,_that.sort,_that.authors,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor,  int limit,  String? query, @FeedSearchPostsV2SortConverter()  FeedSearchPostsV2Sort? sort,  List<String>? authors,  List<String>? mentions,  List<String>? domains,  List<String>? urls, @AtUriConverter()  List<AtUri>? embeddedAtUris,  List<String>? hashtags,  List<String>? excludeAuthors,  List<String>? excludeMentions,  List<String>? excludeDomains,  List<String>? excludeUrls, @AtUriConverter()  List<AtUri>? excludeEmbeddedAtUris,  List<String>? excludeHashtags,  String? since,  String? until,  bool? allTime,  List<String>? languages,  List<String>? excludeLanguages,  bool? hasMedia,  bool? hasVideo, @AtUriConverter()  AtUri? replyParentUri, @AtUriConverter()  AtUri? threadRootUri,  bool? excludeReplies,  bool? repliesOnly,  bool? following, @FeedSearchPostsV2QueryLanguageConverter()  FeedSearchPostsV2QueryLanguage? queryLanguage,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor,  int limit,  String? query, @FeedSearchPostsV2ParametersSortConverter()  FeedSearchPostsV2ParametersSort? sort,  List<String>? authors,  List<String>? mentions,  List<String>? domains,  List<String>? urls, @AtUriConverter()  List<AtUri>? embeddedAtUris,  List<String>? hashtags,  List<String>? excludeAuthors,  List<String>? excludeMentions,  List<String>? excludeDomains,  List<String>? excludeUrls, @AtUriConverter()  List<AtUri>? excludeEmbeddedAtUris,  List<String>? excludeHashtags,  String? since,  String? until,  bool? allTime,  List<String>? languages,  List<String>? excludeLanguages,  bool? hasMedia,  bool? hasVideo, @AtUriConverter()  AtUri? replyParentUri, @AtUriConverter()  AtUri? threadRootUri,  bool? excludeReplies,  bool? repliesOnly,  bool? following, @FeedSearchPostsV2ParametersQueryLanguageConverter()  FeedSearchPostsV2ParametersQueryLanguage? queryLanguage,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _FeedSearchPostsV2Input():
 return $default(_that.cursor,_that.limit,_that.query,_that.sort,_that.authors,_that.mentions,_that.domains,_that.urls,_that.embeddedAtUris,_that.hashtags,_that.excludeAuthors,_that.excludeMentions,_that.excludeDomains,_that.excludeUrls,_that.excludeEmbeddedAtUris,_that.excludeHashtags,_that.since,_that.until,_that.allTime,_that.languages,_that.excludeLanguages,_that.hasMedia,_that.hasVideo,_that.replyParentUri,_that.threadRootUri,_that.excludeReplies,_that.repliesOnly,_that.following,_that.queryLanguage,_that.$unknown);case _:
@@ -262,7 +262,7 @@ return $default(_that.cursor,_that.limit,_that.query,_that.sort,_that.authors,_t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor,  int limit,  String? query, @FeedSearchPostsV2SortConverter()  FeedSearchPostsV2Sort? sort,  List<String>? authors,  List<String>? mentions,  List<String>? domains,  List<String>? urls, @AtUriConverter()  List<AtUri>? embeddedAtUris,  List<String>? hashtags,  List<String>? excludeAuthors,  List<String>? excludeMentions,  List<String>? excludeDomains,  List<String>? excludeUrls, @AtUriConverter()  List<AtUri>? excludeEmbeddedAtUris,  List<String>? excludeHashtags,  String? since,  String? until,  bool? allTime,  List<String>? languages,  List<String>? excludeLanguages,  bool? hasMedia,  bool? hasVideo, @AtUriConverter()  AtUri? replyParentUri, @AtUriConverter()  AtUri? threadRootUri,  bool? excludeReplies,  bool? repliesOnly,  bool? following, @FeedSearchPostsV2QueryLanguageConverter()  FeedSearchPostsV2QueryLanguage? queryLanguage,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor,  int limit,  String? query, @FeedSearchPostsV2ParametersSortConverter()  FeedSearchPostsV2ParametersSort? sort,  List<String>? authors,  List<String>? mentions,  List<String>? domains,  List<String>? urls, @AtUriConverter()  List<AtUri>? embeddedAtUris,  List<String>? hashtags,  List<String>? excludeAuthors,  List<String>? excludeMentions,  List<String>? excludeDomains,  List<String>? excludeUrls, @AtUriConverter()  List<AtUri>? excludeEmbeddedAtUris,  List<String>? excludeHashtags,  String? since,  String? until,  bool? allTime,  List<String>? languages,  List<String>? excludeLanguages,  bool? hasMedia,  bool? hasVideo, @AtUriConverter()  AtUri? replyParentUri, @AtUriConverter()  AtUri? threadRootUri,  bool? excludeReplies,  bool? repliesOnly,  bool? following, @FeedSearchPostsV2ParametersQueryLanguageConverter()  FeedSearchPostsV2ParametersQueryLanguage? queryLanguage,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _FeedSearchPostsV2Input() when $default != null:
 return $default(_that.cursor,_that.limit,_that.query,_that.sort,_that.authors,_that.mentions,_that.domains,_that.urls,_that.embeddedAtUris,_that.hashtags,_that.excludeAuthors,_that.excludeMentions,_that.excludeDomains,_that.excludeUrls,_that.excludeEmbeddedAtUris,_that.excludeHashtags,_that.since,_that.until,_that.allTime,_that.languages,_that.excludeLanguages,_that.hasMedia,_that.hasVideo,_that.replyParentUri,_that.threadRootUri,_that.excludeReplies,_that.repliesOnly,_that.following,_that.queryLanguage,_that.$unknown);case _:
@@ -277,7 +277,7 @@ return $default(_that.cursor,_that.limit,_that.query,_that.sort,_that.authors,_t
 
 @JsonSerializable(includeIfNull: false)
 class _FeedSearchPostsV2Input implements FeedSearchPostsV2Input {
-  const _FeedSearchPostsV2Input({this.cursor, this.limit = 25, this.query, @FeedSearchPostsV2SortConverter() this.sort, final  List<String>? authors, final  List<String>? mentions, final  List<String>? domains, final  List<String>? urls, @AtUriConverter() final  List<AtUri>? embeddedAtUris, final  List<String>? hashtags, final  List<String>? excludeAuthors, final  List<String>? excludeMentions, final  List<String>? excludeDomains, final  List<String>? excludeUrls, @AtUriConverter() final  List<AtUri>? excludeEmbeddedAtUris, final  List<String>? excludeHashtags, this.since, this.until, this.allTime, final  List<String>? languages, final  List<String>? excludeLanguages, this.hasMedia, this.hasVideo, @AtUriConverter() this.replyParentUri, @AtUriConverter() this.threadRootUri, this.excludeReplies, this.repliesOnly, this.following, @FeedSearchPostsV2QueryLanguageConverter() this.queryLanguage, final  Map<String, dynamic>? $unknown}): _authors = authors,_mentions = mentions,_domains = domains,_urls = urls,_embeddedAtUris = embeddedAtUris,_hashtags = hashtags,_excludeAuthors = excludeAuthors,_excludeMentions = excludeMentions,_excludeDomains = excludeDomains,_excludeUrls = excludeUrls,_excludeEmbeddedAtUris = excludeEmbeddedAtUris,_excludeHashtags = excludeHashtags,_languages = languages,_excludeLanguages = excludeLanguages,_$unknown = $unknown;
+  const _FeedSearchPostsV2Input({this.cursor, this.limit = 25, this.query, @FeedSearchPostsV2ParametersSortConverter() this.sort, final  List<String>? authors, final  List<String>? mentions, final  List<String>? domains, final  List<String>? urls, @AtUriConverter() final  List<AtUri>? embeddedAtUris, final  List<String>? hashtags, final  List<String>? excludeAuthors, final  List<String>? excludeMentions, final  List<String>? excludeDomains, final  List<String>? excludeUrls, @AtUriConverter() final  List<AtUri>? excludeEmbeddedAtUris, final  List<String>? excludeHashtags, this.since, this.until, this.allTime, final  List<String>? languages, final  List<String>? excludeLanguages, this.hasMedia, this.hasVideo, @AtUriConverter() this.replyParentUri, @AtUriConverter() this.threadRootUri, this.excludeReplies, this.repliesOnly, this.following, @FeedSearchPostsV2ParametersQueryLanguageConverter() this.queryLanguage, final  Map<String, dynamic>? $unknown}): _authors = authors,_mentions = mentions,_domains = domains,_urls = urls,_embeddedAtUris = embeddedAtUris,_hashtags = hashtags,_excludeAuthors = excludeAuthors,_excludeMentions = excludeMentions,_excludeDomains = excludeDomains,_excludeUrls = excludeUrls,_excludeEmbeddedAtUris = excludeEmbeddedAtUris,_excludeHashtags = excludeHashtags,_languages = languages,_excludeLanguages = excludeLanguages,_$unknown = $unknown;
   factory _FeedSearchPostsV2Input.fromJson(Map<String, dynamic> json) => _$FeedSearchPostsV2InputFromJson(json);
 
 /// Optional pagination cursor.
@@ -287,7 +287,7 @@ class _FeedSearchPostsV2Input implements FeedSearchPostsV2Input {
 /// Search query string. A query or at least one filter is required.
 @override final  String? query;
 /// Ranking order for results. 'recent' sorts by recency; 'top' uses search ranking.
-@override@FeedSearchPostsV2SortConverter() final  FeedSearchPostsV2Sort? sort;
+@override@FeedSearchPostsV2ParametersSortConverter() final  FeedSearchPostsV2ParametersSort? sort;
  final  List<String>? _authors;
 @override List<String>? get authors {
   final value = _authors;
@@ -435,7 +435,7 @@ class _FeedSearchPostsV2Input implements FeedSearchPostsV2Input {
 /// Include only posts from accounts followed by the viewer.
 @override final  bool? following;
 /// Language analyzer hint for the query text. If unset, the server auto-detects when possible.
-@override@FeedSearchPostsV2QueryLanguageConverter() final  FeedSearchPostsV2QueryLanguage? queryLanguage;
+@override@FeedSearchPostsV2ParametersQueryLanguageConverter() final  FeedSearchPostsV2ParametersQueryLanguage? queryLanguage;
  final  Map<String, dynamic>? _$unknown;
 @override Map<String, dynamic>? get $unknown {
   final value = _$unknown;
@@ -479,11 +479,11 @@ abstract mixin class _$FeedSearchPostsV2InputCopyWith<$Res> implements $FeedSear
   factory _$FeedSearchPostsV2InputCopyWith(_FeedSearchPostsV2Input value, $Res Function(_FeedSearchPostsV2Input) _then) = __$FeedSearchPostsV2InputCopyWithImpl;
 @override @useResult
 $Res call({
- String? cursor, int limit, String? query,@FeedSearchPostsV2SortConverter() FeedSearchPostsV2Sort? sort, List<String>? authors, List<String>? mentions, List<String>? domains, List<String>? urls,@AtUriConverter() List<AtUri>? embeddedAtUris, List<String>? hashtags, List<String>? excludeAuthors, List<String>? excludeMentions, List<String>? excludeDomains, List<String>? excludeUrls,@AtUriConverter() List<AtUri>? excludeEmbeddedAtUris, List<String>? excludeHashtags, String? since, String? until, bool? allTime, List<String>? languages, List<String>? excludeLanguages, bool? hasMedia, bool? hasVideo,@AtUriConverter() AtUri? replyParentUri,@AtUriConverter() AtUri? threadRootUri, bool? excludeReplies, bool? repliesOnly, bool? following,@FeedSearchPostsV2QueryLanguageConverter() FeedSearchPostsV2QueryLanguage? queryLanguage, Map<String, dynamic>? $unknown
+ String? cursor, int limit, String? query,@FeedSearchPostsV2ParametersSortConverter() FeedSearchPostsV2ParametersSort? sort, List<String>? authors, List<String>? mentions, List<String>? domains, List<String>? urls,@AtUriConverter() List<AtUri>? embeddedAtUris, List<String>? hashtags, List<String>? excludeAuthors, List<String>? excludeMentions, List<String>? excludeDomains, List<String>? excludeUrls,@AtUriConverter() List<AtUri>? excludeEmbeddedAtUris, List<String>? excludeHashtags, String? since, String? until, bool? allTime, List<String>? languages, List<String>? excludeLanguages, bool? hasMedia, bool? hasVideo,@AtUriConverter() AtUri? replyParentUri,@AtUriConverter() AtUri? threadRootUri, bool? excludeReplies, bool? repliesOnly, bool? following,@FeedSearchPostsV2ParametersQueryLanguageConverter() FeedSearchPostsV2ParametersQueryLanguage? queryLanguage, Map<String, dynamic>? $unknown
 });
 
 
-@override $FeedSearchPostsV2SortCopyWith<$Res>? get sort;@override $FeedSearchPostsV2QueryLanguageCopyWith<$Res>? get queryLanguage;
+@override $FeedSearchPostsV2ParametersSortCopyWith<$Res>? get sort;@override $FeedSearchPostsV2ParametersQueryLanguageCopyWith<$Res>? get queryLanguage;
 
 }
 /// @nodoc
@@ -502,7 +502,7 @@ cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_no
 as String?,limit: null == limit ? _self.limit : limit // ignore: cast_nullable_to_non_nullable
 as int,query: freezed == query ? _self.query : query // ignore: cast_nullable_to_non_nullable
 as String?,sort: freezed == sort ? _self.sort : sort // ignore: cast_nullable_to_non_nullable
-as FeedSearchPostsV2Sort?,authors: freezed == authors ? _self._authors : authors // ignore: cast_nullable_to_non_nullable
+as FeedSearchPostsV2ParametersSort?,authors: freezed == authors ? _self._authors : authors // ignore: cast_nullable_to_non_nullable
 as List<String>?,mentions: freezed == mentions ? _self._mentions : mentions // ignore: cast_nullable_to_non_nullable
 as List<String>?,domains: freezed == domains ? _self._domains : domains // ignore: cast_nullable_to_non_nullable
 as List<String>?,urls: freezed == urls ? _self._urls : urls // ignore: cast_nullable_to_non_nullable
@@ -527,7 +527,7 @@ as AtUri?,excludeReplies: freezed == excludeReplies ? _self.excludeReplies : exc
 as bool?,repliesOnly: freezed == repliesOnly ? _self.repliesOnly : repliesOnly // ignore: cast_nullable_to_non_nullable
 as bool?,following: freezed == following ? _self.following : following // ignore: cast_nullable_to_non_nullable
 as bool?,queryLanguage: freezed == queryLanguage ? _self.queryLanguage : queryLanguage // ignore: cast_nullable_to_non_nullable
-as FeedSearchPostsV2QueryLanguage?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as FeedSearchPostsV2ParametersQueryLanguage?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -536,24 +536,24 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedSearchPostsV2SortCopyWith<$Res>? get sort {
+$FeedSearchPostsV2ParametersSortCopyWith<$Res>? get sort {
     if (_self.sort == null) {
     return null;
   }
 
-  return $FeedSearchPostsV2SortCopyWith<$Res>(_self.sort!, (value) {
+  return $FeedSearchPostsV2ParametersSortCopyWith<$Res>(_self.sort!, (value) {
     return _then(_self.copyWith(sort: value));
   });
 }/// Create a copy of FeedSearchPostsV2Input
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$FeedSearchPostsV2QueryLanguageCopyWith<$Res>? get queryLanguage {
+$FeedSearchPostsV2ParametersQueryLanguageCopyWith<$Res>? get queryLanguage {
     if (_self.queryLanguage == null) {
     return null;
   }
 
-  return $FeedSearchPostsV2QueryLanguageCopyWith<$Res>(_self.queryLanguage!, (value) {
+  return $FeedSearchPostsV2ParametersQueryLanguageCopyWith<$Res>(_self.queryLanguage!, (value) {
     return _then(_self.copyWith(queryLanguage: value));
   });
 }

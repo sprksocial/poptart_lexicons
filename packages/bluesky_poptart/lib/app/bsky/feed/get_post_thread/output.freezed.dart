@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FeedGetPostThreadOutput {
 
-@UFeedGetPostThreadThreadConverter() UFeedGetPostThreadThread get thread;@ThreadgateViewConverter() ThreadgateView? get threadgate; Map<String, dynamic>? get $unknown;
+@UFeedGetPostThreadOutputThreadConverter() UFeedGetPostThreadOutputThread get thread;@ThreadgateViewConverter() ThreadgateView? get threadgate; Map<String, dynamic>? get $unknown;
 /// Create a copy of FeedGetPostThreadOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $FeedGetPostThreadOutputCopyWith<$Res>  {
   factory $FeedGetPostThreadOutputCopyWith(FeedGetPostThreadOutput value, $Res Function(FeedGetPostThreadOutput) _then) = _$FeedGetPostThreadOutputCopyWithImpl;
 @useResult
 $Res call({
-@UFeedGetPostThreadThreadConverter() UFeedGetPostThreadThread thread,@ThreadgateViewConverter() ThreadgateView? threadgate, Map<String, dynamic>? $unknown
+@UFeedGetPostThreadOutputThreadConverter() UFeedGetPostThreadOutputThread thread,@ThreadgateViewConverter() ThreadgateView? threadgate, Map<String, dynamic>? $unknown
 });
 
 
-$UFeedGetPostThreadThreadCopyWith<$Res> get thread;$ThreadgateViewCopyWith<$Res>? get threadgate;
+$UFeedGetPostThreadOutputThreadCopyWith<$Res> get thread;$ThreadgateViewCopyWith<$Res>? get threadgate;
 
 }
 /// @nodoc
@@ -68,7 +68,7 @@ class _$FeedGetPostThreadOutputCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? thread = null,Object? threadgate = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 thread: null == thread ? _self.thread : thread // ignore: cast_nullable_to_non_nullable
-as UFeedGetPostThreadThread,threadgate: freezed == threadgate ? _self.threadgate : threadgate // ignore: cast_nullable_to_non_nullable
+as UFeedGetPostThreadOutputThread,threadgate: freezed == threadgate ? _self.threadgate : threadgate // ignore: cast_nullable_to_non_nullable
 as ThreadgateView?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -77,9 +77,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$UFeedGetPostThreadThreadCopyWith<$Res> get thread {
+$UFeedGetPostThreadOutputThreadCopyWith<$Res> get thread {
 
-  return $UFeedGetPostThreadThreadCopyWith<$Res>(_self.thread, (value) {
+  return $UFeedGetPostThreadOutputThreadCopyWith<$Res>(_self.thread, (value) {
     return _then(_self.copyWith(thread: value));
   });
 }/// Create a copy of FeedGetPostThreadOutput
@@ -176,7 +176,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UFeedGetPostThreadThreadConverter()  UFeedGetPostThreadThread thread, @ThreadgateViewConverter()  ThreadgateView? threadgate,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@UFeedGetPostThreadOutputThreadConverter()  UFeedGetPostThreadOutputThread thread, @ThreadgateViewConverter()  ThreadgateView? threadgate,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FeedGetPostThreadOutput() when $default != null:
 return $default(_that.thread,_that.threadgate,_that.$unknown);case _:
@@ -197,7 +197,7 @@ return $default(_that.thread,_that.threadgate,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UFeedGetPostThreadThreadConverter()  UFeedGetPostThreadThread thread, @ThreadgateViewConverter()  ThreadgateView? threadgate,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@UFeedGetPostThreadOutputThreadConverter()  UFeedGetPostThreadOutputThread thread, @ThreadgateViewConverter()  ThreadgateView? threadgate,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _FeedGetPostThreadOutput():
 return $default(_that.thread,_that.threadgate,_that.$unknown);case _:
@@ -217,7 +217,7 @@ return $default(_that.thread,_that.threadgate,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UFeedGetPostThreadThreadConverter()  UFeedGetPostThreadThread thread, @ThreadgateViewConverter()  ThreadgateView? threadgate,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@UFeedGetPostThreadOutputThreadConverter()  UFeedGetPostThreadOutputThread thread, @ThreadgateViewConverter()  ThreadgateView? threadgate,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _FeedGetPostThreadOutput() when $default != null:
 return $default(_that.thread,_that.threadgate,_that.$unknown);case _:
@@ -232,10 +232,10 @@ return $default(_that.thread,_that.threadgate,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _FeedGetPostThreadOutput implements FeedGetPostThreadOutput {
-  const _FeedGetPostThreadOutput({@UFeedGetPostThreadThreadConverter() required this.thread, @ThreadgateViewConverter() this.threadgate, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _FeedGetPostThreadOutput({@UFeedGetPostThreadOutputThreadConverter() required this.thread, @ThreadgateViewConverter() this.threadgate, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _FeedGetPostThreadOutput.fromJson(Map<String, dynamic> json) => _$FeedGetPostThreadOutputFromJson(json);
 
-@override@UFeedGetPostThreadThreadConverter() final  UFeedGetPostThreadThread thread;
+@override@UFeedGetPostThreadOutputThreadConverter() final  UFeedGetPostThreadOutputThread thread;
 @override@ThreadgateViewConverter() final  ThreadgateView? threadgate;
  final  Map<String, dynamic>? _$unknown;
 @override Map<String, dynamic>? get $unknown {
@@ -280,11 +280,11 @@ abstract mixin class _$FeedGetPostThreadOutputCopyWith<$Res> implements $FeedGet
   factory _$FeedGetPostThreadOutputCopyWith(_FeedGetPostThreadOutput value, $Res Function(_FeedGetPostThreadOutput) _then) = __$FeedGetPostThreadOutputCopyWithImpl;
 @override @useResult
 $Res call({
-@UFeedGetPostThreadThreadConverter() UFeedGetPostThreadThread thread,@ThreadgateViewConverter() ThreadgateView? threadgate, Map<String, dynamic>? $unknown
+@UFeedGetPostThreadOutputThreadConverter() UFeedGetPostThreadOutputThread thread,@ThreadgateViewConverter() ThreadgateView? threadgate, Map<String, dynamic>? $unknown
 });
 
 
-@override $UFeedGetPostThreadThreadCopyWith<$Res> get thread;@override $ThreadgateViewCopyWith<$Res>? get threadgate;
+@override $UFeedGetPostThreadOutputThreadCopyWith<$Res> get thread;@override $ThreadgateViewCopyWith<$Res>? get threadgate;
 
 }
 /// @nodoc
@@ -300,7 +300,7 @@ class __$FeedGetPostThreadOutputCopyWithImpl<$Res>
 @override @pragma('vm:prefer-inline') $Res call({Object? thread = null,Object? threadgate = freezed,Object? $unknown = freezed,}) {
   return _then(_FeedGetPostThreadOutput(
 thread: null == thread ? _self.thread : thread // ignore: cast_nullable_to_non_nullable
-as UFeedGetPostThreadThread,threadgate: freezed == threadgate ? _self.threadgate : threadgate // ignore: cast_nullable_to_non_nullable
+as UFeedGetPostThreadOutputThread,threadgate: freezed == threadgate ? _self.threadgate : threadgate // ignore: cast_nullable_to_non_nullable
 as ThreadgateView?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -310,9 +310,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$UFeedGetPostThreadThreadCopyWith<$Res> get thread {
+$UFeedGetPostThreadOutputThreadCopyWith<$Res> get thread {
 
-  return $UFeedGetPostThreadThreadCopyWith<$Res>(_self.thread, (value) {
+  return $UFeedGetPostThreadOutputThreadCopyWith<$Res>(_self.thread, (value) {
     return _then(_self.copyWith(thread: value));
   });
 }/// Create a copy of FeedGetPostThreadOutput

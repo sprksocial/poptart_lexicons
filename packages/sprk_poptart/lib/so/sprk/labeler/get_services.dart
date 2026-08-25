@@ -10,4 +10,4 @@
 export 'get_services/descriptor.dart';
 export 'get_services/input.dart';
 export 'get_services/output.dart';
-export 'get_services/union_main_views.dart';
+export 'get_services/union_main_output_views.dart';

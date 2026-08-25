@@ -9,4 +9,4 @@
 
 export 'add_member/descriptor.dart';
 export 'add_member/input.dart';
-export 'add_member/main_role.dart';
+export 'add_member/main_input_role.dart';

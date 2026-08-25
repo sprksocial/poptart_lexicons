@@ -21,8 +21,9 @@ _GraphGetListsWithMembershipInput _$GraphGetListsWithMembershipInputFromJson(
       'purposes',
       (v) => (v as List<dynamic>?)
           ?.map(
-            (e) => const GraphGetListsWithMembershipPurposesConverter()
-                .fromJson(e as String),
+            (e) =>
+                const GraphGetListsWithMembershipParametersPurposesConverter()
+                    .fromJson(e as String),
           )
           .toList(),
     ),
@@ -41,7 +42,9 @@ Map<String, dynamic> _$GraphGetListsWithMembershipInputToJson(
   'limit': instance.limit,
   'cursor': ?instance.cursor,
   'purposes': ?instance.purposes
-      ?.map(const GraphGetListsWithMembershipPurposesConverter().toJson)
+      ?.map(
+        const GraphGetListsWithMembershipParametersPurposesConverter().toJson,
+      )
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

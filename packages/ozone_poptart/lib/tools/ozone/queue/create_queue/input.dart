@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_subject_types.dart';
+import './main_input_subject_types.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -24,21 +24,23 @@ abstract class QueueCreateQueueInput with _$QueueCreateQueueInput {
     'collection',
     'reportTypes',
     'description',
+    'recommendedPolicies',
   ];
 
   @JsonSerializable(includeIfNull: false)
   const factory QueueCreateQueueInput({
     /// Display name for the queue (must be unique)
     required String name,
-    @QueueCreateQueueSubjectTypesConverter()
-    required List<QueueCreateQueueSubjectTypes> subjectTypes,
+    @QueueCreateQueueInputSubjectTypesConverter()
+    List<QueueCreateQueueInputSubjectTypes>? subjectTypes,
 
     /// Collection name for record subjects. Required if subjectTypes includes 'record'.
     String? collection,
-    required List<String> reportTypes,
+    List<String>? reportTypes,
 
     /// Optional description of the queue
     String? description,
+    List<String>? recommendedPolicies,
 
     Map<String, dynamic>? $unknown,
   }) = _QueueCreateQueueInput;

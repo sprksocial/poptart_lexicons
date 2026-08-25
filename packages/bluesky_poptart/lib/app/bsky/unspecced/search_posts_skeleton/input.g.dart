@@ -17,10 +17,15 @@ _UnspeccedSearchPostsSkeletonInput _$UnspeccedSearchPostsSkeletonInputFromJson(
     q: $checkedConvert('q', (v) => v as String),
     sort: $checkedConvert(
       'sort',
-      (v) => _$JsonConverterFromJson<String, UnspeccedSearchPostsSkeletonSort>(
-        v,
-        const UnspeccedSearchPostsSkeletonSortConverter().fromJson,
-      ),
+      (v) =>
+          _$JsonConverterFromJson<
+            String,
+            UnspeccedSearchPostsSkeletonParametersSort
+          >(
+            v,
+            const UnspeccedSearchPostsSkeletonParametersSortConverter()
+                .fromJson,
+          ),
     ),
     since: $checkedConvert('since', (v) => v as String?),
     until: $checkedConvert('until', (v) => v as String?),
@@ -48,10 +53,14 @@ Map<String, dynamic> _$UnspeccedSearchPostsSkeletonInputToJson(
   _UnspeccedSearchPostsSkeletonInput instance,
 ) => <String, dynamic>{
   'q': instance.q,
-  'sort': ?_$JsonConverterToJson<String, UnspeccedSearchPostsSkeletonSort>(
-    instance.sort,
-    const UnspeccedSearchPostsSkeletonSortConverter().toJson,
-  ),
+  'sort':
+      ?_$JsonConverterToJson<
+        String,
+        UnspeccedSearchPostsSkeletonParametersSort
+      >(
+        instance.sort,
+        const UnspeccedSearchPostsSkeletonParametersSortConverter().toJson,
+      ),
   'since': ?instance.since,
   'until': ?instance.until,
   'mentions': ?instance.mentions,

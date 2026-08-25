@@ -15,9 +15,9 @@ _TeamUpdateMemberInput _$TeamUpdateMemberInputFromJson(Map json) =>
         disabled: $checkedConvert('disabled', (v) => v as bool?),
         role: $checkedConvert(
           'role',
-          (v) => _$JsonConverterFromJson<String, TeamUpdateMemberRole>(
+          (v) => _$JsonConverterFromJson<String, TeamUpdateMemberInputRole>(
             v,
-            const TeamUpdateMemberRoleConverter().fromJson,
+            const TeamUpdateMemberInputRoleConverter().fromJson,
           ),
         ),
         $unknown: $checkedConvert(
@@ -33,9 +33,9 @@ Map<String, dynamic> _$TeamUpdateMemberInputToJson(
 ) => <String, dynamic>{
   'did': instance.did,
   'disabled': ?instance.disabled,
-  'role': ?_$JsonConverterToJson<String, TeamUpdateMemberRole>(
+  'role': ?_$JsonConverterToJson<String, TeamUpdateMemberInputRole>(
     instance.role,
-    const TeamUpdateMemberRoleConverter().toJson,
+    const TeamUpdateMemberInputRoleConverter().toJson,
   ),
   r'$unknown': ?instance.$unknown,
 };

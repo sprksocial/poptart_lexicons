@@ -24,10 +24,11 @@ _FeedGetPostThreadInput _$FeedGetPostThreadInputFromJson(Map json) =>
         ),
         sort: $checkedConvert(
           'sort',
-          (v) => _$JsonConverterFromJson<String, FeedGetPostThreadSort>(
-            v,
-            const FeedGetPostThreadSortConverter().fromJson,
-          ),
+          (v) =>
+              _$JsonConverterFromJson<String, FeedGetPostThreadParametersSort>(
+                v,
+                const FeedGetPostThreadParametersSortConverter().fromJson,
+              ),
         ),
         $unknown: $checkedConvert(
           r'$unknown',
@@ -45,9 +46,9 @@ Map<String, dynamic> _$FeedGetPostThreadInputToJson(
   'cursor': ?instance.cursor,
   'depth': instance.depth,
   'parentHeight': instance.parentHeight,
-  'sort': ?_$JsonConverterToJson<String, FeedGetPostThreadSort>(
+  'sort': ?_$JsonConverterToJson<String, FeedGetPostThreadParametersSort>(
     instance.sort,
-    const FeedGetPostThreadSortConverter().toJson,
+    const FeedGetPostThreadParametersSortConverter().toJson,
   ),
   r'$unknown': ?instance.$unknown,
 };

@@ -9,6 +9,7 @@ import 'package:poptart_core/internals.dart';
 
 import './featured_artist.dart';
 import './support_gate.dart';
+import './union_main_labels.dart';
 import 'package:poptart_core/poptart_core.dart';
 
 part 'main.freezed.dart';
@@ -33,6 +34,7 @@ abstract class TrackRecord with _$TrackRecord {
     'createdAt',
     'supportGate',
     'description',
+    'labels',
     'audioBlob',
   ];
 
@@ -70,6 +72,7 @@ abstract class TrackRecord with _$TrackRecord {
 
     /// Track description (liner notes, show notes, etc.).
     String? description,
+    @UTrackLabelsConverter() UTrackLabels? labels,
 
     /// Audio file stored on the user's PDS. When present, this is the canonical source; audioUrl is the CDN fallback.
     @BlobConverter() Blob? audioBlob,
@@ -99,6 +102,8 @@ extension TrackRecordExtension on TrackRecord {
   bool get hasNotSupportGate => !hasSupportGate;
   bool get hasDescription => description != null;
   bool get hasNotDescription => !hasDescription;
+  bool get hasLabels => labels != null;
+  bool get hasNotLabels => !hasLabels;
   bool get hasAudioBlob => audioBlob != null;
   bool get hasNotAudioBlob => !hasAudioBlob;
 }

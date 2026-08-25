@@ -9,7 +9,7 @@
 
 export 'get_post_thread_v_2/descriptor.dart';
 export 'get_post_thread_v_2/input.dart';
-export 'get_post_thread_v_2/main_sort.dart';
+export 'get_post_thread_v_2/main_parameters_sort.dart';
 export 'get_post_thread_v_2/output.dart';
 export 'get_post_thread_v_2/thread_item.dart';
 export 'get_post_thread_v_2/union_thread_item_value.dart';

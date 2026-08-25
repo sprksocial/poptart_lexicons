@@ -17,6 +17,7 @@ workspace:
 
 dev_dependencies:
   melos: ^7.1.0
+  poptart_lex_gen: 0.3.0
 
 melos:
   scripts:

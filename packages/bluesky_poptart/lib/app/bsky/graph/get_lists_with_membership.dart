@@ -10,5 +10,5 @@
 export 'get_lists_with_membership/descriptor.dart';
 export 'get_lists_with_membership/input.dart';
 export 'get_lists_with_membership/list_with_membership.dart';
-export 'get_lists_with_membership/main_purposes.dart';
+export 'get_lists_with_membership/main_parameters_purposes.dart';
 export 'get_lists_with_membership/output.dart';

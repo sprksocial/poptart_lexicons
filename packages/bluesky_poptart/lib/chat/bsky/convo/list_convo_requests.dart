@@ -10,4 +10,4 @@
 export 'list_convo_requests/descriptor.dart';
 export 'list_convo_requests/input.dart';
 export 'list_convo_requests/output.dart';
-export 'list_convo_requests/union_main_requests.dart';
+export 'list_convo_requests/union_main_output_requests.dart';

@@ -6,6 +6,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/internals.dart' show isA;
 
+import './adult_content_pref.dart';
 import './content_label_pref.dart';
 import './saved_feeds_pref.dart';
 import './personal_details_pref.dart';
@@ -26,6 +27,9 @@ part 'union_preferences.freezed.dart';
 sealed class UPreferences with _$UPreferences {
   const UPreferences._();
 
+  const factory UPreferences.adultContentPref({
+    required AdultContentPref data,
+  }) = UPreferencesAdultContentPref;
   const factory UPreferences.contentLabelPref({
     required ContentLabelPref data,
   }) = UPreferencesContentLabelPref;
@@ -54,6 +58,10 @@ sealed class UPreferences with _$UPreferences {
 }
 
 extension UPreferencesExtension on UPreferences {
+  bool get isAdultContentPref => isA<UPreferencesAdultContentPref>(this);
+  bool get isNotAdultContentPref => !isAdultContentPref;
+  AdultContentPref? get adultContentPref =>
+      isAdultContentPref ? data as AdultContentPref : null;
   bool get isContentLabelPref => isA<UPreferencesContentLabelPref>(this);
   bool get isNotContentLabelPref => !isContentLabelPref;
   ContentLabelPref? get contentLabelPref =>
@@ -103,6 +111,11 @@ final class UPreferencesConverter
   @override
   UPreferences fromJson(Map<String, dynamic> json) {
     try {
+      if (AdultContentPref.validate(json)) {
+        return UPreferences.adultContentPref(
+          data: const AdultContentPrefConverter().fromJson(json),
+        );
+      }
       if (ContentLabelPref.validate(json)) {
         return UPreferences.contentLabelPref(
           data: const ContentLabelPrefConverter().fromJson(json),
@@ -157,6 +170,7 @@ final class UPreferencesConverter
 
   @override
   Map<String, dynamic> toJson(UPreferences object) => object.when(
+    adultContentPref: (data) => const AdultContentPrefConverter().toJson(data),
     contentLabelPref: (data) => const ContentLabelPrefConverter().toJson(data),
     savedFeedsPref: (data) => const SavedFeedsPrefConverter().toJson(data),
     personalDetailsPref: (data) =>

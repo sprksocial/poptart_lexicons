@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_messages.dart';
+import './union_main_output_messages.dart';
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -23,8 +23,8 @@ abstract class ConvoGetMessagesOutput with _$ConvoGetMessagesOutput {
   @JsonSerializable(includeIfNull: false)
   const factory ConvoGetMessagesOutput({
     String? cursor,
-    @UConvoGetMessagesMessagesConverter()
-    required List<UConvoGetMessagesMessages> messages,
+    @UConvoGetMessagesOutputMessagesConverter()
+    required List<UConvoGetMessagesOutputMessages> messages,
 
     Map<String, dynamic>? $unknown,
   }) = _ConvoGetMessagesOutput;

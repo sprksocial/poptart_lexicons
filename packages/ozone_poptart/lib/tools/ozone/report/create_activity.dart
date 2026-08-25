@@ -10,4 +10,4 @@
 export 'create_activity/descriptor.dart';
 export 'create_activity/input.dart';
 export 'create_activity/output.dart';
-export 'create_activity/union_main_activity.dart';
+export 'create_activity/union_main_input_activity.dart';

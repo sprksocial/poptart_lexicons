@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$NotificationUnregisterPushInput {
 
- String get serviceDid; String get token;@NotificationUnregisterPushPlatformConverter() NotificationUnregisterPushPlatform get platform; String get appId; Map<String, dynamic>? get $unknown;
+ String get serviceDid; String get token;@NotificationUnregisterPushInputPlatformConverter() NotificationUnregisterPushInputPlatform get platform; String get appId; Map<String, dynamic>? get $unknown;
 /// Create a copy of NotificationUnregisterPushInput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,11 +48,11 @@ abstract mixin class $NotificationUnregisterPushInputCopyWith<$Res>  {
   factory $NotificationUnregisterPushInputCopyWith(NotificationUnregisterPushInput value, $Res Function(NotificationUnregisterPushInput) _then) = _$NotificationUnregisterPushInputCopyWithImpl;
 @useResult
 $Res call({
- String serviceDid, String token,@NotificationUnregisterPushPlatformConverter() NotificationUnregisterPushPlatform platform, String appId, Map<String, dynamic>? $unknown
+ String serviceDid, String token,@NotificationUnregisterPushInputPlatformConverter() NotificationUnregisterPushInputPlatform platform, String appId, Map<String, dynamic>? $unknown
 });
 
 
-$NotificationUnregisterPushPlatformCopyWith<$Res> get platform;
+$NotificationUnregisterPushInputPlatformCopyWith<$Res> get platform;
 
 }
 /// @nodoc
@@ -70,7 +70,7 @@ class _$NotificationUnregisterPushInputCopyWithImpl<$Res>
 serviceDid: null == serviceDid ? _self.serviceDid : serviceDid // ignore: cast_nullable_to_non_nullable
 as String,token: null == token ? _self.token : token // ignore: cast_nullable_to_non_nullable
 as String,platform: null == platform ? _self.platform : platform // ignore: cast_nullable_to_non_nullable
-as NotificationUnregisterPushPlatform,appId: null == appId ? _self.appId : appId // ignore: cast_nullable_to_non_nullable
+as NotificationUnregisterPushInputPlatform,appId: null == appId ? _self.appId : appId // ignore: cast_nullable_to_non_nullable
 as String,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -79,9 +79,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$NotificationUnregisterPushPlatformCopyWith<$Res> get platform {
+$NotificationUnregisterPushInputPlatformCopyWith<$Res> get platform {
 
-  return $NotificationUnregisterPushPlatformCopyWith<$Res>(_self.platform, (value) {
+  return $NotificationUnregisterPushInputPlatformCopyWith<$Res>(_self.platform, (value) {
     return _then(_self.copyWith(platform: value));
   });
 }
@@ -166,7 +166,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String serviceDid,  String token, @NotificationUnregisterPushPlatformConverter()  NotificationUnregisterPushPlatform platform,  String appId,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String serviceDid,  String token, @NotificationUnregisterPushInputPlatformConverter()  NotificationUnregisterPushInputPlatform platform,  String appId,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _NotificationUnregisterPushInput() when $default != null:
 return $default(_that.serviceDid,_that.token,_that.platform,_that.appId,_that.$unknown);case _:
@@ -187,7 +187,7 @@ return $default(_that.serviceDid,_that.token,_that.platform,_that.appId,_that.$u
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String serviceDid,  String token, @NotificationUnregisterPushPlatformConverter()  NotificationUnregisterPushPlatform platform,  String appId,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String serviceDid,  String token, @NotificationUnregisterPushInputPlatformConverter()  NotificationUnregisterPushInputPlatform platform,  String appId,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _NotificationUnregisterPushInput():
 return $default(_that.serviceDid,_that.token,_that.platform,_that.appId,_that.$unknown);case _:
@@ -207,7 +207,7 @@ return $default(_that.serviceDid,_that.token,_that.platform,_that.appId,_that.$u
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String serviceDid,  String token, @NotificationUnregisterPushPlatformConverter()  NotificationUnregisterPushPlatform platform,  String appId,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String serviceDid,  String token, @NotificationUnregisterPushInputPlatformConverter()  NotificationUnregisterPushInputPlatform platform,  String appId,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _NotificationUnregisterPushInput() when $default != null:
 return $default(_that.serviceDid,_that.token,_that.platform,_that.appId,_that.$unknown);case _:
@@ -222,12 +222,12 @@ return $default(_that.serviceDid,_that.token,_that.platform,_that.appId,_that.$u
 
 @JsonSerializable(includeIfNull: false)
 class _NotificationUnregisterPushInput implements NotificationUnregisterPushInput {
-  const _NotificationUnregisterPushInput({required this.serviceDid, required this.token, @NotificationUnregisterPushPlatformConverter() required this.platform, required this.appId, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _NotificationUnregisterPushInput({required this.serviceDid, required this.token, @NotificationUnregisterPushInputPlatformConverter() required this.platform, required this.appId, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _NotificationUnregisterPushInput.fromJson(Map<String, dynamic> json) => _$NotificationUnregisterPushInputFromJson(json);
 
 @override final  String serviceDid;
 @override final  String token;
-@override@NotificationUnregisterPushPlatformConverter() final  NotificationUnregisterPushPlatform platform;
+@override@NotificationUnregisterPushInputPlatformConverter() final  NotificationUnregisterPushInputPlatform platform;
 @override final  String appId;
  final  Map<String, dynamic>? _$unknown;
 @override Map<String, dynamic>? get $unknown {
@@ -272,11 +272,11 @@ abstract mixin class _$NotificationUnregisterPushInputCopyWith<$Res> implements 
   factory _$NotificationUnregisterPushInputCopyWith(_NotificationUnregisterPushInput value, $Res Function(_NotificationUnregisterPushInput) _then) = __$NotificationUnregisterPushInputCopyWithImpl;
 @override @useResult
 $Res call({
- String serviceDid, String token,@NotificationUnregisterPushPlatformConverter() NotificationUnregisterPushPlatform platform, String appId, Map<String, dynamic>? $unknown
+ String serviceDid, String token,@NotificationUnregisterPushInputPlatformConverter() NotificationUnregisterPushInputPlatform platform, String appId, Map<String, dynamic>? $unknown
 });
 
 
-@override $NotificationUnregisterPushPlatformCopyWith<$Res> get platform;
+@override $NotificationUnregisterPushInputPlatformCopyWith<$Res> get platform;
 
 }
 /// @nodoc
@@ -294,7 +294,7 @@ class __$NotificationUnregisterPushInputCopyWithImpl<$Res>
 serviceDid: null == serviceDid ? _self.serviceDid : serviceDid // ignore: cast_nullable_to_non_nullable
 as String,token: null == token ? _self.token : token // ignore: cast_nullable_to_non_nullable
 as String,platform: null == platform ? _self.platform : platform // ignore: cast_nullable_to_non_nullable
-as NotificationUnregisterPushPlatform,appId: null == appId ? _self.appId : appId // ignore: cast_nullable_to_non_nullable
+as NotificationUnregisterPushInputPlatform,appId: null == appId ? _self.appId : appId // ignore: cast_nullable_to_non_nullable
 as String,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -304,9 +304,9 @@ as Map<String, dynamic>?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$NotificationUnregisterPushPlatformCopyWith<$Res> get platform {
+$NotificationUnregisterPushInputPlatformCopyWith<$Res> get platform {
 
-  return $NotificationUnregisterPushPlatformCopyWith<$Res>(_self.platform, (value) {
+  return $NotificationUnregisterPushInputPlatformCopyWith<$Res>(_self.platform, (value) {
     return _then(_self.copyWith(platform: value));
   });
 }

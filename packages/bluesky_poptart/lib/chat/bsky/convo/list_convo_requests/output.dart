@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './union_main_requests.dart';
+import './union_main_output_requests.dart';
 
 part 'output.freezed.dart';
 part 'output.g.dart';
@@ -24,8 +24,8 @@ abstract class ConvoListConvoRequestsOutput
   @JsonSerializable(includeIfNull: false)
   const factory ConvoListConvoRequestsOutput({
     String? cursor,
-    @UConvoListConvoRequestsRequestsConverter()
-    required List<UConvoListConvoRequestsRequests> requests,
+    @UConvoListConvoRequestsOutputRequestsConverter()
+    required List<UConvoListConvoRequestsOutputRequests> requests,
 
     Map<String, dynamic>? $unknown,
   }) = _ConvoListConvoRequestsOutput;

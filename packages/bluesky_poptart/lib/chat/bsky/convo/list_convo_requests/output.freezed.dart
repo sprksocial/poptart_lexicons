@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ConvoListConvoRequestsOutput {
 
- String? get cursor;@UConvoListConvoRequestsRequestsConverter() List<UConvoListConvoRequestsRequests> get requests; Map<String, dynamic>? get $unknown;
+ String? get cursor;@UConvoListConvoRequestsOutputRequestsConverter() List<UConvoListConvoRequestsOutputRequests> get requests; Map<String, dynamic>? get $unknown;
 /// Create a copy of ConvoListConvoRequestsOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ConvoListConvoRequestsOutputCopyWith<$Res>  {
   factory $ConvoListConvoRequestsOutputCopyWith(ConvoListConvoRequestsOutput value, $Res Function(ConvoListConvoRequestsOutput) _then) = _$ConvoListConvoRequestsOutputCopyWithImpl;
 @useResult
 $Res call({
- String? cursor,@UConvoListConvoRequestsRequestsConverter() List<UConvoListConvoRequestsRequests> requests, Map<String, dynamic>? $unknown
+ String? cursor,@UConvoListConvoRequestsOutputRequestsConverter() List<UConvoListConvoRequestsOutputRequests> requests, Map<String, dynamic>? $unknown
 });
 
 
@@ -69,7 +69,7 @@ class _$ConvoListConvoRequestsOutputCopyWithImpl<$Res>
   return _then(_self.copyWith(
 cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,requests: null == requests ? _self.requests : requests // ignore: cast_nullable_to_non_nullable
-as List<UConvoListConvoRequestsRequests>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UConvoListConvoRequestsOutputRequests>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -155,7 +155,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor, @UConvoListConvoRequestsRequestsConverter()  List<UConvoListConvoRequestsRequests> requests,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor, @UConvoListConvoRequestsOutputRequestsConverter()  List<UConvoListConvoRequestsOutputRequests> requests,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ConvoListConvoRequestsOutput() when $default != null:
 return $default(_that.cursor,_that.requests,_that.$unknown);case _:
@@ -176,7 +176,7 @@ return $default(_that.cursor,_that.requests,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor, @UConvoListConvoRequestsRequestsConverter()  List<UConvoListConvoRequestsRequests> requests,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor, @UConvoListConvoRequestsOutputRequestsConverter()  List<UConvoListConvoRequestsOutputRequests> requests,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ConvoListConvoRequestsOutput():
 return $default(_that.cursor,_that.requests,_that.$unknown);case _:
@@ -196,7 +196,7 @@ return $default(_that.cursor,_that.requests,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor, @UConvoListConvoRequestsRequestsConverter()  List<UConvoListConvoRequestsRequests> requests,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor, @UConvoListConvoRequestsOutputRequestsConverter()  List<UConvoListConvoRequestsOutputRequests> requests,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ConvoListConvoRequestsOutput() when $default != null:
 return $default(_that.cursor,_that.requests,_that.$unknown);case _:
@@ -211,12 +211,12 @@ return $default(_that.cursor,_that.requests,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _ConvoListConvoRequestsOutput implements ConvoListConvoRequestsOutput {
-  const _ConvoListConvoRequestsOutput({this.cursor, @UConvoListConvoRequestsRequestsConverter() required final  List<UConvoListConvoRequestsRequests> requests, final  Map<String, dynamic>? $unknown}): _requests = requests,_$unknown = $unknown;
+  const _ConvoListConvoRequestsOutput({this.cursor, @UConvoListConvoRequestsOutputRequestsConverter() required final  List<UConvoListConvoRequestsOutputRequests> requests, final  Map<String, dynamic>? $unknown}): _requests = requests,_$unknown = $unknown;
   factory _ConvoListConvoRequestsOutput.fromJson(Map<String, dynamic> json) => _$ConvoListConvoRequestsOutputFromJson(json);
 
 @override final  String? cursor;
- final  List<UConvoListConvoRequestsRequests> _requests;
-@override@UConvoListConvoRequestsRequestsConverter() List<UConvoListConvoRequestsRequests> get requests {
+ final  List<UConvoListConvoRequestsOutputRequests> _requests;
+@override@UConvoListConvoRequestsOutputRequestsConverter() List<UConvoListConvoRequestsOutputRequests> get requests {
   if (_requests is EqualUnmodifiableListView) return _requests;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_requests);
@@ -265,7 +265,7 @@ abstract mixin class _$ConvoListConvoRequestsOutputCopyWith<$Res> implements $Co
   factory _$ConvoListConvoRequestsOutputCopyWith(_ConvoListConvoRequestsOutput value, $Res Function(_ConvoListConvoRequestsOutput) _then) = __$ConvoListConvoRequestsOutputCopyWithImpl;
 @override @useResult
 $Res call({
- String? cursor,@UConvoListConvoRequestsRequestsConverter() List<UConvoListConvoRequestsRequests> requests, Map<String, dynamic>? $unknown
+ String? cursor,@UConvoListConvoRequestsOutputRequestsConverter() List<UConvoListConvoRequestsOutputRequests> requests, Map<String, dynamic>? $unknown
 });
 
 
@@ -286,7 +286,7 @@ class __$ConvoListConvoRequestsOutputCopyWithImpl<$Res>
   return _then(_ConvoListConvoRequestsOutput(
 cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,requests: null == requests ? _self._requests : requests // ignore: cast_nullable_to_non_nullable
-as List<UConvoListConvoRequestsRequests>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UConvoListConvoRequestsOutputRequests>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

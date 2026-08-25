@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$LabelerGetServicesOutput {
 
-@ULabelerGetServicesViewsConverter() List<ULabelerGetServicesViews> get views; Map<String, dynamic>? get $unknown;
+@ULabelerGetServicesOutputViewsConverter() List<ULabelerGetServicesOutputViews> get views; Map<String, dynamic>? get $unknown;
 /// Create a copy of LabelerGetServicesOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $LabelerGetServicesOutputCopyWith<$Res>  {
   factory $LabelerGetServicesOutputCopyWith(LabelerGetServicesOutput value, $Res Function(LabelerGetServicesOutput) _then) = _$LabelerGetServicesOutputCopyWithImpl;
 @useResult
 $Res call({
-@ULabelerGetServicesViewsConverter() List<ULabelerGetServicesViews> views, Map<String, dynamic>? $unknown
+@ULabelerGetServicesOutputViewsConverter() List<ULabelerGetServicesOutputViews> views, Map<String, dynamic>? $unknown
 });
 
 
@@ -68,7 +68,7 @@ class _$LabelerGetServicesOutputCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? views = null,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 views: null == views ? _self.views : views // ignore: cast_nullable_to_non_nullable
-as List<ULabelerGetServicesViews>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<ULabelerGetServicesOutputViews>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -154,7 +154,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@ULabelerGetServicesViewsConverter()  List<ULabelerGetServicesViews> views,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@ULabelerGetServicesOutputViewsConverter()  List<ULabelerGetServicesOutputViews> views,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _LabelerGetServicesOutput() when $default != null:
 return $default(_that.views,_that.$unknown);case _:
@@ -175,7 +175,7 @@ return $default(_that.views,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@ULabelerGetServicesViewsConverter()  List<ULabelerGetServicesViews> views,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@ULabelerGetServicesOutputViewsConverter()  List<ULabelerGetServicesOutputViews> views,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _LabelerGetServicesOutput():
 return $default(_that.views,_that.$unknown);case _:
@@ -195,7 +195,7 @@ return $default(_that.views,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@ULabelerGetServicesViewsConverter()  List<ULabelerGetServicesViews> views,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@ULabelerGetServicesOutputViewsConverter()  List<ULabelerGetServicesOutputViews> views,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _LabelerGetServicesOutput() when $default != null:
 return $default(_that.views,_that.$unknown);case _:
@@ -210,11 +210,11 @@ return $default(_that.views,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _LabelerGetServicesOutput implements LabelerGetServicesOutput {
-  const _LabelerGetServicesOutput({@ULabelerGetServicesViewsConverter() required final  List<ULabelerGetServicesViews> views, final  Map<String, dynamic>? $unknown}): _views = views,_$unknown = $unknown;
+  const _LabelerGetServicesOutput({@ULabelerGetServicesOutputViewsConverter() required final  List<ULabelerGetServicesOutputViews> views, final  Map<String, dynamic>? $unknown}): _views = views,_$unknown = $unknown;
   factory _LabelerGetServicesOutput.fromJson(Map<String, dynamic> json) => _$LabelerGetServicesOutputFromJson(json);
 
- final  List<ULabelerGetServicesViews> _views;
-@override@ULabelerGetServicesViewsConverter() List<ULabelerGetServicesViews> get views {
+ final  List<ULabelerGetServicesOutputViews> _views;
+@override@ULabelerGetServicesOutputViewsConverter() List<ULabelerGetServicesOutputViews> get views {
   if (_views is EqualUnmodifiableListView) return _views;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_views);
@@ -263,7 +263,7 @@ abstract mixin class _$LabelerGetServicesOutputCopyWith<$Res> implements $Labele
   factory _$LabelerGetServicesOutputCopyWith(_LabelerGetServicesOutput value, $Res Function(_LabelerGetServicesOutput) _then) = __$LabelerGetServicesOutputCopyWithImpl;
 @override @useResult
 $Res call({
-@ULabelerGetServicesViewsConverter() List<ULabelerGetServicesViews> views, Map<String, dynamic>? $unknown
+@ULabelerGetServicesOutputViewsConverter() List<ULabelerGetServicesOutputViews> views, Map<String, dynamic>? $unknown
 });
 
 
@@ -283,7 +283,7 @@ class __$LabelerGetServicesOutputCopyWithImpl<$Res>
 @override @pragma('vm:prefer-inline') $Res call({Object? views = null,Object? $unknown = freezed,}) {
   return _then(_LabelerGetServicesOutput(
 views: null == views ? _self._views : views // ignore: cast_nullable_to_non_nullable
-as List<ULabelerGetServicesViews>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<ULabelerGetServicesOutputViews>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

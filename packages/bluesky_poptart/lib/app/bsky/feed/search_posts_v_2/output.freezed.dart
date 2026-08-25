@@ -17,7 +17,7 @@ mixin _$FeedSearchPostsV2Output {
 
 /// Cursor for the next page of results.
  String? get cursor;/// Estimated total number of matching hits. May be rounded or truncated.
- int? get hitsTotal;@PostViewConverter() List<PostView> get posts;@FeedSearchPostsV2DetectedQueryLanguagesConverter() List<FeedSearchPostsV2DetectedQueryLanguages>? get detectedQueryLanguages; Map<String, dynamic>? get $unknown;
+ int? get hitsTotal;@PostViewConverter() List<PostView> get posts;@FeedSearchPostsV2OutputDetectedQueryLanguagesConverter() List<FeedSearchPostsV2OutputDetectedQueryLanguages>? get detectedQueryLanguages; Map<String, dynamic>? get $unknown;
 /// Create a copy of FeedSearchPostsV2Output
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -50,7 +50,7 @@ abstract mixin class $FeedSearchPostsV2OutputCopyWith<$Res>  {
   factory $FeedSearchPostsV2OutputCopyWith(FeedSearchPostsV2Output value, $Res Function(FeedSearchPostsV2Output) _then) = _$FeedSearchPostsV2OutputCopyWithImpl;
 @useResult
 $Res call({
- String? cursor, int? hitsTotal,@PostViewConverter() List<PostView> posts,@FeedSearchPostsV2DetectedQueryLanguagesConverter() List<FeedSearchPostsV2DetectedQueryLanguages>? detectedQueryLanguages, Map<String, dynamic>? $unknown
+ String? cursor, int? hitsTotal,@PostViewConverter() List<PostView> posts,@FeedSearchPostsV2OutputDetectedQueryLanguagesConverter() List<FeedSearchPostsV2OutputDetectedQueryLanguages>? detectedQueryLanguages, Map<String, dynamic>? $unknown
 });
 
 
@@ -73,7 +73,7 @@ cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_no
 as String?,hitsTotal: freezed == hitsTotal ? _self.hitsTotal : hitsTotal // ignore: cast_nullable_to_non_nullable
 as int?,posts: null == posts ? _self.posts : posts // ignore: cast_nullable_to_non_nullable
 as List<PostView>,detectedQueryLanguages: freezed == detectedQueryLanguages ? _self.detectedQueryLanguages : detectedQueryLanguages // ignore: cast_nullable_to_non_nullable
-as List<FeedSearchPostsV2DetectedQueryLanguages>?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<FeedSearchPostsV2OutputDetectedQueryLanguages>?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -159,7 +159,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor,  int? hitsTotal, @PostViewConverter()  List<PostView> posts, @FeedSearchPostsV2DetectedQueryLanguagesConverter()  List<FeedSearchPostsV2DetectedQueryLanguages>? detectedQueryLanguages,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor,  int? hitsTotal, @PostViewConverter()  List<PostView> posts, @FeedSearchPostsV2OutputDetectedQueryLanguagesConverter()  List<FeedSearchPostsV2OutputDetectedQueryLanguages>? detectedQueryLanguages,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FeedSearchPostsV2Output() when $default != null:
 return $default(_that.cursor,_that.hitsTotal,_that.posts,_that.detectedQueryLanguages,_that.$unknown);case _:
@@ -180,7 +180,7 @@ return $default(_that.cursor,_that.hitsTotal,_that.posts,_that.detectedQueryLang
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor,  int? hitsTotal, @PostViewConverter()  List<PostView> posts, @FeedSearchPostsV2DetectedQueryLanguagesConverter()  List<FeedSearchPostsV2DetectedQueryLanguages>? detectedQueryLanguages,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor,  int? hitsTotal, @PostViewConverter()  List<PostView> posts, @FeedSearchPostsV2OutputDetectedQueryLanguagesConverter()  List<FeedSearchPostsV2OutputDetectedQueryLanguages>? detectedQueryLanguages,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _FeedSearchPostsV2Output():
 return $default(_that.cursor,_that.hitsTotal,_that.posts,_that.detectedQueryLanguages,_that.$unknown);case _:
@@ -200,7 +200,7 @@ return $default(_that.cursor,_that.hitsTotal,_that.posts,_that.detectedQueryLang
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor,  int? hitsTotal, @PostViewConverter()  List<PostView> posts, @FeedSearchPostsV2DetectedQueryLanguagesConverter()  List<FeedSearchPostsV2DetectedQueryLanguages>? detectedQueryLanguages,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor,  int? hitsTotal, @PostViewConverter()  List<PostView> posts, @FeedSearchPostsV2OutputDetectedQueryLanguagesConverter()  List<FeedSearchPostsV2OutputDetectedQueryLanguages>? detectedQueryLanguages,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _FeedSearchPostsV2Output() when $default != null:
 return $default(_that.cursor,_that.hitsTotal,_that.posts,_that.detectedQueryLanguages,_that.$unknown);case _:
@@ -215,7 +215,7 @@ return $default(_that.cursor,_that.hitsTotal,_that.posts,_that.detectedQueryLang
 
 @JsonSerializable(includeIfNull: false)
 class _FeedSearchPostsV2Output implements FeedSearchPostsV2Output {
-  const _FeedSearchPostsV2Output({this.cursor, this.hitsTotal, @PostViewConverter() required final  List<PostView> posts, @FeedSearchPostsV2DetectedQueryLanguagesConverter() final  List<FeedSearchPostsV2DetectedQueryLanguages>? detectedQueryLanguages, final  Map<String, dynamic>? $unknown}): _posts = posts,_detectedQueryLanguages = detectedQueryLanguages,_$unknown = $unknown;
+  const _FeedSearchPostsV2Output({this.cursor, this.hitsTotal, @PostViewConverter() required final  List<PostView> posts, @FeedSearchPostsV2OutputDetectedQueryLanguagesConverter() final  List<FeedSearchPostsV2OutputDetectedQueryLanguages>? detectedQueryLanguages, final  Map<String, dynamic>? $unknown}): _posts = posts,_detectedQueryLanguages = detectedQueryLanguages,_$unknown = $unknown;
   factory _FeedSearchPostsV2Output.fromJson(Map<String, dynamic> json) => _$FeedSearchPostsV2OutputFromJson(json);
 
 /// Cursor for the next page of results.
@@ -229,8 +229,8 @@ class _FeedSearchPostsV2Output implements FeedSearchPostsV2Output {
   return EqualUnmodifiableListView(_posts);
 }
 
- final  List<FeedSearchPostsV2DetectedQueryLanguages>? _detectedQueryLanguages;
-@override@FeedSearchPostsV2DetectedQueryLanguagesConverter() List<FeedSearchPostsV2DetectedQueryLanguages>? get detectedQueryLanguages {
+ final  List<FeedSearchPostsV2OutputDetectedQueryLanguages>? _detectedQueryLanguages;
+@override@FeedSearchPostsV2OutputDetectedQueryLanguagesConverter() List<FeedSearchPostsV2OutputDetectedQueryLanguages>? get detectedQueryLanguages {
   final value = _detectedQueryLanguages;
   if (value == null) return null;
   if (_detectedQueryLanguages is EqualUnmodifiableListView) return _detectedQueryLanguages;
@@ -281,7 +281,7 @@ abstract mixin class _$FeedSearchPostsV2OutputCopyWith<$Res> implements $FeedSea
   factory _$FeedSearchPostsV2OutputCopyWith(_FeedSearchPostsV2Output value, $Res Function(_FeedSearchPostsV2Output) _then) = __$FeedSearchPostsV2OutputCopyWithImpl;
 @override @useResult
 $Res call({
- String? cursor, int? hitsTotal,@PostViewConverter() List<PostView> posts,@FeedSearchPostsV2DetectedQueryLanguagesConverter() List<FeedSearchPostsV2DetectedQueryLanguages>? detectedQueryLanguages, Map<String, dynamic>? $unknown
+ String? cursor, int? hitsTotal,@PostViewConverter() List<PostView> posts,@FeedSearchPostsV2OutputDetectedQueryLanguagesConverter() List<FeedSearchPostsV2OutputDetectedQueryLanguages>? detectedQueryLanguages, Map<String, dynamic>? $unknown
 });
 
 
@@ -304,7 +304,7 @@ cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_no
 as String?,hitsTotal: freezed == hitsTotal ? _self.hitsTotal : hitsTotal // ignore: cast_nullable_to_non_nullable
 as int?,posts: null == posts ? _self._posts : posts // ignore: cast_nullable_to_non_nullable
 as List<PostView>,detectedQueryLanguages: freezed == detectedQueryLanguages ? _self._detectedQueryLanguages : detectedQueryLanguages // ignore: cast_nullable_to_non_nullable
-as List<FeedSearchPostsV2DetectedQueryLanguages>?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<FeedSearchPostsV2OutputDetectedQueryLanguages>?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

@@ -13,13 +13,13 @@ _ModerationEmitEventInput _$ModerationEmitEventInputFromJson(Map json) =>
       final val = _ModerationEmitEventInput(
         event: $checkedConvert(
           'event',
-          (v) => const UModerationEmitEventEventConverter().fromJson(
+          (v) => const UModerationEmitEventInputEventConverter().fromJson(
             v as Map<String, dynamic>,
           ),
         ),
         subject: $checkedConvert(
           'subject',
-          (v) => const UModerationEmitEventSubjectConverter().fromJson(
+          (v) => const UModerationEmitEventInputSubjectConverter().fromJson(
             v as Map<String, dynamic>,
           ),
         ),
@@ -54,8 +54,10 @@ _ModerationEmitEventInput _$ModerationEmitEventInputFromJson(Map json) =>
 Map<String, dynamic> _$ModerationEmitEventInputToJson(
   _ModerationEmitEventInput instance,
 ) => <String, dynamic>{
-  'event': const UModerationEmitEventEventConverter().toJson(instance.event),
-  'subject': const UModerationEmitEventSubjectConverter().toJson(
+  'event': const UModerationEmitEventInputEventConverter().toJson(
+    instance.event,
+  ),
+  'subject': const UModerationEmitEventInputSubjectConverter().toJson(
     instance.subject,
   ),
   'subjectBlobCids': ?instance.subjectBlobCids,

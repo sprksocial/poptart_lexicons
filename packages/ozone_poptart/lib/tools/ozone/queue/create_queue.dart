@@ -9,5 +9,5 @@
 
 export 'create_queue/descriptor.dart';
 export 'create_queue/input.dart';
-export 'create_queue/main_subject_types.dart';
+export 'create_queue/main_input_subject_types.dart';
 export 'create_queue/output.dart';

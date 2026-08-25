@@ -7,10 +7,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_read_state.dart';
-import './main_status.dart';
-import './main_kind.dart';
-import './main_lock_status.dart';
+import './main_parameters_read_state.dart';
+import './main_parameters_status.dart';
+import './main_parameters_kind.dart';
+import './main_parameters_lock_status.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -34,16 +34,20 @@ abstract class ConvoListConvosInput with _$ConvoListConvosInput {
   const factory ConvoListConvosInput({
     @Default(50) int limit,
     String? cursor,
-    @ConvoListConvosReadStateConverter() ConvoListConvosReadState? readState,
+    @ConvoListConvosParametersReadStateConverter()
+    ConvoListConvosParametersReadState? readState,
 
     /// Filter convos by their status. It is discouraged to call with "request" and preferred to call chat.bsky.convo.listConvoRequests, which also includes group join requests made by the user.
-    @ConvoListConvosStatusConverter() ConvoListConvosStatus? status,
+    @ConvoListConvosParametersStatusConverter()
+    ConvoListConvosParametersStatus? status,
 
     /// Filter by conversation kind.
-    @ConvoListConvosKindConverter() ConvoListConvosKind? kind,
+    @ConvoListConvosParametersKindConverter()
+    ConvoListConvosParametersKind? kind,
 
     /// Filter by conversation lock status. Values follow chat.bsky.convo.defs#convoLockStatus.
-    @ConvoListConvosLockStatusConverter() ConvoListConvosLockStatus? lockStatus,
+    @ConvoListConvosParametersLockStatusConverter()
+    ConvoListConvosParametersLockStatus? lockStatus,
 
     Map<String, dynamic>? $unknown,
   }) = _ConvoListConvosInput;

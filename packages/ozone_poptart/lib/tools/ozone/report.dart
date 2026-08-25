@@ -5,6 +5,8 @@
 
 import 'package:ozone_poptart/tools/ozone/report/assign_moderator.dart'
     as _ToolsOzoneReportAssignModerator;
+import 'package:ozone_poptart/tools/ozone/report/close_reports.dart'
+    as _ToolsOzoneReportCloseReports;
 import 'package:ozone_poptart/tools/ozone/report/create_activity.dart'
     as _ToolsOzoneReportCreateActivity;
 import 'package:ozone_poptart/tools/ozone/report/get_assignments.dart'
@@ -38,6 +40,10 @@ final toolsOzoneReportAssignModerator =
     _ToolsOzoneReportAssignModerator.toolsOzoneReportAssignModerator;
 final toolsOzoneReportAssignModeratorMethodDescriptor =
     _ToolsOzoneReportAssignModerator.methodDescriptor;
+final toolsOzoneReportCloseReports =
+    _ToolsOzoneReportCloseReports.toolsOzoneReportCloseReports;
+final toolsOzoneReportCloseReportsMethodDescriptor =
+    _ToolsOzoneReportCloseReports.methodDescriptor;
 final toolsOzoneReportCreateActivity =
     _ToolsOzoneReportCreateActivity.toolsOzoneReportCreateActivity;
 final toolsOzoneReportCreateActivityMethodDescriptor =

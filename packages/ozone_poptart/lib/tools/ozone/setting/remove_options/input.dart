@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_scope.dart';
+import './main_input_scope.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -23,8 +23,8 @@ abstract class SettingRemoveOptionsInput with _$SettingRemoveOptionsInput {
   @JsonSerializable(includeIfNull: false)
   const factory SettingRemoveOptionsInput({
     required List<String> keys,
-    @SettingRemoveOptionsScopeConverter()
-    required SettingRemoveOptionsScope scope,
+    @SettingRemoveOptionsInputScopeConverter()
+    required SettingRemoveOptionsInputScope scope,
 
     Map<String, dynamic>? $unknown,
   }) = _SettingRemoveOptionsInput;

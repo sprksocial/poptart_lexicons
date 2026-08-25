@@ -17,8 +17,9 @@ _SettingRemoveOptionsInput _$SettingRemoveOptionsInputFromJson(Map json) =>
         ),
         scope: $checkedConvert(
           'scope',
-          (v) =>
-              const SettingRemoveOptionsScopeConverter().fromJson(v as String),
+          (v) => const SettingRemoveOptionsInputScopeConverter().fromJson(
+            v as String,
+          ),
         ),
         $unknown: $checkedConvert(
           r'$unknown',
@@ -32,6 +33,8 @@ Map<String, dynamic> _$SettingRemoveOptionsInputToJson(
   _SettingRemoveOptionsInput instance,
 ) => <String, dynamic>{
   'keys': instance.keys,
-  'scope': const SettingRemoveOptionsScopeConverter().toJson(instance.scope),
+  'scope': const SettingRemoveOptionsInputScopeConverter().toJson(
+    instance.scope,
+  ),
   r'$unknown': ?instance.$unknown,
 };

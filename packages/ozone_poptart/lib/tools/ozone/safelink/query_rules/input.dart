@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_sort_direction.dart';
+import './main_input_sort_direction.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -49,8 +49,8 @@ abstract class SafelinkQueryRulesInput with _$SafelinkQueryRulesInput {
     String? createdBy,
 
     /// Sort direction
-    @SafelinkQueryRulesSortDirectionConverter()
-    SafelinkQueryRulesSortDirection? sortDirection,
+    @SafelinkQueryRulesInputSortDirectionConverter()
+    SafelinkQueryRulesInputSortDirection? sortDirection,
 
     Map<String, dynamic>? $unknown,
   }) = _SafelinkQueryRulesInput;

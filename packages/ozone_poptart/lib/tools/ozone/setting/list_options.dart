@@ -9,5 +9,5 @@
 
 export 'list_options/descriptor.dart';
 export 'list_options/input.dart';
-export 'list_options/main_scope.dart';
+export 'list_options/main_parameters_scope.dart';
 export 'list_options/output.dart';

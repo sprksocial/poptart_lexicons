@@ -15,9 +15,8 @@ _ModerationGetRecordsOutput _$ModerationGetRecordsOutputFromJson(Map json) =>
           'records',
           (v) => (v as List<dynamic>)
               .map(
-                (e) => const UModerationGetRecordsRecordsConverter().fromJson(
-                  e as Map<String, dynamic>,
-                ),
+                (e) => const UModerationGetRecordsOutputRecordsConverter()
+                    .fromJson(e as Map<String, dynamic>),
               )
               .toList(),
         ),
@@ -33,7 +32,7 @@ Map<String, dynamic> _$ModerationGetRecordsOutputToJson(
   _ModerationGetRecordsOutput instance,
 ) => <String, dynamic>{
   'records': instance.records
-      .map(const UModerationGetRecordsRecordsConverter().toJson)
+      .map(const UModerationGetRecordsOutputRecordsConverter().toJson)
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

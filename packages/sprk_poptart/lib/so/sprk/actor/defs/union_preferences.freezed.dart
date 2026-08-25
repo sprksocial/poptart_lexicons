@@ -55,10 +55,11 @@ extension UPreferencesPatterns on UPreferences {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UPreferencesContentLabelPref value)?  contentLabelPref,TResult Function( UPreferencesSavedFeedsPref value)?  savedFeedsPref,TResult Function( UPreferencesPersonalDetailsPref value)?  personalDetailsPref,TResult Function( UPreferencesFeedViewPref value)?  feedViewPref,TResult Function( UPreferencesThreadViewPref value)?  threadViewPref,TResult Function( UPreferencesInterestsPref value)?  interestsPref,TResult Function( UPreferencesMutedWordsPref value)?  mutedWordsPref,TResult Function( UPreferencesHiddenPostsPref value)?  hiddenPostsPref,TResult Function( UPreferencesLabelersPref value)?  labelersPref,TResult Function( UPreferencesUnknown value)?  unknown,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UPreferencesAdultContentPref value)?  adultContentPref,TResult Function( UPreferencesContentLabelPref value)?  contentLabelPref,TResult Function( UPreferencesSavedFeedsPref value)?  savedFeedsPref,TResult Function( UPreferencesPersonalDetailsPref value)?  personalDetailsPref,TResult Function( UPreferencesFeedViewPref value)?  feedViewPref,TResult Function( UPreferencesThreadViewPref value)?  threadViewPref,TResult Function( UPreferencesInterestsPref value)?  interestsPref,TResult Function( UPreferencesMutedWordsPref value)?  mutedWordsPref,TResult Function( UPreferencesHiddenPostsPref value)?  hiddenPostsPref,TResult Function( UPreferencesLabelersPref value)?  labelersPref,TResult Function( UPreferencesUnknown value)?  unknown,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case UPreferencesContentLabelPref() when contentLabelPref != null:
+case UPreferencesAdultContentPref() when adultContentPref != null:
+return adultContentPref(_that);case UPreferencesContentLabelPref() when contentLabelPref != null:
 return contentLabelPref(_that);case UPreferencesSavedFeedsPref() when savedFeedsPref != null:
 return savedFeedsPref(_that);case UPreferencesPersonalDetailsPref() when personalDetailsPref != null:
 return personalDetailsPref(_that);case UPreferencesFeedViewPref() when feedViewPref != null:
@@ -86,10 +87,11 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UPreferencesContentLabelPref value)  contentLabelPref,required TResult Function( UPreferencesSavedFeedsPref value)  savedFeedsPref,required TResult Function( UPreferencesPersonalDetailsPref value)  personalDetailsPref,required TResult Function( UPreferencesFeedViewPref value)  feedViewPref,required TResult Function( UPreferencesThreadViewPref value)  threadViewPref,required TResult Function( UPreferencesInterestsPref value)  interestsPref,required TResult Function( UPreferencesMutedWordsPref value)  mutedWordsPref,required TResult Function( UPreferencesHiddenPostsPref value)  hiddenPostsPref,required TResult Function( UPreferencesLabelersPref value)  labelersPref,required TResult Function( UPreferencesUnknown value)  unknown,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UPreferencesAdultContentPref value)  adultContentPref,required TResult Function( UPreferencesContentLabelPref value)  contentLabelPref,required TResult Function( UPreferencesSavedFeedsPref value)  savedFeedsPref,required TResult Function( UPreferencesPersonalDetailsPref value)  personalDetailsPref,required TResult Function( UPreferencesFeedViewPref value)  feedViewPref,required TResult Function( UPreferencesThreadViewPref value)  threadViewPref,required TResult Function( UPreferencesInterestsPref value)  interestsPref,required TResult Function( UPreferencesMutedWordsPref value)  mutedWordsPref,required TResult Function( UPreferencesHiddenPostsPref value)  hiddenPostsPref,required TResult Function( UPreferencesLabelersPref value)  labelersPref,required TResult Function( UPreferencesUnknown value)  unknown,}){
 final _that = this;
 switch (_that) {
-case UPreferencesContentLabelPref():
+case UPreferencesAdultContentPref():
+return adultContentPref(_that);case UPreferencesContentLabelPref():
 return contentLabelPref(_that);case UPreferencesSavedFeedsPref():
 return savedFeedsPref(_that);case UPreferencesPersonalDetailsPref():
 return personalDetailsPref(_that);case UPreferencesFeedViewPref():
@@ -113,10 +115,11 @@ return unknown(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UPreferencesContentLabelPref value)?  contentLabelPref,TResult? Function( UPreferencesSavedFeedsPref value)?  savedFeedsPref,TResult? Function( UPreferencesPersonalDetailsPref value)?  personalDetailsPref,TResult? Function( UPreferencesFeedViewPref value)?  feedViewPref,TResult? Function( UPreferencesThreadViewPref value)?  threadViewPref,TResult? Function( UPreferencesInterestsPref value)?  interestsPref,TResult? Function( UPreferencesMutedWordsPref value)?  mutedWordsPref,TResult? Function( UPreferencesHiddenPostsPref value)?  hiddenPostsPref,TResult? Function( UPreferencesLabelersPref value)?  labelersPref,TResult? Function( UPreferencesUnknown value)?  unknown,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UPreferencesAdultContentPref value)?  adultContentPref,TResult? Function( UPreferencesContentLabelPref value)?  contentLabelPref,TResult? Function( UPreferencesSavedFeedsPref value)?  savedFeedsPref,TResult? Function( UPreferencesPersonalDetailsPref value)?  personalDetailsPref,TResult? Function( UPreferencesFeedViewPref value)?  feedViewPref,TResult? Function( UPreferencesThreadViewPref value)?  threadViewPref,TResult? Function( UPreferencesInterestsPref value)?  interestsPref,TResult? Function( UPreferencesMutedWordsPref value)?  mutedWordsPref,TResult? Function( UPreferencesHiddenPostsPref value)?  hiddenPostsPref,TResult? Function( UPreferencesLabelersPref value)?  labelersPref,TResult? Function( UPreferencesUnknown value)?  unknown,}){
 final _that = this;
 switch (_that) {
-case UPreferencesContentLabelPref() when contentLabelPref != null:
+case UPreferencesAdultContentPref() when adultContentPref != null:
+return adultContentPref(_that);case UPreferencesContentLabelPref() when contentLabelPref != null:
 return contentLabelPref(_that);case UPreferencesSavedFeedsPref() when savedFeedsPref != null:
 return savedFeedsPref(_that);case UPreferencesPersonalDetailsPref() when personalDetailsPref != null:
 return personalDetailsPref(_that);case UPreferencesFeedViewPref() when feedViewPref != null:
@@ -143,9 +146,10 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( ContentLabelPref data)?  contentLabelPref,TResult Function( SavedFeedsPref data)?  savedFeedsPref,TResult Function( PersonalDetailsPref data)?  personalDetailsPref,TResult Function( FeedViewPref data)?  feedViewPref,TResult Function( ThreadViewPref data)?  threadViewPref,TResult Function( InterestsPref data)?  interestsPref,TResult Function( MutedWordsPref data)?  mutedWordsPref,TResult Function( HiddenPostsPref data)?  hiddenPostsPref,TResult Function( LabelersPref data)?  labelersPref,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( AdultContentPref data)?  adultContentPref,TResult Function( ContentLabelPref data)?  contentLabelPref,TResult Function( SavedFeedsPref data)?  savedFeedsPref,TResult Function( PersonalDetailsPref data)?  personalDetailsPref,TResult Function( FeedViewPref data)?  feedViewPref,TResult Function( ThreadViewPref data)?  threadViewPref,TResult Function( InterestsPref data)?  interestsPref,TResult Function( MutedWordsPref data)?  mutedWordsPref,TResult Function( HiddenPostsPref data)?  hiddenPostsPref,TResult Function( LabelersPref data)?  labelersPref,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case UPreferencesContentLabelPref() when contentLabelPref != null:
+case UPreferencesAdultContentPref() when adultContentPref != null:
+return adultContentPref(_that.data);case UPreferencesContentLabelPref() when contentLabelPref != null:
 return contentLabelPref(_that.data);case UPreferencesSavedFeedsPref() when savedFeedsPref != null:
 return savedFeedsPref(_that.data);case UPreferencesPersonalDetailsPref() when personalDetailsPref != null:
 return personalDetailsPref(_that.data);case UPreferencesFeedViewPref() when feedViewPref != null:
@@ -173,9 +177,10 @@ return unknown(_that.data);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( ContentLabelPref data)  contentLabelPref,required TResult Function( SavedFeedsPref data)  savedFeedsPref,required TResult Function( PersonalDetailsPref data)  personalDetailsPref,required TResult Function( FeedViewPref data)  feedViewPref,required TResult Function( ThreadViewPref data)  threadViewPref,required TResult Function( InterestsPref data)  interestsPref,required TResult Function( MutedWordsPref data)  mutedWordsPref,required TResult Function( HiddenPostsPref data)  hiddenPostsPref,required TResult Function( LabelersPref data)  labelersPref,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( AdultContentPref data)  adultContentPref,required TResult Function( ContentLabelPref data)  contentLabelPref,required TResult Function( SavedFeedsPref data)  savedFeedsPref,required TResult Function( PersonalDetailsPref data)  personalDetailsPref,required TResult Function( FeedViewPref data)  feedViewPref,required TResult Function( ThreadViewPref data)  threadViewPref,required TResult Function( InterestsPref data)  interestsPref,required TResult Function( MutedWordsPref data)  mutedWordsPref,required TResult Function( HiddenPostsPref data)  hiddenPostsPref,required TResult Function( LabelersPref data)  labelersPref,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
 switch (_that) {
-case UPreferencesContentLabelPref():
+case UPreferencesAdultContentPref():
+return adultContentPref(_that.data);case UPreferencesContentLabelPref():
 return contentLabelPref(_that.data);case UPreferencesSavedFeedsPref():
 return savedFeedsPref(_that.data);case UPreferencesPersonalDetailsPref():
 return personalDetailsPref(_that.data);case UPreferencesFeedViewPref():
@@ -199,9 +204,10 @@ return unknown(_that.data);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( ContentLabelPref data)?  contentLabelPref,TResult? Function( SavedFeedsPref data)?  savedFeedsPref,TResult? Function( PersonalDetailsPref data)?  personalDetailsPref,TResult? Function( FeedViewPref data)?  feedViewPref,TResult? Function( ThreadViewPref data)?  threadViewPref,TResult? Function( InterestsPref data)?  interestsPref,TResult? Function( MutedWordsPref data)?  mutedWordsPref,TResult? Function( HiddenPostsPref data)?  hiddenPostsPref,TResult? Function( LabelersPref data)?  labelersPref,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( AdultContentPref data)?  adultContentPref,TResult? Function( ContentLabelPref data)?  contentLabelPref,TResult? Function( SavedFeedsPref data)?  savedFeedsPref,TResult? Function( PersonalDetailsPref data)?  personalDetailsPref,TResult? Function( FeedViewPref data)?  feedViewPref,TResult? Function( ThreadViewPref data)?  threadViewPref,TResult? Function( InterestsPref data)?  interestsPref,TResult? Function( MutedWordsPref data)?  mutedWordsPref,TResult? Function( HiddenPostsPref data)?  hiddenPostsPref,TResult? Function( LabelersPref data)?  labelersPref,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
 switch (_that) {
-case UPreferencesContentLabelPref() when contentLabelPref != null:
+case UPreferencesAdultContentPref() when adultContentPref != null:
+return adultContentPref(_that.data);case UPreferencesContentLabelPref() when contentLabelPref != null:
 return contentLabelPref(_that.data);case UPreferencesSavedFeedsPref() when savedFeedsPref != null:
 return savedFeedsPref(_that.data);case UPreferencesPersonalDetailsPref() when personalDetailsPref != null:
 return personalDetailsPref(_that.data);case UPreferencesFeedViewPref() when feedViewPref != null:
@@ -217,6 +223,81 @@ return unknown(_that.data);case _:
 }
 }
 
+}
+
+/// @nodoc
+
+
+class UPreferencesAdultContentPref extends UPreferences {
+  const UPreferencesAdultContentPref({required this.data}): super._();
+
+
+@override final  AdultContentPref data;
+
+/// Create a copy of UPreferences
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UPreferencesAdultContentPrefCopyWith<UPreferencesAdultContentPref> get copyWith => _$UPreferencesAdultContentPrefCopyWithImpl<UPreferencesAdultContentPref>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UPreferencesAdultContentPref&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'UPreferences.adultContentPref(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UPreferencesAdultContentPrefCopyWith<$Res> implements $UPreferencesCopyWith<$Res> {
+  factory $UPreferencesAdultContentPrefCopyWith(UPreferencesAdultContentPref value, $Res Function(UPreferencesAdultContentPref) _then) = _$UPreferencesAdultContentPrefCopyWithImpl;
+@useResult
+$Res call({
+ AdultContentPref data
+});
+
+
+$AdultContentPrefCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$UPreferencesAdultContentPrefCopyWithImpl<$Res>
+    implements $UPreferencesAdultContentPrefCopyWith<$Res> {
+  _$UPreferencesAdultContentPrefCopyWithImpl(this._self, this._then);
+
+  final UPreferencesAdultContentPref _self;
+  final $Res Function(UPreferencesAdultContentPref) _then;
+
+/// Create a copy of UPreferences
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(UPreferencesAdultContentPref(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as AdultContentPref,
+  ));
+}
+
+/// Create a copy of UPreferences
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AdultContentPrefCopyWith<$Res> get data {
+
+  return $AdultContentPrefCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc

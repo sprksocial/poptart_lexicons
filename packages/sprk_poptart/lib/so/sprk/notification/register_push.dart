@@ -9,4 +9,4 @@
 
 export 'register_push/descriptor.dart';
 export 'register_push/input.dart';
-export 'register_push/main_platform.dart';
+export 'register_push/main_input_platform.dart';

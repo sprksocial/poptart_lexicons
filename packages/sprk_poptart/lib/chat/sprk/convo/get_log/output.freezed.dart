@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ConvoGetLogOutput {
 
- String? get cursor;@UConvoGetLogLogsConverter() List<UConvoGetLogLogs> get logs; Map<String, dynamic>? get $unknown;
+ String? get cursor;@UConvoGetLogOutputLogsConverter() List<UConvoGetLogOutputLogs> get logs; Map<String, dynamic>? get $unknown;
 /// Create a copy of ConvoGetLogOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ConvoGetLogOutputCopyWith<$Res>  {
   factory $ConvoGetLogOutputCopyWith(ConvoGetLogOutput value, $Res Function(ConvoGetLogOutput) _then) = _$ConvoGetLogOutputCopyWithImpl;
 @useResult
 $Res call({
- String? cursor,@UConvoGetLogLogsConverter() List<UConvoGetLogLogs> logs, Map<String, dynamic>? $unknown
+ String? cursor,@UConvoGetLogOutputLogsConverter() List<UConvoGetLogOutputLogs> logs, Map<String, dynamic>? $unknown
 });
 
 
@@ -69,7 +69,7 @@ class _$ConvoGetLogOutputCopyWithImpl<$Res>
   return _then(_self.copyWith(
 cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,logs: null == logs ? _self.logs : logs // ignore: cast_nullable_to_non_nullable
-as List<UConvoGetLogLogs>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UConvoGetLogOutputLogs>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -155,7 +155,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetLogLogsConverter()  List<UConvoGetLogLogs> logs,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetLogOutputLogsConverter()  List<UConvoGetLogOutputLogs> logs,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ConvoGetLogOutput() when $default != null:
 return $default(_that.cursor,_that.logs,_that.$unknown);case _:
@@ -176,7 +176,7 @@ return $default(_that.cursor,_that.logs,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetLogLogsConverter()  List<UConvoGetLogLogs> logs,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetLogOutputLogsConverter()  List<UConvoGetLogOutputLogs> logs,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ConvoGetLogOutput():
 return $default(_that.cursor,_that.logs,_that.$unknown);case _:
@@ -196,7 +196,7 @@ return $default(_that.cursor,_that.logs,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor, @UConvoGetLogLogsConverter()  List<UConvoGetLogLogs> logs,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor, @UConvoGetLogOutputLogsConverter()  List<UConvoGetLogOutputLogs> logs,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ConvoGetLogOutput() when $default != null:
 return $default(_that.cursor,_that.logs,_that.$unknown);case _:
@@ -211,12 +211,12 @@ return $default(_that.cursor,_that.logs,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _ConvoGetLogOutput implements ConvoGetLogOutput {
-  const _ConvoGetLogOutput({this.cursor, @UConvoGetLogLogsConverter() required final  List<UConvoGetLogLogs> logs, final  Map<String, dynamic>? $unknown}): _logs = logs,_$unknown = $unknown;
+  const _ConvoGetLogOutput({this.cursor, @UConvoGetLogOutputLogsConverter() required final  List<UConvoGetLogOutputLogs> logs, final  Map<String, dynamic>? $unknown}): _logs = logs,_$unknown = $unknown;
   factory _ConvoGetLogOutput.fromJson(Map<String, dynamic> json) => _$ConvoGetLogOutputFromJson(json);
 
 @override final  String? cursor;
- final  List<UConvoGetLogLogs> _logs;
-@override@UConvoGetLogLogsConverter() List<UConvoGetLogLogs> get logs {
+ final  List<UConvoGetLogOutputLogs> _logs;
+@override@UConvoGetLogOutputLogsConverter() List<UConvoGetLogOutputLogs> get logs {
   if (_logs is EqualUnmodifiableListView) return _logs;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_logs);
@@ -265,7 +265,7 @@ abstract mixin class _$ConvoGetLogOutputCopyWith<$Res> implements $ConvoGetLogOu
   factory _$ConvoGetLogOutputCopyWith(_ConvoGetLogOutput value, $Res Function(_ConvoGetLogOutput) _then) = __$ConvoGetLogOutputCopyWithImpl;
 @override @useResult
 $Res call({
- String? cursor,@UConvoGetLogLogsConverter() List<UConvoGetLogLogs> logs, Map<String, dynamic>? $unknown
+ String? cursor,@UConvoGetLogOutputLogsConverter() List<UConvoGetLogOutputLogs> logs, Map<String, dynamic>? $unknown
 });
 
 
@@ -286,7 +286,7 @@ class __$ConvoGetLogOutputCopyWithImpl<$Res>
   return _then(_ConvoGetLogOutput(
 cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,logs: null == logs ? _self._logs : logs // ignore: cast_nullable_to_non_nullable
-as List<UConvoGetLogLogs>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UConvoGetLogOutputLogs>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

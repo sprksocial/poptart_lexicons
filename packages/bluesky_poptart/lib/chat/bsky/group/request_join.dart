@@ -9,5 +9,5 @@
 
 export 'request_join/descriptor.dart';
 export 'request_join/input.dart';
-export 'request_join/main_status.dart';
+export 'request_join/main_output_status.dart';
 export 'request_join/output.dart';

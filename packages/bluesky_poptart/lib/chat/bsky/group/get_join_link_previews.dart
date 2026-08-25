@@ -10,4 +10,4 @@
 export 'get_join_link_previews/descriptor.dart';
 export 'get_join_link_previews/input.dart';
 export 'get_join_link_previews/output.dart';
-export 'get_join_link_previews/union_main_join_link_previews.dart';
+export 'get_join_link_previews/union_main_output_join_link_previews.dart';

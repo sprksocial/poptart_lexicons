@@ -17,9 +17,8 @@ _ConvoListConvoRequestsOutput _$ConvoListConvoRequestsOutputFromJson(
       'requests',
       (v) => (v as List<dynamic>)
           .map(
-            (e) => const UConvoListConvoRequestsRequestsConverter().fromJson(
-              e as Map<String, dynamic>,
-            ),
+            (e) => const UConvoListConvoRequestsOutputRequestsConverter()
+                .fromJson(e as Map<String, dynamic>),
           )
           .toList(),
     ),
@@ -36,7 +35,7 @@ Map<String, dynamic> _$ConvoListConvoRequestsOutputToJson(
 ) => <String, dynamic>{
   'cursor': ?instance.cursor,
   'requests': instance.requests
-      .map(const UConvoListConvoRequestsRequestsConverter().toJson)
+      .map(const UConvoListConvoRequestsOutputRequestsConverter().toJson)
       .toList(),
   r'$unknown': ?instance.$unknown,
 };

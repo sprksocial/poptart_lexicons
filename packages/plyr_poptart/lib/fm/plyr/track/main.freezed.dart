@@ -25,7 +25,7 @@ mixin _$TrackRecord {
  String? get imageUrl;/// Timestamp when the track was uploaded.
  DateTime get createdAt;/// If set, this track requires viewer to be a supporter of the artist via atprotofans.
 @SupportGateConverter() SupportGate? get supportGate;/// Track description (liner notes, show notes, etc.).
- String? get description;/// Audio file stored on the user's PDS. When present, this is the canonical source; audioUrl is the CDN fallback.
+ String? get description;@UTrackLabelsConverter() UTrackLabels? get labels;/// Audio file stored on the user's PDS. When present, this is the canonical source; audioUrl is the CDN fallback.
 @BlobConverter() Blob? get audioBlob; Map<String, dynamic>? get $unknown;
 /// Create a copy of TrackRecord
 /// with the given fields replaced by the non-null parameter values.
@@ -39,16 +39,16 @@ $TrackRecordCopyWith<TrackRecord> get copyWith => _$TrackRecordCopyWithImpl<Trac
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TrackRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.title, title) || other.title == title)&&(identical(other.artist, artist) || other.artist == artist)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.fileType, fileType) || other.fileType == fileType)&&(identical(other.album, album) || other.album == album)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other.features, features)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.supportGate, supportGate) || other.supportGate == supportGate)&&(identical(other.description, description) || other.description == description)&&(identical(other.audioBlob, audioBlob) || other.audioBlob == audioBlob)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TrackRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.title, title) || other.title == title)&&(identical(other.artist, artist) || other.artist == artist)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.fileType, fileType) || other.fileType == fileType)&&(identical(other.album, album) || other.album == album)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other.features, features)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.supportGate, supportGate) || other.supportGate == supportGate)&&(identical(other.description, description) || other.description == description)&&(identical(other.labels, labels) || other.labels == labels)&&(identical(other.audioBlob, audioBlob) || other.audioBlob == audioBlob)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,title,artist,audioUrl,fileType,album,duration,const DeepCollectionEquality().hash(features),imageUrl,createdAt,supportGate,description,audioBlob,const DeepCollectionEquality().hash($unknown));
+int get hashCode => Object.hash(runtimeType,$type,title,artist,audioUrl,fileType,album,duration,const DeepCollectionEquality().hash(features),imageUrl,createdAt,supportGate,description,labels,audioBlob,const DeepCollectionEquality().hash($unknown));
 
 @override
 String toString() {
-  return 'TrackRecord(\$type: ${$type}, title: $title, artist: $artist, audioUrl: $audioUrl, fileType: $fileType, album: $album, duration: $duration, features: $features, imageUrl: $imageUrl, createdAt: $createdAt, supportGate: $supportGate, description: $description, audioBlob: $audioBlob, \$unknown: ${$unknown})';
+  return 'TrackRecord(\$type: ${$type}, title: $title, artist: $artist, audioUrl: $audioUrl, fileType: $fileType, album: $album, duration: $duration, features: $features, imageUrl: $imageUrl, createdAt: $createdAt, supportGate: $supportGate, description: $description, labels: $labels, audioBlob: $audioBlob, \$unknown: ${$unknown})';
 }
 
 
@@ -59,11 +59,11 @@ abstract mixin class $TrackRecordCopyWith<$Res>  {
   factory $TrackRecordCopyWith(TrackRecord value, $Res Function(TrackRecord) _then) = _$TrackRecordCopyWithImpl;
 @useResult
 $Res call({
- String $type, String title, String artist, String? audioUrl, String fileType, String? album, int? duration,@FeaturedArtistConverter() List<FeaturedArtist>? features, String? imageUrl, DateTime createdAt,@SupportGateConverter() SupportGate? supportGate, String? description,@BlobConverter() Blob? audioBlob, Map<String, dynamic>? $unknown
+ String $type, String title, String artist, String? audioUrl, String fileType, String? album, int? duration,@FeaturedArtistConverter() List<FeaturedArtist>? features, String? imageUrl, DateTime createdAt,@SupportGateConverter() SupportGate? supportGate, String? description,@UTrackLabelsConverter() UTrackLabels? labels,@BlobConverter() Blob? audioBlob, Map<String, dynamic>? $unknown
 });
 
 
-$SupportGateCopyWith<$Res>? get supportGate;$BlobCopyWith<$Res>? get audioBlob;
+$SupportGateCopyWith<$Res>? get supportGate;$UTrackLabelsCopyWith<$Res>? get labels;$BlobCopyWith<$Res>? get audioBlob;
 
 }
 /// @nodoc
@@ -76,7 +76,7 @@ class _$TrackRecordCopyWithImpl<$Res>
 
 /// Create a copy of TrackRecord
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? title = null,Object? artist = null,Object? audioUrl = freezed,Object? fileType = null,Object? album = freezed,Object? duration = freezed,Object? features = freezed,Object? imageUrl = freezed,Object? createdAt = null,Object? supportGate = freezed,Object? description = freezed,Object? audioBlob = freezed,Object? $unknown = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? title = null,Object? artist = null,Object? audioUrl = freezed,Object? fileType = null,Object? album = freezed,Object? duration = freezed,Object? features = freezed,Object? imageUrl = freezed,Object? createdAt = null,Object? supportGate = freezed,Object? description = freezed,Object? labels = freezed,Object? audioBlob = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -90,7 +90,8 @@ as List<FeaturedArtist>?,imageUrl: freezed == imageUrl ? _self.imageUrl : imageU
 as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,supportGate: freezed == supportGate ? _self.supportGate : supportGate // ignore: cast_nullable_to_non_nullable
 as SupportGate?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,audioBlob: freezed == audioBlob ? _self.audioBlob : audioBlob // ignore: cast_nullable_to_non_nullable
+as String?,labels: freezed == labels ? _self.labels : labels // ignore: cast_nullable_to_non_nullable
+as UTrackLabels?,audioBlob: freezed == audioBlob ? _self.audioBlob : audioBlob // ignore: cast_nullable_to_non_nullable
 as Blob?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -106,6 +107,18 @@ $SupportGateCopyWith<$Res>? get supportGate {
 
   return $SupportGateCopyWith<$Res>(_self.supportGate!, (value) {
     return _then(_self.copyWith(supportGate: value));
+  });
+}/// Create a copy of TrackRecord
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$UTrackLabelsCopyWith<$Res>? get labels {
+    if (_self.labels == null) {
+    return null;
+  }
+
+  return $UTrackLabelsCopyWith<$Res>(_self.labels!, (value) {
+    return _then(_self.copyWith(labels: value));
   });
 }/// Create a copy of TrackRecord
 /// with the given fields replaced by the non-null parameter values.
@@ -201,10 +214,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type,  String title,  String artist,  String? audioUrl,  String fileType,  String? album,  int? duration, @FeaturedArtistConverter()  List<FeaturedArtist>? features,  String? imageUrl,  DateTime createdAt, @SupportGateConverter()  SupportGate? supportGate,  String? description, @BlobConverter()  Blob? audioBlob,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type,  String title,  String artist,  String? audioUrl,  String fileType,  String? album,  int? duration, @FeaturedArtistConverter()  List<FeaturedArtist>? features,  String? imageUrl,  DateTime createdAt, @SupportGateConverter()  SupportGate? supportGate,  String? description, @UTrackLabelsConverter()  UTrackLabels? labels, @BlobConverter()  Blob? audioBlob,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _TrackRecord() when $default != null:
-return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileType,_that.album,_that.duration,_that.features,_that.imageUrl,_that.createdAt,_that.supportGate,_that.description,_that.audioBlob,_that.$unknown);case _:
+return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileType,_that.album,_that.duration,_that.features,_that.imageUrl,_that.createdAt,_that.supportGate,_that.description,_that.labels,_that.audioBlob,_that.$unknown);case _:
   return orElse();
 
 }
@@ -222,10 +235,10 @@ return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileTy
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type,  String title,  String artist,  String? audioUrl,  String fileType,  String? album,  int? duration, @FeaturedArtistConverter()  List<FeaturedArtist>? features,  String? imageUrl,  DateTime createdAt, @SupportGateConverter()  SupportGate? supportGate,  String? description, @BlobConverter()  Blob? audioBlob,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type,  String title,  String artist,  String? audioUrl,  String fileType,  String? album,  int? duration, @FeaturedArtistConverter()  List<FeaturedArtist>? features,  String? imageUrl,  DateTime createdAt, @SupportGateConverter()  SupportGate? supportGate,  String? description, @UTrackLabelsConverter()  UTrackLabels? labels, @BlobConverter()  Blob? audioBlob,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _TrackRecord():
-return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileType,_that.album,_that.duration,_that.features,_that.imageUrl,_that.createdAt,_that.supportGate,_that.description,_that.audioBlob,_that.$unknown);case _:
+return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileType,_that.album,_that.duration,_that.features,_that.imageUrl,_that.createdAt,_that.supportGate,_that.description,_that.labels,_that.audioBlob,_that.$unknown);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -242,10 +255,10 @@ return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileTy
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type,  String title,  String artist,  String? audioUrl,  String fileType,  String? album,  int? duration, @FeaturedArtistConverter()  List<FeaturedArtist>? features,  String? imageUrl,  DateTime createdAt, @SupportGateConverter()  SupportGate? supportGate,  String? description, @BlobConverter()  Blob? audioBlob,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type,  String title,  String artist,  String? audioUrl,  String fileType,  String? album,  int? duration, @FeaturedArtistConverter()  List<FeaturedArtist>? features,  String? imageUrl,  DateTime createdAt, @SupportGateConverter()  SupportGate? supportGate,  String? description, @UTrackLabelsConverter()  UTrackLabels? labels, @BlobConverter()  Blob? audioBlob,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _TrackRecord() when $default != null:
-return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileType,_that.album,_that.duration,_that.features,_that.imageUrl,_that.createdAt,_that.supportGate,_that.description,_that.audioBlob,_that.$unknown);case _:
+return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileType,_that.album,_that.duration,_that.features,_that.imageUrl,_that.createdAt,_that.supportGate,_that.description,_that.labels,_that.audioBlob,_that.$unknown);case _:
   return null;
 
 }
@@ -257,7 +270,7 @@ return $default(_that.$type,_that.title,_that.artist,_that.audioUrl,_that.fileTy
 
 @JsonSerializable(includeIfNull: false)
 class _TrackRecord implements TrackRecord {
-  const _TrackRecord({this.$type = 'fm.plyr.track', required this.title, required this.artist, this.audioUrl, required this.fileType, this.album, this.duration, @FeaturedArtistConverter() final  List<FeaturedArtist>? features, this.imageUrl, required this.createdAt, @SupportGateConverter() this.supportGate, this.description, @BlobConverter() this.audioBlob, final  Map<String, dynamic>? $unknown}): _features = features,_$unknown = $unknown;
+  const _TrackRecord({this.$type = 'fm.plyr.track', required this.title, required this.artist, this.audioUrl, required this.fileType, this.album, this.duration, @FeaturedArtistConverter() final  List<FeaturedArtist>? features, this.imageUrl, required this.createdAt, @SupportGateConverter() this.supportGate, this.description, @UTrackLabelsConverter() this.labels, @BlobConverter() this.audioBlob, final  Map<String, dynamic>? $unknown}): _features = features,_$unknown = $unknown;
   factory _TrackRecord.fromJson(Map<String, dynamic> json) => _$TrackRecordFromJson(json);
 
 @override@JsonKey() final  String $type;
@@ -290,6 +303,7 @@ class _TrackRecord implements TrackRecord {
 @override@SupportGateConverter() final  SupportGate? supportGate;
 /// Track description (liner notes, show notes, etc.).
 @override final  String? description;
+@override@UTrackLabelsConverter() final  UTrackLabels? labels;
 /// Audio file stored on the user's PDS. When present, this is the canonical source; audioUrl is the CDN fallback.
 @override@BlobConverter() final  Blob? audioBlob;
  final  Map<String, dynamic>? _$unknown;
@@ -315,16 +329,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TrackRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.title, title) || other.title == title)&&(identical(other.artist, artist) || other.artist == artist)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.fileType, fileType) || other.fileType == fileType)&&(identical(other.album, album) || other.album == album)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other._features, _features)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.supportGate, supportGate) || other.supportGate == supportGate)&&(identical(other.description, description) || other.description == description)&&(identical(other.audioBlob, audioBlob) || other.audioBlob == audioBlob)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TrackRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.title, title) || other.title == title)&&(identical(other.artist, artist) || other.artist == artist)&&(identical(other.audioUrl, audioUrl) || other.audioUrl == audioUrl)&&(identical(other.fileType, fileType) || other.fileType == fileType)&&(identical(other.album, album) || other.album == album)&&(identical(other.duration, duration) || other.duration == duration)&&const DeepCollectionEquality().equals(other._features, _features)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.supportGate, supportGate) || other.supportGate == supportGate)&&(identical(other.description, description) || other.description == description)&&(identical(other.labels, labels) || other.labels == labels)&&(identical(other.audioBlob, audioBlob) || other.audioBlob == audioBlob)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,title,artist,audioUrl,fileType,album,duration,const DeepCollectionEquality().hash(_features),imageUrl,createdAt,supportGate,description,audioBlob,const DeepCollectionEquality().hash(_$unknown));
+int get hashCode => Object.hash(runtimeType,$type,title,artist,audioUrl,fileType,album,duration,const DeepCollectionEquality().hash(_features),imageUrl,createdAt,supportGate,description,labels,audioBlob,const DeepCollectionEquality().hash(_$unknown));
 
 @override
 String toString() {
-  return 'TrackRecord(\$type: ${$type}, title: $title, artist: $artist, audioUrl: $audioUrl, fileType: $fileType, album: $album, duration: $duration, features: $features, imageUrl: $imageUrl, createdAt: $createdAt, supportGate: $supportGate, description: $description, audioBlob: $audioBlob, \$unknown: ${$unknown})';
+  return 'TrackRecord(\$type: ${$type}, title: $title, artist: $artist, audioUrl: $audioUrl, fileType: $fileType, album: $album, duration: $duration, features: $features, imageUrl: $imageUrl, createdAt: $createdAt, supportGate: $supportGate, description: $description, labels: $labels, audioBlob: $audioBlob, \$unknown: ${$unknown})';
 }
 
 
@@ -335,11 +349,11 @@ abstract mixin class _$TrackRecordCopyWith<$Res> implements $TrackRecordCopyWith
   factory _$TrackRecordCopyWith(_TrackRecord value, $Res Function(_TrackRecord) _then) = __$TrackRecordCopyWithImpl;
 @override @useResult
 $Res call({
- String $type, String title, String artist, String? audioUrl, String fileType, String? album, int? duration,@FeaturedArtistConverter() List<FeaturedArtist>? features, String? imageUrl, DateTime createdAt,@SupportGateConverter() SupportGate? supportGate, String? description,@BlobConverter() Blob? audioBlob, Map<String, dynamic>? $unknown
+ String $type, String title, String artist, String? audioUrl, String fileType, String? album, int? duration,@FeaturedArtistConverter() List<FeaturedArtist>? features, String? imageUrl, DateTime createdAt,@SupportGateConverter() SupportGate? supportGate, String? description,@UTrackLabelsConverter() UTrackLabels? labels,@BlobConverter() Blob? audioBlob, Map<String, dynamic>? $unknown
 });
 
 
-@override $SupportGateCopyWith<$Res>? get supportGate;@override $BlobCopyWith<$Res>? get audioBlob;
+@override $SupportGateCopyWith<$Res>? get supportGate;@override $UTrackLabelsCopyWith<$Res>? get labels;@override $BlobCopyWith<$Res>? get audioBlob;
 
 }
 /// @nodoc
@@ -352,7 +366,7 @@ class __$TrackRecordCopyWithImpl<$Res>
 
 /// Create a copy of TrackRecord
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? title = null,Object? artist = null,Object? audioUrl = freezed,Object? fileType = null,Object? album = freezed,Object? duration = freezed,Object? features = freezed,Object? imageUrl = freezed,Object? createdAt = null,Object? supportGate = freezed,Object? description = freezed,Object? audioBlob = freezed,Object? $unknown = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? title = null,Object? artist = null,Object? audioUrl = freezed,Object? fileType = null,Object? album = freezed,Object? duration = freezed,Object? features = freezed,Object? imageUrl = freezed,Object? createdAt = null,Object? supportGate = freezed,Object? description = freezed,Object? labels = freezed,Object? audioBlob = freezed,Object? $unknown = freezed,}) {
   return _then(_TrackRecord(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -366,7 +380,8 @@ as List<FeaturedArtist>?,imageUrl: freezed == imageUrl ? _self.imageUrl : imageU
 as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,supportGate: freezed == supportGate ? _self.supportGate : supportGate // ignore: cast_nullable_to_non_nullable
 as SupportGate?,description: freezed == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
-as String?,audioBlob: freezed == audioBlob ? _self.audioBlob : audioBlob // ignore: cast_nullable_to_non_nullable
+as String?,labels: freezed == labels ? _self.labels : labels // ignore: cast_nullable_to_non_nullable
+as UTrackLabels?,audioBlob: freezed == audioBlob ? _self.audioBlob : audioBlob // ignore: cast_nullable_to_non_nullable
 as Blob?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
@@ -383,6 +398,18 @@ $SupportGateCopyWith<$Res>? get supportGate {
 
   return $SupportGateCopyWith<$Res>(_self.supportGate!, (value) {
     return _then(_self.copyWith(supportGate: value));
+  });
+}/// Create a copy of TrackRecord
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$UTrackLabelsCopyWith<$Res>? get labels {
+    if (_self.labels == null) {
+    return null;
+  }
+
+  return $UTrackLabelsCopyWith<$Res>(_self.labels!, (value) {
+    return _then(_self.copyWith(labels: value));
   });
 }/// Create a copy of TrackRecord
 /// with the given fields replaced by the non-null parameter values.

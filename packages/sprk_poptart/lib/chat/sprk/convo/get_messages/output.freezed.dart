@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ConvoGetMessagesOutput {
 
- String? get cursor;@UConvoGetMessagesMessagesConverter() List<UConvoGetMessagesMessages> get messages; Map<String, dynamic>? get $unknown;
+ String? get cursor;@UConvoGetMessagesOutputMessagesConverter() List<UConvoGetMessagesOutputMessages> get messages; Map<String, dynamic>? get $unknown;
 /// Create a copy of ConvoGetMessagesOutput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $ConvoGetMessagesOutputCopyWith<$Res>  {
   factory $ConvoGetMessagesOutputCopyWith(ConvoGetMessagesOutput value, $Res Function(ConvoGetMessagesOutput) _then) = _$ConvoGetMessagesOutputCopyWithImpl;
 @useResult
 $Res call({
- String? cursor,@UConvoGetMessagesMessagesConverter() List<UConvoGetMessagesMessages> messages, Map<String, dynamic>? $unknown
+ String? cursor,@UConvoGetMessagesOutputMessagesConverter() List<UConvoGetMessagesOutputMessages> messages, Map<String, dynamic>? $unknown
 });
 
 
@@ -69,7 +69,7 @@ class _$ConvoGetMessagesOutputCopyWithImpl<$Res>
   return _then(_self.copyWith(
 cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,messages: null == messages ? _self.messages : messages // ignore: cast_nullable_to_non_nullable
-as List<UConvoGetMessagesMessages>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UConvoGetMessagesOutputMessages>,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
@@ -155,7 +155,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetMessagesMessagesConverter()  List<UConvoGetMessagesMessages> messages,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetMessagesOutputMessagesConverter()  List<UConvoGetMessagesOutputMessages> messages,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ConvoGetMessagesOutput() when $default != null:
 return $default(_that.cursor,_that.messages,_that.$unknown);case _:
@@ -176,7 +176,7 @@ return $default(_that.cursor,_that.messages,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetMessagesMessagesConverter()  List<UConvoGetMessagesMessages> messages,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? cursor, @UConvoGetMessagesOutputMessagesConverter()  List<UConvoGetMessagesOutputMessages> messages,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ConvoGetMessagesOutput():
 return $default(_that.cursor,_that.messages,_that.$unknown);case _:
@@ -196,7 +196,7 @@ return $default(_that.cursor,_that.messages,_that.$unknown);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor, @UConvoGetMessagesMessagesConverter()  List<UConvoGetMessagesMessages> messages,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? cursor, @UConvoGetMessagesOutputMessagesConverter()  List<UConvoGetMessagesOutputMessages> messages,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ConvoGetMessagesOutput() when $default != null:
 return $default(_that.cursor,_that.messages,_that.$unknown);case _:
@@ -211,12 +211,12 @@ return $default(_that.cursor,_that.messages,_that.$unknown);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _ConvoGetMessagesOutput implements ConvoGetMessagesOutput {
-  const _ConvoGetMessagesOutput({this.cursor, @UConvoGetMessagesMessagesConverter() required final  List<UConvoGetMessagesMessages> messages, final  Map<String, dynamic>? $unknown}): _messages = messages,_$unknown = $unknown;
+  const _ConvoGetMessagesOutput({this.cursor, @UConvoGetMessagesOutputMessagesConverter() required final  List<UConvoGetMessagesOutputMessages> messages, final  Map<String, dynamic>? $unknown}): _messages = messages,_$unknown = $unknown;
   factory _ConvoGetMessagesOutput.fromJson(Map<String, dynamic> json) => _$ConvoGetMessagesOutputFromJson(json);
 
 @override final  String? cursor;
- final  List<UConvoGetMessagesMessages> _messages;
-@override@UConvoGetMessagesMessagesConverter() List<UConvoGetMessagesMessages> get messages {
+ final  List<UConvoGetMessagesOutputMessages> _messages;
+@override@UConvoGetMessagesOutputMessagesConverter() List<UConvoGetMessagesOutputMessages> get messages {
   if (_messages is EqualUnmodifiableListView) return _messages;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_messages);
@@ -265,7 +265,7 @@ abstract mixin class _$ConvoGetMessagesOutputCopyWith<$Res> implements $ConvoGet
   factory _$ConvoGetMessagesOutputCopyWith(_ConvoGetMessagesOutput value, $Res Function(_ConvoGetMessagesOutput) _then) = __$ConvoGetMessagesOutputCopyWithImpl;
 @override @useResult
 $Res call({
- String? cursor,@UConvoGetMessagesMessagesConverter() List<UConvoGetMessagesMessages> messages, Map<String, dynamic>? $unknown
+ String? cursor,@UConvoGetMessagesOutputMessagesConverter() List<UConvoGetMessagesOutputMessages> messages, Map<String, dynamic>? $unknown
 });
 
 
@@ -286,7 +286,7 @@ class __$ConvoGetMessagesOutputCopyWithImpl<$Res>
   return _then(_ConvoGetMessagesOutput(
 cursor: freezed == cursor ? _self.cursor : cursor // ignore: cast_nullable_to_non_nullable
 as String?,messages: null == messages ? _self._messages : messages // ignore: cast_nullable_to_non_nullable
-as List<UConvoGetMessagesMessages>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
+as List<UConvoGetMessagesOutputMessages>,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }

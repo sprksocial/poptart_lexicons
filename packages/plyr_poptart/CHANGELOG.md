@@ -1,3 +1,9 @@
+## 0.2.0
+
+- **Breaking:** Move private-media permissions to `fm.plyr.privateMediaAccess`
+  and define `fm.plyr.privateMedia` as a permissioned-data space.
+- Regenerate from the latest `fm.plyr.*` lexicons.
+
 ## 0.1.2
 
 - Regenerate from the latest `fm.plyr.*` lexicons.

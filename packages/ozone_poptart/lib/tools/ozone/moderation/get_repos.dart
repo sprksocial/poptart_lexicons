@@ -10,4 +10,4 @@
 export 'get_repos/descriptor.dart';
 export 'get_repos/input.dart';
 export 'get_repos/output.dart';
-export 'get_repos/union_main_repos.dart';
+export 'get_repos/union_main_output_repos.dart';

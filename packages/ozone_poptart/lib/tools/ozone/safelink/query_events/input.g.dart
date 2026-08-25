@@ -21,9 +21,12 @@ _SafelinkQueryEventsInput _$SafelinkQueryEventsInputFromJson(Map json) =>
         sortDirection: $checkedConvert(
           'sortDirection',
           (v) =>
-              _$JsonConverterFromJson<String, SafelinkQueryEventsSortDirection>(
+              _$JsonConverterFromJson<
+                String,
+                SafelinkQueryEventsInputSortDirection
+              >(
                 v,
-                const SafelinkQueryEventsSortDirectionConverter().fromJson,
+                const SafelinkQueryEventsInputSortDirectionConverter().fromJson,
               ),
         ),
         $unknown: $checkedConvert(
@@ -42,9 +45,9 @@ Map<String, dynamic> _$SafelinkQueryEventsInputToJson(
   'urls': ?instance.urls,
   'patternType': ?instance.patternType,
   'sortDirection':
-      ?_$JsonConverterToJson<String, SafelinkQueryEventsSortDirection>(
+      ?_$JsonConverterToJson<String, SafelinkQueryEventsInputSortDirection>(
         instance.sortDirection,
-        const SafelinkQueryEventsSortDirectionConverter().toJson,
+        const SafelinkQueryEventsInputSortDirectionConverter().toJson,
       ),
   r'$unknown': ?instance.$unknown,
 };

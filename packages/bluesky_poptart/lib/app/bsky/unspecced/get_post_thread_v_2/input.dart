@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
-import './main_sort.dart';
+import './main_parameters_sort.dart';
 
 part 'input.freezed.dart';
 part 'input.g.dart';
@@ -42,7 +42,8 @@ abstract class UnspeccedGetPostThreadV2Input
     @Default(10) int branchingFactor,
 
     /// Sorting for the thread replies.
-    @UnspeccedGetPostThreadV2SortConverter() UnspeccedGetPostThreadV2Sort? sort,
+    @UnspeccedGetPostThreadV2ParametersSortConverter()
+    UnspeccedGetPostThreadV2ParametersSort? sort,
 
     Map<String, dynamic>? $unknown,
   }) = _UnspeccedGetPostThreadV2Input;

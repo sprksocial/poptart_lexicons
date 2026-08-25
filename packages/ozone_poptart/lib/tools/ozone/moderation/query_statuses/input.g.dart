@@ -62,9 +62,13 @@ _ModerationQueryStatusesInput _$ModerationQueryStatusesInputFromJson(
     reviewState: $checkedConvert(
       'reviewState',
       (v) =>
-          _$JsonConverterFromJson<String, ModerationQueryStatusesReviewState>(
+          _$JsonConverterFromJson<
+            String,
+            ModerationQueryStatusesParametersReviewState
+          >(
             v,
-            const ModerationQueryStatusesReviewStateConverter().fromJson,
+            const ModerationQueryStatusesParametersReviewStateConverter()
+                .fromJson,
           ),
     ),
     ignoreSubjects: $checkedConvert(
@@ -99,9 +103,13 @@ _ModerationQueryStatusesInput _$ModerationQueryStatusesInputFromJson(
     subjectType: $checkedConvert(
       'subjectType',
       (v) =>
-          _$JsonConverterFromJson<String, ModerationQueryStatusesSubjectType>(
+          _$JsonConverterFromJson<
+            String,
+            ModerationQueryStatusesParametersSubjectType
+          >(
             v,
-            const ModerationQueryStatusesSubjectTypeConverter().fromJson,
+            const ModerationQueryStatusesParametersSubjectTypeConverter()
+                .fromJson,
           ),
     ),
     minAccountSuspendCount: $checkedConvert(
@@ -129,10 +137,11 @@ _ModerationQueryStatusesInput _$ModerationQueryStatusesInputFromJson(
       (v) =>
           _$JsonConverterFromJson<
             String,
-            ModerationQueryStatusesAgeAssuranceState
+            ModerationQueryStatusesParametersAgeAssuranceState
           >(
             v,
-            const ModerationQueryStatusesAgeAssuranceStateConverter().fromJson,
+            const ModerationQueryStatusesParametersAgeAssuranceStateConverter()
+                .fromJson,
           ),
     ),
     $unknown: $checkedConvert(
@@ -164,9 +173,12 @@ Map<String, dynamic> _$ModerationQueryStatusesInputToJson(
   'includeMuted': ?instance.includeMuted,
   'onlyMuted': ?instance.onlyMuted,
   'reviewState':
-      ?_$JsonConverterToJson<String, ModerationQueryStatusesReviewState>(
+      ?_$JsonConverterToJson<
+        String,
+        ModerationQueryStatusesParametersReviewState
+      >(
         instance.reviewState,
-        const ModerationQueryStatusesReviewStateConverter().toJson,
+        const ModerationQueryStatusesParametersReviewStateConverter().toJson,
       ),
   'ignoreSubjects': ?instance.ignoreSubjects,
   'lastReviewedBy': ?instance.lastReviewedBy,
@@ -180,9 +192,12 @@ Map<String, dynamic> _$ModerationQueryStatusesInputToJson(
   'cursor': ?instance.cursor,
   'collections': ?instance.collections,
   'subjectType':
-      ?_$JsonConverterToJson<String, ModerationQueryStatusesSubjectType>(
+      ?_$JsonConverterToJson<
+        String,
+        ModerationQueryStatusesParametersSubjectType
+      >(
         instance.subjectType,
-        const ModerationQueryStatusesSubjectTypeConverter().toJson,
+        const ModerationQueryStatusesParametersSubjectTypeConverter().toJson,
       ),
   'minAccountSuspendCount': ?instance.minAccountSuspendCount,
   'minReportedRecordsCount': ?instance.minReportedRecordsCount,
@@ -190,9 +205,13 @@ Map<String, dynamic> _$ModerationQueryStatusesInputToJson(
   'minPriorityScore': ?instance.minPriorityScore,
   'minStrikeCount': ?instance.minStrikeCount,
   'ageAssuranceState':
-      ?_$JsonConverterToJson<String, ModerationQueryStatusesAgeAssuranceState>(
+      ?_$JsonConverterToJson<
+        String,
+        ModerationQueryStatusesParametersAgeAssuranceState
+      >(
         instance.ageAssuranceState,
-        const ModerationQueryStatusesAgeAssuranceStateConverter().toJson,
+        const ModerationQueryStatusesParametersAgeAssuranceStateConverter()
+            .toJson,
       ),
   r'$unknown': ?instance.$unknown,
 };

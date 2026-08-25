@@ -9,6 +9,6 @@
 
 export 'query_reports/descriptor.dart';
 export 'query_reports/input.dart';
-export 'query_reports/main_status.dart';
-export 'query_reports/main_subject_type.dart';
+export 'query_reports/main_parameters_status.dart';
+export 'query_reports/main_parameters_subject_type.dart';
 export 'query_reports/output.dart';
