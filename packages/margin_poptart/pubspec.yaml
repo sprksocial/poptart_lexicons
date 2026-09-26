@@ -1,6 +1,6 @@
 name: margin_poptart
 description: Generated Dart types and method descriptors for Margin lexicons.
-version: 0.1.2
+version: 0.2.0
 homepage: https://poptart.xyz
 documentation: https://poptart.xyz
 repository: https://github.com/sprksocial/poptart_lexicons
@@ -12,12 +12,12 @@ environment:
 resolution: workspace
 
 dependencies:
-  bluesky_poptart: ^0.2.0
+  bluesky_poptart: ^0.3.0
   characters: ^1.4.1
   freezed_annotation: ^3.1.0
   json_annotation: ^4.11.0
   poptart_core: ^0.1.0
-  poptart_lex: ^0.1.0
+  poptart_lex: ^0.2.0
   poptart_primitives: ^0.1.0
   poptart_xrpc: ^0.1.0
 

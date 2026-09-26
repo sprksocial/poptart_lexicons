@@ -1,3 +1,8 @@
+## 0.3.0
+
+- **Breaking:** Require `poptart_lex ^0.2.0`, whose nested XRPC types are scoped by parameter, input, or output role.
+- Update `bluesky_poptart` to `^0.3.0`.
+
 ## 0.2.0
 
 - **Breaking:** Scope nested XRPC types by their parameter, input, or output role.
