@@ -105,7 +105,7 @@ $JoinLinkViewCopyWith<$Res>? get joinLink {
 @override
 @pragma('vm:prefer-inline')
 $ConvoLockStatusCopyWith<$Res> get lockStatus {
-
+  
   return $ConvoLockStatusCopyWith<$Res>(_self.lockStatus, (value) {
     return _then(_self.copyWith(lockStatus: value));
   });
@@ -361,7 +361,7 @@ $JoinLinkViewCopyWith<$Res>? get joinLink {
 @override
 @pragma('vm:prefer-inline')
 $ConvoLockStatusCopyWith<$Res> get lockStatus {
-
+  
   return $ConvoLockStatusCopyWith<$Res>(_self.lockStatus, (value) {
     return _then(_self.copyWith(lockStatus: value));
   });

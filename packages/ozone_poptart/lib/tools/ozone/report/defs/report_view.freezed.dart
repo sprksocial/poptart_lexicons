@@ -115,7 +115,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReportViewStatusCopyWith<$Res> get status {
-
+  
   return $ReportViewStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -124,7 +124,7 @@ $ReportViewStatusCopyWith<$Res> get status {
 @override
 @pragma('vm:prefer-inline')
 $SubjectViewCopyWith<$Res> get subject {
-
+  
   return $SubjectViewCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -133,7 +133,7 @@ $SubjectViewCopyWith<$Res> get subject {
 @override
 @pragma('vm:prefer-inline')
 $ReasonTypeCopyWith<$Res> get reportType {
-
+  
   return $ReasonTypeCopyWith<$Res>(_self.reportType, (value) {
     return _then(_self.copyWith(reportType: value));
   });
@@ -142,7 +142,7 @@ $ReasonTypeCopyWith<$Res> get reportType {
 @override
 @pragma('vm:prefer-inline')
 $SubjectViewCopyWith<$Res> get reporter {
-
+  
   return $SubjectViewCopyWith<$Res>(_self.reporter, (value) {
     return _then(_self.copyWith(reporter: value));
   });
@@ -471,7 +471,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ReportViewStatusCopyWith<$Res> get status {
-
+  
   return $ReportViewStatusCopyWith<$Res>(_self.status, (value) {
     return _then(_self.copyWith(status: value));
   });
@@ -480,7 +480,7 @@ $ReportViewStatusCopyWith<$Res> get status {
 @override
 @pragma('vm:prefer-inline')
 $SubjectViewCopyWith<$Res> get subject {
-
+  
   return $SubjectViewCopyWith<$Res>(_self.subject, (value) {
     return _then(_self.copyWith(subject: value));
   });
@@ -489,7 +489,7 @@ $SubjectViewCopyWith<$Res> get subject {
 @override
 @pragma('vm:prefer-inline')
 $ReasonTypeCopyWith<$Res> get reportType {
-
+  
   return $ReasonTypeCopyWith<$Res>(_self.reportType, (value) {
     return _then(_self.copyWith(reportType: value));
   });
@@ -498,7 +498,7 @@ $ReasonTypeCopyWith<$Res> get reportType {
 @override
 @pragma('vm:prefer-inline')
 $SubjectViewCopyWith<$Res> get reporter {
-
+  
   return $SubjectViewCopyWith<$Res>(_self.reporter, (value) {
     return _then(_self.copyWith(reporter: value));
   });

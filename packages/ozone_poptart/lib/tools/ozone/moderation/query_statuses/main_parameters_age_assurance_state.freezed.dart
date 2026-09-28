@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ModerationQueryStatusesParametersAgeAssuranceStateKnownValue extends ModerationQueryStatusesParametersAgeAssuranceState {
   const ModerationQueryStatusesParametersAgeAssuranceStateKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownModerationQueryStatusesParametersAgeAssuranceState data;
 
@@ -248,7 +248,7 @@ as KnownModerationQueryStatusesParametersAgeAssuranceState,
 
 class ModerationQueryStatusesParametersAgeAssuranceStateUnknown extends ModerationQueryStatusesParametersAgeAssuranceState {
   const ModerationQueryStatusesParametersAgeAssuranceStateUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

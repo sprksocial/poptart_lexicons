@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class GraphGetFollowersParametersSortKnownValue extends GraphGetFollowersParametersSort {
   const GraphGetFollowersParametersSortKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownGraphGetFollowersParametersSort data;
 
@@ -248,7 +248,7 @@ as KnownGraphGetFollowersParametersSort,
 
 class GraphGetFollowersParametersSortUnknown extends GraphGetFollowersParametersSort {
   const GraphGetFollowersParametersSortUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 
