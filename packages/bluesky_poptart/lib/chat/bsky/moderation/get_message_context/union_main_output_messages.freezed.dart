@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UModerationGetMessageContextOutputMessagesMessageView extends UModerationGetMessageContextOutputMessages {
   const UModerationGetMessageContextOutputMessagesMessageView({required this.data}): super._();
-
+  
 
 @override final  MessageView data;
 
@@ -245,7 +245,7 @@ as MessageView,
 @override
 @pragma('vm:prefer-inline')
 $MessageViewCopyWith<$Res> get data {
-
+  
   return $MessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $MessageViewCopyWith<$Res> get data {
 
 class UModerationGetMessageContextOutputMessagesSystemMessageView extends UModerationGetMessageContextOutputMessages {
   const UModerationGetMessageContextOutputMessagesSystemMessageView({required this.data}): super._();
-
+  
 
 @override final  SystemMessageView data;
 
@@ -320,7 +320,7 @@ as SystemMessageView,
 @override
 @pragma('vm:prefer-inline')
 $SystemMessageViewCopyWith<$Res> get data {
-
+  
   return $SystemMessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $SystemMessageViewCopyWith<$Res> get data {
 
 class UModerationGetMessageContextOutputMessagesUnknown extends UModerationGetMessageContextOutputMessages {
   const UModerationGetMessageContextOutputMessagesUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

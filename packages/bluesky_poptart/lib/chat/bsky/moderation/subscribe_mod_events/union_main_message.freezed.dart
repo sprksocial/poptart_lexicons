@@ -236,7 +236,7 @@ return unknown(_that.data);case _:
 
 class UModerationSubscribeModEventsMessageEventConvoFirstMessage extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventConvoFirstMessage({required this.data}): super._();
-
+  
 
 @override final  EventConvoFirstMessage data;
 
@@ -299,7 +299,7 @@ as EventConvoFirstMessage,
 @override
 @pragma('vm:prefer-inline')
 $EventConvoFirstMessageCopyWith<$Res> get data {
-
+  
   return $EventConvoFirstMessageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -311,7 +311,7 @@ $EventConvoFirstMessageCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatCreated extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatCreated({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatCreated data;
 
@@ -374,7 +374,7 @@ as EventGroupChatCreated,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatCreatedCopyWith<$Res> get data {
-
+  
   return $EventGroupChatCreatedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -386,7 +386,7 @@ $EventGroupChatCreatedCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatMemberAdded extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatMemberAdded({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatMemberAdded data;
 
@@ -449,7 +449,7 @@ as EventGroupChatMemberAdded,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatMemberAddedCopyWith<$Res> get data {
-
+  
   return $EventGroupChatMemberAddedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -461,7 +461,7 @@ $EventGroupChatMemberAddedCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatMemberJoined extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatMemberJoined({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatMemberJoined data;
 
@@ -524,7 +524,7 @@ as EventGroupChatMemberJoined,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatMemberJoinedCopyWith<$Res> get data {
-
+  
   return $EventGroupChatMemberJoinedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -536,7 +536,7 @@ $EventGroupChatMemberJoinedCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatJoinRequest extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatJoinRequest({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatJoinRequest data;
 
@@ -599,7 +599,7 @@ as EventGroupChatJoinRequest,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatJoinRequestCopyWith<$Res> get data {
-
+  
   return $EventGroupChatJoinRequestCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -611,7 +611,7 @@ $EventGroupChatJoinRequestCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatJoinRequestApproved extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatJoinRequestApproved({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatJoinRequestApproved data;
 
@@ -674,7 +674,7 @@ as EventGroupChatJoinRequestApproved,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatJoinRequestApprovedCopyWith<$Res> get data {
-
+  
   return $EventGroupChatJoinRequestApprovedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -686,7 +686,7 @@ $EventGroupChatJoinRequestApprovedCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatJoinRequestRejected extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatJoinRequestRejected({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatJoinRequestRejected data;
 
@@ -749,7 +749,7 @@ as EventGroupChatJoinRequestRejected,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatJoinRequestRejectedCopyWith<$Res> get data {
-
+  
   return $EventGroupChatJoinRequestRejectedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -761,7 +761,7 @@ $EventGroupChatJoinRequestRejectedCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventChatAccepted extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventChatAccepted({required this.data}): super._();
-
+  
 
 @override final  EventChatAccepted data;
 
@@ -824,7 +824,7 @@ as EventChatAccepted,
 @override
 @pragma('vm:prefer-inline')
 $EventChatAcceptedCopyWith<$Res> get data {
-
+  
   return $EventChatAcceptedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -836,7 +836,7 @@ $EventChatAcceptedCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatMemberLeft extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatMemberLeft({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatMemberLeft data;
 
@@ -899,7 +899,7 @@ as EventGroupChatMemberLeft,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatMemberLeftCopyWith<$Res> get data {
-
+  
   return $EventGroupChatMemberLeftCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -911,7 +911,7 @@ $EventGroupChatMemberLeftCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventGroupChatUpdated extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventGroupChatUpdated({required this.data}): super._();
-
+  
 
 @override final  EventGroupChatUpdated data;
 
@@ -974,7 +974,7 @@ as EventGroupChatUpdated,
 @override
 @pragma('vm:prefer-inline')
 $EventGroupChatUpdatedCopyWith<$Res> get data {
-
+  
   return $EventGroupChatUpdatedCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -986,7 +986,7 @@ $EventGroupChatUpdatedCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageEventRateLimitExceeded extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageEventRateLimitExceeded({required this.data}): super._();
-
+  
 
 @override final  EventRateLimitExceeded data;
 
@@ -1049,7 +1049,7 @@ as EventRateLimitExceeded,
 @override
 @pragma('vm:prefer-inline')
 $EventRateLimitExceededCopyWith<$Res> get data {
-
+  
   return $EventRateLimitExceededCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -1061,7 +1061,7 @@ $EventRateLimitExceededCopyWith<$Res> get data {
 
 class UModerationSubscribeModEventsMessageUnknown extends UModerationSubscribeModEventsMessage {
   const UModerationSubscribeModEventsMessageUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

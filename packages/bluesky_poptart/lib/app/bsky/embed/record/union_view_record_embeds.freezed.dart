@@ -206,7 +206,7 @@ return unknown(_that.data);case _:
 
 class UEmbedRecordViewRecordEmbedsEmbedImagesView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedImagesView({required this.data}): super._();
-
+  
 
 @override final  EmbedImagesView data;
 
@@ -269,7 +269,7 @@ as EmbedImagesView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedImagesViewCopyWith<$Res> get data {
-
+  
   return $EmbedImagesViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -281,7 +281,7 @@ $EmbedImagesViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedVideoView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedVideoView({required this.data}): super._();
-
+  
 
 @override final  EmbedVideoView data;
 
@@ -344,7 +344,7 @@ as EmbedVideoView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedVideoViewCopyWith<$Res> get data {
-
+  
   return $EmbedVideoViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -356,7 +356,7 @@ $EmbedVideoViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedGalleryView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedGalleryView({required this.data}): super._();
-
+  
 
 @override final  EmbedGalleryView data;
 
@@ -419,7 +419,7 @@ as EmbedGalleryView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedGalleryViewCopyWith<$Res> get data {
-
+  
   return $EmbedGalleryViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -431,7 +431,7 @@ $EmbedGalleryViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedExternalView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedExternalView({required this.data}): super._();
-
+  
 
 @override final  EmbedExternalView data;
 
@@ -494,7 +494,7 @@ as EmbedExternalView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalViewCopyWith<$Res> get data {
-
+  
   return $EmbedExternalViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -506,7 +506,7 @@ $EmbedExternalViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedRecordView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedRecordView({required this.data}): super._();
-
+  
 
 @override final  EmbedRecordView data;
 
@@ -569,7 +569,7 @@ as EmbedRecordView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewCopyWith<$Res> get data {
-
+  
   return $EmbedRecordViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -581,7 +581,7 @@ $EmbedRecordViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsEmbedRecordWithMediaView({required this.data}): super._();
-
+  
 
 @override final  EmbedRecordWithMediaView data;
 
@@ -644,7 +644,7 @@ as EmbedRecordWithMediaView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordWithMediaViewCopyWith<$Res> get data {
-
+  
   return $EmbedRecordWithMediaViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -656,7 +656,7 @@ $EmbedRecordWithMediaViewCopyWith<$Res> get data {
 
 class UEmbedRecordViewRecordEmbedsUnknown extends UEmbedRecordViewRecordEmbeds {
   const UEmbedRecordViewRecordEmbedsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

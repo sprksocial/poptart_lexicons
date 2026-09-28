@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UnspeccedSearchPostsSkeletonParametersSortKnownValue extends UnspeccedSearchPostsSkeletonParametersSort {
   const UnspeccedSearchPostsSkeletonParametersSortKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownUnspeccedSearchPostsSkeletonParametersSort data;
 
@@ -248,7 +248,7 @@ as KnownUnspeccedSearchPostsSkeletonParametersSort,
 
 class UnspeccedSearchPostsSkeletonParametersSortUnknown extends UnspeccedSearchPostsSkeletonParametersSort {
   const UnspeccedSearchPostsSkeletonParametersSortUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

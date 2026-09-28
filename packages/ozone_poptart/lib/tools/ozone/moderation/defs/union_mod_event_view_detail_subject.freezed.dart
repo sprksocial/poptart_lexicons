@@ -200,7 +200,7 @@ return unknown(_that.data);case _:
 
 class UModEventViewDetailSubjectRepoView extends UModEventViewDetailSubject {
   const UModEventViewDetailSubjectRepoView({required this.data}): super._();
-
+  
 
 @override final  RepoView data;
 
@@ -263,7 +263,7 @@ as RepoView,
 @override
 @pragma('vm:prefer-inline')
 $RepoViewCopyWith<$Res> get data {
-
+  
   return $RepoViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -275,7 +275,7 @@ $RepoViewCopyWith<$Res> get data {
 
 class UModEventViewDetailSubjectRepoViewNotFound extends UModEventViewDetailSubject {
   const UModEventViewDetailSubjectRepoViewNotFound({required this.data}): super._();
-
+  
 
 @override final  RepoViewNotFound data;
 
@@ -338,7 +338,7 @@ as RepoViewNotFound,
 @override
 @pragma('vm:prefer-inline')
 $RepoViewNotFoundCopyWith<$Res> get data {
-
+  
   return $RepoViewNotFoundCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -350,7 +350,7 @@ $RepoViewNotFoundCopyWith<$Res> get data {
 
 class UModEventViewDetailSubjectRecordView extends UModEventViewDetailSubject {
   const UModEventViewDetailSubjectRecordView({required this.data}): super._();
-
+  
 
 @override final  RecordView data;
 
@@ -413,7 +413,7 @@ as RecordView,
 @override
 @pragma('vm:prefer-inline')
 $RecordViewCopyWith<$Res> get data {
-
+  
   return $RecordViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -425,7 +425,7 @@ $RecordViewCopyWith<$Res> get data {
 
 class UModEventViewDetailSubjectRecordViewNotFound extends UModEventViewDetailSubject {
   const UModEventViewDetailSubjectRecordViewNotFound({required this.data}): super._();
-
+  
 
 @override final  RecordViewNotFound data;
 
@@ -488,7 +488,7 @@ as RecordViewNotFound,
 @override
 @pragma('vm:prefer-inline')
 $RecordViewNotFoundCopyWith<$Res> get data {
-
+  
   return $RecordViewNotFoundCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -500,7 +500,7 @@ $RecordViewNotFoundCopyWith<$Res> get data {
 
 class UModEventViewDetailSubjectConvoView extends UModEventViewDetailSubject {
   const UModEventViewDetailSubjectConvoView({required this.data}): super._();
-
+  
 
 @override final  ConvoView data;
 
@@ -563,7 +563,7 @@ as ConvoView,
 @override
 @pragma('vm:prefer-inline')
 $ConvoViewCopyWith<$Res> get data {
-
+  
   return $ConvoViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -575,7 +575,7 @@ $ConvoViewCopyWith<$Res> get data {
 
 class UModEventViewDetailSubjectUnknown extends UModEventViewDetailSubject {
   const UModEventViewDetailSubjectUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {
