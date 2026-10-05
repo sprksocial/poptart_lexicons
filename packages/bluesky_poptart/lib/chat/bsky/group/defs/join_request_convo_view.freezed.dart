@@ -83,7 +83,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get owner {
-
+  
   return $ProfileViewBasicCopyWith<$Res>(_self.owner, (value) {
     return _then(_self.copyWith(owner: value));
   });
@@ -92,7 +92,7 @@ $ProfileViewBasicCopyWith<$Res> get owner {
 @override
 @pragma('vm:prefer-inline')
 $JoinLinkViewerStateCopyWith<$Res> get viewer {
-
+  
   return $JoinLinkViewerStateCopyWith<$Res>(_self.viewer, (value) {
     return _then(_self.copyWith(viewer: value));
   });
@@ -323,7 +323,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get owner {
-
+  
   return $ProfileViewBasicCopyWith<$Res>(_self.owner, (value) {
     return _then(_self.copyWith(owner: value));
   });
@@ -332,7 +332,7 @@ $ProfileViewBasicCopyWith<$Res> get owner {
 @override
 @pragma('vm:prefer-inline')
 $JoinLinkViewerStateCopyWith<$Res> get viewer {
-
+  
   return $JoinLinkViewerStateCopyWith<$Res>(_self.viewer, (value) {
     return _then(_self.copyWith(viewer: value));
   });

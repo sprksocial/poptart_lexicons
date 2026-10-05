@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SettingUpsertOptionInputManagerRoleKnownValue extends SettingUpsertOptionInputManagerRole {
   const SettingUpsertOptionInputManagerRoleKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownSettingUpsertOptionInputManagerRole data;
 
@@ -248,7 +248,7 @@ as KnownSettingUpsertOptionInputManagerRole,
 
 class SettingUpsertOptionInputManagerRoleUnknown extends SettingUpsertOptionInputManagerRole {
   const SettingUpsertOptionInputManagerRoleUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 
