@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UEmbedJoinLinkViewJoinLinkPreviewCopyWith<$Res> get joinLinkPreview {
-
+  
   return $UEmbedJoinLinkViewJoinLinkPreviewCopyWith<$Res>(_self.joinLinkPreview, (value) {
     return _then(_self.copyWith(joinLinkPreview: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $UEmbedJoinLinkViewJoinLinkPreviewCopyWith<$Res> get joinLinkPreview {
-
+  
   return $UEmbedJoinLinkViewJoinLinkPreviewCopyWith<$Res>(_self.joinLinkPreview, (value) {
     return _then(_self.copyWith(joinLinkPreview: value));
   });

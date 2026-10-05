@@ -3,6 +3,8 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unused_import, duplicate_import, unnecessary_cast, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
+import 'package:bluesky_poptart/app/bsky/notification/get_grouped_notifications.dart'
+    as _AppBskyNotificationGetGroupedNotifications;
 import 'package:bluesky_poptart/app/bsky/notification/get_preferences.dart'
     as _AppBskyNotificationGetPreferences;
 import 'package:bluesky_poptart/app/bsky/notification/get_unread_count.dart'
@@ -28,6 +30,11 @@ import 'package:bluesky_poptart/app/bsky/notification/update_seen.dart'
 // LexGenerator
 // **************************************************************************
 
+final appBskyNotificationGetGroupedNotifications =
+    _AppBskyNotificationGetGroupedNotifications
+        .appBskyNotificationGetGroupedNotifications;
+final appBskyNotificationGetGroupedNotificationsMethodDescriptor =
+    _AppBskyNotificationGetGroupedNotifications.methodDescriptor;
 final appBskyNotificationGetPreferences =
     _AppBskyNotificationGetPreferences.appBskyNotificationGetPreferences;
 final appBskyNotificationGetPreferencesMethodDescriptor =

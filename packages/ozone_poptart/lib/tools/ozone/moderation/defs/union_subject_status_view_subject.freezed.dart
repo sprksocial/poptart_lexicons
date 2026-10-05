@@ -194,7 +194,7 @@ return unknown(_that.data);case _:
 
 class USubjectStatusViewSubjectRepoRef extends USubjectStatusViewSubject {
   const USubjectStatusViewSubjectRepoRef({required this.data}): super._();
-
+  
 
 @override final  RepoRef data;
 
@@ -257,7 +257,7 @@ as RepoRef,
 @override
 @pragma('vm:prefer-inline')
 $RepoRefCopyWith<$Res> get data {
-
+  
   return $RepoRefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -269,7 +269,7 @@ $RepoRefCopyWith<$Res> get data {
 
 class USubjectStatusViewSubjectRepoStrongRef extends USubjectStatusViewSubject {
   const USubjectStatusViewSubjectRepoStrongRef({required this.data}): super._();
-
+  
 
 @override final  RepoStrongRef data;
 
@@ -332,7 +332,7 @@ as RepoStrongRef,
 @override
 @pragma('vm:prefer-inline')
 $RepoStrongRefCopyWith<$Res> get data {
-
+  
   return $RepoStrongRefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -344,7 +344,7 @@ $RepoStrongRefCopyWith<$Res> get data {
 
 class USubjectStatusViewSubjectMessageRef extends USubjectStatusViewSubject {
   const USubjectStatusViewSubjectMessageRef({required this.data}): super._();
-
+  
 
 @override final  MessageRef data;
 
@@ -407,7 +407,7 @@ as MessageRef,
 @override
 @pragma('vm:prefer-inline')
 $MessageRefCopyWith<$Res> get data {
-
+  
   return $MessageRefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -419,7 +419,7 @@ $MessageRefCopyWith<$Res> get data {
 
 class USubjectStatusViewSubjectConvoRef extends USubjectStatusViewSubject {
   const USubjectStatusViewSubjectConvoRef({required this.data}): super._();
-
+  
 
 @override final  ConvoRef data;
 
@@ -482,7 +482,7 @@ as ConvoRef,
 @override
 @pragma('vm:prefer-inline')
 $ConvoRefCopyWith<$Res> get data {
-
+  
   return $ConvoRefCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -494,7 +494,7 @@ $ConvoRefCopyWith<$Res> get data {
 
 class USubjectStatusViewSubjectUnknown extends USubjectStatusViewSubject {
   const USubjectStatusViewSubjectUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

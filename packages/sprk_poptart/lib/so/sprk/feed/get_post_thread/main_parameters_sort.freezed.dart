@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FeedGetPostThreadParametersSortKnownValue extends FeedGetPostThreadParametersSort {
   const FeedGetPostThreadParametersSortKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownFeedGetPostThreadParametersSort data;
 
@@ -248,7 +248,7 @@ as KnownFeedGetPostThreadParametersSort,
 
 class FeedGetPostThreadParametersSortUnknown extends FeedGetPostThreadParametersSort {
   const FeedGetPostThreadParametersSortUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 
