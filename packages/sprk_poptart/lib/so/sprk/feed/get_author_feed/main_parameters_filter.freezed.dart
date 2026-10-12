@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FeedGetAuthorFeedParametersFilterKnownValue extends FeedGetAuthorFeedParametersFilter {
   const FeedGetAuthorFeedParametersFilterKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownFeedGetAuthorFeedParametersFilter data;
 
@@ -248,7 +248,7 @@ as KnownFeedGetAuthorFeedParametersFilter,
 
 class FeedGetAuthorFeedParametersFilterUnknown extends FeedGetAuthorFeedParametersFilter {
   const FeedGetAuthorFeedParametersFilterUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

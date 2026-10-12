@@ -95,7 +95,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SelectorTypeCopyWith<$Res> get type {
-
+  
   return $SelectorTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });
@@ -353,7 +353,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SelectorTypeCopyWith<$Res> get type {
-
+  
   return $SelectorTypeCopyWith<$Res>(_self.type, (value) {
     return _then(_self.copyWith(type: value));
   });

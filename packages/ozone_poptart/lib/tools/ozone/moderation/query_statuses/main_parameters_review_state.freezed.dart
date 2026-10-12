@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ModerationQueryStatusesParametersReviewStateKnownValue extends ModerationQueryStatusesParametersReviewState {
   const ModerationQueryStatusesParametersReviewStateKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownModerationQueryStatusesParametersReviewState data;
 
@@ -248,7 +248,7 @@ as KnownModerationQueryStatusesParametersReviewState,
 
 class ModerationQueryStatusesParametersReviewStateUnknown extends ModerationQueryStatusesParametersReviewState {
   const ModerationQueryStatusesParametersReviewStateUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

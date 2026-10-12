@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FeedSearchPostsV2ParametersSortKnownValue extends FeedSearchPostsV2ParametersSort {
   const FeedSearchPostsV2ParametersSortKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownFeedSearchPostsV2ParametersSort data;
 
@@ -248,7 +248,7 @@ as KnownFeedSearchPostsV2ParametersSort,
 
 class FeedSearchPostsV2ParametersSortUnknown extends FeedSearchPostsV2ParametersSort {
   const FeedSearchPostsV2ParametersSortUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

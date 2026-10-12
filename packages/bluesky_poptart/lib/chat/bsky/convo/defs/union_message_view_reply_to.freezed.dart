@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UMessageViewReplyToMessageView extends UMessageViewReplyTo {
   const UMessageViewReplyToMessageView({required this.data}): super._();
-
+  
 
 @override final  MessageView data;
 
@@ -251,7 +251,7 @@ as MessageView,
 @override
 @pragma('vm:prefer-inline')
 $MessageViewCopyWith<$Res> get data {
-
+  
   return $MessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $MessageViewCopyWith<$Res> get data {
 
 class UMessageViewReplyToDeletedMessageView extends UMessageViewReplyTo {
   const UMessageViewReplyToDeletedMessageView({required this.data}): super._();
-
+  
 
 @override final  DeletedMessageView data;
 
@@ -326,7 +326,7 @@ as DeletedMessageView,
 @override
 @pragma('vm:prefer-inline')
 $DeletedMessageViewCopyWith<$Res> get data {
-
+  
   return $DeletedMessageViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $DeletedMessageViewCopyWith<$Res> get data {
 
 class UMessageViewReplyToMessageBeforeUserJoinedGroupView extends UMessageViewReplyTo {
   const UMessageViewReplyToMessageBeforeUserJoinedGroupView({required this.data}): super._();
-
+  
 
 @override final  MessageBeforeUserJoinedGroupView data;
 
@@ -401,7 +401,7 @@ as MessageBeforeUserJoinedGroupView,
 @override
 @pragma('vm:prefer-inline')
 $MessageBeforeUserJoinedGroupViewCopyWith<$Res> get data {
-
+  
   return $MessageBeforeUserJoinedGroupViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $MessageBeforeUserJoinedGroupViewCopyWith<$Res> get data {
 
 class UMessageViewReplyToUnknown extends UMessageViewReplyTo {
   const UMessageViewReplyToUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

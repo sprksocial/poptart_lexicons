@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ConvoListConvosParametersReadStateKnownValue extends ConvoListConvosParametersReadState {
   const ConvoListConvosParametersReadStateKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownConvoListConvosParametersReadState data;
 
@@ -248,7 +248,7 @@ as KnownConvoListConvosParametersReadState,
 
 class ConvoListConvosParametersReadStateUnknown extends ConvoListConvosParametersReadState {
   const ConvoListConvosParametersReadStateUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

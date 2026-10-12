@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UMessageInputEmbedEmbedRecord extends UMessageInputEmbed {
   const UMessageInputEmbedEmbedRecord({required this.data}): super._();
-
+  
 
 @override final  EmbedRecord data;
 
@@ -245,7 +245,7 @@ as EmbedRecord,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordCopyWith<$Res> get data {
-
+  
   return $EmbedRecordCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $EmbedRecordCopyWith<$Res> get data {
 
 class UMessageInputEmbedEmbedJoinLink extends UMessageInputEmbed {
   const UMessageInputEmbedEmbedJoinLink({required this.data}): super._();
-
+  
 
 @override final  EmbedJoinLink data;
 
@@ -320,7 +320,7 @@ as EmbedJoinLink,
 @override
 @pragma('vm:prefer-inline')
 $EmbedJoinLinkCopyWith<$Res> get data {
-
+  
   return $EmbedJoinLinkCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $EmbedJoinLinkCopyWith<$Res> get data {
 
 class UMessageInputEmbedUnknown extends UMessageInputEmbed {
   const UMessageInputEmbedUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

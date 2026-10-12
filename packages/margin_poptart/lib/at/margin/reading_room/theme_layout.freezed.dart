@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ThemeLayoutKnownValue extends ThemeLayout {
   const ThemeLayoutKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownThemeLayout data;
 
@@ -248,7 +248,7 @@ as KnownThemeLayout,
 
 class ThemeLayoutUnknown extends ThemeLayout {
   const ThemeLayoutUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

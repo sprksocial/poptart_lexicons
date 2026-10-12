@@ -5,6 +5,8 @@
 
 import 'package:bluesky_poptart/app/bsky/unspecced/get_age_assurance_state.dart'
     as _AppBskyUnspeccedGetAgeAssuranceState;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_explore_tab.dart'
+    as _AppBskyUnspeccedGetAtmosphereExploreTab;
 import 'package:bluesky_poptart/app/bsky/unspecced/get_config.dart'
     as _AppBskyUnspeccedGetConfig;
 import 'package:bluesky_poptart/app/bsky/unspecced/get_onboarding_suggested_starter_packs.dart'
@@ -72,6 +74,11 @@ final appBskyUnspeccedGetAgeAssuranceState =
     _AppBskyUnspeccedGetAgeAssuranceState.appBskyUnspeccedGetAgeAssuranceState;
 final appBskyUnspeccedGetAgeAssuranceStateMethodDescriptor =
     _AppBskyUnspeccedGetAgeAssuranceState.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereExploreTab =
+    _AppBskyUnspeccedGetAtmosphereExploreTab
+        .appBskyUnspeccedGetAtmosphereExploreTab;
+final appBskyUnspeccedGetAtmosphereExploreTabMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereExploreTab.methodDescriptor;
 final appBskyUnspeccedGetConfig =
     _AppBskyUnspeccedGetConfig.appBskyUnspeccedGetConfig;
 final appBskyUnspeccedGetConfigMethodDescriptor =
