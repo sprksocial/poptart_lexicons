@@ -31,6 +31,7 @@ abstract class ActorProfileRecord with _$ActorProfileRecord {
     'labels',
     'joinedViaStarterPack',
     'pinnedPost',
+    'links',
     'createdAt',
   ];
 
@@ -54,6 +55,7 @@ abstract class ActorProfileRecord with _$ActorProfileRecord {
     @UActorProfileLabelsConverter() UActorProfileLabels? labels,
     @RepoStrongRefConverter() RepoStrongRef? joinedViaStarterPack,
     @RepoStrongRefConverter() RepoStrongRef? pinnedPost,
+    @RepoStrongRefConverter() List<RepoStrongRef>? links,
     DateTime? createdAt,
 
     Map<String, dynamic>? $unknown,

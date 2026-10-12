@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SettingRemoveOptionsInputScopeCopyWith<$Res> get scope {
-
+  
   return $SettingRemoveOptionsInputScopeCopyWith<$Res>(_self.scope, (value) {
     return _then(_self.copyWith(scope: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $SettingRemoveOptionsInputScopeCopyWith<$Res> get scope {
-
+  
   return $SettingRemoveOptionsInputScopeCopyWith<$Res>(_self.scope, (value) {
     return _then(_self.copyWith(scope: value));
   });

@@ -15,6 +15,7 @@ import './reopen_activity.dart';
 import './report_activity_view.dart';
 import './report_assignment.dart';
 import './report_view.dart';
+import './unassignment_activity.dart';
 import 'package:poptart_xrpc/poptart_xrpc.dart';
 
 // **************************************************************************
@@ -57,6 +58,17 @@ final assignmentActivityDescriptor = XRPCObjectDescriptor<AssignmentActivity>(
   toJson: const AssignmentActivityConverter().toJson,
   matches: AssignmentActivity.validate,
 );
+
+final unassignmentActivityDescriptor =
+    XRPCObjectDescriptor<UnassignmentActivity>(
+      nsid: 'tools.ozone.report.defs',
+      defName: 'unassignmentActivity',
+      fromJson: (json) => const UnassignmentActivityConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const UnassignmentActivityConverter().toJson,
+      matches: UnassignmentActivity.validate,
+    );
 
 final escalationActivityDescriptor = XRPCObjectDescriptor<EscalationActivity>(
   nsid: 'tools.ozone.report.defs',

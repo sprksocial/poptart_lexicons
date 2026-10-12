@@ -88,7 +88,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get owner {
-
+  
   return $ProfileViewBasicCopyWith<$Res>(_self.owner, (value) {
     return _then(_self.copyWith(owner: value));
   });
@@ -97,7 +97,7 @@ $ProfileViewBasicCopyWith<$Res> get owner {
 @override
 @pragma('vm:prefer-inline')
 $JoinRuleCopyWith<$Res> get joinRule {
-
+  
   return $JoinRuleCopyWith<$Res>(_self.joinRule, (value) {
     return _then(_self.copyWith(joinRule: value));
   });
@@ -361,7 +361,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ProfileViewBasicCopyWith<$Res> get owner {
-
+  
   return $ProfileViewBasicCopyWith<$Res>(_self.owner, (value) {
     return _then(_self.copyWith(owner: value));
   });
@@ -370,7 +370,7 @@ $ProfileViewBasicCopyWith<$Res> get owner {
 @override
 @pragma('vm:prefer-inline')
 $JoinRuleCopyWith<$Res> get joinRule {
-
+  
   return $JoinRuleCopyWith<$Res>(_self.joinRule, (value) {
     return _then(_self.copyWith(joinRule: value));
   });

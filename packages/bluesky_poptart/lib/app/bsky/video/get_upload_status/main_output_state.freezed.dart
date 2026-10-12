@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class VideoGetUploadStatusOutputStateKnownValue extends VideoGetUploadStatusOutputState {
   const VideoGetUploadStatusOutputStateKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownVideoGetUploadStatusOutputState data;
 
@@ -248,7 +248,7 @@ as KnownVideoGetUploadStatusOutputState,
 
 class VideoGetUploadStatusOutputStateUnknown extends VideoGetUploadStatusOutputState {
   const VideoGetUploadStatusOutputStateUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

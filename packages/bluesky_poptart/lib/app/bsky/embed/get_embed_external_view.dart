@@ -10,3 +10,4 @@
 export 'get_embed_external_view/descriptor.dart';
 export 'get_embed_external_view/input.dart';
 export 'get_embed_external_view/output.dart';
+export 'get_embed_external_view/union_main_output_data.dart';

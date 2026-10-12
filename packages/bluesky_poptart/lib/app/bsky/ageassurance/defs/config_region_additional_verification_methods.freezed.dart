@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ConfigRegionAdditionalVerificationMethodsKnownValue extends ConfigRegionAdditionalVerificationMethods {
   const ConfigRegionAdditionalVerificationMethodsKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownConfigRegionAdditionalVerificationMethods data;
 
@@ -248,7 +248,7 @@ as KnownConfigRegionAdditionalVerificationMethods,
 
 class ConfigRegionAdditionalVerificationMethodsUnknown extends ConfigRegionAdditionalVerificationMethods {
   const ConfigRegionAdditionalVerificationMethodsUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

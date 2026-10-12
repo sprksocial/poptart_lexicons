@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $TextSliceCopyWith<$Res> get index {
-
+  
   return $TextSliceCopyWith<$Res>(_self.index, (value) {
     return _then(_self.copyWith(index: value));
   });
@@ -307,7 +307,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $TextSliceCopyWith<$Res> get index {
-
+  
   return $TextSliceCopyWith<$Res>(_self.index, (value) {
     return _then(_self.copyWith(index: value));
   });

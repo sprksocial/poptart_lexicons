@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UConvoListConvoRequestsOutputRequestsConvoView extends UConvoListConvoRequestsOutputRequests {
   const UConvoListConvoRequestsOutputRequestsConvoView({required this.data}): super._();
-
+  
 
 @override final  ConvoView data;
 
@@ -245,7 +245,7 @@ as ConvoView,
 @override
 @pragma('vm:prefer-inline')
 $ConvoViewCopyWith<$Res> get data {
-
+  
   return $ConvoViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $ConvoViewCopyWith<$Res> get data {
 
 class UConvoListConvoRequestsOutputRequestsJoinRequestConvoView extends UConvoListConvoRequestsOutputRequests {
   const UConvoListConvoRequestsOutputRequestsJoinRequestConvoView({required this.data}): super._();
-
+  
 
 @override final  JoinRequestConvoView data;
 
@@ -320,7 +320,7 @@ as JoinRequestConvoView,
 @override
 @pragma('vm:prefer-inline')
 $JoinRequestConvoViewCopyWith<$Res> get data {
-
+  
   return $JoinRequestConvoViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $JoinRequestConvoViewCopyWith<$Res> get data {
 
 class UConvoListConvoRequestsOutputRequestsUnknown extends UConvoListConvoRequestsOutputRequests {
   const UConvoListConvoRequestsOutputRequestsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {
