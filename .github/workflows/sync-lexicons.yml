@@ -82,7 +82,8 @@ jobs:
             packages, and rebuilds generated parts.
 
             Sources:
-            - bluesky-social/atproto: `app.bsky.*`, `chat.bsky.*`, `tools.ozone.*`
+            - bluesky-social/bsky: `app.bsky.*`, `chat.bsky.*`
+            - bluesky-social/atproto: `tools.ozone.*`
             - margin-at/margin: `at.margin.*`
             - sprksocial/server: `so.sprk.*`
           labels: |
