@@ -17,7 +17,13 @@ part 'report_action.g.dart';
 /// Target specific reports when emitting a moderation event
 @freezed
 abstract class ReportAction with _$ReportAction {
-  static const knownProps = <String>['ids', 'types', 'all', 'note'];
+  static const knownProps = <String>[
+    'ids',
+    'types',
+    'all',
+    'note',
+    'isAutomated',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ReportAction({
@@ -25,11 +31,14 @@ abstract class ReportAction with _$ReportAction {
     List<int>? ids,
     List<String>? types,
 
-    /// Target ALL reports on the subject
+    /// Target ALL reports on the subject. Excludes assigned and escalated reports.
     bool? all,
 
     /// Note to send to reporter(s) when actioning their report
     String? note,
+
+    /// Set true when the report activities are created by an automated process.
+    bool? isAutomated,
 
     Map<String, dynamic>? $unknown,
   }) = _ReportAction;
@@ -48,6 +57,8 @@ extension ReportActionExtension on ReportAction {
   bool get isNotAll => !isAll;
   bool get hasNote => note != null;
   bool get hasNotNote => !hasNote;
+  bool get isIsAutomated => isAutomated ?? false;
+  bool get isNotIsAutomated => !isIsAutomated;
 }
 
 final class ReportActionConverter

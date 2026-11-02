@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UMessageViewEmbedEmbedRecordView extends UMessageViewEmbed {
   const UMessageViewEmbedEmbedRecordView({required this.data}): super._();
-
+  
 
 @override final  EmbedRecordView data;
 
@@ -245,7 +245,7 @@ as EmbedRecordView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordViewCopyWith<$Res> get data {
-
+  
   return $EmbedRecordViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $EmbedRecordViewCopyWith<$Res> get data {
 
 class UMessageViewEmbedEmbedJoinLinkView extends UMessageViewEmbed {
   const UMessageViewEmbedEmbedJoinLinkView({required this.data}): super._();
-
+  
 
 @override final  EmbedJoinLinkView data;
 
@@ -320,7 +320,7 @@ as EmbedJoinLinkView,
 @override
 @pragma('vm:prefer-inline')
 $EmbedJoinLinkViewCopyWith<$Res> get data {
-
+  
   return $EmbedJoinLinkViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $EmbedJoinLinkViewCopyWith<$Res> get data {
 
 class UMessageViewEmbedUnknown extends UMessageViewEmbed {
   const UMessageViewEmbedUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

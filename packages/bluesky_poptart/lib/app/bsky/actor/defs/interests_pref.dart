@@ -16,11 +16,14 @@ part 'interests_pref.g.dart';
 
 @freezed
 abstract class InterestsPref with _$InterestsPref {
-  static const knownProps = <String>['tags'];
+  static const knownProps = <String>['updatedAt', 'tags'];
 
   @JsonSerializable(includeIfNull: false)
   const factory InterestsPref({
     @Default('app.bsky.actor.defs#interestsPref') String $type,
+
+    /// The timestamp when the account owner last updated their interests.
+    DateTime? updatedAt,
     required List<String> tags,
 
     Map<String, dynamic>? $unknown,
@@ -33,6 +36,11 @@ abstract class InterestsPref with _$InterestsPref {
     if (!object.containsKey('\$type')) return false;
     return object['\$type'] == 'app.bsky.actor.defs#interestsPref';
   }
+}
+
+extension InterestsPrefExtension on InterestsPref {
+  bool get hasUpdatedAt => updatedAt != null;
+  bool get hasNotUpdatedAt => !hasUpdatedAt;
 }
 
 final class InterestsPrefConverter

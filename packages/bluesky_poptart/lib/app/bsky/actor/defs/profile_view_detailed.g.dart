@@ -21,7 +21,6 @@ _ProfileViewDetailed _$ProfileViewDetailedFromJson(
     displayName: $checkedConvert('displayName', (v) => v as String?),
     description: $checkedConvert('description', (v) => v as String?),
     pronouns: $checkedConvert('pronouns', (v) => v as String?),
-    website: $checkedConvert('website', (v) => v as String?),
     avatar: $checkedConvert('avatar', (v) => v as String?),
     banner: $checkedConvert('banner', (v) => v as String?),
     followersCount: $checkedConvert(
@@ -75,6 +74,16 @@ _ProfileViewDetailed _$ProfileViewDetailedFromJson(
         const RepoStrongRefConverter().fromJson,
       ),
     ),
+    links: $checkedConvert(
+      'links',
+      (v) => (v as List<dynamic>?)
+          ?.map(
+            (e) => const ProfileLinkViewConverter().fromJson(
+              e as Map<String, dynamic>,
+            ),
+          )
+          .toList(),
+    ),
     verification: $checkedConvert(
       'verification',
       (v) => _$JsonConverterFromJson<Map<String, dynamic>, VerificationState>(
@@ -110,7 +119,6 @@ Map<String, dynamic> _$ProfileViewDetailedToJson(
   'displayName': ?instance.displayName,
   'description': ?instance.description,
   'pronouns': ?instance.pronouns,
-  'website': ?instance.website,
   'avatar': ?instance.avatar,
   'banner': ?instance.banner,
   'followersCount': ?instance.followersCount,
@@ -136,6 +144,9 @@ Map<String, dynamic> _$ProfileViewDetailedToJson(
     instance.pinnedPost,
     const RepoStrongRefConverter().toJson,
   ),
+  'links': ?instance.links
+      ?.map(const ProfileLinkViewConverter().toJson)
+      .toList(),
   'verification':
       ?_$JsonConverterToJson<Map<String, dynamic>, VerificationState>(
         instance.verification,

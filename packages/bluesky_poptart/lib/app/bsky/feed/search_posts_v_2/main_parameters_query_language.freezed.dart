@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class FeedSearchPostsV2ParametersQueryLanguageKnownValue extends FeedSearchPostsV2ParametersQueryLanguage {
   const FeedSearchPostsV2ParametersQueryLanguageKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownFeedSearchPostsV2ParametersQueryLanguage data;
 
@@ -248,7 +248,7 @@ as KnownFeedSearchPostsV2ParametersQueryLanguage,
 
 class FeedSearchPostsV2ParametersQueryLanguageUnknown extends FeedSearchPostsV2ParametersQueryLanguage {
   const FeedSearchPostsV2ParametersQueryLanguageUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

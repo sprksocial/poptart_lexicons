@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ReportQueryReportsParametersStatusKnownValue extends ReportQueryReportsParametersStatus {
   const ReportQueryReportsParametersStatusKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownReportQueryReportsParametersStatus data;
 
@@ -248,7 +248,7 @@ as KnownReportQueryReportsParametersStatus,
 
 class ReportQueryReportsParametersStatusUnknown extends ReportQueryReportsParametersStatus {
   const ReportQueryReportsParametersStatusUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 
