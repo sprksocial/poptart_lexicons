@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ConfigRegionPlatformsKnownValue extends ConfigRegionPlatforms {
   const ConfigRegionPlatformsKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownConfigRegionPlatforms data;
 
@@ -248,7 +248,7 @@ as KnownConfigRegionPlatforms,
 
 class ConfigRegionPlatformsUnknown extends ConfigRegionPlatforms {
   const ConfigRegionPlatformsUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

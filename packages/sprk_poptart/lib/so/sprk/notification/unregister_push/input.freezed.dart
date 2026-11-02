@@ -80,7 +80,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $NotificationUnregisterPushInputPlatformCopyWith<$Res> get platform {
-
+  
   return $NotificationUnregisterPushInputPlatformCopyWith<$Res>(_self.platform, (value) {
     return _then(_self.copyWith(platform: value));
   });
@@ -305,7 +305,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $NotificationUnregisterPushInputPlatformCopyWith<$Res> get platform {
-
+  
   return $NotificationUnregisterPushInputPlatformCopyWith<$Res>(_self.platform, (value) {
     return _then(_self.copyWith(platform: value));
   });

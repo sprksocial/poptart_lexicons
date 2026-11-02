@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UDraftEmbedGalleryItemsDraftEmbedImage extends UDraftEmbedGalleryItems {
   const UDraftEmbedGalleryItemsDraftEmbedImage({required this.data}): super._();
-
+  
 
 @override final  DraftEmbedImage data;
 
@@ -239,7 +239,7 @@ as DraftEmbedImage,
 @override
 @pragma('vm:prefer-inline')
 $DraftEmbedImageCopyWith<$Res> get data {
-
+  
   return $DraftEmbedImageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $DraftEmbedImageCopyWith<$Res> get data {
 
 class UDraftEmbedGalleryItemsUnknown extends UDraftEmbedGalleryItems {
   const UDraftEmbedGalleryItemsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

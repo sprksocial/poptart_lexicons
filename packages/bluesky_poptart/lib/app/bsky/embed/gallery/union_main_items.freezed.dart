@@ -176,7 +176,7 @@ return unknown(_that.data);case _:
 
 class UEmbedGalleryItemsEmbedGalleryImage extends UEmbedGalleryItems {
   const UEmbedGalleryItemsEmbedGalleryImage({required this.data}): super._();
-
+  
 
 @override final  EmbedGalleryImage data;
 
@@ -239,7 +239,7 @@ as EmbedGalleryImage,
 @override
 @pragma('vm:prefer-inline')
 $EmbedGalleryImageCopyWith<$Res> get data {
-
+  
   return $EmbedGalleryImageCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -251,7 +251,7 @@ $EmbedGalleryImageCopyWith<$Res> get data {
 
 class UEmbedGalleryItemsUnknown extends UEmbedGalleryItems {
   const UEmbedGalleryItemsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -9,4 +9,5 @@
 
 export 'get_quotes/descriptor.dart';
 export 'get_quotes/input.dart';
+export 'get_quotes/main_parameters_sort.dart';
 export 'get_quotes/output.dart';
