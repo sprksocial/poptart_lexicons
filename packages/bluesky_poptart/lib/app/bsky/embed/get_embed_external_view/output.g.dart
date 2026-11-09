@@ -21,6 +21,14 @@ _EmbedGetEmbedExternalViewOutput _$EmbedGetEmbedExternalViewOutputFromJson(
         const EmbedExternalViewConverter().fromJson,
       ),
     ),
+    data: $checkedConvert(
+      'data',
+      (v) =>
+          _$JsonConverterFromJson<
+            Map<String, dynamic>,
+            UEmbedGetEmbedExternalViewOutputData
+          >(v, const UEmbedGetEmbedExternalViewOutputDataConverter().fromJson),
+    ),
     associatedRefs: $checkedConvert(
       'associatedRefs',
       (v) => (v as List<dynamic>?)
@@ -33,6 +41,22 @@ _EmbedGetEmbedExternalViewOutput _$EmbedGetEmbedExternalViewOutputFromJson(
     ),
     associatedRecords: $checkedConvert(
       'associatedRecords',
+      (v) => (v as List<dynamic>?)
+          ?.map((e) => Map<String, dynamic>.from(e as Map))
+          .toList(),
+    ),
+    unverifiedAssociatedRefs: $checkedConvert(
+      'unverifiedAssociatedRefs',
+      (v) => (v as List<dynamic>?)
+          ?.map(
+            (e) => const RepoStrongRefConverter().fromJson(
+              e as Map<String, dynamic>,
+            ),
+          )
+          .toList(),
+    ),
+    unverifiedAssociatedRecords: $checkedConvert(
+      'unverifiedAssociatedRecords',
       (v) => (v as List<dynamic>?)
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
@@ -52,10 +76,22 @@ Map<String, dynamic> _$EmbedGetEmbedExternalViewOutputToJson(
     instance.view,
     const EmbedExternalViewConverter().toJson,
   ),
+  'data':
+      ?_$JsonConverterToJson<
+        Map<String, dynamic>,
+        UEmbedGetEmbedExternalViewOutputData
+      >(
+        instance.data,
+        const UEmbedGetEmbedExternalViewOutputDataConverter().toJson,
+      ),
   'associatedRefs': ?instance.associatedRefs
       ?.map(const RepoStrongRefConverter().toJson)
       .toList(),
   'associatedRecords': ?instance.associatedRecords,
+  'unverifiedAssociatedRefs': ?instance.unverifiedAssociatedRefs
+      ?.map(const RepoStrongRefConverter().toJson)
+      .toList(),
+  'unverifiedAssociatedRecords': ?instance.unverifiedAssociatedRecords,
   r'$unknown': ?instance.$unknown,
 };
 

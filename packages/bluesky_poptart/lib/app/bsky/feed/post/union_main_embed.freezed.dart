@@ -206,7 +206,7 @@ return unknown(_that.data);case _:
 
 class UFeedPostEmbedEmbedImages extends UFeedPostEmbed {
   const UFeedPostEmbedEmbedImages({required this.data}): super._();
-
+  
 
 @override final  EmbedImages data;
 
@@ -269,7 +269,7 @@ as EmbedImages,
 @override
 @pragma('vm:prefer-inline')
 $EmbedImagesCopyWith<$Res> get data {
-
+  
   return $EmbedImagesCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -281,7 +281,7 @@ $EmbedImagesCopyWith<$Res> get data {
 
 class UFeedPostEmbedEmbedVideo extends UFeedPostEmbed {
   const UFeedPostEmbedEmbedVideo({required this.data}): super._();
-
+  
 
 @override final  EmbedVideo data;
 
@@ -344,7 +344,7 @@ as EmbedVideo,
 @override
 @pragma('vm:prefer-inline')
 $EmbedVideoCopyWith<$Res> get data {
-
+  
   return $EmbedVideoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -356,7 +356,7 @@ $EmbedVideoCopyWith<$Res> get data {
 
 class UFeedPostEmbedEmbedGallery extends UFeedPostEmbed {
   const UFeedPostEmbedEmbedGallery({required this.data}): super._();
-
+  
 
 @override final  EmbedGallery data;
 
@@ -419,7 +419,7 @@ as EmbedGallery,
 @override
 @pragma('vm:prefer-inline')
 $EmbedGalleryCopyWith<$Res> get data {
-
+  
   return $EmbedGalleryCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -431,7 +431,7 @@ $EmbedGalleryCopyWith<$Res> get data {
 
 class UFeedPostEmbedEmbedExternal extends UFeedPostEmbed {
   const UFeedPostEmbedEmbedExternal({required this.data}): super._();
-
+  
 
 @override final  EmbedExternal data;
 
@@ -494,7 +494,7 @@ as EmbedExternal,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalCopyWith<$Res> get data {
-
+  
   return $EmbedExternalCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -506,7 +506,7 @@ $EmbedExternalCopyWith<$Res> get data {
 
 class UFeedPostEmbedEmbedRecord extends UFeedPostEmbed {
   const UFeedPostEmbedEmbedRecord({required this.data}): super._();
-
+  
 
 @override final  EmbedRecord data;
 
@@ -569,7 +569,7 @@ as EmbedRecord,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordCopyWith<$Res> get data {
-
+  
   return $EmbedRecordCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -581,7 +581,7 @@ $EmbedRecordCopyWith<$Res> get data {
 
 class UFeedPostEmbedEmbedRecordWithMedia extends UFeedPostEmbed {
   const UFeedPostEmbedEmbedRecordWithMedia({required this.data}): super._();
-
+  
 
 @override final  EmbedRecordWithMedia data;
 
@@ -644,7 +644,7 @@ as EmbedRecordWithMedia,
 @override
 @pragma('vm:prefer-inline')
 $EmbedRecordWithMediaCopyWith<$Res> get data {
-
+  
   return $EmbedRecordWithMediaCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -656,7 +656,7 @@ $EmbedRecordWithMediaCopyWith<$Res> get data {
 
 class UFeedPostEmbedUnknown extends UFeedPostEmbed {
   const UFeedPostEmbedUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

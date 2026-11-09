@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class ChatPreferenceIncludeKnownValue extends ChatPreferenceInclude {
   const ChatPreferenceIncludeKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownChatPreferenceInclude data;
 
@@ -248,7 +248,7 @@ as KnownChatPreferenceInclude,
 
 class ChatPreferenceIncludeUnknown extends ChatPreferenceInclude {
   const ChatPreferenceIncludeUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

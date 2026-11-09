@@ -9,6 +9,7 @@ import 'package:poptart_lex/com/atproto/sync/subscribe_repos.dart';
 import 'package:poptart_core/poptart_core.dart';
 
 import 'package:bluesky_poptart/app/bsky/actor/content_visibility_declaration.dart';
+import 'package:bluesky_poptart/app/bsky/actor/link.dart';
 import 'package:bluesky_poptart/app/bsky/actor/profile.dart';
 import 'package:bluesky_poptart/app/bsky/actor/status.dart';
 import 'package:bluesky_poptart/app/bsky/feed/generator.dart';
@@ -22,6 +23,7 @@ import 'package:bluesky_poptart/app/bsky/graph/follow.dart';
 import 'package:bluesky_poptart/app/bsky/graph/list.dart';
 import 'package:bluesky_poptart/app/bsky/graph/listblock.dart';
 import 'package:bluesky_poptart/app/bsky/graph/listitem.dart';
+import 'package:bluesky_poptart/app/bsky/graph/referencelistoptout.dart';
 import 'package:bluesky_poptart/app/bsky/graph/starterpack.dart';
 import 'package:bluesky_poptart/app/bsky/graph/verification.dart';
 import 'package:bluesky_poptart/app/bsky/labeler/service.dart';
@@ -48,6 +50,9 @@ final class RepoCommitHandler {
   final RepoCommitOnUpdate<ActorContentVisibilityDeclarationRecord>?
   _onUpdateActorContentVisibilityDeclaration;
   final RepoCommitOnDelete? _onDeleteActorContentVisibilityDeclaration;
+  final RepoCommitOnCreate<ActorLinkRecord>? _onCreateActorLink;
+  final RepoCommitOnUpdate<ActorLinkRecord>? _onUpdateActorLink;
+  final RepoCommitOnDelete? _onDeleteActorLink;
   final RepoCommitOnCreate<ActorProfileRecord>? _onCreateActorProfile;
   final RepoCommitOnUpdate<ActorProfileRecord>? _onUpdateActorProfile;
   final RepoCommitOnDelete? _onDeleteActorProfile;
@@ -87,6 +92,11 @@ final class RepoCommitHandler {
   final RepoCommitOnCreate<GraphListitemRecord>? _onCreateGraphListitem;
   final RepoCommitOnUpdate<GraphListitemRecord>? _onUpdateGraphListitem;
   final RepoCommitOnDelete? _onDeleteGraphListitem;
+  final RepoCommitOnCreate<GraphReferencelistoptoutRecord>?
+  _onCreateGraphReferencelistoptout;
+  final RepoCommitOnUpdate<GraphReferencelistoptoutRecord>?
+  _onUpdateGraphReferencelistoptout;
+  final RepoCommitOnDelete? _onDeleteGraphReferencelistoptout;
   final RepoCommitOnCreate<GraphStarterpackRecord>? _onCreateGraphStarterpack;
   final RepoCommitOnUpdate<GraphStarterpackRecord>? _onUpdateGraphStarterpack;
   final RepoCommitOnDelete? _onDeleteGraphStarterpack;
@@ -115,6 +125,9 @@ final class RepoCommitHandler {
     final RepoCommitOnUpdate<ActorContentVisibilityDeclarationRecord>?
     onUpdateActorContentVisibilityDeclaration,
     final RepoCommitOnDelete? onDeleteActorContentVisibilityDeclaration,
+    final RepoCommitOnCreate<ActorLinkRecord>? onCreateActorLink,
+    final RepoCommitOnUpdate<ActorLinkRecord>? onUpdateActorLink,
+    final RepoCommitOnDelete? onDeleteActorLink,
     final RepoCommitOnCreate<ActorProfileRecord>? onCreateActorProfile,
     final RepoCommitOnUpdate<ActorProfileRecord>? onUpdateActorProfile,
     final RepoCommitOnDelete? onDeleteActorProfile,
@@ -154,6 +167,11 @@ final class RepoCommitHandler {
     final RepoCommitOnCreate<GraphListitemRecord>? onCreateGraphListitem,
     final RepoCommitOnUpdate<GraphListitemRecord>? onUpdateGraphListitem,
     final RepoCommitOnDelete? onDeleteGraphListitem,
+    final RepoCommitOnCreate<GraphReferencelistoptoutRecord>?
+    onCreateGraphReferencelistoptout,
+    final RepoCommitOnUpdate<GraphReferencelistoptoutRecord>?
+    onUpdateGraphReferencelistoptout,
+    final RepoCommitOnDelete? onDeleteGraphReferencelistoptout,
     final RepoCommitOnCreate<GraphStarterpackRecord>? onCreateGraphStarterpack,
     final RepoCommitOnUpdate<GraphStarterpackRecord>? onUpdateGraphStarterpack,
     final RepoCommitOnDelete? onDeleteGraphStarterpack,
@@ -183,6 +201,9 @@ final class RepoCommitHandler {
            onUpdateActorContentVisibilityDeclaration,
        _onDeleteActorContentVisibilityDeclaration =
            onDeleteActorContentVisibilityDeclaration,
+       _onCreateActorLink = onCreateActorLink,
+       _onUpdateActorLink = onUpdateActorLink,
+       _onDeleteActorLink = onDeleteActorLink,
        _onCreateActorProfile = onCreateActorProfile,
        _onUpdateActorProfile = onUpdateActorProfile,
        _onDeleteActorProfile = onDeleteActorProfile,
@@ -222,6 +243,9 @@ final class RepoCommitHandler {
        _onCreateGraphListitem = onCreateGraphListitem,
        _onUpdateGraphListitem = onUpdateGraphListitem,
        _onDeleteGraphListitem = onDeleteGraphListitem,
+       _onCreateGraphReferencelistoptout = onCreateGraphReferencelistoptout,
+       _onUpdateGraphReferencelistoptout = onUpdateGraphReferencelistoptout,
+       _onDeleteGraphReferencelistoptout = onDeleteGraphReferencelistoptout,
        _onCreateGraphStarterpack = onCreateGraphStarterpack,
        _onUpdateGraphStarterpack = onUpdateGraphStarterpack,
        _onDeleteGraphStarterpack = onDeleteGraphStarterpack,
@@ -273,6 +297,18 @@ final class RepoCommitHandler {
         RepoCommitCreate<ActorContentVisibilityDeclarationRecord>(
           record: const ActorContentVisibilityDeclarationRecordConverter()
               .fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+        ),
+      );
+      return;
+    }
+    if (uri.isActorLink && ActorLinkRecord.validate(record)) {
+      await _onCreateActorLink?.call(
+        RepoCommitCreate<ActorLinkRecord>(
+          record: const ActorLinkRecordConverter().fromJson(record),
           uri: uri,
           cid: op.cid,
           author: data.repo,
@@ -437,6 +473,21 @@ final class RepoCommitHandler {
       );
       return;
     }
+    if (uri.isGraphReferencelistoptout &&
+        GraphReferencelistoptoutRecord.validate(record)) {
+      await _onCreateGraphReferencelistoptout?.call(
+        RepoCommitCreate<GraphReferencelistoptoutRecord>(
+          record: const GraphReferencelistoptoutRecordConverter().fromJson(
+            record,
+          ),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+        ),
+      );
+      return;
+    }
     if (uri.isGraphStarterpack && GraphStarterpackRecord.validate(record)) {
       await _onCreateGraphStarterpack?.call(
         RepoCommitCreate<GraphStarterpackRecord>(
@@ -522,6 +573,19 @@ final class RepoCommitHandler {
         RepoCommitUpdate<ActorContentVisibilityDeclarationRecord>(
           record: const ActorContentVisibilityDeclarationRecordConverter()
               .fromJson(record),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
+    if (uri.isActorLink && ActorLinkRecord.validate(record)) {
+      await _onUpdateActorLink?.call(
+        RepoCommitUpdate<ActorLinkRecord>(
+          record: const ActorLinkRecordConverter().fromJson(record),
           uri: uri,
           cid: op.cid,
           author: data.repo,
@@ -700,6 +764,22 @@ final class RepoCommitHandler {
       );
       return;
     }
+    if (uri.isGraphReferencelistoptout &&
+        GraphReferencelistoptoutRecord.validate(record)) {
+      await _onUpdateGraphReferencelistoptout?.call(
+        RepoCommitUpdate<GraphReferencelistoptoutRecord>(
+          record: const GraphReferencelistoptoutRecordConverter().fromJson(
+            record,
+          ),
+          uri: uri,
+          cid: op.cid,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
     if (uri.isGraphStarterpack && GraphStarterpackRecord.validate(record)) {
       await _onUpdateGraphStarterpack?.call(
         RepoCommitUpdate<GraphStarterpackRecord>(
@@ -786,6 +866,17 @@ final class RepoCommitHandler {
 
     if (uri.isActorContentVisibilityDeclaration) {
       await _onDeleteActorContentVisibilityDeclaration?.call(
+        RepoCommitDelete(
+          uri: uri,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
+    if (uri.isActorLink) {
+      await _onDeleteActorLink?.call(
         RepoCommitDelete(
           uri: uri,
           author: data.repo,
@@ -929,6 +1020,17 @@ final class RepoCommitHandler {
     }
     if (uri.isGraphListitem) {
       await _onDeleteGraphListitem?.call(
+        RepoCommitDelete(
+          uri: uri,
+          author: data.repo,
+          cursor: data.seq,
+          createdAt: data.time,
+        ),
+      );
+      return;
+    }
+    if (uri.isGraphReferencelistoptout) {
+      await _onDeleteGraphReferencelistoptout?.call(
         RepoCommitDelete(
           uri: uri,
           author: data.repo,

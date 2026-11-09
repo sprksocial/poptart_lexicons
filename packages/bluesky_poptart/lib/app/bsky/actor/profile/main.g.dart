@@ -20,7 +20,6 @@ _ActorProfileRecord _$ActorProfileRecordFromJson(Map json) => $checkedCreate(
       displayName: $checkedConvert('displayName', (v) => v as String?),
       description: $checkedConvert('description', (v) => v as String?),
       pronouns: $checkedConvert('pronouns', (v) => v as String?),
-      website: $checkedConvert('website', (v) => v as String?),
       avatar: $checkedConvert(
         'avatar',
         (v) => _$JsonConverterFromJson<Map<String, dynamic>, Blob>(
@@ -57,6 +56,16 @@ _ActorProfileRecord _$ActorProfileRecordFromJson(Map json) => $checkedCreate(
           const RepoStrongRefConverter().fromJson,
         ),
       ),
+      links: $checkedConvert(
+        'links',
+        (v) => (v as List<dynamic>?)
+            ?.map(
+              (e) => const RepoStrongRefConverter().fromJson(
+                e as Map<String, dynamic>,
+              ),
+            )
+            .toList(),
+      ),
       createdAt: $checkedConvert(
         'createdAt',
         (v) => v == null ? null : DateTime.parse(v as String),
@@ -77,7 +86,6 @@ Map<String, dynamic> _$ActorProfileRecordToJson(
   'displayName': ?instance.displayName,
   'description': ?instance.description,
   'pronouns': ?instance.pronouns,
-  'website': ?instance.website,
   'avatar': ?_$JsonConverterToJson<Map<String, dynamic>, Blob>(
     instance.avatar,
     const BlobConverter().toJson,
@@ -99,6 +107,7 @@ Map<String, dynamic> _$ActorProfileRecordToJson(
     instance.pinnedPost,
     const RepoStrongRefConverter().toJson,
   ),
+  'links': ?instance.links?.map(const RepoStrongRefConverter().toJson).toList(),
   'createdAt': ?instance.createdAt?.toIso8601String(),
   r'$unknown': ?instance.$unknown,
 };

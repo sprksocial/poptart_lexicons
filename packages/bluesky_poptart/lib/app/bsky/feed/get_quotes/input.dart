@@ -7,6 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
+import './main_parameters_sort.dart';
+
 part 'input.freezed.dart';
 part 'input.g.dart';
 
@@ -16,7 +18,7 @@ part 'input.g.dart';
 
 @freezed
 abstract class FeedGetQuotesInput with _$FeedGetQuotesInput {
-  static const knownProps = <String>['uri', 'cid', 'limit', 'cursor'];
+  static const knownProps = <String>['uri', 'cid', 'limit', 'cursor', 'sort'];
 
   @JsonSerializable(includeIfNull: false)
   const factory FeedGetQuotesInput({
@@ -27,6 +29,9 @@ abstract class FeedGetQuotesInput with _$FeedGetQuotesInput {
     String? cid,
     @Default(50) int limit,
     String? cursor,
+
+    /// Ordering of results. 'latest' (default when unset) is newest first; 'top' orders quotes by their like count.
+    @FeedGetQuotesParametersSortConverter() FeedGetQuotesParametersSort? sort,
 
     Map<String, dynamic>? $unknown,
   }) = _FeedGetQuotesInput;
@@ -40,6 +45,8 @@ extension FeedGetQuotesInputExtension on FeedGetQuotesInput {
   bool get hasNotCid => !hasCid;
   bool get hasCursor => cursor != null;
   bool get hasNotCursor => !hasCursor;
+  bool get hasSort => sort != null;
+  bool get hasNotSort => !hasSort;
 }
 
 final class FeedGetQuotesInputConverter

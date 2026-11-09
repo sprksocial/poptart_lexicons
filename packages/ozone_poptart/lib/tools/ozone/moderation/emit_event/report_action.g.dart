@@ -25,7 +25,9 @@ _ReportAction _$ReportActionFromJson(Map json) =>
           (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
         ),
         all: $checkedConvert('all', (v) => v as bool?),
+        allOwned: $checkedConvert('allOwned', (v) => v as bool?),
         note: $checkedConvert('note', (v) => v as String?),
+        isAutomated: $checkedConvert('isAutomated', (v) => v as bool?),
         $unknown: $checkedConvert(
           r'$unknown',
           (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
@@ -40,6 +42,8 @@ Map<String, dynamic> _$ReportActionToJson(_ReportAction instance) =>
       'ids': ?instance.ids,
       'types': ?instance.types,
       'all': ?instance.all,
+      'allOwned': ?instance.allOwned,
       'note': ?instance.note,
+      'isAutomated': ?instance.isAutomated,
       r'$unknown': ?instance.$unknown,
     };

@@ -25,6 +25,8 @@ abstract class GraphGetFollowsInput with _$GraphGetFollowsInput {
     required String actor,
     @Default(50) int limit,
     String? cursor,
+
+    /// Sort order of the returned follows.
     @GraphGetFollowsParametersSortConverter()
     GraphGetFollowsParametersSort? sort,
 

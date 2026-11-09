@@ -8,50 +8,47 @@ part of 'message_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_MessageView _$MessageViewFromJson(Map json) => $checkedCreate(
-  '_MessageView',
-  json,
-  ($checkedConvert) {
-    final val = _MessageView(
-      $type: $checkedConvert(
-        r'$type',
-        (v) => v as String? ?? 'chat.sprk.convo.defs#messageView',
-      ),
-      id: $checkedConvert('id', (v) => v as String),
-      rev: $checkedConvert('rev', (v) => v as String),
-      text: $checkedConvert('text', (v) => v as String),
-      embed: $checkedConvert(
-        'embed',
-        (v) => _$JsonConverterFromJson<String, AtUri>(
-          v,
-          const AtUriConverter().fromJson,
+_MessageView _$MessageViewFromJson(Map json) =>
+    $checkedCreate('_MessageView', json, ($checkedConvert) {
+      final val = _MessageView(
+        $type: $checkedConvert(
+          r'$type',
+          (v) => v as String? ?? 'chat.sprk.convo.defs#messageView',
         ),
-      ),
-      reactions: $checkedConvert(
-        'reactions',
-        (v) => (v as List<dynamic>?)
-            ?.map(
-              (e) => const ReactionViewConverter().fromJson(
-                e as Map<String, dynamic>,
-              ),
-            )
-            .toList(),
-      ),
-      sender: $checkedConvert(
-        'sender',
-        (v) => const MessageViewSenderConverter().fromJson(
-          v as Map<String, dynamic>,
+        id: $checkedConvert('id', (v) => v as String),
+        rev: $checkedConvert('rev', (v) => v as String),
+        text: $checkedConvert('text', (v) => v as String),
+        embed: $checkedConvert(
+          'embed',
+          (v) => _$JsonConverterFromJson<String, AtUri>(
+            v,
+            const AtUriConverter().fromJson,
+          ),
         ),
-      ),
-      sentAt: $checkedConvert('sentAt', (v) => DateTime.parse(v as String)),
-      $unknown: $checkedConvert(
-        r'$unknown',
-        (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
-      ),
-    );
-    return val;
-  },
-);
+        reactions: $checkedConvert(
+          'reactions',
+          (v) => (v as List<dynamic>?)
+              ?.map(
+                (e) => const ReactionViewConverter().fromJson(
+                  e as Map<String, dynamic>,
+                ),
+              )
+              .toList(),
+        ),
+        sender: $checkedConvert(
+          'sender',
+          (v) => const MessageViewSenderConverter().fromJson(
+            v as Map<String, dynamic>,
+          ),
+        ),
+        sentAt: $checkedConvert('sentAt', (v) => DateTime.parse(v as String)),
+        $unknown: $checkedConvert(
+          r'$unknown',
+          (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
+        ),
+      );
+      return val;
+    });
 
 Map<String, dynamic> _$MessageViewToJson(_MessageView instance) =>
     <String, dynamic>{
