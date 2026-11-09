@@ -11,6 +11,8 @@ import 'package:ozone_poptart/tools/ozone/safelink/query_rules.dart'
     as _ToolsOzoneSafelinkQueryRules;
 import 'package:ozone_poptart/tools/ozone/safelink/remove_rule.dart'
     as _ToolsOzoneSafelinkRemoveRule;
+import 'package:ozone_poptart/tools/ozone/safelink/sync_source.dart'
+    as _ToolsOzoneSafelinkSyncSource;
 import 'package:ozone_poptart/tools/ozone/safelink/update_rule.dart'
     as _ToolsOzoneSafelinkUpdateRule;
 
@@ -34,6 +36,10 @@ final toolsOzoneSafelinkRemoveRule =
     _ToolsOzoneSafelinkRemoveRule.toolsOzoneSafelinkRemoveRule;
 final toolsOzoneSafelinkRemoveRuleMethodDescriptor =
     _ToolsOzoneSafelinkRemoveRule.methodDescriptor;
+final toolsOzoneSafelinkSyncSource =
+    _ToolsOzoneSafelinkSyncSource.toolsOzoneSafelinkSyncSource;
+final toolsOzoneSafelinkSyncSourceMethodDescriptor =
+    _ToolsOzoneSafelinkSyncSource.methodDescriptor;
 final toolsOzoneSafelinkUpdateRule =
     _ToolsOzoneSafelinkUpdateRule.toolsOzoneSafelinkUpdateRule;
 final toolsOzoneSafelinkUpdateRuleMethodDescriptor =

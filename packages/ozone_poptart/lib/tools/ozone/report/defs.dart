@@ -27,4 +27,7 @@ export 'defs/report_activity_view.dart';
 export 'defs/report_assignment.dart';
 export 'defs/report_view.dart';
 export 'defs/report_view_status.dart';
+export 'defs/unassignment_activity.dart';
+export 'defs/unassignment_activity_next_status.dart';
+export 'defs/unassignment_activity_previous_status.dart';
 export 'defs/union_report_activity_view_activity.dart';

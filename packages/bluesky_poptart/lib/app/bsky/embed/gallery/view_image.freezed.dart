@@ -84,7 +84,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $AspectRatioCopyWith<$Res> get aspectRatio {
-
+  
   return $AspectRatioCopyWith<$Res>(_self.aspectRatio, (value) {
     return _then(_self.copyWith(aspectRatio: value));
   });
@@ -314,7 +314,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $AspectRatioCopyWith<$Res> get aspectRatio {
-
+  
   return $AspectRatioCopyWith<$Res>(_self.aspectRatio, (value) {
     return _then(_self.copyWith(aspectRatio: value));
   });

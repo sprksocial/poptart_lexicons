@@ -9,6 +9,8 @@ import 'package:ozone_poptart/tools/ozone/team/delete_member.dart'
     as _ToolsOzoneTeamDeleteMember;
 import 'package:ozone_poptart/tools/ozone/team/list_members.dart'
     as _ToolsOzoneTeamListMembers;
+import 'package:ozone_poptart/tools/ozone/team/list_online_members.dart'
+    as _ToolsOzoneTeamListOnlineMembers;
 import 'package:ozone_poptart/tools/ozone/team/update_member.dart'
     as _ToolsOzoneTeamUpdateMember;
 
@@ -28,6 +30,10 @@ final toolsOzoneTeamListMembers =
     _ToolsOzoneTeamListMembers.toolsOzoneTeamListMembers;
 final toolsOzoneTeamListMembersMethodDescriptor =
     _ToolsOzoneTeamListMembers.methodDescriptor;
+final toolsOzoneTeamListOnlineMembers =
+    _ToolsOzoneTeamListOnlineMembers.toolsOzoneTeamListOnlineMembers;
+final toolsOzoneTeamListOnlineMembersMethodDescriptor =
+    _ToolsOzoneTeamListOnlineMembers.methodDescriptor;
 final toolsOzoneTeamUpdateMember =
     _ToolsOzoneTeamUpdateMember.toolsOzoneTeamUpdateMember;
 final toolsOzoneTeamUpdateMemberMethodDescriptor =

@@ -30,6 +30,20 @@ _ReportView _$ReportViewFromJson(
       'reportType',
       (v) => const ReasonTypeConverter().fromJson(v as String),
     ),
+    priorityLevel: $checkedConvert('priorityLevel', (v) => v as String?),
+    priorityScore: $checkedConvert(
+      'priorityScore',
+      (v) => (v as num?)?.toInt(),
+    ),
+    priorityTargetMinutes: $checkedConvert(
+      'priorityTargetMinutes',
+      (v) => (v as num?)?.toInt(),
+    ),
+    resolutionTimeSec: $checkedConvert(
+      'resolutionTimeSec',
+      (v) => (v as num?)?.toInt(),
+    ),
+    priorityTargetMet: $checkedConvert('priorityTargetMet', (v) => v as bool?),
     reportedBy: $checkedConvert('reportedBy', (v) => v as String),
     reporter: $checkedConvert(
       'reporter',
@@ -104,6 +118,11 @@ Map<String, dynamic> _$ReportViewToJson(
   'status': const ReportViewStatusConverter().toJson(instance.status),
   'subject': const SubjectViewConverter().toJson(instance.subject),
   'reportType': const ReasonTypeConverter().toJson(instance.reportType),
+  'priorityLevel': ?instance.priorityLevel,
+  'priorityScore': ?instance.priorityScore,
+  'priorityTargetMinutes': ?instance.priorityTargetMinutes,
+  'resolutionTimeSec': ?instance.resolutionTimeSec,
+  'priorityTargetMet': ?instance.priorityTargetMet,
   'reportedBy': instance.reportedBy,
   'reporter': const SubjectViewConverter().toJson(instance.reporter),
   'comment': ?instance.comment,

@@ -22,6 +22,7 @@ abstract class ModEventReverseTakedown with _$ModEventReverseTakedown {
     'policies',
     'severityLevel',
     'strikeCount',
+    'strikeExpiresAt',
   ];
 
   @JsonSerializable(includeIfNull: false)
@@ -38,6 +39,9 @@ abstract class ModEventReverseTakedown with _$ModEventReverseTakedown {
 
     /// Number of strikes to subtract from the user's strike count. Usually set from the last policy infraction's severity.
     int? strikeCount,
+
+    /// When the strike should expire. If not provided, the strike never expires.
+    DateTime? strikeExpiresAt,
 
     Map<String, dynamic>? $unknown,
   }) = _ModEventReverseTakedown;
@@ -59,6 +63,8 @@ extension ModEventReverseTakedownExtension on ModEventReverseTakedown {
   bool get hasNotSeverityLevel => !hasSeverityLevel;
   bool get hasStrikeCount => strikeCount != null;
   bool get hasNotStrikeCount => !hasStrikeCount;
+  bool get hasStrikeExpiresAt => strikeExpiresAt != null;
+  bool get hasNotStrikeExpiresAt => !hasStrikeExpiresAt;
 }
 
 final class ModEventReverseTakedownConverter

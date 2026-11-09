@@ -79,7 +79,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ChatPreferenceCopyWith<$Res> get chat {
-
+  
   return $ChatPreferenceCopyWith<$Res>(_self.chat, (value) {
     return _then(_self.copyWith(chat: value));
   });
@@ -88,7 +88,7 @@ $ChatPreferenceCopyWith<$Res> get chat {
 @override
 @pragma('vm:prefer-inline')
 $ChatPreferenceCopyWith<$Res> get chatRequest {
-
+  
   return $ChatPreferenceCopyWith<$Res>(_self.chatRequest, (value) {
     return _then(_self.copyWith(chatRequest: value));
   });
@@ -311,7 +311,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $ChatPreferenceCopyWith<$Res> get chat {
-
+  
   return $ChatPreferenceCopyWith<$Res>(_self.chat, (value) {
     return _then(_self.copyWith(chat: value));
   });
@@ -320,7 +320,7 @@ $ChatPreferenceCopyWith<$Res> get chat {
 @override
 @pragma('vm:prefer-inline')
 $ChatPreferenceCopyWith<$Res> get chatRequest {
-
+  
   return $ChatPreferenceCopyWith<$Res>(_self.chatRequest, (value) {
     return _then(_self.copyWith(chatRequest: value));
   });
