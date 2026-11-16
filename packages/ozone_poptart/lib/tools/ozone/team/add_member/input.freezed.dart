@@ -78,7 +78,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $TeamAddMemberInputRoleCopyWith<$Res> get role {
-
+  
   return $TeamAddMemberInputRoleCopyWith<$Res>(_self.role, (value) {
     return _then(_self.copyWith(role: value));
   });
@@ -299,7 +299,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $TeamAddMemberInputRoleCopyWith<$Res> get role {
-
+  
   return $TeamAddMemberInputRoleCopyWith<$Res>(_self.role, (value) {
     return _then(_self.copyWith(role: value));
   });

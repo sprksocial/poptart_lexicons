@@ -25,7 +25,6 @@ _$NotificationListNotificationsOutputFromJson(Map json) => $checkedCreate(
             )
             .toList(),
       ),
-      priority: $checkedConvert('priority', (v) => v as bool?),
       seenAt: $checkedConvert(
         'seenAt',
         (v) => v == null ? null : DateTime.parse(v as String),
@@ -46,7 +45,6 @@ Map<String, dynamic> _$NotificationListNotificationsOutputToJson(
   'notifications': instance.notifications
       .map(const NotificationConverter().toJson)
       .toList(),
-  'priority': ?instance.priority,
   'seenAt': ?instance.seenAt?.toIso8601String(),
   r'$unknown': ?instance.$unknown,
 };

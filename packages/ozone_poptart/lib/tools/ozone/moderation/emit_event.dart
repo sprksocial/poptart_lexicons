@@ -12,3 +12,4 @@ export 'emit_event/input.dart';
 export 'emit_event/report_action.dart';
 export 'emit_event/union_main_input_event.dart';
 export 'emit_event/union_main_input_subject.dart';
+export 'emit_event/union_report_action_subjects.dart';

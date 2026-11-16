@@ -81,7 +81,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $VideoAbortUploadOutputStateCopyWith<$Res> get state {
-
+  
   return $VideoAbortUploadOutputStateCopyWith<$Res>(_self.state, (value) {
     return _then(_self.copyWith(state: value));
   });
@@ -306,7 +306,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $VideoAbortUploadOutputStateCopyWith<$Res> get state {
-
+  
   return $VideoAbortUploadOutputStateCopyWith<$Res>(_self.state, (value) {
     return _then(_self.copyWith(state: value));
   });

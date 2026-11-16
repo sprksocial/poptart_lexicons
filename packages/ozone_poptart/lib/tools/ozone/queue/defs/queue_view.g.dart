@@ -31,9 +31,21 @@ _QueueView _$QueueViewFromJson(Map json) => $checkedCreate('_QueueView', json, (
       'reportTypes',
       (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
     ),
+    reporterTags: $checkedConvert(
+      'reporterTags',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    accountTags: $checkedConvert(
+      'accountTags',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
     description: $checkedConvert('description', (v) => v as String?),
     recommendedPolicies: $checkedConvert(
       'recommendedPolicies',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
+    recommendedLabels: $checkedConvert(
+      'recommendedLabels',
       (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
     ),
     createdBy: $checkedConvert('createdBy', (v) => v as String),
@@ -48,6 +60,7 @@ _QueueView _$QueueViewFromJson(Map json) => $checkedCreate('_QueueView', json, (
       'stats',
       (v) => const QueueStatsConverter().fromJson(v as Map<String, dynamic>),
     ),
+    strictAccess: $checkedConvert('strictAccess', (v) => v as bool?),
     $unknown: $checkedConvert(
       r'$unknown',
       (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
@@ -66,13 +79,17 @@ Map<String, dynamic> _$QueueViewToJson(_QueueView instance) =>
           .toList(),
       'collection': ?instance.collection,
       'reportTypes': ?instance.reportTypes,
+      'reporterTags': ?instance.reporterTags,
+      'accountTags': ?instance.accountTags,
       'description': ?instance.description,
       'recommendedPolicies': ?instance.recommendedPolicies,
+      'recommendedLabels': ?instance.recommendedLabels,
       'createdBy': instance.createdBy,
       'createdAt': instance.createdAt.toIso8601String(),
       'updatedAt': instance.updatedAt.toIso8601String(),
       'enabled': instance.enabled,
       'deletedAt': ?instance.deletedAt?.toIso8601String(),
       'stats': const QueueStatsConverter().toJson(instance.stats),
+      'strictAccess': ?instance.strictAccess,
       r'$unknown': ?instance.$unknown,
     };

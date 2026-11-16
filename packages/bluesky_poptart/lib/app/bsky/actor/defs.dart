@@ -36,6 +36,7 @@ export 'defs/profile_associated_chat_allow_group_invites.dart';
 export 'defs/profile_associated_chat_allow_incoming.dart';
 export 'defs/profile_associated_germ.dart';
 export 'defs/profile_associated_germ_show_button_to.dart';
+export 'defs/profile_link_view.dart';
 export 'defs/profile_view.dart';
 export 'defs/profile_view_basic.dart';
 export 'defs/profile_view_detailed.dart';

@@ -30,6 +30,13 @@ _TrackRecord _$TrackRecordFromJson(
           .toList(),
     ),
     imageUrl: $checkedConvert('imageUrl', (v) => v as String?),
+    imageBlob: $checkedConvert(
+      'imageBlob',
+      (v) => _$JsonConverterFromJson<Map<String, dynamic>, Blob>(
+        v,
+        const BlobConverter().fromJson,
+      ),
+    ),
     createdAt: $checkedConvert('createdAt', (v) => DateTime.parse(v as String)),
     supportGate: $checkedConvert(
       'supportGate',
@@ -39,6 +46,10 @@ _TrackRecord _$TrackRecordFromJson(
       ),
     ),
     description: $checkedConvert('description', (v) => v as String?),
+    tags: $checkedConvert(
+      'tags',
+      (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
+    ),
     labels: $checkedConvert(
       'labels',
       (v) => _$JsonConverterFromJson<Map<String, dynamic>, UTrackLabels>(
@@ -51,6 +62,31 @@ _TrackRecord _$TrackRecordFromJson(
       (v) => _$JsonConverterFromJson<Map<String, dynamic>, Blob>(
         v,
         const BlobConverter().fromJson,
+      ),
+    ),
+    audioSpace: $checkedConvert('audioSpace', (v) => v as String?),
+    audioFileId: $checkedConvert('audioFileId', (v) => v as String?),
+    originalAudioBlob: $checkedConvert(
+      'originalAudioBlob',
+      (v) => _$JsonConverterFromJson<Map<String, dynamic>, Blob>(
+        v,
+        const BlobConverter().fromJson,
+      ),
+    ),
+    originalFileId: $checkedConvert('originalFileId', (v) => v as String?),
+    originalFileType: $checkedConvert('originalFileType', (v) => v as String?),
+    downloadPolicy: $checkedConvert(
+      'downloadPolicy',
+      (v) => _$JsonConverterFromJson<String, TrackDownloadPolicy>(
+        v,
+        const TrackDownloadPolicyConverter().fromJson,
+      ),
+    ),
+    visibility: $checkedConvert(
+      'visibility',
+      (v) => _$JsonConverterFromJson<String, TrackVisibility>(
+        v,
+        const TrackVisibilityConverter().fromJson,
       ),
     ),
     $unknown: $checkedConvert(
@@ -74,12 +110,17 @@ Map<String, dynamic> _$TrackRecordToJson(_TrackRecord instance) =>
           ?.map(const FeaturedArtistConverter().toJson)
           .toList(),
       'imageUrl': ?instance.imageUrl,
+      'imageBlob': ?_$JsonConverterToJson<Map<String, dynamic>, Blob>(
+        instance.imageBlob,
+        const BlobConverter().toJson,
+      ),
       'createdAt': instance.createdAt.toIso8601String(),
       'supportGate': ?_$JsonConverterToJson<Map<String, dynamic>, SupportGate>(
         instance.supportGate,
         const SupportGateConverter().toJson,
       ),
       'description': ?instance.description,
+      'tags': ?instance.tags,
       'labels': ?_$JsonConverterToJson<Map<String, dynamic>, UTrackLabels>(
         instance.labels,
         const UTrackLabelsConverter().toJson,
@@ -87,6 +128,22 @@ Map<String, dynamic> _$TrackRecordToJson(_TrackRecord instance) =>
       'audioBlob': ?_$JsonConverterToJson<Map<String, dynamic>, Blob>(
         instance.audioBlob,
         const BlobConverter().toJson,
+      ),
+      'audioSpace': ?instance.audioSpace,
+      'audioFileId': ?instance.audioFileId,
+      'originalAudioBlob': ?_$JsonConverterToJson<Map<String, dynamic>, Blob>(
+        instance.originalAudioBlob,
+        const BlobConverter().toJson,
+      ),
+      'originalFileId': ?instance.originalFileId,
+      'originalFileType': ?instance.originalFileType,
+      'downloadPolicy': ?_$JsonConverterToJson<String, TrackDownloadPolicy>(
+        instance.downloadPolicy,
+        const TrackDownloadPolicyConverter().toJson,
+      ),
+      'visibility': ?_$JsonConverterToJson<String, TrackVisibility>(
+        instance.visibility,
+        const TrackVisibilityConverter().toJson,
       ),
       r'$unknown': ?instance.$unknown,
     };

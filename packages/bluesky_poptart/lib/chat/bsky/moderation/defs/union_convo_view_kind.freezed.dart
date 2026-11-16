@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class UConvoViewKindDirectConvo extends UConvoViewKind {
   const UConvoViewKindDirectConvo({required this.data}): super._();
-
+  
 
 @override final  DirectConvo data;
 
@@ -245,7 +245,7 @@ as DirectConvo,
 @override
 @pragma('vm:prefer-inline')
 $DirectConvoCopyWith<$Res> get data {
-
+  
   return $DirectConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -257,7 +257,7 @@ $DirectConvoCopyWith<$Res> get data {
 
 class UConvoViewKindGroupConvo extends UConvoViewKind {
   const UConvoViewKindGroupConvo({required this.data}): super._();
-
+  
 
 @override final  GroupConvo data;
 
@@ -320,7 +320,7 @@ as GroupConvo,
 @override
 @pragma('vm:prefer-inline')
 $GroupConvoCopyWith<$Res> get data {
-
+  
   return $GroupConvoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -332,7 +332,7 @@ $GroupConvoCopyWith<$Res> get data {
 
 class UConvoViewKindUnknown extends UConvoViewKind {
   const UConvoViewKindUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

@@ -15,7 +15,8 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ListRecord {
 
- String get $type; String? get name;@ListListTypeConverter() ListListType? get listType;@ItemConverter() List<Item> get items; DateTime get createdAt; DateTime? get updatedAt; Map<String, dynamic>? get $unknown;
+ String get $type; String? get name;/// Cover artwork for the list, stored on the user's PDS.
+@BlobConverter() Blob? get imageBlob;@ListListTypeConverter() ListListType? get listType;@ItemConverter() List<Item> get items; DateTime get createdAt; DateTime? get updatedAt; Map<String, dynamic>? get $unknown;
 /// Create a copy of ListRecord
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +29,16 @@ $ListRecordCopyWith<ListRecord> get copyWith => _$ListRecordCopyWithImpl<ListRec
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.name, name) || other.name == name)&&(identical(other.listType, listType) || other.listType == listType)&&const DeepCollectionEquality().equals(other.items, items)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.name, name) || other.name == name)&&(identical(other.imageBlob, imageBlob) || other.imageBlob == imageBlob)&&(identical(other.listType, listType) || other.listType == listType)&&const DeepCollectionEquality().equals(other.items, items)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,name,listType,const DeepCollectionEquality().hash(items),createdAt,updatedAt,const DeepCollectionEquality().hash($unknown));
+int get hashCode => Object.hash(runtimeType,$type,name,imageBlob,listType,const DeepCollectionEquality().hash(items),createdAt,updatedAt,const DeepCollectionEquality().hash($unknown));
 
 @override
 String toString() {
-  return 'ListRecord(\$type: ${$type}, name: $name, listType: $listType, items: $items, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
+  return 'ListRecord(\$type: ${$type}, name: $name, imageBlob: $imageBlob, listType: $listType, items: $items, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
 }
 
 
@@ -48,11 +49,11 @@ abstract mixin class $ListRecordCopyWith<$Res>  {
   factory $ListRecordCopyWith(ListRecord value, $Res Function(ListRecord) _then) = _$ListRecordCopyWithImpl;
 @useResult
 $Res call({
- String $type, String? name,@ListListTypeConverter() ListListType? listType,@ItemConverter() List<Item> items, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
+ String $type, String? name,@BlobConverter() Blob? imageBlob,@ListListTypeConverter() ListListType? listType,@ItemConverter() List<Item> items, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
 });
 
 
-$ListListTypeCopyWith<$Res>? get listType;
+$BlobCopyWith<$Res>? get imageBlob;$ListListTypeCopyWith<$Res>? get listType;
 
 }
 /// @nodoc
@@ -65,11 +66,12 @@ class _$ListRecordCopyWithImpl<$Res>
 
 /// Create a copy of ListRecord
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? name = freezed,Object? listType = freezed,Object? items = null,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? name = freezed,Object? imageBlob = freezed,Object? listType = freezed,Object? items = null,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,listType: freezed == listType ? _self.listType : listType // ignore: cast_nullable_to_non_nullable
+as String?,imageBlob: freezed == imageBlob ? _self.imageBlob : imageBlob // ignore: cast_nullable_to_non_nullable
+as Blob?,listType: freezed == listType ? _self.listType : listType // ignore: cast_nullable_to_non_nullable
 as ListListType?,items: null == items ? _self.items : items // ignore: cast_nullable_to_non_nullable
 as List<Item>,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -78,6 +80,18 @@ as Map<String, dynamic>?,
   ));
 }
 /// Create a copy of ListRecord
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$BlobCopyWith<$Res>? get imageBlob {
+    if (_self.imageBlob == null) {
+    return null;
+  }
+
+  return $BlobCopyWith<$Res>(_self.imageBlob!, (value) {
+    return _then(_self.copyWith(imageBlob: value));
+  });
+}/// Create a copy of ListRecord
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -171,10 +185,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type,  String? name, @ListListTypeConverter()  ListListType? listType, @ItemConverter()  List<Item> items,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type,  String? name, @BlobConverter()  Blob? imageBlob, @ListListTypeConverter()  ListListType? listType, @ItemConverter()  List<Item> items,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ListRecord() when $default != null:
-return $default(_that.$type,_that.name,_that.listType,_that.items,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.name,_that.imageBlob,_that.listType,_that.items,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
   return orElse();
 
 }
@@ -192,10 +206,10 @@ return $default(_that.$type,_that.name,_that.listType,_that.items,_that.createdA
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type,  String? name, @ListListTypeConverter()  ListListType? listType, @ItemConverter()  List<Item> items,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type,  String? name, @BlobConverter()  Blob? imageBlob, @ListListTypeConverter()  ListListType? listType, @ItemConverter()  List<Item> items,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ListRecord():
-return $default(_that.$type,_that.name,_that.listType,_that.items,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.name,_that.imageBlob,_that.listType,_that.items,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -212,10 +226,10 @@ return $default(_that.$type,_that.name,_that.listType,_that.items,_that.createdA
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type,  String? name, @ListListTypeConverter()  ListListType? listType, @ItemConverter()  List<Item> items,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type,  String? name, @BlobConverter()  Blob? imageBlob, @ListListTypeConverter()  ListListType? listType, @ItemConverter()  List<Item> items,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ListRecord() when $default != null:
-return $default(_that.$type,_that.name,_that.listType,_that.items,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.name,_that.imageBlob,_that.listType,_that.items,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
   return null;
 
 }
@@ -227,11 +241,13 @@ return $default(_that.$type,_that.name,_that.listType,_that.items,_that.createdA
 
 @JsonSerializable(includeIfNull: false)
 class _ListRecord implements ListRecord {
-  const _ListRecord({this.$type = 'fm.plyr.list', this.name, @ListListTypeConverter() this.listType, @ItemConverter() required final  List<Item> items, required this.createdAt, this.updatedAt, final  Map<String, dynamic>? $unknown}): _items = items,_$unknown = $unknown;
+  const _ListRecord({this.$type = 'fm.plyr.list', this.name, @BlobConverter() this.imageBlob, @ListListTypeConverter() this.listType, @ItemConverter() required final  List<Item> items, required this.createdAt, this.updatedAt, final  Map<String, dynamic>? $unknown}): _items = items,_$unknown = $unknown;
   factory _ListRecord.fromJson(Map<String, dynamic> json) => _$ListRecordFromJson(json);
 
 @override@JsonKey() final  String $type;
 @override final  String? name;
+/// Cover artwork for the list, stored on the user's PDS.
+@override@BlobConverter() final  Blob? imageBlob;
 @override@ListListTypeConverter() final  ListListType? listType;
  final  List<Item> _items;
 @override@ItemConverter() List<Item> get items {
@@ -265,16 +281,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.name, name) || other.name == name)&&(identical(other.listType, listType) || other.listType == listType)&&const DeepCollectionEquality().equals(other._items, _items)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.name, name) || other.name == name)&&(identical(other.imageBlob, imageBlob) || other.imageBlob == imageBlob)&&(identical(other.listType, listType) || other.listType == listType)&&const DeepCollectionEquality().equals(other._items, _items)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,name,listType,const DeepCollectionEquality().hash(_items),createdAt,updatedAt,const DeepCollectionEquality().hash(_$unknown));
+int get hashCode => Object.hash(runtimeType,$type,name,imageBlob,listType,const DeepCollectionEquality().hash(_items),createdAt,updatedAt,const DeepCollectionEquality().hash(_$unknown));
 
 @override
 String toString() {
-  return 'ListRecord(\$type: ${$type}, name: $name, listType: $listType, items: $items, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
+  return 'ListRecord(\$type: ${$type}, name: $name, imageBlob: $imageBlob, listType: $listType, items: $items, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
 }
 
 
@@ -285,11 +301,11 @@ abstract mixin class _$ListRecordCopyWith<$Res> implements $ListRecordCopyWith<$
   factory _$ListRecordCopyWith(_ListRecord value, $Res Function(_ListRecord) _then) = __$ListRecordCopyWithImpl;
 @override @useResult
 $Res call({
- String $type, String? name,@ListListTypeConverter() ListListType? listType,@ItemConverter() List<Item> items, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
+ String $type, String? name,@BlobConverter() Blob? imageBlob,@ListListTypeConverter() ListListType? listType,@ItemConverter() List<Item> items, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
 });
 
 
-@override $ListListTypeCopyWith<$Res>? get listType;
+@override $BlobCopyWith<$Res>? get imageBlob;@override $ListListTypeCopyWith<$Res>? get listType;
 
 }
 /// @nodoc
@@ -302,11 +318,12 @@ class __$ListRecordCopyWithImpl<$Res>
 
 /// Create a copy of ListRecord
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? name = freezed,Object? listType = freezed,Object? items = null,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? name = freezed,Object? imageBlob = freezed,Object? listType = freezed,Object? items = null,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
   return _then(_ListRecord(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,listType: freezed == listType ? _self.listType : listType // ignore: cast_nullable_to_non_nullable
+as String?,imageBlob: freezed == imageBlob ? _self.imageBlob : imageBlob // ignore: cast_nullable_to_non_nullable
+as Blob?,listType: freezed == listType ? _self.listType : listType // ignore: cast_nullable_to_non_nullable
 as ListListType?,items: null == items ? _self._items : items // ignore: cast_nullable_to_non_nullable
 as List<Item>,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
@@ -316,6 +333,18 @@ as Map<String, dynamic>?,
 }
 
 /// Create a copy of ListRecord
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$BlobCopyWith<$Res>? get imageBlob {
+    if (_self.imageBlob == null) {
+    return null;
+  }
+
+  return $BlobCopyWith<$Res>(_self.imageBlob!, (value) {
+    return _then(_self.copyWith(imageBlob: value));
+  });
+}/// Create a copy of ListRecord
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
