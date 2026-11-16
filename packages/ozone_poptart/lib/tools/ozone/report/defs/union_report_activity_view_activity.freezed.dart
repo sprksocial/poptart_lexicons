@@ -55,12 +55,13 @@ extension UReportActivityViewActivityPatterns on UReportActivityViewActivity {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UReportActivityViewActivityQueueActivity value)?  queueActivity,TResult Function( UReportActivityViewActivityAssignmentActivity value)?  assignmentActivity,TResult Function( UReportActivityViewActivityEscalationActivity value)?  escalationActivity,TResult Function( UReportActivityViewActivityCloseActivity value)?  closeActivity,TResult Function( UReportActivityViewActivityReopenActivity value)?  reopenActivity,TResult Function( UReportActivityViewActivityNoteActivity value)?  noteActivity,TResult Function( UReportActivityViewActivityUnknown value)?  unknown,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( UReportActivityViewActivityQueueActivity value)?  queueActivity,TResult Function( UReportActivityViewActivityAssignmentActivity value)?  assignmentActivity,TResult Function( UReportActivityViewActivityUnassignmentActivity value)?  unassignmentActivity,TResult Function( UReportActivityViewActivityEscalationActivity value)?  escalationActivity,TResult Function( UReportActivityViewActivityCloseActivity value)?  closeActivity,TResult Function( UReportActivityViewActivityReopenActivity value)?  reopenActivity,TResult Function( UReportActivityViewActivityNoteActivity value)?  noteActivity,TResult Function( UReportActivityViewActivityUnknown value)?  unknown,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case UReportActivityViewActivityQueueActivity() when queueActivity != null:
 return queueActivity(_that);case UReportActivityViewActivityAssignmentActivity() when assignmentActivity != null:
-return assignmentActivity(_that);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
+return assignmentActivity(_that);case UReportActivityViewActivityUnassignmentActivity() when unassignmentActivity != null:
+return unassignmentActivity(_that);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
 return escalationActivity(_that);case UReportActivityViewActivityCloseActivity() when closeActivity != null:
 return closeActivity(_that);case UReportActivityViewActivityReopenActivity() when reopenActivity != null:
 return reopenActivity(_that);case UReportActivityViewActivityNoteActivity() when noteActivity != null:
@@ -83,12 +84,13 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UReportActivityViewActivityQueueActivity value)  queueActivity,required TResult Function( UReportActivityViewActivityAssignmentActivity value)  assignmentActivity,required TResult Function( UReportActivityViewActivityEscalationActivity value)  escalationActivity,required TResult Function( UReportActivityViewActivityCloseActivity value)  closeActivity,required TResult Function( UReportActivityViewActivityReopenActivity value)  reopenActivity,required TResult Function( UReportActivityViewActivityNoteActivity value)  noteActivity,required TResult Function( UReportActivityViewActivityUnknown value)  unknown,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( UReportActivityViewActivityQueueActivity value)  queueActivity,required TResult Function( UReportActivityViewActivityAssignmentActivity value)  assignmentActivity,required TResult Function( UReportActivityViewActivityUnassignmentActivity value)  unassignmentActivity,required TResult Function( UReportActivityViewActivityEscalationActivity value)  escalationActivity,required TResult Function( UReportActivityViewActivityCloseActivity value)  closeActivity,required TResult Function( UReportActivityViewActivityReopenActivity value)  reopenActivity,required TResult Function( UReportActivityViewActivityNoteActivity value)  noteActivity,required TResult Function( UReportActivityViewActivityUnknown value)  unknown,}){
 final _that = this;
 switch (_that) {
 case UReportActivityViewActivityQueueActivity():
 return queueActivity(_that);case UReportActivityViewActivityAssignmentActivity():
-return assignmentActivity(_that);case UReportActivityViewActivityEscalationActivity():
+return assignmentActivity(_that);case UReportActivityViewActivityUnassignmentActivity():
+return unassignmentActivity(_that);case UReportActivityViewActivityEscalationActivity():
 return escalationActivity(_that);case UReportActivityViewActivityCloseActivity():
 return closeActivity(_that);case UReportActivityViewActivityReopenActivity():
 return reopenActivity(_that);case UReportActivityViewActivityNoteActivity():
@@ -107,12 +109,13 @@ return unknown(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UReportActivityViewActivityQueueActivity value)?  queueActivity,TResult? Function( UReportActivityViewActivityAssignmentActivity value)?  assignmentActivity,TResult? Function( UReportActivityViewActivityEscalationActivity value)?  escalationActivity,TResult? Function( UReportActivityViewActivityCloseActivity value)?  closeActivity,TResult? Function( UReportActivityViewActivityReopenActivity value)?  reopenActivity,TResult? Function( UReportActivityViewActivityNoteActivity value)?  noteActivity,TResult? Function( UReportActivityViewActivityUnknown value)?  unknown,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( UReportActivityViewActivityQueueActivity value)?  queueActivity,TResult? Function( UReportActivityViewActivityAssignmentActivity value)?  assignmentActivity,TResult? Function( UReportActivityViewActivityUnassignmentActivity value)?  unassignmentActivity,TResult? Function( UReportActivityViewActivityEscalationActivity value)?  escalationActivity,TResult? Function( UReportActivityViewActivityCloseActivity value)?  closeActivity,TResult? Function( UReportActivityViewActivityReopenActivity value)?  reopenActivity,TResult? Function( UReportActivityViewActivityNoteActivity value)?  noteActivity,TResult? Function( UReportActivityViewActivityUnknown value)?  unknown,}){
 final _that = this;
 switch (_that) {
 case UReportActivityViewActivityQueueActivity() when queueActivity != null:
 return queueActivity(_that);case UReportActivityViewActivityAssignmentActivity() when assignmentActivity != null:
-return assignmentActivity(_that);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
+return assignmentActivity(_that);case UReportActivityViewActivityUnassignmentActivity() when unassignmentActivity != null:
+return unassignmentActivity(_that);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
 return escalationActivity(_that);case UReportActivityViewActivityCloseActivity() when closeActivity != null:
 return closeActivity(_that);case UReportActivityViewActivityReopenActivity() when reopenActivity != null:
 return reopenActivity(_that);case UReportActivityViewActivityNoteActivity() when noteActivity != null:
@@ -134,11 +137,12 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( QueueActivity data)?  queueActivity,TResult Function( AssignmentActivity data)?  assignmentActivity,TResult Function( EscalationActivity data)?  escalationActivity,TResult Function( CloseActivity data)?  closeActivity,TResult Function( ReopenActivity data)?  reopenActivity,TResult Function( NoteActivity data)?  noteActivity,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( QueueActivity data)?  queueActivity,TResult Function( AssignmentActivity data)?  assignmentActivity,TResult Function( UnassignmentActivity data)?  unassignmentActivity,TResult Function( EscalationActivity data)?  escalationActivity,TResult Function( CloseActivity data)?  closeActivity,TResult Function( ReopenActivity data)?  reopenActivity,TResult Function( NoteActivity data)?  noteActivity,TResult Function( Map<String, dynamic> data)?  unknown,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case UReportActivityViewActivityQueueActivity() when queueActivity != null:
 return queueActivity(_that.data);case UReportActivityViewActivityAssignmentActivity() when assignmentActivity != null:
-return assignmentActivity(_that.data);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
+return assignmentActivity(_that.data);case UReportActivityViewActivityUnassignmentActivity() when unassignmentActivity != null:
+return unassignmentActivity(_that.data);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
 return escalationActivity(_that.data);case UReportActivityViewActivityCloseActivity() when closeActivity != null:
 return closeActivity(_that.data);case UReportActivityViewActivityReopenActivity() when reopenActivity != null:
 return reopenActivity(_that.data);case UReportActivityViewActivityNoteActivity() when noteActivity != null:
@@ -161,11 +165,12 @@ return unknown(_that.data);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( QueueActivity data)  queueActivity,required TResult Function( AssignmentActivity data)  assignmentActivity,required TResult Function( EscalationActivity data)  escalationActivity,required TResult Function( CloseActivity data)  closeActivity,required TResult Function( ReopenActivity data)  reopenActivity,required TResult Function( NoteActivity data)  noteActivity,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( QueueActivity data)  queueActivity,required TResult Function( AssignmentActivity data)  assignmentActivity,required TResult Function( UnassignmentActivity data)  unassignmentActivity,required TResult Function( EscalationActivity data)  escalationActivity,required TResult Function( CloseActivity data)  closeActivity,required TResult Function( ReopenActivity data)  reopenActivity,required TResult Function( NoteActivity data)  noteActivity,required TResult Function( Map<String, dynamic> data)  unknown,}) {final _that = this;
 switch (_that) {
 case UReportActivityViewActivityQueueActivity():
 return queueActivity(_that.data);case UReportActivityViewActivityAssignmentActivity():
-return assignmentActivity(_that.data);case UReportActivityViewActivityEscalationActivity():
+return assignmentActivity(_that.data);case UReportActivityViewActivityUnassignmentActivity():
+return unassignmentActivity(_that.data);case UReportActivityViewActivityEscalationActivity():
 return escalationActivity(_that.data);case UReportActivityViewActivityCloseActivity():
 return closeActivity(_that.data);case UReportActivityViewActivityReopenActivity():
 return reopenActivity(_that.data);case UReportActivityViewActivityNoteActivity():
@@ -184,11 +189,12 @@ return unknown(_that.data);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( QueueActivity data)?  queueActivity,TResult? Function( AssignmentActivity data)?  assignmentActivity,TResult? Function( EscalationActivity data)?  escalationActivity,TResult? Function( CloseActivity data)?  closeActivity,TResult? Function( ReopenActivity data)?  reopenActivity,TResult? Function( NoteActivity data)?  noteActivity,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( QueueActivity data)?  queueActivity,TResult? Function( AssignmentActivity data)?  assignmentActivity,TResult? Function( UnassignmentActivity data)?  unassignmentActivity,TResult? Function( EscalationActivity data)?  escalationActivity,TResult? Function( CloseActivity data)?  closeActivity,TResult? Function( ReopenActivity data)?  reopenActivity,TResult? Function( NoteActivity data)?  noteActivity,TResult? Function( Map<String, dynamic> data)?  unknown,}) {final _that = this;
 switch (_that) {
 case UReportActivityViewActivityQueueActivity() when queueActivity != null:
 return queueActivity(_that.data);case UReportActivityViewActivityAssignmentActivity() when assignmentActivity != null:
-return assignmentActivity(_that.data);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
+return assignmentActivity(_that.data);case UReportActivityViewActivityUnassignmentActivity() when unassignmentActivity != null:
+return unassignmentActivity(_that.data);case UReportActivityViewActivityEscalationActivity() when escalationActivity != null:
 return escalationActivity(_that.data);case UReportActivityViewActivityCloseActivity() when closeActivity != null:
 return closeActivity(_that.data);case UReportActivityViewActivityReopenActivity() when reopenActivity != null:
 return reopenActivity(_that.data);case UReportActivityViewActivityNoteActivity() when noteActivity != null:
@@ -206,7 +212,7 @@ return unknown(_that.data);case _:
 
 class UReportActivityViewActivityQueueActivity extends UReportActivityViewActivity {
   const UReportActivityViewActivityQueueActivity({required this.data}): super._();
-
+  
 
 @override final  QueueActivity data;
 
@@ -269,7 +275,7 @@ as QueueActivity,
 @override
 @pragma('vm:prefer-inline')
 $QueueActivityCopyWith<$Res> get data {
-
+  
   return $QueueActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -281,7 +287,7 @@ $QueueActivityCopyWith<$Res> get data {
 
 class UReportActivityViewActivityAssignmentActivity extends UReportActivityViewActivity {
   const UReportActivityViewActivityAssignmentActivity({required this.data}): super._();
-
+  
 
 @override final  AssignmentActivity data;
 
@@ -344,8 +350,83 @@ as AssignmentActivity,
 @override
 @pragma('vm:prefer-inline')
 $AssignmentActivityCopyWith<$Res> get data {
-
+  
   return $AssignmentActivityCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class UReportActivityViewActivityUnassignmentActivity extends UReportActivityViewActivity {
+  const UReportActivityViewActivityUnassignmentActivity({required this.data}): super._();
+  
+
+@override final  UnassignmentActivity data;
+
+/// Create a copy of UReportActivityViewActivity
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UReportActivityViewActivityUnassignmentActivityCopyWith<UReportActivityViewActivityUnassignmentActivity> get copyWith => _$UReportActivityViewActivityUnassignmentActivityCopyWithImpl<UReportActivityViewActivityUnassignmentActivity>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UReportActivityViewActivityUnassignmentActivity&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'UReportActivityViewActivity.unassignmentActivity(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $UReportActivityViewActivityUnassignmentActivityCopyWith<$Res> implements $UReportActivityViewActivityCopyWith<$Res> {
+  factory $UReportActivityViewActivityUnassignmentActivityCopyWith(UReportActivityViewActivityUnassignmentActivity value, $Res Function(UReportActivityViewActivityUnassignmentActivity) _then) = _$UReportActivityViewActivityUnassignmentActivityCopyWithImpl;
+@useResult
+$Res call({
+ UnassignmentActivity data
+});
+
+
+$UnassignmentActivityCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$UReportActivityViewActivityUnassignmentActivityCopyWithImpl<$Res>
+    implements $UReportActivityViewActivityUnassignmentActivityCopyWith<$Res> {
+  _$UReportActivityViewActivityUnassignmentActivityCopyWithImpl(this._self, this._then);
+
+  final UReportActivityViewActivityUnassignmentActivity _self;
+  final $Res Function(UReportActivityViewActivityUnassignmentActivity) _then;
+
+/// Create a copy of UReportActivityViewActivity
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(UReportActivityViewActivityUnassignmentActivity(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as UnassignmentActivity,
+  ));
+}
+
+/// Create a copy of UReportActivityViewActivity
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$UnassignmentActivityCopyWith<$Res> get data {
+  
+  return $UnassignmentActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
 }
@@ -356,7 +437,7 @@ $AssignmentActivityCopyWith<$Res> get data {
 
 class UReportActivityViewActivityEscalationActivity extends UReportActivityViewActivity {
   const UReportActivityViewActivityEscalationActivity({required this.data}): super._();
-
+  
 
 @override final  EscalationActivity data;
 
@@ -419,7 +500,7 @@ as EscalationActivity,
 @override
 @pragma('vm:prefer-inline')
 $EscalationActivityCopyWith<$Res> get data {
-
+  
   return $EscalationActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -431,7 +512,7 @@ $EscalationActivityCopyWith<$Res> get data {
 
 class UReportActivityViewActivityCloseActivity extends UReportActivityViewActivity {
   const UReportActivityViewActivityCloseActivity({required this.data}): super._();
-
+  
 
 @override final  CloseActivity data;
 
@@ -494,7 +575,7 @@ as CloseActivity,
 @override
 @pragma('vm:prefer-inline')
 $CloseActivityCopyWith<$Res> get data {
-
+  
   return $CloseActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -506,7 +587,7 @@ $CloseActivityCopyWith<$Res> get data {
 
 class UReportActivityViewActivityReopenActivity extends UReportActivityViewActivity {
   const UReportActivityViewActivityReopenActivity({required this.data}): super._();
-
+  
 
 @override final  ReopenActivity data;
 
@@ -569,7 +650,7 @@ as ReopenActivity,
 @override
 @pragma('vm:prefer-inline')
 $ReopenActivityCopyWith<$Res> get data {
-
+  
   return $ReopenActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -581,7 +662,7 @@ $ReopenActivityCopyWith<$Res> get data {
 
 class UReportActivityViewActivityNoteActivity extends UReportActivityViewActivity {
   const UReportActivityViewActivityNoteActivity({required this.data}): super._();
-
+  
 
 @override final  NoteActivity data;
 
@@ -644,7 +725,7 @@ as NoteActivity,
 @override
 @pragma('vm:prefer-inline')
 $NoteActivityCopyWith<$Res> get data {
-
+  
   return $NoteActivityCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -656,7 +737,7 @@ $NoteActivityCopyWith<$Res> get data {
 
 class UReportActivityViewActivityUnknown extends UReportActivityViewActivity {
   const UReportActivityViewActivityUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

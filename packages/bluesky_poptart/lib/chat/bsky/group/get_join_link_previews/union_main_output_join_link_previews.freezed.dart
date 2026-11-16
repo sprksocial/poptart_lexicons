@@ -188,7 +188,7 @@ return unknown(_that.data);case _:
 
 class UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsJoinLinkPreviewView extends UGroupGetJoinLinkPreviewsOutputJoinLinkPreviews {
   const UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsJoinLinkPreviewView({required this.data}): super._();
-
+  
 
 @override final  JoinLinkPreviewView data;
 
@@ -251,7 +251,7 @@ as JoinLinkPreviewView,
 @override
 @pragma('vm:prefer-inline')
 $JoinLinkPreviewViewCopyWith<$Res> get data {
-
+  
   return $JoinLinkPreviewViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -263,7 +263,7 @@ $JoinLinkPreviewViewCopyWith<$Res> get data {
 
 class UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsDisabledJoinLinkPreviewView extends UGroupGetJoinLinkPreviewsOutputJoinLinkPreviews {
   const UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsDisabledJoinLinkPreviewView({required this.data}): super._();
-
+  
 
 @override final  DisabledJoinLinkPreviewView data;
 
@@ -326,7 +326,7 @@ as DisabledJoinLinkPreviewView,
 @override
 @pragma('vm:prefer-inline')
 $DisabledJoinLinkPreviewViewCopyWith<$Res> get data {
-
+  
   return $DisabledJoinLinkPreviewViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -338,7 +338,7 @@ $DisabledJoinLinkPreviewViewCopyWith<$Res> get data {
 
 class UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsInvalidJoinLinkPreviewView extends UGroupGetJoinLinkPreviewsOutputJoinLinkPreviews {
   const UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsInvalidJoinLinkPreviewView({required this.data}): super._();
-
+  
 
 @override final  InvalidJoinLinkPreviewView data;
 
@@ -401,7 +401,7 @@ as InvalidJoinLinkPreviewView,
 @override
 @pragma('vm:prefer-inline')
 $InvalidJoinLinkPreviewViewCopyWith<$Res> get data {
-
+  
   return $InvalidJoinLinkPreviewViewCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -413,7 +413,7 @@ $InvalidJoinLinkPreviewViewCopyWith<$Res> get data {
 
 class UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsUnknown extends UGroupGetJoinLinkPreviewsOutputJoinLinkPreviews {
   const UGroupGetJoinLinkPreviewsOutputJoinLinkPreviewsUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

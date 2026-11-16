@@ -22,7 +22,7 @@ final methodDescriptor =
       outputFromJson: (json) =>
           const EventConverter().fromJson(json.cast<String, dynamic>()),
       outputToJson: const EventConverter().toJson,
-      errors: const ['InvalidUrl', 'RuleAlreadyExists'],
+      errors: const ['InvalidUrl', 'RuleAlreadyExists', 'RuleSourceConflict'],
     );
 
 final toolsOzoneSafelinkAddRule = methodDescriptor;

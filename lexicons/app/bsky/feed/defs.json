@@ -29,6 +29,10 @@
         "repostCount": { "type": "integer" },
         "likeCount": { "type": "integer" },
         "quoteCount": { "type": "integer" },
+        "viewCount": {
+          "type": "integer",
+          "description": "Approximate number of times the post has been viewed. Only included in authenticated responses to the post's author when eligible to see the count. Counts less than 100 are omitted."
+        },
         "indexedAt": { "type": "string", "format": "datetime" },
         "viewer": { "type": "ref", "ref": "#viewerState" },
         "labels": {
@@ -90,6 +94,14 @@
       "properties": {
         "post": { "type": "ref", "ref": "#postView" },
         "reply": { "type": "ref", "ref": "#replyRef" },
+        "opThreadPostIndex": {
+          "type": "integer",
+          "description": "The 1-indexed position of this post within the contiguous OP thread. Only present when this post is part of the OP thread."
+        },
+        "opThreadPostCount": {
+          "type": "integer",
+          "description": "The total number of posts in the contiguous OP thread that this post belongs to. Only present when this post is part of the OP thread."
+        },
         "reason": { "type": "union", "refs": ["#reasonRepost", "#reasonPin"] },
         "feedContext": {
           "type": "string",

@@ -7,9 +7,15 @@ import './color_r_g_b.dart';
 import './external.dart';
 import './main.dart';
 import './view.dart';
+import './view_article.dart';
+import './view_article_publication.dart';
+import './view_article_publication_theme.dart';
 import './view_external.dart';
 import './view_external_source.dart';
 import './view_external_source_theme.dart';
+import './view_gallery.dart';
+import './view_gallery_image.dart';
+import './view_livestream.dart';
 import 'package:poptart_xrpc/poptart_xrpc.dart';
 
 // **************************************************************************
@@ -85,4 +91,69 @@ final embedExternalColorRGBDescriptor =
       ),
       toJson: const EmbedExternalColorRGBConverter().toJson,
       matches: EmbedExternalColorRGB.validate,
+    );
+
+final embedExternalViewArticleDescriptor =
+    XRPCObjectDescriptor<EmbedExternalViewArticle>(
+      nsid: 'app.bsky.embed.external',
+      defName: 'viewArticle',
+      fromJson: (json) => const EmbedExternalViewArticleConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const EmbedExternalViewArticleConverter().toJson,
+      matches: EmbedExternalViewArticle.validate,
+    );
+
+final embedExternalViewArticlePublicationDescriptor =
+    XRPCObjectDescriptor<EmbedExternalViewArticlePublication>(
+      nsid: 'app.bsky.embed.external',
+      defName: 'viewArticlePublication',
+      fromJson: (json) => const EmbedExternalViewArticlePublicationConverter()
+          .fromJson(json.cast<String, dynamic>()),
+      toJson: const EmbedExternalViewArticlePublicationConverter().toJson,
+      matches: EmbedExternalViewArticlePublication.validate,
+    );
+
+final embedExternalViewArticlePublicationThemeDescriptor =
+    XRPCObjectDescriptor<EmbedExternalViewArticlePublicationTheme>(
+      nsid: 'app.bsky.embed.external',
+      defName: 'viewArticlePublicationTheme',
+      fromJson: (json) =>
+          const EmbedExternalViewArticlePublicationThemeConverter().fromJson(
+            json.cast<String, dynamic>(),
+          ),
+      toJson: const EmbedExternalViewArticlePublicationThemeConverter().toJson,
+      matches: EmbedExternalViewArticlePublicationTheme.validate,
+    );
+
+final embedExternalViewGalleryDescriptor =
+    XRPCObjectDescriptor<EmbedExternalViewGallery>(
+      nsid: 'app.bsky.embed.external',
+      defName: 'viewGallery',
+      fromJson: (json) => const EmbedExternalViewGalleryConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const EmbedExternalViewGalleryConverter().toJson,
+      matches: EmbedExternalViewGallery.validate,
+    );
+
+final embedExternalViewGalleryImageDescriptor =
+    XRPCObjectDescriptor<EmbedExternalViewGalleryImage>(
+      nsid: 'app.bsky.embed.external',
+      defName: 'viewGalleryImage',
+      fromJson: (json) => const EmbedExternalViewGalleryImageConverter()
+          .fromJson(json.cast<String, dynamic>()),
+      toJson: const EmbedExternalViewGalleryImageConverter().toJson,
+      matches: EmbedExternalViewGalleryImage.validate,
+    );
+
+final embedExternalViewLivestreamDescriptor =
+    XRPCObjectDescriptor<EmbedExternalViewLivestream>(
+      nsid: 'app.bsky.embed.external',
+      defName: 'viewLivestream',
+      fromJson: (json) => const EmbedExternalViewLivestreamConverter().fromJson(
+        json.cast<String, dynamic>(),
+      ),
+      toJson: const EmbedExternalViewLivestreamConverter().toJson,
+      matches: EmbedExternalViewLivestream.validate,
     );

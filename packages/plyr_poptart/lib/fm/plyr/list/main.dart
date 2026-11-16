@@ -7,6 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
+import 'package:poptart_core/poptart_core.dart';
 import './main_list_type.dart';
 import './item.dart';
 
@@ -22,6 +23,7 @@ part 'main.g.dart';
 abstract class ListRecord with _$ListRecord {
   static const knownProps = <String>[
     'name',
+    'imageBlob',
     'listType',
     'items',
     'createdAt',
@@ -32,6 +34,9 @@ abstract class ListRecord with _$ListRecord {
   const factory ListRecord({
     @Default('fm.plyr.list') String $type,
     String? name,
+
+    /// Cover artwork for the list, stored on the user's PDS.
+    @BlobConverter() Blob? imageBlob,
     @ListListTypeConverter() ListListType? listType,
     @ItemConverter() required List<Item> items,
     required DateTime createdAt,
@@ -52,6 +57,8 @@ abstract class ListRecord with _$ListRecord {
 extension ListRecordExtension on ListRecord {
   bool get hasName => name != null;
   bool get hasNotName => !hasName;
+  bool get hasImageBlob => imageBlob != null;
+  bool get hasNotImageBlob => !hasImageBlob;
   bool get hasListType => listType != null;
   bool get hasNotListType => !hasListType;
   bool get hasUpdatedAt => updatedAt != null;

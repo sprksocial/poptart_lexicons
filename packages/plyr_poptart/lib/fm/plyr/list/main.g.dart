@@ -14,6 +14,13 @@ _ListRecord _$ListRecordFromJson(
   final val = _ListRecord(
     $type: $checkedConvert(r'$type', (v) => v as String? ?? 'fm.plyr.list'),
     name: $checkedConvert('name', (v) => v as String?),
+    imageBlob: $checkedConvert(
+      'imageBlob',
+      (v) => _$JsonConverterFromJson<Map<String, dynamic>, Blob>(
+        v,
+        const BlobConverter().fromJson,
+      ),
+    ),
     listType: $checkedConvert(
       'listType',
       (v) => _$JsonConverterFromJson<String, ListListType>(
@@ -44,6 +51,10 @@ Map<String, dynamic> _$ListRecordToJson(_ListRecord instance) =>
     <String, dynamic>{
       r'$type': instance.$type,
       'name': ?instance.name,
+      'imageBlob': ?_$JsonConverterToJson<Map<String, dynamic>, Blob>(
+        instance.imageBlob,
+        const BlobConverter().toJson,
+      ),
       'listType': ?_$JsonConverterToJson<String, ListListType>(
         instance.listType,
         const ListListTypeConverter().toJson,

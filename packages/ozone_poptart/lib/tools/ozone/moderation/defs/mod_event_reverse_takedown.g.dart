@@ -24,6 +24,10 @@ _ModEventReverseTakedown _$ModEventReverseTakedownFromJson(
     ),
     severityLevel: $checkedConvert('severityLevel', (v) => v as String?),
     strikeCount: $checkedConvert('strikeCount', (v) => (v as num?)?.toInt()),
+    strikeExpiresAt: $checkedConvert(
+      'strikeExpiresAt',
+      (v) => v == null ? null : DateTime.parse(v as String),
+    ),
     $unknown: $checkedConvert(
       r'$unknown',
       (v) => (v as Map?)?.map((k, e) => MapEntry(k as String, e)),
@@ -40,5 +44,6 @@ Map<String, dynamic> _$ModEventReverseTakedownToJson(
   'policies': ?instance.policies,
   'severityLevel': ?instance.severityLevel,
   'strikeCount': ?instance.strikeCount,
+  'strikeExpiresAt': ?instance.strikeExpiresAt?.toIso8601String(),
   r'$unknown': ?instance.$unknown,
 };

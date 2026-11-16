@@ -27,7 +27,7 @@ final methodDescriptor =
         json.cast<String, dynamic>(),
       ),
       outputToJson: const ConvoLeaveConvoOutputConverter().toJson,
-      errors: const ['InvalidConvo', 'OwnerCannotLeave'],
+      errors: const ['InvalidConvo', 'AlreadyLeftConvo', 'OwnerCannotLeave'],
     );
 
 final chatBskyConvoLeaveConvo = methodDescriptor;
