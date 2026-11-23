@@ -15,7 +15,8 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$GraphGetFollowersInput {
 
- String get actor; int get limit; String? get cursor;@GraphGetFollowersParametersSortConverter() GraphGetFollowersParametersSort? get sort; Map<String, dynamic>? get $unknown;
+ String get actor; int get limit; String? get cursor;/// Sort order of the returned followers.
+@GraphGetFollowersParametersSortConverter() GraphGetFollowersParametersSort? get sort; Map<String, dynamic>? get $unknown;
 /// Create a copy of GraphGetFollowersInput
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -231,6 +232,7 @@ class _GraphGetFollowersInput implements GraphGetFollowersInput {
 @override final  String actor;
 @override@JsonKey() final  int limit;
 @override final  String? cursor;
+/// Sort order of the returned followers.
 @override@GraphGetFollowersParametersSortConverter() final  GraphGetFollowersParametersSort? sort;
  final  Map<String, dynamic>? _$unknown;
 @override Map<String, dynamic>? get $unknown {

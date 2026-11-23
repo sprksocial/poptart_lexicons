@@ -19,10 +19,14 @@ import 'package:ozone_poptart/tools/ozone/report/get_live_stats.dart'
     as _ToolsOzoneReportGetLiveStats;
 import 'package:ozone_poptart/tools/ozone/report/get_report.dart'
     as _ToolsOzoneReportGetReport;
+import 'package:ozone_poptart/tools/ozone/report/get_stat_group_details.dart'
+    as _ToolsOzoneReportGetStatGroupDetails;
 import 'package:ozone_poptart/tools/ozone/report/list_activities.dart'
     as _ToolsOzoneReportListActivities;
 import 'package:ozone_poptart/tools/ozone/report/query_activities.dart'
     as _ToolsOzoneReportQueryActivities;
+import 'package:ozone_poptart/tools/ozone/report/query_moderator_activity.dart'
+    as _ToolsOzoneReportQueryModeratorActivity;
 import 'package:ozone_poptart/tools/ozone/report/query_reports.dart'
     as _ToolsOzoneReportQueryReports;
 import 'package:ozone_poptart/tools/ozone/report/reassign_queue.dart'
@@ -68,6 +72,10 @@ final toolsOzoneReportGetReport =
     _ToolsOzoneReportGetReport.toolsOzoneReportGetReport;
 final toolsOzoneReportGetReportMethodDescriptor =
     _ToolsOzoneReportGetReport.methodDescriptor;
+final toolsOzoneReportGetStatGroupDetails =
+    _ToolsOzoneReportGetStatGroupDetails.toolsOzoneReportGetStatGroupDetails;
+final toolsOzoneReportGetStatGroupDetailsMethodDescriptor =
+    _ToolsOzoneReportGetStatGroupDetails.methodDescriptor;
 final toolsOzoneReportListActivities =
     _ToolsOzoneReportListActivities.toolsOzoneReportListActivities;
 final toolsOzoneReportListActivitiesMethodDescriptor =
@@ -76,6 +84,11 @@ final toolsOzoneReportQueryActivities =
     _ToolsOzoneReportQueryActivities.toolsOzoneReportQueryActivities;
 final toolsOzoneReportQueryActivitiesMethodDescriptor =
     _ToolsOzoneReportQueryActivities.methodDescriptor;
+final toolsOzoneReportQueryModeratorActivity =
+    _ToolsOzoneReportQueryModeratorActivity
+        .toolsOzoneReportQueryModeratorActivity;
+final toolsOzoneReportQueryModeratorActivityMethodDescriptor =
+    _ToolsOzoneReportQueryModeratorActivity.methodDescriptor;
 final toolsOzoneReportQueryReports =
     _ToolsOzoneReportQueryReports.toolsOzoneReportQueryReports;
 final toolsOzoneReportQueryReportsMethodDescriptor =

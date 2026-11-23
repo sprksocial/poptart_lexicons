@@ -8,9 +8,11 @@ import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import './featured_artist.dart';
+import 'package:poptart_core/poptart_core.dart';
 import './support_gate.dart';
 import './union_main_labels.dart';
-import 'package:poptart_core/poptart_core.dart';
+import './main_download_policy.dart';
+import './main_visibility.dart';
 
 part 'main.freezed.dart';
 part 'main.g.dart';
@@ -31,11 +33,20 @@ abstract class TrackRecord with _$TrackRecord {
     'duration',
     'features',
     'imageUrl',
+    'imageBlob',
     'createdAt',
     'supportGate',
     'description',
+    'tags',
     'labels',
     'audioBlob',
+    'audioSpace',
+    'audioFileId',
+    'originalAudioBlob',
+    'originalFileId',
+    'originalFileType',
+    'downloadPolicy',
+    'visibility',
   ];
 
   @JsonSerializable(includeIfNull: false)
@@ -64,6 +75,9 @@ abstract class TrackRecord with _$TrackRecord {
     /// URL to cover artwork image.
     String? imageUrl,
 
+    /// Cover artwork stored on the user's PDS. When present it is the canonical cover; imageUrl may carry its getBlob URL for clients that only read imageUrl.
+    @BlobConverter() Blob? imageBlob,
+
     /// Timestamp when the track was uploaded.
     required DateTime createdAt,
 
@@ -72,10 +86,32 @@ abstract class TrackRecord with _$TrackRecord {
 
     /// Track description (liner notes, show notes, etc.).
     String? description,
+    List<String>? tags,
     @UTrackLabelsConverter() UTrackLabels? labels,
 
     /// Audio file stored on the user's PDS. When present, this is the canonical source; audioUrl is the CDN fallback.
     @BlobConverter() Blob? audioBlob,
+
+    /// URI of the artist-owned protected audio record in a permissioned Space. Protected BlobRefs live in that record, never in this public record.
+    String? audioSpace,
+
+    /// Content hash used for a protected audio playback copy.
+    String? audioFileId,
+
+    /// Original audio retained in the protected audio record alongside a playback rendition.
+    @BlobConverter() Blob? originalAudioBlob,
+
+    /// Content hash of the original audio.
+    String? originalFileId,
+
+    /// Original audio file extension.
+    String? originalFileType,
+
+    /// Download permission through the publishing application, independent of audio location.
+    @TrackDownloadPolicyConverter() TrackDownloadPolicy? downloadPolicy,
+
+    /// When unlisted, omit this track from discovery feeds. Direct links, record access, and audio access follow their usual policies.
+    @TrackVisibilityConverter() TrackVisibility? visibility,
 
     Map<String, dynamic>? $unknown,
   }) = _TrackRecord;
@@ -98,6 +134,8 @@ extension TrackRecordExtension on TrackRecord {
   bool get hasNotDuration => !hasDuration;
   bool get hasImageUrl => imageUrl != null;
   bool get hasNotImageUrl => !hasImageUrl;
+  bool get hasImageBlob => imageBlob != null;
+  bool get hasNotImageBlob => !hasImageBlob;
   bool get hasSupportGate => supportGate != null;
   bool get hasNotSupportGate => !hasSupportGate;
   bool get hasDescription => description != null;
@@ -106,6 +144,20 @@ extension TrackRecordExtension on TrackRecord {
   bool get hasNotLabels => !hasLabels;
   bool get hasAudioBlob => audioBlob != null;
   bool get hasNotAudioBlob => !hasAudioBlob;
+  bool get hasAudioSpace => audioSpace != null;
+  bool get hasNotAudioSpace => !hasAudioSpace;
+  bool get hasAudioFileId => audioFileId != null;
+  bool get hasNotAudioFileId => !hasAudioFileId;
+  bool get hasOriginalAudioBlob => originalAudioBlob != null;
+  bool get hasNotOriginalAudioBlob => !hasOriginalAudioBlob;
+  bool get hasOriginalFileId => originalFileId != null;
+  bool get hasNotOriginalFileId => !hasOriginalFileId;
+  bool get hasOriginalFileType => originalFileType != null;
+  bool get hasNotOriginalFileType => !hasOriginalFileType;
+  bool get hasDownloadPolicy => downloadPolicy != null;
+  bool get hasNotDownloadPolicy => !hasDownloadPolicy;
+  bool get hasVisibility => visibility != null;
+  bool get hasNotVisibility => !hasVisibility;
 }
 
 final class TrackRecordConverter

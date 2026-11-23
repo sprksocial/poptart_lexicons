@@ -5,7 +5,6 @@
 
 import './account_event.dart';
 import './account_hosting.dart';
-import './account_stats.dart';
 import './account_strike.dart';
 import './age_assurance_event.dart';
 import './age_assurance_override_event.dart';
@@ -41,7 +40,6 @@ import './record_hosting.dart';
 import './record_view.dart';
 import './record_view_detail.dart';
 import './record_view_not_found.dart';
-import './records_stats.dart';
 import './repo_view.dart';
 import './repo_view_detail.dart';
 import './repo_view_not_found.dart';
@@ -93,24 +91,6 @@ final subjectViewDescriptor = XRPCObjectDescriptor<SubjectView>(
       const SubjectViewConverter().fromJson(json.cast<String, dynamic>()),
   toJson: const SubjectViewConverter().toJson,
   matches: SubjectView.validate,
-);
-
-final accountStatsDescriptor = XRPCObjectDescriptor<AccountStats>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'accountStats',
-  fromJson: (json) =>
-      const AccountStatsConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const AccountStatsConverter().toJson,
-  matches: AccountStats.validate,
-);
-
-final recordsStatsDescriptor = XRPCObjectDescriptor<RecordsStats>(
-  nsid: 'tools.ozone.moderation.defs',
-  defName: 'recordsStats',
-  fromJson: (json) =>
-      const RecordsStatsConverter().fromJson(json.cast<String, dynamic>()),
-  toJson: const RecordsStatsConverter().toJson,
-  matches: RecordsStats.validate,
 );
 
 final accountStrikeDescriptor = XRPCObjectDescriptor<AccountStrike>(

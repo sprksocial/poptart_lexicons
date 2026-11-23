@@ -5,6 +5,26 @@
 
 import 'package:bluesky_poptart/app/bsky/unspecced/get_age_assurance_state.dart'
     as _AppBskyUnspeccedGetAgeAssuranceState;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_activity_recommendations.dart'
+    as _AppBskyUnspeccedGetAtmosphereActivityRecommendations;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_apps.dart'
+    as _AppBskyUnspeccedGetAtmosphereApps;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_explore_article_recommendations.dart'
+    as _AppBskyUnspeccedGetAtmosphereExploreArticleRecommendations;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_explore_gallery_recommendations.dart'
+    as _AppBskyUnspeccedGetAtmosphereExploreGalleryRecommendations;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_explore_tab.dart'
+    as _AppBskyUnspeccedGetAtmosphereExploreTab;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_recommended_activity.dart'
+    as _AppBskyUnspeccedGetAtmosphereRecommendedActivity;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_record_view.dart'
+    as _AppBskyUnspeccedGetAtmosphereRecordView;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_record_views.dart'
+    as _AppBskyUnspeccedGetAtmosphereRecordViews;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_timeline.dart'
+    as _AppBskyUnspeccedGetAtmosphereTimeline;
+import 'package:bluesky_poptart/app/bsky/unspecced/get_atmosphere_timeline_v_2.dart'
+    as _AppBskyUnspeccedGetAtmosphereTimelineV2;
 import 'package:bluesky_poptart/app/bsky/unspecced/get_config.dart'
     as _AppBskyUnspeccedGetConfig;
 import 'package:bluesky_poptart/app/bsky/unspecced/get_onboarding_suggested_starter_packs.dart'
@@ -72,6 +92,57 @@ final appBskyUnspeccedGetAgeAssuranceState =
     _AppBskyUnspeccedGetAgeAssuranceState.appBskyUnspeccedGetAgeAssuranceState;
 final appBskyUnspeccedGetAgeAssuranceStateMethodDescriptor =
     _AppBskyUnspeccedGetAgeAssuranceState.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereActivityRecommendations =
+    _AppBskyUnspeccedGetAtmosphereActivityRecommendations
+        .appBskyUnspeccedGetAtmosphereActivityRecommendations;
+final appBskyUnspeccedGetAtmosphereActivityRecommendationsMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereActivityRecommendations.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereApps =
+    _AppBskyUnspeccedGetAtmosphereApps.appBskyUnspeccedGetAtmosphereApps;
+final appBskyUnspeccedGetAtmosphereAppsMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereApps.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereExploreArticleRecommendations =
+    _AppBskyUnspeccedGetAtmosphereExploreArticleRecommendations
+        .appBskyUnspeccedGetAtmosphereExploreArticleRecommendations;
+final appBskyUnspeccedGetAtmosphereExploreArticleRecommendationsMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereExploreArticleRecommendations
+        .methodDescriptor;
+final appBskyUnspeccedGetAtmosphereExploreGalleryRecommendations =
+    _AppBskyUnspeccedGetAtmosphereExploreGalleryRecommendations
+        .appBskyUnspeccedGetAtmosphereExploreGalleryRecommendations;
+final appBskyUnspeccedGetAtmosphereExploreGalleryRecommendationsMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereExploreGalleryRecommendations
+        .methodDescriptor;
+final appBskyUnspeccedGetAtmosphereExploreTab =
+    _AppBskyUnspeccedGetAtmosphereExploreTab
+        .appBskyUnspeccedGetAtmosphereExploreTab;
+final appBskyUnspeccedGetAtmosphereExploreTabMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereExploreTab.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereRecommendedActivity =
+    _AppBskyUnspeccedGetAtmosphereRecommendedActivity
+        .appBskyUnspeccedGetAtmosphereRecommendedActivity;
+final appBskyUnspeccedGetAtmosphereRecommendedActivityMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereRecommendedActivity.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereRecordView =
+    _AppBskyUnspeccedGetAtmosphereRecordView
+        .appBskyUnspeccedGetAtmosphereRecordView;
+final appBskyUnspeccedGetAtmosphereRecordViewMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereRecordView.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereRecordViews =
+    _AppBskyUnspeccedGetAtmosphereRecordViews
+        .appBskyUnspeccedGetAtmosphereRecordViews;
+final appBskyUnspeccedGetAtmosphereRecordViewsMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereRecordViews.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereTimeline =
+    _AppBskyUnspeccedGetAtmosphereTimeline
+        .appBskyUnspeccedGetAtmosphereTimeline;
+final appBskyUnspeccedGetAtmosphereTimelineMethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereTimeline.methodDescriptor;
+final appBskyUnspeccedGetAtmosphereTimelineV2 =
+    _AppBskyUnspeccedGetAtmosphereTimelineV2
+        .appBskyUnspeccedGetAtmosphereTimelineV2;
+final appBskyUnspeccedGetAtmosphereTimelineV2MethodDescriptor =
+    _AppBskyUnspeccedGetAtmosphereTimelineV2.methodDescriptor;
 final appBskyUnspeccedGetConfig =
     _AppBskyUnspeccedGetConfig.appBskyUnspeccedGetConfig;
 final appBskyUnspeccedGetConfigMethodDescriptor =

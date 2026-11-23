@@ -76,10 +76,6 @@ _ModerationQueryStatusesInput _$ModerationQueryStatusesInputFromJson(
       (v) => (v as List<dynamic>?)?.map((e) => e as String).toList(),
     ),
     lastReviewedBy: $checkedConvert('lastReviewedBy', (v) => v as String?),
-    sortField: $checkedConvert(
-      'sortField',
-      (v) => v as String? ?? 'lastReportedAt',
-    ),
     sortDirection: $checkedConvert(
       'sortDirection',
       (v) => v as String? ?? 'desc',
@@ -111,18 +107,6 @@ _ModerationQueryStatusesInput _$ModerationQueryStatusesInputFromJson(
             const ModerationQueryStatusesParametersSubjectTypeConverter()
                 .fromJson,
           ),
-    ),
-    minAccountSuspendCount: $checkedConvert(
-      'minAccountSuspendCount',
-      (v) => (v as num?)?.toInt(),
-    ),
-    minReportedRecordsCount: $checkedConvert(
-      'minReportedRecordsCount',
-      (v) => (v as num?)?.toInt(),
-    ),
-    minTakendownRecordsCount: $checkedConvert(
-      'minTakendownRecordsCount',
-      (v) => (v as num?)?.toInt(),
     ),
     minPriorityScore: $checkedConvert(
       'minPriorityScore',
@@ -182,7 +166,6 @@ Map<String, dynamic> _$ModerationQueryStatusesInputToJson(
       ),
   'ignoreSubjects': ?instance.ignoreSubjects,
   'lastReviewedBy': ?instance.lastReviewedBy,
-  'sortField': instance.sortField,
   'sortDirection': instance.sortDirection,
   'takendown': ?instance.takendown,
   'appealed': ?instance.appealed,
@@ -199,9 +182,6 @@ Map<String, dynamic> _$ModerationQueryStatusesInputToJson(
         instance.subjectType,
         const ModerationQueryStatusesParametersSubjectTypeConverter().toJson,
       ),
-  'minAccountSuspendCount': ?instance.minAccountSuspendCount,
-  'minReportedRecordsCount': ?instance.minReportedRecordsCount,
-  'minTakendownRecordsCount': ?instance.minTakendownRecordsCount,
   'minPriorityScore': ?instance.minPriorityScore,
   'minStrikeCount': ?instance.minStrikeCount,
   'ageAssuranceState':

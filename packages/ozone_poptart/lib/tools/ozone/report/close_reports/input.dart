@@ -18,22 +18,38 @@ part 'input.g.dart';
 abstract class ReportCloseReportsInput with _$ReportCloseReportsInput {
   static const knownProps = <String>[
     'subject',
+    'includeAllOwned',
+    'reportId',
     'reportTypes',
+    'excludedReportTypes',
+    'actionEventId',
     'internalNote',
     'isAutomated',
+    'meta',
   ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ReportCloseReportsInput({
     /// Subject DID (account-level reports) or AT-URI (record-level reports) whose reports should be closed.
     required String subject,
+
+    /// If true, also close reports on all subjects owned by the account, including records, messages, and conversations. Only valid when subject is an account DID.
+    @Default(false) bool includeAllOwned,
+
+    /// An explicitly targeted report in the requested subject scope. It is included even if assigned, escalated, or not in reportTypes; excludedReportTypes still applies.
+    int? reportId,
     List<String>? reportTypes,
+    List<String>? excludedReportTypes,
+
+    /// Optional existing moderation event that closes reports. It must target the exact subject or its owning account; account-wide closure requires an account event. The event is linked to each closed report and may predate the report. The link does not imply the action is still in effect.
+    int? actionEventId,
 
     /// Optional moderator-only note recorded on each close activity. Not visible to reporters.
     String? internalNote,
 
     /// Set true when this action is triggered by an automated process. Defaults to false.
     @Default(false) bool isAutomated,
+    Map<String, dynamic>? meta,
 
     Map<String, dynamic>? $unknown,
   }) = _ReportCloseReportsInput;
@@ -43,10 +59,18 @@ abstract class ReportCloseReportsInput with _$ReportCloseReportsInput {
 }
 
 extension ReportCloseReportsInputExtension on ReportCloseReportsInput {
+  bool get isIncludeAllOwned => includeAllOwned;
+  bool get isNotIncludeAllOwned => !isIncludeAllOwned;
+  bool get hasReportId => reportId != null;
+  bool get hasNotReportId => !hasReportId;
+  bool get hasActionEventId => actionEventId != null;
+  bool get hasNotActionEventId => !hasActionEventId;
   bool get hasInternalNote => internalNote != null;
   bool get hasNotInternalNote => !hasInternalNote;
   bool get isIsAutomated => isAutomated;
   bool get isNotIsAutomated => !isIsAutomated;
+  bool get hasMeta => meta != null;
+  bool get hasNotMeta => !hasMeta;
 }
 
 final class ReportCloseReportsInputConverter

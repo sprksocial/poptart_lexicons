@@ -194,7 +194,7 @@ return unknown(_that.data);case _:
 
 class UEmbedRecordWithMediaMediaEmbedImages extends UEmbedRecordWithMediaMedia {
   const UEmbedRecordWithMediaMediaEmbedImages({required this.data}): super._();
-
+  
 
 @override final  EmbedImages data;
 
@@ -257,7 +257,7 @@ as EmbedImages,
 @override
 @pragma('vm:prefer-inline')
 $EmbedImagesCopyWith<$Res> get data {
-
+  
   return $EmbedImagesCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -269,7 +269,7 @@ $EmbedImagesCopyWith<$Res> get data {
 
 class UEmbedRecordWithMediaMediaEmbedVideo extends UEmbedRecordWithMediaMedia {
   const UEmbedRecordWithMediaMediaEmbedVideo({required this.data}): super._();
-
+  
 
 @override final  EmbedVideo data;
 
@@ -332,7 +332,7 @@ as EmbedVideo,
 @override
 @pragma('vm:prefer-inline')
 $EmbedVideoCopyWith<$Res> get data {
-
+  
   return $EmbedVideoCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -344,7 +344,7 @@ $EmbedVideoCopyWith<$Res> get data {
 
 class UEmbedRecordWithMediaMediaEmbedGallery extends UEmbedRecordWithMediaMedia {
   const UEmbedRecordWithMediaMediaEmbedGallery({required this.data}): super._();
-
+  
 
 @override final  EmbedGallery data;
 
@@ -407,7 +407,7 @@ as EmbedGallery,
 @override
 @pragma('vm:prefer-inline')
 $EmbedGalleryCopyWith<$Res> get data {
-
+  
   return $EmbedGalleryCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -419,7 +419,7 @@ $EmbedGalleryCopyWith<$Res> get data {
 
 class UEmbedRecordWithMediaMediaEmbedExternal extends UEmbedRecordWithMediaMedia {
   const UEmbedRecordWithMediaMediaEmbedExternal({required this.data}): super._();
-
+  
 
 @override final  EmbedExternal data;
 
@@ -482,7 +482,7 @@ as EmbedExternal,
 @override
 @pragma('vm:prefer-inline')
 $EmbedExternalCopyWith<$Res> get data {
-
+  
   return $EmbedExternalCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
@@ -494,7 +494,7 @@ $EmbedExternalCopyWith<$Res> get data {
 
 class UEmbedRecordWithMediaMediaUnknown extends UEmbedRecordWithMediaMedia {
   const UEmbedRecordWithMediaMediaUnknown({required final  Map<String, dynamic> data}): _data = data,super._();
-
+  
 
  final  Map<String, dynamic> _data;
 @override Map<String, dynamic> get data {

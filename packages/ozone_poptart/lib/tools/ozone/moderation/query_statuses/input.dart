@@ -42,7 +42,6 @@ abstract class ModerationQueryStatusesInput
     'reviewState',
     'ignoreSubjects',
     'lastReviewedBy',
-    'sortField',
     'sortDirection',
     'takendown',
     'appealed',
@@ -52,9 +51,6 @@ abstract class ModerationQueryStatusesInput
     'cursor',
     'collections',
     'subjectType',
-    'minAccountSuspendCount',
-    'minReportedRecordsCount',
-    'minTakendownRecordsCount',
     'minPriorityScore',
     'minStrikeCount',
     'ageAssuranceState',
@@ -118,7 +114,6 @@ abstract class ModerationQueryStatusesInput
 
     /// Get all subject statuses that were reviewed by a specific moderator
     String? lastReviewedBy,
-    @Default('lastReportedAt') String sortField,
     @Default('desc') String sortDirection,
 
     /// Get subjects that were taken down
@@ -137,15 +132,6 @@ abstract class ModerationQueryStatusesInput
     /// If specified, subjects of the given type (account, record, or conversation) will be returned. When this is set to 'account' the 'collections' parameter will be ignored. When includeAllUserRecords or subject is set, this will be ignored.
     @ModerationQueryStatusesParametersSubjectTypeConverter()
     ModerationQueryStatusesParametersSubjectType? subjectType,
-
-    /// If specified, only subjects that belong to an account that has at least this many suspensions will be returned.
-    int? minAccountSuspendCount,
-
-    /// If specified, only subjects that belong to an account that has at least this many reported records will be returned.
-    int? minReportedRecordsCount,
-
-    /// If specified, only subjects that belong to an account that has at least this many taken down records will be returned.
-    int? minTakendownRecordsCount,
 
     /// If specified, only subjects that have priority score value above the given value will be returned.
     int? minPriorityScore,
@@ -210,12 +196,6 @@ extension ModerationQueryStatusesInputExtension
   bool get hasNotCursor => !hasCursor;
   bool get hasSubjectType => subjectType != null;
   bool get hasNotSubjectType => !hasSubjectType;
-  bool get hasMinAccountSuspendCount => minAccountSuspendCount != null;
-  bool get hasNotMinAccountSuspendCount => !hasMinAccountSuspendCount;
-  bool get hasMinReportedRecordsCount => minReportedRecordsCount != null;
-  bool get hasNotMinReportedRecordsCount => !hasMinReportedRecordsCount;
-  bool get hasMinTakendownRecordsCount => minTakendownRecordsCount != null;
-  bool get hasNotMinTakendownRecordsCount => !hasMinTakendownRecordsCount;
   bool get hasMinPriorityScore => minPriorityScore != null;
   bool get hasNotMinPriorityScore => !hasMinPriorityScore;
   bool get hasMinStrikeCount => minStrikeCount != null;

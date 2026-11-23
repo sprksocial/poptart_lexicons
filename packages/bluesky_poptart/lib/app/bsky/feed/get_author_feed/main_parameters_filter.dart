@@ -78,6 +78,8 @@ final class FeedGetAuthorFeedParametersFilterConverter
 enum KnownFeedGetAuthorFeedParametersFilter implements Serializable {
   @JsonValue('posts_with_replies')
   posts_with_replies('posts_with_replies'),
+  @JsonValue('posts_and_replies_only')
+  posts_and_replies_only('posts_and_replies_only'),
   @JsonValue('posts_no_replies')
   posts_no_replies('posts_no_replies'),
   @JsonValue('posts_with_media')
