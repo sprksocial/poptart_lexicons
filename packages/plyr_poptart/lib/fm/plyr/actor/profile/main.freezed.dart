@@ -15,8 +15,9 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$ActorProfileRecord {
 
- String get $type;/// URL to avatar image.
- String? get avatar;/// Artist bio or description.
+ String get $type;/// URL to the avatar image. When avatarBlob is set, this is that blob's getBlob URL, for readers that only read URLs.
+ String? get avatar;/// Avatar image stored in the artist's repository. Takes precedence over avatar.
+@BlobConverter() Blob? get avatarBlob;/// Artist bio or description.
  String? get bio;/// Timestamp when the profile was created.
  DateTime get createdAt;/// Timestamp when the profile was last updated.
  DateTime? get updatedAt; Map<String, dynamic>? get $unknown;
@@ -32,16 +33,16 @@ $ActorProfileRecordCopyWith<ActorProfileRecord> get copyWith => _$ActorProfileRe
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ActorProfileRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.avatar, avatar) || other.avatar == avatar)&&(identical(other.bio, bio) || other.bio == bio)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ActorProfileRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.avatar, avatar) || other.avatar == avatar)&&(identical(other.avatarBlob, avatarBlob) || other.avatarBlob == avatarBlob)&&(identical(other.bio, bio) || other.bio == bio)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other.$unknown, $unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,avatar,bio,createdAt,updatedAt,const DeepCollectionEquality().hash($unknown));
+int get hashCode => Object.hash(runtimeType,$type,avatar,avatarBlob,bio,createdAt,updatedAt,const DeepCollectionEquality().hash($unknown));
 
 @override
 String toString() {
-  return 'ActorProfileRecord(\$type: ${$type}, avatar: $avatar, bio: $bio, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
+  return 'ActorProfileRecord(\$type: ${$type}, avatar: $avatar, avatarBlob: $avatarBlob, bio: $bio, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
 }
 
 
@@ -52,11 +53,11 @@ abstract mixin class $ActorProfileRecordCopyWith<$Res>  {
   factory $ActorProfileRecordCopyWith(ActorProfileRecord value, $Res Function(ActorProfileRecord) _then) = _$ActorProfileRecordCopyWithImpl;
 @useResult
 $Res call({
- String $type, String? avatar, String? bio, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
+ String $type, String? avatar,@BlobConverter() Blob? avatarBlob, String? bio, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
 });
 
 
-
+$BlobCopyWith<$Res>? get avatarBlob;
 
 }
 /// @nodoc
@@ -69,18 +70,31 @@ class _$ActorProfileRecordCopyWithImpl<$Res>
 
 /// Create a copy of ActorProfileRecord
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? avatar = freezed,Object? bio = freezed,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? $type = null,Object? avatar = freezed,Object? avatarBlob = freezed,Object? bio = freezed,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
   return _then(_self.copyWith(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,avatar: freezed == avatar ? _self.avatar : avatar // ignore: cast_nullable_to_non_nullable
-as String?,bio: freezed == bio ? _self.bio : bio // ignore: cast_nullable_to_non_nullable
+as String?,avatarBlob: freezed == avatarBlob ? _self.avatarBlob : avatarBlob // ignore: cast_nullable_to_non_nullable
+as Blob?,bio: freezed == bio ? _self.bio : bio // ignore: cast_nullable_to_non_nullable
 as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,$unknown: freezed == $unknown ? _self.$unknown : $unknown // ignore: cast_nullable_to_non_nullable
 as Map<String, dynamic>?,
   ));
 }
+/// Create a copy of ActorProfileRecord
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$BlobCopyWith<$Res>? get avatarBlob {
+    if (_self.avatarBlob == null) {
+    return null;
+  }
 
+  return $BlobCopyWith<$Res>(_self.avatarBlob!, (value) {
+    return _then(_self.copyWith(avatarBlob: value));
+  });
+}
 }
 
 
@@ -162,10 +176,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type,  String? avatar,  String? bio,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String $type,  String? avatar, @BlobConverter()  Blob? avatarBlob,  String? bio,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _ActorProfileRecord() when $default != null:
-return $default(_that.$type,_that.avatar,_that.bio,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.avatar,_that.avatarBlob,_that.bio,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
   return orElse();
 
 }
@@ -183,10 +197,10 @@ return $default(_that.$type,_that.avatar,_that.bio,_that.createdAt,_that.updated
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type,  String? avatar,  String? bio,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String $type,  String? avatar, @BlobConverter()  Blob? avatarBlob,  String? bio,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)  $default,) {final _that = this;
 switch (_that) {
 case _ActorProfileRecord():
-return $default(_that.$type,_that.avatar,_that.bio,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.avatar,_that.avatarBlob,_that.bio,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -203,10 +217,10 @@ return $default(_that.$type,_that.avatar,_that.bio,_that.createdAt,_that.updated
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type,  String? avatar,  String? bio,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String $type,  String? avatar, @BlobConverter()  Blob? avatarBlob,  String? bio,  DateTime createdAt,  DateTime? updatedAt,  Map<String, dynamic>? $unknown)?  $default,) {final _that = this;
 switch (_that) {
 case _ActorProfileRecord() when $default != null:
-return $default(_that.$type,_that.avatar,_that.bio,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
+return $default(_that.$type,_that.avatar,_that.avatarBlob,_that.bio,_that.createdAt,_that.updatedAt,_that.$unknown);case _:
   return null;
 
 }
@@ -218,12 +232,14 @@ return $default(_that.$type,_that.avatar,_that.bio,_that.createdAt,_that.updated
 
 @JsonSerializable(includeIfNull: false)
 class _ActorProfileRecord implements ActorProfileRecord {
-  const _ActorProfileRecord({this.$type = 'fm.plyr.actor.profile', this.avatar, this.bio, required this.createdAt, this.updatedAt, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
+  const _ActorProfileRecord({this.$type = 'fm.plyr.actor.profile', this.avatar, @BlobConverter() this.avatarBlob, this.bio, required this.createdAt, this.updatedAt, final  Map<String, dynamic>? $unknown}): _$unknown = $unknown;
   factory _ActorProfileRecord.fromJson(Map<String, dynamic> json) => _$ActorProfileRecordFromJson(json);
 
 @override@JsonKey() final  String $type;
-/// URL to avatar image.
+/// URL to the avatar image. When avatarBlob is set, this is that blob's getBlob URL, for readers that only read URLs.
 @override final  String? avatar;
+/// Avatar image stored in the artist's repository. Takes precedence over avatar.
+@override@BlobConverter() final  Blob? avatarBlob;
 /// Artist bio or description.
 @override final  String? bio;
 /// Timestamp when the profile was created.
@@ -253,16 +269,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ActorProfileRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.avatar, avatar) || other.avatar == avatar)&&(identical(other.bio, bio) || other.bio == bio)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ActorProfileRecord&&(identical(other.$type, $type) || other.$type == $type)&&(identical(other.avatar, avatar) || other.avatar == avatar)&&(identical(other.avatarBlob, avatarBlob) || other.avatarBlob == avatarBlob)&&(identical(other.bio, bio) || other.bio == bio)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&const DeepCollectionEquality().equals(other._$unknown, _$unknown));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,$type,avatar,bio,createdAt,updatedAt,const DeepCollectionEquality().hash(_$unknown));
+int get hashCode => Object.hash(runtimeType,$type,avatar,avatarBlob,bio,createdAt,updatedAt,const DeepCollectionEquality().hash(_$unknown));
 
 @override
 String toString() {
-  return 'ActorProfileRecord(\$type: ${$type}, avatar: $avatar, bio: $bio, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
+  return 'ActorProfileRecord(\$type: ${$type}, avatar: $avatar, avatarBlob: $avatarBlob, bio: $bio, createdAt: $createdAt, updatedAt: $updatedAt, \$unknown: ${$unknown})';
 }
 
 
@@ -273,11 +289,11 @@ abstract mixin class _$ActorProfileRecordCopyWith<$Res> implements $ActorProfile
   factory _$ActorProfileRecordCopyWith(_ActorProfileRecord value, $Res Function(_ActorProfileRecord) _then) = __$ActorProfileRecordCopyWithImpl;
 @override @useResult
 $Res call({
- String $type, String? avatar, String? bio, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
+ String $type, String? avatar,@BlobConverter() Blob? avatarBlob, String? bio, DateTime createdAt, DateTime? updatedAt, Map<String, dynamic>? $unknown
 });
 
 
-
+@override $BlobCopyWith<$Res>? get avatarBlob;
 
 }
 /// @nodoc
@@ -290,11 +306,12 @@ class __$ActorProfileRecordCopyWithImpl<$Res>
 
 /// Create a copy of ActorProfileRecord
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? avatar = freezed,Object? bio = freezed,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? $type = null,Object? avatar = freezed,Object? avatarBlob = freezed,Object? bio = freezed,Object? createdAt = null,Object? updatedAt = freezed,Object? $unknown = freezed,}) {
   return _then(_ActorProfileRecord(
 $type: null == $type ? _self.$type : $type // ignore: cast_nullable_to_non_nullable
 as String,avatar: freezed == avatar ? _self.avatar : avatar // ignore: cast_nullable_to_non_nullable
-as String?,bio: freezed == bio ? _self.bio : bio // ignore: cast_nullable_to_non_nullable
+as String?,avatarBlob: freezed == avatarBlob ? _self.avatarBlob : avatarBlob // ignore: cast_nullable_to_non_nullable
+as Blob?,bio: freezed == bio ? _self.bio : bio // ignore: cast_nullable_to_non_nullable
 as String?,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
 as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,$unknown: freezed == $unknown ? _self._$unknown : $unknown // ignore: cast_nullable_to_non_nullable
@@ -302,7 +319,19 @@ as Map<String, dynamic>?,
   ));
 }
 
+/// Create a copy of ActorProfileRecord
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$BlobCopyWith<$Res>? get avatarBlob {
+    if (_self.avatarBlob == null) {
+    return null;
+  }
 
+  return $BlobCopyWith<$Res>(_self.avatarBlob!, (value) {
+    return _then(_self.copyWith(avatarBlob: value));
+  });
+}
 }
 
 // dart format on

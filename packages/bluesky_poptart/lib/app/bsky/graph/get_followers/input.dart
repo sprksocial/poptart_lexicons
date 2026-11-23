@@ -25,6 +25,8 @@ abstract class GraphGetFollowersInput with _$GraphGetFollowersInput {
     required String actor,
     @Default(50) int limit,
     String? cursor,
+
+    /// Sort order of the returned followers.
     @GraphGetFollowersParametersSortConverter()
     GraphGetFollowersParametersSort? sort,
 

@@ -89,7 +89,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get follow {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.follow, (value) {
     return _then(_self.copyWith(follow: value));
   });
@@ -98,7 +98,7 @@ $FilterablePreferenceCopyWith<$Res> get follow {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get like {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.like, (value) {
     return _then(_self.copyWith(like: value));
   });
@@ -107,7 +107,7 @@ $FilterablePreferenceCopyWith<$Res> get like {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get likeViaRepost {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.likeViaRepost, (value) {
     return _then(_self.copyWith(likeViaRepost: value));
   });
@@ -116,7 +116,7 @@ $FilterablePreferenceCopyWith<$Res> get likeViaRepost {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get mention {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.mention, (value) {
     return _then(_self.copyWith(mention: value));
   });
@@ -125,7 +125,7 @@ $FilterablePreferenceCopyWith<$Res> get mention {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get quote {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.quote, (value) {
     return _then(_self.copyWith(quote: value));
   });
@@ -134,7 +134,7 @@ $FilterablePreferenceCopyWith<$Res> get quote {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get reply {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.reply, (value) {
     return _then(_self.copyWith(reply: value));
   });
@@ -143,7 +143,7 @@ $FilterablePreferenceCopyWith<$Res> get reply {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get repost {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.repost, (value) {
     return _then(_self.copyWith(repost: value));
   });
@@ -152,7 +152,7 @@ $FilterablePreferenceCopyWith<$Res> get repost {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get repostViaRepost {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.repostViaRepost, (value) {
     return _then(_self.copyWith(repostViaRepost: value));
   });
@@ -161,7 +161,7 @@ $FilterablePreferenceCopyWith<$Res> get repostViaRepost {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get starterpackJoined {
-
+  
   return $PreferenceCopyWith<$Res>(_self.starterpackJoined, (value) {
     return _then(_self.copyWith(starterpackJoined: value));
   });
@@ -170,7 +170,7 @@ $PreferenceCopyWith<$Res> get starterpackJoined {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get subscribedPost {
-
+  
   return $PreferenceCopyWith<$Res>(_self.subscribedPost, (value) {
     return _then(_self.copyWith(subscribedPost: value));
   });
@@ -179,7 +179,7 @@ $PreferenceCopyWith<$Res> get subscribedPost {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get unverified {
-
+  
   return $PreferenceCopyWith<$Res>(_self.unverified, (value) {
     return _then(_self.copyWith(unverified: value));
   });
@@ -188,7 +188,7 @@ $PreferenceCopyWith<$Res> get unverified {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get verified {
-
+  
   return $PreferenceCopyWith<$Res>(_self.verified, (value) {
     return _then(_self.copyWith(verified: value));
   });
@@ -431,7 +431,7 @@ as Map<String, dynamic>?,
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get follow {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.follow, (value) {
     return _then(_self.copyWith(follow: value));
   });
@@ -440,7 +440,7 @@ $FilterablePreferenceCopyWith<$Res> get follow {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get like {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.like, (value) {
     return _then(_self.copyWith(like: value));
   });
@@ -449,7 +449,7 @@ $FilterablePreferenceCopyWith<$Res> get like {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get likeViaRepost {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.likeViaRepost, (value) {
     return _then(_self.copyWith(likeViaRepost: value));
   });
@@ -458,7 +458,7 @@ $FilterablePreferenceCopyWith<$Res> get likeViaRepost {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get mention {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.mention, (value) {
     return _then(_self.copyWith(mention: value));
   });
@@ -467,7 +467,7 @@ $FilterablePreferenceCopyWith<$Res> get mention {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get quote {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.quote, (value) {
     return _then(_self.copyWith(quote: value));
   });
@@ -476,7 +476,7 @@ $FilterablePreferenceCopyWith<$Res> get quote {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get reply {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.reply, (value) {
     return _then(_self.copyWith(reply: value));
   });
@@ -485,7 +485,7 @@ $FilterablePreferenceCopyWith<$Res> get reply {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get repost {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.repost, (value) {
     return _then(_self.copyWith(repost: value));
   });
@@ -494,7 +494,7 @@ $FilterablePreferenceCopyWith<$Res> get repost {
 @override
 @pragma('vm:prefer-inline')
 $FilterablePreferenceCopyWith<$Res> get repostViaRepost {
-
+  
   return $FilterablePreferenceCopyWith<$Res>(_self.repostViaRepost, (value) {
     return _then(_self.copyWith(repostViaRepost: value));
   });
@@ -503,7 +503,7 @@ $FilterablePreferenceCopyWith<$Res> get repostViaRepost {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get starterpackJoined {
-
+  
   return $PreferenceCopyWith<$Res>(_self.starterpackJoined, (value) {
     return _then(_self.copyWith(starterpackJoined: value));
   });
@@ -512,7 +512,7 @@ $PreferenceCopyWith<$Res> get starterpackJoined {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get subscribedPost {
-
+  
   return $PreferenceCopyWith<$Res>(_self.subscribedPost, (value) {
     return _then(_self.copyWith(subscribedPost: value));
   });
@@ -521,7 +521,7 @@ $PreferenceCopyWith<$Res> get subscribedPost {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get unverified {
-
+  
   return $PreferenceCopyWith<$Res>(_self.unverified, (value) {
     return _then(_self.copyWith(unverified: value));
   });
@@ -530,7 +530,7 @@ $PreferenceCopyWith<$Res> get unverified {
 @override
 @pragma('vm:prefer-inline')
 $PreferenceCopyWith<$Res> get verified {
-
+  
   return $PreferenceCopyWith<$Res>(_self.verified, (value) {
     return _then(_self.copyWith(verified: value));
   });

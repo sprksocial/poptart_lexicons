@@ -21,7 +21,7 @@ final methodDescriptor =
       outputFromJson: (json) =>
           const EventConverter().fromJson(json.cast<String, dynamic>()),
       outputToJson: const EventConverter().toJson,
-      errors: const ['RuleNotFound'],
+      errors: const ['RuleNotFound', 'RuleSourceConflict'],
     );
 
 final toolsOzoneSafelinkUpdateRule = methodDescriptor;

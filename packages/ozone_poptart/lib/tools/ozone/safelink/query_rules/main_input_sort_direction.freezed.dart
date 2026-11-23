@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SafelinkQueryRulesInputSortDirectionKnownValue extends SafelinkQueryRulesInputSortDirection {
   const SafelinkQueryRulesInputSortDirectionKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownSafelinkQueryRulesInputSortDirection data;
 
@@ -248,7 +248,7 @@ as KnownSafelinkQueryRulesInputSortDirection,
 
 class SafelinkQueryRulesInputSortDirectionUnknown extends SafelinkQueryRulesInputSortDirection {
   const SafelinkQueryRulesInputSortDirectionUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

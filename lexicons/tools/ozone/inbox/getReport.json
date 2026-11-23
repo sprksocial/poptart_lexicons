@@ -1,0 +1,174 @@
+{
+  "lexicon": 1,
+  "id": "tools.ozone.inbox.getReport",
+  "defs": {
+    "main": {
+      "type": "query",
+      "description": "Get a moderation report submitted by the authenticated account to this moderation service.",
+      "parameters": {
+        "type": "params",
+        "required": ["id"],
+        "properties": {
+          "did": {
+            "type": "string",
+            "format": "did",
+            "description": "Reporter to preview. Defaults to the authenticated account; another account requires an active moderator, triage, or admin credential."
+          },
+          "id": {
+            "type": "integer",
+            "description": "Report ID (report table ID), as returned by listReports."
+          }
+        }
+      },
+      "output": {
+        "encoding": "application/json",
+        "schema": {
+          "type": "object",
+          "required": ["report"],
+          "properties": {
+            "report": {
+              "type": "ref",
+              "ref": "#reportView"
+            },
+            "resolution": {
+              "type": "ref",
+              "ref": "#resolutionView",
+              "description": "Present only when the report is resolved."
+            }
+          }
+        }
+      },
+      "errors": [
+        {
+          "name": "NotFound",
+          "description": "No report was found, or the authenticated account did not submit it."
+        }
+      ]
+    },
+    "reportView": {
+      "type": "object",
+      "required": [
+        "src",
+        "id",
+        "reasonType",
+        "subject",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ],
+      "properties": {
+        "src": {
+          "type": "string",
+          "format": "did",
+          "description": "DID of the moderation service that received the report."
+        },
+        "id": {
+          "type": "integer",
+          "description": "Report ID (report table ID), used by Ozone's report detail page."
+        },
+        "reasonType": {
+          "type": "string",
+          "description": "The exact fully-qualified reason NSID submitted with and stored on the report."
+        },
+        "reason": {
+          "type": "string",
+          "maxGraphemes": 2000,
+          "maxLength": 20000
+        },
+        "subject": {
+          "type": "union",
+          "refs": [
+            "com.atproto.admin.defs#repoRef",
+            "com.atproto.repo.strongRef",
+            "chat.bsky.convo.defs#messageRef",
+            "chat.bsky.convo.defs#convoRef"
+          ]
+        },
+        "record": {
+          "type": "unknown",
+          "description": "Raw record JSON for the subject, when the subject is a record and the record is available."
+        },
+        "accountStatus": {
+          "type": "ref",
+          "ref": "#accountStatus",
+          "description": "Current status of the reported account or record owner, independent of the report's resolution."
+        },
+        "subjectStatus": {
+          "type": "ref",
+          "ref": "#recordStatus",
+          "description": "Current status of a reported record, when known."
+        },
+        "status": {
+          "type": "string",
+          "knownValues": ["pending", "resolved"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "datetime"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "datetime"
+        }
+      }
+    },
+    "accountStatus": {
+      "type": "object",
+      "required": ["enforcement"],
+      "properties": {
+        "enforcement": {
+          "type": "string",
+          "knownValues": ["none", "suspended", "takendown"],
+          "description": "Current enforcement by this moderation service."
+        },
+        "hosting": {
+          "type": "string",
+          "knownValues": [
+            "active",
+            "deleted",
+            "deactivated",
+            "suspended",
+            "takendown"
+          ],
+          "description": "Last known account hosting state, omitted when unknown."
+        }
+      }
+    },
+    "recordStatus": {
+      "type": "object",
+      "required": ["takendown"],
+      "properties": {
+        "takendown": {
+          "type": "boolean",
+          "description": "Whether this moderation service has taken down the record."
+        },
+        "deleted": {
+          "type": "boolean",
+          "description": "Whether the record has been deleted by its repository, omitted when unknown."
+        }
+      }
+    },
+    "resolutionView": {
+      "type": "object",
+      "required": ["outcome", "resolvedAt"],
+      "properties": {
+        "outcome": {
+          "type": "string",
+          "knownValues": ["actionTaken", "noAction", "other"]
+        },
+        "actionTaken": {
+          "type": "string",
+          "description": "Public action associated with this report's resolution. See the public action vocabulary table."
+        },
+        "scope": {
+          "type": "string",
+          "knownValues": ["network", "app", "labelOnly"]
+        },
+        "resolvedAt": {
+          "type": "string",
+          "format": "datetime"
+        }
+      }
+    }
+  }
+}

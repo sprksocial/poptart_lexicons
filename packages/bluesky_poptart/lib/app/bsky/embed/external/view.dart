@@ -8,6 +8,7 @@ import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
 import './view_external.dart';
+import './union_view_data.dart';
 
 part 'view.freezed.dart';
 part 'view.g.dart';
@@ -18,13 +19,14 @@ part 'view.g.dart';
 
 @freezed
 abstract class EmbedExternalView with _$EmbedExternalView {
-  static const knownProps = <String>['external'];
+  static const knownProps = <String>['external', 'data'];
 
   @JsonSerializable(includeIfNull: false)
   const factory EmbedExternalView({
     @Default('app.bsky.embed.external#view') String $type,
     @EmbedExternalViewExternalConverter()
     required EmbedExternalViewExternal external,
+    @UEmbedExternalViewDataConverter() UEmbedExternalViewData? data,
 
     Map<String, dynamic>? $unknown,
   }) = _EmbedExternalView;
@@ -36,6 +38,11 @@ abstract class EmbedExternalView with _$EmbedExternalView {
     if (!object.containsKey('\$type')) return false;
     return object['\$type'] == 'app.bsky.embed.external#view';
   }
+}
+
+extension EmbedExternalViewExtension on EmbedExternalView {
+  bool get hasData => data != null;
+  bool get hasNotData => !hasData;
 }
 
 final class EmbedExternalViewConverter

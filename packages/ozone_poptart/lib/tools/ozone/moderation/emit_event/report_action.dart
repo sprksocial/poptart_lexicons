@@ -7,6 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
+import './union_report_action_subjects.dart';
+
 part 'report_action.freezed.dart';
 part 'report_action.g.dart';
 
@@ -17,7 +19,16 @@ part 'report_action.g.dart';
 /// Target specific reports when emitting a moderation event
 @freezed
 abstract class ReportAction with _$ReportAction {
-  static const knownProps = <String>['ids', 'types', 'all', 'note'];
+  static const knownProps = <String>[
+    'ids',
+    'types',
+    'all',
+    'allOwned',
+    'subjects',
+    'subjectTypes',
+    'note',
+    'isAutomated',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ReportAction({
@@ -25,11 +36,19 @@ abstract class ReportAction with _$ReportAction {
     List<int>? ids,
     List<String>? types,
 
-    /// Target ALL reports on the subject
+    /// Target ALL reports on the subject. Excludes assigned and escalated reports.
     bool? all,
+
+    /// Target all eligible reports on the account and its owned subjects, including records, messages, and conversations. Only valid for account subjects and events that close reports. Excludes assigned, escalated, and actively assigned reports unless explicitly targeted by ID.
+    bool? allOwned,
+    @UReportActionSubjectsConverter() List<UReportActionSubjects>? subjects,
+    List<String>? subjectTypes,
 
     /// Note to send to reporter(s) when actioning their report
     String? note,
+
+    /// Set true when the report activities are created by an automated process.
+    bool? isAutomated,
 
     Map<String, dynamic>? $unknown,
   }) = _ReportAction;
@@ -46,8 +65,12 @@ abstract class ReportAction with _$ReportAction {
 extension ReportActionExtension on ReportAction {
   bool get isAll => all ?? false;
   bool get isNotAll => !isAll;
+  bool get isAllOwned => allOwned ?? false;
+  bool get isNotAllOwned => !isAllOwned;
   bool get hasNote => note != null;
   bool get hasNotNote => !hasNote;
+  bool get isIsAutomated => isAutomated ?? false;
+  bool get isNotIsAutomated => !isIsAutomated;
 }
 
 final class ReportActionConverter

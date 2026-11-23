@@ -7,6 +7,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:poptart_core/poptart_core.dart';
 import 'package:poptart_core/internals.dart';
 
+import 'package:poptart_core/poptart_core.dart';
+
 part 'main.freezed.dart';
 part 'main.g.dart';
 
@@ -17,14 +19,23 @@ part 'main.g.dart';
 /// A plyr.fm artist profile with music-specific metadata.
 @freezed
 abstract class ActorProfileRecord with _$ActorProfileRecord {
-  static const knownProps = <String>['avatar', 'bio', 'createdAt', 'updatedAt'];
+  static const knownProps = <String>[
+    'avatar',
+    'avatarBlob',
+    'bio',
+    'createdAt',
+    'updatedAt',
+  ];
 
   @JsonSerializable(includeIfNull: false)
   const factory ActorProfileRecord({
     @Default('fm.plyr.actor.profile') String $type,
 
-    /// URL to avatar image.
+    /// URL to the avatar image. When avatarBlob is set, this is that blob's getBlob URL, for readers that only read URLs.
     String? avatar,
+
+    /// Avatar image stored in the artist's repository. Takes precedence over avatar.
+    @BlobConverter() Blob? avatarBlob,
 
     /// Artist bio or description.
     String? bio,
@@ -50,6 +61,8 @@ abstract class ActorProfileRecord with _$ActorProfileRecord {
 extension ActorProfileRecordExtension on ActorProfileRecord {
   bool get hasAvatar => avatar != null;
   bool get hasNotAvatar => !hasAvatar;
+  bool get hasAvatarBlob => avatarBlob != null;
+  bool get hasNotAvatarBlob => !hasAvatarBlob;
   bool get hasBio => bio != null;
   bool get hasNotBio => !hasBio;
   bool get hasUpdatedAt => updatedAt != null;

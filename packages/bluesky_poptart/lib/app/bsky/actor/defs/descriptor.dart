@@ -24,6 +24,7 @@ import './profile_associated.dart';
 import './profile_associated_activity_subscription.dart';
 import './profile_associated_chat.dart';
 import './profile_associated_germ.dart';
+import './profile_link_view.dart';
 import './profile_view.dart';
 import './profile_view_basic.dart';
 import './profile_view_detailed.dart';
@@ -100,6 +101,15 @@ final profileAssociatedGermDescriptor =
       toJson: const ProfileAssociatedGermConverter().toJson,
       matches: ProfileAssociatedGerm.validate,
     );
+
+final profileLinkViewDescriptor = XRPCObjectDescriptor<ProfileLinkView>(
+  nsid: 'app.bsky.actor.defs',
+  defName: 'profileLinkView',
+  fromJson: (json) =>
+      const ProfileLinkViewConverter().fromJson(json.cast<String, dynamic>()),
+  toJson: const ProfileLinkViewConverter().toJson,
+  matches: ProfileLinkView.validate,
+);
 
 final profileAssociatedActivitySubscriptionDescriptor =
     XRPCObjectDescriptor<ProfileAssociatedActivitySubscription>(

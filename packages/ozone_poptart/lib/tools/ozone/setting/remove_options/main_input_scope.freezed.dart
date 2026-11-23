@@ -182,7 +182,7 @@ return unknown(_that.data);case _:
 
 class SettingRemoveOptionsInputScopeKnownValue extends SettingRemoveOptionsInputScope {
   const SettingRemoveOptionsInputScopeKnownValue({required this.data}): super._();
-
+  
 
 @override final  KnownSettingRemoveOptionsInputScope data;
 
@@ -248,7 +248,7 @@ as KnownSettingRemoveOptionsInputScope,
 
 class SettingRemoveOptionsInputScopeUnknown extends SettingRemoveOptionsInputScope {
   const SettingRemoveOptionsInputScopeUnknown({required this.data}): super._();
-
+  
 
 @override final  String data;
 

@@ -12,6 +12,7 @@ import '../../graph/defs/starter_pack_view_basic.dart';
 import './viewer_state.dart';
 import 'package:poptart_lex/com/atproto/label/defs.dart';
 import 'package:poptart_lex/com/atproto/repo/strong_ref.dart';
+import './profile_link_view.dart';
 import './verification_state.dart';
 import './status_view.dart';
 
@@ -30,7 +31,6 @@ abstract class ProfileViewDetailed with _$ProfileViewDetailed {
     'displayName',
     'description',
     'pronouns',
-    'website',
     'avatar',
     'banner',
     'followersCount',
@@ -43,6 +43,7 @@ abstract class ProfileViewDetailed with _$ProfileViewDetailed {
     'viewer',
     'labels',
     'pinnedPost',
+    'links',
     'verification',
     'status',
     'debug',
@@ -56,7 +57,6 @@ abstract class ProfileViewDetailed with _$ProfileViewDetailed {
     String? displayName,
     String? description,
     String? pronouns,
-    String? website,
     String? avatar,
     String? banner,
     int? followersCount,
@@ -69,6 +69,7 @@ abstract class ProfileViewDetailed with _$ProfileViewDetailed {
     @ViewerStateConverter() ViewerState? viewer,
     @LabelConverter() List<Label>? labels,
     @RepoStrongRefConverter() RepoStrongRef? pinnedPost,
+    @ProfileLinkViewConverter() List<ProfileLinkView>? links,
     @VerificationStateConverter() VerificationState? verification,
     @StatusViewConverter() StatusView? status,
     Map<String, dynamic>? debug,
@@ -92,8 +93,6 @@ extension ProfileViewDetailedExtension on ProfileViewDetailed {
   bool get hasNotDescription => !hasDescription;
   bool get hasPronouns => pronouns != null;
   bool get hasNotPronouns => !hasPronouns;
-  bool get hasWebsite => website != null;
-  bool get hasNotWebsite => !hasWebsite;
   bool get hasAvatar => avatar != null;
   bool get hasNotAvatar => !hasAvatar;
   bool get hasBanner => banner != null;

@@ -7,6 +7,10 @@ import 'package:ozone_poptart/tools/ozone/moderation/cancel_scheduled_actions.da
     as _ToolsOzoneModerationCancelScheduledActions;
 import 'package:ozone_poptart/tools/ozone/moderation/emit_event.dart'
     as _ToolsOzoneModerationEmitEvent;
+import 'package:ozone_poptart/tools/ozone/moderation/emit_events.dart'
+    as _ToolsOzoneModerationEmitEvents;
+import 'package:ozone_poptart/tools/ozone/moderation/get_account_preferences.dart'
+    as _ToolsOzoneModerationGetAccountPreferences;
 import 'package:ozone_poptart/tools/ozone/moderation/get_account_timeline.dart'
     as _ToolsOzoneModerationGetAccountTimeline;
 import 'package:ozone_poptart/tools/ozone/moderation/get_event.dart'
@@ -47,6 +51,15 @@ final toolsOzoneModerationEmitEvent =
     _ToolsOzoneModerationEmitEvent.toolsOzoneModerationEmitEvent;
 final toolsOzoneModerationEmitEventMethodDescriptor =
     _ToolsOzoneModerationEmitEvent.methodDescriptor;
+final toolsOzoneModerationEmitEvents =
+    _ToolsOzoneModerationEmitEvents.toolsOzoneModerationEmitEvents;
+final toolsOzoneModerationEmitEventsMethodDescriptor =
+    _ToolsOzoneModerationEmitEvents.methodDescriptor;
+final toolsOzoneModerationGetAccountPreferences =
+    _ToolsOzoneModerationGetAccountPreferences
+        .toolsOzoneModerationGetAccountPreferences;
+final toolsOzoneModerationGetAccountPreferencesMethodDescriptor =
+    _ToolsOzoneModerationGetAccountPreferences.methodDescriptor;
 final toolsOzoneModerationGetAccountTimeline =
     _ToolsOzoneModerationGetAccountTimeline
         .toolsOzoneModerationGetAccountTimeline;

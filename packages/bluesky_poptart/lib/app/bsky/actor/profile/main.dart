@@ -25,12 +25,12 @@ abstract class ActorProfileRecord with _$ActorProfileRecord {
     'displayName',
     'description',
     'pronouns',
-    'website',
     'avatar',
     'banner',
     'labels',
     'joinedViaStarterPack',
     'pinnedPost',
+    'links',
     'createdAt',
   ];
 
@@ -44,7 +44,6 @@ abstract class ActorProfileRecord with _$ActorProfileRecord {
 
     /// Free-form pronouns text.
     String? pronouns,
-    String? website,
 
     /// Small image to be displayed next to posts from account. AKA, 'profile picture'
     @BlobConverter() Blob? avatar,
@@ -54,6 +53,7 @@ abstract class ActorProfileRecord with _$ActorProfileRecord {
     @UActorProfileLabelsConverter() UActorProfileLabels? labels,
     @RepoStrongRefConverter() RepoStrongRef? joinedViaStarterPack,
     @RepoStrongRefConverter() RepoStrongRef? pinnedPost,
+    @RepoStrongRefConverter() List<RepoStrongRef>? links,
     DateTime? createdAt,
 
     Map<String, dynamic>? $unknown,
@@ -75,8 +75,6 @@ extension ActorProfileRecordExtension on ActorProfileRecord {
   bool get hasNotDescription => !hasDescription;
   bool get hasPronouns => pronouns != null;
   bool get hasNotPronouns => !hasPronouns;
-  bool get hasWebsite => website != null;
-  bool get hasNotWebsite => !hasWebsite;
   bool get hasAvatar => avatar != null;
   bool get hasNotAvatar => !hasAvatar;
   bool get hasBanner => banner != null;
